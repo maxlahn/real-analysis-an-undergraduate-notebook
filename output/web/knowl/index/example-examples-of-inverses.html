@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Examples of inverses.</span>
+</h2>
+<div class="para logical">
+<div class="para">The following are examples of left inverses, right inverses, and inverses of maps.</div>
+<ol class="decimal" id="example-examples-of-inverses-3-1-1">
+<li>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\emptyset \subsetneq U \subseteq X \)</span> be a non-empty subset of a set <span class="process-math">\(X \text{,}\)</span> and fix an element <span class="process-math">\(u \in U \text{.}\)</span> Consider the constant map <span class="process-math">\(c \colon X \to U \)</span> from <span class="process-math">\(X \)</span> to <span class="process-math">\(U \)</span> defined piecewise by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c \of{ x } =
+\begin{cases}
+x , \amp x \in U \\
+u , \amp x \notin U
+\text{.}\end{cases}
+\end{equation*}
+</div>
+<div class="para">Note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\of{ c \circ \iota_{ U }^{ X } } \of{ u } = c \of{ \iota_{ U }^{ X } \of{ u } } = c \of{ u } = u = \id_{ U } \of{ u }
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(u \in U \text{,}\)</span> and so <span class="process-math">\(c \circ \iota_{ U }^{ X } = \id_{ U } \text{;}\)</span> that is, <span class="process-math">\(c \)</span> is a left inverse to the inclusion map <span class="process-math">\(\iota_{ U }^{ X } \colon U \to X \)</span> of <span class="process-math">\(U \)</span> in <span class="process-math">\(X \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-examples-of-inverses-3-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#example-examples-of-inverses-3-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li>
+<div class="para">Fix sets <span class="process-math">\(X \)</span> and <span class="process-math">\(Y \text{,}\)</span> and suppose that <span class="process-math">\(Y \neq \emptyset \)</span> is non-empty. Let <span class="process-math">\(\pi \colon X \times Y \to X \)</span> be the <dfn class="terminology">projection map</dfn> defined by the formula <span class="process-math">\(\pi \of{ x , y } = x \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-examples-of-inverses-3-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Fix an element <span class="process-math">\(y \in Y \text{,}\)</span> and consider the map <span class="process-math">\(c \colon X \to X \times Y \)</span> from <span class="process-math">\(X \)</span> to <span class="process-math">\(X \times Y \)</span> defined by the formula <span class="process-math">\(c \of{ x } = \of{ x , y } \text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\of{ \pi \circ c } \of{ x } = \pi \of{ c \of{ x } } = \pi \of{ x , y } = x = \id_{ X } \of{ x }
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x \in X \text{,}\)</span> and so <span class="process-math">\(\pi \circ c = \id_{ X } \text{;}\)</span> that is, <span class="process-math">\(c \)</span> is a right inverse to the projection map <span class="process-math">\(\pi \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-examples-of-inverses-3-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#example-examples-of-inverses-3-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li>
+<div class="para">The identity map <span class="process-math">\(\id_{ X } \colon X \to X \)</span> on a set <span class="process-math">\(X \)</span> is its own inverse, since <span class="process-math">\(\id_{ X } \circ \id_{ X } = \id_{ X } \text{.}\)</span> This is actually a special case of the first example above, where we take <span class="process-math">\(U = X \text{.}\)</span> More generally, <span class="process-math">\(f \circ \id_{ X } = f \)</span> for all maps <span class="process-math">\(f \)</span> with domain <span class="process-math">\(X \text{,}\)</span> and <span class="process-math">\(\id_{ X } \circ g = g \)</span> for all maps <span class="process-math">\(g \)</span> with codomain <span class="process-math">\(X \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-examples-of-inverses-3-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#example-examples-of-inverses-3-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-examples-of-inverses-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.12: Examples of inverses"><a href="#example-examples-of-inverses" title="Copy heading and permalink for Example 1.2.12: Examples of inverses" aria-label="Copy heading and permalink for Example 1.2.12: Examples of inverses">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="section-maps-and-functions.html#example-examples-of-inverses">In Context</a></span>
+</body>
+</html>

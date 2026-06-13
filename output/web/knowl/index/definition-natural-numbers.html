@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="definition definition-like"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Natural numbers.</span>
+</h2>
+<div class="para logical">
+<div class="para">The <dfn class="terminology">natural number system</dfn> <span class="process-math">\(\N \)</span> is a nonempty set with an element <span class="process-math">\(0 \in \N \text{,}\)</span> called <dfn class="terminology">zero</dfn>, along with functions <span class="process-math">\(\Succ \colon \N \to \N \)</span> and <span class="process-math">\(\Add , \Mult \colon \N \times \N \to \N \text{,}\)</span> called the <dfn class="terminology">successor function</dfn> and the <dfn class="terminology">addition</dfn> and <dfn class="terminology">multiplication operations</dfn> and a subset <span class="process-math">\(\Comp \subseteq \N \times \N \)</span> of the Cartesian product <span class="process-math">\(\N \times \N \)</span> of <span class="process-math">\(\N \)</span> with itself, called the <dfn class="terminology">standard ordering</dfn>, which satisfy the following properties:</div>
+<ol class="decimal" id="definition-natural-numbers-13-1-14">
+<li>
+<div class="para">The successor <span class="process-math">\(\Succ \of{ n } \)</span> of any natural number <span class="process-math">\(n \in \N \)</span> is non-zero.<div class="autopermalink" data-description="Paragraph"><a href="#definition-natural-numbers-13-1-14-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#definition-natural-numbers-13-1-14-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li>
+<div class="para">The successor function <span class="process-math">\(\Succ \colon \N \to \N \)</span> is injective.<div class="autopermalink" data-description="Paragraph"><a href="#definition-natural-numbers-13-1-14-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#definition-natural-numbers-13-1-14-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(\Add \of{ n , 0 } = n \)</span> for all natural numbers <span class="process-math">\(n \in \N \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-natural-numbers-13-1-14-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#definition-natural-numbers-13-1-14-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(\Add \of{ m , \Succ \of{ n } } = \Succ \of{ \Add \of{ m , n } } \)</span> for all natural numbers <span class="process-math">\(m , n \in \N \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-natural-numbers-13-1-14-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#definition-natural-numbers-13-1-14-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(\Mult \of{ n , 0 } = 0 \)</span> for all natural numbers <span class="process-math">\(n \in \N \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-natural-numbers-13-1-14-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#definition-natural-numbers-13-1-14-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(\Mult \of{ m , \Succ \of{ n } } = \Add \of{ \Mult \of{ m , n } , m } \)</span> for all natural numbers <span class="process-math">\(n \in \N \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-natural-numbers-13-1-14-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6"><a href="#definition-natural-numbers-13-1-14-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+<li>
+<div class="para">For all natural numbers <span class="process-math">\(l , m \in \N \text{,}\)</span> <span class="process-math">\(\of{ l , m } \in \Comp \)</span> if and only if <span class="process-math">\(\Add \of{ l , n } = m \)</span> for some natural number <span class="process-math">\(n \in \N \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-natural-numbers-13-1-14-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7"><a href="#definition-natural-numbers-13-1-14-7" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">For all subsets <span class="process-math">\(U \subseteq \N \text{,}\)</span> <span class="process-math">\(U = \N \)</span> if and only if it satisfies the following conditions:</div>
+<ol class="lower-alpha lower-alpha-level-1" id="definition-natural-numbers-13-1-14-8-1-3">
+<li>
+<div class="para">
+<span class="process-math">\(0 \in U \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-natural-numbers-13-1-14-8-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 8.a"><a href="#definition-natural-numbers-13-1-14-8-1-3-1" title="Copy heading and permalink for Item 8.a" aria-label="Copy heading and permalink for Item 8.a">🔗</a></div>
+</li>
+<li>
+<div class="para">For all natural numbers <span class="process-math">\(n \in \N \text{,}\)</span> if <span class="process-math">\(n \in U \text{,}\)</span> then <span class="process-math">\(\Succ \of{ n } \in U \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-natural-numbers-13-1-14-8-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 8.b"><a href="#definition-natural-numbers-13-1-14-8-1-3-2" title="Copy heading and permalink for Item 8.b" aria-label="Copy heading and permalink for Item 8.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-natural-numbers-13-1-14-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 8"><a href="#definition-natural-numbers-13-1-14-8" title="Copy heading and permalink for Item 8" aria-label="Copy heading and permalink for Item 8">🔗</a></div>
+</li>
+</ol>
+<div class="para">Typically, for all natural numbers <span class="process-math">\(m , n \in \N \)</span> we write <span class="process-math">\(m + n = \Add \of{ m , n } \)</span> and <span class="process-math">\(m n = m \cdot n = \Mult \of{ m , n } \text{,}\)</span> and we write <span class="process-math">\(m \leq n \)</span> if and only if <span class="process-math">\(\of{ m , n } \in \Comp \text{.}\)</span> The successor of <span class="process-math">\(0 \)</span> is denoted <span class="process-math">\(1 = \Succ \of{ 0 } \text{.}\)</span> Likewise, the successor of <span class="process-math">\(1 \)</span> is denoted <span class="process-math">\(2 = \Succ \of{ 1 } \text{,}\)</span> the successor of <span class="process-math">\(2 \)</span> is denoted <span class="process-math">\(3 = \Succ \of{ 2 } \text{,}\)</span> and so on. We see that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Succ \of{ n } = \Succ \of{ \Add \of{ n , 0 } } = \Add \of{ n , \Succ \of{ 0 } } = n + 1
+\end{equation*}
+</div>
+<div class="para">for all natural numbers <span class="process-math">\(n \in \N \text{.}\)</span> With these new notations, we may restate the Peano axioms as follows:</div>
+<ol class="decimal" id="definition-natural-numbers-13-1-28">
+<li>
+<div class="para">
+<span class="process-math">\(n + 1 \neq 0 \)</span> for all <span class="process-math">\(n \in \N \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-natural-numbers-13-1-28-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#definition-natural-numbers-13-1-28-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li>
+<div class="para">For all natural numbers <span class="process-math">\(m , n \in \N \text{,}\)</span> if <span class="process-math">\(m + 1 = n + 1 \text{,}\)</span> then <span class="process-math">\(m = n \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-natural-numbers-13-1-28-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#definition-natural-numbers-13-1-28-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(n + 0 = n \)</span> for all natural numbers <span class="process-math">\(n \in \N \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-natural-numbers-13-1-28-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#definition-natural-numbers-13-1-28-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(m + \of{ n + 1 } = \of{ m + n } + 1 \)</span> for all natural numbers <span class="process-math">\(m , n \in \N \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-natural-numbers-13-1-28-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#definition-natural-numbers-13-1-28-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(n \cdot 0 = 0 \)</span> for all natural numbers <span class="process-math">\(n \in \N \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-natural-numbers-13-1-28-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#definition-natural-numbers-13-1-28-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(m \of{ n + 1 } = m n + m \)</span> for all natural numbers <span class="process-math">\(n \in \N \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-natural-numbers-13-1-28-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6"><a href="#definition-natural-numbers-13-1-28-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+<li>
+<div class="para">For all natural numbers <span class="process-math">\(l , m \in \N \text{,}\)</span> <span class="process-math">\(l \leq m \)</span> if and only if <span class="process-math">\(l + n = m \)</span> for some natural number <span class="process-math">\(n \in \N \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-natural-numbers-13-1-28-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7"><a href="#definition-natural-numbers-13-1-28-7" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">For all subsets <span class="process-math">\(U \subseteq \N \text{,}\)</span> <span class="process-math">\(U = \N \)</span> if and only if it satisfies the following conditions:</div>
+<ol class="lower-alpha lower-alpha-level-1" id="definition-natural-numbers-13-1-28-8-1-3">
+<li>
+<div class="para">
+<span class="process-math">\(0 \in U \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-natural-numbers-13-1-28-8-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 8.a"><a href="#definition-natural-numbers-13-1-28-8-1-3-1" title="Copy heading and permalink for Item 8.a" aria-label="Copy heading and permalink for Item 8.a">🔗</a></div>
+</li>
+<li>
+<div class="para">For all natural numbers <span class="process-math">\(n \in \N \text{,}\)</span> if <span class="process-math">\(n \in U \text{,}\)</span> then <span class="process-math">\(n + 1 \in U \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-natural-numbers-13-1-28-8-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 8.b"><a href="#definition-natural-numbers-13-1-28-8-1-3-2" title="Copy heading and permalink for Item 8.b" aria-label="Copy heading and permalink for Item 8.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-natural-numbers-13-1-28-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 8"><a href="#definition-natural-numbers-13-1-28-8" title="Copy heading and permalink for Item 8" aria-label="Copy heading and permalink for Item 8">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-natural-numbers-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.3.1: Natural numbers"><a href="#definition-natural-numbers" title="Copy heading and permalink for Definition 1.3.1: Natural numbers" aria-label="Copy heading and permalink for Definition 1.3.1: Natural numbers">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="section-peano-arithmetic-and-the-natural-numbers.html#definition-natural-numbers">In Context</a></span>
+</body>
+</html>

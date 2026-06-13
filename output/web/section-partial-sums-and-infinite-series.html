@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Partial Sums and Infinite Series</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Real Analysis: An Undergraduate Notebook">
+<meta property="og:title" content="Real Analysis: An Undergraduate Notebook">
+<meta property="book:title" content="Real Analysis: An Undergraduate Notebook">
+<meta name="twitter:description" content="A simple string (no markup is allowed) to describe your book.">
+<meta property="og:description" content="A simple string (no markup is allowed) to describe your book.">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.1.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.dcab57465a404e85.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.79fbb790b185d712.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="lahnrealanalysis" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="book-real-analysis.html"><span class="title">Real Analysis</span> <span class="subtitle">An Undergraduate Notebook</span></a></h1>
+<p class="byline">Max Lahn</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="chapter-infinite-series.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-infinite-series.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="section-tests-for-series-convergence.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(  \newcommand{\of}[1]{ \left ( #1 \right ) } 
+  
+  \newcommand{\class}[1]{ \left \lbrack { #1 } \right \rbrack } 
+  
+  \newcommand{\set}[1]{ \left \lbrace #1 \right \rbrace } 
+  \newcommand{\setmid}[2]{ \left \lbrace { #1 } \: \middle \vert \: { #2 } \right \rbrace }
+  
+  \newcommand{\abs}[1]{ \left \lvert { #1 } \right \rvert } 
+  \newcommand{\card}[1]{ \left \lvert { #1 } \right \rvert } 
+  
+  \newcommand{\norm}[1]{ \left \lVert { #1 } \right \rVert } 
+  
+  \newcommand{\gen}[1]{ \left \langle { #1 } \right \rangle } 
+  \newcommand{\genmid}[2]{ \left \langle { #1 } \: \middle \vert \: { #2 } \right \rangle }
+  
+  \newcommand{\ceil}[1]{ \left \lceil { #1 } \right \rceil } 
+  
+  \newcommand{\floor}[1]{ \left \lfloor { #1 } \right \rfloor } 
+  
+  \newcommand{\doubleclass}[1]{ \left \llbrack { #1 } \right \rrbrack } 
+
+  
+  \newcommand{\opint}[2]{ \left ( { #1 } , { #2 } \right ) } 
+  
+  \newcommand{\clint}[2]{ \left \lbrack { #1 } , { #2 } \right \rbrack } 
+  
+  \newcommand{\opclint}[2]{ \left ( { #1 } , { #2 } \right \rbrack } 
+  
+  \newcommand{\clopint}[2]{ \left \lbrack { #1 } , { #2 } \right ) } 
+
+  
+  \newcommand{\inner}[2]{ \left \langle { #1 } , { #2 } \right \rangle } 
+  
+  \newcommand{\comm}[2]{ \left \lbrack { #1 } , { #2 } \right \rbrack } 
+  
+  \newcommand{\ind}[2]{ \left \lbrack { #1 } : { #2 } \right \rbrack } 
+  
+  \newcommand{\bra}[1]{ \left \langle { #1 } \right \rvert } 
+  
+  \newcommand{\ket}[1]{ \left \lvert { #1 } \right \rangle } 
+  
+  \newcommand{\braket}[2]{ \left \langle { #1 } \: \middle \vert \: { #2 } \right \rangle } 
+  
+  \newcommand{\rest}[1]{ \left . { #1 } \right \vert } 
+
+
+  
+  \newcommand{\N}{ \mathbb{ N } } 
+  
+  \newcommand{\Z}{ \mathbb{ Z } } 
+  
+  \newcommand{\Q}{ \mathbb{ Q } } 
+  
+  \newcommand{\R}{ \mathbb{ R } } 
+  
+  \newcommand{\C}{ \mathbb{ C } } 
+  
+  \newcommand{\Quat}{ \mathbb{ H } } 
+  
+  \newcommand{\Oct}{ \mathbb{ O } } 
+  
+  \newcommand{\F}{ \mathbb{ F } } 
+  
+  
+  \newcommand{\Euc}{ \mathbb{ E } } 
+  
+  \newcommand{\Sph}{ \mathbb{ S } } 
+  
+  \newcommand{\Hyp}{ \mathbb{ H } } 
+  
+  \newcommand{\B}{ \mathbb{ B } } 
+  
+  \newcommand{\D}{ \mathbb{ D } } 
+  
+  \newcommand{\I}{ \mathbb{ I } } 
+  
+  \newcommand{\T}{ \mathbb{ T } } 
+  
+  \newcommand{\RP}{ \mathbb{ RP } } 
+  
+  \newcommand{\CP}{ \mathbb{ CP } } 
+  
+  \newcommand{\HP}{ \mathbb{ HP } } 
+  
+  \newcommand{\Proj}{ \mathbb{ P } } 
+
+
+  
+  \DeclareMathOperator{\dom}{ dom } 
+  
+  \DeclareMathOperator{\codom}{ codom } 
+  
+  \DeclareMathOperator{\im}{ im } 
+  
+  \DeclareMathOperator{\coim}{ coim } 
+  
+  
+  
+  \DeclareMathOperator{\coker}{ coker } 
+  
+  
+  \DeclareMathOperator{\ord}{ ord } 
+  
+  \newcommand{\nslt}{ \mathrel{ \lhd } } 
+  
+  \newcommand{\nsgt}{ \mathrel{ \rhd } } 
+  
+  \newcommand{\nsleq}{ \mathrel{ \unlhd } } 
+  
+  \newcommand{\nsgeq}{ \mathrel{ \unrhd } } 
+  
+  \DeclareMathOperator{\Cent}{ Z } 
+  
+  \DeclareMathOperator{\Centz}{ C } 
+  
+  \DeclareMathOperator{\Normz}{ N } 
+  
+  \DeclareMathOperator{\stabz}{ stab } 
+  
+  \DeclareMathOperator{\Fix}{ Fix } 
+  
+  \DeclareMathOperator{\Cay}{ Cay } 
+  
+  \DeclareMathOperator{\Sch}{ Sch } 
+  
+  
+  \newcommand{\CycGrp}[1]{ \mathrm{ C }_{ #1 } } 
+  
+  \newcommand{\SymGrp}[1]{ \mathrm{ S }_{ #1 } } 
+  
+  \newcommand{\AltGrp}[1]{ \mathrm{ A }_{ #1 } } 
+  
+  \newcommand{\DihGrp}[1]{ \mathrm{ D }_{ #1 } } 
+  
+  \newcommand{\QuatGrp}[1]{ \mathrm{ Q }_{ #1 } } 
+  
+  \newcommand{\FrGrp}[1]{ \mathrm{ F }_{ #1 } } 
+  
+  \DeclareMathOperator{\Aut}{ Aut } 
+  
+  \DeclareMathOperator{\Inn}{ Inn } 
+  
+  \DeclareMathOperator{\Out}{ Out } 
+  
+  \DeclareMathOperator{\Gal}{ Gal } 
+  
+  \DeclareMathOperator{\Homeo}{ Homeo } 
+  
+  \DeclareMathOperator{\Diff}{ Diff } 
+  
+  \DeclareMathOperator{\Bihol}{ Bihol } 
+  
+  \DeclareMathOperator{\Isom}{ Isom } 
+  
+  \DeclareMathOperator{\Deck}{ Deck } 
+  
+  \DeclareMathOperator{\QI}{ QI } 
+  
+  \DeclareMathOperator{\MCG}{ MCG } 
+  
+  \DeclareMathOperator{\Homol}{ H } 
+  
+  
+  \DeclareMathOperator{\GL}{ GL } 
+  
+  \DeclareMathOperator{\PGL}{ PGL } 
+  
+  \DeclareMathOperator{\SL}{ SL } 
+  
+  \DeclareMathOperator{\PSL}{ PSL } 
+  
+  \DeclareMathOperator{\Ort}{ O } 
+  
+  \DeclareMathOperator{\PO}{ PO } 
+  
+  \DeclareMathOperator{\SO}{ SO } 
+  
+  \DeclareMathOperator{\PSO}{ PSO } 
+  
+  \DeclareMathOperator{\U}{ U } 
+  
+  \DeclareMathOperator{\PU}{ PU } 
+  
+  \DeclareMathOperator{\SU}{ SU } 
+  
+  \DeclareMathOperator{\PSU}{ PSU } 
+  
+  \DeclareMathOperator{\Sp}{ Sp } 
+  
+  \DeclareMathOperator{\PSp}{ PSp } 
+  
+  \DeclareMathOperator{\USp}{ USp } 
+  
+  \DeclareMathOperator{\PUSp}{ PUSp } 
+  
+  \DeclareMathOperator{\Aff}{ Aff } 
+  
+  \DeclareMathOperator{\SAff}{ SAff } 
+  
+  
+  \DeclareMathOperator{\gl}{ \mathfrak{ gl } } 
+  
+  \DeclareMathOperator{\pgl}{ \mathfrak{ pgl } } 
+  
+  \DeclareMathOperator{\spl}{ \mathfrak{ sl } } 
+  
+  \DeclareMathOperator{\psl}{ \mathfrak{ psl } } 
+  
+  \DeclareMathOperator{\ort}{ \mathfrak{ o } } 
+  
+  \DeclareMathOperator{\po}{ \mathfrak{ po } } 
+  
+  \DeclareMathOperator{\so}{ \mathfrak{ so } } 
+  
+  \DeclareMathOperator{\pso}{ \mathfrak{ pso } } 
+  
+  \DeclareMathOperator{\unit}{ \mathfrak{ u } } 
+  
+  \DeclareMathOperator{\pu}{ \mathfrak{ pu } } 
+  
+  \DeclareMathOperator{\su}{ \mathfrak{ su } } 
+  
+  \DeclareMathOperator{\psu}{ \mathfrak{ psu } } 
+  
+  \DeclareMathOperator{\symp}{ \mathfrak{ sp } } 
+  
+  \DeclareMathOperator{\psp}{ \mathfrak{ psp } } 
+  
+  \DeclareMathOperator{\usp}{ \mathfrak{ usp } } 
+  
+  \DeclareMathOperator{\pusp}{ \mathfrak{ pusp } } 
+  
+  \DeclareMathOperator{\g}{ \mathfrak{ g } } 
+  
+  
+  \DeclareMathOperator{\Mat}{ \mathcal{ M } } 
+  
+  \DeclareMathOperator{\End}{ End } 
+  
+  \DeclareMathOperator{\Tens}{ \mathcal{ T } } 
+  
+  \DeclareMathOperator{\SymTens}{ \Theta } 
+  
+  \DeclareMathOperator{\AltTens}{ \Lambda } 
+  
+  
+  
+  \newcommand{\vect}[1]{ \mathbf{ #1 } } 
+  
+  \DeclareMathOperator{\lspan}{ span } 
+  
+  
+  
+  \DeclareMathOperator{\codim}{ codim } 
+  
+  \DeclareMathOperator{\rk}{ rk } 
+  
+  
+  
+  \DeclareMathOperator{\tr}{ tr } 
+  
+  \newcommand{\trans}[1]{ { #1 }^{ \mathrm{ T } } } 
+  
+  \newcommand{\contra}[1]{ { #1 }^{ -\mathrm{ T } } } 
+  
+  \newcommand{\adj}[1]{ { #1 }^{ \dag } } 
+  
+  \DeclareMathOperator{\diag}{ diag } 
+  
+  \DeclareMathOperator{\Gr}{ Gr } 
+  
+  \DeclareMathOperator{\Flag}{ \mathcal{ F } } 
+  
+  
+  \DeclareMathOperator{\ob}{ ob } 
+  
+  \DeclareMathOperator{\mor}{ mor } 
+  
+  
+  \DeclareMathOperator{\id}{ id } 
+  
+  \DeclareMathOperator{\inv}{ inv } 
+  
+  \newcommand{\op}[1]{ { #1 }^{ \mathrm{ op } } } 
+  
+  
+  \newcommand{\Set}{ \mathbf{ Set } } 
+  
+  \newcommand{\Rel}{ \mathbf{ Rel } } 
+  
+  \newcommand{\Grp}{ \mathbf{ Grp } } 
+  
+  \newcommand{\Ab}{ \mathbf{ Ab } } 
+  
+  \newcommand{\Ring}{ \mathbf{ Ring } } 
+  
+  \newcommand{\Rng}{ \mathbf{ Rng } } 
+  
+  \newcommand{\IntDom}{ \mathbf{ IntDom } } 
+  
+  \newcommand{\Field}{ \mathbf{ Field } } 
+  
+  \newcommand{\Top}{ \mathbf{ Top } } 
+  
+  \newcommand{\hTop}{ \mathbf{ hTop } } 
+  
+  \newcommand{\Met}{ \mathbf{ Met } } 
+  
+  \newcommand{\Man}[1][ \infty ]{ \mathbf{ Man }^{ #1 } } 
+  
+  \newcommand{\Vect}{ \mathbf{ Vect } } 
+  
+  \newcommand{\Cat}{ \mathbf{ Cat } } 
+  
+  \newcommand{\Fun}{ \mathbf{ Fun } } 
+  
+
+  
+  \DeclareMathOperator{\Int}{ Int } 
+  
+  \DeclareMathOperator{\Cl}{ Cl } 
+  
+  \DeclareMathOperator{\Bd}{ Bd } 
+  
+  \DeclareMathOperator{\Ext}{ Ext } 
+  
+  \DeclareMathOperator{\supp}{ supp } 
+  
+  
+  \DeclareMathOperator{\mS}{ S } 
+  
+  \DeclareMathOperator{\mB}{ B } 
+  
+  \DeclareMathOperator{\mD}{ D } 
+  
+  \DeclareMathOperator{\diam}{ diam } 
+  
+  \DeclareMathOperator*{\uniflim}{ unif \, lim } 
+  
+  \DeclareMathOperator{\len}{ len } 
+  
+  \DeclareMathOperator{\area}{ area } 
+  
+  \DeclareMathOperator{\vol}{ vol } 
+  
+  
+  \DeclareMathOperator{\CDiff}{ C } 
+  
+  \DeclareMathOperator{\UC}{ UC } 
+  
+  \DeclareMathOperator{\LC}{ LC } 
+  
+  \DeclareMathOperator{\Bdd}{ Bdd } 
+  
+  \DeclareMathOperator{\BC}{ BC } 
+  
+  \DeclareMathOperator{\BUC}{ BUC } 
+  
+  \DeclareMathOperator{\BLC}{ BLC } 
+  
+  
+  
+  
+  
+  
+  
+  \DeclareMathOperator{\Exp}{ \mathbb{ E } } 
+  
+  \DeclareMathOperator{\Var}{ \mathbb{ V } } 
+  
+  \newcommand{\Borel}{ \mathscr{ B } } 
+  
+  \DeclareMathOperator{\Haus}{ \mathscr{ H } } 
+  
+  \DeclareMathOperator*{\esssup}{ ess \, sup } 
+    
+  \DeclareMathOperator*{\essinf}{ ess \, inf } 
+
+
+  
+  \DeclareMathOperator{\diff}{ d } 
+  
+  \DeclareMathOperator{\pdiff}{ \partial } 
+  
+  \DeclareMathOperator{\del}{ \nabla } 
+  
+  
+  
+  
+  
+  \DeclareMathOperator{\Jac}{ \mathbf{ J } } 
+  
+  \DeclareMathOperator{\grad}{ grad } 
+  
+  \DeclareMathOperator{\divg}{ div } 
+  
+  \DeclareMathOperator{\curl}{ curl } 
+  
+  \DeclareMathOperator{\Lap}{ \Delta } 
+  
+  \DeclareMathOperator{\Sec}{ \Gamma } 
+  
+  \DeclareMathOperator{\VF}{ \mathfrak{ X } } 
+  
+  \DeclareMathOperator{\DF}{ \Omega } 
+  
+  \DeclareMathOperator{\dRCoh}{ H_{ \mathrm{ dR } } } 
+  
+
+  \DeclareMathOperator{\ps}{ \mathcal{ P } } 
+  
+  \newcommand{\oparg}{ \: \cdot \: } 
+  
+  \newcommand{\symdiff}{ \mathbin{ \triangle } } 
+  
+  
+  \DeclareMathOperator{\Succ}{ succ } 
+  
+  \DeclareMathOperator{\Add}{ add } 
+  
+  \DeclareMathOperator{\Mult}{ mult } 
+  
+  \DeclareMathOperator{\Comp}{ comp } 
+  
+  \DeclareMathOperator{\sgn}{ sgn } 
+  
+  
+  
+  
+  
+  
+  
+  \DeclareMathOperator{\Arg}{ Arg } 
+  
+  
+  
+  
+  
+  
+  
+  \DeclareMathOperator{\Log}{ Log } 
+
+  \newcommand{\divides}{ \mathbin{ \vert } } 
+
+  
+  
+  \DeclareMathOperator{\lcm}{ lcm } 
+  
+  \DeclareMathOperator{\proj}{ proj } 
+  
+  \DeclareMathOperator{\inj}{ inj } 
+  
+  \DeclareMathOperator{\coproj}{ coproj } 
+
+  
+
+  
+  
+  
+  \newcommand{\from}{ \leftarrow } 
+  
+  \newcommand{\upto}{ \nearrow } 
+  
+  \newcommand{\upfrom}{ \nwarrow } 
+  
+  \newcommand{\downto}{ \searrow } 
+  
+  \newcommand{\downfrom}{ \swarrow } 
+  
+  
+  
+  \newcommand{\actson}{ \mathbin{ \curvearrowright } } 
+  
+  \newcommand{\actedon}{ \mathbin{ \curvearrowleft } }
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts focused" data-preexpanded-levels="0" data-max-levels="3"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-analytical-foundations.html" class="internal"><span class="codenumber">I</span> <span class="title">Analytical Foundations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-introductory-set-theory.html" class="internal"><span class="codenumber">1</span> <span class="title">Introductory Set Theory</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-what-is-a-set.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What Is a Set?</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-what-is-a-set.html#subsection-definitions-of-sets" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Definitions of Sets</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-what-is-a-set.html#subsection-set-containment" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Set Containment</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-what-is-a-set.html#subsection-set-operations" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Set Operations</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-what-is-a-set.html#exercises-what-is-a-set" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-what-is-a-set.html#reading-questions-what-is-a-set" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-maps-and-functions.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Maps and Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-maps-and-functions.html#subsection-introduction-to-maps" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Introduction to Maps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-maps-and-functions.html#subsection-composition-and-invertibility" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Composition and Invertibility</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-maps-and-functions.html#subsection-indexing" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Indexing</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-maps-and-functions.html#exercises-maps-and-functions" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-maps-and-functions.html#reading-questions-maps-and-functions" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Peano Arithmetic and the Natural Numbers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#subsection-axiomatizing-the-natural-numbers" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Axiomatizing the Natural Numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#subsection-properties-of-arithmetic" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Properties of Arithmetic</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#subsection-properties-of-comparison" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Properties of Comparison</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#exercises-peano-arithmetic-and-the-natural-numbers" class="internal"><span class="codenumber">1.3.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#reading-questions-peano-arithmetic-and-the-natural-numbers" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-finitary-operations-and-relations.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Finitary Operations and Relations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#subsection-products-and-choice" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Products and Choice</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#subsection-finitary-operations" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Finitary Operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#subsection-finitary-relations" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Finitary Relations</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#exercises-finitary-operations-and-relations" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#reading-questions-finitary-operations-and-relations" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-introduction-to-order-theory.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Introduction to Order Theory</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#subsection-partial-orders" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Partial Orders</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#subsection-boundedness-and-extrema" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Boundedness and Extrema</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#subsection-comparability-and-total-orders" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Comparability and Total Orders</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#exercises-introduction-to-order-theory" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#reading-questions-introduction-to-order-theory" class="internal"><span class="codenumber">1.5.5</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-cardinality-and-countability.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Cardinality and Countability [INCOMPLETE]</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#subsection-finiteness" class="internal"><span class="codenumber">1.6.1</span> <span class="title">Finiteness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#subsection-cardinal-comparison" class="internal"><span class="codenumber">1.6.2</span> <span class="title">Cardinal Comparison</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#subsection-countability" class="internal"><span class="codenumber">1.6.3</span> <span class="title">Countability</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#exercises-cardinality-and-countability" class="internal"><span class="codenumber">1.6.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#reading-questions-cardinality-and-countability" class="internal"><span class="codenumber">1.6.5</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-constructing-the-number-systems.html" class="internal"><span class="codenumber">2</span> <span class="title">Constructing the Number Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-the-integers-and-rational-numbers.html" class="internal"><span class="codenumber">2.1</span> <span class="title">The Integers and the Rational Numbers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-integers-and-rational-numbers.html#exercises-the-integers-and-rational-numbers" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-integers-and-rational-numbers.html#reading-questions-the-integers-and-rational-numbers" class="internal"><span class="codenumber">2.1</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-constructing-the-real-numbers.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Constructing the Real Numbers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#exercises-constructing-the-real-numbers" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#reading-questions-constructing-the-real-numbers" class="internal"><span class="codenumber">2.2</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-the-complete-ordered-field.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Complete Ordered Field</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#exercises-the-complete-ordered-field" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#reading-questions-the-complete-ordered-field" class="internal"><span class="codenumber">2.3</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-beyond-the-real-number-system.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Beyond the Real Number System</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-beyond-the-real-number-system.html#exercises-beyond-the-real-number-system" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-beyond-the-real-number-system.html#reading-questions-beyond-the-real-number-system" class="internal"><span class="codenumber">2.4</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-point-set-topology.html" class="internal"><span class="codenumber">II</span> <span class="title">Point-Set Topology</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-metric-spaces.html" class="internal"><span class="codenumber">3</span> <span class="title">Metric Spaces</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction to Metric Geometry</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#exercises-introduction-to-metric-geometry" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#reading-questions-introduction-to-metric-geometry" class="internal"><span class="codenumber">3.1</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-convergence-and-limits.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Convergence and Limits</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-limits.html#exercises-convergence-and-limits" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-limits.html#reading-questions-convergence-and-limits" class="internal"><span class="codenumber">3.2</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Limits in the Euclidean Metric</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#exercises-limits-in-the-euclidean-metric" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#reading-questions-limits-in-the-euclidean-metric" class="internal"><span class="codenumber">3.3</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-open-and-closed-sets.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Open and Closed Sets</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#exercises-open-and-closed-sets" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#reading-questions-open-and-closed-sets" class="internal"><span class="codenumber">3.4</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-notions-of-metric-continuity.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Notions of Metric Continuity</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#exercises-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#reading-questions-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-completeness-and-compactness.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Completeness and Compactness</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#exercises-completeness-and-compactness" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#reading-questions-completeness-and-compactness" class="internal"><span class="codenumber">3.6</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-topological-spaces.html" class="internal"><span class="codenumber">4</span> <span class="title">Topological Spaces</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-introduction-to-topology.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Introduction to Topology</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-topology.html#exercises-introduction-to-topology" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-topology.html#reading-questions-introduction-to-topology" class="internal"><span class="codenumber">4.1</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-comparison-of-topologies.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Comparison of Topologies</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-comparison-of-topologies.html#exercises-comparison-of-topologies" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-comparison-of-topologies.html#reading-questions-comparison-of-topologies" class="internal"><span class="codenumber">4.2</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-convergence-and-separation.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Convergence and Separation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-separation.html#exercises-convergence-and-separation" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-separation.html#reading-questions-convergence-and-separation" class="internal"><span class="codenumber">4.3</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-continuity-in-topological-spaces.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Continuity in Topological Spaces</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-continuity-in-topological-spaces.html#exercises-continuity-in-topological-spaces" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-continuity-in-topological-spaces.html#reading-questions-continuity-in-topological-spaces" class="internal"><span class="codenumber">4.4</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-connectedness-and-compactness.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Connectedness and Compactness</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-connectedness-and-compactness.html#exercises-connectedness-and-compactness" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-connectedness-and-compactness.html#reading-questions-connectedness-and-compactness" class="internal"><span class="codenumber">4.5</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="part-calculus.html" class="internal"><span class="codenumber">III</span> <span class="title">Calculus</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-differentiation-and-smoothness.html" class="internal"><span class="codenumber">5</span> <span class="title">Differentiation and Smoothness</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-differentiability.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Differentiability</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#exercises-differentiability" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#reading-questions-differentiability" class="internal"><span class="codenumber">5.1</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-the-mean-value-theorem.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Mean Value Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-mean-value-theorem.html#exercises-the-mean-value-theorem" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-mean-value-theorem.html#reading-questions-the-mean-value-theorem" class="internal"><span class="codenumber">5.2</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-applications-of-the-mean-value-theorem.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Applications of the Mean Value Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-applications-of-the-mean-value-theorem.html#exercises-applications-of-the-mean-value-theorem" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-applications-of-the-mean-value-theorem.html#reading-questions-applications-of-the-mean-value-theorem" class="internal"><span class="codenumber">5.3</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-higher-order-derivatives.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Higher Order Derivatives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-higher-order-derivatives.html#exercises-higher-order-derivatives" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-higher-order-derivatives.html#reading-questions-higher-order-derivatives" class="internal"><span class="codenumber">5.4</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-riemann-integration.html" class="internal"><span class="codenumber">6</span> <span class="title">Riemann Integration</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-riemann-sums.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Riemann Sums</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-riemann-sums.html#exercises-riemann-sums" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-riemann-sums.html#reading-questions-riemann-sums" class="internal"><span class="codenumber">6.1</span> <span class="title">Reading Question</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-properties-of-the-riemann-integral.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Properties of the Riemann Integral</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-properties-of-the-riemann-integral.html#exercises-properties-of-the-riemann-integral" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-properties-of-the-riemann-integral.html#reading-questions-properties-of-the-riemann-integral" class="internal"><span class="codenumber">6.2</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The Fundamental Theorems of Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#exercises-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#reading-questions-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.3</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-improper-integration.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Improper Integration</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-improper-integration.html#exercises-improper-integration" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-improper-integration.html#reading-questions-improper-integration" class="internal"><span class="codenumber">6.4</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="chapter-infinite-series.html" class="internal"><span class="codenumber">7</span> <span class="title">Infinite Series</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Partial Sums and Infinite Series</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#exercises-partial-sums-and-infinite-series" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#reading-questions-partial-sums-and-infinite-series" class="internal"><span class="codenumber">7.1</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-tests-for-series-convergence.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Tests for Series Convergence</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-tests-for-series-convergence.html#exercises-tests-for-series-convergence" class="internal"><span class="codenumber">7.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-tests-for-series-convergence.html#reading-questions-tests-for-series-convergence" class="internal"><span class="codenumber">7.2</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-power-series.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Power Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-power-series.html#exercises-power-series" class="internal"><span class="codenumber">7.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-power-series.html#reading-questions-power-series" class="internal"><span class="codenumber">7.3</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-analytic-functions.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Analytic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-analytic-functions.html#exercises-analytic-functions" class="internal"><span class="codenumber">7.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-analytic-functions.html#reading-questions-analytic-functions" class="internal"><span class="codenumber">7.4</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="solutions.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Solutions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="section-partial-sums-and-infinite-series">
+<h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Partial Sums and Infinite Series</span>
+</h2>
+<section class="introduction" id="section-partial-sums-and-infinite-series-2">
+<div class="para" id="section-partial-sums-and-infinite-series-2-1">Text before the first subsection.<div class="autopermalink" data-description="Paragraph"><a href="#section-partial-sums-and-infinite-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="conclusion" id="section-partial-sums-and-infinite-series-3">
+<div class="para" id="section-partial-sums-and-infinite-series-3-1">Text after the last subsection.<div class="autopermalink" data-description="Paragraph"><a href="#section-partial-sums-and-infinite-series-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="reading-questions" id="exercises-partial-sums-and-infinite-series">
+<h3 class="heading hide-type">
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h3>
+<section class="introduction" id="exercises-partial-sums-and-infinite-series-2">
+<div class="para" id="exercises-partial-sums-and-infinite-series-2-1">The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-partial-sums-and-infinite-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="conclusion" id="exercises-partial-sums-and-infinite-series-3">
+<div class="para" id="exercises-partial-sums-and-infinite-series-3-1">Short answers and/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-partial-sums-and-infinite-series-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Reading Questions 7.1: Exercises"><a href="#exercises-partial-sums-and-infinite-series" title="Copy heading and permalink for Reading Questions 7.1: Exercises" aria-label="Copy heading and permalink for Reading Questions 7.1: Exercises">🔗</a></div>
+</section>
+<section class="reading-questions" id="reading-questions-partial-sums-and-infinite-series">
+<h3 class="heading hide-type">
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reading Questions</span>
+</h3>
+<section class="introduction" id="reading-questions-partial-sums-and-infinite-series-2">
+<div class="para" id="reading-questions-partial-sums-and-infinite-series-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" data-description="Paragraph"><a href="#reading-questions-partial-sums-and-infinite-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="conclusion" id="reading-questions-partial-sums-and-infinite-series-3">
+<div class="para" id="reading-questions-partial-sums-and-infinite-series-3-1">In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#reading-questions-partial-sums-and-infinite-series-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Reading Questions 7.1: Reading Questions"><a href="#reading-questions-partial-sums-and-infinite-series" title="Copy heading and permalink for Reading Questions 7.1: Reading Questions" aria-label="Copy heading and permalink for Reading Questions 7.1: Reading Questions">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 7.1: Partial Sums and Infinite Series"><a href="#section-partial-sums-and-infinite-series" title="Copy heading and permalink for Section 7.1: Partial Sums and Infinite Series" aria-label="Copy heading and permalink for Section 7.1: Partial Sums and Infinite Series">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="chapter-infinite-series.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section-tests-for-series-convergence.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
