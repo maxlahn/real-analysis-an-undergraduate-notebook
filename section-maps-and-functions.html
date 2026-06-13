@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Maps and Functions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Real Analysis: An Undergraduate Notebook">
+<meta property="og:title" content="Real Analysis: An Undergraduate Notebook">
+<meta property="book:title" content="Real Analysis: An Undergraduate Notebook">
+<meta name="twitter:description" content="A simple string (no markup is allowed) to describe your book.">
+<meta property="og:description" content="A simple string (no markup is allowed) to describe your book.">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.1.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.dcab57465a404e85.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.79fbb790b185d712.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="lahnrealanalysis" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="book-real-analysis.html"><span class="title">Real Analysis</span> <span class="subtitle">An Undergraduate Notebook</span></a></h1>
+<p class="byline">Max Lahn</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="section-what-is-a-set.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-introductory-set-theory.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="section-peano-arithmetic-and-the-natural-numbers.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(  \newcommand{\of}[1]{ \left ( #1 \right ) } 
+  
+  \newcommand{\class}[1]{ \left \lbrack { #1 } \right \rbrack } 
+  
+  \newcommand{\set}[1]{ \left \lbrace #1 \right \rbrace } 
+  \newcommand{\setmid}[2]{ \left \lbrace { #1 } \: \middle \vert \: { #2 } \right \rbrace }
+  
+  \newcommand{\abs}[1]{ \left \lvert { #1 } \right \rvert } 
+  \newcommand{\card}[1]{ \left \lvert { #1 } \right \rvert } 
+  
+  \newcommand{\norm}[1]{ \left \lVert { #1 } \right \rVert } 
+  
+  \newcommand{\gen}[1]{ \left \langle { #1 } \right \rangle } 
+  \newcommand{\genmid}[2]{ \left \langle { #1 } \: \middle \vert \: { #2 } \right \rangle }
+  
+  \newcommand{\ceil}[1]{ \left \lceil { #1 } \right \rceil } 
+  
+  \newcommand{\floor}[1]{ \left \lfloor { #1 } \right \rfloor } 
+  
+  \newcommand{\doubleclass}[1]{ \left \llbrack { #1 } \right \rrbrack } 
+
+  
+  \newcommand{\opint}[2]{ \left ( { #1 } , { #2 } \right ) } 
+  
+  \newcommand{\clint}[2]{ \left \lbrack { #1 } , { #2 } \right \rbrack } 
+  
+  \newcommand{\opclint}[2]{ \left ( { #1 } , { #2 } \right \rbrack } 
+  
+  \newcommand{\clopint}[2]{ \left \lbrack { #1 } , { #2 } \right ) } 
+
+  
+  \newcommand{\inner}[2]{ \left \langle { #1 } , { #2 } \right \rangle } 
+  
+  \newcommand{\comm}[2]{ \left \lbrack { #1 } , { #2 } \right \rbrack } 
+  
+  \newcommand{\ind}[2]{ \left \lbrack { #1 } : { #2 } \right \rbrack } 
+  
+  \newcommand{\bra}[1]{ \left \langle { #1 } \right \rvert } 
+  
+  \newcommand{\ket}[1]{ \left \lvert { #1 } \right \rangle } 
+  
+  \newcommand{\braket}[2]{ \left \langle { #1 } \: \middle \vert \: { #2 } \right \rangle } 
+  
+  \newcommand{\rest}[1]{ \left . { #1 } \right \vert } 
+
+
+  
+  \newcommand{\N}{ \mathbb{ N } } 
+  
+  \newcommand{\Z}{ \mathbb{ Z } } 
+  
+  \newcommand{\Q}{ \mathbb{ Q } } 
+  
+  \newcommand{\R}{ \mathbb{ R } } 
+  
+  \newcommand{\C}{ \mathbb{ C } } 
+  
+  \newcommand{\Quat}{ \mathbb{ H } } 
+  
+  \newcommand{\Oct}{ \mathbb{ O } } 
+  
+  \newcommand{\F}{ \mathbb{ F } } 
+  
+  
+  \newcommand{\Euc}{ \mathbb{ E } } 
+  
+  \newcommand{\Sph}{ \mathbb{ S } } 
+  
+  \newcommand{\Hyp}{ \mathbb{ H } } 
+  
+  \newcommand{\B}{ \mathbb{ B } } 
+  
+  \newcommand{\D}{ \mathbb{ D } } 
+  
+  \newcommand{\I}{ \mathbb{ I } } 
+  
+  \newcommand{\T}{ \mathbb{ T } } 
+  
+  \newcommand{\RP}{ \mathbb{ RP } } 
+  
+  \newcommand{\CP}{ \mathbb{ CP } } 
+  
+  \newcommand{\HP}{ \mathbb{ HP } } 
+  
+  \newcommand{\Proj}{ \mathbb{ P } } 
+
+
+  
+  \DeclareMathOperator{\dom}{ dom } 
+  
+  \DeclareMathOperator{\codom}{ codom } 
+  
+  \DeclareMathOperator{\im}{ im } 
+  
+  \DeclareMathOperator{\coim}{ coim } 
+  
+  
+  
+  \DeclareMathOperator{\coker}{ coker } 
+  
+  
+  \DeclareMathOperator{\ord}{ ord } 
+  
+  \newcommand{\nslt}{ \mathrel{ \lhd } } 
+  
+  \newcommand{\nsgt}{ \mathrel{ \rhd } } 
+  
+  \newcommand{\nsleq}{ \mathrel{ \unlhd } } 
+  
+  \newcommand{\nsgeq}{ \mathrel{ \unrhd } } 
+  
+  \DeclareMathOperator{\Cent}{ Z } 
+  
+  \DeclareMathOperator{\Centz}{ C } 
+  
+  \DeclareMathOperator{\Normz}{ N } 
+  
+  \DeclareMathOperator{\stabz}{ stab } 
+  
+  \DeclareMathOperator{\Fix}{ Fix } 
+  
+  \DeclareMathOperator{\Cay}{ Cay } 
+  
+  \DeclareMathOperator{\Sch}{ Sch } 
+  
+  
+  \newcommand{\CycGrp}[1]{ \mathrm{ C }_{ #1 } } 
+  
+  \newcommand{\SymGrp}[1]{ \mathrm{ S }_{ #1 } } 
+  
+  \newcommand{\AltGrp}[1]{ \mathrm{ A }_{ #1 } } 
+  
+  \newcommand{\DihGrp}[1]{ \mathrm{ D }_{ #1 } } 
+  
+  \newcommand{\QuatGrp}[1]{ \mathrm{ Q }_{ #1 } } 
+  
+  \newcommand{\FrGrp}[1]{ \mathrm{ F }_{ #1 } } 
+  
+  \DeclareMathOperator{\Aut}{ Aut } 
+  
+  \DeclareMathOperator{\Inn}{ Inn } 
+  
+  \DeclareMathOperator{\Out}{ Out } 
+  
+  \DeclareMathOperator{\Gal}{ Gal } 
+  
+  \DeclareMathOperator{\Homeo}{ Homeo } 
+  
+  \DeclareMathOperator{\Diff}{ Diff } 
+  
+  \DeclareMathOperator{\Bihol}{ Bihol } 
+  
+  \DeclareMathOperator{\Isom}{ Isom } 
+  
+  \DeclareMathOperator{\Deck}{ Deck } 
+  
+  \DeclareMathOperator{\QI}{ QI } 
+  
+  \DeclareMathOperator{\MCG}{ MCG } 
+  
+  \DeclareMathOperator{\Homol}{ H } 
+  
+  
+  \DeclareMathOperator{\GL}{ GL } 
+  
+  \DeclareMathOperator{\PGL}{ PGL } 
+  
+  \DeclareMathOperator{\SL}{ SL } 
+  
+  \DeclareMathOperator{\PSL}{ PSL } 
+  
+  \DeclareMathOperator{\Ort}{ O } 
+  
+  \DeclareMathOperator{\PO}{ PO } 
+  
+  \DeclareMathOperator{\SO}{ SO } 
+  
+  \DeclareMathOperator{\PSO}{ PSO } 
+  
+  \DeclareMathOperator{\U}{ U } 
+  
+  \DeclareMathOperator{\PU}{ PU } 
+  
+  \DeclareMathOperator{\SU}{ SU } 
+  
+  \DeclareMathOperator{\PSU}{ PSU } 
+  
+  \DeclareMathOperator{\Sp}{ Sp } 
+  
+  \DeclareMathOperator{\PSp}{ PSp } 
+  
+  \DeclareMathOperator{\USp}{ USp } 
+  
+  \DeclareMathOperator{\PUSp}{ PUSp } 
+  
+  \DeclareMathOperator{\Aff}{ Aff } 
+  
+  \DeclareMathOperator{\SAff}{ SAff } 
+  
+  
+  \DeclareMathOperator{\gl}{ \mathfrak{ gl } } 
+  
+  \DeclareMathOperator{\pgl}{ \mathfrak{ pgl } } 
+  
+  \DeclareMathOperator{\spl}{ \mathfrak{ sl } } 
+  
+  \DeclareMathOperator{\psl}{ \mathfrak{ psl } } 
+  
+  \DeclareMathOperator{\ort}{ \mathfrak{ o } } 
+  
+  \DeclareMathOperator{\po}{ \mathfrak{ po } } 
+  
+  \DeclareMathOperator{\so}{ \mathfrak{ so } } 
+  
+  \DeclareMathOperator{\pso}{ \mathfrak{ pso } } 
+  
+  \DeclareMathOperator{\unit}{ \mathfrak{ u } } 
+  
+  \DeclareMathOperator{\pu}{ \mathfrak{ pu } } 
+  
+  \DeclareMathOperator{\su}{ \mathfrak{ su } } 
+  
+  \DeclareMathOperator{\psu}{ \mathfrak{ psu } } 
+  
+  \DeclareMathOperator{\symp}{ \mathfrak{ sp } } 
+  
+  \DeclareMathOperator{\psp}{ \mathfrak{ psp } } 
+  
+  \DeclareMathOperator{\usp}{ \mathfrak{ usp } } 
+  
+  \DeclareMathOperator{\pusp}{ \mathfrak{ pusp } } 
+  
+  \DeclareMathOperator{\g}{ \mathfrak{ g } } 
+  
+  
+  \DeclareMathOperator{\Mat}{ \mathcal{ M } } 
+  
+  \DeclareMathOperator{\End}{ End } 
+  
+  \DeclareMathOperator{\Tens}{ \mathcal{ T } } 
+  
+  \DeclareMathOperator{\SymTens}{ \Theta } 
+  
+  \DeclareMathOperator{\AltTens}{ \Lambda } 
+  
+  
+  
+  \newcommand{\vect}[1]{ \mathbf{ #1 } } 
+  
+  \DeclareMathOperator{\lspan}{ span } 
+  
+  
+  
+  \DeclareMathOperator{\codim}{ codim } 
+  
+  \DeclareMathOperator{\rk}{ rk } 
+  
+  
+  
+  \DeclareMathOperator{\tr}{ tr } 
+  
+  \newcommand{\trans}[1]{ { #1 }^{ \mathrm{ T } } } 
+  
+  \newcommand{\contra}[1]{ { #1 }^{ -\mathrm{ T } } } 
+  
+  \newcommand{\adj}[1]{ { #1 }^{ \dag } } 
+  
+  \DeclareMathOperator{\diag}{ diag } 
+  
+  \DeclareMathOperator{\Gr}{ Gr } 
+  
+  \DeclareMathOperator{\Flag}{ \mathcal{ F } } 
+  
+  
+  \DeclareMathOperator{\ob}{ ob } 
+  
+  \DeclareMathOperator{\mor}{ mor } 
+  
+  
+  \DeclareMathOperator{\id}{ id } 
+  
+  \DeclareMathOperator{\inv}{ inv } 
+  
+  \newcommand{\op}[1]{ { #1 }^{ \mathrm{ op } } } 
+  
+  
+  \newcommand{\Set}{ \mathbf{ Set } } 
+  
+  \newcommand{\Rel}{ \mathbf{ Rel } } 
+  
+  \newcommand{\Grp}{ \mathbf{ Grp } } 
+  
+  \newcommand{\Ab}{ \mathbf{ Ab } } 
+  
+  \newcommand{\Ring}{ \mathbf{ Ring } } 
+  
+  \newcommand{\Rng}{ \mathbf{ Rng } } 
+  
+  \newcommand{\IntDom}{ \mathbf{ IntDom } } 
+  
+  \newcommand{\Field}{ \mathbf{ Field } } 
+  
+  \newcommand{\Top}{ \mathbf{ Top } } 
+  
+  \newcommand{\hTop}{ \mathbf{ hTop } } 
+  
+  \newcommand{\Met}{ \mathbf{ Met } } 
+  
+  \newcommand{\Man}[1][ \infty ]{ \mathbf{ Man }^{ #1 } } 
+  
+  \newcommand{\Vect}{ \mathbf{ Vect } } 
+  
+  \newcommand{\Cat}{ \mathbf{ Cat } } 
+  
+  \newcommand{\Fun}{ \mathbf{ Fun } } 
+  
+
+  
+  \DeclareMathOperator{\Int}{ Int } 
+  
+  \DeclareMathOperator{\Cl}{ Cl } 
+  
+  \DeclareMathOperator{\Bd}{ Bd } 
+  
+  \DeclareMathOperator{\Ext}{ Ext } 
+  
+  \DeclareMathOperator{\supp}{ supp } 
+  
+  
+  \DeclareMathOperator{\mS}{ S } 
+  
+  \DeclareMathOperator{\mB}{ B } 
+  
+  \DeclareMathOperator{\mD}{ D } 
+  
+  \DeclareMathOperator{\diam}{ diam } 
+  
+  \DeclareMathOperator*{\uniflim}{ unif \, lim } 
+  
+  \DeclareMathOperator{\len}{ len } 
+  
+  \DeclareMathOperator{\area}{ area } 
+  
+  \DeclareMathOperator{\vol}{ vol } 
+  
+  
+  \DeclareMathOperator{\CDiff}{ C } 
+  
+  \DeclareMathOperator{\UC}{ UC } 
+  
+  \DeclareMathOperator{\LC}{ LC } 
+  
+  \DeclareMathOperator{\Bdd}{ Bdd } 
+  
+  \DeclareMathOperator{\BC}{ BC } 
+  
+  \DeclareMathOperator{\BUC}{ BUC } 
+  
+  \DeclareMathOperator{\BLC}{ BLC } 
+  
+  
+  
+  
+  
+  
+  
+  \DeclareMathOperator{\Exp}{ \mathbb{ E } } 
+  
+  \DeclareMathOperator{\Var}{ \mathbb{ V } } 
+  
+  \newcommand{\Borel}{ \mathscr{ B } } 
+  
+  \DeclareMathOperator{\Haus}{ \mathscr{ H } } 
+  
+  \DeclareMathOperator*{\esssup}{ ess \, sup } 
+    
+  \DeclareMathOperator*{\essinf}{ ess \, inf } 
+
+
+  
+  \DeclareMathOperator{\diff}{ d } 
+  
+  \DeclareMathOperator{\pdiff}{ \partial } 
+  
+  \DeclareMathOperator{\del}{ \nabla } 
+  
+  
+  
+  
+  
+  \DeclareMathOperator{\Jac}{ \mathbf{ J } } 
+  
+  \DeclareMathOperator{\grad}{ grad } 
+  
+  \DeclareMathOperator{\divg}{ div } 
+  
+  \DeclareMathOperator{\curl}{ curl } 
+  
+  \DeclareMathOperator{\Lap}{ \Delta } 
+  
+  \DeclareMathOperator{\Sec}{ \Gamma } 
+  
+  \DeclareMathOperator{\VF}{ \mathfrak{ X } } 
+  
+  \DeclareMathOperator{\DF}{ \Omega } 
+  
+  \DeclareMathOperator{\dRCoh}{ H_{ \mathrm{ dR } } } 
+  
+
+  \DeclareMathOperator{\ps}{ \mathcal{ P } } 
+  
+  \newcommand{\oparg}{ \: \cdot \: } 
+  
+  \newcommand{\symdiff}{ \mathbin{ \triangle } } 
+  
+  
+  \DeclareMathOperator{\Succ}{ succ } 
+  
+  \DeclareMathOperator{\Add}{ add } 
+  
+  \DeclareMathOperator{\Mult}{ mult } 
+  
+  \DeclareMathOperator{\Comp}{ comp } 
+  
+  \DeclareMathOperator{\sgn}{ sgn } 
+  
+  
+  
+  
+  
+  
+  
+  \DeclareMathOperator{\Arg}{ Arg } 
+  
+  
+  
+  
+  
+  
+  
+  \DeclareMathOperator{\Log}{ Log } 
+
+  \newcommand{\divides}{ \mathbin{ \vert } } 
+
+  
+  
+  \DeclareMathOperator{\lcm}{ lcm } 
+  
+  \DeclareMathOperator{\proj}{ proj } 
+  
+  \DeclareMathOperator{\inj}{ inj } 
+  
+  \DeclareMathOperator{\coproj}{ coproj } 
+
+  
+
+  
+  
+  
+  \newcommand{\from}{ \leftarrow } 
+  
+  \newcommand{\upto}{ \nearrow } 
+  
+  \newcommand{\upfrom}{ \nwarrow } 
+  
+  \newcommand{\downto}{ \searrow } 
+  
+  \newcommand{\downfrom}{ \swarrow } 
+  
+  
+  
+  \newcommand{\actson}{ \mathbin{ \curvearrowright } } 
+  
+  \newcommand{\actedon}{ \mathbin{ \curvearrowleft } }
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts focused" data-preexpanded-levels="0" data-max-levels="3"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="part-analytical-foundations.html" class="internal"><span class="codenumber">I</span> <span class="title">Analytical Foundations</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="chapter-introductory-set-theory.html" class="internal"><span class="codenumber">1</span> <span class="title">Introductory Set Theory</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-what-is-a-set.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What Is a Set?</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-what-is-a-set.html#subsection-definitions-of-sets" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Definitions of Sets</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-what-is-a-set.html#subsection-set-containment" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Set Containment</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-what-is-a-set.html#subsection-set-operations" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Set Operations</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-what-is-a-set.html#exercises-what-is-a-set" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-what-is-a-set.html#reading-questions-what-is-a-set" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="section-maps-and-functions.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Maps and Functions</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-maps-and-functions.html#subsection-introduction-to-maps" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Introduction to Maps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-maps-and-functions.html#subsection-composition-and-invertibility" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Composition and Invertibility</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-maps-and-functions.html#subsection-indexing" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Indexing</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-maps-and-functions.html#exercises-maps-and-functions" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-maps-and-functions.html#reading-questions-maps-and-functions" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Peano Arithmetic and the Natural Numbers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#subsection-axiomatizing-the-natural-numbers" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Axiomatizing the Natural Numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#subsection-properties-of-arithmetic" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Properties of Arithmetic</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#subsection-properties-of-comparison" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Properties of Comparison</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#exercises-peano-arithmetic-and-the-natural-numbers" class="internal"><span class="codenumber">1.3.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#reading-questions-peano-arithmetic-and-the-natural-numbers" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-finitary-operations-and-relations.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Finitary Operations and Relations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#subsection-products-and-choice" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Products and Choice</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#subsection-finitary-operations" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Finitary Operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#subsection-finitary-relations" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Finitary Relations</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#exercises-finitary-operations-and-relations" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#reading-questions-finitary-operations-and-relations" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-introduction-to-order-theory.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Introduction to Order Theory</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#subsection-partial-orders" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Partial Orders</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#subsection-boundedness-and-extrema" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Boundedness and Extrema</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#subsection-comparability-and-total-orders" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Comparability and Total Orders</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#exercises-introduction-to-order-theory" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#reading-questions-introduction-to-order-theory" class="internal"><span class="codenumber">1.5.5</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-cardinality-and-countability.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Cardinality and Countability [INCOMPLETE]</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#subsection-finiteness" class="internal"><span class="codenumber">1.6.1</span> <span class="title">Finiteness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#subsection-cardinal-comparison" class="internal"><span class="codenumber">1.6.2</span> <span class="title">Cardinal Comparison</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#subsection-countability" class="internal"><span class="codenumber">1.6.3</span> <span class="title">Countability</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#exercises-cardinality-and-countability" class="internal"><span class="codenumber">1.6.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#reading-questions-cardinality-and-countability" class="internal"><span class="codenumber">1.6.5</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-constructing-the-number-systems.html" class="internal"><span class="codenumber">2</span> <span class="title">Constructing the Number Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-the-integers-and-rational-numbers.html" class="internal"><span class="codenumber">2.1</span> <span class="title">The Integers and the Rational Numbers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-integers-and-rational-numbers.html#exercises-the-integers-and-rational-numbers" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-integers-and-rational-numbers.html#reading-questions-the-integers-and-rational-numbers" class="internal"><span class="codenumber">2.1</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-constructing-the-real-numbers.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Constructing the Real Numbers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#exercises-constructing-the-real-numbers" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#reading-questions-constructing-the-real-numbers" class="internal"><span class="codenumber">2.2</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-the-complete-ordered-field.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Complete Ordered Field</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#exercises-the-complete-ordered-field" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#reading-questions-the-complete-ordered-field" class="internal"><span class="codenumber">2.3</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-beyond-the-real-number-system.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Beyond the Real Number System</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-beyond-the-real-number-system.html#exercises-beyond-the-real-number-system" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-beyond-the-real-number-system.html#reading-questions-beyond-the-real-number-system" class="internal"><span class="codenumber">2.4</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-point-set-topology.html" class="internal"><span class="codenumber">II</span> <span class="title">Point-Set Topology</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-metric-spaces.html" class="internal"><span class="codenumber">3</span> <span class="title">Metric Spaces</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction to Metric Geometry</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#exercises-introduction-to-metric-geometry" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#reading-questions-introduction-to-metric-geometry" class="internal"><span class="codenumber">3.1</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-convergence-and-limits.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Convergence and Limits</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-limits.html#exercises-convergence-and-limits" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-limits.html#reading-questions-convergence-and-limits" class="internal"><span class="codenumber">3.2</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Limits in the Euclidean Metric</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#exercises-limits-in-the-euclidean-metric" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#reading-questions-limits-in-the-euclidean-metric" class="internal"><span class="codenumber">3.3</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-open-and-closed-sets.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Open and Closed Sets</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#exercises-open-and-closed-sets" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#reading-questions-open-and-closed-sets" class="internal"><span class="codenumber">3.4</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-notions-of-metric-continuity.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Notions of Metric Continuity</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#exercises-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#reading-questions-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-completeness-and-compactness.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Completeness and Compactness</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#exercises-completeness-and-compactness" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#reading-questions-completeness-and-compactness" class="internal"><span class="codenumber">3.6</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-topological-spaces.html" class="internal"><span class="codenumber">4</span> <span class="title">Topological Spaces</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-introduction-to-topology.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Introduction to Topology</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-topology.html#exercises-introduction-to-topology" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-topology.html#reading-questions-introduction-to-topology" class="internal"><span class="codenumber">4.1</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-comparison-of-topologies.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Comparison of Topologies</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-comparison-of-topologies.html#exercises-comparison-of-topologies" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-comparison-of-topologies.html#reading-questions-comparison-of-topologies" class="internal"><span class="codenumber">4.2</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-convergence-and-separation.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Convergence and Separation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-separation.html#exercises-convergence-and-separation" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-separation.html#reading-questions-convergence-and-separation" class="internal"><span class="codenumber">4.3</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-continuity-in-topological-spaces.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Continuity in Topological Spaces</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-continuity-in-topological-spaces.html#exercises-continuity-in-topological-spaces" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-continuity-in-topological-spaces.html#reading-questions-continuity-in-topological-spaces" class="internal"><span class="codenumber">4.4</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-connectedness-and-compactness.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Connectedness and Compactness</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-connectedness-and-compactness.html#exercises-connectedness-and-compactness" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-connectedness-and-compactness.html#reading-questions-connectedness-and-compactness" class="internal"><span class="codenumber">4.5</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-calculus.html" class="internal"><span class="codenumber">III</span> <span class="title">Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-differentiation-and-smoothness.html" class="internal"><span class="codenumber">5</span> <span class="title">Differentiation and Smoothness</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-differentiability.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Differentiability</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#exercises-differentiability" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#reading-questions-differentiability" class="internal"><span class="codenumber">5.1</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-the-mean-value-theorem.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Mean Value Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-mean-value-theorem.html#exercises-the-mean-value-theorem" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-mean-value-theorem.html#reading-questions-the-mean-value-theorem" class="internal"><span class="codenumber">5.2</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-applications-of-the-mean-value-theorem.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Applications of the Mean Value Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-applications-of-the-mean-value-theorem.html#exercises-applications-of-the-mean-value-theorem" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-applications-of-the-mean-value-theorem.html#reading-questions-applications-of-the-mean-value-theorem" class="internal"><span class="codenumber">5.3</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-higher-order-derivatives.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Higher Order Derivatives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-higher-order-derivatives.html#exercises-higher-order-derivatives" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-higher-order-derivatives.html#reading-questions-higher-order-derivatives" class="internal"><span class="codenumber">5.4</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-riemann-integration.html" class="internal"><span class="codenumber">6</span> <span class="title">Riemann Integration</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-riemann-sums.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Riemann Sums</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-riemann-sums.html#exercises-riemann-sums" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-riemann-sums.html#reading-questions-riemann-sums" class="internal"><span class="codenumber">6.1</span> <span class="title">Reading Question</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-properties-of-the-riemann-integral.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Properties of the Riemann Integral</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-properties-of-the-riemann-integral.html#exercises-properties-of-the-riemann-integral" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-properties-of-the-riemann-integral.html#reading-questions-properties-of-the-riemann-integral" class="internal"><span class="codenumber">6.2</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The Fundamental Theorems of Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#exercises-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#reading-questions-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.3</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-improper-integration.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Improper Integration</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-improper-integration.html#exercises-improper-integration" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-improper-integration.html#reading-questions-improper-integration" class="internal"><span class="codenumber">6.4</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-infinite-series.html" class="internal"><span class="codenumber">7</span> <span class="title">Infinite Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Partial Sums and Infinite Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#exercises-partial-sums-and-infinite-series" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#reading-questions-partial-sums-and-infinite-series" class="internal"><span class="codenumber">7.1</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-tests-for-series-convergence.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Tests for Series Convergence</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-tests-for-series-convergence.html#exercises-tests-for-series-convergence" class="internal"><span class="codenumber">7.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-tests-for-series-convergence.html#reading-questions-tests-for-series-convergence" class="internal"><span class="codenumber">7.2</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-power-series.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Power Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-power-series.html#exercises-power-series" class="internal"><span class="codenumber">7.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-power-series.html#reading-questions-power-series" class="internal"><span class="codenumber">7.3</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-analytic-functions.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Analytic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-analytic-functions.html#exercises-analytic-functions" class="internal"><span class="codenumber">7.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-analytic-functions.html#reading-questions-analytic-functions" class="internal"><span class="codenumber">7.4</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="solutions.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Solutions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="section-maps-and-functions">
+<h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Maps and Functions</span>
+</h2>
+<section class="introduction" id="section-maps-and-functions-2">
+<div class="para" id="section-maps-and-functions-2-1">In this section, we introduce the fundamental notion of a map between sets. Informally, a map is an assignment of an element of one set to each element of another. You probably have been exposed to maps in previous math courses in the form of real-valued functions of one real variable. We will treat maps in far greater generality, which will allow us to perform mathematical analysis in a wider array of spaces.<div class="autopermalink" data-description="Paragraph"><a href="#section-maps-and-functions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="subsection-introduction-to-maps">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Introduction to Maps</span>
+</h3>
+<section class="introduction" id="subsection-introduction-to-maps-2">
+<div class="para" id="subsection-introduction-to-maps-2-4">First, however, we define the <dfn class="terminology">Cartesian product</dfn> of two sets. This relies on a notion of an ordered pair of objects <span class="process-math">\(x \)</span> and <span class="process-math">\(y \text{,}\)</span> which we denote <span class="process-math">\(\of{ x , y } \text{.}\)</span> Like formalized set theory, rigorous constructions of ordered pairs are, in this context, unnecessarily complicated and annoying to work with. As such, we will take them to be well-defined. The salient properties of an ordered pair <span class="process-math">\(\of{ x , y } \)</span> are its <dfn class="terminology">entries</dfn> <span class="process-math">\(x \)</span> and <span class="process-math">\(y \text{,}\)</span> which are called its first and second entries, respectively.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-introduction-to-maps-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="definition definition-like" id="definition-cartesian-product"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cartesian product.</span>
+</h4>
+<div class="para logical" id="definition-cartesian-product-4-1">
+<div class="para">The <dfn class="terminology">Cartesian product</dfn> <span class="process-math">\(X \times Y \)</span> of two sets <span class="process-math">\(X \)</span> and <span class="process-math">\(Y \)</span> is the set which contains all ordered pairs whose first entry is an element of <span class="process-math">\(X \)</span> and whose second entry is an element of <span class="process-math">\(Y \text{;}\)</span> that is,</div>
+<div class="displaymath process-math" id="definition-cartesian-product-4-1-7">
+\begin{equation*}
+X \times Y = \setmid{ \of{ x , y } }{ x \in X \textrm{ and } y \in Y }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-cartesian-product-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.2.1: Cartesian product"><a href="#definition-cartesian-product" title="Copy heading and permalink for Definition 1.2.1: Cartesian product" aria-label="Copy heading and permalink for Definition 1.2.1: Cartesian product">🔗</a></div>
+</article>
+<details id="example-an-example-of-cartesian-products" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">An example of Cartesian products.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-an-example-of-cartesian-products-2-1">
+<div class="para">Let <span class="process-math">\(X = \set{ 1 , 2 } \)</span> and <span class="process-math">\(Y = \set{ 3 , 4 , 5 } \text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="example-an-example-of-cartesian-products-2-1-3">
+\begin{equation*}
+X \times Y = \set{ \of{ 1 , 3 } , \of{ 1 , 4 } , \of{ 1 , 5 } , \of{ 2 , 3 } , \of{ 2 , 4 } , \of{ 2 , 5 } }\text{.}
+\end{equation*}
+</div>
+<div class="para">Note that <span class="process-math">\(X \times Y \neq X \cup Y \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-an-example-of-cartesian-products-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.2: An example of Cartesian products"><a href="#example-an-example-of-cartesian-products" title="Copy heading and permalink for Example 1.2.2: An example of Cartesian products" aria-label="Copy heading and permalink for Example 1.2.2: An example of Cartesian products">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-introduction-to-maps-5">Recall that we would like a map between two sets to be an association of the elements of one set to the elements of the other. We will model this association via ordered pairs. To that end, a map between two sets will just be a subset of their Cartesian product which satisfies certain existence and uniqueness properties.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-introduction-to-maps-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-map-function"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Map; function.</span>
+</h4>
+<div class="para logical" id="definition-map-function-10-1">
+<div class="para">A subset <span class="process-math">\(f \subseteq X \times Y \)</span> of the Cartesian product <span class="process-math">\(X \times Y \)</span> of two sets <span class="process-math">\(X \)</span> and <span class="process-math">\(Y \)</span> is called a <dfn class="terminology">map</dfn> from <span class="process-math">\(X \)</span> (which is called the <dfn class="terminology">domain</dfn> of <span class="process-math">\(f \)</span> and whose elements are called <dfn class="terminology">inputs</dfn>) to <span class="process-math">\(Y \)</span> (which is called the <dfn class="terminology">codomain</dfn> of <span class="process-math">\(f \)</span> and whose elements are called <dfn class="terminology">outputs</dfn>) if it satisfies the following conditions:</div>
+<ol class="decimal" id="definition-map-function-10-1-14">
+<li id="definition-map-function-10-1-14-1">
+<div class="para" id="definition-map-function-10-1-14-1-1">
+<dfn class="terminology">Totality</dfn>: For all inputs <span class="process-math">\(x \in X \text{,}\)</span> there is an output <span class="process-math">\(y \in Y \)</span> so that <span class="process-math">\(\of{ x , y } \in f \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-map-function-10-1-14-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#definition-map-function-10-1-14-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="definition-map-function-10-1-14-2">
+<div class="para" id="definition-map-function-10-1-14-2-1">
+<dfn class="terminology">Uniqueness</dfn>: For all inputs <span class="process-math">\(x \in X \)</span> and outputs <span class="process-math">\(y_{ 1 } , y_{ 2 } \in Y \text{,}\)</span> if <span class="process-math">\(\of{ x , y_{ 1 } } , \of{ x , y_{ 2 } } \in f \text{,}\)</span> then <span class="process-math">\(y_{ 1 } = y_{ 2 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-map-function-10-1-14-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#definition-map-function-10-1-14-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="para">So <span class="process-math">\(f \)</span> is a map from <span class="process-math">\(X \)</span> to <span class="process-math">\(Y \)</span> if and only if for each input <span class="process-math">\(x \in X \text{,}\)</span> there is a unique output <span class="process-math">\(y \in Y \)</span> so that <span class="process-math">\(\of{ x , y } \in f \text{.}\)</span> We will write <span class="process-math">\(f \colon X \to Y \)</span> to indicate that <span class="process-math">\(f \)</span> is a map from <span class="process-math">\(X \)</span> to <span class="process-math">\(Y \text{,}\)</span> and we will write <span class="process-math">\(f \colon x \mapsto y \)</span> to indicate that <span class="process-math">\(\of{ x , y } \in f \text{.}\)</span> The set of maps from <span class="process-math">\(X \)</span> to <span class="process-math">\(Y \)</span> is denoted <span class="process-math">\(Y^{ X } \subseteq X \times Y \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-map-function-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="definition-map-function-10-2">We will call a map <span class="process-math">\(f \colon X \to Y \)</span> whose codomain <span class="process-math">\(Y \)</span> is a number system like the natural numbers <span class="process-math">\(Y = \N \text{,}\)</span> the integers <span class="process-math">\(Y = \Z \text{,}\)</span> the rational numbers <span class="process-math">\(Y = \Q \text{,}\)</span> the real numbers <span class="process-math">\(Y = \R \text{,}\)</span> or the complex numbers <span class="process-math">\(Y = \C \)</span> a <span class="process-math">\(Y \)</span>-valued <dfn class="terminology">function</dfn> on <span class="process-math">\(X \text{.}\)</span> We will investigate the natural numbers <span class="process-math">\(\N \)</span> in <code class="code-inline tex2jax_ignore">[provisional cross-reference: section-peano-arithmetic-and-the-natural-numbers]</code>, and <code class="code-inline tex2jax_ignore">[provisional cross-reference: chapter-constructing-the-number-systems]</code> will be dedicated to constructing the other number systems with which we will become acquainted throughout the course of this text.<div class="autopermalink" data-description="Paragraph"><a href="#definition-map-function-10-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.2.3: Map; function"><a href="#definition-map-function" title="Copy heading and permalink for Definition 1.2.3: Map; function" aria-label="Copy heading and permalink for Definition 1.2.3: Map; function">🔗</a></div>
+</article>
+<div class="para" id="subsection-introduction-to-maps-7">So a map between sets is just a subset of their Cartesian product such that each element of the domain appears in precisely one pair with an element of the codomain. The above existence and uniqueness properties of a map implies that there is an unambiguous association between the elements of the domain and the elements of the codomain.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-introduction-to-maps-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-examples-of-maps" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Examples of maps.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-examples-of-maps-2-1">
+<div class="para">The following are examples of maps between sets:</div>
+<ol class="decimal" id="example-examples-of-maps-2-1-1">
+<li id="example-examples-of-maps-2-1-1-1">
+<div class="para logical" id="example-examples-of-maps-2-1-1-1-1">
+<div class="para">Let <span class="process-math">\(X = \set{ 1 , 2 } \)</span> and <span class="process-math">\(Y = \set{ \mathrm{ red } , \mathrm{ blue } } \text{,}\)</span> and consider the following subsets of <span class="process-math">\(X \times Y \text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="example-examples-of-maps-2-1-1-1-1-4">
+\begin{align*}
+f_{ 1 } \amp = \set{ \of{ 1 , \mathrm{ red } } , \of{ 2 , \mathrm{ red } } }\\
+f_{ 2 } \amp = \set{ \of{ 1 , \mathrm{ red } } , \of{ 2 , \mathrm{ blue } } }\\
+f_{ 3 } \amp = \set{ \of{ 1 , \mathrm{ blue } } , \of{ 2 , \mathrm{ red } } }\\
+f_{ 4 } \amp = \set{ \of{ 1 , \mathrm{ blue } } , \of{ 2 , \mathrm{ blue } } }\text{.}
+\end{align*}
+</div>
+<div class="para">As defined above, <span class="process-math">\(f_{ 1 } \text{,}\)</span> <span class="process-math">\(f_{ 2 } \text{,}\)</span> <span class="process-math">\(f_{ 3 } \text{,}\)</span> and  <span class="process-math">\(f_{ 4 } \)</span> are maps from <span class="process-math">\(X \)</span> to <span class="process-math">\(Y \text{.}\)</span> In fact, these are the only such maps; that is,</div>
+<div class="displaymath process-math" id="example-examples-of-maps-2-1-1-1-1-11">
+\begin{equation*}
+Y^{ X } = \set{ f_{ 1 } , f_{ 2 } , f_{ 3 } , f_{ 4 } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-examples-of-maps-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#example-examples-of-maps-2-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="example-examples-of-maps-2-1-1-2">
+<div class="para logical" id="example-examples-of-maps-2-1-1-2-1">
+<div class="para">The empty set <span class="process-math">\(\emptyset \colon \emptyset \to Y \)</span> is the unique map from the empty set <span class="process-math">\(\emptyset \)</span> to any set <span class="process-math">\(Y \text{;}\)</span> that is,</div>
+<div class="displaymath process-math" id="example-examples-of-maps-2-1-1-2-1-4">
+\begin{equation*}
+Y^{ \emptyset } = \set{ \emptyset }\text{.}
+\end{equation*}
+</div>
+<div class="para">Note that none of the elements of the codomain <span class="process-math">\(Y \)</span> are associated with elements of the empty domain <span class="process-math">\(\emptyset \text{.}\)</span> However, this does not imply that <span class="process-math">\(\emptyset \)</span> is not a map; in general, not all elements of the codomain of a map need be associated with elements of the domain, since <em class="emphasis">the existence property applies only to the domain</em>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-examples-of-maps-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#example-examples-of-maps-2-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="example-examples-of-maps-2-1-1-3">
+<div class="para logical" id="example-examples-of-maps-2-1-1-3-5">
+<div class="para">Let <span class="process-math">\(U \subseteq X \)</span> be a subset of a set <span class="process-math">\(X \text{.}\)</span> The <dfn class="terminology">inclusion map</dfn> <span class="process-math">\(\iota_{ U }^{ X } \colon U \to X \)</span> of <span class="process-math">\(U \)</span> in <span class="process-math">\(X \)</span> is the map from <span class="process-math">\(U \)</span> to <span class="process-math">\(X \)</span> defined by</div>
+<div class="displaymath process-math" id="example-examples-of-maps-2-1-1-3-5-9">
+\begin{equation*}
+\iota_{ U }^{ X } = \setmid{ \of{ u , x } \in U \times X }{ u = x } .
+\end{equation*}
+</div>
+<div class="para">That is, <span class="process-math">\(\iota_{ U }^{ X } \of{ u } = u \)</span> for all <span class="process-math">\(u \in U \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-examples-of-maps-2-1-1-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-examples-of-maps-2-1-1-3-6">The inclusion map <span class="process-math">\(\iota_{ X }^{ X } \)</span> of <span class="process-math">\(X \)</span> in itself is called the <dfn class="terminology">identity map</dfn> on <span class="process-math">\(X \text{,}\)</span> and is denoted <span class="process-math">\(\id_{ X } \colon X \to X \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-examples-of-maps-2-1-1-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#example-examples-of-maps-2-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-examples-of-maps-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.4: Examples of maps"><a href="#example-examples-of-maps" title="Copy heading and permalink for Example 1.2.4: Examples of maps" aria-label="Copy heading and permalink for Example 1.2.4: Examples of maps">🔗</a></div>
+</article></details>
+<article class="remark remark-like" id="remark-passive-and-active-characterizations-of-maps"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Passive and active characterizations of maps.</span>
+</h4>
+<div class="para" id="remark-passive-and-active-characterizations-of-maps-2">It may be difficult to see how the above definition of a map is a generalization of the notion of a real-valued function of a real variable. In fact, the above definition might seem more closely related to the graph of such a function, since the uniqueness property of maps is just a generalization of the vertical line test for functions. We will refer to this perspective on maps as subsets of a Cartesian product satisfying certain abstract properties as the <dfn class="terminology">passive characterization</dfn> of what maps <em class="emphasis">are</em>. In contrast, we often like to think of a map as an active process, which takes an input and transforms it into the unique output with which it is associated. We will refer to this perspective as the <dfn class="terminology">active characterization</dfn> of what maps <em class="emphasis">do</em>. When it benefits us to favor one perspective over another, we will emphasize either the active or passive characterization over the other. The following definitions allow us to convert between these two equivalent characterizations of maps.<div class="autopermalink" data-description="Paragraph"><a href="#remark-passive-and-active-characterizations-of-maps-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 1.2.5: Passive and active characterizations of maps"><a href="#remark-passive-and-active-characterizations-of-maps" title="Copy heading and permalink for Remark 1.2.5: Passive and active characterizations of maps" aria-label="Copy heading and permalink for Remark 1.2.5: Passive and active characterizations of maps">🔗</a></div>
+</article>
+<article class="definition definition-like" id="definition-image-pre-image"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Image; pre-image.</span>
+</h4>
+<div class="para logical" id="definition-image-pre-image-9-1">
+<div class="para">Let <span class="process-math">\(f \colon X \to Y \)</span> be a map from a set <span class="process-math">\(X \)</span> to a set <span class="process-math">\(Y \text{.}\)</span> The <dfn class="terminology">image</dfn> <span class="process-math">\(f \of{ x } \)</span> of an input <span class="process-math">\(x \in X \)</span> under <span class="process-math">\(f \)</span> is the unique output so that <span class="process-math">\(\of{ x , f \of{ x } } \in Y \text{.}\)</span> The <dfn class="terminology">image</dfn> <span class="process-math">\(f \of{ U } \)</span> of a subset <span class="process-math">\(U \subseteq X \)</span> is the subset of the codomain <span class="process-math">\(Y \)</span> defined by</div>
+<div class="displaymath process-math" id="definition-image-pre-image-9-1-13">
+\begin{equation*}
+f \of{ U } = \setmid{ f \of{ x } \in Y }{ x \in U }\text{.}
+\end{equation*}
+</div>
+<div class="para">The image <span class="process-math">\(f \of{ X } \)</span> of <span class="process-math">\(X \)</span> itself is called the <dfn class="terminology">image</dfn> of <span class="process-math">\(f \text{,}\)</span> and is denoted <span class="process-math">\(\im \of{ f } = f \of{ X } \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-image-pre-image-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="definition-image-pre-image-9-2">
+<div class="para">The <dfn class="terminology">pre-image</dfn> <span class="process-math">\(f^{ -1 } \of{ V } \)</span> of a subset <span class="process-math">\(V \subseteq Y \)</span> of the codomain <span class="process-math">\(Y \)</span> under <span class="process-math">\(f \)</span> is the set of all inputs whose image lies in <span class="process-math">\(V \text{;}\)</span> that is,</div>
+<div class="displaymath process-math" id="definition-image-pre-image-9-2-7">
+\begin{equation*}
+f^{ -1 } \of{ V } = \setmid{ x \in X }{ f \of{ x } \in V }\text{.}
+\end{equation*}
+</div>
+<div class="para">The <dfn class="terminology">pre-image</dfn> <span class="process-math">\(f^{ -1 } \of{ y } \)</span> of an output <span class="process-math">\(y \in Y \)</span> under <span class="process-math">\(f \)</span> is just the pre-image of the singleton set <span class="process-math">\(\set{ y } \)</span> under <span class="process-math">\(f \text{;}\)</span> that is,</div>
+<div class="displaymath process-math" id="definition-image-pre-image-9-2-14">
+\begin{equation*}
+f^{ -1 } \of{ y } = f^{ -1 } \of{ \set{ y } } = \setmid{ x \in X }{ f \of{ x } = y }
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-image-pre-image-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.2.6: Image; pre-image"><a href="#definition-image-pre-image" title="Copy heading and permalink for Definition 1.2.6: Image; pre-image" aria-label="Copy heading and permalink for Definition 1.2.6: Image; pre-image">🔗</a></div>
+</article>
+<div class="para" id="subsection-introduction-to-maps-11">Any map between sets induces a map from any subset of its domain to its codomain via a process known as <dfn class="terminology">restriction</dfn>. In light of the active characterization of what maps do, this may seem almost trivial. However, we will formalize this notion of restriction in terms of the passive characterization of what maps are in order to prove rigorously our intuitions are correct. You may be better served by conceptualizing the restriction of a map to be the same active process of transforming inputs into outputs but with a smaller domain, rather than the passive definition below.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-introduction-to-maps-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-restriction"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Restriction.</span>
+</h4>
+<div class="para logical" id="definition-restriction-4-1">
+<div class="para">The <dfn class="terminology">restriction</dfn> <span class="process-math">\(\rest{ f }_{ U } \)</span> of a map <span class="process-math">\(f \colon X \to Y \)</span> between sets <span class="process-math">\(X \)</span> and <span class="process-math">\(Y \)</span> to a subset <span class="process-math">\(U \subseteq X \)</span> of its domain <span class="process-math">\(X \)</span> is the subset of the Cartesian product <span class="process-math">\(U \times Y \)</span> defined by</div>
+<div class="displaymath process-math" id="definition-restriction-4-1-9">
+\begin{align*}
+\rest{ f }_{ U } \amp = \setmid{ \of{ u , y } \in U \times Y }{ f \of{ u } = y } = \setmid{ \of{ u , y } \in U \times Y }{ \of{ u , y } \in f }\\
+\amp = \of{ U \times Y } \cap f\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-restriction-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.2.7: Restriction"><a href="#definition-restriction" title="Copy heading and permalink for Definition 1.2.7: Restriction" aria-label="Copy heading and permalink for Definition 1.2.7: Restriction">🔗</a></div>
+</article>
+<div class="para" id="subsection-introduction-to-maps-13">As our intuition about the active characterization of what maps do tells us, the restriction of a map to a subset of its domain is itself a map from the chosen subset to the domain of the original map.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-introduction-to-maps-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-restrictions-are-maps"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Restrictions are maps.</span>
+</h4>
+<div class="para" id="proposition-restrictions-are-maps-2-1">Let <span class="process-math">\(f \colon X \to Y \)</span> be a map from a set <span class="process-math">\(X \)</span> to a set <span class="process-math">\(Y \text{.}\)</span> For any subset <span class="process-math">\(U \subseteq X \text{,}\)</span> the restriction <span class="process-math">\(\rest{ f }_{ U } \)</span> of <span class="process-math">\(f \)</span> to <span class="process-math">\(U \)</span> is a map from <span class="process-math">\(U \)</span> to <span class="process-math">\(Y \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#proposition-restrictions-are-maps-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 1.2.8: Restrictions are maps"><a href="#proposition-restrictions-are-maps" title="Copy heading and permalink for Proposition 1.2.8: Restrictions are maps" aria-label="Copy heading and permalink for Proposition 1.2.8: Restrictions are maps">🔗</a></div>
+</article>
+<details id="proposition-restrictions-are-maps-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="proposition-restrictions-are-maps-3-1">
+<div class="para">Let <span class="process-math">\(u \in U \text{.}\)</span> Then <span class="process-math">\(u \in X \)</span> is an input to <span class="process-math">\(f \text{,}\)</span> and so <span class="process-math">\(\of{ u , y } \in f \)</span> for some output <span class="process-math">\(y \in Y \text{.}\)</span> We conclude that</div>
+<div class="displaymath process-math" id="proposition-restrictions-are-maps-3-1-6">
+\begin{equation*}
+\of{ x , y } \in \setmid{ \of{ u , y } \in U \times Y }{ \of{ u , y } \in f } = \rest{ f }_{ U }\text{,}
+\end{equation*}
+</div>
+<div class="para">so that <span class="process-math">\(\rest{ f }_{ U } \)</span> satisfies the totality condition.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-restrictions-are-maps-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-restrictions-are-maps-3-2">
+<div class="para">Let <span class="process-math">\(u \in U \)</span> and <span class="process-math">\(y_{ 1 } , y_{ 2 } \in U \text{,}\)</span> and suppose that <span class="process-math">\(\of{ u , y_{ 1 } } , \of{ u , y_{ 2 } } \in \rest{ f }_{ U } \text{.}\)</span> Since</div>
+<div class="displaymath process-math" id="proposition-restrictions-are-maps-3-2-4">
+\begin{equation*}
+\rest{ f }_{ U } = \of{ U \times Y } \cap f \subseteq f\text{,}
+\end{equation*}
+</div>
+<div class="para">we have that <span class="process-math">\(\of{ u , y_{ 1 } } , \of{ u , y_{ 2 } } \in f \text{,}\)</span> and so <span class="process-math">\(y_{ 1 } = y_{ 2 } \text{;}\)</span> that is, <span class="process-math">\(\rest{ f }_{ U } \)</span> satisfies the uniqueness condition. Since <span class="process-math">\(\rest{ f }_{ U } \)</span> satisfies the totality condition and the uniqueness condition, it is a map from <span class="process-math">\(U \)</span> to <span class="process-math">\(Y \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-restrictions-are-maps-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 1.2.8.1"><a href="#proposition-restrictions-are-maps-3" title="Copy heading and permalink for Proof 1.2.8.1" aria-label="Copy heading and permalink for Proof 1.2.8.1">🔗</a></div>
+</article></details>
+<section class="conclusion" id="subsection-introduction-to-maps-15">
+<div class="para" id="subsection-introduction-to-maps-15-1">We will shortly see another way to construct restrictions as compositions with inclusion maps.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-introduction-to-maps-15-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Subsection 1.2.1: Introduction to Maps"><a href="#subsection-introduction-to-maps" title="Copy heading and permalink for Subsection 1.2.1: Introduction to Maps" aria-label="Copy heading and permalink for Subsection 1.2.1: Introduction to Maps">🔗</a></div>
+</section>
+<section class="subsection" id="subsection-composition-and-invertibility">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Composition and Invertibility</span>
+</h3>
+<section class="introduction" id="subsection-composition-and-invertibility-2">
+<div class="para" id="subsection-composition-and-invertibility-2-1">Viewed through the perspective of the active characterization of what maps do, it may seem obvious that we can combine two maps between sets by first acting on it with one map and then acting on its image by the other map. This new process yields the <dfn class="terminology">composition</dfn> of the two maps, and it may be intuitively clear that this composition is itself a map. However, we will formalize this notion of composition in the passive characterization, so that we may prove this fact rigorously. Again, it may better serve you to conceptualize the composition of maps in the context of the active characterization of what maps do rather than the passive characterization of what maps are in order to better inform your intuition about composition.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-composition-and-invertibility-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="definition definition-like" id="definition-composition"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Composition.</span>
+</h4>
+<div class="para logical" id="definition-composition-4-1">
+<div class="para">Let <span class="process-math">\(f \colon X \to Y \)</span> and <span class="process-math">\(g \colon Y \to Z \)</span> be maps between sets <span class="process-math">\(X \text{,}\)</span> <span class="process-math">\(Y \text{,}\)</span> and <span class="process-math">\(Z \text{.}\)</span> The <dfn class="terminology">composition</dfn> <span class="process-math">\(g \circ f \)</span> of <span class="process-math">\(g \)</span> with <span class="process-math">\(f \)</span> is the map from <span class="process-math">\(X \)</span> to <span class="process-math">\(Y \)</span> defined by the formula</div>
+<div class="displaymath process-math" id="definition-composition-4-1-12">
+\begin{equation*}
+\of{ g \circ f } \of{ x } = g \of{ f \of{ x } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-composition-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.2.9: Composition"><a href="#definition-composition" title="Copy heading and permalink for Definition 1.2.9: Composition" aria-label="Copy heading and permalink for Definition 1.2.9: Composition">🔗</a></div>
+</article>
+<div class="para" id="subsection-composition-and-invertibility-4">We aren’t restricted to the composition of just two maps. In fact, we can compose any finite number of maps with compatible domains and codomains by iterating the above construction.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-composition-and-invertibility-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-associativity-of-composition"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Associativity of composition.</span>
+</h4>
+<div class="para logical" id="proposition-associativity-of-composition-2-1">
+<div class="para">Let <span class="process-math">\(f \colon W \to X \text{,}\)</span> <span class="process-math">\(g \colon X \to Y \text{,}\)</span> and <span class="process-math">\(h \colon Y \to Z \)</span> be maps between sets <span class="process-math">\(W \text{,}\)</span> <span class="process-math">\(X \text{,}\)</span> <span class="process-math">\(Y \text{,}\)</span> and <span class="process-math">\(Z \text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="proposition-associativity-of-composition-2-1-8">
+\begin{equation*}
+\of{ h \circ g } \circ f = h \circ \of{ g \circ f }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-associativity-of-composition-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 1.2.10: Associativity of composition"><a href="#proposition-associativity-of-composition" title="Copy heading and permalink for Proposition 1.2.10: Associativity of composition" aria-label="Copy heading and permalink for Proposition 1.2.10: Associativity of composition">🔗</a></div>
+</article>
+<details id="proposition-associativity-of-composition-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="proposition-associativity-of-composition-3-1">
+<div class="para">Note that</div>
+<div class="displaymath process-math" id="proposition-associativity-of-composition-3-1-1">
+\begin{align*}
+\of{ \of{ h \circ g } \circ f } \of{ w } \amp = \of{ h \circ g } \of{ f \of{ w } } = h \of{ g \of{ f \of{ w } } }\\
+\amp = h \of{ \of{ g \circ f } \of{ w } } = \of{ h \circ \of{ g \circ f } } \of{ w }
+\end{align*}
+</div>
+<div class="para">for all <span class="process-math">\(w \in W \text{.}\)</span> Since <span class="process-math">\(\of{ h \circ g } \circ f \)</span> and <span class="process-math">\(h \circ \of{ g \circ f } \)</span> agree on all inputs <span class="process-math">\(w \in W \text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="proposition-associativity-of-composition-3-1-6">
+\begin{equation*}
+\of{ h \circ g } \circ f = h \circ \of{ g \circ f }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-associativity-of-composition-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 1.2.10.1"><a href="#proposition-associativity-of-composition-3" title="Copy heading and permalink for Proof 1.2.10.1" aria-label="Copy heading and permalink for Proof 1.2.10.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-composition-and-invertibility-6">The above notion of composition introduces a natural question about maps between sets: 
+<blockquote class="blockquote" id="subsection-composition-and-invertibility-6-1">
+<div class="autopermalink" data-description="Quotation"><a href="#subsection-composition-and-invertibility-6-1" title="Copy heading and permalink for Quotation" aria-label="Copy heading and permalink for Quotation">🔗</a></div>
+</blockquote> This question of map <dfn class="terminology">invertibility</dfn> is fundamental, and will recur throughout this text.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-composition-and-invertibility-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-invertibility"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Invertibility.</span>
+</h4>
+<div class="para" id="definition-invertibility-8-1">Let <span class="process-math">\(f \colon X \to Y \)</span> be a map from a set <span class="process-math">\(X \)</span> to a set <span class="process-math">\(Y \text{.}\)</span> A map <span class="process-math">\(g \colon Y \to X \)</span> is a <dfn class="terminology">left inverse</dfn> to <span class="process-math">\(f \)</span> if <span class="process-math">\(g \circ f = \id_{ X } \text{,}\)</span> and <span class="process-math">\(g \)</span> is called a <dfn class="terminology">right inverse</dfn> to <span class="process-math">\(f \)</span> if <span class="process-math">\(f \circ g = \id_{ Y } \text{.}\)</span> <span class="process-math">\(g \)</span> is called an <dfn class="terminology">inverse</dfn> to <span class="process-math">\(f \)</span> if it is both a left and right inverse to <span class="process-math">\(f \text{;}\)</span> that is, <span class="process-math">\(g \)</span> is an inverse to <span class="process-math">\(f \)</span> if <span class="process-math">\(g \circ f = \id_{ X } \)</span> and <span class="process-math">\(f \circ g = \id_{ Y } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-invertibility-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="definition-invertibility-8-2">A map is called <dfn class="terminology">left-invertible</dfn> (resp. <dfn class="terminology">right-invertible</dfn>, <dfn class="terminology">invertible</dfn>) if it has a left inverse (resp. right inverse, inverse).<div class="autopermalink" data-description="Paragraph"><a href="#definition-invertibility-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.2.11: Invertibility"><a href="#definition-invertibility" title="Copy heading and permalink for Definition 1.2.11: Invertibility" aria-label="Copy heading and permalink for Definition 1.2.11: Invertibility">🔗</a></div>
+</article>
+<details id="example-examples-of-inverses" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Examples of inverses.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-examples-of-inverses-3-1">
+<div class="para">The following are examples of left inverses, right inverses, and inverses of maps.</div>
+<ol class="decimal" id="example-examples-of-inverses-3-1-1">
+<li id="example-examples-of-inverses-3-1-1-1">
+<div class="para logical" id="example-examples-of-inverses-3-1-1-1-1">
+<div class="para">Let <span class="process-math">\(\emptyset \subsetneq U \subseteq X \)</span> be a non-empty subset of a set <span class="process-math">\(X \text{,}\)</span> and fix an element <span class="process-math">\(u \in U \text{.}\)</span> Consider the constant map <span class="process-math">\(c \colon X \to U \)</span> from <span class="process-math">\(X \)</span> to <span class="process-math">\(U \)</span> defined piecewise by the formula</div>
+<div class="displaymath process-math" id="example-examples-of-inverses-3-1-1-1-1-7">
+\begin{equation*}
+c \of{ x } =
+\begin{cases}
+x , \amp x \in U \\
+u , \amp x \notin U
+\text{.}\end{cases}
+\end{equation*}
+</div>
+<div class="para">Note that</div>
+<div class="displaymath process-math" id="example-examples-of-inverses-3-1-1-1-1-8">
+\begin{equation*}
+\of{ c \circ \iota_{ U }^{ X } } \of{ u } = c \of{ \iota_{ U }^{ X } \of{ u } } = c \of{ u } = u = \id_{ U } \of{ u }
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(u \in U \text{,}\)</span> and so <span class="process-math">\(c \circ \iota_{ U }^{ X } = \id_{ U } \text{;}\)</span> that is, <span class="process-math">\(c \)</span> is a left inverse to the inclusion map <span class="process-math">\(\iota_{ U }^{ X } \colon U \to X \)</span> of <span class="process-math">\(U \)</span> in <span class="process-math">\(X \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-examples-of-inverses-3-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#example-examples-of-inverses-3-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="example-examples-of-inverses-3-1-1-2">
+<div class="para" id="example-examples-of-inverses-3-1-1-2-1">Fix sets <span class="process-math">\(X \)</span> and <span class="process-math">\(Y \text{,}\)</span> and suppose that <span class="process-math">\(Y \neq \emptyset \)</span> is non-empty. Let <span class="process-math">\(\pi \colon X \times Y \to X \)</span> be the <dfn class="terminology">projection map</dfn> defined by the formula <span class="process-math">\(\pi \of{ x , y } = x \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-examples-of-inverses-3-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-examples-of-inverses-3-1-1-2-2">
+<div class="para">Fix an element <span class="process-math">\(y \in Y \text{,}\)</span> and consider the map <span class="process-math">\(c \colon X \to X \times Y \)</span> from <span class="process-math">\(X \)</span> to <span class="process-math">\(X \times Y \)</span> defined by the formula <span class="process-math">\(c \of{ x } = \of{ x , y } \text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="example-examples-of-inverses-3-1-1-2-2-6">
+\begin{equation*}
+\of{ \pi \circ c } \of{ x } = \pi \of{ c \of{ x } } = \pi \of{ x , y } = x = \id_{ X } \of{ x }
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x \in X \text{,}\)</span> and so <span class="process-math">\(\pi \circ c = \id_{ X } \text{;}\)</span> that is, <span class="process-math">\(c \)</span> is a right inverse to the projection map <span class="process-math">\(\pi \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-examples-of-inverses-3-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#example-examples-of-inverses-3-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="example-examples-of-inverses-3-1-1-3">
+<div class="para" id="example-examples-of-inverses-3-1-1-3-1">The identity map <span class="process-math">\(\id_{ X } \colon X \to X \)</span> on a set <span class="process-math">\(X \)</span> is its own inverse, since <span class="process-math">\(\id_{ X } \circ \id_{ X } = \id_{ X } \text{.}\)</span> This is actually a special case of the first example above, where we take <span class="process-math">\(U = X \text{.}\)</span> More generally, <span class="process-math">\(f \circ \id_{ X } = f \)</span> for all maps <span class="process-math">\(f \)</span> with domain <span class="process-math">\(X \text{,}\)</span> and <span class="process-math">\(\id_{ X } \circ g = g \)</span> for all maps <span class="process-math">\(g \)</span> with codomain <span class="process-math">\(X \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-examples-of-inverses-3-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#example-examples-of-inverses-3-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-examples-of-inverses-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.12: Examples of inverses"><a href="#example-examples-of-inverses" title="Copy heading and permalink for Example 1.2.12: Examples of inverses" aria-label="Copy heading and permalink for Example 1.2.12: Examples of inverses">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-composition-and-invertibility-9">We now give alternative characterizations of left-invertible, right-invertible, and invertible maps. Intuitively, a map is left-invertible if it does not associate two distinct inputs with the same output, and a map is right-invertible if each output is associated with at least one input. These properties mirror the totality and uniqueness conditions for maps, and will turn out to together imply the existence of a two-sided inverse, which is both a left and right inverse.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-composition-and-invertibility-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-injectivity-surjectivity-bijectivity"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Injectivity; surjectivity; bijectivity.</span>
+</h4>
+<div class="para logical" id="definition-injectivity-surjectivity-bijectivity-11-1">
+<div class="para">Let <span class="process-math">\(f \colon X \to Y \)</span> be a map from a set <span class="process-math">\(X \)</span> to a set <span class="process-math">\(Y \text{.}\)</span>
+</div>
+<ol class="decimal" id="definition-injectivity-surjectivity-bijectivity-11-1-4">
+<li id="definition-injectivity-surjectivity-bijectivity-11-1-4-1">
+<div class="para" id="definition-injectivity-surjectivity-bijectivity-11-1-4-1-1">
+<span class="process-math">\(f \)</span> is called <dfn class="terminology">injective</dfn> (or <dfn class="terminology">one-to-one</dfn>) if for all inputs <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \text{,}\)</span> if <span class="process-math">\(f \of{ x_{ 1 } } = f \of{ x_{ 2 } } \text{,}\)</span> then <span class="process-math">\(x_{ 1 } = x_{ 2 } \text{.}\)</span> In this case, <span class="process-math">\(f \)</span> is also called an <dfn class="terminology">injection</dfn> of <span class="process-math">\(X \)</span> into <span class="process-math">\(Y \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-injectivity-surjectivity-bijectivity-11-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#definition-injectivity-surjectivity-bijectivity-11-1-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="definition-injectivity-surjectivity-bijectivity-11-1-4-2">
+<div class="para" id="definition-injectivity-surjectivity-bijectivity-11-1-4-2-1">
+<span class="process-math">\(f \)</span> is called <dfn class="terminology">surjective</dfn> (or <dfn class="terminology">onto</dfn>) if for all outputs <span class="process-math">\(y \in Y \)</span> there is an input <span class="process-math">\(x \in X \)</span> so that <span class="process-math">\(y = f \of{ x } \text{.}\)</span> In this case, <span class="process-math">\(f \)</span> is also called a <dfn class="terminology">surjection</dfn> of <span class="process-math">\(X \)</span> onto <span class="process-math">\(Y \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-injectivity-surjectivity-bijectivity-11-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#definition-injectivity-surjectivity-bijectivity-11-1-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="definition-injectivity-surjectivity-bijectivity-11-1-4-3">
+<div class="para" id="definition-injectivity-surjectivity-bijectivity-11-1-4-3-1">
+<span class="process-math">\(f \)</span> is called <dfn class="terminology">bijective</dfn> if it is both injective and surjective. In this case, <span class="process-math">\(f \)</span> is also called a <dfn class="terminology">bijection</dfn> or a <dfn class="terminology">one-to-one correspondence</dfn> between <span class="process-math">\(X \)</span> and <span class="process-math">\(Y \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-injectivity-surjectivity-bijectivity-11-1-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#definition-injectivity-surjectivity-bijectivity-11-1-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-injectivity-surjectivity-bijectivity-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.2.13: Injectivity; surjectivity; bijectivity"><a href="#definition-injectivity-surjectivity-bijectivity" title="Copy heading and permalink for Definition 1.2.13: Injectivity; surjectivity; bijectivity" aria-label="Copy heading and permalink for Definition 1.2.13: Injectivity; surjectivity; bijectivity">🔗</a></div>
+</article>
+<details id="example-examples-of-injections-surjections-and-bijections" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Examples of injections, surjections, and bijections.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-examples-of-injections-surjections-and-bijections-2-1">
+<div class="para">The following are examples of injective, surjective, and bijective functions.</div>
+<ol class="decimal" id="example-examples-of-injections-surjections-and-bijections-2-1-1">
+<li id="example-examples-of-injections-surjections-and-bijections-2-1-1-1">
+<div class="para logical" id="example-examples-of-injections-surjections-and-bijections-2-1-1-1-1">
+<div class="para">Let <span class="process-math">\(U \subseteq X \)</span> be a subset of a set <span class="process-math">\(X \text{,}\)</span> and consider <span class="process-math">\(u_{ 1 } , u_{ 2 } \in U \text{.}\)</span> If <span class="process-math">\(\iota_{ U }^{ X } \of{ u_{ 1 } } = \iota_{ U }^{ X } \of{ u_{ 2 } } \text{,}\)</span> then</div>
+<div class="displaymath process-math" id="example-examples-of-injections-surjections-and-bijections-2-1-1-1-1-5">
+\begin{equation*}
+u_{ 1 } = \iota_{ U }^{ X } \of{ u_{ 1 } } = \iota_{ U }^{ X } \of{ u_{ 2 } } = u_{ 2 }\text{.}
+\end{equation*}
+</div>
+<div class="para">So the inclusion map <span class="process-math">\(\iota_{ U }^{ X } \colon U \to X \)</span> is injective.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-examples-of-injections-surjections-and-bijections-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#example-examples-of-injections-surjections-and-bijections-2-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="example-examples-of-injections-surjections-and-bijections-2-1-1-2">
+<div class="para" id="example-examples-of-injections-surjections-and-bijections-2-1-1-2-1">Fix sets <span class="process-math">\(X \)</span> and <span class="process-math">\(Y \text{,}\)</span> and suppose that <span class="process-math">\(Y \neq \emptyset \)</span> is non-empty. Let <span class="process-math">\(\pi \colon X \times Y \to X \)</span> be the <dfn class="terminology">projection map</dfn> defined by the formula <span class="process-math">\(\pi \of{ x , y } = x \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-examples-of-injections-surjections-and-bijections-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-examples-of-injections-surjections-and-bijections-2-1-1-2-2">Let <span class="process-math">\(x \in X \text{,}\)</span> and note that since <span class="process-math">\(Y \neq \emptyset \)</span> is non-empty, there is some element <span class="process-math">\(y \in Y \text{.}\)</span> We note that <span class="process-math">\(\pi \of{ x , y } = x \text{.}\)</span> Since each output <span class="process-math">\(x \in X \)</span> is the image of some input under <span class="process-math">\(\pi \text{,}\)</span> <span class="process-math">\(\pi \)</span> is surjective.<div class="autopermalink" data-description="Paragraph"><a href="#example-examples-of-injections-surjections-and-bijections-2-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#example-examples-of-injections-surjections-and-bijections-2-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="example-examples-of-injections-surjections-and-bijections-2-1-1-3">
+<div class="para" id="example-examples-of-injections-surjections-and-bijections-2-1-1-3-1">The identity map <span class="process-math">\(\id_{ X } \colon X \to X \)</span> on a set <span class="process-math">\(X \)</span> is injective by virtue of being an inclusion map. <span class="process-math">\(\id_{ X } \)</span> is also surjective, since <span class="process-math">\(\id_{ X } \of{ x } = x \)</span> for all <span class="process-math">\(x \in X \text{.}\)</span> Thus <span class="process-math">\(\id_{ X } \)</span> is bijective.<div class="autopermalink" data-description="Paragraph"><a href="#example-examples-of-injections-surjections-and-bijections-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#example-examples-of-injections-surjections-and-bijections-2-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-examples-of-injections-surjections-and-bijections-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.14: Examples of injections, surjections, and bijections"><a href="#example-examples-of-injections-surjections-and-bijections" title="Copy heading and permalink for Example 1.2.14: Examples of injections, surjections, and bijections" aria-label="Copy heading and permalink for Example 1.2.14: Examples of injections, surjections, and bijections">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-composition-and-invertibility-12">It is no accident that the examples for left- and right- invertibility coincided with the examples for injectivity and surjectivity. It turns out that injectivity is essentially equivalent to left-invertibility, and surjectivity is equivalent to right-invertibility.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-composition-and-invertibility-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="theorem-invertibility"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Invertibility.</span>
+</h4>
+<div class="para logical" id="theorem-invertibility-2-1">
+<div class="para">Let <span class="process-math">\(f \colon X \to Y \)</span> be a map from a set <span class="process-math">\(X \)</span> to a set <span class="process-math">\(Y \text{.}\)</span>
+</div>
+<ol class="decimal" id="theorem-invertibility-2-1-4">
+<li id="theorem-invertibility-2-1-4-1">
+<div class="para" id="theorem-invertibility-2-1-4-1-1">If <span class="process-math">\(f \)</span> is left-invertible, then it is injective.<div class="autopermalink" data-description="Paragraph"><a href="#theorem-invertibility-2-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#theorem-invertibility-2-1-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="theorem-invertibility-2-1-4-2">
+<div class="para" id="theorem-invertibility-2-1-4-2-1">If <span class="process-math">\(X \neq \emptyset \)</span> is non-empty and <span class="process-math">\(f \)</span> is injective, then it is left-invertible.<div class="autopermalink" data-description="Paragraph"><a href="#theorem-invertibility-2-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#theorem-invertibility-2-1-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="theorem-invertibility-2-1-4-3">
+<div class="para" id="theorem-invertibility-2-1-4-3-1">If <span class="process-math">\(f \)</span> is right-invertible, then it is surjective.<div class="autopermalink" data-description="Paragraph"><a href="#theorem-invertibility-2-1-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#theorem-invertibility-2-1-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-invertibility-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 1.2.15: Invertibility"><a href="#theorem-invertibility" title="Copy heading and permalink for Theorem 1.2.15: Invertibility" aria-label="Copy heading and permalink for Theorem 1.2.15: Invertibility">🔗</a></div>
+</article>
+<details id="theorem-invertibility-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<ol class="decimal" id="theorem-invertibility-3-1">
+<li id="theorem-invertibility-3-1-1">
+<div class="para" id="theorem-invertibility-3-1-1-1">Suppose that <span class="process-math">\(f \)</span> is left-invertible, so that <span class="process-math">\(g \circ f = \id_{ X } \)</span> for some map <span class="process-math">\(g \colon Y \to X \text{.}\)</span> That <span class="process-math">\(f \)</span> is injective follows from the injectivity of the identity map <span class="process-math">\(\id_{ X } \)</span> and (d) of <code class="code-inline tex2jax_ignore">[provisional cross-reference: problem-compositions-of-injections-surjections-and-bijections]</code>.<div class="autopermalink" data-description="Paragraph"><a href="#theorem-invertibility-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#theorem-invertibility-3-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="theorem-invertibility-3-1-2">
+<div class="para" id="theorem-invertibility-3-1-2-1">Conversely, now suppose that <span class="process-math">\(X \neq \emptyset \)</span> is non-empty and <span class="process-math">\(f \)</span> is injective. Then for each output <span class="process-math">\(y \in Y \text{,}\)</span> there is at most one input <span class="process-math">\(x \in X \)</span> so that <span class="process-math">\(y = f \of{ x } \text{.}\)</span> Specifically, for each <span class="process-math">\(y \in \im \of{ f } \text{,}\)</span> there is a unique input <span class="process-math">\(x \in X \)</span> so that <span class="process-math">\(y = f \of{ x } \text{.}\)</span> Denote by <span class="process-math">\(g \of{ y } = x \)</span> this unique input.<div class="autopermalink" data-description="Paragraph"><a href="#theorem-invertibility-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="theorem-invertibility-3-1-2-2">
+<div class="para">Since <span class="process-math">\(X \neq \emptyset \)</span> is non-empty, it contains an element <span class="process-math">\(x \in X \text{.}\)</span> Define <span class="process-math">\(g \of{ y } = x \)</span> for all <span class="process-math">\(y \in Y \setminus \im \of{ f } \text{.}\)</span> We have defined a map <span class="process-math">\(g \colon Y \to X \text{.}\)</span> Note that</div>
+<div class="displaymath process-math" id="theorem-invertibility-3-1-2-2-6">
+\begin{equation*}
+\of{ g \circ f } \of{ x } = g \of{ f \of{ x } } = x = \id_{ X } \of{ x }
+\end{equation*}
+</div>
+<div class="para">for all inputs <span class="process-math">\(x \in X \text{,}\)</span> and so <span class="process-math">\(g \circ f = \id_{ X } \text{;}\)</span> that is, <span class="process-math">\(g \)</span> is a left inverse to <span class="process-math">\(f \text{,}\)</span> and so <span class="process-math">\(f \)</span> is left-invertible.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-invertibility-3-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#theorem-invertibility-3-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="theorem-invertibility-3-1-3">
+<div class="para" id="theorem-invertibility-3-1-3-1">Finally, suppose that <span class="process-math">\(f \)</span> is right-invertible, so that <span class="process-math">\(f \circ g = \id_{ Y } \)</span> for some map <span class="process-math">\(g \colon Y \to X \text{.}\)</span> That <span class="process-math">\(f \)</span> is surjective follows from the surjectivity of the identity map <span class="process-math">\(\id_{ Y } \)</span> and (e) of <code class="code-inline tex2jax_ignore">[provisional cross-reference: problem-compositions-of-injections-surjections-and-bijections]</code>.<div class="autopermalink" data-description="Paragraph"><a href="#theorem-invertibility-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#theorem-invertibility-3-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Proof 1.2.15.1"><a href="#theorem-invertibility-3" title="Copy heading and permalink for Proof 1.2.15.1" aria-label="Copy heading and permalink for Proof 1.2.15.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-composition-and-invertibility-14">Proving the remaining direction of the equivalence between right invertibility and surjectivity requires a strong assumption about set theory called the <dfn class="terminology">axiom of choice</dfn>, which we do not yet have the language to express in its simplest form. We will talk about the axiom of choice shortly, when we generalize the Cartesian product of two sets using indexing maps.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-composition-and-invertibility-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="corollary theorem-like" id="corollary-invertibility"><h4 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Invertibility.</span>
+</h4>
+<div class="para" id="corollary-invertibility-2-1">A map is invertible if and only if it is bijective.<div class="autopermalink" data-description="Paragraph"><a href="#corollary-invertibility-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 1.2.16: Invertibility"><a href="#corollary-invertibility" title="Copy heading and permalink for Corollary 1.2.16: Invertibility" aria-label="Copy heading and permalink for Corollary 1.2.16: Invertibility">🔗</a></div>
+</article>
+<details id="corollary-invertibility-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="corollary-invertibility-3-1">Let <span class="process-math">\(f \colon X \to Y \)</span> be a map from a set <span class="process-math">\(X \)</span> to a set <span class="process-math">\(Y \text{.}\)</span> If <span class="process-math">\(f \)</span> is invertible, it is both left- and right-invertible, and so <span class="process-math">\(f \)</span> is both injective and surjective by (1) and (3) of <a href="section-maps-and-functions.html#theorem-invertibility" class="xref" data-knowl="./knowl/xref/theorem-invertibility.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.2.15: Invertibility">Theorem 1.2.15 Invertibility</a>. Hence <span class="process-math">\(f \)</span> is bijective.<div class="autopermalink" data-description="Paragraph"><a href="#corollary-invertibility-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="corollary-invertibility-3-2">
+<div class="para">Conversely, now suppose that <span class="process-math">\(f \)</span> is bijective, so that <span class="process-math">\(f \)</span> is both injective and surjective. If <span class="process-math">\(X = \emptyset \text{,}\)</span> then</div>
+<div class="displaymath process-math" id="corollary-invertibility-3-2-4">
+\begin{align*}
+Y \amp = \im \of{ f } = f \of{ X } = f \of{ \emptyset }\\
+\amp = \setmid{ f \of{ x } \in Y }{ x \in \emptyset } = \emptyset
+\end{align*}
+</div>
+<div class="para">by the surjectivity of <span class="process-math">\(f \text{.}\)</span> Thus <span class="process-math">\(f \colon \emptyset \to \emptyset \)</span> is the unique map from <span class="process-math">\(\emptyset \)</span> to itself, the identity map <span class="process-math">\(\id_{ \emptyset } \colon \emptyset \to \emptyset \text{.}\)</span> In particular, <span class="process-math">\(f \)</span> is invertible.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#corollary-invertibility-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="corollary-invertibility-3-3">So we may assume that <span class="process-math">\(X \neq \emptyset \)</span> is non-empty. Since <span class="process-math">\(f \)</span> is injective, it is left-invertible by (2) of <a href="section-maps-and-functions.html#theorem-invertibility" class="xref" data-knowl="./knowl/xref/theorem-invertibility.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.2.15: Invertibility">Theorem 1.2.15 Invertibility</a>. So <span class="process-math">\(g \circ f = \id_{ X } \)</span> for some map <span class="process-math">\(g \colon Y \to X \text{;}\)</span> that is, <span class="process-math">\(g \of{ f \of{ x } } = x \)</span> for all inputs <span class="process-math">\(x \in X \text{.}\)</span> It suffices to show that <span class="process-math">\(g \)</span> is also a right inverse to <span class="process-math">\(f \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#corollary-invertibility-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="corollary-invertibility-3-4">
+<div class="para">To that end, consider an output <span class="process-math">\(y \in Y \text{.}\)</span> Since <span class="process-math">\(f \)</span> is surjective, <span class="process-math">\(y = f \of{ x } \)</span> for some input <span class="process-math">\(x \in X \text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="corollary-invertibility-3-4-5">
+\begin{equation*}
+\of{ f \circ g } \of{ y } = f \of{ g \of{ x } } = f \of{ g \of{ f \of{ x } } } = f \of{ x } = y = \id_{ Y } \of{ y }\text{.}
+\end{equation*}
+</div>
+<div class="para">Hence <span class="process-math">\(f \circ g = \id_{ Y } \text{,}\)</span> and so <span class="process-math">\(g \)</span> is an inverse to <span class="process-math">\(f \text{;}\)</span> that is, <span class="process-math">\(f \)</span> is invertible.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#corollary-invertibility-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 1.2.16.1"><a href="#corollary-invertibility-3" title="Copy heading and permalink for Proof 1.2.16.1" aria-label="Copy heading and permalink for Proof 1.2.16.1">🔗</a></div>
+</article></details>
+<section class="conclusion" id="subsection-composition-and-invertibility-16">
+<div class="para" id="subsection-composition-and-invertibility-16-1">We will investigate the invertibility and bijectivity of maps and the consequences these properties have on the domains and codomains of such maps more at the end of this chapter, when we study <dfn class="terminology">cardinality</dfn> and the size of sets. For now, however, we will move on to an important convention which is ubiquitous throughout mathematics: the notions of indexed sets and families.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-composition-and-invertibility-16-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Subsection 1.2.2: Composition and Invertibility"><a href="#subsection-composition-and-invertibility" title="Copy heading and permalink for Subsection 1.2.2: Composition and Invertibility" aria-label="Copy heading and permalink for Subsection 1.2.2: Composition and Invertibility">🔗</a></div>
+</section>
+<section class="subsection" id="subsection-indexing">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Indexing</span>
+</h3>
+<section class="introduction" id="subsection-indexing-2">
+<div class="para" id="subsection-indexing-2-1">Considered as an association between sets, a map can be thought to index its image by the elements of its domain. That is, a map can transfer information from its domain to its image. Just what this transferred information looks like can vary tremendously, but suffice it to say that this notion of indexing is fundamental and will recur throughout this text.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-indexing-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="definition definition-like" id="definition-indexed-family-indexed-set"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Indexed family; indexed set.</span>
+</h4>
+<div class="para" id="definition-indexed-family-indexed-set-8-1">A set <span class="process-math">\(X \)</span> is <dfn class="terminology">indexed</dfn> by a set <span class="process-math">\(\mathcal{ J } \)</span> if there is a surjection <span class="process-math">\(x \colon \mathcal{ J } \to X \text{.}\)</span> <span class="process-math">\(\mathcal{ J } \)</span> is called an <dfn class="terminology">indexing set</dfn>, and for each input <span class="process-math">\(j \in \mathcal{ J } \text{,}\)</span> called an <dfn class="terminology">index</dfn>, its image is denoted <span class="process-math">\(x_{ j } = x \of{ j } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-indexed-family-indexed-set-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="definition-indexed-family-indexed-set-8-2">The map <span class="process-math">\(x \)</span> is called an <dfn class="terminology">(indexed) family</dfn> of elements of <span class="process-math">\(X \text{,}\)</span> and is denoted <span class="process-math">\(\of{ x_{ j } }_{ j \in \mathcal{ J } } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-indexed-family-indexed-set-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="definition-indexed-family-indexed-set-8-3">
+<div class="para">Consider a map <span class="process-math">\(x \colon \mathcal{ J } \to X \)</span> of a set <span class="process-math">\(\mathcal{ J } \text{,}\)</span> called the <dfn class="terminology">indexing set</dfn> and whose elements are called <dfn class="terminology">indices</dfn>, onto a set <span class="process-math">\(X \text{.}\)</span> The image of such an index <span class="process-math">\(j \in \mathcal{ J } \)</span> under such an <dfn class="terminology">(indexed) family</dfn> <span class="process-math">\(x \)</span> is often denoted <span class="process-math">\(x_{ j } = x \of{ j } \text{,}\)</span> and <span class="process-math">\(x \)</span> is often denoted <span class="process-math">\(\of{ x_{ j } }_{ j \in \mathcal{ J } } \text{.}\)</span> We say that <span class="process-math">\(\im \of{ x } \)</span> is <dfn class="terminology">indexed</dfn> by <span class="process-math">\(\mathcal{ J } \text{,}\)</span> and we write</div>
+<div class="displaymath process-math" id="definition-indexed-family-indexed-set-8-3-15">
+\begin{equation*}
+\set{ x_{ j } }_{ j \in \mathcal{ J } } = \setmid{ x_{ j } \in X }{ j \in \mathcal{ J } } = \im \of{ x }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-indexed-family-indexed-set-8-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.2.17: Indexed family; indexed set"><a href="#definition-indexed-family-indexed-set" title="Copy heading and permalink for Definition 1.2.17: Indexed family; indexed set" aria-label="Copy heading and permalink for Definition 1.2.17: Indexed family; indexed set">🔗</a></div>
+</article>
+<div class="para" id="subsection-indexing-4">We can also use this notion of indexing to generalize the intersection and union of sets to act on arbitrary collections of sets. This generalization of the intersection and union of two sets relies on the natural similarities between logical conjunction <span class="process-math">\(\land \)</span> and universal quantification <span class="process-math">\(\forall \)</span> and between logical disjunction <span class="process-math">\(\lor \)</span> and existential quantification <span class="process-math">\(\exists \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsection-indexing-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-intersection-union"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Intersection; union.</span>
+</h4>
+<div class="para logical" id="definition-intersection-union-6-1">
+<div class="para">Let <span class="process-math">\(\of{ U_{ j } }_{ j \in \mathcal{ J } } \)</span> be a family of subsets <span class="process-math">\(U_{ j } \subseteq X \)</span> of a set <span class="process-math">\(X \)</span> indexed by a set <span class="process-math">\(\mathcal{ J } \text{.}\)</span> The <dfn class="terminology">intersection</dfn> <span class="process-math">\(\bigcap_{ j \in \mathcal{ J } }{ U_{ j } } \)</span> of this indexed family is the subset of <span class="process-math">\(X \)</span> defined by</div>
+<div class="displaymath process-math" id="definition-intersection-union-6-1-8">
+\begin{equation*}
+\bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \setmid{ x \in X }{ x \in U_{ j } \textrm{ for all } j \in \mathcal{ J } }\text{.}
+\end{equation*}
+</div>
+<div class="para">The <dfn class="terminology">union</dfn> <span class="process-math">\(\bigcup_{ j \in \mathcal{ J } }{ U_{ j } } \)</span> of this indexed family is the subset of <span class="process-math">\(X \)</span> defined by</div>
+<div class="displaymath process-math" id="definition-intersection-union-6-1-12">
+\begin{equation*}
+\bigcup_{ j \in \mathcal{ J } }{ U_{ j } } = \setmid{ x \in X }{ x \in U_{ j } \textrm{ for some } j \in \mathcal{ J } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-intersection-union-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.2.18: Intersection; union"><a href="#definition-intersection-union" title="Copy heading and permalink for Definition 1.2.18: Intersection; union" aria-label="Copy heading and permalink for Definition 1.2.18: Intersection; union">🔗</a></div>
+</article>
+<div class="para" id="subsection-indexing-6">These generalizations of the intersection and union of two sets extend naturally to generalizations of each of the results proven in the previous section.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-indexing-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="theorem-analogous-properties-of-indexed-intersections-and-unions"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Analogous properties of indexed intersections and unions.</span>
+</h4>
+<div class="para logical" id="theorem-analogous-properties-of-indexed-intersections-and-unions-2-1">
+<div class="para">Let <span class="process-math">\(\of{ U_{ j } }_{ j \in \mathcal{ J } } \)</span> be a family of subsets <span class="process-math">\(U_{ j } \subseteq X \)</span> of a set <span class="process-math">\(X \)</span> indexed by a set <span class="process-math">\(\mathcal{ J } \text{.}\)</span>
+</div>
+<ol class="decimal" id="theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5">
+<li id="theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5-1">
+<div class="para" id="theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5-1-1">Analogously to <a href="section-what-is-a-set.html#proposition-set-operations-and-containment" class="xref" data-knowl="./knowl/xref/proposition-set-operations-and-containment.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 1.1.14: Set operations and containment">Proposition 1.1.14 Set operations and containment</a>, for any subset <span class="process-math">\(V \subseteq X \text{,}\)</span> <span class="process-math">\(V \subseteq \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } \)</span> if and only if <span class="process-math">\(V \subseteq U_{ j } \)</span> for all indices <span class="process-math">\(j \in \mathcal{ J } \text{,}\)</span> and <span class="process-math">\(\bigcup_{ j \in \mathcal{ J } }{ U_{ j } } \subseteq V \)</span> if and only if <span class="process-math">\(U_{ j } \subseteq V \)</span> for all indices <span class="process-math">\(j \in \mathcal{ J } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5-2">
+<div class="para logical" id="theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5-2-1">
+<div class="para">Analogously to (2) of <a href="section-what-is-a-set.html#corollary-properties-of-the-set-operations" class="xref" data-knowl="./knowl/xref/corollary-properties-of-the-set-operations.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 1.1.15: Properties of the set operations">Corollary 1.1.15 Properties of the set operations</a>,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/corollary-properties-of-the-set-operations.html" id="theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5-2-1-2">
+\begin{equation*}
+\bigcap_{ k \in \mathcal{ K } }{ U_{ f \of{ k } } } = \bigcap_{ j \in \mathcal{ J } }{ U_{ j } }
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/corollary-properties-of-the-set-operations.html" id="theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5-2-1-3">
+\begin{equation*}
+\bigcup_{ k \in \mathcal{ K } }{ U_{ f \of{ k } } } = \bigcup_{ j \in \mathcal{ J } }{ U_{ j } }
+\end{equation*}
+</div>
+<div class="para">for any set <span class="process-math">\(\mathcal{ K } \)</span> and bijection <span class="process-math">\(f \colon \mathcal{ K } \to \mathcal{ J } \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5-3">
+<div class="para logical" id="theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5-3-1">
+<div class="para">Analogously to <code class="code-inline tex2jax_ignore">[provisional cross-reference: problem-distributivity-of-set-operations]</code>,</div>
+<div class="displaymath process-math" data-contains-math-knowls="" id="theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5-3-1-2">
+\begin{equation*}
+V \cup \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcap_{ j \in \mathcal{ J } }{ \of{ V \cup U_{ j } } }
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="" id="theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5-3-1-3">
+\begin{equation*}
+V \cap \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcup_{ j \in \mathcal{ J } }{ \of{ V \cap U_{ j } } }
+\end{equation*}
+</div>
+<div class="para">for any subset <span class="process-math">\(V \subseteq X \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5-4">
+<div class="para logical" id="theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5-4-1">
+<div class="para">Analogously to <code class="code-inline tex2jax_ignore">[provisional cross-reference: problem-de-morgans-laws]</code>,</div>
+<div class="displaymath process-math" data-contains-math-knowls="" id="theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5-4-1-2">
+\begin{equation*}
+V \setminus \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcup_{ j \in \mathcal{ J } }{ \of{ V \setminus U_{ j } } }
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="" id="theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5-4-1-3">
+\begin{equation*}
+V \setminus \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcap_{ j \in \mathcal{ J } }{ \of{ V \setminus U_{ j } } }
+\end{equation*}
+</div>
+<div class="para">for any subset <span class="process-math">\(V \subseteq X \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#theorem-analogous-properties-of-indexed-intersections-and-unions-2-1-5-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-analogous-properties-of-indexed-intersections-and-unions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 1.2.19: Analogous properties of indexed intersections and unions"><a href="#theorem-analogous-properties-of-indexed-intersections-and-unions" title="Copy heading and permalink for Theorem 1.2.19: Analogous properties of indexed intersections and unions" aria-label="Copy heading and permalink for Theorem 1.2.19: Analogous properties of indexed intersections and unions">🔗</a></div>
+</article>
+<section class="conclusion" id="subsection-indexing-8">
+<div class="para" id="subsection-indexing-8-1">You will have an opportunity to prove the above results in the problems for this section.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-indexing-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Subsection 1.2.3: Indexing"><a href="#subsection-indexing" title="Copy heading and permalink for Subsection 1.2.3: Indexing" aria-label="Copy heading and permalink for Subsection 1.2.3: Indexing">🔗</a></div>
+</section>
+<section class="conclusion" id="section-maps-and-functions-6">
+<div class="para" id="section-maps-and-functions-6-1">Text after the last subsection.<div class="autopermalink" data-description="Paragraph"><a href="#section-maps-and-functions-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="reading-questions" id="exercises-maps-and-functions">
+<h3 class="heading hide-type">
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h3>
+<section class="introduction" id="exercises-maps-and-functions-2">
+<div class="para" id="exercises-maps-and-functions-2-1">The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-maps-and-functions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="exercise exercise-like" id="exercise-images-and-pre-images"><h4 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Images and pre-images.</span>
+</h4>
+<div class="introduction" id="exercise-images-and-pre-images-2">
+<div class="para logical" id="exercise-images-and-pre-images-2-1">
+<div class="para">Let <span class="process-math">\(f_{ 4 } \colon \set{ 1 , 2 } \to \set{ \mathrm{ red } , \mathrm{ blue } } \)</span> be the map from <span class="process-math">\(\set{ 1 , 2 } \)</span> to <span class="process-math">\(\set{ \mathrm{ red } , \mathrm{ blue } } \)</span> defined in (2) of <code class="code-inline tex2jax_ignore">[provisional cross-reference: example-maps]</code>; that is,</div>
+<div class="displaymath process-math" data-contains-math-knowls="" id="exercise-images-and-pre-images-2-1-5">
+\begin{equation*}
+f_{ 4 } = \set{ \of{ 1 , \mathrm{ blue } } , \of{ 2 , \mathrm{ blue } } }\text{.}
+\end{equation*}
+</div>
+<div class="para">Compute the given images and pre-images. Express your answer in roster notation.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-images-and-pre-images-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="exercise-images-and-pre-images-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="exercise-images-and-pre-images-3-1-1">Compute the images <span class="process-math">\(f_{ 4 } \of{ 1 } \)</span> and <span class="process-math">\(f_{ 4 } \of{ 2 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-images-and-pre-images-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="exercise-images-and-pre-images-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="exercise-images-and-pre-images-3-2-1">
+<span class="process-math">\(f_{ 4 } \of{ 1 } = f_{ 4 } \of{ 2 } = \mathrm{ blue } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-images-and-pre-images-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.2.4.1.a.1"><a href="#exercise-images-and-pre-images-3-2" title="Copy heading and permalink for Answer 1.2.4.1.a.1" aria-label="Copy heading and permalink for Answer 1.2.4.1.a.1">🔗</a></div>
+</div></details>
+<details id="exercise-images-and-pre-images-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="exercise-images-and-pre-images-3-3-1">
+<div class="para">Since <span class="process-math">\(\of{ 1 , \mathrm{ blue } } \in f_{ 4 } \text{,}\)</span> the image <span class="process-math">\(f_{ 4 } \of{ 1 } \)</span> of <span class="process-math">\(1 \)</span> under <span class="process-math">\(f_{ 4 } \)</span> is</div>
+<div class="displaymath process-math" id="exercise-images-and-pre-images-3-3-1-5">
+\begin{equation*}
+f_{ 4 } \of{ 1 } = \mathrm{ blue }\text{.}
+\end{equation*}
+</div>
+<div class="para">Similarly, since <span class="process-math">\(\of{ 2 , \mathrm{ blue } } \in f_{ 4 } \text{,}\)</span> the image <span class="process-math">\(f_{ 4 } \of{ 2 } \)</span> of <span class="process-math">\(2 \)</span> under <span class="process-math">\(f_{ 4 } \)</span> is</div>
+<div class="displaymath process-math" id="exercise-images-and-pre-images-3-3-1-10">
+\begin{equation*}
+f_{ 4 } \of{ 2 } = \mathrm{ blue }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-images-and-pre-images-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.4.1.a.1"><a href="#exercise-images-and-pre-images-3-3" title="Copy heading and permalink for Solution 1.2.4.1.a.1" aria-label="Copy heading and permalink for Solution 1.2.4.1.a.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Task 1.2.4.1.a"><a href="#exercise-images-and-pre-images-3" title="Copy heading and permalink for Task 1.2.4.1.a" aria-label="Copy heading and permalink for Task 1.2.4.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="exercise-images-and-pre-images-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="exercise-images-and-pre-images-4-1-1">Compute the image <span class="process-math">\(\im \of{ f_{ 4 } } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-images-and-pre-images-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="exercise-images-and-pre-images-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="exercise-images-and-pre-images-4-2-1">
+<span class="process-math">\(\im \of{ f_{ 4 } } = \set{ \mathrm{ blue } } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-images-and-pre-images-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.2.4.1.b.1"><a href="#exercise-images-and-pre-images-4-2" title="Copy heading and permalink for Answer 1.2.4.1.b.1" aria-label="Copy heading and permalink for Answer 1.2.4.1.b.1">🔗</a></div>
+</div></details>
+<details id="exercise-images-and-pre-images-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="exercise-images-and-pre-images-4-3-1">
+<div class="para">Since <span class="process-math">\(f_{ 4 } \of{ x } = \mathrm{ blue } \)</span> for all <span class="process-math">\(x \in \set{ 1 , 2 } \text{,}\)</span> the image <span class="process-math">\(\im \of{ f_{ 4 } } \)</span> of <span class="process-math">\(f_{ 4 } \)</span> is</div>
+<div class="displaymath process-math" id="exercise-images-and-pre-images-4-3-1-5">
+\begin{equation*}
+\im \of{ f_{ 4 } } = f_{ 4 } \of{ \set{ 1 , 2 } } = \set{ \mathrm{ blue } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-images-and-pre-images-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.4.1.b.1"><a href="#exercise-images-and-pre-images-4-3" title="Copy heading and permalink for Solution 1.2.4.1.b.1" aria-label="Copy heading and permalink for Solution 1.2.4.1.b.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Task 1.2.4.1.b"><a href="#exercise-images-and-pre-images-4" title="Copy heading and permalink for Task 1.2.4.1.b" aria-label="Copy heading and permalink for Task 1.2.4.1.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="exercise-images-and-pre-images-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="exercise-images-and-pre-images-5-1-1">Compute the pre-images <span class="process-math">\(f_{ 4 }^{ -1 } \of{ \mathrm{ red } } \)</span> and <span class="process-math">\(f_{ 4 }^{ -1 } \of{ \mathrm{ blue } } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-images-and-pre-images-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="exercise-images-and-pre-images-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="exercise-images-and-pre-images-5-2-1">
+<span class="process-math">\(f_{ 4 }^{ -1 } \of{ \mathrm{ red } } = \emptyset \)</span> and <span class="process-math">\(f_{ 4 }^{ -1 } \of{ \mathrm{ blue } } = \set{ 1 , 2 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-images-and-pre-images-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.2.4.1.c.1"><a href="#exercise-images-and-pre-images-5-2" title="Copy heading and permalink for Answer 1.2.4.1.c.1" aria-label="Copy heading and permalink for Answer 1.2.4.1.c.1">🔗</a></div>
+</div></details>
+<details id="exercise-images-and-pre-images-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="exercise-images-and-pre-images-5-3-1">
+<div class="para">Since <span class="process-math">\(f_{ 4 } \of{ x } = \mathrm{ blue } \)</span> for all <span class="process-math">\(x \in \set{ 1 , 2 } \text{,}\)</span> the pre-images <span class="process-math">\(f_{ 4 }^{ -1 } \of{ \mathrm{ red } } \)</span> and <span class="process-math">\(f_{ 4 }^{ -1 } \of{ \mathrm{ blue } } \)</span> of <span class="process-math">\(\mathrm{ red } \)</span> and <span class="process-math">\(\mathrm{ blue } \)</span> under <span class="process-math">\(f_{ 4 } \)</span> are</div>
+<div class="displaymath process-math" id="exercise-images-and-pre-images-5-3-1-8">
+\begin{equation*}
+f_{ 4 }^{ -1 } \of{ \mathrm{ red } } = \setmid{ x \in \set{ 1 , 2 } }{ f_{ 4 } \of{ x } = \mathrm{ red } } = \emptyset
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" id="exercise-images-and-pre-images-5-3-1-9">
+\begin{equation*}
+f_{ 4 }^{ -1 } \of{ \mathrm{ blue } } = \setmid{ x \in \set{ 1 , 2 } }{ f_{ 4 } \of{ x } = \mathrm{ blue } } = \set{ 1 , 2 }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-images-and-pre-images-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.4.1.c.1"><a href="#exercise-images-and-pre-images-5-3" title="Copy heading and permalink for Solution 1.2.4.1.c.1" aria-label="Copy heading and permalink for Solution 1.2.4.1.c.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Task 1.2.4.1.c"><a href="#exercise-images-and-pre-images-5" title="Copy heading and permalink for Task 1.2.4.1.c" aria-label="Copy heading and permalink for Task 1.2.4.1.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Reading Question 1.2.4.1: Images and pre-images"><a href="#exercise-images-and-pre-images" title="Copy heading and permalink for Reading Question 1.2.4.1: Images and pre-images" aria-label="Copy heading and permalink for Reading Question 1.2.4.1: Images and pre-images">🔗</a></div>
+</article>
+<section class="conclusion" id="exercises-maps-and-functions-4">
+<div class="para" id="exercises-maps-and-functions-4-1">Short answers and/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-maps-and-functions-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Reading Questions 1.2.4: Exercises"><a href="#exercises-maps-and-functions" title="Copy heading and permalink for Reading Questions 1.2.4: Exercises" aria-label="Copy heading and permalink for Reading Questions 1.2.4: Exercises">🔗</a></div>
+</section>
+<section class="reading-questions" id="reading-questions-maps-and-functions">
+<h3 class="heading hide-type">
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reading Questions</span>
+</h3>
+<section class="introduction" id="reading-questions-maps-and-functions-2">
+<div class="para" id="reading-questions-maps-and-functions-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" data-description="Paragraph"><a href="#reading-questions-maps-and-functions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="exercise exercise-like" id="reading-question-composition-and-jectivity"><h4 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Composition and “jectivity”.</span>
+</h4>
+<div class="introduction" id="reading-question-composition-and-jectivity-2">
+<div class="para" id="reading-question-composition-and-jectivity-2-1">Let <span class="process-math">\(f \colon X \to Y \)</span> and <span class="process-math">\(g \colon Y \to Z \)</span> be maps between sets <span class="process-math">\(X \text{,}\)</span> <span class="process-math">\(Y \text{,}\)</span> and <span class="process-math">\(Z \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-composition-and-jectivity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="reading-question-composition-and-jectivity-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="reading-question-composition-and-jectivity-3-1-1">Prove that if <span class="process-math">\(f \)</span> and <span class="process-math">\(g \)</span> are injective, then so is their composition <span class="process-math">\(g \circ f \colon X \to Z \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-composition-and-jectivity-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="reading-question-composition-and-jectivity-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="reading-question-composition-and-jectivity-3-2-1">
+<div class="para">Let <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \text{,}\)</span> and suppose that <span class="process-math">\(\of{ g \circ f } \of{ x_{ 1 } } = \of{ g \circ f } \of{ x_{ 2 } } \text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="reading-question-composition-and-jectivity-3-2-1-3">
+\begin{equation*}
+g \of{ f \of{ x_{ 1 } } } = \of{ g \circ f } \of{ x_{ 1 } } = \of{ g \circ f } \of{ x_{ 2 } } = g \of{ f \of{ x_{ 2 } } }\text{,}
+\end{equation*}
+</div>
+<div class="para">and so the injectivity of <span class="process-math">\(g \)</span> implies that <span class="process-math">\(f \of{ x_{ 1 } } = f \of{ x_{ 2 } } \text{.}\)</span> Moreover, the injectivity of <span class="process-math">\(f \)</span> implies that <span class="process-math">\(x_{ 1 } = x_{ 2 } \text{.}\)</span> In summary, we have shown that for all inputs <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \text{,}\)</span> if <span class="process-math">\(\of{ g \circ f } \of{ x_{ 1 } } = \of{ g \circ f } \of{ x_{ 2 } } \text{,}\)</span> then <span class="process-math">\(x_{ 1 } = x_{ 2 } \text{;}\)</span> that is, <span class="process-math">\(g \circ f \)</span> is injective.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-composition-and-jectivity-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.5.1.a.1"><a href="#reading-question-composition-and-jectivity-3-2" title="Copy heading and permalink for Solution 1.2.5.1.a.1" aria-label="Copy heading and permalink for Solution 1.2.5.1.a.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Task 1.2.5.1.a"><a href="#reading-question-composition-and-jectivity-3" title="Copy heading and permalink for Task 1.2.5.1.a" aria-label="Copy heading and permalink for Task 1.2.5.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="reading-question-composition-and-jectivity-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="reading-question-composition-and-jectivity-4-1-1">Prove that if <span class="process-math">\(f \)</span> and <span class="process-math">\(g \)</span> are surjective, then so is their composition <span class="process-math">\(g \circ f \colon X \to Z \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-composition-and-jectivity-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="reading-question-composition-and-jectivity-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="reading-question-composition-and-jectivity-4-2-1">
+<div class="para">Let <span class="process-math">\(z \in Z \text{.}\)</span> Since <span class="process-math">\(g \)</span> is surjective, <span class="process-math">\(z = g \of{ y } \)</span> for some <span class="process-math">\(y \in Y \text{.}\)</span> Moreover, since <span class="process-math">\(f \)</span> is surjective, <span class="process-math">\(y = f \of{ x } \)</span> for some <span class="process-math">\(x \in X \text{.}\)</span> Thus</div>
+<div class="displaymath process-math" id="reading-question-composition-and-jectivity-4-2-1-8">
+\begin{equation*}
+z = g \of{ y } = g \of{ f \of{ x } } = \of{ g \circ f } \of{ x }\text{.}
+\end{equation*}
+</div>
+<div class="para">In summary, we have shown that for every output <span class="process-math">\(z \in Z \text{,}\)</span> there is some input <span class="process-math">\(x \in X \)</span> so that <span class="process-math">\(z = \of{ g \circ f } \of{ x } \text{;}\)</span> that is, <span class="process-math">\(g \circ f \)</span> is surjective.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-composition-and-jectivity-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.5.1.b.1"><a href="#reading-question-composition-and-jectivity-4-2" title="Copy heading and permalink for Solution 1.2.5.1.b.1" aria-label="Copy heading and permalink for Solution 1.2.5.1.b.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Task 1.2.5.1.b"><a href="#reading-question-composition-and-jectivity-4" title="Copy heading and permalink for Task 1.2.5.1.b" aria-label="Copy heading and permalink for Task 1.2.5.1.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="reading-question-composition-and-jectivity-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="reading-question-composition-and-jectivity-5-1-1">Prove that if <span class="process-math">\(f \)</span> and <span class="process-math">\(g \)</span> are bijective, then so is their composition <span class="process-math">\(g \circ f \colon X \to Z \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-composition-and-jectivity-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="reading-question-composition-and-jectivity-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="reading-question-composition-and-jectivity-5-2-1">Since <span class="process-math">\(f \)</span> and <span class="process-math">\(g \)</span> are bijective, they are both injective and surjective. (1) and (2) above not imply that their composition <span class="process-math">\(g \circ f \)</span> is both injective and surjective; that is, <span class="process-math">\(g \circ f \)</span> is bijective.<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-composition-and-jectivity-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.5.1.c.1"><a href="#reading-question-composition-and-jectivity-5-2" title="Copy heading and permalink for Solution 1.2.5.1.c.1" aria-label="Copy heading and permalink for Solution 1.2.5.1.c.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Task 1.2.5.1.c"><a href="#reading-question-composition-and-jectivity-5" title="Copy heading and permalink for Task 1.2.5.1.c" aria-label="Copy heading and permalink for Task 1.2.5.1.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="reading-question-composition-and-jectivity-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="reading-question-composition-and-jectivity-6-1-1">Prove that if the composition <span class="process-math">\(g \circ f \colon X \to Z \)</span> is injective, then so is <span class="process-math">\(f \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-composition-and-jectivity-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="reading-question-composition-and-jectivity-6-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="reading-question-composition-and-jectivity-6-2-1">Prove the desired result by contraposition.<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-composition-and-jectivity-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.2.5.1.d.1"><a href="#reading-question-composition-and-jectivity-6-2" title="Copy heading and permalink for Hint 1.2.5.1.d.1" aria-label="Copy heading and permalink for Hint 1.2.5.1.d.1">🔗</a></div>
+</div></details>
+<details id="reading-question-composition-and-jectivity-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="reading-question-composition-and-jectivity-6-3-1">
+<div class="para">Suppose that <span class="process-math">\(f \)</span> is not injective. Then <span class="process-math">\(f \of{ x_{ 1 } } = f \of{ x_{ 2 } } \)</span> for some distinct inputs <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \text{.}\)</span> Note that</div>
+<div class="displaymath process-math" id="reading-question-composition-and-jectivity-6-3-1-4">
+\begin{equation*}
+\of{ g \circ f } \of{ x_{ 1 } } = g \of{ f \of{ x_{ 1 } } } = g \of{ f \of{ x_{ 2 } } } = \of{ g \circ f } \of{ x_{ 2 } }\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\of{ g \circ f } \of{ x_{ 1 } } = \of{ g \circ f } \of{ x_{ 2 } } \)</span> but <span class="process-math">\(x_{ 1 } \neq x_{ 2 } \text{,}\)</span> <span class="process-math">\(g \circ f \)</span> is not injective.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-composition-and-jectivity-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="reading-question-composition-and-jectivity-6-3-2">In summary, we have shown that if <span class="process-math">\(f \)</span> is not injective, then <span class="process-math">\(g \circ f \)</span> is not injective. The contrapositive of this implication is the desired result: if <span class="process-math">\(g \circ f \)</span> is injective, then so is <span class="process-math">\(f \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-composition-and-jectivity-6-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.5.1.d.1"><a href="#reading-question-composition-and-jectivity-6-3" title="Copy heading and permalink for Solution 1.2.5.1.d.1" aria-label="Copy heading and permalink for Solution 1.2.5.1.d.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Task 1.2.5.1.d"><a href="#reading-question-composition-and-jectivity-6" title="Copy heading and permalink for Task 1.2.5.1.d" aria-label="Copy heading and permalink for Task 1.2.5.1.d">🔗</a></div>
+</article>
+<article class="task exercise-like" id="reading-question-composition-and-jectivity-7"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="reading-question-composition-and-jectivity-7-1-1">Prove that if the composition <span class="process-math">\(g \circ f \colon X \to Z \)</span> is surjective, then so is <span class="process-math">\(g \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-composition-and-jectivity-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="reading-question-composition-and-jectivity-7-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="reading-question-composition-and-jectivity-7-2-1">Prove the desired result by contraposition.<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-composition-and-jectivity-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.2.5.1.e.1"><a href="#reading-question-composition-and-jectivity-7-2" title="Copy heading and permalink for Hint 1.2.5.1.e.1" aria-label="Copy heading and permalink for Hint 1.2.5.1.e.1">🔗</a></div>
+</div></details>
+<details id="reading-question-composition-and-jectivity-7-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="reading-question-composition-and-jectivity-7-3-1">
+<div class="para">Suppose that <span class="process-math">\(g \)</span> is not surjective. Then there is some <span class="process-math">\(z \in Z \)</span> so that <span class="process-math">\(z \neq g \of{ y } \)</span> for all <span class="process-math">\(y \in Y \text{.}\)</span> Note that</div>
+<div class="displaymath process-math" id="reading-question-composition-and-jectivity-7-3-1-5">
+\begin{equation*}
+\of{ g \circ f } \of{ x } = g \of{ f \of{ x } } \neq z
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x \in X \text{,}\)</span> and so <span class="process-math">\(g \circ f \)</span> is not surjective.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-composition-and-jectivity-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="reading-question-composition-and-jectivity-7-3-2">In summary, we have shown that if <span class="process-math">\(g \)</span> is not surjective, then <span class="process-math">\(g \circ f \)</span> is not surjective. The contrapositive of this implication is the desired result: if <span class="process-math">\(g \circ f \)</span> is surjective, then so is <span class="process-math">\(g \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-composition-and-jectivity-7-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.5.1.e.1"><a href="#reading-question-composition-and-jectivity-7-3" title="Copy heading and permalink for Solution 1.2.5.1.e.1" aria-label="Copy heading and permalink for Solution 1.2.5.1.e.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Task 1.2.5.1.e"><a href="#reading-question-composition-and-jectivity-7" title="Copy heading and permalink for Task 1.2.5.1.e" aria-label="Copy heading and permalink for Task 1.2.5.1.e">🔗</a></div>
+</article><div class="autopermalink" data-description='Reading Question 1.2.5.1: Composition and "jectivity"'><a href="#reading-question-composition-and-jectivity" title='Copy heading and permalink for Reading Question 1.2.5.1: Composition and "jectivity"' aria-label='Copy heading and permalink for Reading Question 1.2.5.1: Composition and "jectivity"'>🔗</a></div>
+</article>
+<section class="conclusion" id="reading-questions-maps-and-functions-4">
+<div class="para" id="reading-questions-maps-and-functions-4-1">In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#reading-questions-maps-and-functions-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Reading Questions 1.2.5: Reading Questions"><a href="#reading-questions-maps-and-functions" title="Copy heading and permalink for Reading Questions 1.2.5: Reading Questions" aria-label="Copy heading and permalink for Reading Questions 1.2.5: Reading Questions">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 1.2: Maps and Functions"><a href="#section-maps-and-functions" title="Copy heading and permalink for Section 1.2: Maps and Functions" aria-label="Copy heading and permalink for Section 1.2: Maps and Functions">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="section-what-is-a-set.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section-peano-arithmetic-and-the-natural-numbers.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
