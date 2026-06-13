@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="reading-question-orders-from-pullbacks" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Orders from pullbacks
+  </title>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that the pullback of a preorder is a preorder.
+      </p>
+    </statement>
+    
+    <hint>
+      <p>
+        You may find it useful to review the proof of <xref ref="lemma-preorders-from-pullbacks"/>.
+      </p>
+    </hint>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that the pullback <m> \preceq_{ f } </m> of a partial order <m> \preceq </m> on a set <m> Y </m> along a map <m> f \colon X \to Y </m> is a partial order on <m> X </m> if and only if <m> f </m> is injective.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Is the pullback of a total order along an injective map necessarily a total order? If so, prove it. If not, provide a counterexample.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+</exercise>

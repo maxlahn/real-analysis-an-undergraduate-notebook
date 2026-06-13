@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="reading-question-composition-and-jectivity" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Composition and <q> jectivity </q>
+  </title>
+  
+  <introduction>
+    <p>
+      Let <m> f \colon X \to Y </m> and <m> g \colon Y \to Z </m> be maps between sets <m> X </m>, <m> Y </m>, and <m> Z </m>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that if <m> f </m> and <m> g </m> are injective, then so is their composition <m> g \circ f \colon X \to Z </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Let <m> x_{ 1 } , x_{ 2 } \in X </m>, and suppose that <m> \of{ g \circ f } \of{ x_{ 1 } } = \of{ g \circ f } \of{ x_{ 2 } } </m>. Then
+        
+        <md>
+          g \of{ f \of{ x_{ 1 } } } = \of{ g \circ f } \of{ x_{ 1 } } = \of{ g \circ f } \of{ x_{ 2 } } = g \of{ f \of{ x_{ 2 } } }
+        </md>,
+        
+        and so the injectivity of <m> g </m> implies that <m> f \of{ x_{ 1 } } = f \of{ x_{ 2 } } </m>. Moreover, the injectivity of <m> f </m> implies that <m> x_{ 1 } = x_{ 2 } </m>. In summary, we have shown that for all inputs <m> x_{ 1 } , x_{ 2 } \in X </m>, if <m> \of{ g \circ f } \of{ x_{ 1 } } = \of{ g \circ f } \of{ x_{ 2 } } </m>, then <m> x_{ 1 } = x_{ 2 } </m>; that is, <m> g \circ f </m> is injective.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that if <m> f </m> and <m> g </m> are surjective, then so is their composition <m> g \circ f \colon X \to Z </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Let <m> z \in Z </m>. Since <m> g </m> is surjective, <m> z = g \of{ y } </m> for some <m> y \in Y </m>. Moreover, since <m> f </m> is surjective, <m> y = f \of{ x } </m> for some <m> x \in X </m>. Thus
+        
+        <md>
+          z = g \of{ y } = g \of{ f \of{ x } } = \of{ g \circ f } \of{ x }
+        </md>.
+        
+        In summary, we have shown that for every output <m> z \in Z </m>, there is some input <m> x \in X </m> so that <m> z = \of{ g \circ f } \of{ x } </m>; that is, <m> g \circ f </m> is surjective.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that if <m> f </m> and <m> g </m> are bijective, then so is their composition <m> g \circ f \colon X \to Z </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Since <m> f </m> and <m> g </m> are bijective, they are both injective and surjective. (1) and (2) above not imply that their composition <m> g \circ f </m> is both injective and surjective; that is, <m> g \circ f </m> is bijective.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that if the composition <m> g \circ f \colon X \to Z </m> is injective, then so is <m> f </m>.
+      </p>
+    </statement>
+    
+    <hint>
+      <p>
+        Prove the desired result by contraposition.
+      </p>
+    </hint>
+    
+    <solution>
+      <p>
+        Suppose that <m> f </m> is not injective. Then <m> f \of{ x_{ 1 } } = f \of{ x_{ 2 } } </m> for some distinct inputs <m> x_{ 1 } , x_{ 2 } \in X </m>. Note that
+        
+        <md>
+          \of{ g \circ f } \of{ x_{ 1 } } = g \of{ f \of{ x_{ 1 } } } = g \of{ f \of{ x_{ 2 } } } = \of{ g \circ f } \of{ x_{ 2 } }
+        </md>.
+        
+        Since <m> \of{ g \circ f } \of{ x_{ 1 } } = \of{ g \circ f } \of{ x_{ 2 } } </m> but <m> x_{ 1 } \neq x_{ 2 } </m>, <m> g \circ f </m> is not injective.
+      </p>
+      
+      <p>
+        In summary, we have shown that if <m> f </m> is not injective, then <m> g \circ f </m> is not injective. The contrapositive of this implication is the desired result: if <m> g \circ f </m> is injective, then so is <m> f </m>.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that if the composition <m> g \circ f \colon X \to Z </m> is surjective, then so is <m> g </m>.
+      </p>
+    </statement>
+    
+    <hint>
+      <p>
+        Prove the desired result by contraposition.
+      </p>
+    </hint>
+    
+    <solution>
+      <p>
+        Suppose that <m> g </m> is not surjective. Then there is some <m> z \in Z </m> so that <m> z \neq g \of{ y } </m> for all <m> y \in Y </m>. Note that
+        
+        <md>
+          \of{ g \circ f } \of{ x } = g \of{ f \of{ x } } \neq z
+        </md>
+        
+        for all <m> x \in X </m>, and so <m> g \circ f </m> is not surjective.
+      </p>
+      
+      <p>
+        In summary, we have shown that if <m> g </m> is not surjective, then <m> g \circ f </m> is not surjective. The contrapositive of this implication is the desired result: if <m> g \circ f </m> is surjective, then so is <m> g </m>.
+      </p>
+    </solution>
+  </task>
+</exercise>

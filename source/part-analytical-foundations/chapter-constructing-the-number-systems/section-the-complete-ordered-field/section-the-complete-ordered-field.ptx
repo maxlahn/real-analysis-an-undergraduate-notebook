@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-the-complete-ordered-field" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    The Complete Ordered Field
+  </title>
+
+  <introduction>
+    <p>
+      Text before the first subsection.
+    </p>
+  </introduction>
+
+  <!-- <xi:include href="./subsection-TITLE.ptx"/> -->
+
+  <conclusion>
+    <p>
+      Text after the last subsection.
+    </p>
+  </conclusion>
+
+  <xi:include href="./exercises/exercises-the-complete-ordered-field.ptx"/>
+
+  <xi:include href="./reading-questions/reading-questions-the-complete-ordered-field.ptx"/>
+</section>

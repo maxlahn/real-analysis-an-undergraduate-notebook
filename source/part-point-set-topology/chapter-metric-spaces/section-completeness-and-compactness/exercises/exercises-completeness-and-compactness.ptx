@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<reading-questions xml:id="exercises-completeness-and-compactness" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Exercises
+  </title>
+
+  <introduction>
+    <p>
+      The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.
+    </p>
+  </introduction>
+  
+  <!-- <xi:include href="./exercise-TITLE.ptx"/> -->
+
+  <conclusion>
+    <p>
+      Short answers and/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.
+    </p>
+  </conclusion>
+</reading-questions>

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-finitary-operations" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Finitary Operations
+  </title>
+
+  <introduction>
+    <p>
+      Informally, a finitary operation on a set is an assignment of its elements to all finite sequence of a certain length in that set. That is, a finitary operation on a set is a map from some finite Cartesian power of that set to the set itself. We will view a finitary operation (through the active characterization of what maps do) as a process which combines elements of a set into a new element.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-finitary-operation">
+    <title>
+      Finitary operation
+    </title>
+    
+    <idx>
+      finitary operation
+    </idx>
+    
+    <idx>
+      arity
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> X </m> be a set and <m> n \in \N </m> be a natural number. A <term> finitary operation </term> of <term> arity </term> <m> n </m> (or more simply a <term> <m> n </m>-ary operation </term>) is a map <m> f \colon X^{ n } \to X </m>.
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-finitary-operations">
+    <title>
+      Finitary operations
+    </title>
+    
+    <idx>
+      nullary operation
+    </idx>
+    
+    <idx>
+      unary operation
+    </idx>
+    
+    <idx>
+      binary operation
+    </idx>
+    
+    <statement>
+      <p>
+        The following are examples of finitary operations:
+        
+        <ol>
+          <li>
+            <p>
+              A <m> 0 </m>-ary operation (or more simply, a <term> nullary operation </term>) on a set <m> X </m> is just a map <m> f \colon \set{ \emptyset } \to X </m> from <m> X^{ 0 } = \set{ \emptyset } </m> to <m> X </m>. Such a map <m> f \colon \set{ \emptyset } \to X </m> is uniquely determined by the image <m> f \of{ \emptyset } \in X </m> of the unique element <m> \emptyset \in X^{ 0 } </m>. In this way, we may view the nullary operations on <m> X </m> as synonymous with the elements of <m> X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              A <m> 1 </m>-ary operation (or more simply, a <term> unary operation </term>) on a set <m> X </m> is just a map <m> f \colon X \to X </m>. One example of such a unary operation on the natural numbers <m> \N </m> is the successor function <m> \Succ \colon \N \to \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              A <m> 2 </m>-ary operation (or more simply, a <term> binary operation </term>) on a set <m> X </m> is a map <m> f \colon X^{ 2 } \to X </m>. Two examples of such binary operations on the natural numbers <m> \N </m> are the addition and multiplication operations <m> \Add , \Mult \colon \N^{ 2 } \to \N </m>.
+            </p>
+            
+            <p>
+              Binary operations are usually denoted with symbols such as <m> + </m>, <m> \times </m>, <m> \cdot </m>, <m> \ast </m>, and <m> \star </m>. For a given binary operation <m> \ast \colon X \times X \to X </m>, we write
+              
+              <md>
+                x_{ 1 } \ast x_{ 2 } = \ast \of{ x_{ 1 } , x_{ 2 } }
+              </md>
+              
+              for all elements <m> x_{ 1 } , x_{ 2 } \in X </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    In many ways, algebra is the study of finitary operations on sets. Particularly emphasized in group theory and ring theory is the study of binary operation on sets. We won't delve too deep into the study of binary operations, but we will introduce some nice properties which some binary operations may satisfy.
+  </p>
+  
+  <definition xml:id="definition-commutativity-associativity">
+    <title>
+      Commutativity; associativity
+    </title>
+    
+    <idx>
+      commutativity
+    </idx>
+    
+    <idx>
+      associativity
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> \ast \colon X^{ 2 } \to X </m> be a binary operation on a set <m> X </m>.
+        
+        <ol>
+          <li>
+            <p>
+              <m> \ast </m> is called <term> commutative </term> if
+              
+              <md>
+                x_{ 1 } \ast x_{ 2 } = x_{ 2 } \ast x_{ 1 }
+              </md>
+              
+              for all elements <m> x_{ 1 } , x_{ 2 } \in X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              <m> \ast </m> is called <term> associative </term> if
+              
+              <md>
+                \of{ x_{ 1 } \ast x_{ 2 } } \ast x_{ 3 } = x_{ 1 } \ast \of{ x_{ 2 } \ast x_{ 3 } }
+              </md>
+              
+              for all elements <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in X </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-commutative-associative-binary-operations">
+    <title>
+      Commutative/associative binary operations
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of commutativity and associativity in binary operations:
+        
+        <ol>
+          <li>
+            <p>
+              Addition <m> + \colon \N^{ 2 } \to \N </m> and multiplication <m> \cdot \colon \N^{ 2 } \to \N </m> are commutative and associative binary operations on <m> \N </m> by (1), (2), (4), and (5) of <xref ref="theorem-properties-of-peano-arithmetic"/>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Intersection <m> \cap \colon \ps \of{ X }^{ 2 } \to \ps \of{ X } </m> and union <m> \cup \colon \ps \of{ X }^{ 2 } \to \ps \of{ X } </m> are commutative and associative binary operations on the power set <m> \ps \of{ X } </m> of a set <m> X </m> by (2) and (3) of <xref ref="corollary-properties-of-the-set-operations"/>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Composition <m> \circ \colon \of{ X^{ X } }^{ 2 } \to X^{ X } </m> is an associative but non-commutative binary operation on the set <m> X^{ X } </m> of maps from a set <m> X </m> to itself.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Let <m> e \colon \N^{ 2 } \to \N </m> be the <term> exponentiation </term> function defined by the formula <m> e \of{ m , n } = m^{ n } </m>; that is, <m> e </m> is defined recursively by the formulae <m> e \of{ m , 0 } = 1 </m> and <m> e \of{ m , n + 1 } = e^{ m , n } \cdot m </m>. Then <m> e </m> is a binary operation on <m> \N </m>, but <m> e </m> is neither commutative nor associative.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    <notation>
+      <usage>
+        <m> \sum_{ j = 1 }^{ m }{ n_{ j } } </m>
+      </usage>
+      
+      <description>
+        <p>
+          recursive summation notation
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \prod_{ j = 1 }^{ m }{ n_{ j } } </m>
+      </usage>
+      
+      <description>
+        <p>
+          recursive product notation
+        </p>
+      </description>
+    </notation>
+    
+    Associative binary operations can be extended recursively to act on finite sequences of any length. For example, given a finite sequence <m> \of{ n_{ j } }_{ j = 1 }^{ m } </m> of natural numbers <m> n_{ j } \in \N </m>, we write
+    
+    <md>
+      <mrow>
+        \sum_{ j = 1 }^{ m }{ n_{ j } } \amp = n_{ 1 } + n_{ 2 } + \dotsb + n_{ m } \amp \prod_{ j = 1 }^{ m }{ n_{ j } } \amp = n_{ 1 } n_{ 2 } \dotsm n_{ m }
+      </mrow>
+    </md>.
+  </p>
+
+  <conclusion>
+    <p>
+      As in the case of finitary operations, we will introduce finitary relations of all arities, but we will emphasize binary relations in order to study congruences and order relations, which are ubiquitous throughout both classical and modern mathematics and which will recur throughout this text.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->

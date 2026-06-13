@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-set-operations" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Set Operations
+  </title>
+
+  <introduction>
+    <idx>
+      conjunction
+    </idx>
+    
+    <idx>
+      disjunction
+    </idx>
+    
+    <idx>
+      negation
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> P \land Q </m>
+      </usage>
+      
+      <description>
+        <m> P </m> and <m> Q </m>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> P \lor Q </m>
+      </usage>
+      
+      <description>
+        <m> P </m> or <m> Q </m>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \lnot P </m>
+      </usage>
+      
+      <description>
+        not <m> P </m>
+      </description>
+    </notation>
+    
+    <p>
+      Test reference <xref ref="subsection-set-operations"/>
+    </p>
+    
+    <p>
+      We now introduce several ways to construct new sets from old ones which loosely correspond to the logical operators of <term> conjunction </term> <m> \land </m>, <term> disjunction </term> <m> \lor </m>, and <term> negation </term> <m> \lnot </m>, pronounced <q> and </q>, <q> or </q> and <q> not </q>, respectively.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-intersection">
+    <title>
+      Intersection; union; complement
+    </title>
+    
+    <idx>
+      intersection
+    </idx>
+    
+    <idx>
+      union
+    </idx>
+    
+    <idx>
+      complement
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> S \cap T </m>
+      </usage>
+      
+      <description>
+        the intersection of <m> S </m> and <m> T </m>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> S \cup T </m>
+      </usage>
+      
+      <description>
+        the union of <m> S </m> and <m> T </m>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> S \setminus T </m>
+      </usage>
+      
+      <description>
+        the complement of <m> T </m> in <m> S </m>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        The <term> intersection </term> <m> S \cap T </m> of two sets <m> S </m> and <m> T </m> is the set whose elements are both elements of <m> S </m> and elements of <m> T </m>; that is,
+        
+        <md>
+          S \cap T = \setmid{ x }{ x \in S \textrm{ and } x \in T }
+        </md>.
+        
+        The <term> union </term> <m> S \cup T </m> of <m> S </m> and <m> T </m> is the set whose elements are either elements of <m> S </m> or elements of <m> T </m>; that is,
+        
+        <md>
+          S \cup T = \setmid{ x }{ x \in S \textrm{ or } x \in T }
+        </md>.
+        
+        The <term> complement </term> <m> S \setminus T </m> of <m> T </m> in <m> S </m> is the set whose elements are elements of <m> S </m> but not elements of <m> T </m>; that is,
+        
+        <md>
+          S \setminus T = \setmid{ x }{ x \in S \textrm{ and } x \notin T }
+        </md>.
+      </p>
+    </statement>
+  </definition>
+  
+  <proposition xml:id="proposition-set-operations-and-containment">
+    <title>
+      Set operations and containment
+    </title>
+    
+    <statement>
+      <p>
+        Fix sets <m> S </m>, <m> T </m>, and <m> U </m>.
+        
+        <ol>
+          <li>
+            <p>
+              <m> U \subseteq S \cap T </m> if and only if <m> U \subseteq S </m> and <m> U \subseteq T </m>.
+            </p>
+          </li>
+          
+          
+          <li>
+            <p>
+              <m> S \cup T \subseteq U </m> if and only if <m> S \subseteq U </m> and <m> T \subseteq U </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              <m> U \subseteq S \setminus T </m> if and only if <m> U \subseteq S </m> and <m> U \cap T = \emptyset </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            First suppose that <m> U \subseteq S \cap T </m>. Since <m> S \cap T \subseteq S </m>, <xref ref="lemma-transitivity-of-set-containment"/> implies that <m> U \subseteq S </m>. Similarly, since <m> S \cap T \subseteq T </m>, <xref ref="lemma-transitivity-of-set-containment"/> implies that <m> U \subseteq T </m>.
+          </p>
+          
+          <p>
+            Conversely, now suppose that <m> U \subseteq S </m> and <m> U \subseteq T </m>, and let <m> x \in U </m>. Since <m> x \in U </m> and <m> U \subseteq S </m>, <m> x \in S </m>. Similarly, since <m> x \in U </m> and <m> U \subseteq T </m>, <m> x \in T </m>. Since <m> x \in S </m> and <m> x \in T </m>, we conclude that <m> x \in S \cap T </m>. In summary, we have shown that <m> x \in S \cap T </m> for all <m> x \in U </m>, so that <m> U \subseteq S \cap T </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            First suppose that <m> S \cup T \subseteq U </m>. Since <m> S \subseteq S \cup T </m>, <xref ref="lemma-transitivity-of-set-containment"/> implies that <m> S \subseteq U </m>. Similarly, since <m> T \subseteq S \cup T </m>, <xref ref="lemma-transitivity-of-set-containment"/> implies that <m> T \subseteq U </m>.
+          </p>
+          
+          <p>
+            Conversely, now suppose that <m> S \subseteq U </m> and <m> T \subseteq U </m>. Let <m> x \in S \cup T </m>, so that <m> x \in S </m> or <m> x \in T </m>. If <m> x \in S </m>, then <m> x \in U </m>, since <m> S \subseteq U </m>. Similarly, if <m> x \in T </m>, then <m> x \in U </m>, since <m> T \subseteq U </m>. We conclude that <m> x \in U </m>. In summary, we have shown that <m> x \in U </m> for all <m> x \in S \cup T </m>, so that <m> S \cup T \subseteq U </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            First suppose that <m> U \subseteq S \setminus T </m>, and let <m> x \in U </m>. Since <m> x \in U </m> and <m> U \subseteq S \setminus T </m>, <m> x \in S \setminus T </m>, so that <m> x \in S </m> and <m> x \notin T </m>. In summary, we have shown that <m> x \in S </m> for all <m> x \in U </m>, so that <m> U \subseteq S </m>. Moreover, we have shown that <m> x \notin T </m> for all <m> x \in U </m>, so that no element of <m> U </m> is an element of <m> T </m>; that is, <m> U \cap T = \emptyset </m>.
+          </p>
+          
+          <p>
+            Conversely, now suppose that <m> U \subseteq S </m> and <m> U \cap T = \emptyset </m>, and let <m> x \in U </m>. Since <m> x \in U </m> and <m> U \subseteq S </m>, <m> x \in S </m>. Moreover, since <m> x \in U </m> and <m> U \cap T = \emptyset </m>, <m> x \notin T </m>. Since <m> x \in S </m> and <m> x \notin T </m>, we conclude that <m> x \in S \setminus T </m>. In summary, we have shown that <m> x \in S \setminus T </m> for all <m> x \in U </m>, and so <m> U \subseteq S \setminus T </m>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </proposition>
+  
+  <corollary xml:id="corollary-properties-of-the-set-operations">
+    <title>
+      Properties of the set operations
+    </title>
+    
+    <statement>
+      <p>
+        Fix sets <m> S </m>, <m> T </m>, and <m> U </m>.
+        
+        <ol>
+          <li>
+            <p>
+              <m> S \cap S = S \cup S = S \cup \emptyset = S \setminus \emptyset = S </m>, and <m> S \cap \emptyset = S \setminus S = \emptyset \setminus S = \emptyset </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              <term> Commutativity </term>: <m> S \cap T = T \cap S </m> and <m> S \cup T = T \cup S </m>.
+            </p>
+          </li>
+          
+          
+          <li>
+            <p>
+              <term> Associativity </term>: <m> \of{ S \cap T } \cap U = S \cap \of{ T \cap U } </m> and <m> \of{ S \cup T } \cup U = S \cup \of{ T \cup U } </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            Since <m> S \subseteq S </m>, <m> S \subseteq S \cap S </m> and <m> S \cup S \subseteq S </m> by (1) and (2) of <xref ref="proposition-set-operations-and-containment"/>, respectively. Of course <m> S \cap S \subseteq S \subseteq S \cup S </m>, so that <m> S \cap S = S = S \cup S </m>.
+          </p>
+          
+          <p>
+            Similarly, since <m> S \subseteq S </m> and <m> \emptyset \subseteq S </m>, <m> S \cup \emptyset \subseteq S </m> by (2) of <xref ref="proposition-set-operations-and-containment"/>. Of course <m> S \subseteq S \cup \emptyset </m>, and so <m> S \cup \emptyset = S </m>.
+          </p>
+          
+          <p>
+            <m> \emptyset \subseteq S \cap \emptyset \subseteq \emptyset </m>, and so <m> S \cap \emptyset = \emptyset </m>. Moreover, together with the observation that <m> S \subseteq S </m>, this implies by (1) of <xref ref="proposition-set-operations-and-containment"/> that <m> S \subseteq S \setminus \emptyset </m>. Of course, <m> S \setminus \emptyset \subseteq S </m>, and so <m> S \setminus \emptyset = S </m>.
+          </p>
+          
+          <p>
+            Similarly, <m> \emptyset \subseteq \emptyset \setminus S \subseteq \emptyset </m>, and so <m> \emptyset \setminus S = \emptyset </m>.
+          </p>
+          
+          <p>
+            Finally, note that any element of <m> S \setminus S </m> is both an element of <m> S </m> and not an element of <m> S </m>, so that no such element can exist. Thus <m> S \setminus S = \emptyset </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Since <m> S \cap T \subseteq T </m> and <m> S \cap T \subseteq S </m>, (1) of <xref ref="proposition-set-operations-and-containment"/> implies that <m> S \cap T \subseteq T \cap S </m>. By symmetry, <m> T \cap S \subseteq S \cap T </m>, so that <m> S \cap T = T \cap S </m>.
+          </p>
+          
+          <p>
+            Similarly, since <m> S \subseteq T \cup S </m> and <m> T \subseteq T \cup S </m>, (2) of <xref ref="proposition-set-operations-and-containment"/> implies that <m> S \cup T \subseteq T \cup S </m>. By symmetry, <m> T \cup S \subseteq S \cup T </m>, so that <m> S \cup T = T \cup S </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            We note that
+            
+            <md>
+              <mrow>
+                \of{ S \cap T } \cap U \amp \subseteq S \cap T \subseteq T
+              </mrow>
+              
+              <mrow>
+                \of{ S \cap T } \cap U \amp \subseteq U
+              </mrow>
+            </md>,
+            
+            so that <m> \of{ S \cap T } \cap U \subseteq T \cap U </m> by (1) of <xref ref="proposition-set-operations-and-containment"/>. Similarly,
+            
+            <md>
+              \of{ S \cap T } \cap U \subseteq S \cap T \subseteq T
+            </md>,
+            
+            so that <m> \of{ S \cap T } \cap U \subseteq S \cap \of{ T \cap U } </m> by another application of (1) of <xref ref="proposition-set-operations-and-containment"/>.
+          </p>
+          
+          
+          <p>
+            Conversely, we note that
+            
+            <md>
+              <mrow>
+                S \cap \of{ T \cap U } \amp \subseteq S
+              </mrow>
+              
+              <mrow>
+                S \cap \of{ T \cap U } \amp \subseteq T \cap U \subseteq T
+              </mrow>
+            </md>,
+            
+            so that <m> S \cap \of{ T \cap U } \subseteq S \cap T </m> by (1) of <xref ref="proposition-set-operations-and-containment"/>. Similarly,
+            
+            <md>
+              S \cap \of{ T \cap U } \subseteq T \cap U \subseteq U
+            </md>,
+            
+            so that <m> S \cap \of{ T \cap U } \subseteq \of{ S \cap T } \cap U </m> by another application of (1) of <xref ref="proposition-set-operations-and-containment"/>. Thus
+            
+            <md>
+              \of{ S \cap T } \cap U = S \cap \of{ T \cap U }
+            </md>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </corollary>
+
+  <conclusion>
+    <p>
+      In the next section, we will generalize the first two ways (<term> intersection </term> and <term> union </term>) to arbitrary sets of sets; this generalization will mirror the similarities between conjunction <m> \land </m> and universal quantification <m> \forall </m> and between disjunction <m> \lor </m> and existential quantification <m> \exists </m>.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->

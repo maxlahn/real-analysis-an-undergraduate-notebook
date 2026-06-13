@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-cardinal-comparison" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Cardinal Comparison
+  </title>
+
+  <introduction>
+    <p>
+      Text before the first subdivision.
+    </p>
+  </introduction>
+  
+  
+
+  <conclusion>
+    <p>
+      Text after the last subdivision.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->

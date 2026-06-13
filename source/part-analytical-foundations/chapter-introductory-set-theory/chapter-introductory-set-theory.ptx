@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chapter-introductory-set-theory" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Introductory Set Theory
+  </title>
+
+  <introduction>
+    <p>
+      In this chapter, we lay the groundwork for our exposition of real analysis. We will introduce the fundamental notions of sets, relations, and functions, which underlie not only all of analysis but also all of modern mathematics as well.
+    </p>
+  </introduction>
+
+  <xi:include href="./section-what-is-a-set/section-what-is-a-set.ptx"/>
+
+  <xi:include href="./section-maps-and-functions/section-maps-and-functions.ptx"/>
+
+  <xi:include href="./section-peano-arithmetic-and-the-natural-numbers/section-peano-arithmetic-and-the-natural-numbers.ptx"/>
+
+  <xi:include href="./section-finitary-operations-and-relations/section-finitary-operations-and-relations.ptx"/>
+
+  <xi:include href="./section-introduction-to-order-theory/section-introduction-to-order-theory.ptx"/>
+
+  <xi:include href="./section-cardinality-and-countability/section-cardinality-and-countability.ptx"/>
+
+  <conclusion>
+    <p>
+      Text after the last section.
+    </p>
+  </conclusion>
+</chapter>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-finiteness" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Finiteness
+  </title>
+
+  <introduction>
+    <p>
+      Before we brave the unintuitive mess which is the realm of infinite sets, we will rigorously develop a notion of size for sets which contain only finitely many elements. Like in the infinite case, these finite cardinalities will be based on bijections.
+    </p>
+  </introduction>
+
+  <proposition xml:id="proposition-injections-of-finite-sets">
+    <title>
+      Injections of finite sets
+    </title>
+    
+    <statement>
+      <p>
+        For any natural numbers <m> m , n \in \N </m>, there exists an injective map <m> \set{ 1 , \dotsc , m } \to \set{ 1 , \dotsc , n } </m> if and only if <m> m \leq n </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        If <m> m \leq n </m>, then <m> \set{ 1 , \dotsc , m } \subseteq \set{ 1 , \dotsc , n } </m>, and so the inclusion map <m> \iota_{ \set{ 1 , \dotsc , m } }^{ \set{ 1 , \dotsc , n } } \colon \set{ 1 , \dotsc , m } \to \set{ 1 , \dotsc , n } </m> is an injective map from <m> \set{ 1 , \dotsc , m } </m> to <m> \set{ 1 , \dotsc , n } </m>. So it suffices to show the reverse implication.
+      </p>
+      
+      <p>
+        To that end, consider the subset
+        
+        <md>
+          S = \setmid{ m \in \N }{ \textrm{There are } n \in \N \textrm{ and } f \colon \set{ 1 , \dotsc , m } \to \set{ 1 , \dotsc , n } \textrm{ so that } m \not \leq n \textrm{ and } f \textrm{ is injective} }
+        </md>
+        
+        of the natural numbers <m> \N </m>. If suffices to show that <m> S = \emptyset </m>. To that end, we first note that <m> 0 \leq n </m> for all natural numbers <m> n \in \N </m>, so that <m> 0 \notin S </m>.
+      </p>
+      
+      <p>
+        Now let <m> m \in \N </m> be a natural number, and suppose that <m> m + 1 \in S </m>. Then there is a natural number <m> n \in \N </m> so that <m> m + 1 \not \leq n </m> and an injective function <m> f \colon \set{ 1 , \dotsc , m + 1 } \to \set{ 1 , \dotsc , n } </m>. We note that <m> n \neq 0 </m>, since there are no functions from a non-empty set <m> \set{ 1 , \dotsc , m + 1 } </m> to the empty set <m> \emptyset </m>. Thus <m> n = p + 1 </m> for some natural number <m> p \in \N </m>.
+      </p>
+      
+      <p>
+        If <m> m \leq p </m>, then <m> m + 1 \leq p + 1 = n </m>, and so <m> m \not \leq p </m>. It therefore suffices to construct an injective function <m> \set{ 1 , \dotsc , m } \to \set{ 1 , \dotsc , p } </m>. To that end, fix a bijection <m> g \colon \set{ 1 , \dotsc , p + 1 } \to \set{ 1 , \dotsc , p + 1 } </m> so that <m> g \of{ f \of{ m + 1 } } = p + 1 </m>, and let <m> h \colon \set{ 1 , \dotsc , m } \to \set{ 1 , \dotsc , p } </m> be the function defined by the formula
+        
+        <md>
+          h \of{ j } = g \of{ f \of{ j } }
+        </md>.
+        
+        Since <m> g </m> and <m> f </m> are injective, <m> h </m> is injective by (a) of <xref provisional="problem-compositions-of-injections-surjections-and-bijections"/>. We conclude that <m> n \in S </m>.
+      </p>
+      
+      <p>
+        In summary, we have shown that <m> 0 \notin S </m> and for all natural numbers <m> n \in \N </m>, if <m> n + 1 \in S </m>, then <m> n \in S </m>. These conclusions are equivalent to <m> 0 \in \N \setminus S </m> and for all natural numbers <m> n \in \N </m>, if <m> n \in \N \setminus S </m>, then <m> n + 1 \in \N \setminus S </m>. We conclude that <m> \N \setminus S = \N </m> by the axiom of induction, and so <m> S = \emptyset </m>.
+      </p>
+    </proof>
+  </proposition>
+
+  <corollary xml:id="corollary-finite-cardinality-is-well-defined">
+    <title>
+      Finite cardinality is well-defined
+    </title>
+    
+    <statement>
+      <p>
+        For any set <m> X </m>, if there are natural numbers <m> m , n \in \N </m> and bijections <m> f \colon \set{ 1 , \dotsc , m } \to X </m> and <m> g \colon \set{ 1 , \dotsc , n } \to X </m>, then <m> m = n </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Under the given assumptions, <m> g^{ -1 } \circ f \colon \set{ 1 , \dotsc , m } \to \set{ 1 , \dotsc , n } </m> and <m> f^{ -1 } \circ g \colon \set{ 1 , \dotsc , n } \to \set{ 1 , \dotsc , m } </m> are injective functions by (a) of <xref provisional="problem-compositions-of-injections-surjections-and-bijections"/>. <xref ref="proposition-injections-of-finite-sets"/> now implies that <m> m \leq n </m> and <m> n \leq m </m>, and so <m> m = n </m> by (2) of <xref ref="proposition-comparison-is-a-total-order"/>.
+      </p>
+    </proof>
+  </corollary>
+
+  <definition xml:id="definition-finiteness-cardinality">
+    <title>
+      Finiteness; cardinality
+    </title>
+    
+    <idx>
+      finite
+    </idx>
+    
+    <idx>
+      cardinality
+    </idx>
+    
+    <idx>
+      infinite
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \card{ X } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the cardinality of <m> X </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        A set <m> X </m> is called <term> finite </term> if there is a natural number <m> n \in \N </m> and a bijection <m> \set{ 1 , \dotsc , n } \to X </m>, in which case <m> n </m> is uniquely defined by this property and is called the <term> cardinality </term> of <m> X </m> and denoted <m> \card{ X } = n </m>. A set <m> X </m> is called <term> infinite </term> if no such number and bijection exist.
+      </p>
+    </statement>
+  </definition>
+
+  <proposition xml:id="proposition-maps-and-cardinality">
+    <title>
+      Maps and cardinality
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> be a map from a set <m> X </m> to a set <m> Y </m>.
+        
+        <ol>
+          <li>
+            <p>
+              If <m> f </m> is injective and <m> Y </m> is finite, then <m> X </m> is finite and <m> \card{ X } \leq \card{ Y } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              If <m> f </m> is surjective and <m> X </m> is finite, then <m> Y </m> is finite and <m> \card{ Y } \leq \card{ X } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              If <m> f </m> is bijective and either <m> X </m> or <m> Y </m> is finite, then both <m> X </m> and <m> Y </m> are finite and <m> \card{ X } = \card{ Y } </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <conclusion>
+    <p>
+      Text after the last subdivision.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->

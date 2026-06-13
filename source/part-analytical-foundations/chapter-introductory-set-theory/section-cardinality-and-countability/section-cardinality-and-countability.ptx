@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-cardinality-and-countability" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Cardinality and Countability [INCOMPLETE]
+  </title>
+
+  <introduction>
+    <p>
+      In this section, we define a notion of the size of a set called <term> cardinality </term>. The cardinality of a set is a generalization of the number of elements of a set which contains only finitely many elements based on the notion of bijections. First, we will develop these notions for finite sets and then extend them to infinite sets. At first glance, it may seem that there is essentially only one kind of infinite set. We will show that this is not the case; in fact, there are infinitely many <q> sizes </q> of infinite sets with respect to this notion of cardinality.
+    </p>
+  </introduction>
+
+  <xi:include href="./subsection-finiteness.ptx"/>
+
+  <xi:include href="./subsection-cardinal-comparison.ptx"/>
+
+  <xi:include href="./subsection-countability.ptx"/>
+
+  <conclusion>
+    <p>
+      Text after the last subsection.
+    </p>
+  </conclusion>
+
+  <xi:include href="./exercises/exercises-cardinality-and-countability.ptx"/>
+
+  <xi:include href="./reading-questions/reading-questions-cardinality-and-countability.ptx"/>
+</section>

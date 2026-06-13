@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="reading-question-distributivity-of-set-operations" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    The distributive properties of set operations
+  </title>
+  
+  <idx>
+    Distributive property
+  </idx>
+  
+  <introduction>
+    <p>
+      Let <m> S </m>, <m> T </m>, and <m> U </m> be sets.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that <m> S \cap \of{ T \cup U } = \of{ S \cap T } \cup \of{ S \cap U } </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that <m> S \cup \of{ T \cap U } = \of{ S \cup T } \cap \of{ S \cup U } </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+  
+  <conclusion>
+    <p>
+      Taken together, these results are called the <term> distributive properties </term> of the set operations.
+    </p>
+  </conclusion>
+</exercise>

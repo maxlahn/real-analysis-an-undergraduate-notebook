@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-what-is-a-set" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    What Is a Set?
+  </title>
+
+  <introduction>
+    <idx>
+      set
+    </idx>
+    
+    <idx>
+      element
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> x \in S </m>
+      </usage>
+      
+      <description>
+        <m> x </m> is an element of <m> S </m>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> x \notin S </m>
+      </usage>
+      
+      <description>
+        <m> x </m> is not an element of <m> S </m>
+      </description>
+    </notation>
+    
+    <p>
+      Since the early 20th century, the practice of mathematics has undergone a radical transformation, which grew out of the idea that the whole of the mathematical canon can and should be rephrased in the language of set theory. Informally, a <term> set </term> is a collection of objects, which are called its <term> elements </term>. If an object <m> x </m> is an element of a set <m> S </m>, then we write <m> x \in S </m>; otherwise, if <m> x </m> is not an element of <m> S </m>, then we write <m> x \notin S </m>.
+    </p>
+  </introduction>
+
+  <xi:include href="./subsection-definitions-of-sets.ptx"/>
+
+  <xi:include href="./subsection-set-containment.ptx"/>
+
+  <xi:include href="./subsection-set-operations.ptx"/>
+
+  <conclusion>
+    <p>
+      While sets and set theory form the foundations on which we will build our understanding of analysis, these topics are not the focus of this text. As such, we will leave behind the question of precise definitions of sets in favor of developing set-theoretic ideas which are more relevant to the world of analysis.
+    </p>
+  </conclusion>
+
+  <xi:include href="./exercises/exercises-what-is-a-set.ptx"/>
+
+  <xi:include href="./reading-questions/reading-questions-what-is-a-set.ptx"/>
+</section>

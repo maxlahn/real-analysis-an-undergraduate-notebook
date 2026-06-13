@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-axiomatizing-the-natural-numbers" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Axiomatizing the Natural Numbers
+  </title>
+
+  <introduction>
+    <p>
+      There are many nonequivalent formalizations and models of the natural number system, but the standard axiomatization is due to Giuseppe Peano in the 19th century. Peano arithmetic is nonconstructive; it gives a description of the natural number system but not a model. We won't introduce any specific model of the natural number system, but, rest assured, there are several. For our purposes, <m> \N </m> itself can be any set which conforms to the following characterization:
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-natural-numbers">
+    <title>
+      Natural numbers
+    </title>
+    
+    <creator>
+      Giuseppe Peano
+    </creator>
+    
+    <idx>
+      natural number
+    </idx>
+    
+    <idx>
+      Peano axioms
+    </idx>
+    
+    <idx>
+      successor function
+    </idx>
+    
+    <idx>
+      addition operation
+    </idx>
+    
+    <idx>
+      natural operation
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \N </m>
+      </usage>
+      
+      <description>
+        <p>
+          the set of natural numbers
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \Succ </m>
+      </usage>
+      
+      <description>
+        <p>
+          the successor function
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \Add </m>
+      </usage>
+      
+      <description>
+        <p>
+          the addition operation
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \Mult </m>
+      </usage>
+      
+      <description>
+        <p>
+          the multiplication operation
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \Comp </m>
+      </usage>
+      
+      <description>
+        <p>
+          the standard ordering
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        The <term> natural number system </term> <m> \N </m> is a nonempty set with an element <m> 0 \in \N </m>, called <term> zero </term>, along with functions <m> \Succ \colon \N \to \N </m> and <m> \Add , \Mult \colon \N \times \N \to \N </m>, called the <term> successor function </term> and the <term> addition </term> and <term> multiplication operations </term> and a subset <m> \Comp \subseteq \N \times \N </m> of the Cartesian product <m> \N \times \N </m> of <m> \N </m> with itself, called the <term> standard ordering </term>, which satisfy the following properties:
+        
+        <ol>
+          <li>
+            <p>
+              The successor <m> \Succ \of{ n } </m> of any natural number <m> n \in \N </m> is non-zero.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The successor function <m> \Succ \colon \N \to \N </m> is injective.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              <m> \Add \of{ n , 0 } = n </m> for all natural numbers <m> n \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              <m> \Add \of{ m , \Succ \of{ n } } = \Succ \of{ \Add \of{ m , n } } </m> for all natural numbers <m> m , n \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              <m> \Mult \of{ n , 0 } = 0 </m> for all natural numbers <m> n \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              <m> \Mult \of{ m , \Succ \of{ n } } = \Add \of{ \Mult \of{ m , n } , m } </m> for all natural numbers <m> n \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              For all natural numbers <m> l , m \in \N </m>, <m> \of{ l , m } \in \Comp </m> if and only if <m> \Add \of{ l , n } = m </m> for some natural number <m> n \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              For all subsets <m> U \subseteq \N </m>, <m> U = \N </m> if and only if it satisfies the following conditions:
+              
+              <ol>
+                <li>
+                  <p>
+                    <m> 0 \in U </m>.
+                  </p>
+                </li>
+                
+                <li>
+                  <p>
+                    For all natural numbers <m> n \in \N </m>, if <m> n \in U </m>, then <m> \Succ \of{ n } \in U </m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </li>
+        </ol>
+        
+        Typically, for all natural numbers <m> m , n \in \N </m> we write <m> m + n = \Add \of{ m , n } </m> and <m> m n = m \cdot n = \Mult \of{ m , n } </m>, and we write <m> m \leq n </m> if and only if <m> \of{ m , n } \in \Comp </m>. The successor of <m> 0 </m> is denoted <m> 1 = \Succ \of{ 0 } </m>. Likewise, the successor of <m> 1 </m> is denoted <m> 2 = \Succ \of{ 1 } </m>, the successor of <m> 2 </m> is denoted <m> 3 = \Succ \of{ 2 } </m>, and so on. We see that
+        
+        <md>
+          \Succ \of{ n } = \Succ \of{ \Add \of{ n , 0 } } = \Add \of{ n , \Succ \of{ 0 } } = n + 1
+        </md>
+        
+        for all natural numbers <m> n \in \N </m>. With these new notations, we may restate the Peano axioms as follows:
+        
+        <ol>
+          <li>
+            <p>
+              <m> n + 1 \neq 0 </m> for all <m> n \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              For all natural numbers <m> m , n \in \N </m>, if <m> m + 1 = n + 1 </m>, then <m> m = n </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              <m> n + 0 = n </m> for all natural numbers <m> n \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              <m> m + \of{ n + 1 } = \of{ m + n } + 1 </m> for all natural numbers <m> m , n \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              <m> n \cdot 0 = 0 </m> for all natural numbers <m> n \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              <m> m \of{ n + 1 } = m n + m </m> for all natural numbers <m> n \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              For all natural numbers <m> l , m \in \N </m>, <m> l \leq m </m> if and only if <m> l + n = m </m> for some natural number <m> n \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              For all subsets <m> U \subseteq \N </m>, <m> U = \N </m> if and only if it satisfies the following conditions:
+              
+              <ol>
+                <li>
+                  <p>
+                    <m> 0 \in U </m>.
+                  </p>
+                </li>
+                
+                <li>
+                  <p>
+                    For all natural numbers <m> n \in \N </m>, if <m> n \in U </m>, then <m> n + 1 \in U </m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    Under the usual (and original) interpretation of the natural number system <m> \N </m> as characterizing quantities of discrete physical objects, the above rules (with the possible exception of the final axiom, called the <term> axiom of induction </term>) may seem obviously true but also somewhat arbitrary. It is a fact, though we will not prove it here, that these axioms are independent of each other; it is impossible to derive one of the above statements from only the others. We hope that this, along with the results in this section about arithmetic, convince you that the above axiomatization is a good choice, in that it is efficient in the above sense and that it can be used to prove many arithmetical truths.
+  </p>
+  
+  <p>
+    <idx>
+      sequence
+    </idx>
+    
+    First, however, we introduce some ubiquitous terminology and notation. A family <m> \of{ x_{ n } }_{ n \in \mathcal{ N } } </m> of objects <m> x_{ n } </m> indexed by some subset <m> \mathcal{ N } \subseteq \N </m> is called a <term> sequence </term>. If the index set <m> \mathcal{ N } </m> is of the form
+    
+    <md>
+      \mathcal{ N } = \setmid{ n \in \N }{ a \leq n \textrm{ and } n \leq b }
+    </md>
+    
+    for some natural numbers <m> a , b \in \N </m>, then we denote this family by <m> \of{ x_{ n } }_{ n = a }^{ b } </m>. Similarly, if the index set <m> \mathcal{ N } </m> is of the form
+    
+    <md>
+      \mathcal{ N } = \setmid{ n \in \N }{ a \leq n }
+    </md>
+    
+    for some natural number <m> a \in \N </m>, then we denote this family by <m> \of{ x_{ n } }_{ n = a }^{ \infty } </m>. These notations also apply to intersections and unions of sequences of sets indexed by subsets of <m> \N </m> of the above form.
+  </p>
+  
+  <lemma xml:id="lemma-zero-is-minimal">
+    <title>
+      <m> 0 </m> is minimal
+    </title>
+    
+    <statement>
+      <p>
+        For all natural numbers <m> n \in \N </m>, if <m> n \leq 0 </m>, then <m> n = 0 </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        We first observe that <m> \set{ 0 } \cup \im \of{ \Succ } = \N </m>. Indeed, note that <m> 0 \in \set{ 0 } \subseteq \set{ 0 } \cup \im \of{ \Succ } </m>. Moreover, if <m> n \in \set{ 0 } \cup \im \of{ \Succ } </m>, then
+        
+        <md>
+          \Succ \of{ n } \in \im \of{ \Succ } \subseteq \set{ 0 } \cup \im \of{ \Succ }
+        </md>.
+        
+        Thus <m> \set{ 0 } \cup \im \of{ \Succ } = \N </m> by the axiom of induction.
+      </p>
+      
+      <p>
+        Let <m> n \in \N </m> be a natural number, and suppose that <m> n \leq 0 </m> for some natural number <m> n \in \N </m>. Then <m> n + m = 0 </m> for some natural number <m> m \in \N </m>. Suppose for a contradiction that <m> m = p + 1 </m> for some natural number <m> p \in \N </m>. Then
+        
+        <md>
+          0 = n + m = n + \of{ p + 1 } = \of{ n + p } + 1
+        </md>,
+        
+        which contradicts the first Peano axiom. Thus <m> m \notin \im \of{ \Succ } </m>. However, <m> m \in \N = \set{ 0 } \cup \im \of{ \Succ } </m>, and so <m> m \in \set{ 0 } </m>; that is, <m> m = 0 </m>, and so
+        
+        <md>
+          n = n + 0 = n + m = 0
+        </md>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <proposition xml:id="proposition-principle-of-strong-induction">
+    <title>
+      Principle of strong induction
+    </title>
+    
+    <idx>
+      principle of strong induction
+    </idx>
+    
+    <statement>
+      <p>
+        For all subsets <m> U \subseteq \N </m>, <m> U = \N </m> if and only if it satisfies the following conditions:
+        
+        <ol>
+          <li>
+            <p>
+              <m> 0 \in U </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              For all natural numbers <m> n \in \N </m>, if <m> k \in U </m> for all <m> k \in \N </m> so that <m> k \leq n </m>, then <m> n + 1 \in U </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Clearly <m> \N </m> satisfies the above conditions, and so it suffices to show that any subsets which satisfies these conditions is equal to <m> \N </m>. To that end, let <m> U \subseteq \N </m> be a subset which satisfies the above conditions, and consider the subset
+        
+        <md>
+          V = \setmid{ n \in \N }{ k \in U \textrm{ for all } k \in \N \textrm{ so that } k \leq n }
+        </md>.
+        
+        Since the only <m> k \in \N </m> so that <m> k \leq 0 </m> is <m> k = 0 </m> itself, and <m> 0 \in U </m>, we have that <m> 0 \in V </m>. Moreover if <m> n \in V </m>, then <m> k \in U </m> for all <m> k \in \N </m> so that <m> k \leq n </m>, and so <m> n + 1 \in U </m> by hypothesis. It remains to conclude that <m> k \in U </m> for all <m> k \in \N </m> so that <m> k \leq n + 1 </m>.
+      </p>
+      
+      <p>
+        To that end, let <m> k \in \N </m>, and suppose that <m> k \leq n + 1 </m>. Then <m> k + m = n + 1 </m> for some natural number <m> m \in \N </m>. If <m> m = 0 </m>, then <m> k = n + 1 \in U </m>. On the other hand, if <m> m \neq 0 </m>, then the argument in the proof of <xref ref="lemma-zero-is-minimal"/> implies that <m> m = p + 1 </m> for some natural number <m> p \in \N </m>. Thus
+        
+        <md>
+          \of{ k + p } + 1 = k + \of{ p + 1 } = k + m = n + 1
+        </md>,
+        
+        and so the injectivity of the successor function implies that <m> k + p = n </m>; that is, <m> k \leq n </m> and so <m> k \in U </m>. Since <m> k \in U </m> for all <m> k \in \N </m> so that <m> k \leq n + 1 </m>, we conclude that <m> n + 1 \in V </m>.
+      </p>
+      
+      <p>
+        In summary, we have shown that <m> 0 \in V </m> and that for all natural numbers <m> n \in \N </m>, if <m> n \in V </m>, then <m> n + 1 \in V </m>. Thus <m> V = \N </m> by the axiom of induction. One can check that <m> \N = V \subseteq U \subseteq \N </m>, and so <m> U = \N </m>.
+      </p>
+    </proof>
+  </proposition>
+
+  <conclusion>
+    <p>
+      The axiom of induction and <xref ref="proposition-principle-of-strong-induction"/> form the basis for ubiquitous methods of proof called <term> proof by induction </term> and <term> proof by strong induction </term>, respectively. You will have the opportunity to practice constructing such proofs in the problems for this section.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->

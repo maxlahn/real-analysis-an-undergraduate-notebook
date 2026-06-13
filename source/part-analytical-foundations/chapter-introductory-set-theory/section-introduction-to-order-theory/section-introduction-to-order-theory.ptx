@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-introduction-to-order-theory" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Introduction to Order Theory
+  </title>
+
+  <introduction>
+    <p>
+      In this section, we will investigate another class of binary relations, which can be used to establish a notion of an ordering on a set. Touchstone examples will be the standard ordering of the natural numbers and the ordering of sets by containment.
+    </p>
+  </introduction>
+
+  <xi:include href="./subsection-partial-orders.ptx"/>
+
+  <xi:include href="./subsection-boundedness-and-extrema.ptx"/>
+
+  <xi:include href="./subsection-comparability-and-total-orders.ptx"/>
+
+  <conclusion>
+    <p>
+      We will revisit ordering relations in the next chapter, when we extend the standard ordering on the natural numbers to many of the extensions of the natural number system which we construct.
+    </p>
+  </conclusion>
+
+  <xi:include href="./exercises/exercises-introduction-to-order-theory.ptx"/>
+
+  <xi:include href="./reading-questions/reading-questions-introduction-to-order-theory.ptx"/>
+</section>

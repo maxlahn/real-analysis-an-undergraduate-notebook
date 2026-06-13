@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="reading-question-divisibility-is-a-preorder" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Divisibility is a preorder
+  </title>
+  
+  <statement>
+    <p>
+      Consider the binary relation <m> D \subseteq \N^{ 2 } </m> on the natural numbers <m> \N </m> defined by
+      
+      <md>
+        D = \setmid{ \of{ m , n } \in \N^{ 2 } }{ m p = n \textrm{ for some } p \in \N }
+      </md>;
+      
+      that is, <m> \of{ m , n } \in D </m> if <m> n </m> is a natural number multiple of <m> m </m>. Prove that <m> D </m> is a preorder on <m> \N </m> but not a partial order.
+    </p>
+  </statement>
+  
+  <solution>
+    <p>
+      asdf
+    </p>
+  </solution>
+</exercise>

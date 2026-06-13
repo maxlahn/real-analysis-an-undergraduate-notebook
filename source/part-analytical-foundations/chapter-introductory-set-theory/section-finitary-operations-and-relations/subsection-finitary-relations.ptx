@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-finitary-relations" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Finitary Relations
+  </title>
+
+  <introduction>
+    <p>
+      A finitary relation on a set is just a subset of some finite Cartesian power of the set. This subset is usually interpreted as distinguishing its elements certain finite sequences of elements of the set as important in some way.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-finitary-relation">
+    <title>
+      Finitary relation
+    </title>
+    
+    <idx>
+      finitary relation
+    </idx>
+    
+    <idx>
+      arity
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> X </m> be a set and <m> n \in \N </m> be a natural number. A <term> finitary relation </term> of <term> arity </term> <m> n </m> (or more simply a <term> <m> n </m>-ary relation </term>) is a subset <m> R \subseteq X^{ n } </m>.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    We will view a finitary relation on a set as elevating specific finite sequences of elements of that set as distinguished.
+  </p>
+  
+  <example xml:id="example-finitary-relations">
+    <title>
+      Finitary relations
+    </title>
+    
+    <idx>
+      unary operation
+    </idx>
+    
+    <idx>
+      binary operation
+    </idx>
+    
+    <statement>
+      <p>
+        The following are examples of finitary operations:
+        
+        <ol>
+          <li>
+            <p>
+              In light of the convention <m> X^{ 1 } = X </m>, a <m> 1 </m>-ary operation (or more simply, a <term> unary operation </term>) on a set <m> X </m> is just a subset of <m> X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              A <m> 2 </m>-ary relation (or more simply, a <term> binary relation </term>) on a set <m> X </m> is a subset <m> R \subseteq X^{ 2 } </m>. Two examples of such binary relations are the containment relation <m> \subseteq </m> on the power set <m> \ps \of{ X } </m> of a set <m> X </m> and the standard ordering <m> \Comp \subseteq \N^{ 2 } </m> of the natural numbers <m> \N </m>.
+            </p>
+            
+            <p>
+              Just as there is a special notation for binary operations, there is a special relation for binary relations as well. Specifically, for a given binary relation <m> R \subseteq X^{ 2 } </m> on a set <m> X </m>, we write <m> x_{ 1 } \mathrel{ R } x_{ 2 } </m> to mean that <m> \of{ x_{ 1 } , x_{ 2 } } \in R </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </example>
+  
+  <definition xml:id="definition-pullback-of-a-finitary-relation">
+    <title>
+      Pullback of a finitary relation
+    </title>
+    
+    <idx>
+      pullback
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> R_{ f } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the pullback of a finitary relation <m> R </m> along a map <m> f </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> X </m> and <m> Y </m> be sets and <m> n \in \N </m> be a natural number. The <term> pullback </term> <m> R_{ f } </m> of an <m> n </m>-ary relation <m> R </m> on <m> Y </m> along a map <m> f \colon X \to Y </m> is the <m> n </m>-ary relation on <m> X </m> defined by
+        
+        <md>
+          R_{ f } = \setmid{ \of{ x_{ k } }_{ k = 1 }^{ n } \in X^{ n } }{ \of{ f \of{ x_{ k } } }_{ k = 1 }^{ n } \in R }
+        </md>.
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-restriction-of-a-finitary-relation">
+    <title>
+      Restriction of a finitary relation
+    </title>
+    
+    <idx>
+      restriction
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \rest{ R }_{ U } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the restriction of a finitary relation <m> R </m> to a subset <m> U </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> X </m> be a set and <m> n \in \N </m> be a natural number. The <term> restriction </term> <m> \rest{ R }_{ U } </m> of an <m> n </m>-ary relation <m> R </m> on <m> X </m> to a subset <m> U \subseteq X </m> is the pullback of <m> R </m> along the inclusion map <m> \iota_{ U }^{ X } \colon U \to X </m>; that is,
+        
+        <md>
+          <mrow>
+            \rest{ R }_{ U } \amp = R_{ \iota_{ U }^{ X } } = \setmid{ \of{ u_{ k } }_{ k = 1 }^{ n } \in U^{ n } }{ \of{ \iota_{ U }^{ X } \of{ u_{ k } } }_{ k = 1 }^{ n } \in R } = R \cap U^{ n }
+          </mrow>
+          
+          <mrow>
+            \amp = \setmid{ \of{ x_{ k } }_{ k = 1 }^{ n } \in X^{ n } }{ x_{ 1 } , \dotsc , x_{ n } \in U \textrm{ and } \of{ x_{ k } }_{ k = 1 }^{ n } \in R } = R \cap U^{ n }
+          </mrow>
+        </md>.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    One particularly nice type of binary relation is the <term> equivalence relation </term>. This is a generalization of the notion of equality, which has many of the salient properties of the equality relation. We will see that an equivalence relation partitions a set into disjoint subsets known as <term> equivalence classes </term>. When we consider more sophisticated structures than just sets, we will use equivalence relations to construct quotient objects, as is done in algebraic settings such as group theory or ring theory.
+  </p>
+  
+  <definition xml:id="definition-equivalence-relation">
+    <title>
+      Equivalence relation
+    </title>
+    
+    <idx>
+      reflexivity
+    </idx>
+    
+    <idx>
+      symmetry
+    </idx>
+    
+    <idx>
+      transitivity
+    </idx>
+    
+    <idx>
+      equivalence relation
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> \equiv </m> be a binary relation on a set <m> X </m>.
+        
+        <ol>
+          <li>
+            <p>
+              <m> \equiv </m> is called <term> reflexive </term> if <m> x \equiv x </m> for all elements <m> x \in X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              <m> \equiv </m> is called <term> symmetric </term> if for all elements <m> x_{ 1 } , x_{ 2 } \in X </m>, if <m> x_{ 1 } \equiv x_{ 2 } </m>, then <m> x_{ 2 } \equiv x_{ 1 } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              <m> \equiv </m> is called <term> transitive </term> if for all elements <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in X </m>, if <m> x_{ 1 } \equiv x_{ 2 } </m> and <m> x_{ 2 } \equiv x_{ 3 } </m>, then <m> x_{ 1 } \equiv x_{ 3 } </m>.
+            </p>
+          </li>
+        </ol>
+        
+        <m> \equiv </m> is called an <term> equivalence relation </term> if it is reflexive, symmetric, and transitive.
+      </p>
+    </statement>
+  </definition>
+  
+  <lemma xml:id="lemma-pullbacks-of-equivalence-relations">
+    <title>
+      Pullbacks of equivalence relations
+    </title>
+    
+    <statement>
+      <p>
+        The pullback <m> \equiv_{ f } </m> of an equivalence relation <m> \equiv </m> on a set <m> Y </m> along a map <m> f \colon X \to Y </m> from a set <m> X </m> to <m> Y </m> is an equivalence relation on <m> X </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        First let <m> x \in X </m>, and note that <m> f \of{ x } \equiv f \of{ x } </m> by the reflexivity of <m> \equiv </m>, and so <m> x \equiv_{ f } x </m>; that is, <m> \equiv_{ f } </m> is reflexive. 
+      </p>
+      
+      <p>
+        Now let <m> x_{ 1 } , x_{ 2 } \in X </m>, and suppose that <m> x_{ 1 } \equiv_{ f } x_{ 2 } </m>. Then <m> f \of{ x_{ 1 } } \equiv f \of{ x_{ 2 } } </m>, and so <m> f \of{ x_{ 2 } } \equiv f \of{ x_{ 1 } } </m> by the symmetry of <m> \equiv </m>. In particular, <m> x_{ 2 } \equiv_{ f } x_{ 1 } </m>, and so <m> \equiv_{ f } </m> is symmetric.
+      </p>
+      
+      <p>
+        Finally, let <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in X </m>, and suppose that <m> x_{ 1 } \equiv_{ f } x_{ 2 } </m> and <m> x_{ 2 } \equiv_{ f } x_{ 3 } </m>. Then <m> f \of{ x_{ 1 } } \equiv f \of{ x_{ 2 } } </m> and <m> f \of{ x_{ 2 } } \equiv f \of{ x_{ 3 } } </m>, and so <m> f \of{ x_{ 1 } } \equiv f \of{ x_{ 3 } } </m> by the transitivity of <m> \equiv </m>. In particular, <m> x_{ 1 } \equiv_{ f } x_{ 3 } </m>, and so <m> \equiv_{ f } </m> is transitive.
+      </p>
+      
+      <p>
+        Since <m> \equiv_{ f } </m> is reflexive, symmetric, and transitive, it is an equivalence relation on <m> X </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <definition xml:id="definition-equivalence-class">
+    <title>
+      Equivalence class; quotient set
+    </title>
+    
+    <idx>
+      equivalence class
+    </idx>
+    
+    <idx>
+      quotient set
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \class{ x }_{ \equiv } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the equivalence class of <m> x </m> under <m> \equiv </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> X / { \equiv } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the quotient of <m> X </m> by <m> \equiv </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> \equiv </m> be an equivalence relation on a set <m> X </m>. The <term> equivalence class </term> <m> \class{ x }_{ \equiv } </m> of an element <m> x \in X </m> is the subset of <m> X </m> defined by
+        
+        <md>
+          \class{ x }_{ \equiv } = \setmid{ y \in X }{ x \equiv y }
+        </md>;
+        
+        that is, <m> \class{ x }_{ \equiv } </m> is the set of elements which are equivalent to <m> x </m> under the relation <m> \equiv </m>. The <term> quotient </term> <m> X / { \equiv } </m> of <m> X </m> by <m> \equiv </m> is the set of equivalence classes; that is,
+        
+        <md>
+          X / { \equiv } = \setmid{ \class{ x }_{ \equiv } \in \ps \of{ X } }{ x \in X }
+        </md>.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    As mentioned above, an equivalence relation on a given set partitions that set into pairwise disjoint equivalence classes.
+  </p>
+  
+  <proposition xml:id="proposition-equivalence-partition">
+    <title>
+      Equivalence partition
+    </title>
+    
+    <idx>
+      partition
+    </idx>
+    
+    <statement>
+      <p>
+        The equivalence classes of an equivalence relation <m> \equiv </m> on a set <m> X </m> form a <term> partition </term> of <m> X </m>; that is, two equivalence classes are either equal or disjoint, and
+        
+        <md>
+          X = \bigcup_{ c \in X / { \equiv } }{ c }
+        </md>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Each equivalence class is a subset of <m> X </m>, and so
+        
+        <md>
+          \bigcup_{ c \in X / { \equiv } }{ c } \subseteq X
+        </md>.
+        
+        In order to show the reverse containment, let <m> x \in X </m>, and note that <m> x \equiv x </m> by reflexivity; that is, <m> x \in \class{ x }_{ \equiv } </m>, and so
+        
+        <md>
+          x \in \class{ x }_{ \equiv } = \bigcup_{ c \in X / { \equiv } }{ c }
+        </md>.
+        
+        We conclude that
+        
+        <md>
+          X = \bigcup_{ c \in X / { \equiv } }{ c }
+        </md>.
+      </p>
+      
+      <p>
+        It remains to show that two equivalence classes are either equal or disjoint. To that end, consider elements <m> x_{ 1 } , x_{ 2 } \in X </m>. First suppose that <m> x_{ 1 } \equiv x_{ 2 } </m>, and let <m> x \in \class{ x_{ 2 } }_{ \equiv } </m>. Then <m> x_{ 2 } \equiv x </m>, and so transitivity implies that <m> x_{ 1 } \equiv x </m>; that is, <m> x \in \class{ x_{ 1 } }_{ \equiv } </m>.
+      </p>
+      
+      <p>
+        In summary, we have shown that if <m> x_{ 1 } \equiv x_{ 2 } </m>, then <m> \class{ x_{ 2 } }_{ \equiv } \subseteq \class{ x_{ 1 } }_{ \equiv } </m>. Symmetry implies that if <m> x_{ 1 } \equiv x_{ 2 } </m>, then <m> x_{ 2 } \equiv x_{ 1 } </m>, and so <m> \class{ x_{ 1 } }_{ \equiv } \subseteq \class{ x_{ 2 } }_{ \equiv } </m>; that is, if <m> x_{ 1 } \equiv x_{ 2 } </m>, then <m> \class{ x_{ 1 } }_{ \equiv } = \class{ x_{ 2 } }_{ \equiv } </m>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that the equivalence classes <m> \class{ x_{ 1 } }_{ \equiv } </m> and <m> \class{ x_{ 2 } }_{ \equiv } </m> are not disjoint, so that <m> x \in \class{ x_{ 1 } }_{ \equiv } \cap \class{ x_{ 2 } }_{ \equiv } </m> for some element <m> x \in X </m>. Since <m> x \in \class{ x_{ 1 } }_{ \equiv } </m> and <m> x \in \class{ x_{ 2 } }_{ \equiv } </m>, <m> x \equiv x_{ 1 } </m> and <m> x \equiv x_{ 2 } </m>. We conclude by symmetry and transitivity that <m> x_{ 1 } \equiv x_{ 2 } </m>.
+      </p>
+    </proof>
+  </proposition>
+
+  <conclusion>
+    <p>
+      Equivalence relations are ubiquitous throughout mathematics, and we will work with them for the remainder of this text.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->

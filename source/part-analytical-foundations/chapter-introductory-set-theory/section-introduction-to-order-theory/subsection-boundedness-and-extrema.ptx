@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-boundedness-and-extrema" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Boundedness and Extrema
+  </title>
+
+  <introduction>
+    <p>
+      Partial orders satisfy many of the properties of the standard ordering of the natural numbers. These properties allow us to generalize the definitions of many of the usual notions associated with an ordering, such as upper and lower bounds and maximal and minimal elements, to partially ordered sets.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-boundedness-extrema">
+    <title>
+      Boundedness
+    </title>
+    
+    <idx>
+      upper bound
+    </idx>
+    
+    <idx>
+      lower bound
+    </idx>
+    
+    <idx>
+      boundedness
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a partially ordered set <m> \of{ X , \preceq } </m>.
+        
+        <ol>
+          <li>
+            <p>
+              An element <m> x \in X </m> is called an <term> upper bound </term> for <m> U </m> if <m> u \preceq x </m> for all elements <m> u \in U </m>. If such an upper bound for <m> U </m> exists, then <m> U </m> is called <term> bounded from above </term> in <m> X </m>. Otherwise, if no such upper bound for <m> U </m> exists, then <m> U </m> is called <term> unbounded from above </term>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              An element <m> x \in X </m> is called a <term> lower bound </term> for <m> U </m> if <m> x \preceq u </m> for all elements <m> u \in U </m>. If such a lower bound for <m> U </m> exists, then <m> U </m> is called <term> bounded from below </term> in <m> X </m>.
+            </p>
+          </li>
+        </ol>
+        
+        A subset <m> U \subseteq X </m> is called <term> bounded </term> in <m> X </m> if it is both bounded from above in <m> X </m> and bounded from below in <m> X </m>, and <m> U </m> is called <term> unbounded </term> in <m> X </m> otherwise if it is either unbounded from above in <m> X </m> or unbounded from below in <m> X </m>.
+      </p>
+    </statement>
+  </definition>
+  
+  <lemma xml:id="lemma-extrema-are-unique">
+    <title>
+      Extrema are unique
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a partially ordered set <m> \of{ X , \preceq } </m>. At most one element of <m> U </m> is an upper bound for <m> U </m> in <m> X </m>, and at most one element of <m> U </m> is a lower bound for <m> U </m> in <m> X </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> u_{ 1 } , u_{ 2 } \in U </m>, and suppose first that <m> u_{ 1 } </m> and <m> u_{ 2 } </m> are upper bounds for <m> U </m> in <m> X </m>, so that <m> u \preceq u_{ 1 } </m> and <m> u \preceq u_{ 2 } </m> for all elements <m> u \in U </m>. In particular, <m> u_{ 1 } \preceq u_{ 2 } </m> and <m> u_{ 2 } \preceq u_{ 1 } </m>, and so <m> u_{ 1 } = u_{ 2 } </m> by anti-symmetry.
+      </p>
+      
+      <p>
+        Similarly, now suppose that <m> u_{ 1 } </m> and <m> u_{ 2 } </m> are lower bounds for <m> U </m> in <m> X </m>, so that <m> u_{ 1 } \preceq u </m> and <m> u_{ 2 } \preceq u </m> for all elements <m> u \in U </m>. In particular, <m> u_{ 1 } \preceq u_{ 2 } </m> and <m> u_{ 2 } \preceq u_{ 1 } </m>, and so <m> u_{ 1 } = u_{ 2 } </m> by anti-symmetry.
+      </p>
+    </proof>
+  </lemma>
+  
+  <definition xml:id="definition-extrema">
+    <title>
+      Extrema
+    </title>
+    
+    <idx>
+      maximum
+    </idx>
+    
+    <idx>
+      minimum
+    </idx>
+    
+    <idx>
+      extremum
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \max \of{ U } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the maximum of <m> U </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \min \of{ U } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the minimum of <m> U </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a partially ordered set <m> \of{ X , \preceq } </m>.
+        
+        <ol>
+          <li>
+            <p>
+              If there is an element of <m> U </m> which is an upper bound for <m> U </m> in <m> X </m>, then this unique element is called the <term> maximum </term> of <m> U </m> and is denoted <m> \max \of{ U } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              If there is an element of <m> U </m> which is a lower bound for <m> U </m> in <m> X </m>, then this unique element is called the <term> minimum </term> of <m> U </m> and is denoted <m> \min \of{ U } </m>.
+            </p>
+          </li>
+        </ol>
+        
+        Together, maxima and minima are called <term> extrema </term>.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    The uniqueness of extrema in partially ordered sets is one way in which partial orders resemble the standard ordering of the natural number system. However, unlike in the standard ordering of the natural number system, there is in general a distinction between extrema, which are defined above, and extremal elements, which are defined below.
+  </p>
+  
+  <definition xml:id="definition-extremal-element">
+    <title>
+      Extremal element
+    </title>
+    
+    <idx>
+      maximal element
+    </idx>
+    
+    <idx>
+      minimal element
+    </idx>
+    
+    <idx>
+      extremal element
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a partially ordered set <m> \of{ X , \preceq } </m>.
+        
+        <ol>
+          <li>
+            <p>
+              An element <m> u \in U </m> is called <term> maximal </term> in <m> U </m> if for all elements <m> v \in U </m>, if <m> u \preceq v </m>, then <m> v = u </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              An element <m> u \in U </m> is called <term> minimal </term> in <m> U </m> if for all elements <m> v \in U </m>, if <m> v \preceq u </m>, then <m> v = u </m>.
+            </p>
+          </li>
+        </ol>
+        
+        Together, maximal and minimal elements are called <term> extremal elements </term>.
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-extrema-and-extremal-elements">
+    <title>
+      Extrema and extremal elements
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of extrema and extremal elements:
+        
+        <ol>
+          <li>
+            <p>
+              The minimum of the natural numbers <m> \N </m> is <m> \min \of{ \N } = 0 </m>, which is the unique minimal element. However, <m> \N </m> has no maximum or maximal element.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Consider set containment <m> \subseteq </m> on the power set <m> \ps \of{ X } </m> of a set <m> X </m>. <m> \ps \of{ X } </m> has minimum and maximum <m> \min \of{ \ps \of{ X } } = \emptyset </m> and <m> \max \of{ \ps \of{ X } } = X </m>, which are also the unique minimal and maximal elements, respectively.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Now consider set containment <m> \subseteq </m> on the set <m> X </m> of proper non-empty subsets of the set <m> \set{ 1 , 2 , 3 } </m>; that is,
+              
+              <md>
+                X = \set{ \set{ 1 } , \set{ 2 } , \set{ 3 } , \set{ 1 , 2 } , \set{ 1 , 3 } , \set{ 2 , 3 } }
+              </md>.
+              
+              Then <m> X </m> has no maximum or minimum, but <m> \set{ 1 } </m>, <m> \set{ 2 } </m>, and <m> \set{ 3 } </m> are minimal elements, and <m> \set{ 1 , 2 } </m>, <m> \set{ 1 , 3 } </m>, and <m> \set{ 2 , 3 } </m> are maximal elements.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </example>
+  
+  <proposition xml:id="proposition-extrema-are-extremal-elements">
+    <title>
+      Extrema are extremal elements
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a partially ordered set <m> \of{ X , \preceq } </m>. If <m> U </m> has a maximum, then <m> \max \of{ U } </m> is the unique maximal element of <m> U </m>. If <m> U </m> has a minimum, then <m> \min \of{ U } </m> is the unique minimal element of <m> U </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        First suppose that <m> U </m> has a maximum. Let <m> u \in U </m>, and suppose that <m> \max \of{ U } \preceq u </m>. Of course <m> u \preceq \max \of{ U } </m>, and so anti-symmetry implies that <m> u = \max \of{ U } </m>; that is, <m> \max \of{ U } </m> is maximal in <m> U </m>.
+      </p>
+      
+      <p>
+        On the other hand, now consider a maximal element <m> u \in U </m>. Since <m> u \preceq \max \of{ U } </m>, the maximality of <m> u </m> implies that <m> u = \max \of{ U } </m>.
+      </p>
+      
+      <p>
+        Now suppose that <m> U </m> has a minimum. Let <m> u \in U </m>, and suppose that <m> u \preceq \min \of{ U } </m>. Of course <m> \min \of{ U } \preceq u </m>, and so anti-symmetry implies that <m> u = \min \of{ U } </m>; that is, <m> \min \of{ U } </m> is minimal in <m> U </m>.
+      </p>
+      
+      <p>
+        On the other hand, now consider a minimal element <m> u \in U </m>. Since <m> \min \of{ U } \preceq u </m>, the minimality of <m> u </m> implies that <m> u = \min \of{ U } </m>.
+      </p>
+    </proof>
+  </proposition>
+
+  <conclusion>
+    <p>
+      The distinction between extrema and extremal elements is one way in which more general partial orders differ from the standard ordering of the natural numbers. However, this subtlety does not arise in all partial orders. We will shortly explore a class of partial orders in which the aforementioned distinction between extrema and extremal elements does not exist. 
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->

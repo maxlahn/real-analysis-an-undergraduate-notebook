@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<part xml:id="part-point-set-topology" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Point-Set Topology
+  </title>
+
+  <xi:include href="./chapter-metric-spaces/chapter-metric-spaces.ptx"/>
+
+  <xi:include href="./chapter-topological-spaces/chapter-topological-spaces.ptx"/>
+</part>

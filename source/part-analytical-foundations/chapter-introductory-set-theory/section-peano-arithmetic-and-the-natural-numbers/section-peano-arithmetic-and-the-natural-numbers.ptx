@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-peano-arithmetic-and-the-natural-numbers" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Peano Arithmetic and the Natural Numbers
+  </title>
+
+  <introduction>
+    <p>
+      In this section, we formally introduce the natural number system <m> \N </m>. Also called the counting numbers, the natural numbers form the simplest of the number systems; in fact, many people would date the advent of mathematics itself to the invention/discovery of these numbers.
+    </p>
+  </introduction>
+
+  <xi:include href="./subsection-axiomatizing-the-natural-numbers.ptx"/>
+
+  <xi:include href="./subsection-properties-of-arithmetic.ptx"/>
+
+  <xi:include href="./subsection-properties-of-comparison.ptx"/>
+
+  <conclusion>
+    <p>
+      In the next sections, we will generalize the properties of addition and multiplication and the order-theoretic properties of comparison of natural numbers and arrive at fundamental notions of binar operations and relations, partial and total orders, and the well-ordering principle.
+    </p>
+  </conclusion>
+
+  <xi:include href="./exercises/exercises-peano-arithmetic-and-the-natural-numbers.ptx"/>
+
+  <xi:include href="./reading-questions/reading-questions-peano-arithmetic-and-the-natural-numbers.ptx"/>
+</section>

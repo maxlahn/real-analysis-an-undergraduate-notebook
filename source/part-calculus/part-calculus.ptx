@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<part xml:id="part-calculus" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Calculus
+  </title>
+
+  <xi:include href="./chapter-differentiation-and-smoothness/chapter-differentiation-and-smoothness.ptx"/>
+
+  <xi:include href="./chapter-riemann-integration/chapter-riemann-integration.ptx"/>
+
+  <xi:include href="./chapter-infinite-series/chapter-infinite-series.ptx"/>
+</part>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <xi:include href="./docinfo.ptx"/>
+
+  <book xml:id="book-real-analysis">
+    <title>
+      Real Analysis
+    </title>
+    
+    <subtitle>
+      An Undergraduate Notebook
+    </subtitle>
+
+    <xi:include href="./frontmatter.ptx"/>
+
+    <xi:include href="./part-analytical-foundations/part-analytical-foundations.ptx"/>
+
+    <xi:include href="./part-point-set-topology/part-point-set-topology.ptx"/>
+
+    <xi:include href="./part-calculus/part-calculus.ptx"/>
+
+    <!-- <xi:include href="./part-measure-and-integration/part-measure-and-integration.ptx"/> -->
+
+    <!-- <xi:include href="./part-analysis-on-manifolds/part-analysis-on-manifolds.ptx"/> -->
+
+    <!-- <xi:include href="./part-TITLE/part-TITLE.ptx"/> -->
+
+    <xi:include href="./backmatter.ptx"/>
+  </book>
+</pretext>

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-indexing" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Indexing
+  </title>
+
+  <introduction>
+    <p>
+      Considered as an association between sets, a map can be thought to index its image by the elements of its domain. That is, a map can transfer information from its domain to its image. Just what this transferred information looks like can vary tremendously, but suffice it to say that this notion of indexing is fundamental and will recur throughout this text.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-indexed-family-indexed-set">
+    <title>
+      Indexed family; indexed set
+    </title>
+    
+    <idx>
+      index
+    </idx>
+    
+    <idx>
+      indexing set
+    </idx>
+    
+    <idx>
+      indexed family
+    </idx>
+    
+    <idx>
+      indexed set
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \of{ x_{ j } }_{ j \in \mathcal{ J } } </m>
+      </usage>
+      
+      <description>
+        <p>
+          a family of objects <m> x_{ j } </m> indexed by <m> j \in \mathcal{ J } </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \set{ x_{ j } }_{ j \in \mathcal{ J } } </m>
+      </usage>
+      
+      <description>
+        <p>
+          a set of objects <m> x_{ j } </m> indexed by <m> j \in \mathcal{ J } </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        A set <m> X </m> is <term> indexed </term> by a set <m> \mathcal{ J } </m> if there is a surjection <m> x \colon \mathcal{ J } \to X </m>. <m> \mathcal{ J } </m> is called an <term> indexing set </term>, and for each input <m> j \in \mathcal{ J } </m>, called an <term> index </term>, its image is denoted <m> x_{ j } = x \of{ j } </m>.
+      </p>
+      
+      <p>
+        The map <m> x </m> is called an <term> (indexed) family </term> of elements of <m> X </m>, and is denoted <m> \of{ x_{ j } }_{ j \in \mathcal{ J } } </m>. 
+      </p>
+      
+      <p>
+        Consider a map <m> x \colon \mathcal{ J } \to X </m> of a set <m> \mathcal{ J } </m>, called the <term> indexing set </term> and whose elements are called <term> indices </term>, onto a set <m> X </m>. The image of such an index <m> j \in \mathcal{ J } </m> under such an <term> (indexed) family </term> <m> x </m> is often denoted <m> x_{ j } = x \of{ j } </m>, and <m> x </m> is often denoted <m> \of{ x_{ j } }_{ j \in \mathcal{ J } } </m>. We say that <m> \im \of{ x } </m> is <term> indexed </term> by <m> \mathcal{ J } </m>, and we write
+        
+        <md>
+          \set{ x_{ j } }_{ j \in \mathcal{ J } } = \setmid{ x_{ j } \in X }{ j \in \mathcal{ J } } = \im \of{ x }
+        </md>.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    We can also use this notion of indexing to generalize the intersection and union of sets to act on arbitrary collections of sets. This generalization of the intersection and union of two sets relies on the natural similarities between logical conjunction <m> \land </m> and universal quantification <m> \forall </m> and between logical disjunction <m> \lor </m> and existential quantification <m> \exists </m>.
+  </p>
+  
+  <definition xml:id="definition-intersection-union">
+    <title>
+      Intersection; union
+    </title>
+    
+    <idx>
+      intersection
+    </idx>
+    
+    <idx>
+      union
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the intersection of a family <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> of sets <m> U_{ j } </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the union of a family <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> of sets <m> U_{ j } </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> be a family of subsets <m> U_{ j } \subseteq X </m> of a set <m> X </m> indexed by a set <m> \mathcal{ J } </m>. The <term> intersection </term> <m> \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } </m> of this indexed family is the subset of <m> X </m> defined by
+        
+        <md>
+          \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \setmid{ x \in X }{ x \in U_{ j } \textrm{ for all } j \in \mathcal{ J } }
+        </md>.
+        
+        The <term> union </term> <m> \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } </m> of this indexed family is the subset of <m> X </m> defined by
+        
+        <md>
+          \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } = \setmid{ x \in X }{ x \in U_{ j } \textrm{ for some } j \in \mathcal{ J } }
+        </md>.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    These generalizations of the intersection and union of two sets extend naturally to generalizations of each of the results proven in the previous section.
+  </p>
+  
+  <theorem xml:id="theorem-analogous-properties-of-indexed-intersections-and-unions">
+    <title>
+      Analogous properties of indexed intersections and unions
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> be a family of subsets <m> U_{ j } \subseteq X </m> of a set <m> X </m> indexed by a set <m> \mathcal{ J } </m>.
+        
+        <ol>
+          <li>
+            <p>
+              Analogously to <xref ref="proposition-set-operations-and-containment"/>, for any subset <m> V \subseteq X </m>, <m> V \subseteq \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } </m> if and only if <m> V \subseteq U_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>, and <m> \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } \subseteq V </m> if and only if <m> U_{ j } \subseteq V </m> for all indices <m> j \in \mathcal{ J } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Analogously to (2) of <xref ref="corollary-properties-of-the-set-operations"/>,
+              
+              <md>
+                \bigcap_{ k \in \mathcal{ K } }{ U_{ f \of{ k } } } = \bigcap_{ j \in \mathcal{ J } }{ U_{ j } }
+              </md>
+              
+              and
+              
+              <md>
+                \bigcup_{ k \in \mathcal{ K } }{ U_{ f \of{ k } } } = \bigcup_{ j \in \mathcal{ J } }{ U_{ j } }
+              </md>
+              
+              for any set <m> \mathcal{ K } </m> and bijection <m> f \colon \mathcal{ K } \to \mathcal{ J } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Analogously to <xref provisional="problem-distributivity-of-set-operations"/>,
+              
+              <md>
+                V \cup \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcap_{ j \in \mathcal{ J } }{ \of{ V \cup U_{ j } } }
+              </md>
+              
+              and
+              
+              <md>
+                V \cap \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcup_{ j \in \mathcal{ J } }{ \of{ V \cap U_{ j } } }
+              </md>
+              
+              for any subset <m> V \subseteq X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Analogously to <xref provisional="problem-de-morgans-laws"/>,
+              
+              <md>
+                V \setminus \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcup_{ j \in \mathcal{ J } }{ \of{ V \setminus U_{ j } } }
+              </md>
+              
+              and
+              
+              <md>
+                V \setminus \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcap_{ j \in \mathcal{ J } }{ \of{ V \setminus U_{ j } } }
+              </md>
+              
+              for any subset <m> V \subseteq X </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <conclusion>
+    <p>
+      You will have an opportunity to prove the above results in the problems for this section.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="reading-question-power-sets" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Power sets
+  </title>
+  
+  <introduction>
+    <p>
+      Recall that the power set <m> \ps \of{ S } </m> of a set <m> S </m> is the set whose elements are all the subsets of <m> S </m>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Determine whether the following statement is true or false:
+        
+        <blockquote>
+          <p>
+            The power set of a set contains at least two distinct elements.
+          </p>
+        </blockquote>
+        
+        If the statement is true, prove it. If the statement is false, disprove it by providing a counterexample.
+      </p>
+    </statement>
+    
+    <hint>
+      <p>
+        Revisit the proofs of <xref ref="lemma-power-sets-are-non-empty"/>.
+      </p>
+    </hint>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+  
+  <conclusion>
+    <p>
+      Text after the parts.
+    </p>
+  </conclusion>
+</exercise>

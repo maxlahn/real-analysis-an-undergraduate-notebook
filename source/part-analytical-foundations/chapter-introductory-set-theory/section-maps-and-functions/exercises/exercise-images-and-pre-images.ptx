@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="exercise-images-and-pre-images" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Images and pre-images
+  </title>
+  
+  <introduction>
+    <p>
+      Let <m> f_{ 4 } \colon \set{ 1 , 2 } \to \set{ \mathrm{ red } , \mathrm{ blue } } </m> be the map from <m> \set{ 1 , 2 } </m> to <m> \set{ \mathrm{ red } , \mathrm{ blue } } </m> defined in (2) of <xref provisional="example-maps"/>; that is,
+      
+      <md>
+        f_{ 4 } = \set{ \of{ 1 , \mathrm{ blue } } , \of{ 2 , \mathrm{ blue } } }
+      </md>.
+      
+      Compute the given images and pre-images. Express your answer in roster notation.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Compute the images <m> f_{ 4 } \of{ 1 } </m> and <m> f_{ 4 } \of{ 2 } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> f_{ 4 } \of{ 1 } = f_{ 4 } \of{ 2 } = \mathrm{ blue } </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        Since <m> \of{ 1 , \mathrm{ blue } } \in f_{ 4 } </m>, the image <m> f_{ 4 } \of{ 1 } </m> of <m> 1 </m> under <m> f_{ 4 } </m> is
+        
+        <md>
+          f_{ 4 } \of{ 1 } = \mathrm{ blue }
+        </md>.
+        
+        Similarly, since <m> \of{ 2 , \mathrm{ blue } } \in f_{ 4 } </m>, the image <m> f_{ 4 } \of{ 2 } </m> of <m> 2 </m> under <m> f_{ 4 } </m> is
+        
+        <md>
+          f_{ 4 } \of{ 2 } = \mathrm{ blue }
+        </md>.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Compute the image <m> \im \of{ f_{ 4 } } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> \im \of{ f_{ 4 } } = \set{ \mathrm{ blue } } </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        Since <m> f_{ 4 } \of{ x } = \mathrm{ blue } </m> for all <m> x \in \set{ 1 , 2 } </m>, the image <m> \im \of{ f_{ 4 } } </m> of <m> f_{ 4 } </m> is
+        
+        <md>
+          \im \of{ f_{ 4 } } = f_{ 4 } \of{ \set{ 1 , 2 } } = \set{ \mathrm{ blue } }
+        </md>.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Compute the pre-images <m> f_{ 4 }^{ -1 } \of{ \mathrm{ red } } </m> and <m> f_{ 4 }^{ -1 } \of{ \mathrm{ blue } } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> f_{ 4 }^{ -1 } \of{ \mathrm{ red } } = \emptyset </m> and <m> f_{ 4 }^{ -1 } \of{ \mathrm{ blue } } = \set{ 1 , 2 } </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        Since <m> f_{ 4 } \of{ x } = \mathrm{ blue } </m> for all <m> x \in \set{ 1 , 2 } </m>, the pre-images <m> f_{ 4 }^{ -1 } \of{ \mathrm{ red } } </m> and <m> f_{ 4 }^{ -1 } \of{ \mathrm{ blue } } </m> of <m> \mathrm{ red } </m> and <m> \mathrm{ blue } </m> under <m> f_{ 4 } </m> are
+        
+        <md>
+          f_{ 4 }^{ -1 } \of{ \mathrm{ red } } = \setmid{ x \in \set{ 1 , 2 } }{ f_{ 4 } \of{ x } = \mathrm{ red } } = \emptyset
+        </md>
+        
+        and
+        
+        <md>
+          f_{ 4 }^{ -1 } \of{ \mathrm{ blue } } = \setmid{ x \in \set{ 1 , 2 } }{ f_{ 4 } \of{ x } = \mathrm{ blue } } = \set{ 1 , 2 }
+        </md>.
+      </p>
+    </solution>
+  </task>
+</exercise>

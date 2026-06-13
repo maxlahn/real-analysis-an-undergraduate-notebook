@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chapter-TITLE" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    CHAPTER TITLE
+  </title>
+
+  <introduction>
+    <p>
+      Text before the first section.
+    </p>
+  </introduction>
+
+  <!-- <xi:include href="./section-TITLE/section-TITLE.ptx"/> -->
+
+  <conclusion>
+    <p>
+      Text after the last section.
+    </p>
+  </conclusion>
+</chapter>

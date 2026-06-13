@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-maps-and-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Maps and Functions
+  </title>
+
+  <introduction>
+    <p>
+      In this section, we introduce the fundamental notion of a map between sets. Informally, a map is an assignment of an element of one set to each element of another. You probably have been exposed to maps in previous math courses in the form of real-valued functions of one real variable. We will treat maps in far greater generality, which will allow us to perform mathematical analysis in a wider array of spaces.
+    </p>
+  </introduction>
+
+  <xi:include href="./subsection-introduction-to-maps.ptx"/>
+
+  <xi:include href="./subsection-composition-and-invertibility.ptx"/>
+
+  <xi:include href="./subsection-indexing.ptx"/>
+
+  <conclusion>
+    <p>
+      Text after the last subsection.
+    </p>
+  </conclusion>
+
+  <xi:include href="./exercises/exercises-maps-and-functions.ptx"/>
+
+  <xi:include href="./reading-questions/reading-questions-maps-and-functions.ptx"/>
+</section>

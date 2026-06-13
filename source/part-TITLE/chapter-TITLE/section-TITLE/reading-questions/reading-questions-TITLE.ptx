@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<reading-questions xml:id="reading-questions-TITLE" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Reading Questions
+  </title>
+
+  <introduction>
+    <p>
+      In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em> persistence is part of the task </em>.
+    </p>
+  </introduction>
+  
+  <!-- <xi:include href="./problem-TITLE.ptx"/> -->
+
+  <conclusion>
+    <p>
+      In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and/or instructor rather than spoiling the answers.
+    </p>
+  </conclusion>
+</reading-questions>

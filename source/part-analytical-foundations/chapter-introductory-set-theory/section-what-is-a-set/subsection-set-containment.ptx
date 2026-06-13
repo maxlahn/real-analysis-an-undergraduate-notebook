@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-set-containment" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Set Containment
+  </title>
+
+  <introduction>
+    <p>
+      As we have just seen, not all definable collections of mathematical objects are sets. However, any collection of objects which themselves belong to a set is also a set in its own right; such a set of elements of a given set is called a subset.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-subset-superset">
+    <title>
+      Subset; superset
+    </title>
+    
+    <idx>
+      subset
+    </idx>
+    
+    <idx>
+      superset
+    </idx>
+    
+    <idx>
+      set containment
+    </idx>
+    
+    <idx>
+      proper subset
+    </idx>
+    
+    <idx>
+      proper superset
+    </idx>
+    
+    <idx>
+      strict set containment
+    </idx>
+    
+    <statement>
+      <p>
+        A set <m> S </m> is a <term> subset </term> of a set <m> T </m> if <m> x \in T </m> for all elements <m> x \in S </m>. In this case, we say that <m> S </m> is <term> contained </term> in <m> T </m>, and we write <m> S \subseteq T </m>. Less commonly, we may call <m> T </m> a <term> superset </term> of <m> S </m> if <m> S </m> is a subset of <m> T </m>. In this case, we say that <m> T </m> <term> contains </term> <m> S </m>, and we write <m> T \supseteq S </m>.
+      </p>
+      
+      <p>
+        Also, a set <m> S </m> is a <term> proper subset </term> of a set <m> T </m> if <m> S \subseteq T </m> but <m> T \not \subseteq S </m>. In this case, we say that <m> S </m> is <term> strictly contained </term> in <m> T </m>, and we write <m> S \subsetneq T </m>. Analogously, <m> T </m> is a <term> proper superset </term> of <m> S </m> if <m> S </m> is a proper subset of <m> T </m>. In this case, we say that <m> T </m> <term> strictly contains </term> <m> S </m>, and we write <m> T \supsetneq S </m>.
+      </p>
+    </statement>
+  </definition>
+  
+  <definition xml:id="definition-set-equality">
+    <title>
+      Set equality
+    </title>
+    
+    <idx>
+      set equality
+    </idx>
+    
+    <statement>
+      <p>
+        Two sets are considered <term> equal </term> if they contain exactly the same elements; that is, one set <m> A </m> is equal to another set <m> B </m> when objects are elements of <m> A </m> if and only if they are elements of <m> B </m>. This occurs precisely when both <m> A \subseteq B </m> and <m> B \subseteq A </m>.
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-examples-of-subsets">
+    <title>
+      Examples of subsets
+    </title>
+    
+    <p>
+      The following are examples of subsets of sets:
+      
+      <ul>
+        <li>
+          <p>
+            For any set <m> S </m>, the empty set <m> \emptyset </m> and <m> S </m> itself are subsets of <m> S </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            The set <m> \set{ 1 , 3 , 5 , \dotsc } </m> of odd natural numbers is a proper subset of the set <m> \N </m> of natural numbers. Written more concisely,
+            
+            <md>
+              \set{ 1 , 3 , 5 , \dotsc } \subsetneq \N
+            </md>.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </example>
+  
+  <lemma xml:id="lemma-transitivity-of-set-containment">
+    <title>
+      Transitivity of set containment
+    </title>
+    
+    <statement>
+      <p>
+        For any sets <m> S </m>, <m> T </m>, and <m> U </m>, if <m> S \subseteq T </m> and <m> T \subseteq U </m>, then <m> S \subseteq U </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Suppose that <m> S \subseteq T </m> and <m> T \subseteq U </m>, and let <m> x \in S </m>. Since <m> x \in S </m> and <m> S \subseteq T </m>, <m> x \in T </m>. Moreover, since <m> x \in T </m> and <m> T \subseteq U </m>, <m> x \in U </m>.
+      </p>
+      
+      <p>
+        In summary, we have shown that <m> x \in U </m> for all <m> x \in S </m>. We conclude that <m> S \subseteq U </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <convention xml:id="convention-set-builder-notation">
+    <title>
+      Set-builder notation
+    </title>
+    
+    <idx>
+      set-builder notation
+    </idx>
+    
+    <p>
+      Although not all definable collections are sets, any definable subcollection of a set is itself a set; that is, given a set <m> S </m> and a unary Boolean predicate <m> \Phi </m>, the definable collection
+      
+      <md>
+        \setmid{ x }{ x \in S \textrm{ and } \Phi \of{ x } }
+      </md>
+      
+      is a set (and in fact a subset of <m> S </m>). This subset will also be denoted in <term> set-builder notation </term> by
+      
+      <md>
+        \setmid{ x \in S }{ \Phi \of{ x } } = \setmid{ x }{ x \in S \textrm{ and } \Phi \of{ x } }
+      </md>.
+    </p>
+  </convention>
+  
+  <definition xml:id="definition-power-set">
+    <title>
+      Power set
+    </title>
+    
+    <statement>
+      <p>
+        The <term> power set </term> of a set <m> S </m> is the set of subsets of <m> S </m>; this set is denoted <m> \ps \of{ S } </m>, so that
+        
+        <md>
+          \ps \of{ S } = \setmid{ T }{ T \subseteq S }
+        </md>.
+      </p>
+    </statement>
+  </definition>
+  
+  <lemma xml:id="lemma-power-sets-are-non-empty">
+    <title>
+      Power sets are non-empty
+    </title>
+    
+    <statement>
+      <p>
+        The power set <m> \ps \of{ S } </m> of any set <m> S </m> is non-empty; that is, <m> \ps \of{ S } \neq \emptyset </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Fix a set <m> S </m>, and note that the statement <m> x \in S </m> for all <m> x \in \emptyset </m> is vacuously true, so that <m> \emptyset \subseteq S </m>. Thus <m> \emptyset \in \ps \of{ S } </m>, and so <m> \ps \of{ S } \neq \emptyset </m> is non-empty.
+      </p>
+    </proof>
+    
+    <proof>
+      <p>
+        Fix a set <m> S </m>, and note that the statement <m> x \in S </m> for all <m> x \in S </m> is a tautology, so that <m> S \subseteq S </m>. Thus <m> S \in \ps \of{ S } </m>, and so <m> \ps \of{ S } \neq \emptyset </m> is non-empty.
+      </p>
+    </proof>
+  </lemma>
+  
+  <insight xml:id="insight-analysis-of-the-proofs-of-lemma-power-sets-are-non-empty">
+    <title>
+      Analysis of the proofs of <xref ref="lemma-power-sets-are-non-empty" text="type-global"/>
+    </title>
+    
+    <idx>
+      constructive proof
+    </idx>
+    
+    <idx>
+      non-constructive proof
+    </idx>
+    
+    <p>
+      Both of the above proofs of <xref ref="lemma-power-sets-are-non-empty"/> are correct, although they are nonequivalent. Both are valuable for different reasons; the first proof shows that the power set of a set is nonempty since the empty set $ \emptyset $ is a subset of any set, and the second proof shows the same conclusion since any set is a subset of itself. These proofs are called <term> constructive </term>, in that they explicitly exhibited an object satisfied the desired properties (being an element of the power set of a given set). Proofs which are not constructive are called <term> non-constructive </term>.
+    </p>
+  </insight>
+
+  <conclusion>
+    <p>
+      In general, sets are likely to have many subsets, so that power sets of sets are likely to have a great many elements. We will investigate the notion of the number of elements of a set, called its <term> cardinality </term>, more precisely and in far greater depth at the end of this chapter.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->

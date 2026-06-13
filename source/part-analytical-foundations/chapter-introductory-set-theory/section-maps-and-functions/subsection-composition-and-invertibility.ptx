@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-composition-and-invertibility" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Composition and Invertibility
+  </title>
+
+  <introduction>
+    <p>
+      Viewed through the perspective of the active characterization of what maps do, it may seem obvious that we can combine two maps between sets by first acting on it with one map and then acting on its image by the other map. This new process yields the <term> composition </term> of the two maps, and it may be intuitively clear that this composition is itself a map. However, we will formalize this notion of composition in the passive characterization, so that we may prove this fact rigorously. Again, it may better serve you to conceptualize the composition of maps in the context of the active characterization of what maps do rather than the passive characterization of what maps are in order to better inform your intuition about composition.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-composition">
+    <title>
+      Composition
+    </title>
+    
+    <idx>
+      composition
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> g \circ f </m>
+      </usage>
+      
+      <description>
+        <p>
+          the composition of a map <m> g </m> with a map <m> f </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> and <m> g \colon Y \to Z </m> be maps between sets <m> X </m>, <m> Y </m>, and <m> Z </m>. The <term> composition </term> <m> g \circ f </m> of <m> g </m> with <m> f </m> is the map from <m> X </m> to <m> Y </m> defined by the formula
+        
+        <md>
+          \of{ g \circ f } \of{ x } = g \of{ f \of{ x } }
+        </md>.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    We aren't restricted to the composition of just two maps. In fact, we can compose any finite number of maps with compatible domains and codomains by iterating the above construction.
+  </p>
+  
+  <proposition xml:id="proposition-associativity-of-composition">
+    <title>
+      Associativity of composition
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon W \to X </m>, <m> g \colon X \to Y </m>, and <m> h \colon Y \to Z </m> be maps between sets <m> W </m>, <m> X </m>, <m> Y </m>, and <m> Z </m>. Then
+        
+        <md>
+          \of{ h \circ g } \circ f = h \circ \of{ g \circ f }
+        </md>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Note that
+        
+        <md>
+          <mrow>
+            \of{ \of{ h \circ g } \circ f } \of{ w } \amp = \of{ h \circ g } \of{ f \of{ w } } = h \of{ g \of{ f \of{ w } } }
+          </mrow>
+          
+          <mrow>
+            \amp = h \of{ \of{ g \circ f } \of{ w } } = \of{ h \circ \of{ g \circ f } } \of{ w }
+          </mrow>
+        </md>
+        
+        for all <m> w \in W </m>. Since <m> \of{ h \circ g } \circ f </m> and <m> h \circ \of{ g \circ f } </m> agree on all inputs <m> w \in W </m>,
+        
+        <md>
+          \of{ h \circ g } \circ f = h \circ \of{ g \circ f }
+        </md>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    The above notion of composition introduces a natural question about maps between sets:
+    
+    <blockquote>
+      To what degree can the action of a map on its domain be undone?
+    </blockquote>
+    
+    This question of map <term> invertibility </term> is fundamental, and will recur throughout this text.
+  </p>
+  
+  <definition xml:id="definition-invertibility">
+    <title>
+      Invertibility
+    </title>
+    
+    <idx>
+      left inverse
+    </idx>
+    
+    <idx>
+      right inverse
+    </idx>
+    
+    <idx>
+      inverse
+    </idx>
+    
+    <idx>
+      left-invertibility
+    </idx>
+    
+    <idx>
+      right-invertibility
+    </idx>
+    
+    <idx>
+      invertibility
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> be a map from a set <m> X </m> to a set <m> Y </m>. A map <m> g \colon Y \to X </m> is a <term> left inverse </term> to <m> f </m> if <m> g \circ f = \id_{ X } </m>, and <m> g </m> is called a <term> right inverse </term> to <m> f </m> if <m> f \circ g = \id_{ Y } </m>. <m> g </m> is called an <term> inverse </term> to <m> f </m> if it is both a left and right inverse to <m> f </m>; that is, <m> g </m> is an inverse to <m> f </m> if <m> g \circ f = \id_{ X } </m> and <m> f \circ g = \id_{ Y } </m>.
+      </p>
+      
+      <p>
+        A map is called <term> left-invertible </term> (resp. <term> right-invertible </term>, <term> invertible </term>) if it has a left inverse (resp. right inverse, inverse).
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-examples-of-inverses">
+    <title>
+      Examples of inverses
+    </title>
+    
+    <idx>
+      projection map
+    </idx>
+    
+    <statement>
+      <p>
+        The following are examples of left inverses, right inverses, and inverses of maps.
+        
+        <ol>
+          <li>
+            <p>
+              Let <m> \emptyset \subsetneq U \subseteq X </m> be a non-empty subset of a set <m> X </m>, and fix an element <m> u \in U </m>. Consider the constant map <m> c \colon X \to U </m> from <m> X </m> to <m> U </m> defined piecewise by the formula
+              
+              <md>
+                c \of{ x } =
+                  \begin{cases}
+                    x , \amp x \in U \\
+                    u , \amp x \notin U
+                  \end{cases}
+              </md>.
+              
+              Note that
+              
+              <md>
+                \of{ c \circ \iota_{ U }^{ X } } \of{ u } = c \of{ \iota_{ U }^{ X } \of{ u } } = c \of{ u } = u = \id_{ U } \of{ u }
+              </md>
+              
+              for all <m> u \in U </m>, and so <m> c \circ \iota_{ U }^{ X } = \id_{ U } </m>; that is, <m> c </m> is a left inverse to the inclusion map <m> \iota_{ U }^{ X } \colon U \to X </m> of <m> U </m> in <m> X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Fix sets <m> X </m> and <m> Y </m>, and suppose that <m> Y \neq \emptyset </m> is non-empty. Let <m> \pi \colon X \times Y \to X </m> be the <term> projection map </term> defined by the formula <m> \pi \of{ x , y } = x </m>.
+            </p>
+            
+            <p>
+              Fix an element <m> y \in Y </m>, and consider the map <m> c \colon X \to X \times Y </m> from <m> X </m> to <m> X \times Y </m> defined by the formula <m> c \of{ x } = \of{ x , y } </m>. Then
+              
+              <md>
+                \of{ \pi \circ c } \of{ x } = \pi \of{ c \of{ x } } = \pi \of{ x , y } = x = \id_{ X } \of{ x }
+              </md>
+              
+              for all <m> x \in X </m>, and so <m> \pi \circ c = \id_{ X } </m>; that is, <m> c </m> is a right inverse to the projection map <m> \pi </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The identity map <m> \id_{ X } \colon X \to X </m> on a set <m> X </m> is its own inverse, since <m> \id_{ X } \circ \id_{ X } = \id_{ X } </m>. This is actually a special case of the first example above, where we take <m> U = X </m>. More generally, <m> f \circ \id_{ X } = f </m> for all maps <m> f </m> with domain <m> X </m>, and <m> \id_{ X } \circ g = g </m> for all maps <m> g </m> with codomain <m> X </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    We now give alternative characterizations of left-invertible, right-invertible, and invertible maps. Intuitively, a map is left-invertible if it does not associate two distinct inputs with the same output, and a map is right-invertible if each output is associated with at least one input. These properties mirror the totality and uniqueness conditions for maps, and will turn out to together imply the existence of a two-sided inverse, which is both a left and right inverse.
+  </p>
+  
+  <definition xml:id="definition-injectivity-surjectivity-bijectivity">
+    <title>
+      Injectivity; surjectivity; bijectivity
+    </title>
+    
+    <idx>
+      injective
+    </idx>
+    
+    <idx>
+      one-to-one
+    </idx>
+    
+    <idx>
+      injection
+    </idx>
+    
+    <idx>
+      surjective
+    </idx>
+    
+    <idx>
+      onto
+    </idx>
+    
+    <idx>
+      surjection
+    </idx>
+    
+    <idx>
+      bijective
+    </idx>
+    
+    <idx>
+      one-to-one correspondence
+    </idx>
+    
+    <idx>
+      bijection
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> be a map from a set <m> X </m> to a set <m> Y </m>.
+        
+        <ol>
+          <li>
+            <p>
+              <m> f </m> is called <term> injective </term> (or <term> one-to-one </term>) if for all inputs <m> x_{ 1 } , x_{ 2 } \in X </m>, if <m> f \of{ x_{ 1 } } = f \of{ x_{ 2 } } </m>, then <m> x_{ 1 } = x_{ 2 } </m>. In this case, <m> f </m> is also called an <term> injection </term> of <m> X </m> into <m> Y </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              <m> f </m> is called <term> surjective </term> (or <term> onto </term>) if for all outputs <m> y \in Y </m> there is an input <m> x \in X </m> so that <m> y = f \of{ x } </m>. In this case, <m> f </m> is also called a <term> surjection </term> of <m> X </m> onto <m> Y </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              <m> f </m> is called <term> bijective </term> if it is both injective and surjective. In this case, <m> f </m> is also called a <term> bijection </term> or a <term> one-to-one correspondence </term> between <m> X </m> and <m> Y </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-examples-of-injections-surjections-and-bijections">
+    <title>
+      Examples of injections, surjections, and bijections
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of injective, surjective, and bijective functions.
+        
+        <ol>
+          <li>
+            <p>
+              Let <m> U \subseteq X </m> be a subset of a set <m> X </m>, and consider <m> u_{ 1 } , u_{ 2 } \in U </m>. If <m> \iota_{ U }^{ X } \of{ u_{ 1 } } = \iota_{ U }^{ X } \of{ u_{ 2 } } </m>, then
+              
+              <md>
+                u_{ 1 } = \iota_{ U }^{ X } \of{ u_{ 1 } } = \iota_{ U }^{ X } \of{ u_{ 2 } } = u_{ 2 }
+              </md>.
+              
+              So the inclusion map <m> \iota_{ U }^{ X } \colon U \to X </m> is injective.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Fix sets <m> X </m> and <m> Y </m>, and suppose that <m> Y \neq \emptyset </m> is non-empty. Let <m> \pi \colon X \times Y \to X </m> be the <term> projection map </term> defined by the formula <m> \pi \of{ x , y } = x </m>.
+            </p>
+            
+            <p>
+              Let <m> x \in X </m>, and note that since <m> Y \neq \emptyset </m> is non-empty, there is some element <m> y \in Y </m>. We note that <m> \pi \of{ x , y } = x </m>. Since each output <m> x \in X </m> is the image of some input under <m> \pi </m>, <m> \pi </m> is surjective.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The identity map <m> \id_{ X } \colon X \to X </m> on a set <m> X </m> is injective by virtue of being an inclusion map. <m> \id_{ X } </m> is also surjective, since <m> \id_{ X } \of{ x } = x </m> for all <m> x \in X </m>. Thus <m> \id_{ X } </m> is bijective.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>  
+  </example>
+  
+  <p>
+    It is no accident that the examples for left- and right- invertibility coincided with the examples for injectivity and surjectivity. It turns out that injectivity is essentially equivalent to left-invertibility, and surjectivity is equivalent to right-invertibility.
+  </p>
+  
+  <theorem xml:id="theorem-invertibility">
+    <title>
+      Invertibility
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> be a map from a set <m> X </m> to a set <m> Y </m>.
+        
+        <ol>
+          <li>
+            <p>
+              If <m> f </m> is left-invertible, then it is injective.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              If <m> X \neq \emptyset </m> is non-empty and <m> f </m> is injective, then it is left-invertible.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              If <m> f </m> is right-invertible, then it is surjective.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            Suppose that <m> f </m> is left-invertible, so that <m> g \circ f = \id_{ X } </m> for some map <m> g \colon Y \to X </m>. That <m> f </m> is injective follows from the injectivity of the identity map <m> \id_{ X } </m> and (d) of <xref provisional="problem-compositions-of-injections-surjections-and-bijections"/>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Conversely, now suppose that <m> X \neq \emptyset </m> is non-empty and <m> f </m> is injective. Then for each output <m> y \in Y </m>, there is at most one input <m> x \in X </m> so that <m> y = f \of{ x } </m>. Specifically, for each <m> y \in \im \of{ f } </m>, there is a unique input <m> x \in X </m> so that <m> y = f \of{ x } </m>. Denote by <m> g \of{ y } = x </m> this unique input. 
+          </p>
+          
+          <p>
+            Since <m> X \neq \emptyset </m> is non-empty, it contains an element <m> x \in X </m>. Define <m> g \of{ y } = x </m> for all <m> y \in Y \setminus \im \of{ f } </m>. We have defined a map <m> g \colon Y \to X </m>. Note that
+            
+            <md>
+              \of{ g \circ f } \of{ x } = g \of{ f \of{ x } } = x = \id_{ X } \of{ x }
+            </md>
+            
+            for all inputs <m> x \in X </m>, and so <m> g \circ f = \id_{ X } </m>; that is, <m> g </m> is a left inverse to <m> f </m>, and so <m> f </m> is left-invertible.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Finally, suppose that <m> f </m> is right-invertible, so that <m> f \circ g = \id_{ Y } </m> for some map <m> g \colon Y \to X </m>. That <m> f </m> is surjective follows from the surjectivity of the identity map <m> \id_{ Y } </m> and (e) of <xref provisional="problem-compositions-of-injections-surjections-and-bijections"/>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </theorem>
+  
+  <p>
+    Proving the remaining direction of the equivalence between right invertibility and surjectivity requires a strong assumption about set theory called the <term> axiom of choice </term>, which we do not yet have the language to express in its simplest form. We will talk about the axiom of choice shortly, when we generalize the Cartesian product of two sets using indexing maps.
+  </p>
+  
+  <corollary xml:id="corollary-invertibility">
+    <title>
+      Invertibility
+    </title>
+    
+    <statement>
+      <p>
+        A map is invertible if and only if it is bijective.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> f \colon X \to Y </m> be a map from a set <m> X </m> to a set <m> Y </m>. If <m> f </m> is invertible, it is both left- and right-invertible, and so <m> f </m> is both injective and surjective by (1) and (3) of <xref ref="theorem-invertibility"/>. Hence <m> f </m> is bijective.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> f </m> is bijective, so that <m> f </m> is both injective and surjective. If <m> X = \emptyset </m>, then
+        
+        <md>
+          <mrow>
+            Y \amp = \im \of{ f } = f \of{ X } = f \of{ \emptyset }
+          </mrow>
+          
+          <mrow>
+            \amp = \setmid{ f \of{ x } \in Y }{ x \in \emptyset } = \emptyset
+          </mrow>
+        </md>
+        
+        by the surjectivity of <m> f </m>. Thus <m> f \colon \emptyset \to \emptyset </m> is the unique map from <m> \emptyset </m> to itself, the identity map <m> \id_{ \emptyset } \colon \emptyset \to \emptyset </m>. In particular, <m> f </m> is invertible.
+      </p>
+      
+      <p>
+        So we may assume that <m> X \neq \emptyset </m> is non-empty. Since <m> f </m> is injective, it is left-invertible by (2) of <xref ref="theorem-invertibility"/>. So <m> g \circ f = \id_{ X } </m> for some map <m> g \colon Y \to X </m>; that is, <m> g \of{ f \of{ x } } = x </m> for all inputs <m> x \in X </m>. It suffices to show that <m> g </m> is also a right inverse to <m> f </m>.
+      </p>
+      
+      <p>
+        To that end, consider an output <m> y \in Y </m>. Since <m> f </m> is surjective, <m> y = f \of{ x } </m> for some input <m> x \in X </m>. Then
+        
+        <md>
+          \of{ f \circ g } \of{ y } = f \of{ g \of{ x } } = f \of{ g \of{ f \of{ x } } } = f \of{ x } = y = \id_{ Y } \of{ y }
+        </md>.
+        
+        Hence <m> f \circ g = \id_{ Y } </m>, and so <m> g </m> is an inverse to <m> f </m>; that is, <m> f </m> is invertible.
+      </p>
+    </proof>
+  </corollary>
+
+  <conclusion>
+    <p>
+      We will investigate the invertibility and bijectivity of maps and the consequences these properties have on the domains and codomains of such maps more at the end of this chapter, when we study <term> cardinality </term> and the size of sets. For now, however, we will move on to an important convention which is ubiquitous throughout mathematics: the notions of indexed sets and families.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->

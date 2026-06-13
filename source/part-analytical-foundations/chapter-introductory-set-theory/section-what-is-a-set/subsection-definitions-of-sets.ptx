@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-definitions-of-sets" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Definitions of Sets
+  </title>
+
+  <introduction>
+    <p>
+      You may complain that the terms <q> collection </q> and <q> object </q> are vague and undefined, and you would be right to object; the above characterization of sets is definitely not as rigorous as we might desire, and is in fact internally inconsistent.
+    </p>
+    
+    <p>
+      However, the technical difficulties associated with building a rigorous and internally consistent set theory are outside the scope of this course and in this context, far more trouble than they are worth. In fact, it's entirely possible that such an internally consistent set theory does not exist!
+    </p>
+    
+    <p>
+      As such, we will leave this ambiguity in favor of moving on to more salient topics. Even though we will not encounter any such issues in this text, the <q> definition </q> above does lead to some interesting inconsistencies. We will explore one such contradiction, called <xref ref="proposition-russells-paradox" text="title"/>, shortly. First, however, we introduce some shorthand notation which will be useful in specifying sets we wish to discuss.
+    </p>
+  </introduction>
+  
+  <convention xml:id="convention-roster-notation">
+    <title>
+      Roster notation
+    </title>
+    
+    <idx>
+      roster notation
+    </idx>
+    
+    <p>
+      It's easy to completely describe a set which contains only a finite number of elements; we can simply write those elements down! Concretely, if <m> S </m> is the set whose elements are precisely the objects <m> x_{ 1 } , \dotsc , x_{ n } </m>, then we may write
+      
+      <md>
+        S = \set{ x_{ 1 } , \dotsc , x_{ n } } .
+      </md>
+      
+      The above notation for specifying sets is called <term> roster notation </term>. Not all sets are finite, however, and it is obviously impossible to write down a complete roster of all of the elements of an infinite set. Therefore, we cannot generalize roster notation to sets which contain infinitely many elements.
+    </p>
+  </convention>
+  
+  <definition xml:id="definition-definable-collection">
+    <title>
+      Definable collection
+    </title>
+    
+    <idx>
+      definable collection
+    </idx>
+    
+    <p>
+      Let <m> \Phi </m> be a <term> unary Boolean predicate </term> (a statement whose truth value depends on a single variable <m> x </m>). The collection of objects <m> x </m> which satisfy <m> \Phi </m> is said to be <term> defined </term> by <m> \Phi </m>, and is denoted
+      
+      <md>
+        \setmid{ x }{ \Phi \of{ x } }
+      </md>.
+      
+      Such a collection of objects which satisfy such a Boolean predicate is called a <term> definable collection </term>. We will see that the collection of objects that satisfy a given Boolean predicate is not necessarily a set; this is the content of Russell's paradox.
+    </p>
+  </definition>
+  
+  <example xml:id="example-sets">
+    <title>
+      Sets
+    </title>
+    
+    <idx>
+      empty set
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \emptyset </m>
+      </usage>
+      
+      <description>
+        the empty set
+      </description>
+    </notation>
+    
+    <p>
+      The following are examples of sets:
+      
+      <ul>
+        <li>
+          <p>
+            The <term> empty set </term>, denoted <m> \emptyset </m> or <m> \set{  } </m>, is the set with no elements; that is, <m> x \notin \emptyset </m> for all objects <m> x </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            The set <m> \set{ 1 , 2 , \mathrm{ red } , \mathrm{ blue } } </m> is a <term> non-empty </term> set with only finitely many elements. Note that this set contains different types of objects. In general, we will not place any explicit restrictions on the types of objects allowed inside a set, although some formalizations of axiomatic set theories rely on this to avoid inconsistencies such as Russell's paradox.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            The set <m> \N = \set{ 0 , 1 , 2 , \dotsc } </m> of <term> natural numbers </term> (also sometimes called the <term> whole numbers </term> or <term> counting numbers </term>) is a non-empty set with infinitely many elements. We will characterize the natural numbers <m> \N </m> in the usual manner of Peano arithmetic later in this chapter.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </example>
+  
+  <p>
+    <idx>
+      naïve set theory
+    </idx>
+    
+    As we mentioned before, the set theory based on the <q> definition </q> above, which is called <term> naïve set theory </term>, is in fact inconsistent; taking this <q> definition </q> as the basis for an axiomatic system, we can derive a contradiction, which implies that we may in fact derive all possible statements, including those which are false! This inconsistency was first demonstrated by Bertrand Russell at the beginning of the 20th century, and bears his name.
+  </p>
+  
+  <proposition xml:id="proposition-russells-paradox">
+    <title>
+      Russell's paradox
+    </title>
+    
+    <statement>
+      <p>
+        Not all definable collections are sets.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        By contradiction. Let
+        
+        <md>
+          \mathfrak{ R } = \setmid{ S }{ S \notin S }
+        </md>
+        
+        be the definable collection of sets which do not contain themselves, and suppose for a contradiction that <m> \mathfrak{ R } </m> is a set. The question of whether or not <m> \mathfrak{ R } </m> contains itself is a natural one; however, we will see that both the positive and negative answers lead to contradictions.
+      </p>
+      
+      <p>
+        This is because, if <m> \mathfrak{ R } \in \mathfrak{ R } </m>, then <m> \mathfrak{ R } \notin \mathfrak{ R } </m> by the definition of <m> \mathfrak{ R } </m>. On the other hand, if <m> \mathfrak{ R } \notin \mathfrak{ R } </m>, then <m> \mathfrak{ R } \in \mathfrak{ R } </m> by the same reasoning. Therefore, <m> \mathfrak{ R } \in \mathfrak{ R } </m> if and only if <m> \mathfrak{ R } \notin \mathfrak{ R } </m>. This contradiction implies that <m> \mathfrak{ R } </m> is not a set, as desired.
+      </p>
+    </proof>
+  </proposition>
+
+  <conclusion>
+    <p>
+      Russell's paradox tells us that naïve set theory is inconsistent. However, as we stated before, it is no easy task to construct a consistent set theory which is strong enough to describe the sophisticated structures we wish to investigate while also weak enough to be internally consistent. However, since the question of whether modern formal set theories are consistent is beyond the scope of this text. With this in mind, we will continue formulating definitions and results in the language of naïve set theory, keeping in mind that rigorous systems of formal set theory (which do not suffer from Russell's paradox) exist in which they can be expressed and proven.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->

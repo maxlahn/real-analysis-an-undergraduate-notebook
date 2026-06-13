@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-introduction-to-maps" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Introduction to Maps
+  </title>
+
+  <introduction>
+    <idx>
+      Ordered pair
+    </idx>
+    
+    <idx>
+      Entry
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \of{ x , y } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the ordered pair with first entry <m> x </m> and second entry <m> y </m>
+        </p>
+      </description>
+    </notation>
+  
+    <p>
+      First, however, we define the <term> Cartesian product </term> of two sets. This relies on a notion of an ordered pair of objects <m> x </m> and <m> y </m>, which we denote <m> \of{ x , y } </m>. Like formalized set theory, rigorous constructions of ordered pairs are, in this context, unnecessarily complicated and annoying to work with. As such, we will take them to be well-defined. The salient properties of an ordered pair <m> \of{ x , y } </m> are its <term> entries </term> <m> x </m> and <m> y </m>, which are called its first and second entries, respectively.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-cartesian-product">
+    <title> Cartesian product </title>
+    
+    <idx>
+      Cartesian product
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> X \times Y </m>
+      </usage>
+      
+      <description>
+        <p>
+          the Cartesian product of <m> X </m> with <m> Y </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        The <term> Cartesian product </term> <m> X \times Y </m> of two sets <m> X </m> and <m> Y </m> is the set which contains all ordered pairs whose first entry is an element of <m> X </m> and whose second entry is an element of <m> Y </m>; that is,
+        
+        <md>
+          X \times Y = \setmid{ \of{ x , y } }{ x \in X \textrm{ and } y \in Y }
+        </md>.
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-an-example-of-cartesian-products">
+    <title>
+      An example of Cartesian products
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> X = \set{ 1 , 2 } </m> and <m> Y = \set{ 3 , 4 , 5 } </m>. Then
+        
+        <md>
+          X \times Y = \set{ \of{ 1 , 3 } , \of{ 1 , 4 } , \of{ 1 , 5 } , \of{ 2 , 3 } , \of{ 2 , 4 } , \of{ 2 , 5 } }
+        </md>.
+        
+        Note that <m> X \times Y \neq X \cup Y </m>.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    Recall that we would like a map between two sets to be an association of the elements of one set to the elements of the other. We will model this association via ordered pairs. To that end, a map between two sets will just be a subset of their Cartesian product which satisfies certain existence and uniqueness properties.
+  </p>
+  
+  <definition xml:id="definition-map-function">
+    <title>
+      Map; function
+    </title>
+    
+    <idx>
+      map
+    </idx>
+    
+    <idx>
+      domain
+    </idx>
+    
+    <idx>
+      input
+    </idx>
+    
+    <idx>
+      codomain
+    </idx>
+    
+    <idx>
+      output
+    </idx>
+    
+    <idx>
+      function
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> f \colon X \to Y </m>
+      </usage>
+      
+      <description>
+        <p>
+          a map <m> f </m> from <m> X </m> to <m> Y </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> f \colon x \mapsto y </m>
+      </usage>
+      
+      <description>
+        <p>
+          a map <m> f </m> maps an input <m> x </m> to an output <m> y = f \of{ x } </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        A subset <m> f \subseteq X \times Y </m> of the Cartesian product <m> X \times Y </m> of two sets <m> X </m> and <m> Y </m> is called a <term> map </term> from <m> X </m> (which is called the <term> domain </term> of <m> f </m> and whose elements are called <term> inputs </term>) to <m> Y </m> (which is called the <term> codomain </term> of <m> f </m> and whose elements are called <term> outputs </term>) if it satisfies the following conditions:
+        
+        <ol>
+          <li>
+            <p>
+              <term> Totality </term>: For all inputs <m> x \in X </m>, there is an output <m> y \in Y </m> so that <m> \of{ x , y } \in f </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              <term> Uniqueness </term>: For all inputs <m> x \in X </m> and outputs <m> y_{ 1 } , y_{ 2 } \in Y </m>, if <m> \of{ x , y_{ 1 } } , \of{ x , y_{ 2 } } \in f </m>, then <m> y_{ 1 } = y_{ 2 } </m>.
+            </p>
+          </li>
+        </ol>
+        
+        So <m> f </m> is a map from <m> X </m> to <m> Y </m> if and only if for each input <m> x \in X </m>, there is a unique output <m> y \in Y </m> so that <m> \of{ x , y } \in f </m>. We will write <m> f \colon X \to Y </m> to indicate that <m> f </m> is a map from <m> X </m> to <m> Y </m>, and we will write <m> f \colon x \mapsto y </m> to indicate that <m> \of{ x , y } \in f </m>. The set of maps from <m> X </m> to <m> Y </m> is denoted <m> Y^{ X } \subseteq X \times Y </m>.
+      </p>
+      
+      <p>
+        We will call a map <m> f \colon X \to Y </m> whose codomain <m> Y </m> is a number system like the natural numbers <m> Y = \N </m>, the integers <m> Y = \Z </m>, the rational numbers <m> Y = \Q </m>, the real numbers <m> Y = \R </m>, or the complex numbers <m> Y = \C </m> a <m> Y </m>-valued <term> function </term> on <m> X </m>. We will investigate the natural numbers <m> \N </m> in <xref provisional="section-peano-arithmetic-and-the-natural-numbers"/>, and <xref provisional="chapter-constructing-the-number-systems"/> will be dedicated to constructing the other number systems with which we will become acquainted throughout the course of this text.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    So a map between sets is just a subset of their Cartesian product such that each element of the domain appears in precisely one pair with an element of the codomain. The above existence and uniqueness properties of a map implies that there is an unambiguous association between the elements of the domain and the elements of the codomain.
+  </p>
+  
+  <example xml:id="example-examples-of-maps">
+    <title>
+      Examples of maps
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of maps between sets:
+        
+        <ol>
+          <li>
+            <p>
+              Let <m> X = \set{ 1 , 2 } </m> and <m> Y = \set{ \mathrm{ red } , \mathrm{ blue } } </m>, and consider the following subsets of <m> X \times Y </m>:
+              
+              <md>
+                <mrow>
+                  f_{ 1 } \amp = \set{ \of{ 1 , \mathrm{ red } } , \of{ 2 , \mathrm{ red } } }
+                </mrow>
+                
+                <mrow>
+                  f_{ 2 } \amp = \set{ \of{ 1 , \mathrm{ red } } , \of{ 2 , \mathrm{ blue } } }
+                </mrow>
+                
+                <mrow>
+                  f_{ 3 } \amp = \set{ \of{ 1 , \mathrm{ blue } } , \of{ 2 , \mathrm{ red } } }
+                </mrow>
+                
+                <mrow>
+                  f_{ 4 } \amp = \set{ \of{ 1 , \mathrm{ blue } } , \of{ 2 , \mathrm{ blue } } }
+                </mrow>
+              </md>.
+              
+              As defined above, <m> f_{ 1 } </m>, <m> f_{ 2 } </m>, <m> f_{ 3 } </m>, and  <m> f_{ 4 } </m> are maps from <m> X </m> to <m> Y </m>. In fact, these are the only such maps; that is,
+              
+              <md>
+                Y^{ X } = \set{ f_{ 1 } , f_{ 2 } , f_{ 3 } , f_{ 4 } }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The empty set <m> \emptyset \colon \emptyset \to Y </m> is the unique map from the empty set <m> \emptyset </m> to any set <m> Y </m>; that is,
+              
+              <md>
+                Y^{ \emptyset } = \set{ \emptyset }
+              </md>.
+              
+              Note that none of the elements of the codomain <m> Y </m> are associated with elements of the empty domain <m> \emptyset </m>. However, this does not imply that <m> \emptyset </m> is not a map; in general, not all elements of the codomain of a map need be associated with elements of the domain, since <em> the existence property applies only to the domain </em>.
+            </p>
+          </li>
+          
+          <li>
+            <idx>
+              inclusion map
+            </idx>
+            
+            <idx>
+              identity map
+            </idx>
+            
+            <notation>
+              <usage>
+                <m> \iota_{ U }^{ X } </m>
+              </usage>
+              
+              <description>
+                <p>
+                  the inclusion map of <m> U </m> in <m> X </m>.
+                </p>
+              </description>
+            </notation>
+            
+            <notation>
+              <usage>
+                <m> \id_{ X } </m>
+              </usage>
+              
+              <description>
+                <p>
+                  the identity map of a set <m> X </m>
+                </p>
+              </description>
+            </notation>
+            
+            <p>
+              Let <m> U \subseteq X </m> be a subset of a set <m> X </m>. The <term> inclusion map </term> <m> \iota_{ U }^{ X } \colon U \to X </m> of <m> U </m> in <m> X </m> is the map from <m> U </m> to <m> X </m> defined by
+              
+              <md>
+                \iota_{ U }^{ X } = \setmid{ \of{ u , x } \in U \times X }{ u = x } .
+              </md>
+              
+              That is, <m> \iota_{ U }^{ X } \of{ u } = u </m> for all <m> u \in U </m>.
+            </p>
+            
+            <p>
+              The inclusion map <m> \iota_{ X }^{ X } </m> of <m> X </m> in itself is called the <term> identity map </term> on <m> X </m>, and is denoted <m> \id_{ X } \colon X \to X </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </example>
+  
+  <remark xml:id="remark-passive-and-active-characterizations-of-maps">
+    <title>
+      Passive and active characterizations of maps
+    </title>
+    <p>
+      It may be difficult to see how the above definition of a map is a generalization of the notion of a real-valued function of a real variable. In fact, the above definition might seem more closely related to the graph of such a function, since the uniqueness property of maps is just a generalization of the vertical line test for functions. We will refer to this perspective on maps as subsets of a Cartesian product satisfying certain abstract properties as the <term> passive characterization </term> of what maps <em> are </em>. In contrast, we often like to think of a map as an active process, which takes an input and transforms it into the unique output with which it is associated. We will refer to this perspective as the <term> active characterization </term> of what maps <em> do </em>. When it benefits us to favor one perspective over another, we will emphasize either the active or passive characterization over the other. The following definitions allow us to convert between these two equivalent characterizations of maps.
+    </p>
+  </remark>
+  
+  <definition xml:id="definition-image-pre-image">
+    <title>
+      Image; pre-image
+    </title>
+    
+    <idx>
+      image
+    </idx>
+    
+    <idx>
+      pre-image
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> f \of{ x } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the image of an input <m> x </m> under a map <m> f </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> f \of{ U } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the image of a set <m> U </m> of inputs under a map <m> f </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \im \of{ f } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the image of a map <m> f </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> f^{ -1 } \of{ V } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the pre-image of a set <m> V </m> of outputs under a map <m> f </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> f^{ -1 } \of{ y } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the pre-image of an output <m> y </m> under a map <m> f </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> be a map from a set <m> X </m> to a set <m> Y </m>. The <term> image </term> <m> f \of{ x } </m> of an input <m> x \in X </m> under <m> f </m> is the unique output so that <m> \of{ x , f \of{ x } } \in Y </m>. The <term> image </term> <m> f \of{ U } </m> of a subset <m> U \subseteq X </m> is the subset of the codomain <m> Y </m> defined by
+        
+        <md>
+          f \of{ U } = \setmid{ f \of{ x } \in Y }{ x \in U }
+        </md>.
+        
+        The image <m> f \of{ X } </m> of <m> X </m> itself is called the <term> image </term> of <m> f </m>, and is denoted <m> \im \of{ f } = f \of{ X } </m>.
+      </p>
+      
+      <p>
+        The <term> pre-image </term> <m> f^{ -1 } \of{ V } </m> of a subset <m> V \subseteq Y </m> of the codomain <m> Y </m> under <m> f </m> is the set of all inputs whose image lies in <m> V </m>; that is,
+        
+        <md>
+          f^{ -1 } \of{ V } = \setmid{ x \in X }{ f \of{ x } \in V }
+        </md>.
+        
+        The <term> pre-image </term> <m> f^{ -1 } \of{ y } </m> of an output <m> y \in Y </m> under <m> f </m> is just the pre-image of the singleton set <m> \set{ y } </m> under <m> f </m>; that is,
+        
+        <md>
+          f^{ -1 } \of{ y } = f^{ -1 } \of{ \set{ y } } = \setmid{ x \in X }{ f \of{ x } = y }
+        </md>
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    Any map between sets induces a map from any subset of its domain to its codomain via a process known as <term> restriction </term>. In light of the active characterization of what maps do, this may seem almost trivial. However, we will formalize this notion of restriction in terms of the passive characterization of what maps are in order to prove rigorously our intuitions are correct. You may be better served by conceptualizing the restriction of a map to be the same active process of transforming inputs into outputs but with a smaller domain, rather than the passive definition below.
+  </p>
+  
+  <definition xml:id="definition-restriction">
+    <title>
+      Restriction
+    </title>
+    
+    <idx>
+      restriction
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \rest{ f }_{ U } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the restriction of a map <m> f </m> to a subset <m> U </m> of its domain
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        The <term> restriction </term> <m> \rest{ f }_{ U } </m> of a map <m> f \colon X \to Y </m> between sets <m> X </m> and <m> Y </m> to a subset <m> U \subseteq X </m> of its domain <m> X </m> is the subset of the Cartesian product <m> U \times Y </m> defined by
+        
+        <md>
+          <mrow>
+            \rest{ f }_{ U } \amp = \setmid{ \of{ u , y } \in U \times Y }{ f \of{ u } = y } = \setmid{ \of{ u , y } \in U \times Y }{ \of{ u , y } \in f }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ U \times Y } \cap f
+          </mrow>
+        </md>.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    As our intuition about the active characterization of what maps do tells us, the restriction of a map to a subset of its domain is itself a map from the chosen subset to the domain of the original map.
+  </p>
+  
+  <proposition xml:id="proposition-restrictions-are-maps">
+    <title>
+      Restrictions are maps
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> be a map from a set <m> X </m> to a set <m> Y </m>. For any subset <m> U \subseteq X </m>, the restriction <m> \rest{ f }_{ U } </m> of <m> f </m> to <m> U </m> is a map from <m> U </m> to <m> Y </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> u \in U </m>. Then <m> u \in X </m> is an input to <m> f </m>, and so <m> \of{ u , y } \in f </m> for some output <m> y \in Y </m>. We conclude that
+        
+        <md>
+          \of{ x , y } \in \setmid{ \of{ u , y } \in U \times Y }{ \of{ u , y } \in f } = \rest{ f }_{ U }
+        </md>,
+        
+        so that <m> \rest{ f }_{ U } </m> satisfies the totality condition.
+      </p>
+      
+      <p>
+        Let <m> u \in U </m> and <m> y_{ 1 } , y_{ 2 } \in U </m>, and suppose that <m> \of{ u , y_{ 1 } } , \of{ u , y_{ 2 } } \in \rest{ f }_{ U } </m>. Since
+        
+        <md>
+          \rest{ f }_{ U } = \of{ U \times Y } \cap f \subseteq f
+        </md>,
+        
+        we have that <m> \of{ u , y_{ 1 } } , \of{ u , y_{ 2 } } \in f </m>, and so <m> y_{ 1 } = y_{ 2 } </m>; that is, <m> \rest{ f }_{ U } </m> satisfies the uniqueness condition. Since <m> \rest{ f }_{ U } </m> satisfies the totality condition and the uniqueness condition, it is a map from <m> U </m> to <m> Y </m>.
+      </p>
+    </proof>
+  </proposition>
+
+  <conclusion>
+    <p>
+      We will shortly see another way to construct restrictions as compositions with inclusion maps.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->

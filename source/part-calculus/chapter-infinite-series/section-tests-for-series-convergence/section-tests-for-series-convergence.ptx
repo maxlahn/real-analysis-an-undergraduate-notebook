@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-tests-for-series-convergence" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Tests for Series Convergence
+  </title>
+
+  <introduction>
+    <p>
+      Text before the first subsection.
+    </p>
+  </introduction>
+
+  <!-- <xi:include href="./subsection-TITLE.ptx"/> -->
+
+  <conclusion>
+    <p>
+      Text after the last subsection.
+    </p>
+  </conclusion>
+
+  <xi:include href="./exercises/exercises-tests-for-series-convergence.ptx"/>
+
+  <xi:include href="./reading-questions/reading-questions-tests-for-series-convergence.ptx"/>
+</section>

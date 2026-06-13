@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-finitary-operations-and-relations" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Finitary Operations and Relations
+  </title>
+
+  <introduction>
+    <p>
+      In this section, we will develop the notion of (finitary) operations and relations on sets. Intuitively, a <term> finitary operation </term> on a set is an assignment of an element of that set to some finite number of other elements, and a <term> finitary relation </term> on a set is a designation of certain groups of some finite number of elements as associated.
+    </p>
+  </introduction>
+
+  <xi:include href="./subsection-products-and-choice.ptx"/>
+
+  <xi:include href="./subsection-finitary-operations.ptx"/>
+
+  <xi:include href="./subsection-finitary-relations.ptx"/>
+
+  <conclusion>
+    <p>
+      While this section has dealt with finitary operations and relations in broad generality, the vast majority of mathematics relevant to this text deals with binary operations and relations. In the next section, we will see another use for binary relations; that of ordering sets.
+    </p>
+  </conclusion>
+
+  <xi:include href="./exercises/exercises-finitary-operations-and-relations.ptx"/>
+
+  <xi:include href="./reading-questions/reading-questions-finitary-operations-and-relations.ptx"/>
+</section>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="reading-question-opposite-of-an-order" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Opposite of an order
+  </title>
+  
+  <idx>
+    opposite
+  </idx>
+  
+  <introduction>
+    <p>
+      Recall from <xref ref="problem-opposites-and-symmetry"/> that the <term> opposite </term> <m> \op{ R } </m> of a binary relation <m> R </m> on a set <m> X </m> is the binary relation defined by
+      
+      <md>
+        \op{ R } = \setmid{ \of{ x_{ 2 } , x_{ 1 } } \in X^{ 2 } }{ \of{ x_{ 1 } , x_{ 2 } } \in R }
+      </md>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that the opposite of a preorder is a preorder.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that the opposite of a partial order is a partial order.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that the opposite of a total order is a total order.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+</exercise>

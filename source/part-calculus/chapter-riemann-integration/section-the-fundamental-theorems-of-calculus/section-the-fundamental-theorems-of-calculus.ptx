@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-the-fundamental-theorems-of-calculus" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    The Fundamental Theorems of Calculus
+  </title>
+
+  <introduction>
+    <p>
+      Text before the first subsection.
+    </p>
+  </introduction>
+
+  <!-- <xi:include href="./subsection-TITLE.ptx"/> -->
+
+  <conclusion>
+    <p>
+      Text after the last subsection.
+    </p>
+  </conclusion>
+
+  <xi:include href="./exercises/exercises-the-fundamental-theorems-of-calculus.ptx"/>
+
+  <xi:include href="./reading-questions/reading-questions-the-fundamental-theorems-of-calculus.ptx"/>
+</section>

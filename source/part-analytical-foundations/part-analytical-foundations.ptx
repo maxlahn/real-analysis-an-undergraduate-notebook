@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<part xml:id="part-analytical-foundations" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Analytical Foundations
+  </title>
+
+  <xi:include href="./chapter-introductory-set-theory/chapter-introductory-set-theory.ptx"/>
+
+  <xi:include href="./chapter-constructing-the-number-systems/chapter-constructing-the-number-systems.ptx"/>
+</part>

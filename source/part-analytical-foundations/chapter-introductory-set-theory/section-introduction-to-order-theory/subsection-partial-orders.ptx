@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-partial-orders" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Partial Orders
+  </title>
+
+  <introduction>
+    <p>
+      We have seen that a finitary relation on a set can be viewed as elevating its elements as distinguished finite sequences in that set. Some binary relations on a set may be interpreted in this way as establishing an ordering, with the first entries of each distinguished ordered pair preceding the second entries in this ordering.
+    </p>
+    
+    <p>
+      What are the salient properties of the standard ordering of the natural numbers? We will see that, in order to establish a similar notion of ordering on a set, a given binary operation should satisfy similar properties. However, even if a binary operation satisfies some, but not all, of the desired properties, we will see that we can still interpret it as a weaker type of ordering relation. However, all ordering relations should, at the very least, satisfy reflexivity and transitivity. Such a reflexive and transitive binary operation is called a preorder.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-preorder">
+    <title>
+      Preorder
+    </title>
+    
+    <idx>
+      preorder
+    </idx>
+    
+    <idx>
+      reflexivity
+    </idx>
+    
+    <idx>
+      transitivity
+    </idx>
+    
+    <idx>
+      preordered set
+    </idx>
+    
+    <idx>
+      proset
+    </idx>
+    
+    <statement>
+      <p>
+        A binary relation <m> \precsim </m> on a set <m> X </m> is called a <term> preorder </term> if it is reflexive and transitive; that is, <m> \precsim </m> is a preorder if it satisfies the following conditions:
+        
+        <ol>
+          <li>
+            <title>
+              Reflexivity
+            </title>
+            
+            <p>
+              <m> x \precsim x </m> for all elements <m> x \in X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Transitivity
+            </title>
+            
+            <p>
+              For all elements <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in X </m>, if <m> x_{ 1 } \precsim x_{ 2 } </m> and <m> x_{ 2 } \precsim x_{ 3 } </m>, then <m> x_{ 1 } \precsim x_{ 3 } </m>.
+            </p>
+          </li>
+        </ol>
+        
+        If <m> \precsim </m> is a preorder on a set <m> X </m>, then the ordered pair <m> \of{ X , \precsim } </m> is called a <term> preordered set </term> (or a <term> proset </term>).
+      </p>
+    </statement>
+  </definition>
+  
+  <lemma xml:id="lemma-preorders-from-pullbacks">
+    <title>
+      Preorders from pullbacks
+    </title>
+    
+    <statement>
+      <p>
+        The pullback <m> \leq_{ f } </m> of the standard ordering <m> \leq </m> on the natural numbers <m> \N </m> along a function <m> f \colon X \to \N </m> on a set <m> X </m> is a preorder on <m> X </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        First let <m> x \in X </m>, and note that <m> f \of{ x } \leq f \of{ x } </m> by (1) of <xref ref="proposition-comparison-is-a-total-order"/>. In particular, <m> x \leq_{ f } x </m>, and so <m> \leq_{ f } </m> is reflexive.
+      </p>
+      
+      <p>
+        Now let <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in X </m>, and suppose that <m> x_{ 1 } \leq_{ f } x_{ 2 } </m> and <m> x_{ 2 } \leq_{ f } x_{ 3 } </m>. Then <m> f \of{ x_{ 1 } } \leq f \of{ x_{ 2 } } </m> and <m> f \of{ x_{ 2 } } \leq f \of{ x_{ 3 } } </m>, and so <m> f \of{ x_{ 1 } } \leq f \of{ x_{ 3 } } </m> by (3) of <xref ref="proposition-comparison-is-a-total-order"/>. In particular, <m> x_{ 1 } \leq_{ f } x_{ 3 } </m>, and so <m> \leq_{ f } </m> is transitive. Since <m> \leq_{ f } </m> is both reflexive and transitive, it is a preorder on <m> X </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <p>
+    It turns out that, at least relative to the standard ordering <m> \leq </m> of the natural numbers <m> \N </m>, the defining properties of a preorder are still too weak to be of much use in the general case. After all, an equivalence relation is just a symmetric preorder, and there is no way of meaningfully assigning a notion of an ordering based on an equivalence relation. This is because an equivalence relation is symmetric; in order to consider an ordering based on a binary operation, we would want to avoid any symmetry at all. Therefore, we must require that an ordering relation satisfy stronger assumptions.
+  </p>
+  
+  <definition xml:id="definition-partial-order">
+    <title>
+      Partial order
+    </title>
+    
+    <idx>
+      partial order
+    </idx>
+    
+    <statement>
+      <p>
+        A binary relation <m> \preceq </m> on a set <m> X </m> is called a <term> partial order </term> if it satisfies the following conditions:
+        
+        <ol>
+          <li>
+            <title>
+              Reflexivity
+            </title>
+            
+            <p>
+              <m> x \preceq x </m> for all elements <m> x \in X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Anti-symmetry
+            </title>
+            
+            <p>
+              For all elements <m> x_{ 1 } , x_{ 2 } \in X </m>, if <m> x_{ 1 } \preceq x_{ 2 } </m> and <m> x_{ 2 } \preceq x_{ 1 } </m>, then <m> x_{ 1 } = x_{ 2 } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Transitivity
+            </title>
+            
+            <p>
+              For all elements <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in X </m>, if <m> x_{ 1 } \preceq x_{ 2 } </m> and <m> x_{ 2 } \preceq x_{ 3 } </m>, then <m> x_{ 1 } \preceq x_{ 3 } </m>.
+            </p>
+          </li>
+        </ol>
+        
+        If <m> \preceq </m> is a partial order on a set <m> X </m>, then the ordered pair <m> \of{ X , \preceq } </m> is called a <term> partially ordered set </term> (or a <term> poset </term>).
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-partial-orders">
+    <title>
+      Partial orders
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of partial orders on sets:
+        
+        <ol>
+          <li>
+            <p>
+              The standard ordering <m> \leq </m> on the natural numbers <m> \N </m> is a partial order on <m> \N </m> by (1), (2), and (3) of <xref ref="proposition-comparison-is-a-total-order"/>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Containment <m> \subseteq </m> is a partial order on the power set <m> \ps \of{ X } </m> of a set <m> X </m> by <xref ref="definition-set-equality"/> and <xref ref="lemma-transitivity-of-set-containment"/>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </example>
+
+  <conclusion>
+    <p>
+      At the end of this section, we will explore a property of partial orders called <term> totality </term> which distinguishes between our touchstone examples of the standard ordering <m> \leq </m> of natural numbers and the containment <m> \subseteq </m> of sets.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->

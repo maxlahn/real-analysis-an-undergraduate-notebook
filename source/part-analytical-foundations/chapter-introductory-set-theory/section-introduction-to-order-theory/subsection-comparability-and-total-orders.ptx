@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-comparability-and-total-orders" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Comparability and Total Orders
+  </title>
+
+  <introduction>
+    <p>
+      The fact that the converse of <xref ref="proposition-extrema-are-extremal-elements"/> does not hold in general stems from the fact that in a partially ordered set, not all pairs of elements are comparable. That is, given two elements of a partially ordered set, it is not necessarily true that one will precede the other.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-comparability">
+    <title>
+      Comparability
+    </title>
+    
+    <idx>
+      comparability
+    </idx>
+    
+    <statement>
+      <p>
+        Two elements <m> x_{ 1 } , x_{ 2 } \in X </m> in a partially ordered set <m> \of{ X , \preceq } </m> are called <term> comparable </term> if either <m> x_{ 1 } \preceq x_{ 2 } </m> or <m> x_{ 2 } \preceq x_{ 1 } </m>, and <term> incomparable </term> otherwise.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    Any two natural numbers are comparable in the standard ordering. However, this is not true for partially ordered sets in general. As an example, consider the subsets <m> S = \set{ 0 , 1 } </m> and <m> T = \set{ 1 , 2 } </m> of the natural numbers <m> \N </m>. One can check that <m> S \not \subseteq T </m> and <m> T \not \subseteq S </m>, so that <m> S </m> and <m> T </m> are incomparable in the power set <m> \ps \of{ \N } </m> of the natural numbers <m> \N </m>. So partially ordered sets may have elements which are incomparable. This is the reason why partial orders are called partial; partial orders in which all elements are comparable are called <term> total </term>.
+  </p>
+  
+  <definition xml:id="definition-total-order">
+    <title>
+      Total order
+    </title>
+    
+    <idx>
+      totality
+    </idx>
+    
+    <idx>
+      total order
+    </idx>
+    
+    <idx>
+      totally ordered set
+    </idx>
+    
+    <statement>
+      <p>
+        A binary relation <m> \leq </m> on a set <m> X </m> is called a <term> total order </term> if it is anti-symmetric and transitive and each pair of elements is comparable; that is, <m> \leq </m> is a total order if it satisfies the following conditions:
+        
+        <ol>
+          <li>
+            <title>
+              Antisymmetry
+            </title>
+            
+            <p>
+              For all elements <m> x_{ 1 } , x_{ 2 } \in X </m>, if <m> x_{ 1 } \leq x_{ 2 } </m> and <m> x_{ 2 } \leq x_{ 1 } </m>, then <m> x_{ 1 } = x_{ 2 } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Transitivity
+            </title>
+            
+            <p>
+              For all elements <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in X </m>, if <m> x_{ 1 } \leq x_{ 2 } </m> and <m> x_{ 2 } \leq x_{ 3 } </m>, then <m> x_{ 1 } \leq x_{ 3 } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Totality
+            </title>
+            
+            <p>
+              For all elements <m> x_{ 1 } , x_{ 2 } \in X </m>, either <m> x_{ 1 } \leq x_{ 2 } </m> or <m> x_{ 2 } \leq x_{ 1 } </m>.
+            </p>
+          </li>
+        </ol>
+        
+        If <m> \leq </m> is a total order on a set <m> X </m>, then the ordered pair <m> \of{ X , \leq } </m> is called a <term> totally ordered set </term>.
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-total-order">
+    <title>
+      Total order
+    </title>
+    
+    <statement>
+      <p>
+        The standard ordering <m> \leq </m> on the natural numbers <m> \N </m> is a total order by (2), (3), and (4) of <xref ref="proposition-comparison-is-a-total-order"/>.
+      </p>
+    </statement>
+  </example>
+  
+  <lemma xml:id="lemma-total-orders-are-partial-orders">
+    <title>
+      Total orders are partial orders
+    </title>
+    
+    <statement>
+      <p>
+        Every total order on a set <m> X </m> is a partial order on <m> X </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \leq </m> be a total order on a set <m> X </m>. Since <m> \leq </m> is antisymmetric and transitive, it remains to show that <m> \leq </m> is reflexive. To that end, let <m> x \in X </m>, and note that totality implies that either <m> x \leq x </m> or <m> x \leq x </m>; that is <m> \leq </m> is reflexive (and hence a partial order on <m> X </m>).
+      </p>
+    </proof>
+  </lemma>
+  
+  <proposition xml:id="proposition-extremal-elements-are-extrema-in-totally-ordered-sets">
+    <title>
+      Extremal elements are extrema in totally ordered sets
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \preceq </m> be a total order on a set <m> X </m>.
+        
+        <ol>
+          <li>
+            <p>
+              If <m> X </m> contains a maximal element <m> e \in X </m>, then <m> e = \max \of{ X } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              If <m> X </m> contains a minimal element <m> e \in X </m>, then <m> e = \min \of{ X } </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            Suppose that <m> e \in X </m> is a maximal element, and let <m> x \in X </m>. Totality implies that <m> x \leq e </m> or <m> e \leq x </m>. If <m> e \leq x </m>, then maximality implies that <m> x = e </m>, so that <m> x \leq e </m> by reflexivity. Thus <m> e \leq x </m> for all <m> x \in X </m>, and so <m> \max \of{ X } = e </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Now suppose that <m> e \in X </m> is a minimal element, and let <m> x \in X </m>. Totality implies that <m> x \leq e </m> or <m> e \leq x </m>. If <m> x \leq e </m>, then minimality implies that <m> x = e </m>, so that <m> e \leq x </m> by reflexivity. Thus <m> x \leq e </m> for all <m> x \in X </m>, and so <m> \min \of{ X } = e </m>.
+          </p>
+        </li> 
+      </ol>
+    </proof>
+  </proposition>
+  
+  <p>
+    We end with an important property of the standard ordering <m> \leq </m> on the natural numbers <m> \N </m> related to the axiom of induction.
+  </p>
+  
+  <theorem xml:id="theorem-well-ordering-principle">
+    <title>
+      Well-ordering principle
+    </title>
+    
+    <statement>
+      <p>
+        Every non-empty subset of the natural numbers <m> \N </m> has a minimum.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> U \subseteq \N </m> be a subset of the natural numbers <m> \N </m>, and suppose that <m> U </m> does not have a minimum. We proceed by strong induction on <m> n \in \N </m> to show that <m> n \notin U </m>.
+      </p>
+        
+      <case>
+        <title>
+          Base case
+        </title>
+        
+        <p>
+          Suppose that <m> n = 0 </m>, and suppose for a contradiction that <m> n \in U </m>. Since <m> 0 \leq n </m> for all natural numbers <m> n \in \N </m> by <xref ref="lemma-zero-is-minimal"/> and (2) of <xref ref="proposition-extremal-elements-are-extrema-in-totally-ordered-sets"/>, then <m> n = \min \of{ U } </m>. This contradiction implies that <m> n \notin U </m>.
+        </p>
+      </case>
+      
+      <case>
+        <title>
+          Inductive step
+        </title>
+        
+        <p>
+          Suppose for the inductive hypothesis that there is some natural number <m> n \in \N </m> so that <m> k \notin U </m> for all natural numbers <m> k \in \N </m> so that <m> 0 \leq k \leq n </m>. Suppose for a contradiction that <m> n + 1 \in U </m>, and let <m> u \in U </m>. Totality implies that either <m> u \leq n </m> or <m> n \leq u </m>. The inductive hypothesis implies that <m> u \not \leq n </m>, so that <m> n \leq u </m>.
+        </p>
+        
+        <p>
+          So <m> u = n + p </m> for some natural number <m> p \in \N </m>. If <m> p = 0 </m>, then
+          
+          <md>
+            n = n + 0 = n + p = u \in U
+          </md>,
+          
+          and so <m> p \neq 0 </m>. Thus <m> p = q + 1 </m> for some natural number <m> q \in \N </m>, and so
+          
+          <md>
+            n + 1 \leq n + q + 1 = n + p = u
+          </md>.
+          
+          In summary, we have shown that <m> n + 1 \leq u </m> for all <m> u \in U </m>, so that <m> \min \of{ U } = n + 1 </m>. This contradiction implies that <m> n + 1 \notin U </m>.
+        </p>
+      </case>
+      
+      <p>
+        We conclude that <m> n \notin U </m> for all natural numbers <m> n \in \N </m>, and so <m> U = \emptyset </m>.
+      </p>
+    </proof>
+  </theorem>
+
+  <conclusion>
+    <p>
+      The <xref ref="theorem-well-ordering-principle" text="title"/> is sometimes taken to be an axiom and sometimes derived from the axiom of induction as in the above proof. In fact, these results are logically equivalent, as one can derive the axiom of induction from the <xref ref="theorem-well-ordering-principle" text="title"/>.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->

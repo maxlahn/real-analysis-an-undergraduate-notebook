@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chapter-topological-spaces" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Topological Spaces
+  </title>
+
+  <introduction>
+    <p>
+      Text before the first section.
+    </p>
+  </introduction>
+
+  <xi:include href="./section-introduction-to-topology/section-introduction-to-topology.ptx"/>
+
+  <xi:include href="./section-comparison-of-topologies/section-comparison-of-topologies.ptx"/>
+
+  <xi:include href="./section-convergence-and-separation/section-convergence-and-separation.ptx"/>
+
+  <xi:include href="./section-continuity-in-topological-spaces/section-continuity-in-topological-spaces.ptx"/>
+
+  <xi:include href="./section-connectedness-and-compactness/section-connectedness-and-compactness.ptx"/>
+
+  <conclusion>
+    <p>
+      Text after the last section.
+    </p>
+  </conclusion>
+</chapter>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chapter-differentiation-and-smoothness" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Differentiation and Smoothness
+  </title>
+
+  <introduction>
+    <p>
+      Text before the first section.
+    </p>
+  </introduction>
+
+  <xi:include href="./section-differentiability/section-differentiability.ptx"/>
+
+  <xi:include href="./section-the-mean-value-theorem/section-the-mean-value-theorem.ptx"/>
+
+  <xi:include href="./section-applications-of-the-mean-value-theorem/section-applications-of-the-mean-value-theorem.ptx"/>
+
+  <xi:include href="./section-higher-order-derivatives/section-higher-order-derivatives.ptx"/>
+
+  <conclusion>
+    <p>
+      Text after the last section.
+    </p>
+  </conclusion>
+</chapter>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chapter-metric-spaces" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Metric Spaces
+  </title>
+
+  <introduction>
+    <p>
+      Text before the first section.
+    </p>
+  </introduction>
+
+  <xi:include href="./section-introduction-to-metric-geometry/section-introduction-to-metric-geometry.ptx"/>
+
+  <xi:include href="./section-convergence-and-limits/section-convergence-and-limits.ptx"/>
+
+  <xi:include href="./section-limits-in-the-euclidean-metric/section-limits-in-the-euclidean-metric.ptx"/>
+
+  <xi:include href="./section-open-and-closed-sets/section-open-and-closed-sets.ptx"/>
+
+  <xi:include href="./section-notions-of-metric-continuity/section-notions-of-metric-continuity.ptx"/>
+
+  <xi:include href="./section-completeness-and-compactness/section-completeness-and-compactness.ptx"/>
+
+  <conclusion>
+    <p>
+      Text after the last section.
+    </p>
+  </conclusion>
+</chapter>

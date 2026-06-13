@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="reading-question-opposites-and-symmetry" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Opposites and symmetry
+  </title>
+  
+  <introduction>
+    <p>
+      The <term> opposite </term> <m> \op{ R } </m> of a binary relation <m> R </m> on a set <m> X </m> is the binary relation on <m> R </m> defined by
+      
+      <md>
+        \op{ R } = \setmid{ \of{ x_{ 2 } , x_{ 1 } } \in X^{ 2 } }{ \of{ x_{ 1 } , x_{ 2 } } \in R }
+      </md>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that <m> \op{ \of{ \op{ R } } } = R </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that <m> R </m> is symmetric if and only if <m> \op{ R } = R </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+</exercise>

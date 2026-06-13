@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-constructing-the-real-numbers" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Constructing the Real Numbers
+  </title>
+
+  <introduction>
+    <p>
+      Text before the first subsection.
+    </p>
+  </introduction>
+
+  <!-- <xi:include href="./subsection-TITLE.ptx"/> -->
+
+  <conclusion>
+    <p>
+      Text after the last subsection.
+    </p>
+  </conclusion>
+
+  <xi:include href="./exercises/exercises-constructing-the-real-numbers.ptx"/>
+
+  <xi:include href="./reading-questions/reading-questions-constructing-the-real-numbers.ptx"/>
+</section>

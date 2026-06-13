@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chapter-infinite-series" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Infinite Series
+  </title>
+
+  <introduction>
+    <p>
+      Text before the first section.
+    </p>
+  </introduction>
+
+  <xi:include href="./section-partial-sums-and-infinite-series/section-partial-sums-and-infinite-series.ptx"/>
+
+  <xi:include href="./section-tests-for-series-convergence/section-tests-for-series-convergence.ptx"/>
+
+  <xi:include href="./section-power-series/section-power-series.ptx"/>
+
+  <xi:include href="./section-analytic-functions/section-analytic-functions.ptx"/>
+
+  <conclusion>
+    <p>
+      Text after the last section.
+    </p>
+  </conclusion>
+</chapter>

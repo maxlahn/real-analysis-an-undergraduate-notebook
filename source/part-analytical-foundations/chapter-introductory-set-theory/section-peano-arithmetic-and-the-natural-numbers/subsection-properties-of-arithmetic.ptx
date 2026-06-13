@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-properties-of-arithmetic" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Properties of Arithmetic
+  </title>
+
+  <introduction>
+    <p>
+      The axioms of Peano arithmetic actually imply a great deal about the properties of the natural number system. We will now state and prove a great deal of results about the successor function and the addition and multiplication operators. Many of these results will give us practice in the fundamental skill of proof by induction, and we will use these results implicitly for the rest of this text.
+    </p>
+  </introduction>
+  
+  <proposition xml:id="proposition-associativity-of-addition">
+    <title>
+      Associativity of addition
+    </title>
+    
+    <statement>
+      <p>
+        <m> \of{ l + m } + n = l + \of{ m + n } </m> for all natural numbers <m> l , m , n \in \N </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> l , m \in \N </m> be natural numbers. We proceed by induction on <m> n \in \N </m> to show that <m> \of{ l + m } + n = l + \of{ m + n } </m>.
+        
+        <case>
+          <title>
+            Base case
+          </title>
+          
+          <p>
+            If <m> n = 0 </m>, then
+            
+            <md>
+              \of{ l + m } + n = \of{ l + m } + 0 = l + m = l + \of{ m + 0 } = l + \of{ m + n }
+            </md>.
+          </p>
+        </case>
+        
+        <case>
+          <title>
+            Inductive step
+          </title>
+          
+          <p>
+            Now suppose for the inductive hypothesis that <m> \of{ l + m } + n = l + \of{ m + n } </m> for some natural number <m> n \in \N </m>, and note that
+            
+            <md>
+              <mrow>
+                \of{ l + m } + \of{ n + 1 } \amp = \of{ \of{ l + m } + n } + 1 = \of{ \ell + \of{ m + n } } + 1
+              </mrow>
+              
+              <mrow>
+                \amp = \ell + \of{ \of{ m + n } + 1 } = \ell + \of{ m + \of{ n + 1 } }
+              </mrow>
+            </md>.
+          </p>
+        </case>
+        
+        We conclude that <m> \of{ l + m } + n = l + \of{ m + n } </m> for all natural numbers <m> n \in \N </m>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    One consequence of <xref ref="proposition-associativity-of-addition"/> is that we may unambiguously parse expressions with multiple sums without the need of parentheses; for example,if <m> l , m , n \in \N </m> are natural numbers, then the expression <m> l + m + n </m> is well-defined, because
+    
+    <md>
+      \of{ l + m } + n = l + \of{ m + n }
+    </md>.
+    
+    Going forward, we will make use of these expressions wherever it is possible to do so without obscuring the relevant arguments.
+  </p>
+  
+  <p>
+    <xref ref="proposition-associativity-of-addition"/> implies that the result of adding a finite number of natural numbers depends only on the order of the numbers from left to right, and not on the iterative structure of the summands induced by parentheses. In fact, the order of the summands does not matter either. In order to show this, it helps to notice the following two results about addition.
+  </p>
+  
+  <lemma xml:id="lemma-addition-by-zero">
+    <title>
+      Addition by <m> 0 </m>
+    </title>
+    
+    <statement>
+      <p>
+        <m> n + 0 = 0 + n = n </m> for all natural numbers <m> n \in \N </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        <m> n + 0 = n </m> for all natural numbers <m> n \in \N </m> by the Peano axioms, and so it suffices to show <m> 0 + n = n </m>. We proceed by induction on <m> n \in \N </m>.
+        
+        <case>
+          <title>
+            Base case
+          </title>
+          
+          <p>
+            If <m> n = 0 </m>, then
+            
+            <md>
+              0 + n = 0 + 0 = 0 = n
+            </md>.
+          </p>
+        </case>
+        
+        <case>
+          <title>
+            Inductive step
+          </title>
+          
+          <p>
+            Now suppose for the inductive hypothesis that <m> 0 + n = n </m> for some natural number <m> n \in \N </m>, and note that
+            
+            <md>
+              0 + \of{ n + 1 } = \of{ 0 + n } + 1 = n + 1
+            </md>.
+          </p>
+        </case>
+        
+        We conclude that <m> 0 + n = n </m> for all natural numbers <m> n \in \N </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <lemma xml:id="lemma-towards-commutativity-of-addition">
+    <title>
+      Towards commutativity of addition
+    </title>
+    
+    <statement>
+      <p>
+        <m> 1 + n = n + 1 </m> for all natural numbers <m> n \in \N </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        By induction on <m> n \in \N </m>.
+        
+        <case>
+          <title>
+            Base case
+          </title>
+          
+          <p>
+            If <m> n = 0 </m>, then
+            
+            <md>
+              1 + n = 1 + 0 = 0 + 1 = n + 1
+            </md>
+            
+            by <xref ref="lemma-addition-by-zero"/>.
+          </p>
+        </case>
+        
+        <case>
+          <title>
+            Inductive step
+          </title>
+          
+          <p>
+            Now suppose for the inductive hypothesis that <m> 1 + n = n + 1 </m> for some natural number <m> n \in \N </m>, and note that
+            
+            <md>
+              1 + \of{ n + 1 } = \of{ 1 + n } + 1 = \of{ n + 1 } + 1
+            </md>
+            
+            by <xref ref="proposition-associativity-of-addition"/>.
+          </p>
+        </case>
+        
+        We conclude that <m> 1 + n = n + 1 </m> for all natural numbers <m> n \in \N </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <proposition xml:id="proposition-commutativity-of-addition">
+    <title>
+      Commutativity of addition
+    </title>
+    
+    <statement>
+      <p>
+        <m> m + n = n + m </m> for all natural numbers <m> m , n \in \N </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> m \in \N </m> be a natural number. We proceed by induction on <m> n \in \N </m>.
+        
+        <case>
+          <title>
+            Base case
+          </title>
+          
+          <p>
+            If <m> n = 0 </m>, then
+            
+            <md>
+              m + n = m + 0 = m = 0 + m = n + m
+            </md>
+            
+            by <xref ref="lemma-addition-by-zero"/>.
+          </p>
+        </case>
+        
+        <case>
+          <title>
+            Inductive step
+          </title>
+          
+          <p>
+            Now suppose for the inductive hypothesis that <m> m + n = n + m </m> for some natural number <m> n \in \N </m>, and note that
+            
+            <md>
+              <mrow>
+                m + \of{ n + 1 } \amp = \of{ m + n } + 1 = \of{ n + m } + 1 = 1 + \of{ n + m }
+              </mrow>
+              
+              <mrow>
+                \amp = \of{ 1 + n } + m = \of{ n + 1 } + m
+              </mrow>
+            </md>
+            
+            by <xref ref="proposition-associativity-of-addition"/> and <xref ref="lemma-towards-commutativity-of-addition"/>.
+          </p>
+        </case>
+        
+        We conclude that <m> m + n = n + m </m> for all natural numbers <m> n \in \N </m>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    <xref ref="proposition-associativity-of-addition"/> and <xref ref="proposition-commutativity-of-addition"/> together imply that, when adding natural numbers, neither the order of the summands nor the order of the addition operations performed matters. In order to see that analogous properties also hold for multiplication, we will require the following supporting results. Along the way, we will also prove the distributivity of multiplication over addition.
+  </p>
+  
+  <lemma xml:id="lemma-multiplication-by-one">
+    <title>
+      Multiplication by <m> 1 </m>
+    </title>
+    
+    <statement>
+      <p>
+        <m> n \cdot 1 = n </m> and <m> 1 n = n </m> for all natural numbers <m> n \in \N </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        For all natural numbers <m> n \in \N </m>,
+        
+        <md>
+          n \cdot 1 = n \of{ 0 + 1 } = \of{ n \cdot 0 } + n = 0 + n = 0
+        </md>
+        
+        by <xref ref="lemma-addition-by-zero"/>. Thus it suffices to prove that <m> 1 n = n </m> for all natural numbers <m> n \in \N </m>. We proceed by induction on <m> n \in \N </m>.
+        
+        <case>
+          <title>
+            Base case
+          </title>
+          
+          <p>
+            If <m> n = 0 </m>, then
+            
+            <md>
+              1 n = 1 \cdot 0 = 0 = n
+            </md>.
+          </p>
+        </case>
+        
+        <case>
+          <title>
+            Inductive step
+          </title>
+          
+          <p>
+            Now suppose for the inductive hypothesis that <m> 1 n = n </m> for some natural number <m> n \in \N </m>, and note that
+            
+            <md>
+              1 \of{ n + 1 } = 1 n + 1 = n + 1
+            </md>.
+          </p>
+        </case>
+        
+        We conclude that <m> 1 n = n </m> for all natural numbers <m> n \in \N </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <proposition xml:id="proposition-left-distributivity-of-multiplication-over-addition">
+    <title>
+      Left distributivity of multiplication over addition
+    </title>
+    
+    <statement>
+      <p>
+        <m> l \of{ m + n } = l m + l n </m> for all natural numbers <m> l , m , n \in \N </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> l , m \in \N </m> be natural numbers. We proceed by induction on <m> n \in \N </m>.
+        
+        <case>
+          <title>
+            Base case
+          </title>
+          
+          <p>
+            If <m> n = 0 </m>, then
+            
+            <md>
+              l \of{ m + n } = l \of{ m + 0 } = l m = l m + 0 = l m + l \cdot 0 = l m + l n
+            </md>.
+          </p>
+        </case>
+        
+        <case>
+          <title>
+            Inductive step
+          </title>
+          
+          <p>
+            Now suppose for the inductive hypothesis that <m> l \of{ m + n } = l m + l n </m> for some natural number <m> n \in \N </m>, and note that
+            
+            <md>
+              <mrow>
+                l \of{ m + \of{ n + 1 } } \amp = l \of{ \of{ m + n } + 1 } = l \of{ m + n } + l
+              </mrow>
+              
+              <mrow>
+                \amp = \of{ l m + l n } + l = l m + \of{ l n + l } = l m + l \of{ n + 1 }
+              </mrow>
+            </md>
+            
+            by <xref ref="proposition-associativity-of-addition"/>.
+          </p>
+        </case>
+        
+        We conclude that <m> l \of{ m + n } = l m + l n </m> for all natural numbers <m> n \in \N </m>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <proposition xml:id="proposition-associativity-of-multiplication">
+    <title>
+      Associativity of multiplication
+    </title>
+    
+    <statement>
+      <p>
+        <m> \of{ l m } n = l \of{ m n } </m> for all natural numbers <m> l , m , n \in \N </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> l , m \in \N </m> be natural numbers. We proceed by induction on <m> n \in \N </m>.
+        
+        <case>
+          <title>
+            Base case
+          </title>
+          
+          <p>
+            If <m> n = 0 </m>, then
+            
+            <md>
+              \of{ l m } n = \of{ l m } 0 = 0 = l \cdot 0 = l \of{ m \cdot 0 } = l \of{ m n }
+            </md>.
+          </p>
+        </case>
+        
+        <case>
+          <title>
+            Inductive step
+          </title>
+          
+          <p>
+            Now suppose for the inductive hypothesis that <m> \of{ l m } n = l \of{ m n } </m> for some natural number <m> n \in \N </m>, and note that
+            
+            <md>
+              <mrow>
+                \of{ l m } \of{ n + 1 } \amp = \of{ l m } n + l m = l \of{ m n } + l m = 
+              </mrow>
+              
+              <mrow>
+                \amp = l \of{ m n + m } = l \of{ m \of{ n + 1 } }
+              </mrow>
+            </md>
+            
+            by <xref ref="proposition-left-distributivity-of-multiplication-over-addition"/>.
+          </p>
+        </case>
+        
+        We conclude that <m> \of{ l m } n = l \of{ m n } </m> for all natural numbers <m> n \in \N </m>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    Just as with addition, one consequence of <xref ref="proposition-associativity-of-multiplication"/> is that we may unambiguously parse expressions with multiple products without the need of parentheses; for example,if <m> l , m , n \in \N </m> are natural numbers, then the expression <m> l m n </m> is well-defined, because
+    
+    <md>
+      \of{ l m } n = l \of{ m n }
+    </md>.
+    
+    Going forward, we will make use of these expressions wherever it is possible to do so without obscuring the relevant arguments.
+  </p>
+  
+  <proposition xml:id="proposition-right-distributivity-of-multiplication-over-addition">
+    <title>
+      Right distributivity of multiplication over addition
+    </title>
+    
+    <statement>
+      <p>
+        <m> \of{ l + m } n = l n + m n </m> for all natural numbers <m> l , m , n \in \N </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> l , m \in \N </m> be natural numbers. We proceed by induction on <m> n \in \N </m>.
+        
+        <case>
+          <title>
+            Base case
+          </title>
+          
+          <p>
+            If <m> n = 0 </m>, then
+            
+            <md>
+              \of{ l + m } n = \of{ l + m } \cdot 0 = 0 = 0 + 0 = l \cdot 0 + m \cdot 0 = l n + m n
+            </md>.
+          </p>
+        </case>
+        
+        <case>
+          <title>
+            Inductive step
+          </title>
+          
+          <p>
+            Now suppose for the inductive hypothesis that <m> \of{ l + m } n = l n + m n </m> for some natural number <m> n \in \N </m>, and note that
+            
+            <md>
+              <mrow>
+                \of{ l + m } \of{ n + 1 } = \of{ l + m } n + \of{ l + m } = l n + l + m n + m 
+              </mrow>
+              
+              <mrow>
+                \amp = l \of{ n + 1 } + m \of{ n + 1 }
+              </mrow>
+            </md>
+            
+            by repeated applications of <xref ref="proposition-associativity-of-addition"/> and <xref ref="proposition-commutativity-of-addition"/>.
+          </p>
+        </case>
+        
+        We conclude that <m> \of{ l + m } n = l n + m n </m> for all natural numbers <m> n \in \N </m>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <lemma xml:id="lemma-multiplication-by-zero">
+    <title>
+      Multiplication by <m> 0 </m>
+    </title>
+    
+    <statement>
+      <p>
+        <m> 0 n = 0 </m> for all natural numbers <m> n \in \N </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        By induction on <m> n \in \N </m>.
+        
+        <case>
+          <title>
+            Base case
+          </title>
+          
+          <p>
+            If <m> n = 0 </m>, then
+            
+            <md>
+              0 n = 0 \cdot 0 = 0
+            </md>.
+          </p>
+        </case>
+        
+        <case>
+          <title>
+            Inductive step
+          </title>
+          
+          <p>
+            Now suppose for the inductive hypothesis that <m> 0 n = 0 </m> for some natural number <m> n \in \N </m>, and note that
+            
+            <md>
+              0 \of{ n + 1 } = 0 n + 0 = 0 + 0 = 0
+            </md>.
+          </p>
+        </case>
+        
+        We conclude that <m> 0 n = 0 </m> for all natural numbers <m> n \in \N </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <proposition xml:id="proposition-commutativity-of-multiplication">
+    <title>
+      Commutativity of multiplication
+    </title>
+    
+    <statement>
+      <p>
+        <m> m n = n m </m> for all natural numbers <m> m , n \in \N </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> m \in \N </m> be a natural number. We proceed by induction on <m> n \in \N </m>.
+        
+        <case>
+          <title>
+            Base case
+          </title>
+          
+          <p>
+            If <m> n = 0 </m>, then
+            
+            <md>
+              m n = m \cdot 0 = 0 = 0 \cdot m = n m
+            </md>
+            
+            by <xref ref="lemma-multiplication-by-zero"/>.
+          </p>
+        </case>
+        
+        <case>
+          <title>
+            Inductive step
+          </title>
+          
+          <p>
+            Now suppose for the inductive hypothesis that <m> m n = n m </m> for some natural number <m> n \in \N </m>, and note that
+            
+            <md>
+              m \of{ n + 1 } = m n + m = n m + 1 m = \of{ n + 1 } m
+            </md>
+            
+            by <xref ref="lemma-multiplication-by-one"/>
+          </p>
+        </case>
+        
+        We conclude that <m> m n = n m </m> for all natural numbers <m> n \in \N </m>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <lemma xml:id="lemma-cancellation-of-addition">
+    <title>
+      Cancellation of addition
+    </title>
+    
+    <statement>
+      <p>
+        For all natural numbers <m> n \in \N </m>, addition by <m> n </m> is injective; that is, for all natural numbers <m> l , m , n \in \N </m>, if <m> l + n = m + n </m>, then <m> l = m </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> l , m \in \N </m> be natural numbers. We proceed by induction on <m> n \in \N </m>.
+        
+        <case>
+          <title>
+            Base case
+          </title>
+          
+          <p>
+            If <m> n = 0 </m> and <m> l + n = m + n </m>, then
+            
+            <md>
+              l = l + 0 = l + n = m + n = m + 0 = m
+            </md>
+          </p>
+        </case>
+        
+        <case>
+          <title>
+            Inductive step
+          </title>
+          
+          <p>
+            Now suppose for the inductive hypothesis that there is some natural number <m> n \in \N </m> so that if <m> l + n = m + n </m>, then <m> l = m </m>. Note that if <m> l + \of{ n + 1 } = m + \of{ n + 1 } </m>, then
+            
+            <md>
+              \of{ l + n } + 1 = l + \of{ n + 1 } = m + \of{ n + 1 } = \of{ m + n } + 1
+            </md>,
+            
+            and so <m> l + n = m + n </m> by the injectivity of the successor function. Thus <m> l = m </m> by the inductive hypothesis. In summary, we have shown that if <m> l + \of{ n + 1 } = m + \of{ n + 1 } </m>, then <m> l = m </m>.
+          </p>
+        </case>
+        
+        We conclude that for all natural numbers <m> n \in \N </m>, if <m> l + n = m + n </m>, then <m> l = m </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <conclusion>
+    <p>
+      A similar cancellation law exists for multiplication, but its proof will require some properties of the comparison of natural numbers via its standard ordering.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chapter-constructing-the-number-systems" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Constructing the Number Systems
+  </title>
+
+  <introduction>
+    <p>
+      Text before the first section.
+    </p>
+  </introduction>
+
+  <xi:include href="./section-the-integers-and-rational-numbers/section-the-integers-and-rational-numbers.ptx"/>
+
+  <xi:include href="./section-constructing-the-real-numbers/section-constructing-the-real-numbers.ptx"/>
+
+  <xi:include href="./section-the-complete-ordered-field/section-the-complete-ordered-field.ptx"/>
+
+  <xi:include href="./section-beyond-the-real-number-system/section-beyond-the-real-number-system.ptx"/>
+
+  <conclusion>
+    <p>
+      Text after the last section.
+    </p>
+  </conclusion>
+</chapter>

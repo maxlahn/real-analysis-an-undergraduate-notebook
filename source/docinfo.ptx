@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+  <document-id>
+    lahnrealanalysis
+  </document-id>
+  
+  <!-- A brief description for the book in a catalog; see the links above. The @shelf is used only when publishing to Runestone; see https://runestone.academy/ns/books/index for a list of valid values. You must copy these @shelf names exactly, including capitalization. -->
+  <blurb shelf="AP Computer Science">
+    A simple string (no markup is allowed) to describe your book.
+  </blurb>
+
+  <!-- The next three lines are likely for mature projects only: -->
+  <!-- <brandlogo url="" source="images/cover.png"/> -->
+  <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+  <!-- <document-id>unique-book-id</document-id> -->
+
+  <!-- macros for defining latex math shortcuts. It is good practice -->
+  <!-- to define these semantically, so that the macro relates to what-->
+  <!-- it defines. -->
+  <macros>
+    <!-- PAIRED DELIMITERS -->
+      <!-- Standard paired delimiters -->
+      \newcommand{\of}[1]{ \left ( #1 \right ) } <!-- Parentheses -->
+      
+      \newcommand{\class}[1]{ \left \lbrack { #1 } \right \rbrack } <!-- Square brackets -->
+      
+      \newcommand{\set}[1]{ \left \lbrace #1 \right \rbrace } <!-- Curly braces -->
+      \newcommand{\setmid}[2]{ \left \lbrace { #1 } \: \middle \vert \: { #2 } \right \rbrace }
+      
+      \newcommand{\abs}[1]{ \left \lvert { #1 } \right \rvert } <!-- Absolute value bars -->
+      \newcommand{\card}[1]{ \left \lvert { #1 } \right \rvert } <!-- Cardinality bars -->
+      
+      \newcommand{\norm}[1]{ \left \lVert { #1 } \right \rVert } <!-- Norm bars -->
+      
+      \newcommand{\gen}[1]{ \left \langle { #1 } \right \rangle } <!-- Angle braces -->
+      \newcommand{\genmid}[2]{ \left \langle { #1 } \: \middle \vert \: { #2 } \right \rangle }
+      
+      \newcommand{\ceil}[1]{ \left \lceil { #1 } \right \rceil } <!-- Ceiling brackets -->
+      
+      \newcommand{\floor}[1]{ \left \lfloor { #1 } \right \rfloor } <!-- Floor brackets -->
+      
+      \newcommand{\doubleclass}[1]{ \left \llbrack { #1 } \right \rrbrack } <!-- Ceiling brackets -->
+    
+      <!-- Intervals -->
+      \newcommand{\opint}[2]{ \left ( { #1 } , { #2 } \right ) } <!-- Open interval -->
+      
+      \newcommand{\clint}[2]{ \left \lbrack { #1 } , { #2 } \right \rbrack } <!-- Closed interval -->
+      
+      \newcommand{\opclint}[2]{ \left ( { #1 } , { #2 } \right \rbrack } <!-- Half-open, half-closed interval -->
+      
+      \newcommand{\clopint}[2]{ \left \lbrack { #1 } , { #2 } \right ) } <!-- Half-closed, half-open interval -->
+    
+      <!-- Other miscellaneous delimiters -->
+      \newcommand{\inner}[2]{ \left \langle { #1 } , { #2 } \right \rangle } <!-- Inner product -->
+      
+      \newcommand{\comm}[2]{ \left \lbrack { #1 } , { #2 } \right \rbrack } <!-- Commutator -->
+      
+      \newcommand{\ind}[2]{ \left \lbrack { #1 } : { #2 } \right \rbrack } <!-- Index of a subgroup/degree of a field extension -->
+      
+      \newcommand{\bra}[1]{ \left \langle { #1 } \right \rvert } <!-- Bra covector -->
+      
+      \newcommand{\ket}[1]{ \left \lvert { #1 } \right \rangle } <!-- Ket vector -->
+      
+      \newcommand{\braket}[2]{ \left \langle { #1 } \: \middle \vert \: { #2 } \right \rangle } <!-- Bra-ket notation -->
+      
+      \newcommand{\rest}[1]{ \left . { #1 } \right \vert } <!-- Restriction/evaluation bar -->
+    
+    <!-- COMMON SETS AND SPACES -->
+      <!-- Common Number Systems -->
+      \newcommand{\N}{ \mathbb{ N } } <!-- Natural numbers -->
+      
+      \newcommand{\Z}{ \mathbb{ Z } } <!-- Integers -->
+      
+      \newcommand{\Q}{ \mathbb{ Q } } <!-- Rational numbers -->
+      
+      \newcommand{\R}{ \mathbb{ R } } <!-- Real numbers -->
+      
+      \newcommand{\C}{ \mathbb{ C } } <!-- Complex numbers -->
+      
+      \newcommand{\Quat}{ \mathbb{ H } } <!-- Quaternions -->
+      
+      \newcommand{\Oct}{ \mathbb{ O } } <!-- Octonions -->
+      
+      \newcommand{\F}{ \mathbb{ F } } <!-- Abstract/finite field -->
+      
+      <!-- Common topological and geometric spaces -->
+      \newcommand{\Euc}{ \mathbb{ E } } <!-- Euclidean space -->
+      
+      \newcommand{\Sph}{ \mathbb{ S } } <!-- Sphere -->
+      
+      \newcommand{\Hyp}{ \mathbb{ H } } <!-- Hyperbolic space -->
+      
+      \newcommand{\B}{ \mathbb{ B } } <!-- Open ball -->
+      
+      \newcommand{\D}{ \mathbb{ D } } <!-- Closed disk -->
+      
+      \newcommand{\I}{ \mathbb{ I } } <!-- Interval/cube -->
+      
+      \newcommand{\T}{ \mathbb{ T } } <!-- Torus -->
+      
+      \newcommand{\RP}{ \mathbb{ RP } } <!-- Real projective space -->
+      
+      \newcommand{\CP}{ \mathbb{ CP } } <!-- Complex projective space -->
+      
+      \newcommand{\HP}{ \mathbb{ HP } } <!-- Quaternionic projective space -->
+      
+      \newcommand{\Proj}{ \mathbb{ P } } <!-- Projectivization -->
+    
+    <!-- ALGEBRAIC MACROS -->
+      <!-- Morphism macros -->
+      \DeclareMathOperator{\dom}{ dom } <!-- Domain -->
+      
+      \DeclareMathOperator{\codom}{ codom } <!-- Codomain -->
+      
+      \DeclareMathOperator{\im}{ im } <!-- Image -->
+      
+      \DeclareMathOperator{\coim}{ coim } <!-- Coimage -->
+      
+      <!-- Kernel already defined -->
+      
+      \DeclareMathOperator{\coker}{ coker } <!-- Cokernel -->
+      
+      <!-- Group-theoretic macros -->
+      \DeclareMathOperator{\ord}{ ord } <!-- Order -->
+      
+      \newcommand{\nslt}{ \mathrel{ \lhd } } <!-- Proper normal subgroup -->
+      
+      \newcommand{\nsgt}{ \mathrel{ \rhd } } <!-- Proper normal overgroup -->
+      
+      \newcommand{\nsleq}{ \mathrel{ \unlhd } } <!-- Normal subgroup -->
+      
+      \newcommand{\nsgeq}{ \mathrel{ \unrhd } } <!-- Normal overgroup -->
+      
+      \DeclareMathOperator{\Cent}{ Z } <!-- Center -->
+      
+      \DeclareMathOperator{\Centz}{ C } <!-- Centralizer -->
+      
+      \DeclareMathOperator{\Normz}{ N } <!-- Normalizer -->
+      
+      \DeclareMathOperator{\stabz}{ stab } <!-- Stabilizer -->
+      
+      \DeclareMathOperator{\Fix}{ Fix } <!-- Fixed point set -->
+      
+      \DeclareMathOperator{\Cay}{ Cay } <!-- Cayley graph -->
+      
+      \DeclareMathOperator{\Sch}{ Sch } <!-- Schreier graph -->
+      
+      <!-- Common groups -->
+      \newcommand{\CycGrp}[1]{ \mathrm{ C }_{ #1 } } <!-- Cyclic group -->
+      
+      \newcommand{\SymGrp}[1]{ \mathrm{ S }_{ #1 } } <!-- Symmetric group -->
+      
+      \newcommand{\AltGrp}[1]{ \mathrm{ A }_{ #1 } } <!-- Alternating group -->
+      
+      \newcommand{\DihGrp}[1]{ \mathrm{ D }_{ #1 } } <!-- Alternating group -->
+      
+      \newcommand{\QuatGrp}[1]{ \mathrm{ Q }_{ #1 } } <!-- Generalized quaternion group -->
+      
+      \newcommand{\FrGrp}[1]{ \mathrm{ F }_{ #1 } } <!-- Free group -->
+      
+      \DeclareMathOperator{\Aut}{ Aut } <!-- Automorphism group -->
+      
+      \DeclareMathOperator{\Inn}{ Inn } <!-- Inner automorphism group -->
+      
+      \DeclareMathOperator{\Out}{ Out } <!-- Outer automorphism group -->
+      
+      \DeclareMathOperator{\Gal}{ Gal } <!-- Galois group -->
+      
+      \DeclareMathOperator{\Homeo}{ Homeo } <!-- Homeomorphism group -->
+      
+      \DeclareMathOperator{\Diff}{ Diff } <!-- Diffeomorphism group -->
+      
+      \DeclareMathOperator{\Bihol}{ Bihol } <!-- Biholomorphism group -->
+      
+      \DeclareMathOperator{\Isom}{ Isom } <!-- Isometry group -->
+      
+      \DeclareMathOperator{\Deck}{ Deck } <!-- Deck group -->
+      
+      \DeclareMathOperator{\QI}{ QI } <!-- Quasi-isometry group -->
+      
+      \DeclareMathOperator{\MCG}{ MCG } <!-- Mapping class group -->
+      
+      \DeclareMathOperator{\Homol}{ H } <!-- Homology/cohomology group -->
+      
+      <!-- Common linear/affine/projective groups -->
+      \DeclareMathOperator{\GL}{ GL } <!-- General linear group -->
+      
+      \DeclareMathOperator{\PGL}{ PGL } <!-- Projective linear group -->
+      
+      \DeclareMathOperator{\SL}{ SL } <!-- Special linear group -->
+      
+      \DeclareMathOperator{\PSL}{ PSL } <!-- Projective special linear group -->
+      
+      \DeclareMathOperator{\Ort}{ O } <!-- Orthogonal group -->
+      
+      \DeclareMathOperator{\PO}{ PO } <!-- Projective orthogonal group -->
+      
+      \DeclareMathOperator{\SO}{ SO } <!-- Special orthogonal group -->
+      
+      \DeclareMathOperator{\PSO}{ PSO } <!-- Projective special orthogonal group -->
+      
+      \DeclareMathOperator{\U}{ U } <!-- Unitary group -->
+      
+      \DeclareMathOperator{\PU}{ PU } <!-- Projective unitary group -->
+      
+      \DeclareMathOperator{\SU}{ SU } <!-- Special unitary group -->
+      
+      \DeclareMathOperator{\PSU}{ PSU } <!-- Projective special unitary group -->
+      
+      \DeclareMathOperator{\Sp}{ Sp } <!-- Symplectic group -->
+      
+      \DeclareMathOperator{\PSp}{ PSp } <!-- Projective symplectic group -->
+      
+      \DeclareMathOperator{\USp}{ USp } <!-- Compact/unitary symplectic group -->
+      
+      \DeclareMathOperator{\PUSp}{ PUSp } <!-- Projective compact/unitary symplectic group -->
+      
+      \DeclareMathOperator{\Aff}{ Aff } <!-- Affine group -->
+      
+      \DeclareMathOperator{\SAff}{ SAff } <!-- Special affine group -->
+      
+      <!-- Common Lie algebras -->
+      \DeclareMathOperator{\gl}{ \mathfrak{ gl } } <!-- General linear Lie algebra -->
+      
+      \DeclareMathOperator{\pgl}{ \mathfrak{ pgl } } <!-- Projective linear Lie algebra -->
+      
+      \DeclareMathOperator{\spl}{ \mathfrak{ sl } } <!-- Special linear Lie algebra -->
+      
+      \DeclareMathOperator{\psl}{ \mathfrak{ psl } } <!-- Projective special linear Lie algebra -->
+      
+      \DeclareMathOperator{\ort}{ \mathfrak{ o } } <!-- Orthogonal Lie algebra -->
+      
+      \DeclareMathOperator{\po}{ \mathfrak{ po } } <!-- Projective orthogonal Lie algebra -->
+      
+      \DeclareMathOperator{\so}{ \mathfrak{ so } } <!-- Special orthogonal Lie algebra -->
+      
+      \DeclareMathOperator{\pso}{ \mathfrak{ pso } } <!-- Projective special orthogonal Lie algebra -->
+      
+      \DeclareMathOperator{\unit}{ \mathfrak{ u } } <!-- Unitary Lie algebra -->
+      
+      \DeclareMathOperator{\pu}{ \mathfrak{ pu } } <!-- Projective unitary Lie algebra -->
+      
+      \DeclareMathOperator{\su}{ \mathfrak{ su } } <!-- Special unitary Lie algebra -->
+      
+      \DeclareMathOperator{\psu}{ \mathfrak{ psu } } <!-- Projective special unitary Lie algebra -->
+      
+      \DeclareMathOperator{\symp}{ \mathfrak{ sp } } <!-- Symplectic Lie algebra -->
+      
+      \DeclareMathOperator{\psp}{ \mathfrak{ psp } } <!-- Projective symplectic Lie algebra -->
+      
+      \DeclareMathOperator{\usp}{ \mathfrak{ usp } } <!-- Compact/unitary symplectic Lie algebra -->
+      
+      \DeclareMathOperator{\pusp}{ \mathfrak{ pusp } } <!-- Projective compact/unitary symplectic Lie algebra -->
+      
+      \DeclareMathOperator{\g}{ \mathfrak{ g } } <!-- Abstract Lie algebra -->
+      
+      <!-- Common rings and modules -->
+      \DeclareMathOperator{\Mat}{ \mathcal{ M } } <!-- Matrix module/ring -->
+      
+      \DeclareMathOperator{\End}{ End } <!-- Endomorphism ring (or space of ends) -->
+      
+      \DeclareMathOperator{\Tens}{ \mathcal{ T } } <!--  Tensor algebra -->
+      
+      \DeclareMathOperator{\SymTens}{ \Theta } <!--  Symmetric tensor algebra -->
+      
+      \DeclareMathOperator{\AltTens}{ \Lambda } <!--  Exterior/alternating tensor algebra -->
+      
+      <!-- (Multi-)linear algebraic macros -->
+      
+      \newcommand{\vect}[1]{ \mathbf{ #1 } } <!-- Vector -->
+      
+      \DeclareMathOperator{\lspan}{ span } <!-- Linear span -->
+      
+      <!-- Dimension already defined -->
+      
+      \DeclareMathOperator{\codim}{ codim } <!-- Codimension -->
+      
+      \DeclareMathOperator{\rk}{ rk } <!-- Rank -->
+      
+      <!-- Determinant already defined -->
+      
+      \DeclareMathOperator{\tr}{ tr } <!-- Trace -->
+      
+      \newcommand{\trans}[1]{ { #1 }^{ \mathrm{ T } } } <!-- Transpose -->
+      
+      \newcommand{\contra}[1]{ { #1 }^{ -\mathrm{ T } } } <!-- Contragredient -->
+      
+      \newcommand{\adj}[1]{ { #1 }^{ \dag } } <!-- (Hermitian) adjoint -->
+      
+      \DeclareMathOperator{\diag}{ diag } <!-- Diagonal matrix -->
+      
+      \DeclareMathOperator{\Gr}{ Gr } <!-- Grassmannian -->
+      
+      \DeclareMathOperator{\Flag}{ \mathcal{ F } } <!-- Flag variety -->
+      
+      <!-- Category-theoretic macros -->
+      \DeclareMathOperator{\ob}{ ob } <!-- Object class -->
+      
+      \DeclareMathOperator{\mor}{ mor } <!-- Morphism class -->
+      <!-- Homomorphism class already defined -->
+      
+      \DeclareMathOperator{\id}{ id } <!-- Identity operator -->
+      
+      \DeclareMathOperator{\inv}{ inv } <!-- Inversion operator -->
+      
+      \newcommand{\op}[1]{ { #1 }^{ \mathrm{ op } } } <!-- Opposite -->
+      
+      <!-- Common categories -->
+      \newcommand{\Set}{ \mathbf{ Set } } <!-- Category of sets -->
+      
+      \newcommand{\Rel}{ \mathbf{ Rel } } <!-- Category of binary relations -->
+      
+      \newcommand{\Grp}{ \mathbf{ Grp } } <!-- Category of groups -->
+      
+      \newcommand{\Ab}{ \mathbf{ Ab } } <!-- Category of abelian groups -->
+      
+      \newcommand{\Ring}{ \mathbf{ Ring } } <!-- Category of unital rings -->
+      
+      \newcommand{\Rng}{ \mathbf{ Rng } } <!-- Category of (not necessarily unital) rings -->
+      
+      \newcommand{\IntDom}{ \mathbf{ IntDom } } <!-- Category of integral domains -->
+      
+      \newcommand{\Field}{ \mathbf{ Field } } <!-- Category of fields -->
+      
+      \newcommand{\Top}{ \mathbf{ Top } } <!-- Continuous category (of topological spaces) -->
+      
+      \newcommand{\hTop}{ \mathbf{ hTop } } <!-- Naïve homotopy category -->
+      
+      \newcommand{\Met}{ \mathbf{ Met } } <!-- Category of metric spaces (with metric/short maps) -->
+      
+      \newcommand{\Man}[1][ \infty ]{ \mathbf{ Man }^{ #1 } } <!-- Category of differential manifolds -->
+      
+      \newcommand{\Vect}{ \mathbf{ Vect } } <!-- Category of vector spaces -->
+      
+      \newcommand{\Cat}{ \mathbf{ Cat } } <!-- Category of small categories -->
+      
+      \newcommand{\Fun}{ \mathbf{ Fun } } <!-- Functor category -->
+      
+    <!-- ANALYTICAL MACROS -->
+      <!-- Point-set topological macros -->
+      \DeclareMathOperator{\Int}{ Int } <!-- Topological interior -->
+      
+      \DeclareMathOperator{\Cl}{ Cl } <!-- Topological closure -->
+      
+      \DeclareMathOperator{\Bd}{ Bd } <!-- Topological boundary -->
+      
+      \DeclareMathOperator{\Ext}{ Ext } <!-- Topological exterior -->
+      
+      \DeclareMathOperator{\supp}{ supp } <!-- Support -->
+      
+      <!-- Metric geometry macros -->
+      \DeclareMathOperator{\mS}{ S } <!-- Metric sphere -->
+      
+      \DeclareMathOperator{\mB}{ B } <!-- Metric open ball -->
+      
+      \DeclareMathOperator{\mD}{ D } <!-- Metric closed disk -->
+      
+      \DeclareMathOperator{\diam}{ diam } <!-- Diameter -->
+      
+      \DeclareMathOperator*{\uniflim}{ unif \, lim } <!-- Uniform limit -->
+      
+      \DeclareMathOperator{\len}{ len } <!-- length -->
+      
+      \DeclareMathOperator{\area}{ area } <!-- Area -->
+      
+      \DeclareMathOperator{\vol}{ vol } <!-- Volume -->
+      
+      <!-- Common function spaces -->
+      \DeclareMathOperator{\CDiff}{ C } <!-- Continuous/continuously differentiable maps -->
+      
+      \DeclareMathOperator{\UC}{ UC } <!-- Uniformly continuous maps -->
+      
+      \DeclareMathOperator{\LC}{ LC } <!-- Lipschitz continuous maps -->
+      
+      \DeclareMathOperator{\Bdd}{ Bdd } <!-- Bounded maps -->
+      
+      \DeclareMathOperator{\BC}{ BC } <!-- Bounded continuous/continuously differentiable maps -->
+      
+      \DeclareMathOperator{\BUC}{ BUC } <!-- Bounded uniformly continuous maps -->
+      
+      \DeclareMathOperator{\BLC}{ BLC } <!-- Bounded Lipschitz continuous maps -->
+      
+      <!-- Lebesgue space needed! -->
+      
+      <!-- Sequence space needed! -->
+      
+      <!-- Probabilistic and measure-theoretic macros -->
+      
+      \DeclareMathOperator{\Exp}{ \mathbb{ E } } <!-- Expectation/expected value -->
+      
+      \DeclareMathOperator{\Var}{ \mathbb{ V } } <!-- Variance -->
+      
+      \newcommand{\Borel}{ \mathscr{ B } } <!-- Borel σ-algebra -->
+      
+      \DeclareMathOperator{\Haus}{ \mathscr{ H } } <!-- Hausdorff (outer) measure -->
+      
+      \DeclareMathOperator*{\esssup}{ ess \, sup } <!-- Essential supremum -->
+        
+      \DeclareMathOperator*{\essinf}{ ess \, inf } <!-- Essential infimum -->
+    
+    <!-- MANIFOLD-THEORETIC MACROS -->
+      <!-- Differential operators -->
+      \DeclareMathOperator{\diff}{ d } <!-- Differential/exterior derivative -->
+      
+      \DeclareMathOperator{\pdiff}{ \partial } <!-- Partial differential/directional derivative -->
+      
+      \DeclareMathOperator{\del}{ \nabla } <!-- Covariant derivative/gradient -->
+      
+      <!-- Derivative \der needed! -->
+      
+      <!-- Partial derivative \pder needed! -->
+      
+      \DeclareMathOperator{\Jac}{ \mathbf{ J } } <!-- Jacobian matrix -->
+      
+      \DeclareMathOperator{\grad}{ grad } <!-- Gradient -->
+      
+      \DeclareMathOperator{\divg}{ div } <!-- Divergence -->
+      
+      \DeclareMathOperator{\curl}{ curl } <!-- Curl -->
+      
+      \DeclareMathOperator{\Lap}{ \Delta } <!-- Laplacian -->
+      
+      \DeclareMathOperator{\Sec}{ \Gamma } <!-- Section space -->
+      
+      \DeclareMathOperator{\VF}{ \mathfrak{ X } } <!-- Space of vector fields -->
+      
+      \DeclareMathOperator{\DF}{ \Omega } <!-- Space of differential forms -->
+      
+      \DeclareMathOperator{\dRCoh}{ H_{ \mathrm{ dR } } } <!-- de Rham cohomology -->
+      
+    <!-- OTHER MISCELLANEOUS MACROS -->
+      \DeclareMathOperator{\ps}{ \mathcal{ P } } <!-- Power set -->
+      
+      \newcommand{\oparg}{ \: \cdot \: } <!-- Default operator argument -->
+      
+      \newcommand{\symdiff}{ \mathbin{ \triangle } } <!-- Symmetric difference -->
+      
+      <!-- Common operators and functions -->
+      \DeclareMathOperator{\Succ}{ succ } <!-- Successor -->
+      
+      \DeclareMathOperator{\Add}{ add } <!-- Addition -->
+      
+      \DeclareMathOperator{\Mult}{ mult } <!-- Multiplication -->
+      
+      \DeclareMathOperator{\Comp}{ comp } <!-- Comparison -->
+      
+      \DeclareMathOperator{\sgn}{ sgn } <!-- Sign -->
+      
+      <!-- Real part needed! -->
+      
+      <!-- Imaginary part needed! -->
+      
+      <!-- Argument already defined -->
+      
+      \DeclareMathOperator{\Arg}{ Arg } <!-- Principal argument -->
+      
+      <!-- Exponential already defined -->
+      
+      <!-- Logarithm already defined -->
+      
+      <!-- Natural logarithm already defined -->
+      
+      \DeclareMathOperator{\Log}{ Log } <!-- Principal logarithm -->
+
+      \newcommand{\divides}{ \mathbin{ \vert } } <!-- Divibility relation -->
+
+      <!-- Greatest common divisor already defined -->
+      
+      \DeclareMathOperator{\lcm}{ lcm } <!-- Least common multiple -->
+      
+      \DeclareMathOperator{\proj}{ proj } <!-- Projection -->
+      
+      \DeclareMathOperator{\inj}{ inj } <!-- Injection -->
+      
+      \DeclareMathOperator{\coproj}{ coproj } <!-- Coprojection -->
+
+      <!-- Trigonometric functions needed! -->
+
+      <!-- Arrows -->
+      <!-- Arrow (left to right) already defined -->
+      
+      \newcommand{\from}{ \leftarrow } <!-- Arrow (right to left) -->
+      
+      \newcommand{\upto}{ \nearrow } <!-- Increasing arrow (left to right) -->
+      
+      \newcommand{\upfrom}{ \nwarrow } <!-- Increasing arrow (right to left) -->
+      
+      \newcommand{\downto}{ \searrow } <!-- Decreasing arrow (left to right) -->
+      
+      \newcommand{\downfrom}{ \swarrow } <!-- Decreasing arrow (right to left) -->
+      
+      <!-- Into/onto arrows needed! -->
+      
+      \newcommand{\actson}{ \mathbin{ \curvearrowright } } <!-- Left group action arrow -->
+      
+      \newcommand{\actedon}{ \mathbin{ \curvearrowleft } } <!-- Right group action arrow -->
+  </macros>
+
+  <!-- If you put any latex-image elements you can include preambles -->
+  <!-- for those in the next element. -->
+  <latex-image-preamble>
+    \usepackage{tikz, pgfplots}
+    \usetikzlibrary{positioning,matrix,arrows}
+    \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+    \usetikzlibrary{decorations.markings}
+  </latex-image-preamble>
+
+  <!-- It is possible to rename elements: -->
+  <!-- <rename element="assemblage" xml:lang="en-US">Summary</rename> -->
+
+  <cross-references text="type-global-title"/>
+</docinfo>

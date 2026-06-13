@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="reading-question-set-operations-and-containment" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Set operations and containment
+  </title>
+  
+  <introduction>
+    <p>
+      Let <m> S </m> and <m> T </m> be sets.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that <m> S \cap T = S </m> if and only if <m> S \subseteq T </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Since <m> S \cap T \subseteq S </m>, it suffices to show that <m> S \subseteq S \cap T </m> if and only if <m> S \subseteq T </m>. To that end, note that if <m> S \subseteq S \cap T </m>, then (1) of <xref ref="proposition-set-operations-and-containment"/> implies that <m> S \subseteq T </m>.
+      </p>
+      
+      <p>
+        Conversely, we note that <m> S \subseteq S </m>, so that if <m> S \subseteq T </m>, then (1) of <xref ref="proposition-set-operations-and-containment"/> implies that <m> S \subseteq S \cap T </m>.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that <m> S \cup T = S </m> if and only if <m> T \subseteq S </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Since <m> S \cup S \cup T </m>, it suffices to show that <m> S \cup T \subseteq S </m> if and only if <m> T \subseteq S </m>. To that end, note that if <m> S \cup T \subseteq S </m>, then (2) of <xref ref="proposition-set-operations-and-containment"/> implies that <m> T \subseteq S </m>.
+      </p>
+      
+      <p>
+        Conversely, we note that <m> S \subseteq S </m>, so that if <m> T \subseteq S </m>, then (2) of <xref ref="proposition-set-operations-and-containment"/> implies that <m> S \cup T \subseteq S </m>.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that <m> S \setminus T = S </m> if and only if <m> S \cap T = \emptyset </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        First suppose that <m> S \cap T = \emptyset </m>. Then <m> x \notin T </m> for all <m> x \in S </m>, and so
+        
+        <md>
+          S \setminus T = \setmid{ x }{ x \in S \textrm{ and } x \notin T } = \setmid{ x }{ x \in S } = S
+        </md>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> S \cap T \neq \emptyset </m>. Then <m> x \in S \cap T </m>, and so <m> x \in S </m> and <m> x \in T </m>. Since <m> x \in T </m>, <m> x \notin S \setminus T </m>. So <m> x </m> is an element of <m> S </m> but not <m> S \setminus T </m>; we conclude that <m> S \setminus T \neq S </m>.
+      </p>
+    </solution>
+  </task>
+</exercise>

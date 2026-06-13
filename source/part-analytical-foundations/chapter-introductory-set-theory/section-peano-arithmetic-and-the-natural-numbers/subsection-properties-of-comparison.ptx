@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-properties-of-comparison" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Properties of Comparison
+  </title>
+
+  <introduction>
+    <p>
+      The final component of Peano's axiomatization of the natural numbers <m> \N </m> is that of comparison. The standard ordering <m> \leq </m> on the natural numbers has several important and familiar properties which we will now derive from first principles.
+    </p>
+  </introduction>
+  
+  <proposition xml:id="proposition-comparison-is-a-total-order">
+    <title>
+      Comparison is a total order
+    </title>
+    
+    <statement>
+      <p>
+        Comparison of natural numbers has the following properties:
+        
+        <ol>
+          <li>
+            <title>
+              Reflexivity
+            </title>
+          
+            <p>
+              <m> n \leq n </m> for all natural numbers <m> n \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Antisymmetry
+            </title>
+          
+            <p>
+              For all natural numbers <m> m , n \in \N </m>, if <m> m \leq n </m> and <m> n \geq m </m>, then <m> m = n </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Transitivity
+            </title>
+          
+            <p>
+              For all natural numbers <m> l , m , n \in \N </m>, if <m> l \leq m </m> and <m> m \leq n </m>, then <m> l \leq n </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Totality
+            </title>
+          
+            <p>
+              For all natural numbers <m> m , n \in \N </m>, either <m> m \leq n </m> or <m> n \leq m </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            For all natural numbers <m> n \in \N </m>, <m> n + 0 = n </m>, so that <m> n \leq n </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Let <m> m , n \in \N </m> be natural numbers, and suppose that <m> m \leq n </m> and <m> n \leq m </m>. Then <m> n = m + p </m> and <m> m = n + q </m> for some natural numbers <m> p , q \in \N </m>. Note that
+            
+            <md>
+              m + 0 = m = n + q = m + p + q
+            </md>,
+            
+            and so <m> 0 = p + q </m> by <xref ref="lemma-cancellation-of-addition"/>; that is, <m> q \leq 0 </m>. <xref ref="lemma-zero-is-minimal"/> now implies that <m> q = 0 </m>, so that
+            
+            <md>
+              m = n + q = n + 0 = n
+            </md>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Let <m> l , m , n \in \N </m> be natural numbers, and suppose that <m> l \leq m </m> and <m> m \leq n </m>. Then <m> l + p = m </m> and <m> m + q = n </m> for some natural numbers <m> p , q \in \N </m>, and so
+            
+            <md>
+              l + \of{ p + q } = \of{ l + p } + q = m + q = n
+            </md>.
+            
+            We conclude that <m> l \leq n </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Let <m> m \in \N </m> be a natural number. We proceed by induction on <m> n \in \N </m>.
+            
+            <case>
+              <title>
+                Base case
+              </title>
+              
+              <p>
+                If <m> n = 0 </m>, then <m> 0 + m = m </m> by <xref ref="lemma-addition-by-zero"/>, and so <m> n = 0 \leq m </m>.
+              </p>
+            </case>
+            
+            <case>
+              <title>
+                Inductive step
+              </title>
+              
+              <p>
+                Now suppose for the inductive hypothesis that there is a natural number <m> n \in \N </m> so that either <m> m \leq n </m> or <m> n \leq m </m>. If <m> m \leq n </m>, then <m> m + p = n </m> for some natural number <m> p \in \N </m>, and so
+                
+                <md>
+                  m + \of{ p + 1 } = \of{ m + p } + 1 = n + 1
+                </md>;
+                
+                that is, <m> m \leq n + 1 </m>.
+              </p>
+              
+              <p>
+                Now suppose that <m> n \leq m </m>, so that <m> n + p = m </m> for some natural number <m> p \in \N </m>. If <m> p = 0 </m>, then
+                
+                <md>
+                  m + 1 = \of{ n + p } + 1 = \of{ n + 0 } + 1 = n + 1
+                </md>,
+                
+                and so <m> m \leq n + 1 </m>. On the other hand, if <m> p \neq 0 </m>, then <m> p = q + 1 </m> for some natural number <m> q \in \N </m> by an argument in the proof of <xref ref="lemma-zero-is-minimal"/>. Then
+                
+                <md>
+                  \of{ n + 1 } + q = n + 1 + q = n + q + 1 = n + p = m
+                </md>,
+                
+                and so <m> n + 1 \leq m </m>.
+              </p>
+            </case>
+            
+            We conclude that for all natural numbers <m> n \in \N </m>, either <m> m \leq n </m> or <m> n \leq m </m>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </proposition>
+  
+  <corollary xml:id="corollary-cancellation-of-multiplication">
+    <title>
+      Cancellation of multiplication
+    </title>
+    
+    <statement>
+      <p>
+        For all natural numbers <m> n \in \N </m>, if <m> n \neq 0 </m>, then addition by <m> n </m> is injective; that is, for all natural numbers <m> l , m , n \in \N </m>, if <m> l n = m n </m>, then either <m> l = m </m> or <m> n = 0 </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        By induction on <m> n \in \N </m>.
+        
+        <case>
+          <title>
+            Base case
+          </title>
+          
+          <p>
+            If <m> n = 0 </m>, then <m> n = 0 </m>, and so the desired conclusion holds for all natural numbers <m> l , m \in \N </m>.
+          </p>
+        </case>
+        
+        <case>
+          <title>
+            Inductive step
+          </title>
+          
+          <p>
+            Now suppose for the inductive hypothesis that there is a natural number <m> n \in \N </m> so that for all natural numbers <m> l , m \in \N </m>, if <m> l n = m n </m>, then either <m> n = 0 </m> or <m> l = m </m>. Let <m> l , m \in \N </m> be natural numbers, and suppose that <m> l \of{ n + 1 } = m \of{ n + 1 } </m>. Then <m> n + 1 \neq 0 </m>, and so it suffices to show that <m> l = m </m>.
+          </p>
+          
+          <p>
+            To that end, note that (4) of <xref ref="proposition-comparison-is-a-total-order"/> implies that either <m> l \leq m </m> or <m> m \leq l </m>. Without loss of generality, we may suppose that <m> l \leq m </m>, so that <m> m = l + p </m> for some natural number <m> p \in \N </m>. We observe that
+            
+            <md>
+              <mrow>
+                0 + \of{ l n + l } \amp = l n + l = l \of{ n + 1 } = m \of{ n + 1 }
+              </mrow>
+              
+              <mrow>
+                \amp = \of{ l + p } \of{ n + 1 } = l n + l + p n + p = \of{ p n + p } + \of{ l n + l }
+              </mrow>
+            </md>
+            
+            by <xref ref="lemma-addition-by-zero"/>, <xref ref="proposition-left-distributivity-of-multiplication-over-addition"/>, <xref ref="proposition-right-distributivity-of-multiplication-over-addition"/>, <xref ref="proposition-associativity-of-addition"/>, and <xref ref="proposition-commutativity-of-addition"/>.
+          </p>
+          
+          <p>
+            In particular, <xref ref="lemma-cancellation-of-addition"/> implies that <m> 0 = p n + p </m>, so that <m> p \leq 0 </m>. We conclude by <xref ref="lemma-zero-is-minimal"/> that <m> p = 0 </m>, so that
+            
+            <md>
+              l = m + p = m + 0 = m
+            </md>.
+          </p>
+        </case>
+        
+        We conclude that for all natural numbers <m> l , m , n \in \N </m>, either if <m> l n = m n </m>, then either <m> l = m </m> or <m> n = 0 </m>.
+      </p>
+    </proof>
+  </corollary>
+  
+  <lemma xml:id="lemma-comparison-and-arithmetic">
+    <title>
+      Comparison and arithmetic
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> l , m , n , p \in \N </m> be natural numbers.
+        
+        <ol>
+          <li>
+            <p>
+              If <m> l \leq n </m> and <m> m \leq p </m>, then <m> l + m \leq n + p </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              If <m> l \leq n </m> and <m> m \leq p </m>, then <m> l m \leq n p </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            If <m> l \leq n </m> and <m> m \leq p </m>, then <m> n = l + q </m> and <m> p = m + r </m> for some natural numbers <m> q , r \in \N </m>, and so
+            
+            <md>
+              \of{ l + m } + \of{ q + r } = l + m + q + r = l + q + m + r = n + p
+            </md>.
+            
+            We conclude that <m> l + m \leq n + p </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            If <m> l \leq n </m> and <m> m \leq p </m>, then <m> n = l + q </m> and <m> p = m + r </m> for some natural numbers <m> q , r \in \N </m>, and so
+            
+            <md>
+              <mrow>
+              l m + \of{ l r + q m + q r } \amp = l m + l r + q m + q r = l \of{ m + r } + q \of{ m + r }
+              </mrow>
+              
+              <mrow>
+                \amp = \of{ l + q } \of{ m + r } = n p
+              </mrow>
+            </md>.
+            
+            We conclude that <m> l m \leq n p </m>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </lemma>
+  
+  <p>
+    For ease of reference, we collect the above results (along with some immediate corollaries) in the following theorem.
+  </p>
+  
+  <theorem xml:id="theorem-properties-of-peano-arithmetic">
+    <title>
+      Properties of Peano arithmetic
+    </title>
+    
+    <idx>
+      Peano arithmetic
+    </idx>
+    
+    <statement>
+      <p>
+        Addition, multiplication, and comparison of natural numbers have the following properties:
+        
+        <ol>
+          <li>
+            <title>
+              Associativity of addition
+            </title>
+            
+            <p>
+              <m> \of{ l + m } + n = l + \of{ m + n } </m> for all natural numbers <m> l , m , n \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Commutativity of addition
+            </title>
+            
+            <p>
+              <m> m + n = n + m </m> for all natural numbers <m> m , n \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Additive identity
+            </title>
+            
+            <p>
+              <m> n + 0 = 0 + n = 0 </m> for all natural numbers <m> n \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Associativity of multiplication
+            </title>
+            
+            <p>
+              <m> \of{ l m } n = l \of{ m n } </m> for all natural numbers <m> l , m , n \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Commutativity of multiplication
+            </title>
+            
+            <p>
+              <m> m n = n m </m> for all natural numbers <m> m , n \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Multiplicative annihilation
+            </title>
+            
+            <p>
+              <m> n \cdot 0 = 0 n = 0 </m> for all natural numbers <m> n \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Multiplicative identity
+            </title>
+            
+            <p>
+              <m> n \cdot 1 = 1 n = n </m> for all natural numbers <m> n \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Distributivity of multiplication over addition
+            </title>
+            
+            <p>
+              <m> l \of{ m + n } = l m + l n </m> and <m> \of{ l + m } n = l n + m n </m> for all natural numbers <m> l , m , n \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Reflexivity of comparison
+            </title>
+            
+            <p>
+              <m> n \leq n </m> for all natural numbers <m> n \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Antisymmetry of comparison
+            </title>
+            
+            <p>
+              For all natural numbers <m> m , n \in \N </m>, if <m> m \leq n </m> and <m> n \leq m </m>, then <m> m = n </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Transitivity of comparison
+            </title>
+            
+            <p>
+              For all natural numbers <m> l , m , n \in \N </m>, if <m> l \leq m </m> and <m> m \leq n </m>, then <m> l \leq n </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Totality of comparison
+            </title>
+            
+            <p>
+              For all natural numbers <m> m , n \in \N </m>, either <m> m \leq n </m> or <m> n \leq m </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Compatibility of comparison and addition/multiplication
+            </title>
+            
+            <p>
+              For all natural numbers <m> l , m , n , p \in \N </m>, if <m> l \leq n </m> and <m> m \leq p </m>, then
+              
+              <md>
+                l + m \leq n + p
+              </md>
+              
+              and
+              
+              <md>
+                l m \leq n p
+              </md>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <conclusion>
+    <p>
+      Many of these properties of the arithmetic and comparison of natural numbers also extend to the arithmetic of the other classes of numbers we will consider, namely the integers, rational numbers, real numbers, and complex numbers.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->

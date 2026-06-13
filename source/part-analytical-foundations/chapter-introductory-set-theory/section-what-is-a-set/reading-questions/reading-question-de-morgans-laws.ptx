@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="reading-question-de-morgans-laws" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    De Morgan's laws
+  </title>
+  
+  <idx>
+    De Morgan's laws
+  </idx>
+  
+  <introduction>
+    <p>
+      Let <m> S </m>, <m> T </m>, and <m> U </m> be sets.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that <m> S \setminus \of{ T \cap U } = \of{ S \setminus T } \cup \of{ S \setminus U } </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that <m> S \setminus \of{ T \cup U } = \of{ S \setminus T } \cap \of{ S \setminus U } </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+  
+  <conclusion>
+    <p>
+      Taken together, these results are called <term> De Morgan's laws </term>.
+    </p>
+  </conclusion>
+</exercise>

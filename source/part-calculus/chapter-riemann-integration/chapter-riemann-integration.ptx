@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chapter-riemann-integration" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Riemann Integration
+  </title>
+
+  <introduction>
+    <p>
+      Text before the first section.
+    </p>
+  </introduction>
+
+  <xi:include href="./section-riemann-sums/section-riemann-sums.ptx"/>
+
+  <xi:include href="./section-properties-of-the-riemann-integral/section-properties-of-the-riemann-integral.ptx"/>
+
+  <xi:include href="./section-the-fundamental-theorems-of-calculus/section-the-fundamental-theorems-of-calculus.ptx"/>
+
+  <xi:include href="./section-improper-integration/section-improper-integration.ptx"/>
+
+  <conclusion>
+    <p>
+      Text after the last section.
+    </p>
+  </conclusion>
+</chapter>
