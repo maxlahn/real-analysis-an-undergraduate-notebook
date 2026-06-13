@@ -7,7 +7,7 @@
 
   <introduction>
     <p>
-      Text before the first section.
+      In this section, we provide rigorous constructions of well-known number systems including the <term> integers </term> <m> \Z </m>, the <term> rational numbers </term> <m> \Q </m>, the <term> real numbers </term> <m> \R </m>, and the <term> complex numbers </term> <m> \C </m>. These number systems, particularly the real and complex number systems, provide the backdrop for much of the discipline of analysis.
     </p>
   </introduction>
 

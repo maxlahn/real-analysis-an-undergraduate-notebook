@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-constructing-new-metrics" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Constructing New Metrics
+  </title>
+
+  <introduction>
+    <p>
+      We will now see how to construct new metrics out of given metric spaces. Given a metric space, there is a natural metric on any subset of its ground set. This restriction of the metric structure to a subset is done in the obvious way; the distance between any points in the subset is just their distance when considered as points in the bigger space. In this way, a metric on a set is said to induce a metric on all of its subsets.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-induced-metric">
+    <title>
+      Induced metric
+    </title>
+    
+    <idx>
+      induced metric
+    </idx>
+    
+    <idx>
+      metric subspace
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a metric space <m> \of{ X , \rho } </m>. The <term> induced metric </term> on <m> U </m> is the restriction <m> \rest{ \rho }_{ U^{ 2 } } \colon U^{ 2 } \to \R </m> of <m> \rho </m> to <m> U^{ 2 } </m>. The metric space <m> \of{ U , \rest{ \rho }_{ U } } </m> is called a <term> metric subspace </term> of the metric space <m> \of{ X , \rho } </m>.
+      </p>
+      
+      <p>
+        In practice, we often write that <m> \rho </m> is a metric on <m> U </m>, even if the domain of <m> \rho </m> is strictly larger than <m> U^{ 2 } </m>. We will not distinguish between a metric and its restriction to a smaller space.
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-discrete-metric-subspaces">
+    <title>
+      Discrete metric subspaces
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a set <m> X </m>. The discrete metric <m> \delta_{ U } </m> on <m> U </m> is induced on <m> U </m> by the discrete metric <m> \delta_{ X } </m> on <m> X </m>; that is, <m> \rest{ \delta_{ X } }_{ U^{ 2 } } = \delta_{ U } </m>. Thus the discrete metric space <m> \of{ U , \delta_{ U } } </m> is a metric subspace of the discrete metric space <m> \of{ X , \delta_{ X } } </m>.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    Thus far, we have been very careful when working in a metric space to specify not only the ground set but also the metric. This is because we can in general find many metrics on a given underlying set. In fact, given one or more metrics on a set, there are several ways of constructing new metrics on that set. In particular, any finite positive pointwise linear combination of metrics is itself a metric.
+  </p>
+  
+  <proposition xml:id="proposition-linear-combinations-of-metrics">
+    <title>
+      Linear combinations of metrics
+    </title>
+    
+    <statement>
+      <p>
+        Any positive real linear combination of metrics is a metric.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> X </m> be a set, and consider positive real numbers <m> \alpha_{ 1 } , \dotsc , \alpha_{ n } \in \opclint{ 0 }{ \infty } </m> and metrics <m> \rho_{ 1 } , \dotsc , \rho_{ n } \colon X^{ 2 } \to \R </m> on <m> X </m>. Denote by <m> \rho \colon X^{ 2 } \to \R </m> the linear combination defined by the formula
+        
+        <md>
+          \rho \of{ x_{ 1 } , x_{ 2 } } = \sum_{ k = 1 }^{ n }{ \alpha_{ k } \rho_{ k } \of{ x_{ 1 } , x_{ 2 } } }
+        </md>.
+        
+        First let <m> x_{ 1 } , x_{ 2 } \in X </m> be points, and suppose that <m> \rho \of{ x_{ 1 } , x_{ 2 } } = 0 </m>. Then
+        
+        <md>
+          \sum_{ k = 1 }^{ n }{ \alpha_{ k } \rho_{ k } \of{ x_{ 1 } , x_{ 2 } } } = \rho \of{ x_{ 1 } , x_{ 2 } } = 0
+        </md>.
+        
+        Since <m> \alpha_{ k } \gt 0 </m> and <m> \rho_{ k } \of{ x_{ 1 } , x_{ 2 } } \geq 0 </m> for all indices <m> 1 \leq k \leq n </m>, we conclude that <m> \rho_{ k } \of{ x_{ 1 } , x_{ 2 } } = 0 </m> for all indices <m> 1 \leq k \leq n </m>. In particular, <m> x_{ 1 } = x_{ 2 } </m>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> x_{ 1 } = x_{ 2 } </m>. Then
+        
+        <md>
+          \rho \of{ x_{ 1 } , x_{ 2 } } = \sum_{ k = 1 }^{ n }{ \alpha_{ k } \rho_{ k } \of{ x_{ 1 } , x_{ 2 } } } = \sum_{ k = 1 }^{ n }{ \alpha_{ k } \cdot 0 } = 0
+        </md>.
+        
+        Thus <m> \rho </m> is non-degenerate.
+      </p>
+      
+      <p>
+        Note that
+        
+        <md>
+          \rho \of{ x_{ 1 } , x_{ 2 } } = \sum_{ k = 1 }^{ n }{ \alpha_{ k } \rho_{ k } \of{ x_{ 1 } , x_{ 2 } } } = \sum_{ k = 1 }^{ n }{ \alpha_{ k } \rho_{ k } \of{ x_{ 2 } , x_{ 1 } } } = \rho \of{ x_{ 2 } , x_{ 1 } }
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } \in X </m>, and so <m> \rho </m> is symmetric.
+      </p>
+      
+      <p>
+        Finally, note that
+        
+        <md>
+          <mrow>
+            \rho \of{ x_{ 1 } , x_{ 3 } } \amp = \sum_{ k = 1 }^{ n }{ \alpha_{ k } \rho_{ k } \of{ x_{ 1 } , x_{ 3 } } } \leq \sum_{ k = 1 }^{ n }{ \alpha_{ k } \of{ \rho_{ k } \of{ x_{ 1 } , x_{ 2 } } + \rho_{ k } \of{ x_{ 2 } , x_{ 3 } } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \sum_{ k = 1 }^{ n }{ \alpha_{ k } \rho_{ k } \of{ x_{ 1 } , x_{ 2 } } } + \sum_{ k = 1 }^{ n }{ \alpha_{ k } \rho_{ k } \of{ x_{ 2 } , x_{ 3 } } } = \rho \of{ x_{ 1 } , x_{ 2 } } + \rho \of{ x_{ 2 } , x_{ 3 } }
+          </mrow>
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in X </m>, and so <m> \rho </m> satisfies the triangle inequality. Since <m> \rho </m> is non-degenerate, symmetric, and satisfies the triangle inequality, it is a metric on <m> X </m>.
+      </p>
+    </proof>
+  </proposition>
+
+  <conclusion>
+    <p>
+      In particular, the sum of two metrics is a metric, and any positive real multiple of a metric is a metric.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->

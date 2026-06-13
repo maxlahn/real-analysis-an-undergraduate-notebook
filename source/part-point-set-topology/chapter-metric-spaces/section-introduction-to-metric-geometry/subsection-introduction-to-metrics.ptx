@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-introduction-to-metrics" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Introduction to Metrics
+  </title>
+
+  <introduction>
+    <p>
+      Not all properties of physical distance are generic enough to generalize to other settings in which we might want to measure distance-like quantities. This question of which properties of a specific example (usually Euclidean space) are salient enough to merit requirement in a generalization is ubiquitous throughout mathematical exposition, and will recur frequently throughout this text.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-metric-space">
+    <title>
+      Metric space
+    </title>
+    
+    <idx>
+      metric
+    </idx>
+    
+    <idx>
+      ground set
+    </idx>
+    
+    <idx>
+      point
+    </idx>
+    
+    <idx>
+      non-degeneracy
+    </idx>
+    
+    <idx>
+      symmetry
+    </idx>
+    
+    <idx>
+      triangle inequality
+    </idx>
+    
+    <idx>
+      metric space
+    </idx>
+    
+    <statement>
+      <p>
+        A real-valued function <m> \rho \colon X^{ 2 } \to \R </m> on the Cartesian square <m> X^{ 2 } </m> of a set <m> X </m>, which is called the <term> ground set </term> and whose elements are called <term> points </term>, is a <term> metric </term> on <m> X </m> if it has the following properties:
+        
+        <ol>
+          <li>
+            <title>
+              Non-degeneracy
+            </title>
+            
+            <p>
+              For any points <m> x_{ 1 } , x_{ 2 } \in X </m>, <m> \rho \of{ x_{ 1 } , x_{ 2 } } = 0 </m> if and only if <m> x_{ 1 } = x_{ 2 } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Symmetry
+            </title>
+            
+            <p>
+              <m> \rho \of{ x_{ 1 } , x_{ 2 } } = \rho \of{ x_{ 2 } , x_{ 1 } } </m> for any points <m> x_{ 1 } , x_{ 2 } \in X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Triangle inequality
+            </title>
+            
+            <p>
+              <m> \rho \of{ x_{ 1 } , x_{ 3 } } \leq \rho \of{ x_{ 1 } , x_{ 2 } } + \rho \of{ x_{ 2 } , x_{ 3 } } </m> for any points <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in X </m>.
+            </p>
+          </li>
+        </ol>
+        
+        In this case, the ordered pair <m> \of{ X , \rho } </m> is called a <term> metric space </term>.
+      </p>
+    </statement>
+  </definition>
+  
+  <remark xml:id="remark-implied-metrics">
+    <title>
+      Implied metrics
+    </title>
+    
+    <p>
+      We will see that, in general, there are many metrics on a given set, no one of which may truly be considered canonical. In fact, even though some distinct metrics give identical answers to point-set topological concerns such as convergence and continuity, in most cases even a choice one of these classes of metrics is arbitrary in some respects.
+    </p>
+    
+    <p>
+      However, sometimes, if a metric <m> \rho \colon X^{ 2 } \to \R </m> on a set <m> X </m> is clear from context, previously specified, or implicitly present, some mathematicians will refer to the metric space <m> \of{ X , \rho } </m> by only the underlying set <m> X </m>. We will try to avoid such ambiguities, and we will attempt to always explicitly specify the metric with which we will be working.
+    </p>
+  </remark>
+
+  <example xml:id="example-metric-spaces">
+    <title>
+      Metric spaces
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of metrics and metric spaces:
+        
+        <ol>
+          <li>
+            <idx>
+              Euclidean metric
+            </idx>
+            
+            <idx>
+              Euclidean space
+            </idx>
+            
+            <idx>
+              real line
+            </idx>
+            
+            <idx>
+              Euclidean plane
+            </idx>
+            
+            <idx>
+              complex plane
+            </idx>
+            
+            <p>
+              Let <m> n \in \N </m> be a natural number. The <term> Euclidean metric </term> <m> d \colon \of{ \R^{ n } }^{ 2 } \to \R </m> on <m> n </m>-dimensional real coordinate space <m> \R^{ n } </m> is the function defined by the formula
+              
+              <md>
+                d \of{ \vect{ x } , \vect{ y } } = \sqrt{ \sum_{ k = 1 }^{ n }{ \of{ x_{ k } - y_{ k } }^{ 2 } } }
+              </md>.
+              
+              Similarly, the <term> Euclidean metric </term> <m> d \colon \of{ \C^{ n } }^{ 2 } \to \R </m> on <m> n </m>-dimensional real coordinate space <m> \C^{ n } </m> is the function defined by the formula
+              
+              <md>
+                d \of{ \vect{ w } , \vect{ z } } = \sqrt{ \sum_{ k = 1 }^{ n }{ \abs{ w_{ k } - z_{ k } }^{ 2 } } }
+              </md>.
+            </p>
+            
+            <p>
+              As defined above, the Euclidean metrics are metrics on <m> \R^{ n } </m> and <m> \C^{ n } </m>, respectively. The metric spaces <m> \of{ \R^{ n } , d } </m> and <m> \of{ \C^{ n } , d } </m> are called <m> n </m>-dimensional <term> real Euclidean space </term> and <m> n </m>-dimensional <term> complex Euclidean space </term>, respectively. <m> 1 </m>- and <m> 2 </m>-dimensional real Euclidean space <m> \of{ \R , d } </m> and <m> \of{ \R^{ 2 } , d } </m> are called the <term> real line </term> and the <term> Euclidean plane </term>, respectively, and <m> 1 </m>-dimensional complex Euclidean space <m> \of{ \C , d } </m> is called the <term> complex plane </term>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Consider the real-valued function <m> \rho \colon \opint{ 0 }{ \infty }^{ 2 } \to \R </m> defined by the formula
+              
+              <md>
+                \rho \of{ x , y } = \abs{ \ln{ \of{ \frac{ x_{ 1 } }{ x_{ 2 } } } } }
+              </md>
+              
+              As defined above, <m> \rho </m> is a metric on the open interval <m> \opint{ 0 }{ \infty } </m>, and so <m> \of{ \opint{ 0 }{ \infty } , \rho } </m> is a metric space.
+            </p>
+          </li>
+          
+          <li>
+            <idx>
+              discrete metric
+            </idx>
+            
+            <idx>
+              discrete metric space
+            </idx>
+            
+            <notation>
+              <usage>
+                <m> \delta_{ X } </m>
+              </usage>
+              
+              <description>
+                <p>
+                  the discrete metric on <m> X </m>
+                </p>
+              </description>
+            </notation>
+            
+            <p>
+              The <term> discrete metric </term> <m> \delta_{ X } \colon X^{ 2 } \to \set{ 0 , 1 } </m> on a set <m> X </m> is the function defined by the formula
+              
+              <md>
+                \delta_{ X } \of{ x_{ 1 } , x_{ 2 } } =
+                  \begin{cases}
+                    1 \amp x_{ 1 } = x_{ 2 } \\
+                    0 \amp x_{ 1 } \neq x_{ 2 }
+                  \end{cases}
+              </md>.
+              
+              As defined above, the discrete metric <m> \delta_{ X } </m> is a metric on <m> X </m>, and the metric space <m> \of{ X , \delta_{ X } } </m> is called a <term> discrete metric space </term>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    The definition of a metric is pretty abstract, and it may be difficult to see how or why requiring only nondegeneracy, symmetry, and the triangle inequality would give a useful generalization of distance, especially given the strange and outlandish properties of the discrete metric described above, which we will explore later in this section. However, requiring the three above properties actually forces a metric to have many of the properties of our usual notion of distance, and so we can often use our knowledge of distance in the physical world to inform our intuition about metric spaces.
+  </p>
+  
+  <p>
+    As an example, consider for a moment the notion of negative distance. In the real world, it makes no sense to consider negative distances between physical objects, and we would be equally confused by negative distances between points in a metric space. However, the defining axioms of a metric do not a priori explicitly forbid this nonsensical outcome from occurring. At first glance, it might seem like a metric might be allowed to take negative values, even though the three examples of a metric given above are certainly nonnegative. In fact, this is never the case.
+  </p>
+  
+  <lemma xml:id="lemma-metrics-are-non-negative">
+    <title>
+      Metrics are non-negative
+    </title>
+    
+    <statement>
+      <p>
+        A metric takes only non-negative values.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \rho </m> be a metric on a set <m> X </m>, and note that
+        
+        <md>
+          <mrow>
+            \rho \of{ x_{ 1 } , x_{ 2 } } \amp = \frac{ 2 \rho \of{ x_{ 1 } , x_{ 2 } } }{ 2 } = \frac{ \rho \of{ x_{ 1 } , x_{ 2 } } + \rho \of{ x_{ 1 } , x_{ 2 } } }{ 2 }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ \rho \of{ x_{ 1 } , x_{ 2 } } + \rho \of{ x_{ 2 } , x_{ 1 } } }{ 2 } \geq \frac{ \rho \of{ x_{ 1 } , x_{ 1 } } }{ 2 } = \frac{ 0 }{ 2 } = 0
+          </mrow>
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } \in X </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <p>
+    The above argument shows that, just as in the physical world, the distance between any two points in a metric space must be nonnegative. In fact, unlike many of the spaces which are studied by analysts (some of which we will encounter in the following chapters), metric spaces can be surprisingly accessible using only our intuitions about distance in the physical world. For example, the triangle inequality expresses that there are no <q> shortcuts </q> between two points in a metric space through a third point; in geometric terms, we require that no leg of a triangle may exceed in length the sum of the lengths of the other two legs. While the triangle inequality establishes an upper bound on the length of a leg of a triangle, the following property of a metric is called the <term> reverse triangle inequality </term>, and it establishes a lower bound on the length of a leg of a triangle.
+  </p>
+  
+  <proposition xml:id="proposition-reverse-triangle-inequality">
+    <title>
+      Reverse triangle inequality
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ X , \rho } </m> be a metric space. Then
+        
+        <md>
+          \rho \of{ x_{ 1 } , x_{ 2 } } \geq \abs{ \rho \of{ x_{ 1 } , x_{ 3 } } - \rho \of{ x_{ 2 } , x_{ 3 } } }
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in X </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        If <m> \rho \of{ x_{ 1 } , x_{ 3 } } \leq \rho \of{ x_{ 2 } , x_{ 3 } } </m>, then <m> \rho \of{ x_{ 1 } , x_{ 3 } } - \rho \of{ x_{ 2 } , x_{ 3 } } \leq 0 </m>, and so
+        
+        <md>
+          <mrow>
+            \abs{ \rho \of{ x_{ 1 } , x_{ 3 } } - \rho \of{ x_{ 2 } , x_{ 3 } } } \amp = \rho \of{ x_{ 2 } , x_{ 3 } } - \rho \of{ x_{ 1 } , x_{ 3 } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \rho \of{ x_{ 2 } , x_{ 1 } } + \rho \of{ x_{ 1 } , x_{ 3 } } - \rho \of{ x_{ 1 } , x_{ 3 } } = \rho \of{ x_{ 1 } , x_{ 2 } }
+          </mrow>
+        </md>.
+        
+        On the other hand, if <m> \rho \of{ x_{ 1 } , x_{ 3 } } \geq \rho \of{ x_{ 2 } , x_{ 3 } } </m>, then <m> \rho \of{ x_{ 1 } , x_{ 3 } } - \rho \of{ x_{ 2 } , x_{ 3 } } \geq 0 </m>, and so
+        
+        <md>
+          <mrow>
+            \abs{ \rho \of{ x_{ 1 } , x_{ 3 } } - \rho \of{ x_{ 2 } , x_{ 3 } } } \amp = \rho \of{ x_{ 1 } , x_{ 3 } } - \rho \of{ x_{ 2 } , x_{ 3 } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \rho \of{ x_{ 1 } , x_{ 2 } } + \rho \of{ x_{ 2 } , x_{ 3 } } - \rho \of{ x_{ 2 } , x_{ 3 } } = \rho \of{ x_{ 1 } , x_{ 2 } }
+          </mrow>
+        </md>.
+      </p>
+    </proof>
+  </proposition>
+
+  <conclusion>
+    <p>
+      We have just seen that metric spaces often agree with our geometric intuitions about distance. However, we must be careful not to assume too much about the geometry of metric spaces in general; even though many of the usual properties of distance in the physical world are implied by the defining axioms of a metric space, there is still lots of room for geometric peculiarities. In particular, some of the metrics defined above disagree with our geometric intuitions in confusing ways. This is because they satisfy a stronger form of the triangle inequality than is true in the physical world. We will explore these <term> ultrametrics </term> in the reading questions for this section.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+  <remark xml:id="remark-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <p>
+      
+    </p>
+  </remark>
+
+-->

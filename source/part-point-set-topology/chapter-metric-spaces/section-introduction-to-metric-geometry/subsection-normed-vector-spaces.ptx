@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-normed-vector-spaces" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Normed Vector Spaces
+  </title>
+
+  <introduction>
+    <p>
+      The ground sets of many of the metric spaces which we will investigate over the course of this chapter can also be considered as the ground sets of vector spaces. Moreover, in practically all of these cases, the linear-algebraic structure of the vector space is compatible with the analytical structure of the metric, in a way which we will make precise shortly. We now introduce a mathematical structure called a <term> normed vector space </term>, the study of which is called <term> functional analysis </term> and lies at the intersection of linear algebra and mathematical analysis. Aptly named, a normed vector space is a vector space equipped with the additional structure of a norm. Just as metrics generalize the notion of the distance between two points, norms on vector spaces generalize the related notion of the length of a vector.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-normed-vector-space">
+    <title>
+      Normed vector space
+    </title>
+    
+    <idx>
+      norm
+    </idx>
+    
+    <idx>
+      non-degeneracy
+    </idx>
+    
+    <idx>
+      absolute homogeneity
+    </idx>
+    
+    <idx>
+      sub-additivity
+    </idx>
+    
+    <idx>
+      normed vector space
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \norm{ \vect{ v } } </m>
+      </usage>
+      
+      <description>
+        <p>
+          The norm of a vector <m> \vect{ v } </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        A real-valued function <m> \norm{ \oparg } \colon V \to \R </m> on a real or complex vector space <m> V </m> is a <term> norm </term> on <m> V </m> if it has the following properties:
+        
+        <ol>
+          <li>
+            <title>
+              Non-degeneracy
+            </title>
+            
+            <p>
+              For any vector <m> \vect{ v } \in V </m>, <m> \norm{ \vect{ v } } = 0 </m> if and only if <m> \vect{ v } = \vect{ 0 } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Absolute homogeneity
+            </title>
+            
+            <p>
+              <m> \norm{ \alpha \vect{ v } } = \abs{ \alpha } \norm{ \vect{ v } } </m> for any scalar <m> \alpha </m> and vector <m> \vect{ v } \in V </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Sub-additivity
+            </title>
+            
+            <p>
+              <m> \norm{ \vect{ v }_{ 1 } + \vect{ v }_{ 2 } } \leq \norm{ \vect{ v }_{ 1 } } + \norm{ \vect{ v }_{ 2 } } </m> for all vectors <m> \vect{ v }_{ 1 } , \vect{ v }_{ 2 } \in V </m>.
+            </p>
+          </li>
+        </ol>
+        
+        In this case, the ordered pair <m> \of{ V , \norm{ \oparg } } </m> is called a <term> normed vector space </term>.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    Normed vector spaces are ubiquitous throughout mathematics. In fact, many of the vector spaces which you will have encountered in any course in linear algebra have canonical norms associated to them; lots of the vector spaces which are familiar to you have been normed vector spaces all along.
+  </p>
+
+  <example xml:id="example-normed-vector-spaces">
+    <title>
+      Normed vector spaces
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of normed vector spaces:
+        
+        <ol>
+          <li>
+            <idx>
+              <m> p </m>-norm
+            </idx>
+            
+            <notation>
+              <usage>
+                <m> \norm{ \oparg }_{ p } </m>
+              </usage>
+              
+              <description>
+                <p>
+                  the <m> p </m>-norm
+                </p>
+              </description>
+            </notation>
+            
+            <idx>
+              Euclidean norm
+            </idx>
+            
+            
+            
+            <p>
+              Let <m> n \in \N </m> be a natural number, and fix a positive real number <m> p \gt 0 </m>. The <term> <m> p </m>-norm </term> <m> \norm{ \oparg }_{ p } \colon \R^{ n } \to \R </m> on <m> n </m>-dimensional real coordinate space <m> \R^{ n } </m> is the real-valued function defined by the formula
+              
+              <md>
+                \norm{ \vect{ x } }_{ p } = \sqrt{ \sum_{ k = 1 }^{ n }{ x_{ k }^{ 2 } } }
+              </md>.
+              
+              Similarly, the <term> <m> p </m>-norm </term> <m> \norm{ \oparg }_{ p } \colon \C^{ n } \to \R </m> on <m> n </m>-dimensional complex coordinate space <m> \C^{ n } </m> is the real-valued function defined by the formula
+              
+              <md>
+                \norm{ \vect{ z } }_{ p } = \sqrt{ \sum_{ k = 1 }^{ n }{ \abs{ z_{ k } }^{ 2 } } }
+              </md>.
+              
+              If <m> p \geq 1 </m>, then the <m> p </m>-norms are norms on <m> \R^{ n } </m> and <m> \C^{ n } </m>, and so <m> \of{ \R^{ n } , \norm{ \oparg }_{ p } } </m> and <m> \of{ \C^{ n } , \norm{ \oparg }_{ p } } </m> are normed vector spaces.
+            </p>
+            
+            <p>
+              In particular, the <m> 2 </m>-norms <m> \norm{ \oparg }_{ 2 } </m> on <m> \R^{ n } </m> and <m> \C^{ n } </m> are called the <term> Euclidean norms </term> on <m> \R^{ n } </m> and <m> \C^{ n } </m>. Because the Euclidean norms are so ubiquitous, we will often drop the subscripts in our notation, so that <m> \norm{ \oparg } = \norm{ \oparg }_{ 2 } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <idx>
+              <m> p </m>-norm
+            </idx>
+            
+            <notation>
+              <usage>
+                <m> \norm{ \oparg }_{ p } </m>
+              </usage>
+              
+              <description>
+                <p>
+                  the <m> p </m>-norm
+                </p>
+              </description>
+            </notation>
+            
+            <p>
+              Let <m> n \in \N </m> be a natural number. The families of <m> p </m>-norms on <m> n </m>-dimensional real and complex coordinate space <m> \R^{ n } </m> and <m> \C^{ n } </m> can be extended to the case <m> p = \infty </m>. The <term> <m> \infty </m>-norm </term> <m> \norm{ \oparg }_{ \infty } \colon \R^{ n } \to \R </m> on <m> \R^{ n } </m> is the real-valued function defined by the formula
+              
+              <md>
+                \norm{ \vect{ x } }_{ \infty } = \max_{ 1 \leq k \leq n }{ \abs{ x_{ k } } }
+              </md>.
+              
+              Similarly, the <term> <m> \infty </m>-norm </term> <m> \norm{ \oparg }_{ \infty } \colon \C^{ n } \to \R </m> on <m> \C^{ n } </m> is the real-valued function defined by the formula
+              
+              <md>
+                \norm{ \vect{ z } }_{ \infty } = \max_{ 1 \leq k \leq n }{ \abs{ z_{ k } } }
+              </md>.
+              
+              The <m> \infty </m>-norms are norms on <m> \R^{ n } </m> and <m> \C^{ n } </m>, and so <m> \of{ \R^{ n } , \norm{ \oparg }_{ \infty } } </m> and <m> \of{ \C^{ n } , \norm{ \oparg }_{ \infty } } </m> are normed vector spaces.
+            </p>
+          </li>
+          
+          <li>
+            <idx>
+              Euclidean inner product
+            </idx>
+            
+            <p>
+              Any Hermitian inner product <m> \inner{ \oparg }{ \oparg } </m> on a real or complex vector space <m> V </m> induces a norm <m> \norm{ \oparg } \colon V^{ 2 } \to \R </m> on <m> V </m> defined by the formula
+              
+              <md>
+                \norm{ \vect{ v } } = \sqrt{ \inner{ \vect{ v } }{ \vect{ v } } }
+              </md>.
+              
+              In fact, for all natural numbers <m> n \in \N </m>, the norms produced in this manner by the dot product on <m> n </m>-dimensional real and complex coordinate space <m> \R^{ n } </m> and <m> \C^{ n } </m> are precisely the Euclidean norms. For this reason, the dot product is often called the <term> Euclidean inner product </term> on <m> \R^{ n } </m> and <m> \C^{ n } </m>.
+            </p>
+          </li>
+        </ol>
+        
+        The above examples show that many of our familiar vector spaces have canonical norms readily available.
+      </p>
+    </statement>
+  </example>
+
+  <remark xml:id="remark-p-norms-on-one-dimensional-vector-spaces">
+    <title>
+      <m> p </m>-norms on <m> 1 </m>-dimensional vector spaces
+    </title>
+    
+    <p>
+      Note that
+      
+      <md>
+        \norm{ x }_{ p } = \of{ \abs{ x }^{ p } }^{ \frac{ 1 }{ p } } = \abs{ x } = \max \of{ \set{ \abs{ x } } } = \norm{ x }_{ \infty }
+      </md>
+      
+      for all real numbers <m> x \in \R </m>, and similarly
+      
+      <md>
+        \norm{ z }_{ p } = \of{ \abs{ z }^{ p } }^{ \frac{ 1 }{ p } } = \abs{ z } = \max \of{ \set{ \abs{ z } } } = \norm{ z }_{ \infty }
+      </md>
+      
+      for all complex numbers <m> z \in \C </m>; that is, all of the <m> p </m> norms (including the case <m> p = \infty </m>) on the real numbers <m> \R </m> and the complex numbers <m> \C </m> agree. Such statements do not hold in higher dimensions, although we will see that the <m> p </m>-norms remain related for topological concerns.
+    </p>
+  </remark>
+  
+  <p>
+    Just as in the case of metrics, we would prefer to consider only non-negative vector lengths. It makes no sense to consider negative lengths of physical vectors, and it is just as difficult to make sense of negative values of a norm in a normed vector space. Thankfully, the defining axioms of a norm prevent this from occurring.
+  </p>
+  
+  <lemma xml:id="lemma-norms-are-non-negative">
+    <title>
+      Norms are non-negative
+    </title>
+    
+    <statement>
+      <p>
+        A norm takes only non-negative values.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \norm{ \oparg } \colon V \to \R </m> be a norm on a real or complex vector space <m> V </m>, and note that
+        
+        <md>
+          <mrow>
+            \norm{ \vect{ v } } \amp = \frac{ 2 \norm{ \vect{ v } } }{ 2 } = \frac{ \norm{ \vect{ v } } + \norm{ \vect{ v } } }{ 2 } = \frac{ \norm{ \vect{ v } } + \abs{ -1 } \norm{ \vect{ v } } }{ 2 }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ \norm{ \vect{ v } } + \norm{ -\vect{ v } } }{ 2 } \geq \frac{ \norm{ \vect{ v } - \vect{ v } } }{ 2 } = \frac{ \norm{ \vect{ 0 } } }{ 2 } = \frac{ 0 }{ 2 } = 0 
+          </mrow>
+        </md>
+        
+        for all vectors <m> \vect{ v } \in V </m>.
+      </p>
+    </proof>
+  </lemma>
+
+  <theorem xml:id="theorem-normed-vector-spaces-are-metric-spaces">
+    <title>
+      Normed vector spaces are metric spaces
+    </title>
+    
+    <idx>
+      induced metric
+    </idx>
+    
+    <statement>
+      <p>
+        A norm <m> \norm{ \oparg } \colon V \to \R </m> on a real or complex vector space <m> V </m> induces a metric <m> \rho \colon V^{ 2 } \to \R </m> defined by the formula
+        
+        <md>
+          \rho \of{ \vect{ v }_{ 1 } , \vect{ v }_{ 2 } } = \norm{ \vect{ v }_{ 1 } - \vect{ v }_{ 2 } }
+        </md>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        First, let <m> \vect{ v }_{ 1 } , \vect{ v }_{ 2 } \in V </m> be vectors, and suppose that <m> \rho \of{ \vect{ v }_{ 1 } , \vect{ v }_{ 2 } } = 0 </m>. Then
+        
+        <md>
+          \norm{ \vect{ v }_{ 1 } - \vect{ v }_{ 2 } } = \rho \of{ \vect{ v }_{ 1 } , \vect{ v }_{ 2 } } = 0
+        </md>,
+        
+        and so <m> \vect{ v }_{ 1 } - \vect{ v }_{ 2 } = \vect{ 0 } </m>; that is, <m> \vect{ v }_{ 1 } = \vect{ v }_{ 2 } </m>. Conversely, if <m> \vect{ v }_{ 1 } = \vect{ v }_{ 2 } </m>, then
+        
+        <md>
+          \rho \of{ \vect{ v }_{ 1 } , \vect{ v }_{ 2 } } = \norm{ \vect{ v }_{ 1 } - \vect{ v }_{ 2 } } = \norm{ \vect{ 0 } } = 0
+        </md>.
+        
+        Thus <m> \rho </m> is non-degenerate.
+      </p>
+      
+      <p>
+        Since
+        
+        <md>
+          <mrow>
+            \rho \of{ \vect{ v }_{ 1 } , \vect{ v }_{ 2 } } \amp = \norm{ \vect{ v }_{ 1 } - \vect{ v }_{ 2 } } = \abs{ -1 } \norm{ \vect{ v }_{ 1 } - \vect{ v }_{ 2 } }
+          </mrow>
+          
+          <mrow>
+            \amp = \norm{ \vect{ v }_{ 2 } - \vect{ v }_{ 1 } } = \rho \of{ \vect{ v }_{ 2 } , \vect{ v }_{ 1 } }
+          </mrow>
+        </md>
+        
+        for all vectors <m> \vect{ v }_{ 1 } , \vect{ v }_{ 2 } \in V </m>, <m> \rho </m> is symmetric.
+      </p>
+      
+      <p>
+        Finally, since
+        
+        <md>
+          <mrow>
+            \rho \of{ \vect{ v }_{ 1 } , \vect{ v }_{ 3 } } \amp = \norm{ \vect{ v }_{ 1 } - \vect{ v }_{ 3 } } = \norm{ \of{ \vect{ v }_{ 1 } - \vect{ v }_{ 2 } } + \of{ \vect{ v }_{ 2 } - \vect{ v }_{ 3 } } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \norm{ \vect{ v }_{ 1 } - \vect{ v }_{ 2 } } + \norm{ \vect{ v }_{ 2 } - \vect{ v }_{ 3 } } = \rho \of{ \vect{ v }_{ 1 } , \vect{ v }_{ 2 } } + \rho \of{ \vect{ v }_{ 2 } , \vect{ v }_{ 3 } }
+          </mrow>
+        </md>
+        
+        for all vectors <m> \vect{ v }_{ 1 } , \vect{ v }_{ 2 } , \vect{ v }_{ 3 } \in V </m>, <m> \rho </m> satisfies the triangle inequality. Since <m> \rho </m> is non-degenerate, symmetric, and satisfies the triangle inequality, it is a metric on <m> V </m>.
+      </p>
+    </proof>
+  </theorem>
+  
+  <p>
+    So, given a normed vector space, we may easily convert it into a metric space by defining the distance between two vectors to be the norm of their difference. Many important metric spaces arise as a result of this construction.
+  </p>
+  
+  <example xml:id="example-p-metrics">
+    <title>
+      <m> p </m>-metrics
+    </title>
+    
+    <idx>
+      <m> p </m>-metric
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> d_{ p } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the <m> p </m>-metric
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> n \in \N </m> be a natural number, and fix an extended real number <m> 1 \leq p \leq \infty </m>. The metrics <m> d_{ p } </m> on <m> n </m>-dimensional real and complex coordinate spaces <m> \R^{ n } </m> and <m> \C^{ n } </m> by the <m> p </m>-norms <m> \norm{ \oparg }_{ p } </m> are called <term> <m> p </m>-metrics </term>. These <m> p </m>-metrics are defined by the formula
+        
+        <md>
+          d_{ p } \of{ \vect{ w } , \vect{ z } } = \norm{ \vect{ z }_{ 1 } - \vect{ z }_{ 2 } }_{ p } = \of{ \sum_{ k = 1 }^{ n }{ \abs{ w_{ k } - z_{ k } }^{ p } } }^{ \frac{ 1 }{ p } }
+        </md>.
+        
+        In particular, we note that the metrics <m> d_{ 2 } = d </m> induced by the Euclidean norms <m> \norm{ \oparg }_{ 2 } = \norm{ \oparg } </m> are the Euclidean metrics.
+      </p>
+    </statement>
+  </example>
+
+  <conclusion>
+    <p>
+      So any norm structure on a real or complex vector space can be reanalyzed as also providing a metric structure. However, a metric on a real or complex vector space need not be induced by a norm. Moreover, there exist metric spaces which cannot be constructed from a normed vector space. So, while normed vector spaces are very useful for defining specific metric spaces, they do not capture all of what can be said about metric spaces, and so will not merit any more special consideration just yet. With this illuminating example of normed vector spaces in mind, we now resume our study of metric spaces in their full generality.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+  <remark xml:id="remark-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <p>
+      
+    </p>
+  </remark>
+
+-->

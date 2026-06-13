@@ -1,0 +1,29 @@
+INFO    : Building target print
+INFO    : XSL conversion of /project/source/main.ptx by /root/.ptx/2.41.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /root/.ptx/2.41.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /project/output/print.
+INFO    : discovering source file's directory name: /project/source
+INFO    : verifying and expanding input directory: /project/source/../generated-assets
+INFO    : input directory expanded to absolute path: /project/generated-assets
+INFO    : verifying and expanding input directory: /project/source/../assets
+INFO    : input directory expanded to absolute path: /project/assets
+INFO    : XSL conversion of /project/source/main.ptx by /root/.ptx/2.41.2/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /root/.ptx/2.41.2/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : converting /project/source/main.ptx to LaTeX as /ptx-pozo1jnm/main.tex
+INFO    : XSL conversion of /project/source/main.ptx by /root/.ptx/2.41.2/core/xsl/pretext-latex.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * PTX:INFO:   checking all deprecated elements.
+INFO    : successful application of /root/.ptx/2.41.2/core/xsl/pretext-latex.xsl
+INFO    : Removing temporary directory /ptx-pozo1jnm
+INFO    : Removing temporary directory /ptx-yq33n1be
+INFO    : Removing temporary directory /ptx-h4rs3i86
+INFO    : 
+Finished build for target print. The output is in /project/output/print.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+INFO    : 

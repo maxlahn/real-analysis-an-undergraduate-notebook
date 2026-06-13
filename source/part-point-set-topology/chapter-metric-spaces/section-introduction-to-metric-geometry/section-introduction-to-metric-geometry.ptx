@@ -7,15 +7,19 @@
 
   <introduction>
     <p>
-      Text before the first subsection.
+      To begin, we introduce a generalization of our usual notion of distance which is called a <term> metric </term>. The properties of physical distance make it an extremely useful tool for formalizing the analytical notions mentioned above.
     </p>
   </introduction>
 
-  <!-- <xi:include href="./subsection-TITLE.ptx"/> -->
+  <xi:include href="./subsection-introduction-to-metrics.ptx"/>
+
+  <xi:include href="./subsection-constructing-new-metrics.ptx"/>
+
+  <xi:include href="./subsection-normed-vector-spaces.ptx"/>
 
   <conclusion>
     <p>
-      Text after the last subsection.
+      In the next section, we introduce one of the most important ideas in the field of analysis: that of convergence to a limit.
     </p>
   </conclusion>
 

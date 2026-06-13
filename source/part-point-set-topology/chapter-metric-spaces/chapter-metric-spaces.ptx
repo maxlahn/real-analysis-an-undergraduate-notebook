@@ -7,7 +7,35 @@
 
   <introduction>
     <p>
-      Text before the first section.
+      In this chapter, we introduce metric spaces, which generalize the notion of distance in the physical world, and are the natural setting for beginning our study of analysis. Analysis as a field of mathematics is concerned with the limiting behavior of mathematical objects. In a metric space, it makes sense to talk about the distance between any two points. Armed only with this notion of distance, we will define what it means
+      
+      <ul>
+        <li>
+          <p>
+            for sequences and functions to converge to a limit;
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            for sets to be open and/or closed;
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            for maps to be continuous; and
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            for metric spaces to be complete.
+          </p>
+        </li>
+      </ul>
+      
+      However, in spite of the strength and applicability of the results to be proven in this chapter, we will eventually find that we require further generalizations of the above notions, which will occur in the next chapter.
     </p>
   </introduction>
 
@@ -25,7 +53,7 @@
 
   <conclusion>
     <p>
-      Text after the last section.
+      In this chapter, we have seen that a metric allows us to easily develop a notion of closeness for points in a set based on the standard ordering on the nonnegative real numbers, and we have exploited this notion to explore analysis in metric spaces. In the next chapter, we will examine more abstract notions of closeness which will come from objects known as <term> topologies </term>.
     </p>
   </conclusion>
 </chapter>

@@ -1123,7 +1123,61 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.2",
   "title": "Constructing the Real Numbers",
-  "body": " Constructing the Real Numbers   Text before the first subsection.     Text after the last subsection.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Reading Questions   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and\/or instructor rather than spoiling the answers.    "
+  "body": " Constructing the Real Numbers   In this section, we construct the real number system  by Dedekind cuts , and we explore the resultant properties of arithmetic and comparison. However, we will find the existence of such a formal construction and its properties more useful than the particular details of the construction itself, and we will shortly leave behind the perspective suggested by our construction.    Cutting the Rational Numbers   Text before the first subdivision.    Dedekind cut  dedekind cut   A proper, non-empty subset of the rational numbers is called a Dedekind cut if it satisfies the following conditions:    For all rational numbers , if and , then .     does not have a maximum; that is, for all elements , there is an element so that .       Dedekind cuts  rational Dedekind cut       the rational Dedekind cut associated to      For each rational number , consider the subset of the rational numbers . We observe that is a proper and non-empty subset of , since it contains but not itself. Moreover, for all rational numbers , if and , then , and so . Finally, for all elements , we observe that , so that . In summary, we have shown that associated to each rational number is a Dedekind cut .    We will see that the above construction realizes the rational numbers as a subset of the set of Dedekind cuts. The Dedekind cuts which arise in this manner will be called rational . We will shortly see that not every Dedekind cut is rational.   Rational Dedekind cuts   A Dedekind cut is rational if and only if its complement has a minimum.    Let be a Dedekind cut, and suppose that for some rational number . Note that has complement . This set contains , since . Moreover, for all elements . Thus .  Conversely, now suppose that has a minimum element, say . Let , and suppose that . If , then that would imply that . This contradiction implies that . On the other hand, if , then , since . Thus is rational.     Irrational Dedekind cuts   Not all Dedekind cuts are rational.    Consider the subset of the rational numbers . We observe that is a non-empty and proper subset of , since it contains but not . Let be rational numbers, and suppose that and . If , then , and so . On the other hand, if , then either or , in which case . In either case, we conclude that .  Finally, let . If , then let , and note that and . On the other hand, suppose that and , and consider the rational number . Note that , and , so that ; that is, . We conclude that is a Dedekind cut.  We note that has complement . In fact, since for all rational numbers , . This set has no minimum element, and so is not rational.     Text after the last subdivision.     Arithmetic of Dedekind Cuts   Text before the first subdivision.    Text after the last subdivision.     Comparison of Dedekind Cuts   Text before the first subdivision.    Text after the last subdivision.     Text after the last subsection.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Reading Questions   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and\/or instructor rather than spoiling the answers.    "
+},
+{
+  "id": "section-constructing-the-real-numbers-2-1",
+  "level": "2",
+  "url": "section-constructing-the-real-numbers.html#section-constructing-the-real-numbers-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "real number system Dedekind cuts "
+},
+{
+  "id": "definition-dedekind-cut",
+  "level": "2",
+  "url": "section-constructing-the-real-numbers.html#definition-dedekind-cut",
+  "type": "Definition",
+  "number": "2.2.1",
+  "title": "Dedekind cut.",
+  "body": " Dedekind cut  dedekind cut   A proper, non-empty subset of the rational numbers is called a Dedekind cut if it satisfies the following conditions:    For all rational numbers , if and , then .     does not have a maximum; that is, for all elements , there is an element so that .     "
+},
+{
+  "id": "example-dedekind-cuts",
+  "level": "2",
+  "url": "section-constructing-the-real-numbers.html#example-dedekind-cuts",
+  "type": "Example",
+  "number": "2.2.2",
+  "title": "Dedekind cuts.",
+  "body": " Dedekind cuts  rational Dedekind cut       the rational Dedekind cut associated to      For each rational number , consider the subset of the rational numbers . We observe that is a proper and non-empty subset of , since it contains but not itself. Moreover, for all rational numbers , if and , then , and so . Finally, for all elements , we observe that , so that . In summary, we have shown that associated to each rational number is a Dedekind cut .   "
+},
+{
+  "id": "subsection-cutting-the-rational-numbers-5",
+  "level": "2",
+  "url": "section-constructing-the-real-numbers.html#subsection-cutting-the-rational-numbers-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "rational "
+},
+{
+  "id": "lemma-rational-dedekind-cuts",
+  "level": "2",
+  "url": "section-constructing-the-real-numbers.html#lemma-rational-dedekind-cuts",
+  "type": "Lemma",
+  "number": "2.2.3",
+  "title": "Rational Dedekind cuts.",
+  "body": " Rational Dedekind cuts   A Dedekind cut is rational if and only if its complement has a minimum.    Let be a Dedekind cut, and suppose that for some rational number . Note that has complement . This set contains , since . Moreover, for all elements . Thus .  Conversely, now suppose that has a minimum element, say . Let , and suppose that . If , then that would imply that . This contradiction implies that . On the other hand, if , then , since . Thus is rational.   "
+},
+{
+  "id": "proposition-not-all-dedekind-cuts-are-rational",
+  "level": "2",
+  "url": "section-constructing-the-real-numbers.html#proposition-not-all-dedekind-cuts-are-rational",
+  "type": "Proposition",
+  "number": "2.2.4",
+  "title": "Irrational Dedekind cuts.",
+  "body": " Irrational Dedekind cuts   Not all Dedekind cuts are rational.    Consider the subset of the rational numbers . We observe that is a non-empty and proper subset of , since it contains but not . Let be rational numbers, and suppose that and . If , then , and so . On the other hand, if , then either or , in which case . In either case, we conclude that .  Finally, let . If , then let , and note that and . On the other hand, suppose that and , and consider the rational number . Note that , and , so that ; that is, . We conclude that is a Dedekind cut.  We note that has complement . In fact, since for all rational numbers , . This set has no minimum element, and so is not rational.   "
 },
 {
   "id": "section-the-complete-ordered-field",
@@ -1150,7 +1204,169 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.1",
   "title": "Introduction to Metric Geometry",
-  "body": " Introduction to Metric Geometry   Text before the first subsection.     Text after the last subsection.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Reading Questions   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and\/or instructor rather than spoiling the answers.    "
+  "body": " Introduction to Metric Geometry   To begin, we introduce a generalization of our usual notion of distance which is called a metric . The properties of physical distance make it an extremely useful tool for formalizing the analytical notions mentioned above.    Introduction to Metrics   Not all properties of physical distance are generic enough to generalize to other settings in which we might want to measure distance-like quantities. This question of which properties of a specific example (usually Euclidean space) are salient enough to merit requirement in a generalization is ubiquitous throughout mathematical exposition, and will recur frequently throughout this text.    Metric space  metric  ground set  point  non-degeneracy  symmetry  triangle inequality  metric space   A real-valued function on the Cartesian square of a set , which is called the ground set and whose elements are called points , is a metric on if it has the following properties:   Non-degeneracy  For any points , if and only if .    Symmetry   for any points .    Triangle inequality   for any points .   In this case, the ordered pair is called a metric space .     Implied metrics  We will see that, in general, there are many metrics on a given set, no one of which may truly be considered canonical. In fact, even though some distinct metrics give identical answers to point-set topological concerns such as convergence and continuity, in most cases even a choice one of these classes of metrics is arbitrary in some respects.  However, sometimes, if a metric on a set is clear from context, previously specified, or implicitly present, some mathematicians will refer to the metric space by only the underlying set . We will try to avoid such ambiguities, and we will attempt to always explicitly specify the metric with which we will be working.    Metric spaces   The following are examples of metrics and metric spaces:   Euclidean metric  Euclidean space  real line  Euclidean plane  complex plane  Let be a natural number. The Euclidean metric  on -dimensional real coordinate space is the function defined by the formula . Similarly, the Euclidean metric  on -dimensional real coordinate space is the function defined by the formula .  As defined above, the Euclidean metrics are metrics on and , respectively. The metric spaces and are called -dimensional real Euclidean space and -dimensional complex Euclidean space , respectively. - and -dimensional real Euclidean space and are called the real line and the Euclidean plane , respectively, and -dimensional complex Euclidean space is called the complex plane .    Consider the real-valued function defined by the formula As defined above, is a metric on the open interval , and so is a metric space.    discrete metric  discrete metric space       the discrete metric on     The discrete metric  on a set is the function defined by the formula . As defined above, the discrete metric is a metric on , and the metric space is called a discrete metric space .       The definition of a metric is pretty abstract, and it may be difficult to see how or why requiring only nondegeneracy, symmetry, and the triangle inequality would give a useful generalization of distance, especially given the strange and outlandish properties of the discrete metric described above, which we will explore later in this section. However, requiring the three above properties actually forces a metric to have many of the properties of our usual notion of distance, and so we can often use our knowledge of distance in the physical world to inform our intuition about metric spaces.  As an example, consider for a moment the notion of negative distance. In the real world, it makes no sense to consider negative distances between physical objects, and we would be equally confused by negative distances between points in a metric space. However, the defining axioms of a metric do not a priori explicitly forbid this nonsensical outcome from occurring. At first glance, it might seem like a metric might be allowed to take negative values, even though the three examples of a metric given above are certainly nonnegative. In fact, this is never the case.   Metrics are non-negative   A metric takes only non-negative values.    Let be a metric on a set , and note that for all points .    The above argument shows that, just as in the physical world, the distance between any two points in a metric space must be nonnegative. In fact, unlike many of the spaces which are studied by analysts (some of which we will encounter in the following chapters), metric spaces can be surprisingly accessible using only our intuitions about distance in the physical world. For example, the triangle inequality expresses that there are no shortcuts between two points in a metric space through a third point; in geometric terms, we require that no leg of a triangle may exceed in length the sum of the lengths of the other two legs. While the triangle inequality establishes an upper bound on the length of a leg of a triangle, the following property of a metric is called the reverse triangle inequality , and it establishes a lower bound on the length of a leg of a triangle.   Reverse triangle inequality   Let be a metric space. Then for all points .    If , then , and so . On the other hand, if , then , and so .     We have just seen that metric spaces often agree with our geometric intuitions about distance. However, we must be careful not to assume too much about the geometry of metric spaces in general; even though many of the usual properties of distance in the physical world are implied by the defining axioms of a metric space, there is still lots of room for geometric peculiarities. In particular, some of the metrics defined above disagree with our geometric intuitions in confusing ways. This is because they satisfy a stronger form of the triangle inequality than is true in the physical world. We will explore these ultrametrics in the reading questions for this section.     Constructing New Metrics   We will now see how to construct new metrics out of given metric spaces. Given a metric space, there is a natural metric on any subset of its ground set. This restriction of the metric structure to a subset is done in the obvious way; the distance between any points in the subset is just their distance when considered as points in the bigger space. In this way, a metric on a set is said to induce a metric on all of its subsets.    Induced metric  induced metric  metric subspace   Let be a subset of a metric space . The induced metric on is the restriction of to . The metric space is called a metric subspace of the metric space .  In practice, we often write that is a metric on , even if the domain of is strictly larger than . We will not distinguish between a metric and its restriction to a smaller space.     Discrete metric subspaces   Let be a subset of a set . The discrete metric on is induced on by the discrete metric on ; that is, . Thus the discrete metric space is a metric subspace of the discrete metric space .    Thus far, we have been very careful when working in a metric space to specify not only the ground set but also the metric. This is because we can in general find many metrics on a given underlying set. In fact, given one or more metrics on a set, there are several ways of constructing new metrics on that set. In particular, any finite positive pointwise linear combination of metrics is itself a metric.   Linear combinations of metrics   Any positive real linear combination of metrics is a metric.    Let be a set, and consider positive real numbers and metrics on . Denote by the linear combination defined by the formula . First let be points, and suppose that . Then . Since and for all indices , we conclude that for all indices . In particular, .  Conversely, now suppose that . Then . Thus is non-degenerate.  Note that for all points , and so is symmetric.  Finally, note that for all points , and so satisfies the triangle inequality. Since is non-degenerate, symmetric, and satisfies the triangle inequality, it is a metric on .     In particular, the sum of two metrics is a metric, and any positive real multiple of a metric is a metric.     Normed Vector Spaces   The ground sets of many of the metric spaces which we will investigate over the course of this chapter can also be considered as the ground sets of vector spaces. Moreover, in practically all of these cases, the linear-algebraic structure of the vector space is compatible with the analytical structure of the metric, in a way which we will make precise shortly. We now introduce a mathematical structure called a normed vector space , the study of which is called functional analysis and lies at the intersection of linear algebra and mathematical analysis. Aptly named, a normed vector space is a vector space equipped with the additional structure of a norm. Just as metrics generalize the notion of the distance between two points, norms on vector spaces generalize the related notion of the length of a vector.    Normed vector space  norm  non-degeneracy  absolute homogeneity  sub-additivity  normed vector space       The norm of a vector      A real-valued function on a real or complex vector space is a norm on if it has the following properties:   Non-degeneracy  For any vector , if and only if .    Absolute homogeneity   for any scalar and vector .    Sub-additivity   for all vectors .   In this case, the ordered pair is called a normed vector space .    Normed vector spaces are ubiquitous throughout mathematics. In fact, many of the vector spaces which you will have encountered in any course in linear algebra have canonical norms associated to them; lots of the vector spaces which are familiar to you have been normed vector spaces all along.   Normed vector spaces   The following are examples of normed vector spaces:    -norm       the -norm    Euclidean norm  Let be a natural number, and fix a positive real number . The  -norm  on -dimensional real coordinate space is the real-valued function defined by the formula . Similarly, the  -norm  on -dimensional complex coordinate space is the real-valued function defined by the formula . If , then the -norms are norms on and , and so and are normed vector spaces.  In particular, the -norms on and are called the Euclidean norms on and . Because the Euclidean norms are so ubiquitous, we will often drop the subscripts in our notation, so that .     -norm       the -norm    Let be a natural number. The families of -norms on -dimensional real and complex coordinate space and can be extended to the case . The  -norm  on is the real-valued function defined by the formula . Similarly, the  -norm  on is the real-valued function defined by the formula . The -norms are norms on and , and so and are normed vector spaces.    Euclidean inner product  Any Hermitian inner product on a real or complex vector space induces a norm on defined by the formula . In fact, for all natural numbers , the norms produced in this manner by the dot product on -dimensional real and complex coordinate space and are precisely the Euclidean norms. For this reason, the dot product is often called the Euclidean inner product on and .   The above examples show that many of our familiar vector spaces have canonical norms readily available.      -norms on -dimensional vector spaces  Note that for all real numbers , and similarly for all complex numbers ; that is, all of the norms (including the case ) on the real numbers and the complex numbers agree. Such statements do not hold in higher dimensions, although we will see that the -norms remain related for topological concerns.   Just as in the case of metrics, we would prefer to consider only non-negative vector lengths. It makes no sense to consider negative lengths of physical vectors, and it is just as difficult to make sense of negative values of a norm in a normed vector space. Thankfully, the defining axioms of a norm prevent this from occurring.   Norms are non-negative   A norm takes only non-negative values.    Let be a norm on a real or complex vector space , and note that for all vectors .     Normed vector spaces are metric spaces  induced metric   A norm on a real or complex vector space induces a metric defined by the formula .    First, let be vectors, and suppose that . Then , and so ; that is, . Conversely, if , then . Thus is non-degenerate.  Since for all vectors , is symmetric.  Finally, since for all vectors , satisfies the triangle inequality. Since is non-degenerate, symmetric, and satisfies the triangle inequality, it is a metric on .    So, given a normed vector space, we may easily convert it into a metric space by defining the distance between two vectors to be the norm of their difference. Many important metric spaces arise as a result of this construction.    -metrics   -metric       the -metric     Let be a natural number, and fix an extended real number . The metrics on -dimensional real and complex coordinate spaces and by the -norms are called  -metrics . These -metrics are defined by the formula . In particular, we note that the metrics induced by the Euclidean norms are the Euclidean metrics.     So any norm structure on a real or complex vector space can be reanalyzed as also providing a metric structure. However, a metric on a real or complex vector space need not be induced by a norm. Moreover, there exist metric spaces which cannot be constructed from a normed vector space. So, while normed vector spaces are very useful for defining specific metric spaces, they do not capture all of what can be said about metric spaces, and so will not merit any more special consideration just yet. With this illuminating example of normed vector spaces in mind, we now resume our study of metric spaces in their full generality.     In the next section, we introduce one of the most important ideas in the field of analysis: that of convergence to a limit.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Reading Questions   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and\/or instructor rather than spoiling the answers.    "
+},
+{
+  "id": "section-introduction-to-metric-geometry-2-1",
+  "level": "2",
+  "url": "section-introduction-to-metric-geometry.html#section-introduction-to-metric-geometry-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "metric "
+},
+{
+  "id": "definition-metric-space",
+  "level": "2",
+  "url": "section-introduction-to-metric-geometry.html#definition-metric-space",
+  "type": "Definition",
+  "number": "3.1.1",
+  "title": "Metric space.",
+  "body": " Metric space  metric  ground set  point  non-degeneracy  symmetry  triangle inequality  metric space   A real-valued function on the Cartesian square of a set , which is called the ground set and whose elements are called points , is a metric on if it has the following properties:   Non-degeneracy  For any points , if and only if .    Symmetry   for any points .    Triangle inequality   for any points .   In this case, the ordered pair is called a metric space .   "
+},
+{
+  "id": "remark-implied-metrics",
+  "level": "2",
+  "url": "section-introduction-to-metric-geometry.html#remark-implied-metrics",
+  "type": "Remark",
+  "number": "3.1.2",
+  "title": "Implied metrics.",
+  "body": " Implied metrics  We will see that, in general, there are many metrics on a given set, no one of which may truly be considered canonical. In fact, even though some distinct metrics give identical answers to point-set topological concerns such as convergence and continuity, in most cases even a choice one of these classes of metrics is arbitrary in some respects.  However, sometimes, if a metric on a set is clear from context, previously specified, or implicitly present, some mathematicians will refer to the metric space by only the underlying set . We will try to avoid such ambiguities, and we will attempt to always explicitly specify the metric with which we will be working.  "
+},
+{
+  "id": "example-metric-spaces",
+  "level": "2",
+  "url": "section-introduction-to-metric-geometry.html#example-metric-spaces",
+  "type": "Example",
+  "number": "3.1.3",
+  "title": "Metric spaces.",
+  "body": " Metric spaces   The following are examples of metrics and metric spaces:   Euclidean metric  Euclidean space  real line  Euclidean plane  complex plane  Let be a natural number. The Euclidean metric  on -dimensional real coordinate space is the function defined by the formula . Similarly, the Euclidean metric  on -dimensional real coordinate space is the function defined by the formula .  As defined above, the Euclidean metrics are metrics on and , respectively. The metric spaces and are called -dimensional real Euclidean space and -dimensional complex Euclidean space , respectively. - and -dimensional real Euclidean space and are called the real line and the Euclidean plane , respectively, and -dimensional complex Euclidean space is called the complex plane .    Consider the real-valued function defined by the formula As defined above, is a metric on the open interval , and so is a metric space.    discrete metric  discrete metric space       the discrete metric on     The discrete metric  on a set is the function defined by the formula . As defined above, the discrete metric is a metric on , and the metric space is called a discrete metric space .      "
+},
+{
+  "id": "lemma-metrics-are-non-negative",
+  "level": "2",
+  "url": "section-introduction-to-metric-geometry.html#lemma-metrics-are-non-negative",
+  "type": "Lemma",
+  "number": "3.1.4",
+  "title": "Metrics are non-negative.",
+  "body": " Metrics are non-negative   A metric takes only non-negative values.    Let be a metric on a set , and note that for all points .   "
+},
+{
+  "id": "subsection-introduction-to-metrics-9",
+  "level": "2",
+  "url": "section-introduction-to-metric-geometry.html#subsection-introduction-to-metrics-9",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "reverse triangle inequality "
+},
+{
+  "id": "proposition-reverse-triangle-inequality",
+  "level": "2",
+  "url": "section-introduction-to-metric-geometry.html#proposition-reverse-triangle-inequality",
+  "type": "Proposition",
+  "number": "3.1.5",
+  "title": "Reverse triangle inequality.",
+  "body": " Reverse triangle inequality   Let be a metric space. Then for all points .    If , then , and so . On the other hand, if , then , and so .   "
+},
+{
+  "id": "subsection-introduction-to-metrics-11-1",
+  "level": "2",
+  "url": "section-introduction-to-metric-geometry.html#subsection-introduction-to-metrics-11-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "ultrametrics "
+},
+{
+  "id": "definition-induced-metric",
+  "level": "2",
+  "url": "section-introduction-to-metric-geometry.html#definition-induced-metric",
+  "type": "Definition",
+  "number": "3.1.6",
+  "title": "Induced metric.",
+  "body": " Induced metric  induced metric  metric subspace   Let be a subset of a metric space . The induced metric on is the restriction of to . The metric space is called a metric subspace of the metric space .  In practice, we often write that is a metric on , even if the domain of is strictly larger than . We will not distinguish between a metric and its restriction to a smaller space.   "
+},
+{
+  "id": "example-discrete-metric-subspaces",
+  "level": "2",
+  "url": "section-introduction-to-metric-geometry.html#example-discrete-metric-subspaces",
+  "type": "Example",
+  "number": "3.1.7",
+  "title": "Discrete metric subspaces.",
+  "body": " Discrete metric subspaces   Let be a subset of a set . The discrete metric on is induced on by the discrete metric on ; that is, . Thus the discrete metric space is a metric subspace of the discrete metric space .   "
+},
+{
+  "id": "proposition-linear-combinations-of-metrics",
+  "level": "2",
+  "url": "section-introduction-to-metric-geometry.html#proposition-linear-combinations-of-metrics",
+  "type": "Proposition",
+  "number": "3.1.8",
+  "title": "Linear combinations of metrics.",
+  "body": " Linear combinations of metrics   Any positive real linear combination of metrics is a metric.    Let be a set, and consider positive real numbers and metrics on . Denote by the linear combination defined by the formula . First let be points, and suppose that . Then . Since and for all indices , we conclude that for all indices . In particular, .  Conversely, now suppose that . Then . Thus is non-degenerate.  Note that for all points , and so is symmetric.  Finally, note that for all points , and so satisfies the triangle inequality. Since is non-degenerate, symmetric, and satisfies the triangle inequality, it is a metric on .   "
+},
+{
+  "id": "subsection-normed-vector-spaces-2-1",
+  "level": "2",
+  "url": "section-introduction-to-metric-geometry.html#subsection-normed-vector-spaces-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "normed vector space functional analysis "
+},
+{
+  "id": "definition-normed-vector-space",
+  "level": "2",
+  "url": "section-introduction-to-metric-geometry.html#definition-normed-vector-space",
+  "type": "Definition",
+  "number": "3.1.9",
+  "title": "Normed vector space.",
+  "body": " Normed vector space  norm  non-degeneracy  absolute homogeneity  sub-additivity  normed vector space       The norm of a vector      A real-valued function on a real or complex vector space is a norm on if it has the following properties:   Non-degeneracy  For any vector , if and only if .    Absolute homogeneity   for any scalar and vector .    Sub-additivity   for all vectors .   In this case, the ordered pair is called a normed vector space .   "
+},
+{
+  "id": "example-normed-vector-spaces",
+  "level": "2",
+  "url": "section-introduction-to-metric-geometry.html#example-normed-vector-spaces",
+  "type": "Example",
+  "number": "3.1.10",
+  "title": "Normed vector spaces.",
+  "body": " Normed vector spaces   The following are examples of normed vector spaces:    -norm       the -norm    Euclidean norm  Let be a natural number, and fix a positive real number . The  -norm  on -dimensional real coordinate space is the real-valued function defined by the formula . Similarly, the  -norm  on -dimensional complex coordinate space is the real-valued function defined by the formula . If , then the -norms are norms on and , and so and are normed vector spaces.  In particular, the -norms on and are called the Euclidean norms on and . Because the Euclidean norms are so ubiquitous, we will often drop the subscripts in our notation, so that .     -norm       the -norm    Let be a natural number. The families of -norms on -dimensional real and complex coordinate space and can be extended to the case . The  -norm  on is the real-valued function defined by the formula . Similarly, the  -norm  on is the real-valued function defined by the formula . The -norms are norms on and , and so and are normed vector spaces.    Euclidean inner product  Any Hermitian inner product on a real or complex vector space induces a norm on defined by the formula . In fact, for all natural numbers , the norms produced in this manner by the dot product on -dimensional real and complex coordinate space and are precisely the Euclidean norms. For this reason, the dot product is often called the Euclidean inner product on and .   The above examples show that many of our familiar vector spaces have canonical norms readily available.   "
+},
+{
+  "id": "remark-p-norms-on-one-dimensional-vector-spaces",
+  "level": "2",
+  "url": "section-introduction-to-metric-geometry.html#remark-p-norms-on-one-dimensional-vector-spaces",
+  "type": "Remark",
+  "number": "3.1.11",
+  "title": "<span class=\"process-math\">\\(p \\)<\/span>-norms on <span class=\"process-math\">\\(1 \\)<\/span>-dimensional vector spaces.",
+  "body": "  -norms on -dimensional vector spaces  Note that for all real numbers , and similarly for all complex numbers ; that is, all of the norms (including the case ) on the real numbers and the complex numbers agree. Such statements do not hold in higher dimensions, although we will see that the -norms remain related for topological concerns.  "
+},
+{
+  "id": "lemma-norms-are-non-negative",
+  "level": "2",
+  "url": "section-introduction-to-metric-geometry.html#lemma-norms-are-non-negative",
+  "type": "Lemma",
+  "number": "3.1.12",
+  "title": "Norms are non-negative.",
+  "body": " Norms are non-negative   A norm takes only non-negative values.    Let be a norm on a real or complex vector space , and note that for all vectors .   "
+},
+{
+  "id": "theorem-normed-vector-spaces-are-metric-spaces",
+  "level": "2",
+  "url": "section-introduction-to-metric-geometry.html#theorem-normed-vector-spaces-are-metric-spaces",
+  "type": "Theorem",
+  "number": "3.1.13",
+  "title": "Normed vector spaces are metric spaces.",
+  "body": " Normed vector spaces are metric spaces  induced metric   A norm on a real or complex vector space induces a metric defined by the formula .    First, let be vectors, and suppose that . Then , and so ; that is, . Conversely, if , then . Thus is non-degenerate.  Since for all vectors , is symmetric.  Finally, since for all vectors , satisfies the triangle inequality. Since is non-degenerate, symmetric, and satisfies the triangle inequality, it is a metric on .   "
+},
+{
+  "id": "example-p-metrics",
+  "level": "2",
+  "url": "section-introduction-to-metric-geometry.html#example-p-metrics",
+  "type": "Example",
+  "number": "3.1.14",
+  "title": "<span class=\"process-math\">\\(p \\)<\/span>-metrics.",
+  "body": "  -metrics   -metric       the -metric     Let be a natural number, and fix an extended real number . The metrics on -dimensional real and complex coordinate spaces and by the -norms are called  -metrics . These -metrics are defined by the formula . In particular, we note that the metrics induced by the Euclidean norms are the Euclidean metrics.   "
 },
 {
   "id": "section-convergence-and-limits",

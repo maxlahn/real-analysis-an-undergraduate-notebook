@@ -7,11 +7,15 @@
 
   <introduction>
     <p>
-      Text before the first subsection.
+      In this section, we construct the <term> real number system </term> <m> \R </m> by <term> Dedekind cuts </term>, and we explore the resultant properties of arithmetic and comparison. However, we will find the existence of such a formal construction and its properties more useful than the particular details of the construction itself, and we will shortly leave behind the perspective suggested by our construction.
     </p>
   </introduction>
 
-  <!-- <xi:include href="./subsection-TITLE.ptx"/> -->
+  <xi:include href="./subsection-cutting-the-rational-numbers.ptx"/>
+
+  <xi:include href="./subsection-arithmetic-of-dedekind-cuts.ptx"/>
+
+  <xi:include href="./subsection-comparison-of-dedekind-cuts.ptx"/>
 
   <conclusion>
     <p>

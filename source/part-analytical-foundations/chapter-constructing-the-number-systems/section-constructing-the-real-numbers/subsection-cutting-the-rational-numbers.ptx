@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-cutting-the-rational-numbers" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Cutting the Rational Numbers
+  </title>
+
+  <introduction>
+    <p>
+      Text before the first subdivision.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-dedekind-cut">
+    <title>
+      Dedekind cut
+    </title>
+    
+    <idx>
+      dedekind cut
+    </idx>
+    
+    <statement>
+      <p>
+        A proper, non-empty subset <m> 0 \subseteq X \subseteq \Q </m> of the rational numbers <m> \Q </m> is called a <term> Dedekind cut </term> if it satisfies the following conditions:
+      </p>
+      
+      <ol>
+        <li>
+          <p>
+            For all rational numbers <m> q_{ 1 } , q_{ 2 } \in \Q </m>, if <m> q_{ 1 } \leq q_{ 2 } </m> and <m> q_{ 2 } \in X </m>, then <m> q_{ 1 } \in X </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            <m> X </m> does not have a maximum; that is, for all elements <m> q_{ 1 } \in X </m>, there is an element <m> q_{ 2 } \in X </m> so that <m> q_{ 1 } \lt q_{ 2 } </m>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-dedekind-cuts">
+    <title>
+      Dedekind cuts
+    </title>
+    
+    <idx>
+      rational Dedekind cut
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> X_{ q } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the rational Dedekind cut associated to <m> q </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        For each rational number <m> q \in \Q </m>, consider the subset
+        
+        <md>
+          X_{ q } = \setmid{ p \in \Q }{ p \lt q }
+        </md>
+        
+        of the rational numbers <m> \Q </m>. We observe that <m> X_{ q } </m> is a proper and non-empty subset of <m> \Q </m>, since it contains <m> q - 1 </m> but not <m> q </m> itself. Moreover, for all rational numbers <m> p_{ 1 } , p_{ 2 } \in \Q </m>, if <m> p_{ 1 } \leq p_{ 2 } </m> and <m> p_{ 2 } \in X_{ q } </m>, then
+        
+        <md>
+          p_{ 1 } \leq p_{ 2 } \lt q
+        </md>,
+        
+        and so <m> p_{ 1 } \in X_{ q } </m>. Finally, for all elements <m> p_{ 1 } \in X </m>, we observe that
+        
+        <md>
+          p \lt p + \frac{ q - p }{ 2 } \lt p + \of{ q - p } = q
+        </md>,
+        
+        so that <m> p + \frac{ q - p }{ 2 } \in X_{ q } </m>. In summary, we have shown that associated to each rational number <m> q \in \Q </m> is a Dedekind cut <m> X_{ q } </m>.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    We will see that the above construction realizes the rational numbers <m> \Q </m> as a subset of the set of Dedekind cuts. The Dedekind cuts which arise in this manner will be called <term> rational </term>. We will shortly see that not every Dedekind cut is rational.
+  </p>
+  
+  <lemma xml:id="lemma-rational-dedekind-cuts">
+    <title>
+      Rational Dedekind cuts
+    </title>
+    
+    <statement>
+      <p>
+        A Dedekind cut <m> X </m> is rational if and only if its complement <m> \Q \setminus X </m> has a minimum.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> X </m> be a Dedekind cut, and suppose that <m> X = X_{ q } </m> for some rational number <m> q \in \Q </m>. Note that <m> X = X_{ q } </m> has complement
+        
+        <md>
+          \Q \setminus X = \Q \setminus X_{ q } = \setmid{ p \in \Q }{ p \notin X_{ q } } = \setmid{ p \in \Q }{ p \geq q }
+        </md>.
+        
+        This set contains <m> q </m>, since <m> q \geq q </m>. Moreover, <m> p \geq q </m> for all elements <m> p \in \Q \setminus X_{ q } </m>. Thus <m> \min \of{ \Q \setminus X } = q </m>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> \Q \setminus X </m> has a minimum element, say <m> q = \min \of{ \Q \setminus X } \in \Q </m>. Let <m> p \in \Q </m>, and suppose that <m> p \geq q </m>. If <m> p \in X </m>, then that would imply that <m> q \in X </m>. This contradiction implies that <m> p \notin X </m>. On the other hand, if <m> p \lt q </m>, then <m> p \notin \Q \setminus X </m>, since <m> \min \of{ \Q \setminus X } = q </m>. Thus
+        
+        <md>
+          X = \setmid{ p \in \Q }{ p \lt q } = X_{ q }
+        </md>
+        
+        is rational.
+      </p>
+    </proof>
+  </lemma>
+  
+  <proposition xml:id="proposition-not-all-dedekind-cuts-are-rational">
+    <title>
+      Irrational Dedekind cuts
+    </title>
+    
+    <statement>
+      <p>
+        Not all Dedekind cuts are rational.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Consider the subset
+        
+        <md>
+          X = \setmid{ q \in \Q }{ q \lt 0 \textrm{ or } q^{ 2 } \lt 2 }
+        </md>
+        
+        of the rational numbers <m> \Q </m>. We observe that <m> X </m> is a non-empty and proper subset of <m> \Q </m>, since it contains <m> 1 </m> but not <m> 2 </m>. Let <m> p_{ 1 } , p_{ 2 } \in \Q </m> be rational numbers, and suppose that <m> p_{ 1 } \leq p_{ 2 } </m> and <m> p_{ 2 } \in X </m>. If <m> p_{ 2 } \lt 0 </m>, then
+        
+        <md>
+          p_{ 1 } \leq p_{ 2 } \lt 0
+        </md>,
+        
+        and so <m> p_{ 1 } \in X </m>. On the other hand, if <m> p_{ 2 }^{ 2 } \lt 2 </m>, then either <m> p_{ 1 } \lt 0 </m> or <m> 0 \leq p_{ 1 } \leq p_{ 2 } </m>, in which case <m> p_{ 1 }^{ 2 } \leq p_{ 2 }^{ 2 } \lt 2 </m>. In either case, we conclude that <m> p_{ 1 } \in X </m>.
+      </p>
+      
+      <p>
+        Finally, let <m> q \in X </m>. If <m> q \leq 0 </m>, then let <m> p = 1 </m>, and note that <m> p \in X </m> and <m> q \lt p </m>. On the other hand, suppose that <m> q \gt 0 </m> and <m> q^{ 2 } \lt 2 </m>, and consider the rational number
+        
+        <md>
+          p = \frac{ 2 q + 2 }{ 2 + q } \in \Q
+        </md>.
+        
+        Note that
+        
+        <md>
+          p = \frac{ 2 q + 2 }{ 2 + q } = \frac{ 2 q + q^{ 2 } }{ 2 + q } + \frac{ 2 - q^{ 2 } }{ 2 + q } = q + \frac{ 2 - q^{ 2 } }{ 2 + q } \gt q
+        </md>,
+        
+        and
+        
+        <md>
+          <mrow>
+            2 - p^{ 2 } \amp = \frac{ 2 \of{ 2 + q }^{ 2 } }{ \of{ 2 + q }^{ 2 } } - \frac{ \of{ 2 q + 2 }^{ 2 } }{ \of{ 2 + q }^{ 2 } }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ 4 - 2 q^{ 2 } }{ \of{ 2 + q }^{ 2 } } = \frac{ 2 \of{ 2 - q^{ 2 } } }{ \of{ 2 + q }^{ 2 } } \gt 0
+          </mrow>
+        </md>,
+        
+        so that <m> p^{ 2 } \lt 2 </m>; that is, <m> p \in X </m>. We conclude that <m> X </m> is a Dedekind cut.
+      </p>
+      
+      <p>
+        We note that <m> X </m> has complement
+        
+        <md>
+          \Q \setminus X = \setmid{ q \in \Q }{ q \geq 0 \textrm{ and } q^{ 2 } \geq 2 }
+        </md>.
+        
+        In fact, since <m> q^{ 2 } \neq 2 </m> for all rational numbers <m> q \in \Q </m>,
+        
+        <md>
+          \Q \setminus X = \setmid{ q \in \Q }{ q \geq 0 \textrm{ and } q^{ 2 } \gt 2 }
+        </md>.
+        
+        This set has no minimum element, and so <m> X </m> is not rational.
+      </p>
+    </proof>
+  </proposition>
+
+  <conclusion>
+    <p>
+      Text after the last subdivision.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->
