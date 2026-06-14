@@ -897,30 +897,45 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Products and Choice</span>
 </h3>
 <section class="introduction" id="subsection-products-and-choice-2">
-<div class="para" id="subsection-products-and-choice-2-1">Previously, we have used the mathematical convention of indexing to generalize the intersection and union of two sets. We may also use indexing to generalize the Cartesian product of two sets to act on arbitrary indexed families of sets. In this section, we will develop this generalized Cartesian product, and use it to introduce operations and relations on a set. Instead of containing ordered pairs of elements, our new Cartesian product consists of indexed families of elements.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-products-and-choice-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsection-products-and-choice-2-1">Previously, we have used the mathematical convention of indexing to generalize the intersection and union of two sets. We may also use indexing to generalize the Cartesian product of two sets to construct products of arbitrary indexed families of sets. In this section, we will develop this <dfn class="terminology">generalized Cartesian product</dfn>, and use it to introduce operations and relations on a set. Instead of containing ordered pairs of elements, our new Cartesian product consists of indexed families of elements.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-products-and-choice-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <article class="definition definition-like" id="definition-cartesian-product-2"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cartesian product.</span>
 </h4>
 <div class="para logical" id="definition-cartesian-product-2-7-1">
-<div class="para">Let <span class="process-math">\(\of{ U_{ j } }_{ j \in \mathcal{ J } } \)</span> be a family of subsets <span class="process-math">\(U_{ j } \subseteq X \)</span> of a set <span class="process-math">\(X \text{,}\)</span> called <dfn class="terminology">factors</dfn>, indexed by a set <span class="process-math">\(\mathcal{ J } \text{.}\)</span> The <dfn class="terminology">Cartesian product</dfn> <span class="process-math">\(\prod_{ j \in \mathcal{ J } }{ U_{ j } } \)</span> of this indexed family is the set</div>
-<div class="displaymath process-math" id="definition-cartesian-product-2-7-1-8">
+<div class="para">Let <span class="process-math">\(\of{ U_{ j } }_{ j \in \mathcal{ J } } \)</span> be a family of subsets <span class="process-math">\(U_{ j } \subseteq X \)</span> of a set <span class="process-math">\(X \text{,}\)</span> called <dfn class="terminology">(Cartesian) factors</dfn>, indexed by a set <span class="process-math">\(\mathcal{ J } \text{.}\)</span>
+</div>
+<ol class="decimal" id="definition-cartesian-product-2-7-1-6">
+<li id="definition-cartesian-product-2-7-1-6-1">
+<span class="heading li--heading"><span class="title li--heading-title">Cartesian product.</span></span>
+<div class="para logical" id="definition-cartesian-product-2-7-1-6-1-2">
+<div class="para">The <dfn class="terminology">Cartesian product</dfn> <span class="process-math">\(\prod_{ j \in \mathcal{ J } }{ U_{ j } } \)</span> of this indexed family is the set</div>
+<div class="displaymath process-math" id="definition-cartesian-product-2-7-1-6-1-2-3">
 \begin{equation*}
 \prod_{ j \in \mathcal{ J } }{ U_{ j } } = \setmid{ \of{ u_{ j } }_{ j \in \mathcal{ J } } \in X^{ \mathcal{ J } } }{ u_{ j } \in U_{ j } \textrm{ for all } j \in \mathcal{ J } }
 \end{equation*}
 </div>
 <div class="para">of families <span class="process-math">\(\of{ u_{ j } }_{ j \in \mathcal{ J } } \)</span> of elements <span class="process-math">\(u_{ j } \in X \)</span> with the property that <span class="process-math">\(u_{ j } \in U_{ j } \)</span> for all indices <span class="process-math">\(j \in \mathcal{ J } \text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#definition-cartesian-product-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<div class="para logical" id="definition-cartesian-product-2-7-2">
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-cartesian-product-2-7-1-6-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1: Cartesian product"><a href="#definition-cartesian-product-2-7-1-6-1" title="Copy heading and permalink for Item 1: Cartesian product" aria-label="Copy heading and permalink for Item 1: Cartesian product">🔗</a></div>
+</li>
+<li id="definition-cartesian-product-2-7-1-6-2">
+<span class="heading li--heading"><span class="title li--heading-title">Projection.</span></span>
+<div class="para logical" id="definition-cartesian-product-2-7-1-6-2-2">
 <div class="para">For each index <span class="process-math">\(k \in \mathcal{ J } \text{,}\)</span> the <span class="process-math">\(k \)</span>th <dfn class="terminology">projection map</dfn> <span class="process-math">\(\pi_{ \prod_{ j \in \mathcal{ J } }{ U_{ j } } }^{ U_{ k } } \colon \prod_{ j \in \mathcal{ J } }{ U_{ j } } \to U_{ k } \)</span> is the map from the Cartesian product <span class="process-math">\(\prod_{ j \in \mathcal{ J } }{ U_{ j } } \)</span> to the <span class="process-math">\(k \)</span>th factor <span class="process-math">\(U_{ k } \)</span> defined by the formula</div>
-<div class="displaymath process-math" id="definition-cartesian-product-2-7-2-8">
+<div class="displaymath process-math" id="definition-cartesian-product-2-7-1-6-2-2-8">
 \begin{equation*}
 \pi_{ \prod_{ j \in \mathcal{ J } }{ U_{ j } } }^{ U_{ k } } \of{ u_{ j } }_{ j \in \mathcal{ J } } = u_{ k }\text{.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#definition-cartesian-product-2-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-cartesian-product-2-7-1-6-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2: Projection"><a href="#definition-cartesian-product-2-7-1-6-2" title="Copy heading and permalink for Item 2: Projection" aria-label="Copy heading and permalink for Item 2: Projection">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-cartesian-product-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Definition 1.4.1: Cartesian product"><a href="#definition-cartesian-product-2" title="Copy heading and permalink for Definition 1.4.1: Cartesian product" aria-label="Copy heading and permalink for Definition 1.4.1: Cartesian product">🔗</a></div>
 </article>
@@ -928,30 +943,46 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Convention</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Empty and singleton products.</span>
 </h4>
 <div class="para logical" id="convention-empty-and-singleton-products-2-1">
+<ul class="disc" id="convention-empty-and-singleton-products-2-1-1">
+<li id="convention-empty-and-singleton-products-2-1-1-1">
+<span class="heading li--heading"><span class="title li--heading-title">Empty product.</span></span>
+<div class="para logical" id="convention-empty-and-singleton-products-2-1-1-1-2">
 <div class="para">What does a family indexed by the empty set look like? The empty set <span class="process-math">\(\emptyset \colon \emptyset \to X \)</span> is the unique map from the empty set <span class="process-math">\(\emptyset \)</span> to a set <span class="process-math">\(X \text{.}\)</span> Therefore, there is only one such family</div>
-<div class="displaymath process-math" id="convention-empty-and-singleton-products-2-1-4">
+<div class="displaymath process-math" id="convention-empty-and-singleton-products-2-1-1-1-2-4">
 \begin{equation*}
 \of{ x_{ j } }_{ j \in \emptyset } = \emptyset
 \end{equation*}
 </div>
 <div class="para">of elements <span class="process-math">\(x_{ j } \)</span> of <span class="process-math">\(X \)</span> indexed by the empty set <span class="process-math">\(\emptyset \text{.}\)</span> This unique indexed family is usually denoted <span class="process-math">\(\of{} = \emptyset \text{.}\)</span> By the above remark,</div>
-<div class="displaymath process-math" id="convention-empty-and-singleton-products-2-1-9">
+<div class="displaymath process-math" id="convention-empty-and-singleton-products-2-1-1-1-2-9">
 \begin{equation*}
 \prod_{ j \in \emptyset }{ U_{ j } } = \set{ \of{} } = \set{ \emptyset }\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#convention-empty-and-singleton-products-2-1-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Empty product"><a href="#convention-empty-and-singleton-products-2-1-1-1" title="Copy heading and permalink for Item: Empty product" aria-label="Copy heading and permalink for Item: Empty product">🔗</a></div>
+</li>
+<li id="convention-empty-and-singleton-products-2-1-1-2">
+<span class="heading li--heading"><span class="title li--heading-title">Singleton product.</span></span>
+<div class="para logical" id="convention-empty-and-singleton-products-2-1-1-2-2">
 <div class="para">Similarly, a family <span class="process-math">\(\of{ x_{ j } }_{ j \in \set{ j } } \)</span> of elements <span class="process-math">\(x_{ j } \in X \)</span> of a set <span class="process-math">\(S \)</span> indexed by a singleton set <span class="process-math">\(\set{ j } \)</span> is uniquely determined by the image <span class="process-math">\(x_{ j } \)</span> of <span class="process-math">\(j \text{.}\)</span> Such an indexed family is denoted</div>
-<div class="displaymath process-math" id="convention-empty-and-singleton-products-2-1-16">
+<div class="displaymath process-math" id="convention-empty-and-singleton-products-2-1-1-2-2-7">
 \begin{equation*}
 \of{ x_{ j } } = \of{ x_{ j } }_{ j \in \set{ j } } .
 \end{equation*}
 </div>
 <div class="para">We usually act under the convention <span class="process-math">\(\of{ x_{ j } } = x_{ j } \text{,}\)</span> so that</div>
-<div class="displaymath process-math" id="convention-empty-and-singleton-products-2-1-18">
+<div class="displaymath process-math" id="convention-empty-and-singleton-products-2-1-1-2-2-9">
 \begin{equation*}
 \prod_{ j \in \set{ j } }{ U_{ j } } = U_{ j } .
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#convention-empty-and-singleton-products-2-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Singleton product"><a href="#convention-empty-and-singleton-products-2-1-1-2" title="Copy heading and permalink for Item: Singleton product" aria-label="Copy heading and permalink for Item: Singleton product">🔗</a></div>
+</li>
+</ul>
 <div class="autopermalink" data-description="Paragraph"><a href="#convention-empty-and-singleton-products-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Convention 1.4.2: Empty and singleton products"><a href="#convention-empty-and-singleton-products" title="Copy heading and permalink for Convention 1.4.2: Empty and singleton products" aria-label="Copy heading and permalink for Convention 1.4.2: Empty and singleton products">🔗</a></div>
@@ -961,11 +992,19 @@ eBookConfig.enable_chatcodes =  false;
 <article class="axiom theorem-like" id="axiom-axiom-of-choice"><h4 class="heading">
 <span class="type">Axiom</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Axiom of choice.</span>
 </h4>
-<div class="para" id="axiom-axiom-of-choice-3-1">Let <span class="process-math">\(\of{ U_{ j } }_{ j \in \mathcal{ J } } \)</span> be an indexed family of subsets <span class="process-math">\(U_{ j } \subseteq X \)</span> of a set <span class="process-math">\(X \text{.}\)</span> If <span class="process-math">\(U_{ j } \neq \emptyset \)</span> for all indices <span class="process-math">\(j \in \mathcal{ J } \text{,}\)</span> then the Cartesian product <span class="process-math">\(\prod_{ j \in \mathcal{ J } }{ U_{ j } } \neq \emptyset \)</span> is also non-empty.<div class="autopermalink" data-description="Paragraph"><a href="#axiom-axiom-of-choice-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="axiom-axiom-of-choice-3-1">
+<div class="para">Let <span class="process-math">\(\of{ U_{ j } }_{ j \in \mathcal{ J } } \)</span> be an indexed family of subsets <span class="process-math">\(U_{ j } \subseteq X \)</span> of a set <span class="process-math">\(X \text{.}\)</span> If <span class="process-math">\(U_{ j } \neq \emptyset \)</span> for all indices <span class="process-math">\(j \in \mathcal{ J } \text{,}\)</span> then the Cartesian product</div>
+<div class="displaymath process-math" id="axiom-axiom-of-choice-3-1-6">
+\begin{equation*}
+\prod_{ j \in \mathcal{ J } }{ U_{ j } } \neq \emptyset
+\end{equation*}
+</div>
+<div class="para">is also non-empty.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#axiom-axiom-of-choice-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Axiom 1.4.3: Axiom of choice"><a href="#axiom-axiom-of-choice" title="Copy heading and permalink for Axiom 1.4.3: Axiom of choice" aria-label="Copy heading and permalink for Axiom 1.4.3: Axiom of choice">🔗</a></div>
 </article>
-<div class="para" id="subsection-products-and-choice-7">We will take the <a href="section-finitary-operations-and-relations.html#axiom-axiom-of-choice" class="xref" data-knowl="./knowl/xref/axiom-axiom-of-choice.html" data-reveal-label="Reveal" data-close-label="Close" title="Axiom 1.4.3: Axiom of choice">Axiom of choice</a> as true for the remainder of this text. While seemingly too specific to be of much use, the axiom of choice can be used to prove many useful results. In particular, we can use it to complete the characterization of invertibility given in <a href="section-maps-and-functions.html#theorem-invertibility" class="xref" data-knowl="./knowl/xref/theorem-invertibility.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.2.15: Invertibility">Theorem 1.2.15 Invertibility</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-products-and-choice-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsection-products-and-choice-7">We will take the <a href="section-finitary-operations-and-relations.html#axiom-axiom-of-choice" class="xref" data-knowl="./knowl/xref/axiom-axiom-of-choice.html" data-reveal-label="Reveal" data-close-label="Close" title="Axiom 1.4.3: Axiom of choice">Axiom of choice</a> as true for the remainder of this text. While seemingly too specific to be of much use, this axiom can be used to prove many useful results. In particular, we can use it to complete the characterization of invertibility given in <a href="section-maps-and-functions.html#theorem-invertibility" class="xref" data-knowl="./knowl/xref/theorem-invertibility.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.2.15: Invertibility">Theorem 1.2.15 Invertibility</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-products-and-choice-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="corollary theorem-like" id="corollary-invertibility-2"><h4 class="heading">
 <span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Invertibility.</span>
@@ -975,22 +1014,25 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <ol class="decimal" id="corollary-invertibility-2-2-1-4">
 <li id="corollary-invertibility-2-2-1-4-1">
-<div class="para" id="corollary-invertibility-2-2-1-4-1-1">
-<span class="process-math">\(f \)</span> is left-invertible if and only if <span class="process-math">\(f \)</span> is injective or <span class="process-math">\(X = \emptyset \)</span> is empty.<div class="autopermalink" data-description="Paragraph"><a href="#corollary-invertibility-2-2-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading li--heading"><span class="title li--heading-title">Left-invertibility.</span></span>
+<div class="para" id="corollary-invertibility-2-2-1-4-1-2">
+<span class="process-math">\(f \)</span> is left-invertible if and only if <span class="process-math">\(f \)</span> is injective or <span class="process-math">\(X = \emptyset \)</span> is empty.<div class="autopermalink" data-description="Paragraph"><a href="#corollary-invertibility-2-2-1-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#corollary-invertibility-2-2-1-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item 1: Left-invertibility"><a href="#corollary-invertibility-2-2-1-4-1" title="Copy heading and permalink for Item 1: Left-invertibility" aria-label="Copy heading and permalink for Item 1: Left-invertibility">🔗</a></div>
 </li>
 <li id="corollary-invertibility-2-2-1-4-2">
-<div class="para" id="corollary-invertibility-2-2-1-4-2-1">
-<span class="process-math">\(f \)</span> is right-invertible if and only if <span class="process-math">\(f \)</span> is surjective.<div class="autopermalink" data-description="Paragraph"><a href="#corollary-invertibility-2-2-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading li--heading"><span class="title li--heading-title">Right-invertibility.</span></span>
+<div class="para" id="corollary-invertibility-2-2-1-4-2-2">
+<span class="process-math">\(f \)</span> is right-invertible if and only if <span class="process-math">\(f \)</span> is surjective.<div class="autopermalink" data-description="Paragraph"><a href="#corollary-invertibility-2-2-1-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#corollary-invertibility-2-2-1-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item 2: Right-invertibility"><a href="#corollary-invertibility-2-2-1-4-2" title="Copy heading and permalink for Item 2: Right-invertibility" aria-label="Copy heading and permalink for Item 2: Right-invertibility">🔗</a></div>
 </li>
 <li id="corollary-invertibility-2-2-1-4-3">
-<div class="para" id="corollary-invertibility-2-2-1-4-3-1">
-<span class="process-math">\(f \)</span> is invertible if and only if <span class="process-math">\(f \)</span> is bijective.<div class="autopermalink" data-description="Paragraph"><a href="#corollary-invertibility-2-2-1-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading li--heading"><span class="title li--heading-title">Invertibility.</span></span>
+<div class="para" id="corollary-invertibility-2-2-1-4-3-2">
+<span class="process-math">\(f \)</span> is invertible if and only if <span class="process-math">\(f \)</span> is bijective.<div class="autopermalink" data-description="Paragraph"><a href="#corollary-invertibility-2-2-1-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 3"><a href="#corollary-invertibility-2-2-1-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<div class="autopermalink" data-description="Item 3: Invertibility"><a href="#corollary-invertibility-2-2-1-4-3" title="Copy heading and permalink for Item 3: Invertibility" aria-label="Copy heading and permalink for Item 3: Invertibility">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#corollary-invertibility-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1013,7 +1055,7 @@ eBookConfig.enable_chatcodes =  false;
 f^{ -1 } \of{ y } = \setmid{ x \in X }{ f \of{ x } = y } \neq \emptyset
 \end{equation*}
 </div>
-<div class="para">is a non-empty subset of <span class="process-math">\(X \text{,}\)</span> and so <a href="section-finitary-operations-and-relations.html#axiom-axiom-of-choice" class="xref" data-knowl="./knowl/xref/axiom-axiom-of-choice.html" data-reveal-label="Reveal" data-close-label="Close" title="Axiom 1.4.3: Axiom of choice">Axiom 1.4.3 Axiom of choice</a> implies that the Cartesian product</div>
+<div class="para">is a non-empty subset of <span class="process-math">\(X \text{,}\)</span> and so the <a href="section-finitary-operations-and-relations.html#axiom-axiom-of-choice" class="xref" data-knowl="./knowl/xref/axiom-axiom-of-choice.html" data-reveal-label="Reveal" data-close-label="Close" title="Axiom 1.4.3: Axiom of choice">Axiom of choice</a> implies that the Cartesian product</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-invertibility.html ./knowl/xref/axiom-axiom-of-choice.html" id="corollary-invertibility-2-3-1-2-1-7">
 \begin{equation*}
 \prod_{ y \in Y }{ f^{ -1 } \of{ y } } \neq \emptyset
@@ -1038,22 +1080,24 @@ f^{ -1 } \of{ y } = \setmid{ x \in X }{ f \of{ x } = y } \neq \emptyset
 </ol>
 <div class="autopermalink" data-description="Proof 1.4.4.1"><a href="#corollary-invertibility-2-3" title="Copy heading and permalink for Proof 1.4.4.1" aria-label="Copy heading and permalink for Proof 1.4.4.1">🔗</a></div>
 </article></details>
+<div class="para" id="subsection-products-and-choice-9">One particularly useful kind of Cartesian product is obtained by taking all factors to be the same set. The resulting <dfn class="terminology">Cartesian powers</dfn> will be used to define both finitary operations and finitary relations.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-products-and-choice-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="definition-cartesian-power"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cartesian power.</span>
 </h4>
 <div class="para logical" id="definition-cartesian-power-4-1">
-<div class="para">Let <span class="process-math">\(X \)</span> be a set and <span class="process-math">\(m \in \N \)</span> be a natural number. The <span class="process-math">\(m \)</span>th <dfn class="terminology">Cartesian power</dfn> <span class="process-math">\(X^{ m } \)</span> of <span class="process-math">\(X \)</span> is the Cartesian product</div>
+<div class="para">Let <span class="process-math">\(X \)</span> be a set and <span class="process-math">\(n \in \N \)</span> be a natural number. The <span class="process-math">\(n \)</span>th <dfn class="terminology">Cartesian power</dfn> <span class="process-math">\(X^{ n } \)</span> of <span class="process-math">\(X \)</span> is the Cartesian product</div>
 <div class="displaymath process-math" id="definition-cartesian-power-4-1-7">
 \begin{equation*}
-X^{ m } = \prod_{ j = 1 }^{ m }{ X } = \setmid{ \of{ x_{ j } }_{ j = 1 }^{ m } }{ x_{ j } \in X \textrm{ for all } 1 \leq j \leq m }\text{.}
+X^{ n } = \prod_{ k = 1 }^{ n }{ X } = \setmid{ \of{ x_{ k } }_{ k = 1 }^{ n } }{ x_{ k } \in X \textrm{ for all } 1 \leq k \leq n }\text{.}
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#definition-cartesian-power-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Definition 1.4.5: Cartesian power"><a href="#definition-cartesian-power" title="Copy heading and permalink for Definition 1.4.5: Cartesian power" aria-label="Copy heading and permalink for Definition 1.4.5: Cartesian power">🔗</a></div>
 </article>
-<section class="conclusion" id="subsection-products-and-choice-10">
-<div class="para" id="subsection-products-and-choice-10-1">We will now move on to study the Cartesian powers of sets. Maps from the Cartesian power of a set to the set itself will be called finitary operations on that set, and subsets of the Cartesian power of a set will be called finitary relations on that set.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-products-and-choice-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="conclusion" id="subsection-products-and-choice-11">
+<div class="para" id="subsection-products-and-choice-11-1">We will now move on to study the Cartesian powers of sets. Maps from the Cartesian power of a set to the set itself will be called <dfn class="terminology">finitary operations</dfn> on that set, and subsets of the Cartesian power of a set will be called <dfn class="terminology">finitary relations</dfn> on that set.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-products-and-choice-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><div class="autopermalink" data-description="Subsection 1.4.1: Products and Choice"><a href="#subsection-products-and-choice" title="Copy heading and permalink for Subsection 1.4.1: Products and Choice" aria-label="Copy heading and permalink for Subsection 1.4.1: Products and Choice">🔗</a></div>
 </section>
 <section class="subsection" id="subsection-finitary-operations">
@@ -1061,7 +1105,7 @@ X^{ m } = \prod_{ j = 1 }^{ m }{ X } = \setmid{ \of{ x_{ j } }_{ j = 1 }^{ m } }
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finitary Operations</span>
 </h3>
 <section class="introduction" id="subsection-finitary-operations-2">
-<div class="para" id="subsection-finitary-operations-2-1">Informally, a finitary operation on a set is an assignment of its elements to all finite sequence of a certain length in that set. That is, a finitary operation on a set is a map from some finite Cartesian power of that set to the set itself. We will view a finitary operation (through the active characterization of what maps do) as a process which combines elements of a set into a new element.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-finitary-operations-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsection-finitary-operations-2-1">Informally, a <dfn class="terminology">finitary operation</dfn> on a set is an assignment of its elements to all finite sequence of a certain length in that set. That is, a finitary operation on a set is a map from some finite Cartesian power of that set to the set itself. We will view a finitary operation (through the active characterization of what maps do) as a process which combines some fixed number of elements of a set into a new element.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-finitary-operations-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <article class="definition definition-like" id="definition-finitary-operation"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finitary operation.</span>
@@ -1076,39 +1120,42 @@ X^{ m } = \prod_{ j = 1 }^{ m }{ X } = \setmid{ \of{ x_{ j } }_{ j = 1 }^{ m } }
 <article class="example example-like knowl__content">
 <div class="para logical" id="example-finitary-operations-5-1">
 <div class="para">The following are examples of finitary operations:</div>
-<ol class="decimal" id="example-finitary-operations-5-1-1">
+<ul class="disc" id="example-finitary-operations-5-1-1">
 <li id="example-finitary-operations-5-1-1-1">
-<div class="para" id="example-finitary-operations-5-1-1-1-1">A <span class="process-math">\(0 \)</span>-ary operation (or more simply, a <dfn class="terminology">nullary operation</dfn>) on a set <span class="process-math">\(X \)</span> is just a map <span class="process-math">\(f \colon \set{ \emptyset } \to X \)</span> from <span class="process-math">\(X^{ 0 } = \set{ \emptyset } \)</span> to <span class="process-math">\(X \text{.}\)</span> Such a map <span class="process-math">\(f \colon \set{ \emptyset } \to X \)</span> is uniquely determined by the image <span class="process-math">\(f \of{ \emptyset } \in X \)</span> of the unique element <span class="process-math">\(\emptyset \in X^{ 0 } \text{.}\)</span> In this way, we may view the nullary operations on <span class="process-math">\(X \)</span> as synonymous with the elements of <span class="process-math">\(X \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-finitary-operations-5-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading li--heading"><span class="title li--heading-title">Nullary operation.</span></span>
+<div class="para" id="example-finitary-operations-5-1-1-1-2">A <span class="process-math">\(0 \)</span>-ary operation (or more simply, a <dfn class="terminology">nullary operation</dfn>) on a set <span class="process-math">\(X \)</span> is just a map <span class="process-math">\(f \colon \set{ \emptyset } \to X \)</span> from <span class="process-math">\(X^{ 0 } = \set{ \emptyset } \)</span> to <span class="process-math">\(X \text{.}\)</span> Such a map <span class="process-math">\(f \colon \set{ \emptyset } \to X \)</span> is uniquely determined by the image <span class="process-math">\(f \of{ \emptyset } \in X \)</span> of the unique element <span class="process-math">\(\emptyset \in X^{ 0 } \text{.}\)</span> In this way, we may view the nullary operations on <span class="process-math">\(X \)</span> as synonymous with the elements of <span class="process-math">\(X \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-finitary-operations-5-1-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#example-finitary-operations-5-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item: Nullary operation"><a href="#example-finitary-operations-5-1-1-1" title="Copy heading and permalink for Item: Nullary operation" aria-label="Copy heading and permalink for Item: Nullary operation">🔗</a></div>
 </li>
 <li id="example-finitary-operations-5-1-1-2">
-<div class="para" id="example-finitary-operations-5-1-1-2-1">A <span class="process-math">\(1 \)</span>-ary operation (or more simply, a <dfn class="terminology">unary operation</dfn>) on a set <span class="process-math">\(X \)</span> is just a map <span class="process-math">\(f \colon X \to X \text{.}\)</span> One example of such a unary operation on the natural numbers <span class="process-math">\(\N \)</span> is the successor function <span class="process-math">\(\Succ \colon \N \to \N \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-finitary-operations-5-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading li--heading"><span class="title li--heading-title">Unary operation.</span></span>
+<div class="para" id="example-finitary-operations-5-1-1-2-2">A <span class="process-math">\(1 \)</span>-ary operation (or more simply, a <dfn class="terminology">unary operation</dfn>) on a set <span class="process-math">\(X \)</span> is just a map <span class="process-math">\(f \colon X \to X \text{.}\)</span> One example of such a unary operation on the natural numbers <span class="process-math">\(\N \)</span> is the successor function <span class="process-math">\(\Succ \colon \N \to \N \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-finitary-operations-5-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#example-finitary-operations-5-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item: Unary operation"><a href="#example-finitary-operations-5-1-1-2" title="Copy heading and permalink for Item: Unary operation" aria-label="Copy heading and permalink for Item: Unary operation">🔗</a></div>
 </li>
 <li id="example-finitary-operations-5-1-1-3">
-<div class="para" id="example-finitary-operations-5-1-1-3-1">A <span class="process-math">\(2 \)</span>-ary operation (or more simply, a <dfn class="terminology">binary operation</dfn>) on a set <span class="process-math">\(X \)</span> is a map <span class="process-math">\(f \colon X^{ 2 } \to X \text{.}\)</span> Two examples of such binary operations on the natural numbers <span class="process-math">\(\N \)</span> are the addition and multiplication operations <span class="process-math">\(\Add , \Mult \colon \N^{ 2 } \to \N \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-finitary-operations-5-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading li--heading"><span class="title li--heading-title">Binary operation.</span></span>
+<div class="para" id="example-finitary-operations-5-1-1-3-2">A <span class="process-math">\(2 \)</span>-ary operation (or more simply, a <dfn class="terminology">binary operation</dfn>) on a set <span class="process-math">\(X \)</span> is a map <span class="process-math">\(f \colon X^{ 2 } \to X \text{.}\)</span> Two examples of such binary operations on the natural numbers <span class="process-math">\(\N \)</span> are the addition and multiplication operations <span class="process-math">\(\Add , \Mult \colon \N^{ 2 } \to \N \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-finitary-operations-5-1-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="example-finitary-operations-5-1-1-3-2">
+<div class="para logical" id="example-finitary-operations-5-1-1-3-3">
 <div class="para">Binary operations are usually denoted with symbols such as <span class="process-math">\(+ \text{,}\)</span> <span class="process-math">\(\times \text{,}\)</span> <span class="process-math">\(\cdot \text{,}\)</span> <span class="process-math">\(\ast \text{,}\)</span> and <span class="process-math">\(\star \text{.}\)</span> For a given binary operation <span class="process-math">\(\ast \colon X \times X \to X \text{,}\)</span> we write</div>
-<div class="displaymath process-math" id="example-finitary-operations-5-1-1-3-2-7">
+<div class="displaymath process-math" id="example-finitary-operations-5-1-1-3-3-7">
 \begin{equation*}
 x_{ 1 } \ast x_{ 2 } = \ast \of{ x_{ 1 } , x_{ 2 } }
 \end{equation*}
 </div>
 <div class="para">for all elements <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#example-finitary-operations-5-1-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-finitary-operations-5-1-1-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 3"><a href="#example-finitary-operations-5-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<div class="autopermalink" data-description="Item: Binary operation"><a href="#example-finitary-operations-5-1-1-3" title="Copy heading and permalink for Item: Binary operation" aria-label="Copy heading and permalink for Item: Binary operation">🔗</a></div>
 </li>
-</ol>
+</ul>
 <div class="autopermalink" data-description="Paragraph"><a href="#example-finitary-operations-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Example 1.4.7: Finitary operations"><a href="#example-finitary-operations" title="Copy heading and permalink for Example 1.4.7: Finitary operations" aria-label="Copy heading and permalink for Example 1.4.7: Finitary operations">🔗</a></div>
 </article></details>
-<div class="para" id="subsection-finitary-operations-5">In many ways, algebra is the study of finitary operations on sets. Particularly emphasized in group theory and ring theory is the study of binary operation on sets. We won’t delve too deep into the study of binary operations, but we will introduce some nice properties which some binary operations may satisfy.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-finitary-operations-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsection-finitary-operations-5">In many ways, algebra is the study of finitary operations on sets. Particularly emphasized in this study is that of binary operation on sets. We won’t delve too deep into the study of binary operations, but we will introduce some nice properties which some binary operations may satisfy.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-finitary-operations-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="definition-commutativity-associativity"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Commutativity; associativity.</span>
@@ -1118,34 +1165,36 @@ x_{ 1 } \ast x_{ 2 } = \ast \of{ x_{ 1 } , x_{ 2 } }
 </div>
 <ol class="decimal" id="definition-commutativity-associativity-4-1-3">
 <li id="definition-commutativity-associativity-4-1-3-1">
-<div class="para logical" id="definition-commutativity-associativity-4-1-3-1-1">
+<span class="heading li--heading"><span class="title li--heading-title">Commutativity.</span></span>
+<div class="para logical" id="definition-commutativity-associativity-4-1-3-1-2">
 <div class="para">
 <span class="process-math">\(\ast \)</span> is called <dfn class="terminology">commutative</dfn> if</div>
-<div class="displaymath process-math" id="definition-commutativity-associativity-4-1-3-1-1-3">
+<div class="displaymath process-math" id="definition-commutativity-associativity-4-1-3-1-2-3">
 \begin{equation*}
 x_{ 1 } \ast x_{ 2 } = x_{ 2 } \ast x_{ 1 }
 \end{equation*}
 </div>
 <div class="para">for all elements <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#definition-commutativity-associativity-4-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-commutativity-associativity-4-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#definition-commutativity-associativity-4-1-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item 1: Commutativity"><a href="#definition-commutativity-associativity-4-1-3-1" title="Copy heading and permalink for Item 1: Commutativity" aria-label="Copy heading and permalink for Item 1: Commutativity">🔗</a></div>
 </li>
 <li id="definition-commutativity-associativity-4-1-3-2">
-<div class="para logical" id="definition-commutativity-associativity-4-1-3-2-1">
+<span class="heading li--heading"><span class="title li--heading-title">Associativity.</span></span>
+<div class="para logical" id="definition-commutativity-associativity-4-1-3-2-2">
 <div class="para">
 <span class="process-math">\(\ast \)</span> is called <dfn class="terminology">associative</dfn> if</div>
-<div class="displaymath process-math" id="definition-commutativity-associativity-4-1-3-2-1-3">
+<div class="displaymath process-math" id="definition-commutativity-associativity-4-1-3-2-2-3">
 \begin{equation*}
 \of{ x_{ 1 } \ast x_{ 2 } } \ast x_{ 3 } = x_{ 1 } \ast \of{ x_{ 2 } \ast x_{ 3 } }
 \end{equation*}
 </div>
 <div class="para">for all elements <span class="process-math">\(x_{ 1 } , x_{ 2 } , x_{ 3 } \in X \text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#definition-commutativity-associativity-4-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-commutativity-associativity-4-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#definition-commutativity-associativity-4-1-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item 2: Associativity"><a href="#definition-commutativity-associativity-4-1-3-2" title="Copy heading and permalink for Item 2: Associativity" aria-label="Copy heading and permalink for Item 2: Associativity">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#definition-commutativity-associativity-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1158,28 +1207,32 @@ x_{ 1 } \ast x_{ 2 } = x_{ 2 } \ast x_{ 1 }
 <article class="example example-like knowl__content">
 <div class="para logical" id="example-commutative-associative-binary-operations-2-1">
 <div class="para">The following are examples of commutativity and associativity in binary operations:</div>
-<ol class="decimal" id="example-commutative-associative-binary-operations-2-1-1">
+<ul class="disc" id="example-commutative-associative-binary-operations-2-1-1">
 <li id="example-commutative-associative-binary-operations-2-1-1-1">
-<div class="para" id="example-commutative-associative-binary-operations-2-1-1-1-1">Addition <span class="process-math">\(+ \colon \N^{ 2 } \to \N \)</span> and multiplication <span class="process-math">\(\cdot \colon \N^{ 2 } \to \N \)</span> are commutative and associative binary operations on <span class="process-math">\(\N \)</span> by (1), (2), (4), and (5) of <a href="section-peano-arithmetic-and-the-natural-numbers.html#theorem-properties-of-peano-arithmetic" class="xref" data-knowl="./knowl/xref/theorem-properties-of-peano-arithmetic.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.3.18: Properties of Peano arithmetic">Theorem 1.3.18 Properties of Peano arithmetic</a>.<div class="autopermalink" data-description="Paragraph"><a href="#example-commutative-associative-binary-operations-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading li--heading"><span class="title li--heading-title">Arithmetic of natural numbers.</span></span>
+<div class="para" id="example-commutative-associative-binary-operations-2-1-1-1-2">Addition <span class="process-math">\(+ \colon \N^{ 2 } \to \N \)</span> and multiplication <span class="process-math">\(\cdot \colon \N^{ 2 } \to \N \)</span> are commutative and associative binary operations on <span class="process-math">\(\N \)</span> by (1), (2), (4), and (5) of <a href="section-peano-arithmetic-and-the-natural-numbers.html#theorem-properties-of-peano-arithmetic" class="xref" data-knowl="./knowl/xref/theorem-properties-of-peano-arithmetic.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.3.18: Properties of Peano arithmetic">Theorem 1.3.18 Properties of Peano arithmetic</a>.<div class="autopermalink" data-description="Paragraph"><a href="#example-commutative-associative-binary-operations-2-1-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#example-commutative-associative-binary-operations-2-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item: Arithmetic of natural numbers"><a href="#example-commutative-associative-binary-operations-2-1-1-1" title="Copy heading and permalink for Item: Arithmetic of natural numbers" aria-label="Copy heading and permalink for Item: Arithmetic of natural numbers">🔗</a></div>
 </li>
 <li id="example-commutative-associative-binary-operations-2-1-1-2">
-<div class="para" id="example-commutative-associative-binary-operations-2-1-1-2-1">Intersection <span class="process-math">\(\cap \colon \ps \of{ X }^{ 2 } \to \ps \of{ X } \)</span> and union <span class="process-math">\(\cup \colon \ps \of{ X }^{ 2 } \to \ps \of{ X } \)</span> are commutative and associative binary operations on the power set <span class="process-math">\(\ps \of{ X } \)</span> of a set <span class="process-math">\(X \)</span> by (2) and (3) of <a href="section-what-is-a-set.html#corollary-properties-of-the-set-operations" class="xref" data-knowl="./knowl/xref/corollary-properties-of-the-set-operations.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 1.1.16: Properties of the set operations">Corollary 1.1.16 Properties of the set operations</a>.<div class="autopermalink" data-description="Paragraph"><a href="#example-commutative-associative-binary-operations-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading li--heading"><span class="title li--heading-title">Set operations.</span></span>
+<div class="para" id="example-commutative-associative-binary-operations-2-1-1-2-2">Intersection <span class="process-math">\(\cap \colon \ps \of{ X }^{ 2 } \to \ps \of{ X } \)</span> and union <span class="process-math">\(\cup \colon \ps \of{ X }^{ 2 } \to \ps \of{ X } \)</span> are commutative and associative binary operations on the power set <span class="process-math">\(\ps \of{ X } \)</span> of a set <span class="process-math">\(X \)</span> by (2) and (3) of <a href="section-what-is-a-set.html#corollary-properties-of-the-set-operations" class="xref" data-knowl="./knowl/xref/corollary-properties-of-the-set-operations.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 1.1.16: Properties of the set operations">Corollary 1.1.16 Properties of the set operations</a>.<div class="autopermalink" data-description="Paragraph"><a href="#example-commutative-associative-binary-operations-2-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#example-commutative-associative-binary-operations-2-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item: Set operations"><a href="#example-commutative-associative-binary-operations-2-1-1-2" title="Copy heading and permalink for Item: Set operations" aria-label="Copy heading and permalink for Item: Set operations">🔗</a></div>
 </li>
 <li id="example-commutative-associative-binary-operations-2-1-1-3">
-<div class="para" id="example-commutative-associative-binary-operations-2-1-1-3-1">Composition <span class="process-math">\(\circ \colon \of{ X^{ X } }^{ 2 } \to X^{ X } \)</span> is an associative but non-commutative binary operation on the set <span class="process-math">\(X^{ X } \)</span> of maps from a set <span class="process-math">\(X \)</span> to itself.<div class="autopermalink" data-description="Paragraph"><a href="#example-commutative-associative-binary-operations-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading li--heading"><span class="title li--heading-title">Composition of maps.</span></span>
+<div class="para" id="example-commutative-associative-binary-operations-2-1-1-3-2">Composition <span class="process-math">\(\circ \colon \of{ X^{ X } }^{ 2 } \to X^{ X } \)</span> is an associative but non-commutative binary operation on the set <span class="process-math">\(X^{ X } \)</span> of maps from a set <span class="process-math">\(X \)</span> to itself by <a href="section-maps-and-functions.html#proposition-associativity-of-composition" class="xref" data-knowl="./knowl/xref/proposition-associativity-of-composition.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 1.2.10: Associativity of composition">Proposition 1.2.10 Associativity of composition</a> and <a href="section-maps-and-functions.html#reading-question-non-commutativity-of-composition" class="xref" data-knowl="./knowl/xref/reading-question-non-commutativity-of-composition.html" data-reveal-label="Reveal" data-close-label="Close" title="Reading Question 1.2.5.3: Non-commutativity of composition">Reading Question 1.2.5.3 Non-commutativity of composition</a>.<div class="autopermalink" data-description="Paragraph"><a href="#example-commutative-associative-binary-operations-2-1-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 3"><a href="#example-commutative-associative-binary-operations-2-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<div class="autopermalink" data-description="Item: Composition of maps"><a href="#example-commutative-associative-binary-operations-2-1-1-3" title="Copy heading and permalink for Item: Composition of maps" aria-label="Copy heading and permalink for Item: Composition of maps">🔗</a></div>
 </li>
 <li id="example-commutative-associative-binary-operations-2-1-1-4">
-<div class="para" id="example-commutative-associative-binary-operations-2-1-1-4-1">Let <span class="process-math">\(e \colon \N^{ 2 } \to \N \)</span> be the <dfn class="terminology">exponentiation</dfn> function defined by the formula <span class="process-math">\(e \of{ m , n } = m^{ n } \text{;}\)</span> that is, <span class="process-math">\(e \)</span> is defined recursively by the formulae <span class="process-math">\(e \of{ m , 0 } = 1 \)</span> and <span class="process-math">\(e \of{ m , n + 1 } = e^{ m , n } \cdot m \text{.}\)</span> Then <span class="process-math">\(e \)</span> is a binary operation on <span class="process-math">\(\N \text{,}\)</span> but <span class="process-math">\(e \)</span> is neither commutative nor associative.<div class="autopermalink" data-description="Paragraph"><a href="#example-commutative-associative-binary-operations-2-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading li--heading"><span class="title li--heading-title">Exponentiation of natural numbers.</span></span>
+<div class="para" id="example-commutative-associative-binary-operations-2-1-1-4-2">Let <span class="process-math">\(e \colon \N^{ 2 } \to \N \)</span> be the <dfn class="terminology">exponentiation</dfn> function defined by the formula <span class="process-math">\(e \of{ m , n } = m^{ n } \text{;}\)</span> that is, <span class="process-math">\(e \)</span> is defined recursively by the formulae <span class="process-math">\(e \of{ m , 0 } = 1 \)</span> and <span class="process-math">\(e \of{ m , n + 1 } = e^{ m , n } \cdot m \text{.}\)</span> Then <span class="process-math">\(e \)</span> is a binary operation on <span class="process-math">\(\N \text{,}\)</span> but <span class="process-math">\(e \)</span> is neither commutative nor associative.<div class="autopermalink" data-description="Paragraph"><a href="#example-commutative-associative-binary-operations-2-1-1-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 4"><a href="#example-commutative-associative-binary-operations-2-1-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+<div class="autopermalink" data-description="Item: Exponentiation of natural numbers"><a href="#example-commutative-associative-binary-operations-2-1-1-4" title="Copy heading and permalink for Item: Exponentiation of natural numbers" aria-label="Copy heading and permalink for Item: Exponentiation of natural numbers">🔗</a></div>
 </li>
-</ol>
+</ul>
 <div class="autopermalink" data-description="Paragraph"><a href="#example-commutative-associative-binary-operations-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Example 1.4.9: Commutative/associative binary operations"><a href="#example-commutative-associative-binary-operations" title="Copy heading and permalink for Example 1.4.9: Commutative/associative binary operations" aria-label="Copy heading and permalink for Example 1.4.9: Commutative/associative binary operations">🔗</a></div>
@@ -1202,7 +1255,7 @@ x_{ 1 } \ast x_{ 2 } = x_{ 2 } \ast x_{ 1 }
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finitary Relations</span>
 </h3>
 <section class="introduction" id="subsection-finitary-relations-2">
-<div class="para" id="subsection-finitary-relations-2-1">A finitary relation on a set is just a subset of some finite Cartesian power of the set. This subset is usually interpreted as distinguishing its elements certain finite sequences of elements of the set as important in some way.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-finitary-relations-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsection-finitary-relations-2-1">A <dfn class="terminology">finitary relation</dfn> on a set is just a subset of some finite Cartesian power of the set. This subset is usually interpreted as distinguishing its elements certain finite sequences of elements of the set as important in some way.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-finitary-relations-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <article class="definition definition-like" id="definition-finitary-relation"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finitary relation.</span>
@@ -1219,20 +1272,22 @@ x_{ 1 } \ast x_{ 2 } = x_{ 2 } \ast x_{ 1 }
 <article class="example example-like knowl__content">
 <div class="para logical" id="example-finitary-relations-4-1">
 <div class="para">The following are examples of finitary operations:</div>
-<ol class="decimal" id="example-finitary-relations-4-1-1">
+<ul class="disc" id="example-finitary-relations-4-1-1">
 <li id="example-finitary-relations-4-1-1-1">
-<div class="para" id="example-finitary-relations-4-1-1-1-1">In light of the convention <span class="process-math">\(X^{ 1 } = X \text{,}\)</span> a <span class="process-math">\(1 \)</span>-ary operation (or more simply, a <dfn class="terminology">unary operation</dfn>) on a set <span class="process-math">\(X \)</span> is just a subset of <span class="process-math">\(X \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-finitary-relations-4-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading li--heading"><span class="title li--heading-title">Unary operation.</span></span>
+<div class="para" id="example-finitary-relations-4-1-1-1-2">In light of <a href="section-finitary-operations-and-relations.html#convention-empty-and-singleton-products" class="xref" data-knowl="./knowl/xref/convention-empty-and-singleton-products.html" data-reveal-label="Reveal" data-close-label="Close" title="Convention 1.4.2: Empty and singleton products">Convention 1.4.2 Empty and singleton products</a> that <span class="process-math">\(X^{ 1 } = X \text{,}\)</span> a <span class="process-math">\(1 \)</span>-ary operation (or more simply, a <dfn class="terminology">unary operation</dfn>) on a set <span class="process-math">\(X \)</span> is just a subset of <span class="process-math">\(X \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-finitary-relations-4-1-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#example-finitary-relations-4-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item: Unary operation"><a href="#example-finitary-relations-4-1-1-1" title="Copy heading and permalink for Item: Unary operation" aria-label="Copy heading and permalink for Item: Unary operation">🔗</a></div>
 </li>
 <li id="example-finitary-relations-4-1-1-2">
-<div class="para" id="example-finitary-relations-4-1-1-2-1">A <span class="process-math">\(2 \)</span>-ary relation (or more simply, a <dfn class="terminology">binary relation</dfn>) on a set <span class="process-math">\(X \)</span> is a subset <span class="process-math">\(R \subseteq X^{ 2 } \text{.}\)</span> Two examples of such binary relations are the containment relation <span class="process-math">\(\subseteq \)</span> on the power set <span class="process-math">\(\ps \of{ X } \)</span> of a set <span class="process-math">\(X \)</span> and the standard ordering <span class="process-math">\(\Comp \subseteq \N^{ 2 } \)</span> of the natural numbers <span class="process-math">\(\N \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-finitary-relations-4-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading li--heading"><span class="title li--heading-title">Binary operation.</span></span>
+<div class="para" id="example-finitary-relations-4-1-1-2-2">A <span class="process-math">\(2 \)</span>-ary relation (or more simply, a <dfn class="terminology">binary relation</dfn>) on a set <span class="process-math">\(X \)</span> is a subset <span class="process-math">\(R \subseteq X^{ 2 } \text{.}\)</span> Two examples of such binary relations are the containment relation <span class="process-math">\(\subseteq \)</span> on the power set <span class="process-math">\(\ps \of{ X } \)</span> of a set <span class="process-math">\(X \)</span> and the standard ordering <span class="process-math">\(\leq \)</span> of the natural numbers <span class="process-math">\(\N \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-finitary-relations-4-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="example-finitary-relations-4-1-1-2-2">Just as there is a special notation for binary operations, there is a special relation for binary relations as well. Specifically, for a given binary relation <span class="process-math">\(R \subseteq X^{ 2 } \)</span> on a set <span class="process-math">\(X \text{,}\)</span> we write <span class="process-math">\(x_{ 1 } \mathrel{ R } x_{ 2 } \)</span> to mean that <span class="process-math">\(\of{ x_{ 1 } , x_{ 2 } } \in R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-finitary-relations-4-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="example-finitary-relations-4-1-1-2-3">Just as there is a special notation for binary operations, there is a special relation for binary relations as well. Specifically, for a given binary relation <span class="process-math">\(R \subseteq X^{ 2 } \)</span> on a set <span class="process-math">\(X \text{,}\)</span> we write <span class="process-math">\(x_{ 1 } \mathrel{ R } x_{ 2 } \)</span> to mean that <span class="process-math">\(\of{ x_{ 1 } , x_{ 2 } } \in R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-finitary-relations-4-1-1-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#example-finitary-relations-4-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item: Binary operation"><a href="#example-finitary-relations-4-1-1-2" title="Copy heading and permalink for Item: Binary operation" aria-label="Copy heading and permalink for Item: Binary operation">🔗</a></div>
 </li>
-</ol>
+</ul>
 <div class="autopermalink" data-description="Paragraph"><a href="#example-finitary-relations-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Example 1.4.11: Finitary relations"><a href="#example-finitary-relations" title="Copy heading and permalink for Example 1.4.11: Finitary relations" aria-label="Copy heading and permalink for Example 1.4.11: Finitary relations">🔗</a></div>
@@ -1267,7 +1322,7 @@ R_{ f } = \setmid{ \of{ x_{ k } }_{ k = 1 }^{ n } \in X^{ n } }{ \of{ f \of{ x_{
 </div>
 <div class="autopermalink" data-description="Example 1.4.13: Restriction of a finitary relation"><a href="#example-restriction-of-a-finitary-relation" title="Copy heading and permalink for Example 1.4.13: Restriction of a finitary relation" aria-label="Copy heading and permalink for Example 1.4.13: Restriction of a finitary relation">🔗</a></div>
 </article></details>
-<div class="para" id="subsection-finitary-relations-8">One particularly nice type of binary relation is the <dfn class="terminology">equivalence relation</dfn>. This is a generalization of the notion of equality, which has many of the salient properties of the equality relation. We will see that an equivalence relation partitions a set into disjoint subsets known as <dfn class="terminology">equivalence classes</dfn>. When we consider more sophisticated structures than just sets, we will use equivalence relations to construct quotient objects, as is done in algebraic settings such as group theory or ring theory.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-finitary-relations-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsection-finitary-relations-8">One particularly nice type of binary relation is the <dfn class="terminology">equivalence relation</dfn>. This is a generalization of the notion of equality, which has many of the salient properties of the equality relation. We will see that an equivalence relation partitions a set into disjoint subsets known as <dfn class="terminology">equivalence classes</dfn>. When we consider more sophisticated structures than just sets, we will use equivalence relations to construct <dfn class="terminology">quotient</dfn> objects, as is done in algebraic settings such as group theory or ring theory.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-finitary-relations-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="definition-equivalence-relation"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Equivalence relation.</span>
@@ -1277,26 +1332,28 @@ R_{ f } = \setmid{ \of{ x_{ k } }_{ k = 1 }^{ n } \in X^{ n } }{ \of{ f \of{ x_{
 </div>
 <ol class="decimal" id="definition-equivalence-relation-6-1-3">
 <li id="definition-equivalence-relation-6-1-3-1">
-<div class="para" id="definition-equivalence-relation-6-1-3-1-1">
-<span class="process-math">\(\equiv \)</span> is called <dfn class="terminology">reflexive</dfn> if <span class="process-math">\(x \equiv x \)</span> for all elements <span class="process-math">\(x \in X \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-equivalence-relation-6-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading li--heading"><span class="title li--heading-title">Reflexivity.</span></span>
+<div class="para" id="definition-equivalence-relation-6-1-3-1-2">
+<span class="process-math">\(\equiv \)</span> is called <dfn class="terminology">reflexive</dfn> if <span class="process-math">\(x \equiv x \)</span> for all elements <span class="process-math">\(x \in X \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-equivalence-relation-6-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#definition-equivalence-relation-6-1-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item 1: Reflexivity"><a href="#definition-equivalence-relation-6-1-3-1" title="Copy heading and permalink for Item 1: Reflexivity" aria-label="Copy heading and permalink for Item 1: Reflexivity">🔗</a></div>
 </li>
 <li id="definition-equivalence-relation-6-1-3-2">
-<div class="para" id="definition-equivalence-relation-6-1-3-2-1">
-<span class="process-math">\(\equiv \)</span> is called <dfn class="terminology">symmetric</dfn> if for all elements <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \text{,}\)</span> if <span class="process-math">\(x_{ 1 } \equiv x_{ 2 } \text{,}\)</span> then <span class="process-math">\(x_{ 2 } \equiv x_{ 1 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-equivalence-relation-6-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading li--heading"><span class="title li--heading-title">Symmetry.</span></span>
+<div class="para" id="definition-equivalence-relation-6-1-3-2-2">
+<span class="process-math">\(\equiv \)</span> is called <dfn class="terminology">symmetric</dfn> if for all elements <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \text{,}\)</span> if <span class="process-math">\(x_{ 1 } \equiv x_{ 2 } \text{,}\)</span> then <span class="process-math">\(x_{ 2 } \equiv x_{ 1 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-equivalence-relation-6-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#definition-equivalence-relation-6-1-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item 2: Symmetry"><a href="#definition-equivalence-relation-6-1-3-2" title="Copy heading and permalink for Item 2: Symmetry" aria-label="Copy heading and permalink for Item 2: Symmetry">🔗</a></div>
 </li>
 <li id="definition-equivalence-relation-6-1-3-3">
-<div class="para" id="definition-equivalence-relation-6-1-3-3-1">
-<span class="process-math">\(\equiv \)</span> is called <dfn class="terminology">transitive</dfn> if for all elements <span class="process-math">\(x_{ 1 } , x_{ 2 } , x_{ 3 } \in X \text{,}\)</span> if <span class="process-math">\(x_{ 1 } \equiv x_{ 2 } \)</span> and <span class="process-math">\(x_{ 2 } \equiv x_{ 3 } \text{,}\)</span> then <span class="process-math">\(x_{ 1 } \equiv x_{ 3 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-equivalence-relation-6-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading li--heading"><span class="title li--heading-title">Transitivity.</span></span>
+<div class="para" id="definition-equivalence-relation-6-1-3-3-2">
+<span class="process-math">\(\equiv \)</span> is called <dfn class="terminology">transitive</dfn> if for all elements <span class="process-math">\(x_{ 1 } , x_{ 2 } , x_{ 3 } \in X \text{,}\)</span> if <span class="process-math">\(x_{ 1 } \equiv x_{ 2 } \)</span> and <span class="process-math">\(x_{ 2 } \equiv x_{ 3 } \text{,}\)</span> then <span class="process-math">\(x_{ 1 } \equiv x_{ 3 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-equivalence-relation-6-1-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 3"><a href="#definition-equivalence-relation-6-1-3-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<div class="autopermalink" data-description="Item 3: Transitivity"><a href="#definition-equivalence-relation-6-1-3-3" title="Copy heading and permalink for Item 3: Transitivity" aria-label="Copy heading and permalink for Item 3: Transitivity">🔗</a></div>
 </li>
 </ol>
-<div class="para">
-<span class="process-math">\(\equiv \)</span> is called an <dfn class="terminology">equivalence relation</dfn> if it is reflexive, symmetric, and transitive.</div>
+<div class="para">A binary relation <span class="process-math">\(\equiv \)</span> is called an <dfn class="terminology">equivalence relation</dfn> if it is reflexive, symmetric, and transitive.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#definition-equivalence-relation-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Definition 1.4.14: Equivalence relation"><a href="#definition-equivalence-relation" title="Copy heading and permalink for Definition 1.4.14: Equivalence relation" aria-label="Copy heading and permalink for Definition 1.4.14: Equivalence relation">🔗</a></div>
@@ -1324,18 +1381,42 @@ R_{ f } = \setmid{ \of{ x_{ k } }_{ k = 1 }^{ n } \in X^{ n } }{ \of{ f \of{ x_{
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Equivalence class; quotient set.</span>
 </h4>
 <div class="para logical" id="definition-equivalence-class-6-1">
-<div class="para">Let <span class="process-math">\(\equiv \)</span> be an equivalence relation on a set <span class="process-math">\(X \text{.}\)</span> The <dfn class="terminology">equivalence class</dfn> <span class="process-math">\(\class{ x }_{ \equiv } \)</span> of an element <span class="process-math">\(x \in X \)</span> is the subset of <span class="process-math">\(X \)</span> defined by</div>
-<div class="displaymath process-math" id="definition-equivalence-class-6-1-7">
+<div class="para">Let <span class="process-math">\(\equiv \)</span> be an equivalence relation on a set <span class="process-math">\(X \text{.}\)</span>
+</div>
+<ol class="decimal" id="definition-equivalence-class-6-1-3">
+<li id="definition-equivalence-class-6-1-3-1">
+<span class="heading li--heading"><span class="title li--heading-title">Equivalence class.</span></span>
+<div class="para logical" id="definition-equivalence-class-6-1-3-1-2">
+<div class="para">The <dfn class="terminology">equivalence class</dfn> <span class="process-math">\(\class{ x }_{ \equiv } \)</span> of an element <span class="process-math">\(x \in X \)</span> is the subset of <span class="process-math">\(X \)</span> defined by</div>
+<div class="displaymath process-math" id="definition-equivalence-class-6-1-3-1-2-5">
 \begin{equation*}
 \class{ x }_{ \equiv } = \setmid{ y \in X }{ x \equiv y }\text{;}
 \end{equation*}
 </div>
-<div class="para">that is, <span class="process-math">\(\class{ x }_{ \equiv } \)</span> is the set of elements which are equivalent to <span class="process-math">\(x \)</span> under the relation <span class="process-math">\(\equiv \text{.}\)</span> The <dfn class="terminology">quotient</dfn> <span class="process-math">\(X / { \equiv } \)</span> of <span class="process-math">\(X \)</span> by <span class="process-math">\(\equiv \)</span> is the set of equivalence classes; that is,</div>
-<div class="displaymath process-math" id="definition-equivalence-class-6-1-15">
+<div class="para">that is, <span class="process-math">\(\class{ x }_{ \equiv } \)</span> is the set of elements which are equivalent to <span class="process-math">\(x \)</span> under the relation <span class="process-math">\(\equiv \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-equivalence-class-6-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1: Equivalence class"><a href="#definition-equivalence-class-6-1-3-1" title="Copy heading and permalink for Item 1: Equivalence class" aria-label="Copy heading and permalink for Item 1: Equivalence class">🔗</a></div>
+</li>
+<li id="definition-equivalence-class-6-1-3-2">
+<span class="heading li--heading"><span class="title li--heading-title">Quotient.</span></span>
+<div class="para logical" id="definition-equivalence-class-6-1-3-2-2">
+<div class="para">The <dfn class="terminology">quotient</dfn> <span class="process-math">\(X / { \equiv } \)</span> of <span class="process-math">\(X \)</span> by <span class="process-math">\(\equiv \)</span> is the set of equivalence classes; that is,</div>
+<div class="displaymath process-math" id="definition-equivalence-class-6-1-3-2-2-5">
 \begin{equation*}
 X / { \equiv } = \setmid{ \class{ x }_{ \equiv } \in \ps \of{ X } }{ x \in X }\text{.}
 \end{equation*}
 </div>
+<div class="para">The <dfn class="terminology">quotient map</dfn> <span class="process-math">\(\pi_{ \equiv } \colon X \to X / { \equiv } \)</span> is the map from <span class="process-math">\(X \)</span> to the quotient <span class="process-math">\(X / { \sim } \)</span> defined by the formula <span class="process-math">\(\pi_{ \equiv } \of{ x } = \class{ x }_{ \equiv } \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-equivalence-class-6-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="definition-equivalence-class-6-1-3-2-3">If the set <span class="process-math">\(X \)</span> is equipped with additional structure, then this structure might also descend to the quotient <span class="process-math">\(X / { \equiv } \text{.}\)</span> In settings in which this is possible, we might distinguish between the <dfn class="terminology">quotient set</dfn> <span class="process-math">\(X / { \equiv } \)</span> and more structured quotient objects.<div class="autopermalink" data-description="Paragraph"><a href="#definition-equivalence-class-6-1-3-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2: Quotient"><a href="#definition-equivalence-class-6-1-3-2" title="Copy heading and permalink for Item 2: Quotient" aria-label="Copy heading and permalink for Item 2: Quotient">🔗</a></div>
+</li>
+</ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#definition-equivalence-class-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Definition 1.4.16: Equivalence class; quotient set"><a href="#definition-equivalence-class" title="Copy heading and permalink for Definition 1.4.16: Equivalence class; quotient set" aria-label="Copy heading and permalink for Definition 1.4.16: Equivalence class; quotient set">🔗</a></div>
@@ -1359,20 +1440,20 @@ X = \bigcup_{ c \in X / { \equiv } }{ c }\text{.}
 <details id="proposition-equivalence-partition-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
 <article class="hiddenproof knowl__content">
 <div class="para logical" id="proposition-equivalence-partition-4-1">
-<div class="para">Each equivalence class is a subset of <span class="process-math">\(X \text{,}\)</span> and so</div>
-<div class="displaymath process-math" id="proposition-equivalence-partition-4-1-2">
+<div class="para">Each equivalence class <span class="process-math">\(c \in X / { \equiv } \)</span> is a subset of <span class="process-math">\(X \text{,}\)</span> and so</div>
+<div class="displaymath process-math" id="proposition-equivalence-partition-4-1-3">
 \begin{equation*}
 \bigcup_{ c \in X / { \equiv } }{ c } \subseteq X\text{.}
 \end{equation*}
 </div>
 <div class="para">In order to show the reverse containment, let <span class="process-math">\(x \in X \text{,}\)</span> and note that <span class="process-math">\(x \equiv x \)</span> by reflexivity; that is, <span class="process-math">\(x \in \class{ x }_{ \equiv } \text{,}\)</span> and so</div>
-<div class="displaymath process-math" id="proposition-equivalence-partition-4-1-6">
+<div class="displaymath process-math" id="proposition-equivalence-partition-4-1-7">
 \begin{equation*}
 x \in \class{ x }_{ \equiv } = \bigcup_{ c \in X / { \equiv } }{ c }\text{.}
 \end{equation*}
 </div>
 <div class="para">We conclude that</div>
-<div class="displaymath process-math" id="proposition-equivalence-partition-4-1-7">
+<div class="displaymath process-math" id="proposition-equivalence-partition-4-1-8">
 \begin{equation*}
 X = \bigcup_{ c \in X / { \equiv } }{ c }\text{.}
 \end{equation*}
@@ -1401,8 +1482,73 @@ X = \bigcup_{ c \in X / { \equiv } }{ c }\text{.}
 <section class="introduction" id="exercises-finitary-operations-and-relations-2">
 <div class="para" id="exercises-finitary-operations-and-relations-2-1">The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-finitary-operations-and-relations-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="exercises-finitary-operations-and-relations-3">
-<div class="para" id="exercises-finitary-operations-and-relations-3-1">Short answers and/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-finitary-operations-and-relations-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="exercise exercise-like" id="exercise-indexed-cartesian-products"><h4 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Indexed Cartesian products.</span>
+</h4>
+<div class="introduction" id="exercise-indexed-cartesian-products-2">
+<div class="para" id="exercise-indexed-cartesian-products-2-1">Let <span class="process-math">\(U_{ 1 } = \set{ 1 , 2 } \text{,}\)</span> <span class="process-math">\(U_{ 2 } = \set{ 1 , 2 , 3 } \text{,}\)</span> and <span class="process-math">\(U_{ 3 } = \set{ 0 , 1 } \text{,}\)</span> and consider the Cartesian product <span class="process-math">\(U = \prod_{ k = 1 }^{ 3 }{ U_{ k } } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-indexed-cartesian-products-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="exercise-indexed-cartesian-products-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="exercise-indexed-cartesian-products-3-1-1">Write down the Cartesian product <span class="process-math">\(U = \prod_{ k = 1 }^{ 3 }{ U_{ k } } \)</span> in roster notation.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-indexed-cartesian-products-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.4.4.1.a"><a href="#exercise-indexed-cartesian-products-3" title="Copy heading and permalink for Task 1.4.4.1.a" aria-label="Copy heading and permalink for Task 1.4.4.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="exercise-indexed-cartesian-products-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="exercise-indexed-cartesian-products-4-1-1">For each index <span class="process-math">\(k \in \set{ 1 , 2 , 3 } \text{,}\)</span> let <span class="process-math">\(\pi_{ k } \colon U \to U_{ k } \)</span> be the projection map onto the <span class="process-math">\(k \)</span>th factor. Compute <span class="process-math">\(\pi_{ 1 } \of{ 1 , 3 , 0 } \text{,}\)</span> <span class="process-math">\(\pi_{ 2 } \of{ 1 , 1 , 1 } \text{,}\)</span> and <span class="process-math">\(\pi_{ 3 } \of{ 2 , 2 , 1 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-indexed-cartesian-products-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.4.4.1.b"><a href="#exercise-indexed-cartesian-products-4" title="Copy heading and permalink for Task 1.4.4.1.b" aria-label="Copy heading and permalink for Task 1.4.4.1.b">🔗</a></div>
+</article><div class="autopermalink" data-description="Reading Question 1.4.4.1: Indexed Cartesian products"><a href="#exercise-indexed-cartesian-products" title="Copy heading and permalink for Reading Question 1.4.4.1: Indexed Cartesian products" aria-label="Copy heading and permalink for Reading Question 1.4.4.1: Indexed Cartesian products">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-exponentiation-of-natural-numbers"><h4 class="heading">
+<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exponentiation of natural numbers.</span>
+</h4>
+<div class="introduction" id="exercise-exponentiation-of-natural-numbers-2">
+<div class="para logical" id="exercise-exponentiation-of-natural-numbers-2-1">
+<div class="para">Let <span class="process-math">\(e \colon \N^{ 2 } \to \N \)</span> be the <dfn class="terminology">exponentiation</dfn> operation defined by the formula</div>
+<div class="displaymath process-math" id="exercise-exponentiation-of-natural-numbers-2-1-3">
+\begin{equation*}
+e \of{ m , n } = m^{ n }\text{;}
+\end{equation*}
+</div>
+<div class="para">that is, <span class="process-math">\(e \)</span> is defined recursively by the formulae <span class="process-math">\(e \of{ m , 0 } = 1 \)</span> and <span class="process-math">\(e \of{ m , n + 1 } = e^{ m , n } \cdot m \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-exponentiation-of-natural-numbers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="exercise-exponentiation-of-natural-numbers-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="exercise-exponentiation-of-natural-numbers-3-1-1">Compute <span class="process-math">\(e \of{ 1 , 2 } \)</span> and <span class="process-math">\(e \of{ 2 , 1 } \text{.}\)</span> Is exponentiation a commutative binary operation?<div class="autopermalink" data-description="Paragraph"><a href="#exercise-exponentiation-of-natural-numbers-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.4.4.2.a"><a href="#exercise-exponentiation-of-natural-numbers-3" title="Copy heading and permalink for Task 1.4.4.2.a" aria-label="Copy heading and permalink for Task 1.4.4.2.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="exercise-exponentiation-of-natural-numbers-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="exercise-exponentiation-of-natural-numbers-4-1-1">Compute <span class="process-math">\(e \of{ e \of{ 2 , 1 } , 2 } \)</span> and <span class="process-math">\(e \of{ 2 , e \of{ 1 , 2 } } \text{.}\)</span> Is exponentiation an associative binary operation?<div class="autopermalink" data-description="Paragraph"><a href="#exercise-exponentiation-of-natural-numbers-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.4.4.2.b"><a href="#exercise-exponentiation-of-natural-numbers-4" title="Copy heading and permalink for Task 1.4.4.2.b" aria-label="Copy heading and permalink for Task 1.4.4.2.b">🔗</a></div>
+</article><div class="autopermalink" data-description="Reading Question 1.4.4.2: Exponentiation of natural numbers"><a href="#exercise-exponentiation-of-natural-numbers" title="Copy heading and permalink for Reading Question 1.4.4.2: Exponentiation of natural numbers" aria-label="Copy heading and permalink for Reading Question 1.4.4.2: Exponentiation of natural numbers">🔗</a></div>
+</article>
+<div class="exercisegroup" id="exercise-equivalence-classes">
+<h4 class="heading"><span class="title">Equivalence classes.</span></h4>
+<div class="introduction" id="exercise-equivalence-classes-2">
+<div class="para" id="exercise-equivalence-classes-2-1">Let <span class="process-math">\(X = \set{ 0 , 1 , 2 , 3 , \dotsc , 10 } \text{.}\)</span> Write down all the equivalence classes for the given equivalence relation on <span class="process-math">\(X \)</span> in roster notation.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-equivalence-classes-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-equivalence-classes-3"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercise-equivalence-classes-3-1-1">Consider the equivalence relation <span class="process-math">\(F \)</span> on <span class="process-math">\(X \)</span> defined by the condition that for all <span class="process-math">\(x , y \in X \text{,}\)</span> <span class="process-math">\(x \mathrel{ F } y \)</span> if and only if the English words for <span class="process-math">\(x \)</span> and <span class="process-math">\(y \)</span> start with the same letter. Write down the equivalence classes in roster notation.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-equivalence-classes-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Reading Question 1.4.4.3"><a href="#exercise-equivalence-classes-3" title="Copy heading and permalink for Reading Question 1.4.4.3" aria-label="Copy heading and permalink for Reading Question 1.4.4.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-equivalence-classes-4"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercise-equivalence-classes-4-1-1">Consider the equivalence relation <span class="process-math">\(L \)</span> on <span class="process-math">\(X \)</span> defined by the condition that for all <span class="process-math">\(x , y \in X \text{,}\)</span> <span class="process-math">\(x \mathrel{ L } y \)</span> if and only if the English words for <span class="process-math">\(x \)</span> and <span class="process-math">\(y \)</span> end with the same letter. Write down all the equivalence classes in roster notation.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-equivalence-classes-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Reading Question 1.4.4.4"><a href="#exercise-equivalence-classes-4" title="Copy heading and permalink for Reading Question 1.4.4.4" aria-label="Copy heading and permalink for Reading Question 1.4.4.4">🔗</a></div>
+</article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 1.4.4.3–4: Equivalence classes"><a href="#exercise-equivalence-classes" title="Copy heading and permalink for Exercise Group 1.4.4.3–4: Equivalence classes" aria-label="Copy heading and permalink for Exercise Group 1.4.4.3–4: Equivalence classes">🔗</a></div>
+</div>
+<section class="conclusion" id="exercises-finitary-operations-and-relations-6">
+<div class="para" id="exercises-finitary-operations-and-relations-6-1">Short answers and/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-finitary-operations-and-relations-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><div class="autopermalink" data-description="Reading Questions 1.4.4: Exercises"><a href="#exercises-finitary-operations-and-relations" title="Copy heading and permalink for Reading Questions 1.4.4: Exercises" aria-label="Copy heading and permalink for Reading Questions 1.4.4: Exercises">🔗</a></div>
 </section>
 <section class="reading-questions" id="reading-questions-finitary-operations-and-relations">
@@ -1412,8 +1558,116 @@ X = \bigcup_{ c \in X / { \equiv } }{ c }\text{.}
 <section class="introduction" id="reading-questions-finitary-operations-and-relations-2">
 <div class="para" id="reading-questions-finitary-operations-and-relations-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" data-description="Paragraph"><a href="#reading-questions-finitary-operations-and-relations-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="reading-questions-finitary-operations-and-relations-3">
-<div class="para" id="reading-questions-finitary-operations-and-relations-3-1">In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#reading-questions-finitary-operations-and-relations-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="exercise exercise-like" id="reading-question-revisiting-commutativity-associativity-of-cartesian-products"><h4 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Revisiting commutativity/associativity of Cartesian products.</span>
+</h4>
+<div class="introduction" id="reading-question-revisiting-commutativity-associativity-of-cartesian-products-2">
+<div class="para" id="reading-question-revisiting-commutativity-associativity-of-cartesian-products-2-1">Recall from <a href="section-maps-and-functions.html#reading-question-non-commutativity-of-cartesian-products" class="xref" data-knowl="./knowl/xref/reading-question-non-commutativity-of-cartesian-products.html" data-reveal-label="Reveal" data-close-label="Close" title="Reading Question 1.2.5.1: Non-commutativity of Cartesian products">Reading Question 1.2.5.1 Non-commutativity of Cartesian products</a> that there are sets <span class="process-math">\(X \)</span> and <span class="process-math">\(Y \)</span> so that <span class="process-math">\(X \times Y \neq Y \times X \text{.}\)</span> Similarly, there are sets <span class="process-math">\(X \text{,}\)</span> <span class="process-math">\(Y \text{,}\)</span> and <span class="process-math">\(Z \)</span> so that <span class="process-math">\(\of{ X \times Y } \times Z \neq X \times \of{ Y \times Z } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-revisiting-commutativity-associativity-of-cartesian-products-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="reading-question-revisiting-commutativity-associativity-of-cartesian-products-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="reading-question-revisiting-commutativity-associativity-of-cartesian-products-3-1-1">Prove that there is a bijection between <span class="process-math">\(X \times Y \)</span> and <span class="process-math">\(Y \times X \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-revisiting-commutativity-associativity-of-cartesian-products-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.4.5.1.a"><a href="#reading-question-revisiting-commutativity-associativity-of-cartesian-products-3" title="Copy heading and permalink for Task 1.4.5.1.a" aria-label="Copy heading and permalink for Task 1.4.5.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="reading-question-revisiting-commutativity-associativity-of-cartesian-products-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="reading-question-revisiting-commutativity-associativity-of-cartesian-products-4-1-1">Prove that there is a bijection between <span class="process-math">\(\of{ X \times Y } \times Z \)</span> and <span class="process-math">\(X \times \of{ Y \times Z } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-revisiting-commutativity-associativity-of-cartesian-products-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.4.5.1.b"><a href="#reading-question-revisiting-commutativity-associativity-of-cartesian-products-4" title="Copy heading and permalink for Task 1.4.5.1.b" aria-label="Copy heading and permalink for Task 1.4.5.1.b">🔗</a></div>
+</article>
+<div class="conclusion" id="reading-question-revisiting-commutativity-associativity-of-cartesian-products-5">
+<div class="para" id="reading-question-revisiting-commutativity-associativity-of-cartesian-products-5-1">While the sets <span class="process-math">\(X \times Y \)</span> and <span class="process-math">\(Y \times X \)</span> and the sets <span class="process-math">\(\of{ X \times Y } \times Z \)</span> and <span class="process-math">\(X \times \of{ Y \times Z } \)</span> are not equal, they may safely be identified via these bijections.<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-revisiting-commutativity-associativity-of-cartesian-products-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Reading Question 1.4.5.1: Revisiting commutativity/associativity of Cartesian products"><a href="#reading-question-revisiting-commutativity-associativity-of-cartesian-products" title="Copy heading and permalink for Reading Question 1.4.5.1: Revisiting commutativity/associativity of Cartesian products" aria-label="Copy heading and permalink for Reading Question 1.4.5.1: Revisiting commutativity/associativity of Cartesian products">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="reading-question-cross-products"><h4 class="heading">
+<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cross products.</span>
+</h4>
+<div class="introduction" id="reading-question-cross-products-2">
+<div class="para logical" id="reading-question-cross-products-2-1">
+<div class="para">The <dfn class="terminology">cross product</dfn> <span class="process-math">\({ \times } \colon \of{ \R^{ 3 } }^{ 2 } \to \R^{ 3 } \)</span> is the binary operation on <span class="process-math">\(3 \)</span>-dimensional real coordinate space</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/section-constructing-the-real-numbers.html" id="reading-question-cross-products-2-1-4">
+\begin{equation*}
+\R^{ 3 } = \setmid{ \of{ x_{ 1 } , x_{ 2 } , x_{ 3 } } }{ x_{ 1 } , x_{ 2 } , x_{ 3 } \in \R }
+\end{equation*}
+</div>
+<div class="para">defined by the formula</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/section-constructing-the-real-numbers.html" id="reading-question-cross-products-2-1-5">
+\begin{equation*}
+\of{ x_{ 1 } , x_{ 2 } , x_{ 3 } } \times \of{ y_{ 1 } , y_{ 2 } , y_{ 3 } } = \of{ x_{ 2 } y_{ 3 } - x_{ 3 } y_{ 2 } , x_{ 3 } y_{ 1 } - x_{ 1 } y_{ 3 } , x_{ 1 } y_{ 2 } - x_{ 2 } y_{ 1 } }
+\end{equation*}
+</div>
+<div class="para">For this problem, you may assume all standard properties of the arithmetic of real numbers, even though we will not formally define <span class="process-math">\(\R \)</span> until <a href="section-constructing-the-real-numbers.html" class="internal" title="Section 2.2: Constructing the Real Numbers">Section 2.2 Constructing the Real Numbers</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-cross-products-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="reading-question-cross-products-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="reading-question-cross-products-3-1-1">Determine whether or not the cross product <span class="process-math">\(\times \)</span> on <span class="process-math">\(\R^{ 3 } \)</span> is commutative. Justify your answer.<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-cross-products-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.4.5.2.a"><a href="#reading-question-cross-products-3" title="Copy heading and permalink for Task 1.4.5.2.a" aria-label="Copy heading and permalink for Task 1.4.5.2.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="reading-question-cross-products-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="reading-question-cross-products-4-1-1">Determine whether or not the cross product <span class="process-math">\(\times \)</span> on <span class="process-math">\(\R^{ 3 } \)</span> is associative. Justify your answer.<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-cross-products-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.4.5.2.b"><a href="#reading-question-cross-products-4" title="Copy heading and permalink for Task 1.4.5.2.b" aria-label="Copy heading and permalink for Task 1.4.5.2.b">🔗</a></div>
+</article>
+<div class="conclusion" id="reading-question-cross-products-5">
+<div class="para" id="reading-question-cross-products-5-1">Text after the parts.<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-cross-products-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Reading Question 1.4.5.2: Cross products"><a href="#reading-question-cross-products" title="Copy heading and permalink for Reading Question 1.4.5.2: Cross products" aria-label="Copy heading and permalink for Reading Question 1.4.5.2: Cross products">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="reading-question-generating-equivalence-relations"><h4 class="heading">
+<span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Generating equivalence relations.</span>
+</h4>
+<div class="introduction" id="reading-question-generating-equivalence-relations-2">
+<div class="para" id="reading-question-generating-equivalence-relations-2-1">Let <span class="process-math">\(X \)</span> be a set.<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-generating-equivalence-relations-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="reading-question-generating-equivalence-relations-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="reading-question-generating-equivalence-relations-3-1-1">Prove that the intersection <span class="process-math">\(R = \bigcap_{ j \in \mathcal{ J } }{ R_{ j } } \)</span> of any indexed family <span class="process-math">\(\of{ R_{ j } }_{ j \in \mathcal{ J } } \)</span> of equivalence relations <span class="process-math">\(R_{ j } \)</span> on <span class="process-math">\(X \)</span> is an equivalence relation on <span class="process-math">\(X \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-generating-equivalence-relations-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.4.5.3.a"><a href="#reading-question-generating-equivalence-relations-3" title="Copy heading and permalink for Task 1.4.5.3.a" aria-label="Copy heading and permalink for Task 1.4.5.3.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="reading-question-generating-equivalence-relations-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical" id="reading-question-generating-equivalence-relations-4-3-1">
+<div class="para">Prove that for any binary relation <span class="process-math">\(R \)</span> on <span class="process-math">\(X \text{,}\)</span> there is a unique equivalence relation <span class="process-math">\(S \)</span> on <span class="process-math">\(X \)</span> which satisfies the following conditions:</div>
+<ol class="lower-alpha lower-alpha-level-1" id="reading-question-generating-equivalence-relations-4-3-1-5">
+<li id="reading-question-generating-equivalence-relations-4-3-1-5-1">
+<div class="para" id="reading-question-generating-equivalence-relations-4-3-1-5-1-1">
+<span class="process-math">\(S \)</span> is a <dfn class="terminology">refinement</dfn> of <span class="process-math">\(R \text{;}\)</span> that is, <span class="process-math">\(R \subseteq S \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-generating-equivalence-relations-4-3-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.4.5.3.a"><a href="#reading-question-generating-equivalence-relations-4-3-1-5-1" title="Copy heading and permalink for Item 1.4.5.3.a" aria-label="Copy heading and permalink for Item 1.4.5.3.a">🔗</a></div>
+</li>
+<li id="reading-question-generating-equivalence-relations-4-3-1-5-2">
+<div class="para" id="reading-question-generating-equivalence-relations-4-3-1-5-2-1">
+<span class="process-math">\(S \)</span> is <dfn class="terminology">coarser</dfn> than any equivalence relation which <dfn class="terminology">refines</dfn> <span class="process-math">\(R \text{;}\)</span> that is, <span class="process-math">\(S \subseteq T \)</span> for any equivalence relation <span class="process-math">\(T \)</span> on <span class="process-math">\(X \)</span> so that <span class="process-math">\(R \subseteq T \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-generating-equivalence-relations-4-3-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.4.5.3.b"><a href="#reading-question-generating-equivalence-relations-4-3-1-5-2" title="Copy heading and permalink for Item 1.4.5.3.b" aria-label="Copy heading and permalink for Item 1.4.5.3.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-generating-equivalence-relations-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.4.5.3.b"><a href="#reading-question-generating-equivalence-relations-4" title="Copy heading and permalink for Task 1.4.5.3.b" aria-label="Copy heading and permalink for Task 1.4.5.3.b">🔗</a></div>
+</article>
+<div class="conclusion" id="reading-question-generating-equivalence-relations-5">
+<div class="para" id="reading-question-generating-equivalence-relations-5-1">The unique equivalence relation on <span class="process-math">\(X \)</span> constructed in (b) above is called the equivalence relation <dfn class="terminology">generated</dfn> by <span class="process-math">\(R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-generating-equivalence-relations-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Reading Question 1.4.5.3: Generating equivalence relations"><a href="#reading-question-generating-equivalence-relations" title="Copy heading and permalink for Reading Question 1.4.5.3: Generating equivalence relations" aria-label="Copy heading and permalink for Reading Question 1.4.5.3: Generating equivalence relations">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="reading-question-universal-property-of-quotients"><h4 class="heading">
+<span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Universal property of quotients.</span>
+</h4>
+<div class="para" id="reading-question-universal-property-of-quotients-2-1">Let <span class="process-math">\(\equiv \)</span> be an equivalence relation on a set <span class="process-math">\(X \text{.}\)</span> A map <span class="process-math">\(f \colon X \to Y \)</span> from <span class="process-math">\(X \)</span> to a set <span class="process-math">\(Y \)</span> is called <span class="process-math">\(\equiv \)</span>-<dfn class="terminology">invariant</dfn> if for all elements <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \text{,}\)</span> if <span class="process-math">\(x_{ 1 } \equiv x_{ 2 } \text{,}\)</span> then <span class="process-math">\(f \of{ x_{ 1 } } = f \of{ x_{ 2 } } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-universal-property-of-quotients-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="reading-question-universal-property-of-quotients-2-2">Prove that for every <span class="process-math">\(\equiv \)</span>-invariant map <span class="process-math">\(f \colon X \to Y \text{,}\)</span> there is a map <span class="process-math">\(\overline{ f } \colon X / { \equiv } \to Y \)</span> so that <span class="process-math">\(\overline{ f } \circ \pi_{ \equiv } = f \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-universal-property-of-quotients-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Reading Question 1.4.5.4: Universal property of quotients"><a href="#reading-question-universal-property-of-quotients" title="Copy heading and permalink for Reading Question 1.4.5.4: Universal property of quotients" aria-label="Copy heading and permalink for Reading Question 1.4.5.4: Universal property of quotients">🔗</a></div>
+</article>
+<section class="conclusion" id="reading-questions-finitary-operations-and-relations-7">
+<div class="para" id="reading-questions-finitary-operations-and-relations-7-1">In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#reading-questions-finitary-operations-and-relations-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><div class="autopermalink" data-description="Reading Questions 1.4.5: Reading Questions"><a href="#reading-questions-finitary-operations-and-relations" title="Copy heading and permalink for Reading Questions 1.4.5: Reading Questions" aria-label="Copy heading and permalink for Reading Questions 1.4.5: Reading Questions">🔗</a></div>
 </section><div class="autopermalink" data-description="Section 1.4: Finitary Operations and Relations"><a href="#section-finitary-operations-and-relations" title="Copy heading and permalink for Section 1.4: Finitary Operations and Relations" aria-label="Copy heading and permalink for Section 1.4: Finitary Operations and Relations">🔗</a></div>
 </section>
