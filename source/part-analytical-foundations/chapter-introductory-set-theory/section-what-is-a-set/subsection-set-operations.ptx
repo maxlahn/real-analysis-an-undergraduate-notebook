@@ -49,17 +49,13 @@
     </notation>
     
     <p>
-      Test reference <xref ref="subsection-set-operations"/>
-    </p>
-    
-    <p>
       We now introduce several ways to construct new sets from old ones which loosely correspond to the logical operators of <term> conjunction </term> <m> \land </m>, <term> disjunction </term> <m> \lor </m>, and <term> negation </term> <m> \lnot </m>, pronounced <q> and </q>, <q> or </q> and <q> not </q>, respectively.
     </p>
   </introduction>
   
-  <definition xml:id="definition-intersection">
+  <definition xml:id="definition-set-operations">
     <title>
-      Intersection; union; complement
+      Set operations
     </title>
     
     <idx>
@@ -106,26 +102,58 @@
     
     <statement>
       <p>
-        The <term> intersection </term> <m> S \cap T </m> of two sets <m> S </m> and <m> T </m> is the set whose elements are both elements of <m> S </m> and elements of <m> T </m>; that is,
+        Let <m> S </m> and <m> T </m> be sets.
         
-        <md>
-          S \cap T = \setmid{ x }{ x \in S \textrm{ and } x \in T }
-        </md>.
-        
-        The <term> union </term> <m> S \cup T </m> of <m> S </m> and <m> T </m> is the set whose elements are either elements of <m> S </m> or elements of <m> T </m>; that is,
-        
-        <md>
-          S \cup T = \setmid{ x }{ x \in S \textrm{ or } x \in T }
-        </md>.
-        
-        The <term> complement </term> <m> S \setminus T </m> of <m> T </m> in <m> S </m> is the set whose elements are elements of <m> S </m> but not elements of <m> T </m>; that is,
-        
-        <md>
-          S \setminus T = \setmid{ x }{ x \in S \textrm{ and } x \notin T }
-        </md>.
+        <ul>
+          <li>
+            <title>
+              Intersection
+            </title>
+            
+            <p>
+              The <term> intersection </term> <m> S \cap T </m> of two sets <m> S </m> and <m> T </m> is the set whose elements are <em> both </em> elements of <m> S </m> and elements of <m> T </m>; that is,
+              
+              <md>
+                S \cap T = \setmid{ x }{ x \in S \land x \in T } = \setmid{ x }{ x \in S \textrm{ and } x \in T }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Union
+            </title>
+            
+            <p>
+              The <term> union </term> <m> S \cap T </m> of two sets <m> S </m> and <m> T </m> is the set whose elements are <em> either </em> elements of <m> S </m> and elements of <m> T </m> (or both!); that is,
+              
+              <md>
+                S \cup T = \setmid{ x }{ x \in S \lor x \in T } = \setmid{ x }{ x \in S \textrm{ or } x \in T }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Complement
+            </title>
+            
+            <p>
+              The <term> complement </term> <m> S \setminus T </m> of <m> T </m> in <m> S </m> is the set whose elements are elements of <m> S </m> but not elements of <m> T </m>; that is,
+              
+              <md>
+                S \setminus T = \setmid{ x }{ x \in S \land \lnot \of{ x \in T } } = \setmid{ x }{ x \in S \textrm{ and } x \notin T }
+              </md>.
+            </p>
+          </li>
+        </ul>
       </p>
     </statement>
   </definition>
+  
+  <p>
+    Informally, the intersection <m> S \cap T </m> of two sets <m> S </m> and <m> T </m> is the largest set which is contained in both <m> S </m> and <m> T </m>; the union of <m> S </m> and <m> T </m> is the smallest set which contains both <m> S </m> and <m> T </m>; and the complement <m> S \setminus T </m> is the largest set which is contained in <m> S </m> but disjoint from <m> T </m>. These informal characterizations are formalized in the following result:
+  </p>
   
   <proposition xml:id="proposition-set-operations-and-containment">
     <title>
@@ -134,7 +162,7 @@
     
     <statement>
       <p>
-        Fix sets <m> S </m>, <m> T </m>, and <m> U </m>.
+        Let <m> S </m>, <m> T </m>, and <m> U </m> be sets.
         
         <ol>
           <li>
@@ -201,25 +229,31 @@
     
     <statement>
       <p>
-        Fix sets <m> S </m>, <m> T </m>, and <m> U </m>.
-        
         <ol>
           <li>
             <p>
-              <m> S \cap S = S \cup S = S \cup \emptyset = S \setminus \emptyset = S </m>, and <m> S \cap \emptyset = S \setminus S = \emptyset \setminus S = \emptyset </m>.
+              <m> S \cap S = S \cup S = S \cup \emptyset = S \setminus \emptyset = S </m> and <m> S \cap \emptyset = S \setminus S = \emptyset \setminus S = \emptyset </m> for all sets <m> S </m>.
             </p>
           </li>
           
           <li>
+            <title>
+              Commutativity
+            </title>
+            
             <p>
-              <term> Commutativity </term>: <m> S \cap T = T \cap S </m> and <m> S \cup T = T \cup S </m>.
+              <m> S \cap T = T \cap S </m> and <m> S \cup T = T \cup S </m> for all sets <m> S </m> and <m> T </m>.
             </p>
           </li>
           
           
           <li>
+            <title>
+              Associativity
+            </title>
+            
             <p>
-              <term> Associativity </term>: <m> \of{ S \cap T } \cap U = S \cap \of{ T \cap U } </m> and <m> \of{ S \cup T } \cup U = S \cup \of{ T \cup U } </m>.
+              <m> \of{ S \cap T } \cap U = S \cap \of{ T \cap U } </m> and <m> \of{ S \cup T } \cup U = S \cup \of{ T \cup U } </m> for all sets <m> S </m>, <m> T </m>, and <m> U </m>.
             </p>
           </li>
         </ol>
@@ -316,139 +350,7 @@
 
   <conclusion>
     <p>
-      In the next section, we will generalize the first two ways (<term> intersection </term> and <term> union </term>) to arbitrary sets of sets; this generalization will mirror the similarities between conjunction <m> \land </m> and universal quantification <m> \forall </m> and between disjunction <m> \lor </m> and existential quantification <m> \exists </m>.
+      In <xref ref="subsection-indexing"/> in the next section, we will generalize the first two ways (<term> intersection </term> and <term> union </term>) of constructing sets to arbitrary sets of sets; this generalization will mirror the similarities between conjunction <m> \land </m> and universal quantification <m> \forall </m> and between disjunction <m> \lor </m> and existential quantification <m> \exists </m>, respectively.
     </p>
   </conclusion>
 </subsection>
-
-<!--
-
-  <definition xml:id="definition-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <idx>
-      TERM
-    </idx>
-    
-    <notation>
-      <usage>
-        <m>  </m>
-      </usage>
-      
-      <description>
-        <p>
-          
-        </p>
-      </description>
-    </notation>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-  </definition>
-
-  <lemma xml:id="lemma-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </lemma>
-
-  <proposition xml:id="proposition-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </proposition>
-
-  <theorem xml:id="theorem-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </theorem>
-
-  <corollary xml:id="corollary-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </corollary>
-
-  <example xml:id="example-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-  </example>
-
--->

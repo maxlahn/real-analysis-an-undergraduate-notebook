@@ -9,22 +9,28 @@
     De Morgan's laws
   </idx>
   
-  <introduction>
-    <p>
-      Let <m> S </m>, <m> T </m>, and <m> U </m> be sets.
-    </p>
-  </introduction>
-  
   <task>
     <statement>
       <p>
-        Prove that <m> S \setminus \of{ T \cap U } = \of{ S \setminus T } \cup \of{ S \setminus U } </m>.
+        Prove that <m> S \setminus \of{ T \cap U } = \of{ S \setminus T } \cup \of{ S \setminus U } </m> for all sets <m> S </m>, <m> T </m>, and <m> U </m>.
       </p>
     </statement>
     
     <solution>
       <p>
-        asdf
+        First let <m> x \in S \setminus \of{ T \cap U } </m>. Then <m> x \in S </m> and <m> x \notin T \cap U </m>. We want to show that <m> x \in S \setminus T </m> or <m> x \in S \setminus U </m>. To that end, suppose that <m> x \notin S \setminus T </m>. Since <m> x \in S </m>, we must have <m> x \in T </m>. 
+      </p>
+      
+      <p>
+        But <m> x \notin T \cap U </m>, and so <m> x \notin U </m>; that is, <m> x \in S \setminus U </m>. Since if <m> x \notin S \setminus T </m>, then <m> x \in S \setminus U </m>, we conclude that <m> x \in \of{ S \setminus T } \cup \of{ S \setminus U } </m>.
+      </p>
+      
+      <p>
+        Conversely, now let <m> x \in \of{ S \setminus T } \cup \of{ S \setminus U } </m>, so that <m> x \in S \setminus T </m> or <m> x \in S \setminus U </m>. If <m> x \in S \setminus T </m>, then <m> x \in S </m> and <m> x \notin T </m>, so that <m> x \notin T \cap U </m>. We conclude that <m> x \in S \setminus \of{ T \cap U } </m>.
+      </p>
+      
+      <p>
+        In summary, we have shown that <m> x \in S \setminus \of{ T \cap U } </m> if and only if <m> x \in \of{ S \setminus T } \cup \of{ S \setminus U } </m>. We conclude that <m> S \setminus \of{ T \cap U } = \of{ S \setminus T } \cup \of{ S \setminus U } </m>.
       </p>
     </solution>
   </task>
@@ -38,7 +44,15 @@
     
     <solution>
       <p>
-        asdf
+        First let <m> x \in S \setminus \of{ T \cup U } </m>. Then <m> x \in S </m> and <m> x \notin T \cup U </m>. If <m> x \in T </m>, then <m> x \in T \cup U </m>, and so <m> x \notin T </m>; we conclude that <m> x \in S \setminus T </m>. Similarly, if <m> x \in U </m>, then <m> x \in T \cup U </m>, and so <m> x \notin U </m>; we conclude that <m> x \in S \setminus U </m>. Thus <m> x \in \of{ S \setminus T } \cap \of{ S \setminus U } </m>.
+      </p>
+      
+      <p>
+        Conversely, now let <m> x \in \of{ S \setminus T } \cap \of{ S \setminus U } </m>, so that <m> x \in S \setminus T </m> and <m> x \in S \setminus U </m>. Thus <m> x \in S </m>, <m> x \notin T </m>, and <m> x \notin U </m>. If <m> x \in T \cup U </m>, then <m> x \in T </m> or <m> x \in U </m>, and so <m> x \notin T \cup U </m>; we conclude that <m> x \in S \setminus \of{ T \cup U } </m>.
+      </p>
+      
+      <p>
+        In summary, we have shown that <m> x \in S \setminus \of{ T \cup U } </m> if and only if <m> x \in \of{ S \setminus T } \cap \of{ S \setminus U } </m>. We conclude that <m> S \setminus \of{ T \cup U } = \of{ S \setminus T } \cap \of{ S \setminus U } </m>.
       </p>
     </solution>
   </task>

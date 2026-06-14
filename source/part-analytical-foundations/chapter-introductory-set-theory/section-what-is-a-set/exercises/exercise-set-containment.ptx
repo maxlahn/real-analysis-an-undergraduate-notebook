@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-set-containment" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Set containment
+  </title>
+  
+  <introduction>
+    <p>
+      Let <m> S </m>, <m> T </m>, and <m> U </m> be the sets defined by
+      
+      <md>
+        <mrow>
+          S \amp = \set{ 0 , 1 , 2 } \amp T \amp = \set{ 3 , 4 } \amp U \amp = \set{ 1 , 2 , 3 }
+        </mrow>
+      </md>.
+      
+      Determine whether or not the stated set containment is true or false.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Is <m> S \subseteq U </m>?
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        No, <m> S \not \subseteq U </m>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Is <m> S \cap T \subsetneq U </m>?
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        Yes, <m> S \cap T \subsetneq U </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        Yes,
+        
+        <md>
+          S \cap T = \set{ 0 , 1 , 2 } \cap \set{ 3 , 4 } = \emptyset \subsetneq \set{ 1 , 2 , 3 } = U
+        </md>
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Is <m> U \subseteq S \cup T </m>?
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        Yes, <m> U \subseteq S \cup T </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        Yes,
+        
+        <md>
+          <mrow>
+            U \amp = \set{ 1 , 2 , 3 } \subseteq \set{ 0 , 1 , 2 , 3 , 4 }
+          </mrow>
+          
+          <mrow>
+            \amp = \set{ 0 , 1 , 2 } \cup \set{ 3 , 4 } = S \cup T
+          </mrow>
+        </md>
+      </p>
+    </solution>
+  </exercise>
+</exercisegroup>

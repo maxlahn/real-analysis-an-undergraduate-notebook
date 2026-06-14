@@ -11,6 +11,12 @@
     </p>
   </introduction>
   
+  <xi:include href="./exercise-elements-of-sets.ptx"/>
+  
+  <xi:include href="./exercise-roster-notation.ptx"/>
+  
+  <xi:include href="./exercise-set-containment.ptx"/>
+  
   <xi:include href="./exercise-power-sets.ptx"/>
   
   <xi:include href="./exercise-set-operations.ptx"/>

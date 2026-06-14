@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-roster-notation" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Roster notation
+  </title>
+  
+  <introduction>
+    <p>
+      Write down the specified set in roster notation.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Write down the set <m> E </m> of even numbers between <m> 1 </m> and <m> 15 </m> in roster notation.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> E = \set{ 2 , 4 , 6 , 8 , 10 , 12 , 14 } </m>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Write down the set <m> L </m> of letters in your full name in roster notation.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The correct answer will differ depending on your full name. My full name is <q> Max Lahn </q>, and so I would answer
+        
+        <md>
+          L = \set{ \mathrm{ m } , \mathrm{ a } , \mathrm{ x } , \mathrm{ l } , \mathrm{ h } , \mathrm{ n } }
+        </md>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Write down the set <m> C </m> of colors in the rainbow in roster notation.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The correct answer will differ depending on what you consider to be separate colors. I would answer
+        
+        <md>
+          C = \set{ \mathrm{ red } , \mathrm{ orange } , \mathrm{ yellow } , \mathrm{ green } , \mathrm{ blue } , \mathrm{ indigo } , \mathrm{ violet } }
+        </md>
+      </p>
+    </answer>
+  </exercise>
+  
+  <conclusion>
+    <p>
+      
+    </p>
+  </conclusion>
+</exercisegroup>

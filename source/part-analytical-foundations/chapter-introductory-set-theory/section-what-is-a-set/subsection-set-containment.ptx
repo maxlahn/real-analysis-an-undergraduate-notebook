@@ -7,13 +7,13 @@
 
   <introduction>
     <p>
-      As we have just seen, not all definable collections of mathematical objects are sets. However, any collection of objects which themselves belong to a set is also a set in its own right; such a set of elements of a given set is called a subset.
+      As we have just seen, not all definable collections of mathematical objects are sets. However, any collection of objects which themselves belong to a set is also a set in its own right; such a collection of elements of a given set is called a <term> subset </term>.
     </p>
   </introduction>
   
-  <definition xml:id="definition-subset-superset">
+  <definition xml:id="definition-set-containment">
     <title>
-      Subset; superset
+      Set containment
     </title>
     
     <idx>
@@ -42,14 +42,26 @@
     
     <statement>
       <p>
-        A set <m> S </m> is a <term> subset </term> of a set <m> T </m> if <m> x \in T </m> for all elements <m> x \in S </m>. In this case, we say that <m> S </m> is <term> contained </term> in <m> T </m>, and we write <m> S \subseteq T </m>. Less commonly, we may call <m> T </m> a <term> superset </term> of <m> S </m> if <m> S </m> is a subset of <m> T </m>. In this case, we say that <m> T </m> <term> contains </term> <m> S </m>, and we write <m> T \supseteq S </m>.
+        A set <m> U </m> is a <term> subset </term> of a set <m> X </m> if for all objects <m> x </m>, if <m> x \in U </m>, then <m> x \in X </m>. In this case, we say that <m> U </m> is <term> contained </term> in <m> X </m>, and we write <m> U \subseteq X </m>. Less commonly, we may also call <m> X </m> a <term> superset </term> of <m> U </m>, say that <m> X </m> contains <m> U </m>, and write <m> X \supseteq U </m>.
       </p>
       
       <p>
-        Also, a set <m> S </m> is a <term> proper subset </term> of a set <m> T </m> if <m> S \subseteq T </m> but <m> T \not \subseteq S </m>. In this case, we say that <m> S </m> is <term> strictly contained </term> in <m> T </m>, and we write <m> S \subsetneq T </m>. Analogously, <m> T </m> is a <term> proper superset </term> of <m> S </m> if <m> S </m> is a proper subset of <m> T </m>. In this case, we say that <m> T </m> <term> strictly contains </term> <m> S </m>, and we write <m> T \supsetneq S </m>.
+        A set <m> U </m> is a <term> proper subset </term> of a set <m> X </m> if <m> U \subseteq X </m> but <m> X \not \subseteq U </m>. In this case, we say that <m> U </m> is <term> strictly contained </term> in <m> X </m>, and we write <m> U \subsetneq X </m>. Less commonly, we may also call <m> X </m> a <term> proper superset </term> of <m> U </m>, say that <m> X </m> strictly contains <m> U </m>, and write <m> X \supsetneq U </m>.
       </p>
     </statement>
   </definition>
+  
+  <convention xml:id="convention-set-containment-notation">
+    <title>
+      Set containment notation
+    </title>
+    
+    <statement>
+      <p>
+        Some authors use the symbols <m> \subset </m> and <m> \supset </m> in place of <m> \subseteq </m> and <m> \supseteq </m> to indicate set containment, and some authors use them in place of <m> \subsetneq </m> and <m> \supsetneq </m> to indicate strict set containment. We will avoid this ambiguity by opting not to write <m> \subset </m> and <m> \supset </m> at all.
+      </p>
+    </statement>
+  </convention>
   
   <definition xml:id="definition-set-equality">
     <title>
@@ -62,14 +74,14 @@
     
     <statement>
       <p>
-        Two sets are considered <term> equal </term> if they contain exactly the same elements; that is, one set <m> A </m> is equal to another set <m> B </m> when objects are elements of <m> A </m> if and only if they are elements of <m> B </m>. This occurs precisely when both <m> A \subseteq B </m> and <m> B \subseteq A </m>.
+        Two sets are considered <term> equal </term> if they contain exactly the same elements; that is, one set <m> X </m> is equal to another set <m> Y </m> when objects are elements of <m> X </m> if and only if they are elements of <m> Y </m>. This occurs precisely when both <m> X \subseteq Y </m> and <m> Y \subseteq X </m>.
       </p>
     </statement>
   </definition>
   
-  <example xml:id="example-examples-of-subsets">
+  <example xml:id="example-subsets">
     <title>
-      Examples of subsets
+      Subsets
     </title>
     
     <p>
@@ -78,7 +90,7 @@
       <ul>
         <li>
           <p>
-            For any set <m> S </m>, the empty set <m> \emptyset </m> and <m> S </m> itself are subsets of <m> S </m>.
+            For any set <m> X </m>, the empty set <m> \emptyset </m> and <m> X </m> itself are subsets of <m> S </m>.
           </p>
         </li>
         
@@ -95,6 +107,10 @@
     </p>
   </example>
   
+  <p>
+    An important property of the set containment relationship is its transitivity, which is the content of the following lemma:
+  </p>
+  
   <lemma xml:id="lemma-transitivity-of-set-containment">
     <title>
       Transitivity of set containment
@@ -102,20 +118,20 @@
     
     <statement>
       <p>
-        For any sets <m> S </m>, <m> T </m>, and <m> U </m>, if <m> S \subseteq T </m> and <m> T \subseteq U </m>, then <m> S \subseteq U </m>.
+        For any sets <m> U </m>, <m> V </m>, and <m> X </m>, if <m> U \subseteq V </m> and <m> V \subseteq X </m>, then <m> U \subseteq X </m>.
       </p>
     </statement>
     
     <proof>
       <p>
-        Suppose that <m> S \subseteq T </m> and <m> T \subseteq U </m>, and let <m> x \in S </m>. Since <m> x \in S </m> and <m> S \subseteq T </m>, <m> x \in T </m>. Moreover, since <m> x \in T </m> and <m> T \subseteq U </m>, <m> x \in U </m>.
-      </p>
-      
-      <p>
-        In summary, we have shown that <m> x \in U </m> for all <m> x \in S </m>. We conclude that <m> S \subseteq U </m>.
+        Let <m> u \in U </m>. Since <m> u \in U </m> and <m> U \subseteq V </m>, <m> u \in V </m>. Moreover, since <m> u \in V </m> and <m> V \subseteq X </m>, <m> u \in X </m>. In summary, we have shown that for <m> u \in X </m> for all elements <m> u \in U </m>, and so <m> U \subseteq X </m>.
       </p>
     </proof>
   </lemma>
+  
+  <p>
+    Set containment is also useful for constructing new notations for specifying sets as definable collections. Crucially, although not all definable collections are sets, any definable subcollection of a set is itself a set.
+  </p>
   
   <convention xml:id="convention-set-builder-notation">
     <title>
@@ -127,19 +143,23 @@
     </idx>
     
     <p>
-      Although not all definable collections are sets, any definable subcollection of a set is itself a set; that is, given a set <m> S </m> and a unary Boolean predicate <m> \Phi </m>, the definable collection
+      Given a set <m> X </m> and a unary Boolean predicate <m> \Phi </m>, the definable collection
       
       <md>
-        \setmid{ x }{ x \in S \textrm{ and } \Phi \of{ x } }
+        \setmid{ x }{ x \in X \textrm{ and } \Phi \of{ x } }
       </md>
       
-      is a set (and in fact a subset of <m> S </m>). This subset will also be denoted in <term> set-builder notation </term> by
+      is a set (and in fact a subset of <m> X </m>). This subset will also be denoted in <term> set-builder notation </term> by
       
       <md>
-        \setmid{ x \in S }{ \Phi \of{ x } } = \setmid{ x }{ x \in S \textrm{ and } \Phi \of{ x } }
+        \setmid{ x \in X }{ \Phi \of{ x } } = \setmid{ x }{ x \in X \textrm{ and } \Phi \of{ x } }
       </md>.
     </p>
   </convention>
+  
+  <p>
+    After learning about <xref ref="proposition-russells-paradox" text="title"/>, the careful reader may have some trepidation about sets whose elements are themselves sets. However, not all such definable collections lead to contradictions. For example, the collection of all subsets of a given set also form a set.
+  </p>
   
   <definition xml:id="definition-power-set">
     <title>
@@ -148,10 +168,10 @@
     
     <statement>
       <p>
-        The <term> power set </term> of a set <m> S </m> is the set of subsets of <m> S </m>; this set is denoted <m> \ps \of{ S } </m>, so that
+        The <term> power set </term> of a set <m> X </m> is the set of all subsets of <m> X </m>; this set is denoted <m> \ps \of{ X } </m>, so that
         
         <md>
-          \ps \of{ S } = \setmid{ T }{ T \subseteq S }
+          \ps \of{ X } = \setmid{ U }{ U \subseteq X }
         </md>.
       </p>
     </statement>
@@ -164,7 +184,7 @@
     
     <statement>
       <p>
-        The power set <m> \ps \of{ S } </m> of any set <m> S </m> is non-empty; that is, <m> \ps \of{ S } \neq \emptyset </m>.
+        The power set <m> \ps \of{ X } </m> of any set <m> X </m> is non-empty; that is, <m> \ps \of{ S } \neq \emptyset </m>.
       </p>
     </statement>
     
@@ -195,145 +215,13 @@
     </idx>
     
     <p>
-      Both of the above proofs of <xref ref="lemma-power-sets-are-non-empty"/> are correct, although they are nonequivalent. Both are valuable for different reasons; the first proof shows that the power set of a set is nonempty since the empty set $ \emptyset $ is a subset of any set, and the second proof shows the same conclusion since any set is a subset of itself. These proofs are called <term> constructive </term>, in that they explicitly exhibited an object satisfied the desired properties (being an element of the power set of a given set). Proofs which are not constructive are called <term> non-constructive </term>.
+      Both of the above proofs of <xref ref="lemma-power-sets-are-non-empty"/> are correct, although they are nonequivalent. Both are valuable for different reasons; the first proof shows that the power set of a set is nonempty since the empty set <m> \emptyset </m> is a subset of any set, and the second proof shows the same conclusion since any set is a subset of itself. These proofs are called <term> constructive </term>, in that they explicitly exhibited an object satisfied the desired properties (being an element of the power set of a given set). Proofs which are not constructive are called <term> non-constructive </term>.
     </p>
   </insight>
 
   <conclusion>
     <p>
-      In general, sets are likely to have many subsets, so that power sets of sets are likely to have a great many elements. We will investigate the notion of the number of elements of a set, called its <term> cardinality </term>, more precisely and in far greater depth at the end of this chapter.
+      In general, sets are likely to have many subsets, so that power sets of sets are likely to have a great many elements. We will investigate the notion of the number of elements of a set, called its <term> cardinality </term>, more precisely and in far greater depth in <xref ref="section-cardinality-and-countability"/> at the end of this chapter.
     </p>
   </conclusion>
 </subsection>
-
-<!--
-
-  <definition xml:id="definition-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <idx>
-      TERM
-    </idx>
-    
-    <notation>
-      <usage>
-        <m>  </m>
-      </usage>
-      
-      <description>
-        <p>
-          
-        </p>
-      </description>
-    </notation>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-  </definition>
-
-  <lemma xml:id="lemma-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </lemma>
-
-  <proposition xml:id="proposition-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </proposition>
-
-  <theorem xml:id="theorem-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </theorem>
-
-  <corollary xml:id="corollary-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </corollary>
-
-  <example xml:id="example-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-  </example>
-
--->

@@ -5,7 +5,7 @@
     Backmatter
   </title>
   
-  <solutions xml:id="solutions" inline="statement answer solution" reading="statement answer solution" divisional="statement solution">
+  <solutions xml:id="solutions" divisional="statement answer solution" reading="statement solution">
     <title>
       Selected Solutions
     </title>

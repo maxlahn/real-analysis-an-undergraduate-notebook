@@ -11,9 +11,9 @@
     </p>
   </introduction>
   
-  <xi:include href="./reading-question-de-morgans-laws.ptx"/>
-  
   <xi:include href="./reading-question-distributivity-of-set-operations.ptx"/>
+  
+  <xi:include href="./reading-question-de-morgans-laws.ptx"/>
   
   <xi:include href="./reading-question-power-sets.ptx"/>
   

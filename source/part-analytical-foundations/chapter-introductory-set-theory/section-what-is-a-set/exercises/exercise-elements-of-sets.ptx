@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-elements-of-sets" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Elements of sets
+  </title>
+  
+  <introduction>
+    <p>
+      Determine whether or not the given object is an element of the given set. Write your answer using the notation <m> \in </m> or <m> \notin </m>.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Is <m> 3 </m> an element of the set <m> \set{ 1 , 2 , 3 } </m>?
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        Yes, <m> 3 \in \set{ 1 , 2 , 3 } </m>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Is <m> 5 </m> an element of the set <m> \set{ 3 , 9 , 12 } </m>?
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        No, <m> 3 \notin \set{ 1 , 2 , 3 } </m>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Is <m> 8 </m> an element of the set <m> \set{ 0 , 2 , 4 , \dotsc , 12 } </m>?
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        If we interpret the roster notation as
+        
+        <md>
+          \set{ 0 , 2 , 4 , \dotsc , 12 } = \set{ 0 , 2 , 4 , 6 , 8 , 10 , 12 }
+        </md>,
+        
+        then <m> 8 \in \set{ 0 , 2 , 4 , \dotsc , 12 } </m>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Is <m> 50 </m> an element of the set <m> \set{ 0 , 1 , 4 , 9 , 16 , \dotsc } </m>?
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        If we interpret the roster notation as
+        
+        <md>
+          \set{ 0 , 1 , 4 , 9 , 16 , \dotsc } = \setmid{ n^{ 2 } }{ n \in \set{ 0 , 1 , 2 , 3 , \dotsc } }
+        </md>,
+        
+        then <m> 50 \notin \set{ 0 , 1 , 4 , 9 , 16 , \dotsc } </m>.
+      </p>
+    </answer>
+  </exercise>
+</exercisegroup>

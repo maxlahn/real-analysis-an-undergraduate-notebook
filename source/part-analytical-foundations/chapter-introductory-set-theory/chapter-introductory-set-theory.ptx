@@ -7,7 +7,7 @@
 
   <introduction>
     <p>
-      In this chapter, we lay the groundwork for our exposition of real analysis. We will introduce the fundamental notions of sets, relations, and functions, which underlie not only all of analysis but also all of modern mathematics as well.
+      In this chapter, we lay the groundwork for our exposition of real analysis. We will introduce the fundamental notions of <term> sets </term>, <term> relations </term>, and <term> maps </term>, which underlie not only all of analysis but also all of modern mathematics as well.
     </p>
   </introduction>
 
@@ -25,7 +25,7 @@
 
   <conclusion>
     <p>
-      Text after the last section.
+      Armed with a solid understanding of the theory of sets, maps, and relations, we now have much of the necessary background to begin studying real analysis. First, however, we will construct the standard number systems (with a focus on the real numbers <m> \R </m>) as extensions of the natural numbers <m> \N </m> and catalog their properties.
     </p>
   </conclusion>
 </chapter>
