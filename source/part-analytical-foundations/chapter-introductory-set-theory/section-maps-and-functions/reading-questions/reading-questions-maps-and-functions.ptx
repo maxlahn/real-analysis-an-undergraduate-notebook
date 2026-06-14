@@ -11,7 +11,15 @@
     </p>
   </introduction>
   
-  <xi:include href="./reading-question-composition-and-jectivity.ptx"/>
+  <xi:include href="./reading-question-non-commutativity-of-cartesian-products.ptx"/>
+  
+  <xi:include href="./reading-question-existence-of-maps.ptx"/>
+  
+  <xi:include href="./reading-question-non-commutativity-of-composition.ptx"/>
+  
+  <xi:include href="./reading-question-composition-and-injectivity-surjectivity-bijectivity.ptx"/>
+  
+  <xi:include href="./reading-question-indexed-intersections-and-unions.ptx"/>
 
   <conclusion>
     <p>

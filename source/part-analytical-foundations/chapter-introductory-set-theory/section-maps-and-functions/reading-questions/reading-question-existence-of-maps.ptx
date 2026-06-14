@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="reading-question-existence-of-maps" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Existence of maps
+  </title>
+  
+  <statement>
+    <p>
+      Determine whether the following statement is true or false:
+      
+      <blockquote>
+        <p>
+          For any sets <m> X </m> and <m> Y </m>, there is a map from <m> X </m> to <m> Y </m>.
+        </p>
+      </blockquote>
+      
+      If the statement is true, prove it. If the statement is false, disprove it by providing a counterexample.
+    </p>
+  </statement>
+  
+  <hint>
+    <p>
+      Consider your answers to <xref ref="exercise-cartesian-products"/>.
+    </p>
+  </hint>
+  
+  <solution>
+    <p>
+      Let <m> X = \set{ 0 , 1 , 2 , 3 , 4 , 5 } </m> and <m> Y = \emptyset </m>. As shown in <xref ref="exercise-cartesian-products"/>, <m> X \times Y = \emptyset </m>. In particular, no subset of <m> X \times Y </m> can satisfy the totality condition, and so there are no maps from <m> X </m> to <m> Y </m>.
+    </p>
+  </solution>
+</exercise>

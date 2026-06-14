@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-is-it-a-map" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Is it a map?
+  </title>
+  
+  <introduction>
+    <p>
+      Consider the sets <m> X = \set{ 0 , 2 , 4 , 6 , 8 } </m> and <m> Y = \set{ 0 , 1 , 2 , 3 , 4 } </m>. Determine whether or not the given object is a map from <m> X </m> to <m> Y </m>.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Determine whether or not
+        
+        <md>
+          f = \set{ \of{ 0 , 0 } , \of{ 2 , 1 } , \of{ 4 , 2 } , \of{ 6 , 3 } , \of{ 8 , 4 } }
+        </md>
+        
+        is a map from <m> X </m> to <m> Y </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        Yes, <m> f \colon X \to Y </m> is a map from <m> X </m> to <m> Y </m>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Determine whether or not
+        
+        <md>
+          g = \set{ \of{ 0 , 1 } , \of{ 2 , 1 } , \of{ 4 , 4 } , \of{ 8 , 1 } }
+        </md>
+        
+        is a map from <m> X </m> to <m> Y </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        No, <m> g </m> is not a map from <m> X </m> to <m> Y </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        There is no output <m> y \in Y </m> so that <m> \of{ 6 , y } \in g </m>, and so <m> g </m> does not satisfy the totality condition. Thus <m> g </m> is not a map from <m> X </m> to <m> Y </m>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Determine whether or not
+        
+        <md>
+          h = \set{ \of{ 0 , 1 } , \of{ 2 , 1 } , \of{ 4 , 4 } , \of{ 4 , 3 } , \of{ 6 , 2 } , \of{ 8 , 1 } }
+        </md>
+        
+        is a map from <m> X </m> to <m> Y </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        No, <m> h </m> is not a map from <m> X </m> to <m> Y </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        Note that <m> \of{ 4 , 4 } , \of{ 4 , 3 } \in h </m>, and so <m> h </m> does not satisfy the uniqueness condition. Thus <m> h </m> is not a map from <m> X </m> to <m> Y </m>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Determine whether or not
+        
+        <md>
+          j = \set{ \of{ 0 , 0 } , \of{ 2 , 0 } , \of{ 4 , 0 } , \of{ 6 , 0 } , \of{ 8 , 0 } }
+        </md>
+        
+        is a map from <m> X </m> to <m> Y </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        Yes, <m> j \colon X \to Y </m> is a map from <m> X </m> to <m> Y </m>.
+      </p>
+    </answer>
+  </exercise>
+</exercisegroup>

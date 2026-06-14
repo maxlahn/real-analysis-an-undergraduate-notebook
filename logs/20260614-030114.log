@@ -1,0 +1,10 @@
+WARNING : Assertion error in getting target.
+CRITICAL: There is not a target named "output" for this project.ptx manifest.
+INFO    : The available targets to build are named: ['web', 'print'].  Try to build on of those instead or edit your project.ptx manifest.
+CRITICAL: Exiting without completing build.
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

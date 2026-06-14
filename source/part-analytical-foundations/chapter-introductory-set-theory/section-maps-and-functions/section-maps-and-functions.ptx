@@ -7,7 +7,7 @@
 
   <introduction>
     <p>
-      In this section, we introduce the fundamental notion of a map between sets. Informally, a map is an assignment of an element of one set to each element of another. You probably have been exposed to maps in previous math courses in the form of real-valued functions of one real variable. We will treat maps in far greater generality, which will allow us to perform mathematical analysis in a wider array of spaces.
+      In this section, we introduce the fundamental notion of a <term> map </term> between sets. Informally, a map is an assignment to each element of one set an element of another. You probably have been exposed to maps in previous math courses in the form of real-valued functions of one real variable. We will treat maps in far greater generality, which will allow us to perform mathematical analysis in a wider array of spaces.
     </p>
   </introduction>
 
@@ -19,7 +19,7 @@
 
   <conclusion>
     <p>
-      Text after the last subsection.
+      The topics introduced in this section are central not only to the study of real analysis but to all of modern mathematics. In the next section, we will introduce another central object of study, the set <m> \N </m> of <term> natural numbers </term>.
     </p>
   </conclusion>
 

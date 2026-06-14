@@ -11,7 +11,13 @@
     </p>
   </introduction>
   
+  <xi:include href="./exercise-cartesian-products.ptx"/>
+  
+  <xi:include href="./exercise-is-it-a-map.ptx"/>
+  
   <xi:include href="./exercise-images-and-pre-images.ptx"/>
+  
+  <xi:include href="./exercise-determining-injectivity-surjectivity-bijectivity.ptx"/>
 
   <conclusion>
     <p>

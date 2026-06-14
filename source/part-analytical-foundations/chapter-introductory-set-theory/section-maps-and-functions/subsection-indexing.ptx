@@ -11,9 +11,9 @@
     </p>
   </introduction>
   
-  <definition xml:id="definition-indexed-family-indexed-set">
+  <definition xml:id="definition-indexed-family-set">
     <title>
-      Indexed family; indexed set
+      Indexed family/set
     </title>
     
     <idx>
@@ -76,12 +76,12 @@
   </definition>
   
   <p>
-    We can also use this notion of indexing to generalize the intersection and union of sets to act on arbitrary collections of sets. This generalization of the intersection and union of two sets relies on the natural similarities between logical conjunction <m> \land </m> and universal quantification <m> \forall </m> and between logical disjunction <m> \lor </m> and existential quantification <m> \exists </m>.
+    We can also use this notion of indexing to generalize the intersection and union of sets to act on arbitrary collections of sets. This generalization of the intersection and union of two sets relies on the natural similarities between logical conjunction <m> \land </m> and universal quantification <m> \forall </m> and between logical disjunction <m> \lor </m> and existential quantification <m> \exists </m>, respectively.
   </p>
   
-  <definition xml:id="definition-intersection-union">
+  <definition xml:id="definition-indexed-set-operations">
     <title>
-      Intersection; union
+      Indexed set operations
     </title>
     
     <idx>
@@ -99,7 +99,7 @@
       
       <description>
         <p>
-          the intersection of a family <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> of sets <m> U_{ j } </m>
+          the intersection of an indexed family <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> of sets <m> U_{ j } </m>
         </p>
       </description>
     </notation>
@@ -111,24 +111,44 @@
       
       <description>
         <p>
-          the union of a family <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> of sets <m> U_{ j } </m>
+          the union of an indexed family <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> of sets <m> U_{ j } </m>
         </p>
       </description>
     </notation>
     
     <statement>
       <p>
-        Let <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> be a family of subsets <m> U_{ j } \subseteq X </m> of a set <m> X </m> indexed by a set <m> \mathcal{ J } </m>. The <term> intersection </term> <m> \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } </m> of this indexed family is the subset of <m> X </m> defined by
+        Let <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> be a family of subsets <m> U_{ j } \subseteq X </m> of a set <m> X </m> indexed by a set <m> \mathcal{ J } </m>.
         
-        <md>
-          \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \setmid{ x \in X }{ x \in U_{ j } \textrm{ for all } j \in \mathcal{ J } }
-        </md>.
-        
-        The <term> union </term> <m> \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } </m> of this indexed family is the subset of <m> X </m> defined by
-        
-        <md>
-          \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } = \setmid{ x \in X }{ x \in U_{ j } \textrm{ for some } j \in \mathcal{ J } }
-        </md>.
+        <ol>
+          <li>
+            <title>
+              Intersection
+            </title>
+            
+            <p>
+              The <term> intersection </term> <m> \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } </m> of this indexed family of subsets is the subset of <m> X </m> defined by
+              
+              <md>
+                \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \setmid{ x \in X }{ x \in U_{ j } \textrm{ for all } j \in \mathcal{ J } }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Union
+            </title>
+            
+            <p>
+              The <term> union </term> <m> \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } </m> of this indexed family of subsets is the subset of <m> X </m> defined by
+              
+              <md>
+                \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } = \setmid{ x \in X }{ x \in U_{ j } \textrm{ for some } j \in \mathcal{ J } }
+              </md>.
+            </p>
+          </li>
+        </ol>
       </p>
     </statement>
   </definition>
@@ -154,6 +174,10 @@
           </li>
           
           <li>
+            <title>
+              Reindexing
+            </title>
+            
             <p>
               Analogously to (2) of <xref ref="corollary-properties-of-the-set-operations"/>,
               
@@ -167,13 +191,17 @@
                 \bigcup_{ k \in \mathcal{ K } }{ U_{ f \of{ k } } } = \bigcup_{ j \in \mathcal{ J } }{ U_{ j } }
               </md>
               
-              for any set <m> \mathcal{ K } </m> and bijection <m> f \colon \mathcal{ K } \to \mathcal{ J } </m>.
+              for any set <m> \mathcal{ K } </m> and surjection <m> f \colon \mathcal{ K } \to \mathcal{ J } </m>.
             </p>
           </li>
           
           <li>
+            <title>
+              Distributivity
+            </title>
+            
             <p>
-              Analogously to <xref provisional="problem-distributivity-of-set-operations"/>,
+              Analogously to <xref ref="reading-question-distributivity-of-set-operations"/>,
               
               <md>
                 V \cup \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcap_{ j \in \mathcal{ J } }{ \of{ V \cup U_{ j } } }
@@ -190,8 +218,12 @@
           </li>
           
           <li>
+            <title>
+              De Morgan's laws
+            </title>
+            
             <p>
-              Analogously to <xref provisional="problem-de-morgans-laws"/>,
+              Analogously to <xref ref="reading-question-de-morgans-laws"/>,
               
               <md>
                 V \setminus \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcup_{ j \in \mathcal{ J } }{ \of{ V \setminus U_{ j } } }
@@ -213,139 +245,7 @@
 
   <conclusion>
     <p>
-      You will have an opportunity to prove the above results in the problems for this section.
+      You will have an opportunity to prove the above results in the reading questions for this section.
     </p>
   </conclusion>
 </subsection>
-
-<!--
-
-  <definition xml:id="definition-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <idx>
-      TERM
-    </idx>
-    
-    <notation>
-      <usage>
-        <m>  </m>
-      </usage>
-      
-      <description>
-        <p>
-          
-        </p>
-      </description>
-    </notation>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-  </definition>
-
-  <lemma xml:id="lemma-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </lemma>
-
-  <proposition xml:id="proposition-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </proposition>
-
-  <theorem xml:id="theorem-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </theorem>
-
-  <corollary xml:id="corollary-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </corollary>
-
-  <example xml:id="example-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-  </example>
-
--->

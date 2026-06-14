@@ -61,20 +61,20 @@
     </statement>
   </definition>
   
-  <example xml:id="example-an-example-of-cartesian-products">
+  <example xml:id="example-cartesian-products">
     <title>
-      An example of Cartesian products
+      Cartesian products
     </title>
     
     <statement>
       <p>
-        Let <m> X = \set{ 1 , 2 } </m> and <m> Y = \set{ 3 , 4 , 5 } </m>. Then
+        The sets <m> X = \set{ 1 , 2 } </m> and <m> Y = \set{ 3 , 4 , 5 } </m> have Cartesian product
         
         <md>
           X \times Y = \set{ \of{ 1 , 3 } , \of{ 1 , 4 } , \of{ 1 , 5 } , \of{ 2 , 3 } , \of{ 2 , 4 } , \of{ 2 , 5 } }
         </md>.
         
-        Note that <m> X \times Y \neq X \cup Y </m>.
+        Note that <m> X \times Y \neq X \cup Y </m>, in the language of <xref ref="subsection-finitary-operations"/>, the Cartesian product <m> \times </m> is <term> non-commutative </term>.
       </p>
     </statement>
   </example>
@@ -85,7 +85,7 @@
   
   <definition xml:id="definition-map-function">
     <title>
-      Map; function
+      Map
     </title>
     
     <idx>
@@ -142,14 +142,22 @@
         
         <ol>
           <li>
+            <title>
+              Totality
+            </title>
+            
             <p>
-              <term> Totality </term>: For all inputs <m> x \in X </m>, there is an output <m> y \in Y </m> so that <m> \of{ x , y } \in f </m>.
+              For all inputs <m> x \in X </m>, there is an output <m> y \in Y </m> so that <m> \of{ x , y } \in f </m>.
             </p>
           </li>
           
           <li>
+            <title>
+              Uniqueness (vertical line test)
+            </title>
+            
             <p>
-              <term> Uniqueness </term>: For all inputs <m> x \in X </m> and outputs <m> y_{ 1 } , y_{ 2 } \in Y </m>, if <m> \of{ x , y_{ 1 } } , \of{ x , y_{ 2 } } \in f </m>, then <m> y_{ 1 } = y_{ 2 } </m>.
+              For all inputs <m> x \in X </m> and outputs <m> y_{ 1 } , y_{ 2 } \in Y </m>, if <m> \of{ x , y_{ 1 } } , \of{ x , y_{ 2 } } \in f </m>, then <m> y_{ 1 } = y_{ 2 } </m>.
             </p>
           </li>
         </ol>
@@ -158,7 +166,7 @@
       </p>
       
       <p>
-        We will call a map <m> f \colon X \to Y </m> whose codomain <m> Y </m> is a number system like the natural numbers <m> Y = \N </m>, the integers <m> Y = \Z </m>, the rational numbers <m> Y = \Q </m>, the real numbers <m> Y = \R </m>, or the complex numbers <m> Y = \C </m> a <m> Y </m>-valued <term> function </term> on <m> X </m>. We will investigate the natural numbers <m> \N </m> in <xref provisional="section-peano-arithmetic-and-the-natural-numbers"/>, and <xref provisional="chapter-constructing-the-number-systems"/> will be dedicated to constructing the other number systems with which we will become acquainted throughout the course of this text.
+        We will call a map <m> f \colon X \to Y </m> whose codomain <m> Y </m> is a number system like the natural numbers <m> Y = \N </m>, the integers <m> Y = \Z </m>, the rational numbers <m> Y = \Q </m>, the real numbers <m> Y = \R </m>, or the complex numbers <m> Y = \C </m> a <m> Y </m>-valued <term> function </term> on <m> X </m>. We will investigate the natural numbers <m> \N </m> in <xref ref="section-peano-arithmetic-and-the-natural-numbers"/>, and <xref ref="chapter-constructing-the-number-systems"/> will be dedicated to constructing the other number systems with which we will become acquainted throughout the course of this text.
       </p>
     </statement>
   </definition>
@@ -167,16 +175,16 @@
     So a map between sets is just a subset of their Cartesian product such that each element of the domain appears in precisely one pair with an element of the codomain. The above existence and uniqueness properties of a map implies that there is an unambiguous association between the elements of the domain and the elements of the codomain.
   </p>
   
-  <example xml:id="example-examples-of-maps">
+  <example xml:id="example-maps">
     <title>
-      Examples of maps
+      Maps
     </title>
     
     <statement>
       <p>
         The following are examples of maps between sets:
         
-        <ol>
+        <ul>
           <li>
             <p>
               Let <m> X = \set{ 1 , 2 } </m> and <m> Y = \set{ \mathrm{ red } , \mathrm{ blue } } </m>, and consider the following subsets of <m> X \times Y </m>:
@@ -215,7 +223,7 @@
                 Y^{ \emptyset } = \set{ \emptyset }
               </md>.
               
-              Note that none of the elements of the codomain <m> Y </m> are associated with elements of the empty domain <m> \emptyset </m>. However, this does not imply that <m> \emptyset </m> is not a map; in general, not all elements of the codomain of a map need be associated with elements of the domain, since <em> the existence property applies only to the domain </em>.
+              Note that none of the elements of the codomain <m> Y </m> are associated with elements of the empty domain <m> \emptyset </m>. However, this does not imply that <m> \emptyset </m> is not a map; in general, not all elements of the codomain of a map need be associated with elements of the domain, since <alert> the existence property applies only to the domain </alert>.
             </p>
           </li>
           
@@ -259,14 +267,14 @@
                 \iota_{ U }^{ X } = \setmid{ \of{ u , x } \in U \times X }{ u = x } .
               </md>
               
-              That is, <m> \iota_{ U }^{ X } \of{ u } = u </m> for all <m> u \in U </m>.
+              That is, <m> \iota_{ U }^{ X } \colon u \mapsto u </m> for all <m> u \in U </m>.
             </p>
             
             <p>
               The inclusion map <m> \iota_{ X }^{ X } </m> of <m> X </m> in itself is called the <term> identity map </term> on <m> X </m>, and is denoted <m> \id_{ X } \colon X \to X </m>.
             </p>
           </li>
-        </ol>
+        </ul>
       </p>
     </statement>
   </example>
@@ -355,27 +363,37 @@
     
     <statement>
       <p>
-        Let <m> f \colon X \to Y </m> be a map from a set <m> X </m> to a set <m> Y </m>. The <term> image </term> <m> f \of{ x } </m> of an input <m> x \in X </m> under <m> f </m> is the unique output so that <m> \of{ x , f \of{ x } } \in Y </m>. The <term> image </term> <m> f \of{ U } </m> of a subset <m> U \subseteq X </m> is the subset of the codomain <m> Y </m> defined by
+        Let <m> f \colon X \to Y </m> be a map from a set <m> X </m> to a set <m> Y </m>.
         
-        <md>
-          f \of{ U } = \setmid{ f \of{ x } \in Y }{ x \in U }
-        </md>.
-        
-        The image <m> f \of{ X } </m> of <m> X </m> itself is called the <term> image </term> of <m> f </m>, and is denoted <m> \im \of{ f } = f \of{ X } </m>.
-      </p>
-      
-      <p>
-        The <term> pre-image </term> <m> f^{ -1 } \of{ V } </m> of a subset <m> V \subseteq Y </m> of the codomain <m> Y </m> under <m> f </m> is the set of all inputs whose image lies in <m> V </m>; that is,
-        
-        <md>
-          f^{ -1 } \of{ V } = \setmid{ x \in X }{ f \of{ x } \in V }
-        </md>.
-        
-        The <term> pre-image </term> <m> f^{ -1 } \of{ y } </m> of an output <m> y \in Y </m> under <m> f </m> is just the pre-image of the singleton set <m> \set{ y } </m> under <m> f </m>; that is,
-        
-        <md>
-          f^{ -1 } \of{ y } = f^{ -1 } \of{ \set{ y } } = \setmid{ x \in X }{ f \of{ x } = y }
-        </md>
+        <ol>
+          <li>
+            <p>
+              The <term> image </term> <m> f \of{ x } </m> of an input <m> x \in X </m> under <m> f </m> is the unique output so that <m> \of{ x , f \of{ x } } \in Y </m>. The <term> image </term> <m> f \of{ U } </m> of a subset <m> U \subseteq X </m> is the subset of the codomain <m> Y </m> defined by
+              
+              <md>
+                f \of{ U } = \setmid{ f \of{ x } \in Y }{ x \in U }
+              </md>.
+              
+              The image <m> f \of{ X } </m> of <m> X </m> itself is called the <term> image </term> of <m> f </m>, and is denoted <m> \im \of{ f } = f \of{ X } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The <term> pre-image </term> <m> f^{ -1 } \of{ V } </m> of a subset <m> V \subseteq Y </m> of the codomain <m> Y </m> under <m> f </m> is the set of all inputs whose image lies in <m> V </m>; that is,
+              
+              <md>
+                f^{ -1 } \of{ V } = \setmid{ x \in X }{ f \of{ x } \in V }
+              </md>.
+              
+              The <term> pre-image </term> <m> f^{ -1 } \of{ y } </m> of an output <m> y \in Y </m> under <m> f </m> is just the pre-image of the singleton set <m> \set{ y } </m> under <m> f </m>; that is,
+              
+              <md>
+                f^{ -1 } \of{ y } = f^{ -1 } \of{ \set{ y } } = \setmid{ x \in X }{ f \of{ x } = y }
+              </md>
+            </p>
+          </li>
+        </ol>
       </p>
     </statement>
   </definition>
@@ -466,135 +484,3 @@
     </p>
   </conclusion>
 </subsection>
-
-<!--
-
-  <definition xml:id="definition-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <idx>
-      TERM
-    </idx>
-    
-    <notation>
-      <usage>
-        <m>  </m>
-      </usage>
-      
-      <description>
-        <p>
-          
-        </p>
-      </description>
-    </notation>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-  </definition>
-
-  <lemma xml:id="lemma-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </lemma>
-
-  <proposition xml:id="proposition-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </proposition>
-
-  <theorem xml:id="theorem-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </theorem>
-
-  <corollary xml:id="corollary-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </corollary>
-
-  <example xml:id="example-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-  </example>
-
--->

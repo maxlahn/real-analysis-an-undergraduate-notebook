@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-determining-injectivity-surjectivity-bijectivity" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Determining injectivity/surjectivity/bijectivity
+  </title>
+  
+  <introduction>
+    <p>
+      Determine whether or not the given map is injective, surjective, and/or bijective.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> X = \set{ 0 , 1 } </m> and <m> Y = \set{ 0 , 1 , 2 } </m>, and consider the following map <m> f \colon X \to Y </m> from <m> X </m> to <m> Y </m>:
+        
+        <md>
+          f = \set{ \of{ 0 , 0 } , \of{ 1 , 0 } }
+        </md>.
+        
+        Determine whether or not <m> f </m> is injective, surjective, and/or bijective.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> f </m> is neither injective, surjective, nor bijective.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> X = \set{ 0 , 1 } </m> and <m> Y = \set{ 0 , 1 , 2 } </m>, and consider the following map <m> f \colon X \to Y </m> from <m> X </m> to <m> Y </m>:
+        
+        <md>
+          f = \set{ \of{ 0 , 0 } , \of{ 1 , 2 } }
+        </md>.
+        
+        Determine whether or not <m> f </m> is injective, surjective, and/or bijective.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> f </m> is injective, but it is neither surjective nor bijective.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> X = \set{ 0 , 1 , 2 } </m> and <m> Y = \set{ 0 , 1 } </m>, and consider the following map <m> f \colon X \to Y </m> from <m> X </m> to <m> Y </m>:
+        
+        <md>
+          f = \set{ \of{ 0 , 0 } , \of{ 1 , 1 } , \of{ 2 , 1 } }
+        </md>.
+        
+        Determine whether or not <m> f </m> is injective, surjective, and/or bijective.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> f </m> is surjective, but it is neither injective nor bijective.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> X = \set{ 0 , 1 , 2 } </m> and <m> Y = \set{ 0 , 1 , 2 } </m>, and consider the following map <m> f \colon X \to Y </m> from <m> X </m> to <m> Y </m>:
+        
+        <md>
+          f = \set{ \of{ 0 , 0 } , \of{ 1 , 2 } , \of{ 2 , 1 } }
+        </md>.
+        
+        Determine whether or not <m> f </m> is injective, surjective, and/or bijective.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> f </m> is injective, surjective, and bijective.
+      </p>
+    </answer>
+  </exercise>
+</exercisegroup>

@@ -7,13 +7,13 @@
   
   <introduction>
     <p>
-      Let <m> f_{ 4 } \colon \set{ 1 , 2 } \to \set{ \mathrm{ red } , \mathrm{ blue } } </m> be the map from <m> \set{ 1 , 2 } </m> to <m> \set{ \mathrm{ red } , \mathrm{ blue } } </m> defined in (2) of <xref provisional="example-maps"/>; that is,
+      Let <m> f_{ 4 } \colon \set{ 1 , 2 } \to \set{ \mathrm{ red } , \mathrm{ blue } } </m> be the map from <m> \set{ 1 , 2 } </m> to <m> \set{ \mathrm{ red } , \mathrm{ blue } } </m> defined in <xref ref="example-maps"/>; that is,
       
       <md>
         f_{ 4 } = \set{ \of{ 1 , \mathrm{ blue } } , \of{ 2 , \mathrm{ blue } } }
       </md>.
       
-      Compute the given images and pre-images. Express your answer in roster notation.
+      Compute the given images and pre-images. Express your answer in roster notation if necessary.
     </p>
   </introduction>
   

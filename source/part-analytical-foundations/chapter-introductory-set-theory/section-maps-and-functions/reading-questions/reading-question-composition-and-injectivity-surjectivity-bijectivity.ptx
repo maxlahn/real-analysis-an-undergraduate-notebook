@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<exercise xml:id="reading-question-composition-and-jectivity" xmlns:xi="http://www.w3.org/2001/XInclude">
+<exercise xml:id="reading-question-composition-and-injectivity-surjectivity-bijectivity" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>
-    Composition and <q> jectivity </q>
+    Composition and injectivity/surjectivity/bijectivity
   </title>
   
   <introduction>
@@ -14,7 +14,7 @@
   <task>
     <statement>
       <p>
-        Prove that if <m> f </m> and <m> g </m> are injective, then so is their composition <m> g \circ f \colon X \to Z </m>.
+        Prove that if <m> f </m> and <m> g </m> are injective, then so too is their composition <m> g \circ f \colon X \to Z </m>.
       </p>
     </statement>
     
@@ -34,7 +34,7 @@
   <task>
     <statement>
       <p>
-        Prove that if <m> f </m> and <m> g </m> are surjective, then so is their composition <m> g \circ f \colon X \to Z </m>.
+        Prove that if <m> f </m> and <m> g </m> are surjective, then so too is their composition <m> g \circ f \colon X \to Z </m>.
       </p>
     </statement>
     
@@ -54,7 +54,7 @@
   <task>
     <statement>
       <p>
-        Prove that if <m> f </m> and <m> g </m> are bijective, then so is their composition <m> g \circ f \colon X \to Z </m>.
+        Prove that if <m> f </m> and <m> g </m> are bijective, then so too is their composition <m> g \circ f \colon X \to Z </m>.
       </p>
     </statement>
     
@@ -68,7 +68,7 @@
   <task>
     <statement>
       <p>
-        Prove that if the composition <m> g \circ f \colon X \to Z </m> is injective, then so is <m> f </m>.
+        Prove that if the composition <m> g \circ f \colon X \to Z </m> is injective, then so too is <m> f </m>.
       </p>
     </statement>
     
@@ -98,7 +98,7 @@
   <task>
     <statement>
       <p>
-        Prove that if the composition <m> g \circ f \colon X \to Z </m> is surjective, then so is <m> g </m>.
+        Prove that if the composition <m> g \circ f \colon X \to Z </m> is surjective, then so too is <m> g </m>.
       </p>
     </statement>
     
@@ -124,4 +124,10 @@
       </p>
     </solution>
   </task>
+  
+  <conclusion>
+    <p>
+      Note that the above results are used in the proof of <xref ref="theorem-invertibility"/>. In order to avoid circular reasoning, you should prove the above statements by using only the definitions of injectivity, surjectivity, and bijectivity (and not the alternative characterizations given by <xref ref="theorem-invertibility"/> and <xref ref="corollary-invertibility"/>).
+    </p>
+  </conclusion>
 </exercise>

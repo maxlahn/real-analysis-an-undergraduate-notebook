@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-cartesian-products" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Cartesian products
+  </title>
+  
+  <introduction>
+    <p>
+      Write down the Cartesian products of the given sets in roster notation.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Write down the Cartesian product <m> S \times T </m> of the sets <m> S = \set{ 0 , 1 } </m> and <m> T = \set{ 0 , 1 , 2 } </m> in roster notation.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The Cartesian product <m> S \times T </m> of the sets <m> S = \set{ 0 , 1 } </m> and <m> T = \set{ 0 , 1 , 2 } </m> is
+        
+        <md>
+          S \times T = \set{ \of{ 0 , 0 } , \of{ 0 , 1 } , \of{ 0 , 2 } , \of{ 1 , 0 } , \of{ 1 , 1 } , \of{ 1 , 2 } }
+        </md>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Write down the Cartesian product <m> U \times V </m> of the sets <m> U = \set{ 0 } </m> and <m> V = \set{ 1 , 2 , 3 , 4 } </m> in roster notation.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The Cartesian product <m> U \times V </m> of the sets <m> U = \set{ 0 } </m> and <m> V = \set{ 1 , 2 , 3 , 4 } </m> is
+        
+        <md>
+          U \times V = \set{ \of{ 0 , 1 } , \of{ 0 , 2 } , \of{ 0 , 3 } , \of{ 0 , 4 } }
+        </md>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Write down the Cartesian product <m> X \times Y </m> of the sets <m> X = \set{ 0 , 1 , 2 , 3 , 4 , 5 } </m> and <m> Y = \emptyset </m> in roster notation.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The Cartesian product <m> X \times Y </m> of the sets <m> X = \set{ 0 , 1 , 2 , 3 , 4 , 5 } </m> and <m> Y = \emptyset </m> is <m> X \times Y = \emptyset </m>.
+      </p>
+    </answer>
+  </exercise>
+</exercisegroup>

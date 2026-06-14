@@ -1197,12 +1197,13 @@ S \setminus T = \setmid{ x }{ x \in S \land \lnot \of{ x \in T } } = \setmid{ x 
 </div>
 <div class="autopermalink" data-description="Definition 1.1.14: Set operations"><a href="#definition-set-operations" title="Copy heading and permalink for Definition 1.1.14: Set operations" aria-label="Copy heading and permalink for Definition 1.1.14: Set operations">🔗</a></div>
 </article>
+<div class="para" id="subsection-set-operations-4">Informally, the intersection <span class="process-math">\(S \cap T \)</span> of two sets <span class="process-math">\(S \)</span> and <span class="process-math">\(T \)</span> is the largest set which is contained in both <span class="process-math">\(S \)</span> and <span class="process-math">\(T \text{;}\)</span> the union of <span class="process-math">\(S \)</span> and <span class="process-math">\(T \)</span> is the smallest set which contains both <span class="process-math">\(S \)</span> and <span class="process-math">\(T \text{;}\)</span> and the complement <span class="process-math">\(S \setminus T \)</span> is the largest set which is contained in <span class="process-math">\(S \)</span> but disjoint from <span class="process-math">\(T \text{.}\)</span> These informal characterizations are formalized in the following result:<div class="autopermalink" data-description="Paragraph"><a href="#subsection-set-operations-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="proposition theorem-like" id="proposition-set-operations-and-containment"><h4 class="heading">
 <span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Set operations and containment.</span>
 </h4>
 <div class="para logical" id="proposition-set-operations-and-containment-2-1">
-<div class="para">Fix sets <span class="process-math">\(S \text{,}\)</span> <span class="process-math">\(T \text{,}\)</span> and <span class="process-math">\(U \text{.}\)</span>
-</div>
+<div class="para">Let <span class="process-math">\(S \text{,}\)</span> <span class="process-math">\(T \text{,}\)</span> and <span class="process-math">\(U \)</span> be sets.</div>
 <ol class="decimal" id="proposition-set-operations-and-containment-2-1-4">
 <li id="proposition-set-operations-and-containment-2-1-4-1">
 <div class="para" id="proposition-set-operations-and-containment-2-1-4-1-1">
@@ -1258,26 +1259,26 @@ S \setminus T = \setmid{ x }{ x \in S \land \lnot \of{ x \in T } } = \setmid{ x 
 <span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Properties of the set operations.</span>
 </h4>
 <div class="para logical" id="corollary-properties-of-the-set-operations-2-1">
-<div class="para">Fix sets <span class="process-math">\(S \text{,}\)</span> <span class="process-math">\(T \text{,}\)</span> and <span class="process-math">\(U \text{.}\)</span>
+<ol class="decimal" id="corollary-properties-of-the-set-operations-2-1-1">
+<li id="corollary-properties-of-the-set-operations-2-1-1-1">
+<div class="para" id="corollary-properties-of-the-set-operations-2-1-1-1-1">
+<span class="process-math">\(S \cap S = S \cup S = S \cup \emptyset = S \setminus \emptyset = S \)</span> and <span class="process-math">\(S \cap \emptyset = S \setminus S = \emptyset \setminus S = \emptyset \)</span> for all sets <span class="process-math">\(S \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#corollary-properties-of-the-set-operations-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<ol class="decimal" id="corollary-properties-of-the-set-operations-2-1-4">
-<li id="corollary-properties-of-the-set-operations-2-1-4-1">
-<div class="para" id="corollary-properties-of-the-set-operations-2-1-4-1-1">
-<span class="process-math">\(S \cap S = S \cup S = S \cup \emptyset = S \setminus \emptyset = S \text{,}\)</span> and <span class="process-math">\(S \cap \emptyset = S \setminus S = \emptyset \setminus S = \emptyset \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#corollary-properties-of-the-set-operations-2-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 1"><a href="#corollary-properties-of-the-set-operations-2-1-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item 1"><a href="#corollary-properties-of-the-set-operations-2-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="corollary-properties-of-the-set-operations-2-1-4-2">
-<div class="para" id="corollary-properties-of-the-set-operations-2-1-4-2-1">
-<dfn class="terminology">Commutativity</dfn>: <span class="process-math">\(S \cap T = T \cap S \)</span> and <span class="process-math">\(S \cup T = T \cup S \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#corollary-properties-of-the-set-operations-2-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="corollary-properties-of-the-set-operations-2-1-1-2">
+<span class="heading li--heading"><span class="title li--heading-title">Commutativity.</span></span>
+<div class="para" id="corollary-properties-of-the-set-operations-2-1-1-2-2">
+<span class="process-math">\(S \cap T = T \cap S \)</span> and <span class="process-math">\(S \cup T = T \cup S \)</span> for all sets <span class="process-math">\(S \)</span> and <span class="process-math">\(T \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#corollary-properties-of-the-set-operations-2-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#corollary-properties-of-the-set-operations-2-1-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item 2: Commutativity"><a href="#corollary-properties-of-the-set-operations-2-1-1-2" title="Copy heading and permalink for Item 2: Commutativity" aria-label="Copy heading and permalink for Item 2: Commutativity">🔗</a></div>
 </li>
-<li id="corollary-properties-of-the-set-operations-2-1-4-3">
-<div class="para" id="corollary-properties-of-the-set-operations-2-1-4-3-1">
-<dfn class="terminology">Associativity</dfn>: <span class="process-math">\(\of{ S \cap T } \cap U = S \cap \of{ T \cap U } \)</span> and <span class="process-math">\(\of{ S \cup T } \cup U = S \cup \of{ T \cup U } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#corollary-properties-of-the-set-operations-2-1-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="corollary-properties-of-the-set-operations-2-1-1-3">
+<span class="heading li--heading"><span class="title li--heading-title">Associativity.</span></span>
+<div class="para" id="corollary-properties-of-the-set-operations-2-1-1-3-2">
+<span class="process-math">\(\of{ S \cap T } \cap U = S \cap \of{ T \cap U } \)</span> and <span class="process-math">\(\of{ S \cup T } \cup U = S \cup \of{ T \cup U } \)</span> for all sets <span class="process-math">\(S \text{,}\)</span> <span class="process-math">\(T \text{,}\)</span> and <span class="process-math">\(U \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#corollary-properties-of-the-set-operations-2-1-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 3"><a href="#corollary-properties-of-the-set-operations-2-1-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<div class="autopermalink" data-description="Item 3: Associativity"><a href="#corollary-properties-of-the-set-operations-2-1-1-3" title="Copy heading and permalink for Item 3: Associativity" aria-label="Copy heading and permalink for Item 3: Associativity">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#corollary-properties-of-the-set-operations-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1353,8 +1354,8 @@ S \cap \of{ T \cap U } \subseteq T \cap U \subseteq U\text{,}
 </ol>
 <div class="autopermalink" data-description="Proof 1.1.16.1"><a href="#corollary-properties-of-the-set-operations-3" title="Copy heading and permalink for Proof 1.1.16.1" aria-label="Copy heading and permalink for Proof 1.1.16.1">🔗</a></div>
 </article></details>
-<section class="conclusion" id="subsection-set-operations-6">
-<div class="para" id="subsection-set-operations-6-1">In the next section, we will generalize the first two ways (<dfn class="terminology">intersection</dfn> and <dfn class="terminology">union</dfn>) to arbitrary sets of sets; this generalization will mirror the similarities between conjunction <span class="process-math">\(\land \)</span> and universal quantification <span class="process-math">\(\forall \)</span> and between disjunction <span class="process-math">\(\lor \)</span> and existential quantification <span class="process-math">\(\exists \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsection-set-operations-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="conclusion" id="subsection-set-operations-7">
+<div class="para" id="subsection-set-operations-7-1">In <a href="section-maps-and-functions.html#subsection-indexing" class="internal" title="Subsection 1.2.3: Indexing">Subsection 1.2.3 Indexing</a> in the next section, we will generalize the first two ways (<dfn class="terminology">intersection</dfn> and <dfn class="terminology">union</dfn>) of constructing sets to arbitrary sets of sets; this generalization will mirror the similarities between conjunction <span class="process-math">\(\land \)</span> and universal quantification <span class="process-math">\(\forall \)</span> and between disjunction <span class="process-math">\(\lor \)</span> and existential quantification <span class="process-math">\(\exists \text{,}\)</span> respectively.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-set-operations-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><div class="autopermalink" data-description="Subsection 1.1.3: Set Operations"><a href="#subsection-set-operations" title="Copy heading and permalink for Subsection 1.1.3: Set Operations" aria-label="Copy heading and permalink for Subsection 1.1.3: Set Operations">🔗</a></div>
 </section>
 <section class="conclusion" id="section-what-is-a-set-6">
@@ -1367,49 +1368,130 @@ S \cap \of{ T \cap U } \subseteq T \cap U \subseteq U\text{,}
 <section class="introduction" id="exercises-what-is-a-set-2">
 <div class="para" id="exercises-what-is-a-set-2-1">The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-what-is-a-set-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<article class="exercise exercise-like" id="exercises-power-sets"><h4 class="heading">
-<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Power sets.</span>
-</h4>
-<div class="para" id="exercises-power-sets-2-1">Compute the power set <span class="process-math">\(\ps \of{ S } \)</span> of the set <span class="process-math">\(S = \set{ 1 , 2 , 3 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-power-sets-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="exercisegroup" id="exercise-elements-of-sets">
+<h4 class="heading"><span class="title">Elements of sets.</span></h4>
+<div class="introduction" id="exercise-elements-of-sets-2">
+<div class="para" id="exercise-elements-of-sets-2-1">Determine whether or not the given object is an element of the given set. Write your answer using the notation <span class="process-math">\(\in \)</span> or <span class="process-math">\(\notin \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-elements-of-sets-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions">
-<details id="exercises-power-sets-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="answer solution-like knowl__content">
-<div class="para logical" id="exercises-power-sets-3-1">
-<div class="para">The power set <span class="process-math">\(\ps \of{ S } \)</span> of the set <span class="process-math">\(S = \set{ 1 , 2 , 3 } \)</span> is the set</div>
-<div class="displaymath process-math" id="exercises-power-sets-3-1-3">
-\begin{equation*}
-\ps \of{ S } = \set{ \emptyset , \set{ 1 } , \set{ 2 } , \set{ 3 } , \set{ 1 , 2 } , \set{ 1 , 3 } , \set{ 2 , 3 } , \set{ 1 , 2 , 3 } }\text{.}
-\end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#exercises-power-sets-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-elements-of-sets-3"><h5 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercise-elements-of-sets-3-1-1">Is <span class="process-math">\(3 \)</span> an element of the set <span class="process-math">\(\set{ 1 , 2 , 3 } \text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-elements-of-sets-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Answer 1.1.4.1.1"><a href="#exercises-power-sets-3" title="Copy heading and permalink for Answer 1.1.4.1.1" aria-label="Copy heading and permalink for Answer 1.1.4.1.1">🔗</a></div>
-</div></details>
-<details id="exercises-power-sets-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para logical" id="exercises-power-sets-4-1">
-<div class="para">Choosing a subset of the set <span class="process-math">\(S = \set{ 1 , 2 , 3 } \)</span> is equivalent to making a unique sequence of three binary choices of whether to include each element <span class="process-math">\(1 \text{,}\)</span> <span class="process-math">\(2 \text{,}\)</span> and <span class="process-math">\(3 \text{.}\)</span> We see that <span class="process-math">\(S \)</span> has the following <span class="process-math">\(8 \)</span> subsets: <span class="process-math">\(\emptyset \text{,}\)</span> <span class="process-math">\(\set{ 1 } \text{,}\)</span> <span class="process-math">\(\set{ 2 } \text{,}\)</span> <span class="process-math">\(\set{ 3 } \text{,}\)</span> <span class="process-math">\(\set{ 1 , 2 } \text{,}\)</span> <span class="process-math">\(\set{ 1 , 3 } \text{,}\)</span> <span class="process-math">\(\set{ 2 , 3 } \text{,}\)</span> and <span class="process-math">\(\set{ 1 , 2 , 3 } \text{.}\)</span> Therefore, the power set <span class="process-math">\(\ps \of{ S } \)</span> of the set <span class="process-math">\(S = \set{ 1 , 2 , 3 } \)</span> is the set</div>
-<div class="displaymath process-math" id="exercises-power-sets-4-1-17">
-\begin{equation*}
-\ps \of{ S } = \set{ \emptyset , \set{ 1 } , \set{ 2 } , \set{ 3 } , \set{ 1 , 2 } , \set{ 1 , 3 } , \set{ 2 , 3 } , \set{ 1 , 2 , 3 } }\text{.}
-\end{equation*}
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#exercises-power-sets-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 1.1.4.1.1"><a href="#exercises-power-sets-4" title="Copy heading and permalink for Solution 1.1.4.1.1" aria-label="Copy heading and permalink for Solution 1.1.4.1.1">🔗</a></div>
-</div></details>
-</div>
-<div class="autopermalink" data-description="Exercise 1.1.4.1: Power sets"><a href="#exercises-power-sets" title="Copy heading and permalink for Exercise 1.1.4.1: Power sets" aria-label="Copy heading and permalink for Exercise 1.1.4.1: Power sets">🔗</a></div>
+<div class="autopermalink" data-description="Exercise 1.1.4.1"><a href="#exercise-elements-of-sets-3" title="Copy heading and permalink for Exercise 1.1.4.1" aria-label="Copy heading and permalink for Exercise 1.1.4.1">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="exercise-set-operations"><h4 class="heading">
-<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Set Operations.</span>
-</h4>
+<article class="exercise exercise-like" id="exercise-elements-of-sets-4"><h5 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercise-elements-of-sets-4-1-1">Is <span class="process-math">\(5 \)</span> an element of the set <span class="process-math">\(\set{ 3 , 9 , 12 } \text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-elements-of-sets-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.1.4.2"><a href="#exercise-elements-of-sets-4" title="Copy heading and permalink for Exercise 1.1.4.2" aria-label="Copy heading and permalink for Exercise 1.1.4.2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-elements-of-sets-5"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercise-elements-of-sets-5-1-1">Is <span class="process-math">\(8 \)</span> an element of the set <span class="process-math">\(\set{ 0 , 2 , 4 , \dotsc , 12 } \text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-elements-of-sets-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.1.4.3"><a href="#exercise-elements-of-sets-5" title="Copy heading and permalink for Exercise 1.1.4.3" aria-label="Copy heading and permalink for Exercise 1.1.4.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-elements-of-sets-6"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercise-elements-of-sets-6-1-1">Is <span class="process-math">\(50 \)</span> an element of the set <span class="process-math">\(\set{ 0 , 1 , 4 , 9 , 16 , \dotsc } \text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-elements-of-sets-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.1.4.4"><a href="#exercise-elements-of-sets-6" title="Copy heading and permalink for Exercise 1.1.4.4" aria-label="Copy heading and permalink for Exercise 1.1.4.4">🔗</a></div>
+</article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 1.1.4.1–4: Elements of sets"><a href="#exercise-elements-of-sets" title="Copy heading and permalink for Exercise Group 1.1.4.1–4: Elements of sets" aria-label="Copy heading and permalink for Exercise Group 1.1.4.1–4: Elements of sets">🔗</a></div>
+</div>
+<div class="exercisegroup" id="exercise-roster-notation">
+<h4 class="heading"><span class="title">Roster notation.</span></h4>
+<div class="introduction" id="exercise-roster-notation-2">
+<div class="para" id="exercise-roster-notation-2-1">Write down the specified set in roster notation.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-roster-notation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-roster-notation-3"><h5 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercise-roster-notation-3-1-1">Write down the set <span class="process-math">\(E \)</span> of even numbers between <span class="process-math">\(1 \)</span> and <span class="process-math">\(15 \)</span> in roster notation.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-roster-notation-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.1.4.5"><a href="#exercise-roster-notation-3" title="Copy heading and permalink for Exercise 1.1.4.5" aria-label="Copy heading and permalink for Exercise 1.1.4.5">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-roster-notation-4"><h5 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercise-roster-notation-4-1-1">Write down the set <span class="process-math">\(L \)</span> of letters in your full name in roster notation.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-roster-notation-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.1.4.6"><a href="#exercise-roster-notation-4" title="Copy heading and permalink for Exercise 1.1.4.6" aria-label="Copy heading and permalink for Exercise 1.1.4.6">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-roster-notation-5"><h5 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercise-roster-notation-5-1-1">Write down the set <span class="process-math">\(C \)</span> of colors in the rainbow in roster notation.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-roster-notation-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.1.4.7"><a href="#exercise-roster-notation-5" title="Copy heading and permalink for Exercise 1.1.4.7" aria-label="Copy heading and permalink for Exercise 1.1.4.7">🔗</a></div>
+</article>
+</div>
+<div class="conclusion" id="exercise-roster-notation-6">
+<div class="para" id="exercise-roster-notation-6-1"><div class="autopermalink" data-description="Paragraph"><a href="#exercise-roster-notation-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+</div>
+<div class="autopermalink" data-description="Exercise Group 1.1.4.5–7: Roster notation"><a href="#exercise-roster-notation" title="Copy heading and permalink for Exercise Group 1.1.4.5–7: Roster notation" aria-label="Copy heading and permalink for Exercise Group 1.1.4.5–7: Roster notation">🔗</a></div>
+</div>
+<div class="exercisegroup" id="exercise-set-containment">
+<h4 class="heading"><span class="title">Set containment.</span></h4>
+<div class="introduction" id="exercise-set-containment-2">
+<div class="para logical" id="exercise-set-containment-2-1">
+<div class="para">Let <span class="process-math">\(S \text{,}\)</span> <span class="process-math">\(T \text{,}\)</span> and <span class="process-math">\(U \)</span> be the sets defined by</div>
+<div class="displaymath process-math" id="exercise-set-containment-2-1-4">
+\begin{align*}
+S \amp = \set{ 0 , 1 , 2 } \amp T \amp = \set{ 3 , 4 } \amp U \amp = \set{ 1 , 2 , 3 }\text{.}
+\end{align*}
+</div>
+<div class="para">Determine whether or not the stated set containment is true or false.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-set-containment-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-set-containment-3"><h5 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercise-set-containment-3-1-1">Is <span class="process-math">\(S \subseteq U \text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-set-containment-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.1.4.8"><a href="#exercise-set-containment-3" title="Copy heading and permalink for Exercise 1.1.4.8" aria-label="Copy heading and permalink for Exercise 1.1.4.8">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-set-containment-4"><h5 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercise-set-containment-4-1-1">Is <span class="process-math">\(S \cap T \subsetneq U \text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-set-containment-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.1.4.9"><a href="#exercise-set-containment-4" title="Copy heading and permalink for Exercise 1.1.4.9" aria-label="Copy heading and permalink for Exercise 1.1.4.9">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-set-containment-5"><h5 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercise-set-containment-5-1-1">Is <span class="process-math">\(U \subseteq S \cup T \text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-set-containment-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.1.4.10"><a href="#exercise-set-containment-5" title="Copy heading and permalink for Exercise 1.1.4.10" aria-label="Copy heading and permalink for Exercise 1.1.4.10">🔗</a></div>
+</article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 1.1.4.8–10: Set containment"><a href="#exercise-set-containment" title="Copy heading and permalink for Exercise Group 1.1.4.8–10: Set containment" aria-label="Copy heading and permalink for Exercise Group 1.1.4.8–10: Set containment">🔗</a></div>
+</div>
+<div class="exercisegroup" id="exercises-power-sets">
+<h4 class="heading"><span class="title">Power sets.</span></h4>
+<div class="introduction" id="exercises-power-sets-2">
+<div class="para" id="exercises-power-sets-2-1">Write down the power sets of the given sets in roster notation.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-power-sets-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercises-power-sets-3"><h5 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercises-power-sets-3-1-1">Write down the power set <span class="process-math">\(\ps \of{ S } \)</span> of the set <span class="process-math">\(S = \set{ 1 } \)</span> in roster notation.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-power-sets-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.1.4.11"><a href="#exercises-power-sets-3" title="Copy heading and permalink for Exercise 1.1.4.11" aria-label="Copy heading and permalink for Exercise 1.1.4.11">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-power-sets-4"><h5 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercises-power-sets-4-1-1">Write down the power set <span class="process-math">\(\ps \of{ T } \)</span> of the set <span class="process-math">\(T = \set{ 1 , 2 } \)</span> in roster notation.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-power-sets-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.1.4.12"><a href="#exercises-power-sets-4" title="Copy heading and permalink for Exercise 1.1.4.12" aria-label="Copy heading and permalink for Exercise 1.1.4.12">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-power-sets-5"><h5 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercises-power-sets-5-1-1">Write down the power set <span class="process-math">\(\ps \of{ U } \)</span> of the set <span class="process-math">\(U = \set{ 1 , 2 , 3 } \)</span> in roster notation.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-power-sets-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.1.4.13"><a href="#exercises-power-sets-5" title="Copy heading and permalink for Exercise 1.1.4.13" aria-label="Copy heading and permalink for Exercise 1.1.4.13">🔗</a></div>
+</article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 1.1.4.11–13: Power sets"><a href="#exercises-power-sets" title="Copy heading and permalink for Exercise Group 1.1.4.11–13: Power sets" aria-label="Copy heading and permalink for Exercise Group 1.1.4.11–13: Power sets">🔗</a></div>
+</div>
+<div class="exercisegroup" id="exercise-set-operations">
+<h4 class="heading"><span class="title">Set Operations.</span></h4>
 <div class="introduction" id="exercise-set-operations-2">
 <div class="para" id="exercise-set-operations-2-1">Compute the given set operations. Write your answer in roster or set-builder notation, or as a well-known set.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-set-operations-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="exercise-set-operations-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-set-operations-3"><h5 class="heading"><span class="codenumber">14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para logical" id="exercise-set-operations-3-1-1">
 <div class="para">Compute <span class="process-math">\(S \cap T \text{,}\)</span> where</div>
 <div class="displaymath process-math" id="exercise-set-operations-3-1-1-2">
@@ -1426,45 +1508,14 @@ T = \setmid{ n \in \N }{ n = 2 k + 1 \textrm{ for some } k \in \N } = \set{ 1 , 
 <div class="para">is the set of odd integers.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#exercise-set-operations-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions">
-<details id="exercise-set-operations-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="answer solution-like knowl__content">
-<div class="para" id="exercise-set-operations-3-2-1">
-<span class="process-math">\(S \cap T = \emptyset \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-set-operations-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Answer 1.1.4.2.a.1"><a href="#exercise-set-operations-3-2" title="Copy heading and permalink for Answer 1.1.4.2.a.1" aria-label="Copy heading and permalink for Answer 1.1.4.2.a.1">🔗</a></div>
-</div></details>
-<details id="exercise-set-operations-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para" id="exercise-set-operations-3-3-1">No natural number is both even and odd, and so <span class="process-math">\(S \cap T = \emptyset \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-set-operations-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 1.1.4.2.a.1"><a href="#exercise-set-operations-3-3" title="Copy heading and permalink for Solution 1.1.4.2.a.1" aria-label="Copy heading and permalink for Solution 1.1.4.2.a.1">🔗</a></div>
-</div></details>
-</div>
-<div class="autopermalink" data-description="Task 1.1.4.2.a"><a href="#exercise-set-operations-3" title="Copy heading and permalink for Task 1.1.4.2.a" aria-label="Copy heading and permalink for Task 1.1.4.2.a">🔗</a></div>
+<div class="autopermalink" data-description="Exercise 1.1.4.14"><a href="#exercise-set-operations-3" title="Copy heading and permalink for Exercise 1.1.4.14" aria-label="Copy heading and permalink for Exercise 1.1.4.14">🔗</a></div>
 </article>
-<article class="task exercise-like" id="exercise-set-operations-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<article class="exercise exercise-like" id="exercise-set-operations-4"><h5 class="heading"><span class="codenumber">15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercise-set-operations-4-1-1">Compute <span class="process-math">\(S \cup T \text{,}\)</span> where <span class="process-math">\(S = \set{ 0 , 3 , 4 , 9 } \)</span> and <span class="process-math">\(T = \set{ 1 , 3 , 6 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-set-operations-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions">
-<details id="exercise-set-operations-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="answer solution-like knowl__content">
-<div class="para" id="exercise-set-operations-4-2-1">
-<span class="process-math">\(S \cup T = \set{ 0 , 1 , 3 , 4 , 6 , 9 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-set-operations-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Answer 1.1.4.2.b.1"><a href="#exercise-set-operations-4-2" title="Copy heading and permalink for Answer 1.1.4.2.b.1" aria-label="Copy heading and permalink for Answer 1.1.4.2.b.1">🔗</a></div>
-</div></details>
-<details id="exercise-set-operations-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para" id="exercise-set-operations-4-3-1">
-<span class="process-math">\(S \cup T \)</span> contains all the elements of <span class="process-math">\(S \)</span> and all the elements of <span class="process-math">\(T \text{,}\)</span> so that <span class="process-math">\(S \cup T = \set{ 0 , 1 , 3 , 4 , 6 , 9 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-set-operations-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 1.1.4.2.b.1"><a href="#exercise-set-operations-4-3" title="Copy heading and permalink for Solution 1.1.4.2.b.1" aria-label="Copy heading and permalink for Solution 1.1.4.2.b.1">🔗</a></div>
-</div></details>
-</div>
-<div class="autopermalink" data-description="Task 1.1.4.2.b"><a href="#exercise-set-operations-4" title="Copy heading and permalink for Task 1.1.4.2.b" aria-label="Copy heading and permalink for Task 1.1.4.2.b">🔗</a></div>
+<div class="autopermalink" data-description="Exercise 1.1.4.15"><a href="#exercise-set-operations-4" title="Copy heading and permalink for Exercise 1.1.4.15" aria-label="Copy heading and permalink for Exercise 1.1.4.15">🔗</a></div>
 </article>
-<article class="task exercise-like" id="exercise-set-operations-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<article class="exercise exercise-like" id="exercise-set-operations-5"><h5 class="heading"><span class="codenumber">16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para logical" id="exercise-set-operations-5-1-1">
 <div class="para">Compute <span class="process-math">\(S \setminus T \text{,}\)</span> where</div>
 <div class="displaymath process-math" id="exercise-set-operations-5-1-1-2">
@@ -1481,35 +1532,13 @@ T = \setmid{ n \in \N }{ n = 2 k \textrm{ for some } k \in \N } = \set{ 0 , 2 , 
 <div class="para">is the set of even natural numbers.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#exercise-set-operations-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions">
-<details id="exercise-set-operations-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="answer solution-like knowl__content">
-<div class="para" id="exercise-set-operations-5-2-1">
-<span class="process-math">\(S \setminus T = \setmid{ n \in \N }{ n = 10 k + 5 \textrm{ for some } k \in \N } = \set{ 5 , 15 , 25 , 35 , \dotsc } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-set-operations-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Answer 1.1.4.2.c.1"><a href="#exercise-set-operations-5-2" title="Copy heading and permalink for Answer 1.1.4.2.c.1" aria-label="Copy heading and permalink for Answer 1.1.4.2.c.1">🔗</a></div>
-</div></details>
-<details id="exercise-set-operations-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para logical" id="exercise-set-operations-5-3-1">
-<div class="para">
-<span class="process-math">\(S \setminus T \)</span> contains all the odd multiples of <span class="process-math">\(5 \text{,}\)</span> so that</div>
-<div class="displaymath process-math" id="exercise-set-operations-5-3-1-3">
-\begin{align*}
-S \setminus T \amp = \setmid{ n \in \N }{ n = 10 k + 5 \textrm{ for some } k \in \N }\\
-\amp = \set{ 5 , 15 , 25 , 35 , \dotsc }\text{.}
-\end{align*}
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#exercise-set-operations-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 1.1.4.2.c.1"><a href="#exercise-set-operations-5-3" title="Copy heading and permalink for Solution 1.1.4.2.c.1" aria-label="Copy heading and permalink for Solution 1.1.4.2.c.1">🔗</a></div>
-</div></details>
-</div>
-<div class="autopermalink" data-description="Task 1.1.4.2.c"><a href="#exercise-set-operations-5" title="Copy heading and permalink for Task 1.1.4.2.c" aria-label="Copy heading and permalink for Task 1.1.4.2.c">🔗</a></div>
-</article><div class="autopermalink" data-description="Exercise 1.1.4.2: Set Operations"><a href="#exercise-set-operations" title="Copy heading and permalink for Exercise 1.1.4.2: Set Operations" aria-label="Copy heading and permalink for Exercise 1.1.4.2: Set Operations">🔗</a></div>
+<div class="autopermalink" data-description="Exercise 1.1.4.16"><a href="#exercise-set-operations-5" title="Copy heading and permalink for Exercise 1.1.4.16" aria-label="Copy heading and permalink for Exercise 1.1.4.16">🔗</a></div>
 </article>
-<section class="conclusion" id="exercises-what-is-a-set-5">
-<div class="para" id="exercises-what-is-a-set-5-1">Short answers and/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-what-is-a-set-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise Group 1.1.4.14–16: Set Operations"><a href="#exercise-set-operations" title="Copy heading and permalink for Exercise Group 1.1.4.14–16: Set Operations" aria-label="Copy heading and permalink for Exercise Group 1.1.4.14–16: Set Operations">🔗</a></div>
+</div>
+<section class="conclusion" id="exercises-what-is-a-set-8">
+<div class="para" id="exercises-what-is-a-set-8-1">Short answers and/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-what-is-a-set-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><div class="autopermalink" data-description="Exercises 1.1.4: Exercises"><a href="#exercises-what-is-a-set" title="Copy heading and permalink for Exercises 1.1.4: Exercises" aria-label="Copy heading and permalink for Exercises 1.1.4: Exercises">🔗</a></div>
 </section>
 <section class="reading-questions" id="reading-questions-what-is-a-set">
@@ -1519,118 +1548,61 @@ S \setminus T \amp = \setmid{ n \in \N }{ n = 10 k + 5 \textrm{ for some } k \in
 <section class="introduction" id="reading-questions-what-is-a-set-2">
 <div class="para" id="reading-questions-what-is-a-set-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" data-description="Paragraph"><a href="#reading-questions-what-is-a-set-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<article class="exercise exercise-like" id="reading-question-de-morgans-laws"><h4 class="heading">
-<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">De Morgan’s laws.</span>
-</h4>
-<div class="introduction" id="reading-question-de-morgans-laws-3">
-<div class="para" id="reading-question-de-morgans-laws-3-1">Let <span class="process-math">\(S \text{,}\)</span> <span class="process-math">\(T \text{,}\)</span> and <span class="process-math">\(U \)</span> be sets.<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-de-morgans-laws-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-</div>
-<article class="task exercise-like" id="reading-question-de-morgans-laws-4"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="reading-question-de-morgans-laws-4-1-1">Prove that <span class="process-math">\(S \setminus \of{ T \cap U } = \of{ S \setminus T } \cup \of{ S \setminus U } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-de-morgans-laws-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="solutions">
-<details id="reading-question-de-morgans-laws-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para" id="reading-question-de-morgans-laws-4-2-1">asdf<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-de-morgans-laws-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 1.1.5.1.a.1"><a href="#reading-question-de-morgans-laws-4-2" title="Copy heading and permalink for Solution 1.1.5.1.a.1" aria-label="Copy heading and permalink for Solution 1.1.5.1.a.1">🔗</a></div>
-</div></details>
-</div>
-<div class="autopermalink" data-description="Task 1.1.5.1.a"><a href="#reading-question-de-morgans-laws-4" title="Copy heading and permalink for Task 1.1.5.1.a" aria-label="Copy heading and permalink for Task 1.1.5.1.a">🔗</a></div>
-</article>
-<article class="task exercise-like" id="reading-question-de-morgans-laws-5"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="reading-question-de-morgans-laws-5-1-1">Prove that <span class="process-math">\(S \setminus \of{ T \cup U } = \of{ S \setminus T } \cap \of{ S \setminus U } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-de-morgans-laws-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="solutions">
-<details id="reading-question-de-morgans-laws-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para" id="reading-question-de-morgans-laws-5-2-1">asdf<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-de-morgans-laws-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 1.1.5.1.b.1"><a href="#reading-question-de-morgans-laws-5-2" title="Copy heading and permalink for Solution 1.1.5.1.b.1" aria-label="Copy heading and permalink for Solution 1.1.5.1.b.1">🔗</a></div>
-</div></details>
-</div>
-<div class="autopermalink" data-description="Task 1.1.5.1.b"><a href="#reading-question-de-morgans-laws-5" title="Copy heading and permalink for Task 1.1.5.1.b" aria-label="Copy heading and permalink for Task 1.1.5.1.b">🔗</a></div>
-</article>
-<div class="conclusion" id="reading-question-de-morgans-laws-6">
-<div class="para" id="reading-question-de-morgans-laws-6-1">Taken together, these results are called <dfn class="terminology">De Morgan’s laws</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-de-morgans-laws-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-</div>
-<div class="autopermalink" data-description="Reading Question 1.1.5.1: De Morgan’s laws"><a href="#reading-question-de-morgans-laws" title="Copy heading and permalink for Reading Question 1.1.5.1: De Morgan’s laws" aria-label="Copy heading and permalink for Reading Question 1.1.5.1: De Morgan’s laws">🔗</a></div>
-</article>
 <article class="exercise exercise-like" id="reading-question-distributivity-of-set-operations"><h4 class="heading">
-<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The distributive properties of set operations.</span>
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The distributive properties of set operations.</span>
 </h4>
-<div class="introduction" id="reading-question-distributivity-of-set-operations-3">
-<div class="para" id="reading-question-distributivity-of-set-operations-3-1">Let <span class="process-math">\(S \text{,}\)</span> <span class="process-math">\(T \text{,}\)</span> and <span class="process-math">\(U \)</span> be sets.<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-distributivity-of-set-operations-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="task exercise-like" id="reading-question-distributivity-of-set-operations-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="reading-question-distributivity-of-set-operations-3-1-1">Prove that <span class="process-math">\(S \cap \of{ T \cup U } = \of{ S \cap T } \cup \of{ S \cap U } \)</span> for all sets <span class="process-math">\(S \text{,}\)</span> <span class="process-math">\(T \text{,}\)</span> and <span class="process-math">\(U \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-distributivity-of-set-operations-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-</div>
-<article class="task exercise-like" id="reading-question-distributivity-of-set-operations-4"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="reading-question-distributivity-of-set-operations-4-1-1">Prove that <span class="process-math">\(S \cap \of{ T \cup U } = \of{ S \cap T } \cup \of{ S \cap U } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-distributivity-of-set-operations-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="solutions">
-<details id="reading-question-distributivity-of-set-operations-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para" id="reading-question-distributivity-of-set-operations-4-2-1">asdf<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-distributivity-of-set-operations-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 1.1.5.2.a.1"><a href="#reading-question-distributivity-of-set-operations-4-2" title="Copy heading and permalink for Solution 1.1.5.2.a.1" aria-label="Copy heading and permalink for Solution 1.1.5.2.a.1">🔗</a></div>
-</div></details>
-</div>
-<div class="autopermalink" data-description="Task 1.1.5.2.a"><a href="#reading-question-distributivity-of-set-operations-4" title="Copy heading and permalink for Task 1.1.5.2.a" aria-label="Copy heading and permalink for Task 1.1.5.2.a">🔗</a></div>
+<div class="autopermalink" data-description="Task 1.1.5.1.a"><a href="#reading-question-distributivity-of-set-operations-3" title="Copy heading and permalink for Task 1.1.5.1.a" aria-label="Copy heading and permalink for Task 1.1.5.1.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="reading-question-distributivity-of-set-operations-5"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="reading-question-distributivity-of-set-operations-5-1-1">Prove that <span class="process-math">\(S \cup \of{ T \cap U } = \of{ S \cup T } \cap \of{ S \cup U } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-distributivity-of-set-operations-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="task exercise-like" id="reading-question-distributivity-of-set-operations-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="reading-question-distributivity-of-set-operations-4-1-1">Prove that <span class="process-math">\(S \cup \of{ T \cap U } = \of{ S \cup T } \cap \of{ S \cup U } \)</span> for all sets <span class="process-math">\(S \text{,}\)</span> <span class="process-math">\(T \text{,}\)</span> and <span class="process-math">\(U \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-distributivity-of-set-operations-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions">
-<details id="reading-question-distributivity-of-set-operations-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para" id="reading-question-distributivity-of-set-operations-5-2-1">asdf<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-distributivity-of-set-operations-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 1.1.5.2.b.1"><a href="#reading-question-distributivity-of-set-operations-5-2" title="Copy heading and permalink for Solution 1.1.5.2.b.1" aria-label="Copy heading and permalink for Solution 1.1.5.2.b.1">🔗</a></div>
-</div></details>
-</div>
-<div class="autopermalink" data-description="Task 1.1.5.2.b"><a href="#reading-question-distributivity-of-set-operations-5" title="Copy heading and permalink for Task 1.1.5.2.b" aria-label="Copy heading and permalink for Task 1.1.5.2.b">🔗</a></div>
+<div class="autopermalink" data-description="Task 1.1.5.1.b"><a href="#reading-question-distributivity-of-set-operations-4" title="Copy heading and permalink for Task 1.1.5.1.b" aria-label="Copy heading and permalink for Task 1.1.5.1.b">🔗</a></div>
 </article>
-<div class="conclusion" id="reading-question-distributivity-of-set-operations-6">
-<div class="para" id="reading-question-distributivity-of-set-operations-6-1">Taken together, these results are called the <dfn class="terminology">distributive properties</dfn> of the set operations.<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-distributivity-of-set-operations-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="conclusion" id="reading-question-distributivity-of-set-operations-5">
+<div class="para" id="reading-question-distributivity-of-set-operations-5-1">Taken together, these results are called the <dfn class="terminology">distributive properties</dfn> of the set operations.<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-distributivity-of-set-operations-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<div class="autopermalink" data-description="Reading Question 1.1.5.2: The distributive properties of set operations"><a href="#reading-question-distributivity-of-set-operations" title="Copy heading and permalink for Reading Question 1.1.5.2: The distributive properties of set operations" aria-label="Copy heading and permalink for Reading Question 1.1.5.2: The distributive properties of set operations">🔗</a></div>
+<div class="autopermalink" data-description="Reading Question 1.1.5.1: The distributive properties of set operations"><a href="#reading-question-distributivity-of-set-operations" title="Copy heading and permalink for Reading Question 1.1.5.1: The distributive properties of set operations" aria-label="Copy heading and permalink for Reading Question 1.1.5.1: The distributive properties of set operations">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="reading-question-de-morgans-laws"><h4 class="heading">
+<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">De Morgan’s laws.</span>
+</h4>
+<article class="task exercise-like" id="reading-question-de-morgans-laws-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="reading-question-de-morgans-laws-3-1-1">Prove that <span class="process-math">\(S \setminus \of{ T \cap U } = \of{ S \setminus T } \cup \of{ S \setminus U } \)</span> for all sets <span class="process-math">\(S \text{,}\)</span> <span class="process-math">\(T \text{,}\)</span> and <span class="process-math">\(U \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-de-morgans-laws-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.1.5.2.a"><a href="#reading-question-de-morgans-laws-3" title="Copy heading and permalink for Task 1.1.5.2.a" aria-label="Copy heading and permalink for Task 1.1.5.2.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="reading-question-de-morgans-laws-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="reading-question-de-morgans-laws-4-1-1">Prove that <span class="process-math">\(S \setminus \of{ T \cup U } = \of{ S \setminus T } \cap \of{ S \setminus U } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-de-morgans-laws-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.1.5.2.b"><a href="#reading-question-de-morgans-laws-4" title="Copy heading and permalink for Task 1.1.5.2.b" aria-label="Copy heading and permalink for Task 1.1.5.2.b">🔗</a></div>
+</article>
+<div class="conclusion" id="reading-question-de-morgans-laws-5">
+<div class="para" id="reading-question-de-morgans-laws-5-1">Taken together, these results are called <dfn class="terminology">De Morgan’s laws</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-de-morgans-laws-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Reading Question 1.1.5.2: De Morgan’s laws"><a href="#reading-question-de-morgans-laws" title="Copy heading and permalink for Reading Question 1.1.5.2: De Morgan’s laws" aria-label="Copy heading and permalink for Reading Question 1.1.5.2: De Morgan’s laws">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="reading-question-power-sets"><h4 class="heading">
 <span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Power sets.</span>
 </h4>
-<div class="introduction" id="reading-question-power-sets-2">
-<div class="para" id="reading-question-power-sets-2-1">Recall that the power set <span class="process-math">\(\ps \of{ S } \)</span> of a set <span class="process-math">\(S \)</span> is the set whose elements are all the subsets of <span class="process-math">\(S \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-power-sets-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="reading-question-power-sets-2-1">Determine whether the following statement is true or false: 
+<blockquote class="blockquote" id="reading-question-power-sets-2-1-1">
+<div class="para" id="reading-question-power-sets-2-1-1-1">The power set of a set contains at least two distinct elements.<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-power-sets-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-</div>
-<article class="task exercise-like" id="reading-question-power-sets-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="reading-question-power-sets-3-1-1">Determine whether the following statement is true or false: 
-<blockquote class="blockquote" id="reading-question-power-sets-3-1-1-1">
-<div class="para" id="reading-question-power-sets-3-1-1-1-1">The power set of a set contains at least two distinct elements.<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-power-sets-3-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Quotation"><a href="#reading-question-power-sets-3-1-1-1" title="Copy heading and permalink for Quotation" aria-label="Copy heading and permalink for Quotation">🔗</a></div>
-</blockquote> If the statement is true, prove it. If the statement is false, disprove it by providing a counterexample.<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-power-sets-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Quotation"><a href="#reading-question-power-sets-2-1-1" title="Copy heading and permalink for Quotation" aria-label="Copy heading and permalink for Quotation">🔗</a></div>
+</blockquote> If the statement is true, prove it. If the statement is false, disprove it by providing a counterexample.<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-power-sets-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="reading-question-power-sets-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<details id="reading-question-power-sets-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="hint solution-like knowl__content">
-<div class="para" id="reading-question-power-sets-3-2-1">Revisit the proofs of <a href="section-what-is-a-set.html#lemma-power-sets-are-non-empty" class="xref" data-knowl="./knowl/xref/lemma-power-sets-are-non-empty.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 1.1.12: Power sets are non-empty">Lemma 1.1.12 Power sets are non-empty</a>.<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-power-sets-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="reading-question-power-sets-3-1">Revisit the proofs of <a href="section-what-is-a-set.html#lemma-power-sets-are-non-empty" class="xref" data-knowl="./knowl/xref/lemma-power-sets-are-non-empty.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 1.1.12: Power sets are non-empty">Lemma 1.1.12 Power sets are non-empty</a>.<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-power-sets-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Hint 1.1.5.3.a.1"><a href="#reading-question-power-sets-3-2" title="Copy heading and permalink for Hint 1.1.5.3.a.1" aria-label="Copy heading and permalink for Hint 1.1.5.3.a.1">🔗</a></div>
+<div class="autopermalink" data-description="Hint 1.1.5.3.1"><a href="#reading-question-power-sets-3" title="Copy heading and permalink for Hint 1.1.5.3.1" aria-label="Copy heading and permalink for Hint 1.1.5.3.1">🔗</a></div>
 </div></details>
-<details id="reading-question-power-sets-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para" id="reading-question-power-sets-3-3-1">asdf<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-power-sets-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 1.1.5.3.a.1"><a href="#reading-question-power-sets-3-3" title="Copy heading and permalink for Solution 1.1.5.3.a.1" aria-label="Copy heading and permalink for Solution 1.1.5.3.a.1">🔗</a></div>
-</div></details>
-</div>
-<div class="autopermalink" data-description="Task 1.1.5.3.a"><a href="#reading-question-power-sets-3" title="Copy heading and permalink for Task 1.1.5.3.a" aria-label="Copy heading and permalink for Task 1.1.5.3.a">🔗</a></div>
-</article>
-<div class="conclusion" id="reading-question-power-sets-4">
-<div class="para" id="reading-question-power-sets-4-1">Text after the parts.<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-power-sets-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
 </div>
 <div class="autopermalink" data-description="Reading Question 1.1.5.3: Power sets"><a href="#reading-question-power-sets" title="Copy heading and permalink for Reading Question 1.1.5.3: Power sets" aria-label="Copy heading and permalink for Reading Question 1.1.5.3: Power sets">🔗</a></div>
 </article>
@@ -1644,52 +1616,15 @@ S \setminus T \amp = \setmid{ n \in \N }{ n = 10 k + 5 \textrm{ for some } k \in
 <article class="task exercise-like" id="reading-question-set-operations-and-containment-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="reading-question-set-operations-and-containment-3-1-1">Prove that <span class="process-math">\(S \cap T = S \)</span> if and only if <span class="process-math">\(S \subseteq T \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-set-operations-and-containment-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions">
-<details id="reading-question-set-operations-and-containment-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para" id="reading-question-set-operations-and-containment-3-2-1">Since <span class="process-math">\(S \cap T \subseteq S \text{,}\)</span> it suffices to show that <span class="process-math">\(S \subseteq S \cap T \)</span> if and only if <span class="process-math">\(S \subseteq T \text{.}\)</span> To that end, note that if <span class="process-math">\(S \subseteq S \cap T \text{,}\)</span> then (1) of <a href="section-what-is-a-set.html#proposition-set-operations-and-containment" class="xref" data-knowl="./knowl/xref/proposition-set-operations-and-containment.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 1.1.15: Set operations and containment">Proposition 1.1.15 Set operations and containment</a> implies that <span class="process-math">\(S \subseteq T \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-set-operations-and-containment-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="reading-question-set-operations-and-containment-3-2-2">Conversely, we note that <span class="process-math">\(S \subseteq S \text{,}\)</span> so that if <span class="process-math">\(S \subseteq T \text{,}\)</span> then (1) of <a href="section-what-is-a-set.html#proposition-set-operations-and-containment" class="xref" data-knowl="./knowl/xref/proposition-set-operations-and-containment.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 1.1.15: Set operations and containment">Proposition 1.1.15 Set operations and containment</a> implies that <span class="process-math">\(S \subseteq S \cap T \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-set-operations-and-containment-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 1.1.5.4.a.1"><a href="#reading-question-set-operations-and-containment-3-2" title="Copy heading and permalink for Solution 1.1.5.4.a.1" aria-label="Copy heading and permalink for Solution 1.1.5.4.a.1">🔗</a></div>
-</div></details>
-</div>
 <div class="autopermalink" data-description="Task 1.1.5.4.a"><a href="#reading-question-set-operations-and-containment-3" title="Copy heading and permalink for Task 1.1.5.4.a" aria-label="Copy heading and permalink for Task 1.1.5.4.a">🔗</a></div>
 </article>
 <article class="task exercise-like" id="reading-question-set-operations-and-containment-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="reading-question-set-operations-and-containment-4-1-1">Prove that <span class="process-math">\(S \cup T = S \)</span> if and only if <span class="process-math">\(T \subseteq S \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-set-operations-and-containment-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions">
-<details id="reading-question-set-operations-and-containment-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para" id="reading-question-set-operations-and-containment-4-2-1">Since <span class="process-math">\(S \cup S \cup T \text{,}\)</span> it suffices to show that <span class="process-math">\(S \cup T \subseteq S \)</span> if and only if <span class="process-math">\(T \subseteq S \text{.}\)</span> To that end, note that if <span class="process-math">\(S \cup T \subseteq S \text{,}\)</span> then (2) of <a href="section-what-is-a-set.html#proposition-set-operations-and-containment" class="xref" data-knowl="./knowl/xref/proposition-set-operations-and-containment.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 1.1.15: Set operations and containment">Proposition 1.1.15 Set operations and containment</a> implies that <span class="process-math">\(T \subseteq S \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-set-operations-and-containment-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="reading-question-set-operations-and-containment-4-2-2">Conversely, we note that <span class="process-math">\(S \subseteq S \text{,}\)</span> so that if <span class="process-math">\(T \subseteq S \text{,}\)</span> then (2) of <a href="section-what-is-a-set.html#proposition-set-operations-and-containment" class="xref" data-knowl="./knowl/xref/proposition-set-operations-and-containment.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 1.1.15: Set operations and containment">Proposition 1.1.15 Set operations and containment</a> implies that <span class="process-math">\(S \cup T \subseteq S \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-set-operations-and-containment-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 1.1.5.4.b.1"><a href="#reading-question-set-operations-and-containment-4-2" title="Copy heading and permalink for Solution 1.1.5.4.b.1" aria-label="Copy heading and permalink for Solution 1.1.5.4.b.1">🔗</a></div>
-</div></details>
-</div>
 <div class="autopermalink" data-description="Task 1.1.5.4.b"><a href="#reading-question-set-operations-and-containment-4" title="Copy heading and permalink for Task 1.1.5.4.b" aria-label="Copy heading and permalink for Task 1.1.5.4.b">🔗</a></div>
 </article>
 <article class="task exercise-like" id="reading-question-set-operations-and-containment-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
 <div class="para" id="reading-question-set-operations-and-containment-5-1-1">Prove that <span class="process-math">\(S \setminus T = S \)</span> if and only if <span class="process-math">\(S \cap T = \emptyset \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-set-operations-and-containment-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="solutions">
-<details id="reading-question-set-operations-and-containment-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para logical" id="reading-question-set-operations-and-containment-5-2-1">
-<div class="para">First suppose that <span class="process-math">\(S \cap T = \emptyset \text{.}\)</span> Then <span class="process-math">\(x \notin T \)</span> for all <span class="process-math">\(x \in S \text{,}\)</span> and so</div>
-<div class="displaymath process-math" id="reading-question-set-operations-and-containment-5-2-1-4">
-\begin{equation*}
-S \setminus T = \setmid{ x }{ x \in S \textrm{ and } x \notin T } = \setmid{ x }{ x \in S } = S\text{.}
-\end{equation*}
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#reading-question-set-operations-and-containment-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="reading-question-set-operations-and-containment-5-2-2">Conversely, now suppose that <span class="process-math">\(S \cap T \neq \emptyset \text{.}\)</span> Then <span class="process-math">\(x \in S \cap T \text{,}\)</span> and so <span class="process-math">\(x \in S \)</span> and <span class="process-math">\(x \in T \text{.}\)</span> Since <span class="process-math">\(x \in T \text{,}\)</span> <span class="process-math">\(x \notin S \setminus T \text{.}\)</span> So <span class="process-math">\(x \)</span> is an element of <span class="process-math">\(S \)</span> but not <span class="process-math">\(S \setminus T \text{;}\)</span> we conclude that <span class="process-math">\(S \setminus T \neq S \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reading-question-set-operations-and-containment-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 1.1.5.4.c.1"><a href="#reading-question-set-operations-and-containment-5-2" title="Copy heading and permalink for Solution 1.1.5.4.c.1" aria-label="Copy heading and permalink for Solution 1.1.5.4.c.1">🔗</a></div>
-</div></details>
 </div>
 <div class="autopermalink" data-description="Task 1.1.5.4.c"><a href="#reading-question-set-operations-and-containment-5" title="Copy heading and permalink for Task 1.1.5.4.c" aria-label="Copy heading and permalink for Task 1.1.5.4.c">🔗</a></div>
 </article><div class="autopermalink" data-description="Reading Question 1.1.5.4: Set operations and containment"><a href="#reading-question-set-operations-and-containment" title="Copy heading and permalink for Reading Question 1.1.5.4: Set operations and containment" aria-label="Copy heading and permalink for Reading Question 1.1.5.4: Set operations and containment">🔗</a></div>
