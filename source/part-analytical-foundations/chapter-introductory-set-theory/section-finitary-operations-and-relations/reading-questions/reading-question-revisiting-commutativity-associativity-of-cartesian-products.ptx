@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="reading-question-revisiting-commutativity-associativity-of-cartesian-products" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Revisiting commutativity/associativity of Cartesian products
+  </title>
+  
+  <introduction>
+    <p>
+      Recall from <xref ref="reading-question-non-commutativity-of-cartesian-products"/> that there are sets <m> X </m> and <m> Y </m> so that <m> X \times Y \neq Y \times X </m>. Similarly, there are sets <m> X </m>, <m> Y </m>, and <m> Z </m> so that <m> \of{ X \times Y } \times Z \neq X \times \of{ Y \times Z } </m>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that there is a bijection between <m> X \times Y </m> and <m> Y \times X </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Consider the maps <m> f \colon X \times Y \to Y \times X </m> and <m> g \colon Y \times X \to X \times Y </m> defined by the formulae <m> f \of{ x , y } = \of{ y , x } </m> and <m> g \of{ y , x } = \of{ x , y } </m>. We observe that
+        
+        <md>
+          \of{ g \circ f } \of{ x , y } = g \of{ f \of{ x , y } } = g \of{ y , x } = \of{ x , y } = \id_{ X \times Y } \of{ x , y }
+        </md>
+        
+        and
+        
+        <md>
+          \of{ f \circ g } \of{ y , x } = f \of{ g \of{ y , x } } = f \of{ x , y } = \of{ y , x } = \id_{ Y \times X } \of{ y , x }
+        </md>
+        
+        for all elements <m> x \in X </m> and <m> y \in Y </m>, and so <m> g \circ f = \id_{ X \times Y } </m> and <m> f \circ g = \id_{ Y \times X } </m>; that is, <m> f </m> and <m> g </m> are inverses, and therefore bijections by <xref ref="corollary-invertibility"/>.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that there is a bijection between <m> \of{ X \times Y } \times Z </m> and <m> X \times \of{ Y \times Z } </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Consider the maps <m> f \colon \of{ X \times Y } \times Z \to X \times \of{ Y \times Z } </m> and <m> g \colon X \times \of{ Y \times Z } \to \of{ X \times Y } \times Z </m> defined by the formulae <m> f \of{ \of{ x , y } , z } = \of{ x , \of{ y , z } } </m> and <m> g \of{ x , \of{ y , z } } = \of{ \of{ x , y } , z } </m>. We observe that
+        
+        <md>
+          <mrow>
+            \of{ g \circ f } \of{ \of{ x , y } , z } \amp = g \of{ f \of{ \of{ x , y } , z } } = g \of{ x , \of{ y , z } }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ \of{ x , y } , z } = \id_{ \of{ X \times Y } \times Z } \of{ \of{ x , y } , z }
+          </mrow>
+        </md>
+        
+        and
+        
+        <md>
+          <mrow>
+            \of{ f \circ g } \of{ x , \of{ y , z } } \amp = f \of{ g \of{ x , \of{ y , z } } } = f \of{ \of{ x , y } , z }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ x , \of{ y , z } } = \id_{ X \times \of{ Y \times Z } } \of{ x , \of{ y , z } }
+          </mrow>
+        </md>
+        
+        for all elements <m> x \in X </m>, <m> y \in Y </m>, and <m> z \in Z </m>, and so <m> g \circ f = \id_{ \of{ X \times Y } \times Z } </m> and <m> f \circ g = \id_{ X \times \of{ Y \times Z } } </m>; that is, <m> f </m> and <m> g </m> are inverses, and therefore bijections by <xref ref="corollary-invertibility"/>.
+      </p>
+    </solution>
+  </task>
+  
+  <conclusion>
+    <p>
+      While the sets <m> X \times Y </m> and <m> Y \times X </m> and the sets <m> \of{ X \times Y } \times Z </m> and <m> X \times \of{ Y \times Z } </m> are not equal, they may safely be identified via these bijections.
+    </p>
+  </conclusion>
+</exercise>

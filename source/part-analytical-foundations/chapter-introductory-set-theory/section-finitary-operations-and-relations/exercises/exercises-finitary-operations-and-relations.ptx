@@ -11,7 +11,11 @@
     </p>
   </introduction>
   
-  <!-- <xi:include href="./exercise-TITLE.ptx"/> -->
+  <xi:include href="./exercise-indexed-cartesian-products.ptx"/>
+  
+  <xi:include href="./exercise-exponentiation-of-natural-numbers.ptx"/>
+  
+  <xi:include href="./exercise-equivalence-classes.ptx"/>
 
   <conclusion>
     <p>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="exercise-indexed-cartesian-products" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Indexed Cartesian products
+  </title>
+  
+  <introduction>
+    <p>
+      Let <m> U_{ 1 } = \set{ 1 , 2 } </m>, <m> U_{ 2 } = \set{ 1 , 2 , 3 } </m>, and <m> U_{ 3 } = \set{ 0 , 1 } </m>, and consider the Cartesian product <m> U = \prod_{ k = 1 }^{ 3 }{ U_{ k } } </m>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Write down the Cartesian product <m> U = \prod_{ k = 1 }^{ 3 }{ U_{ k } } </m> in roster notation.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        We have
+        
+        <md>
+          U = \set{ \of{ 1 , 1 , 0 } , \of{ 1 , 1 , 1 } , \of{ 1 , 2 , 0 } , \of{ 1 , 2 , 1 } , \of{ 1 , 3 , 0 } , \of{ 1 , 3 , 1 } , \of{ 2 , 1 , 0 } , \of{ 2 , 1 , 1 } , \of{ 2 , 2 , 0 } , \of{ 2 , 2 , 1 } , \of{ 2 , 3 , 0 } , \of{ 2 , 3 , 1 } } }
+        </md>.
+      </p>
+    </answer>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        For each index <m> k \in \set{ 1 , 2 , 3 } </m>, let <m> \pi_{ k } \colon U \to U_{ k } </m> be the projection map onto the <m> k </m>th factor. Compute <m> \pi_{ 1 } \of{ 1 , 3 , 0 } </m>, <m> \pi_{ 2 } \of{ 1 , 1 , 1 } </m>, and <m> \pi_{ 3 } \of{ 2 , 2 , 1 } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        We have
+        
+        <md>
+          <mrow>
+            \pi_{ 1 } \of{ 2 , 3 , 0 } \amp = 2 \amp \pi_{ 2 } \of{ 1 , 1 , 1 } \amp = 1 \amp \pi_{ 3 } \of{ 2 , 2 , 0 } \amp = 0
+          </mrow>
+        </md>.
+      </p>
+    </answer>
+  </task>
+</exercise>

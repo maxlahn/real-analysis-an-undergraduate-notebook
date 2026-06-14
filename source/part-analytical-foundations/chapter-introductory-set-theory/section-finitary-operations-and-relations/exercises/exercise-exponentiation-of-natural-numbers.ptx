@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="exercise-exponentiation-of-natural-numbers" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Exponentiation of natural numbers
+  </title>
+  
+  <introduction>
+    <p>
+      Let <m> e \colon \N^{ 2 } \to \N </m> be the <term> exponentiation </term> operation defined by the formula
+      
+      <md>
+        e \of{ m , n } = m^{ n }
+      </md>;
+      
+      that is, <m> e </m> is defined recursively by the formulae <m> e \of{ m , 0 } = 1 </m> and <m> e \of{ m , n + 1 } = e^{ m , n } \cdot m </m>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Compute <m> e \of{ 1 , 2 } </m> and <m> e \of{ 2 , 1 } </m>. Is exponentiation a commutative binary operation?
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> e \of{ 1 , 2 } = 1^{ 2 } = 1 </m> and <m> e \of{ 2 , 1 } = 2^{ 1 } = 2 </m>. Since <m> e \of{ 1 , 2 } \neq e \of{ 2 , 1 } </m>, exponentiation is non-commutative.
+      </p>
+    </answer>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Compute <m> e \of{ e \of{ 2 , 1 } , 2 } </m> and <m> e \of{ 2 , e \of{ 1 , 2 } } </m>. Is exponentiation an associative binary operation?
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        We compute
+        
+        <md>
+          e \of{ e \of{ 2 , 1 } , 2 } = e \of{ 2^{ 1 } , 2 } = e \of{ 2 , 2 } = 2^{ 2 } = 4
+        </md>
+        
+        and
+        
+        <md>
+          e \of{ 2 , e \of{ 1 , 2 } } = e \of{ 2 , 1^{ 2 } } = e \of{ 2 , 1 } = 2^{ 1 } = 2
+        </md>.
+        
+        Since <m> e \of{ e \of{ 2 , 1 } , 2 } \neq e \of{ 2 , e \of{ 1 , 2 } } </m>, exponentiation is non-associative.
+      </p>
+    </answer>
+  </task>
+</exercise>

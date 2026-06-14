@@ -7,7 +7,7 @@
 
   <introduction>
     <p>
-      In this section, we formally introduce the natural number system <m> \N </m>. Also called the counting numbers, the natural numbers form the simplest of the number systems; in fact, many people would date the advent of mathematics itself to the invention/discovery of these numbers.
+      In this section, we formally introduce the <term> natural number system </term> <m> \N </m>. Also called the <term> counting numbers </term> and the <term> whole numbers </term>, the natural numbers form the simplest of the number systems; in fact, many people would date the advent of mathematics itself to the invention/discovery of these numbers.
     </p>
   </introduction>
 
@@ -19,7 +19,7 @@
 
   <conclusion>
     <p>
-      In the next sections, we will generalize the properties of addition and multiplication and the order-theoretic properties of comparison of natural numbers and arrive at fundamental notions of binar operations and relations, partial and total orders, and the well-ordering principle.
+      In the next sections, we will generalize the properties of addition and multiplication and the order-theoretic properties of comparison of natural numbers and arrive at fundamental notions of <term> finitary operations </term> and <term> relations </term>, <term> partial </term> and <term> total orders </term>, and the <xref ref="theorem-well-ordering-principle" text="title"/>.
     </p>
   </conclusion>
 

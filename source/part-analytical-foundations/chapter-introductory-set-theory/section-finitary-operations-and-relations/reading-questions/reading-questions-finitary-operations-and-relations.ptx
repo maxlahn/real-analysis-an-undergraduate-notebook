@@ -11,7 +11,13 @@
     </p>
   </introduction>
   
-  <!-- <xi:include href="./problem-TITLE.ptx"/> -->
+  <xi:include href="./reading-question-revisiting-commutativity-associativity-of-cartesian-products.ptx"/>
+  
+  <xi:include href="./reading-question-cross-products.ptx"/>
+  
+  <xi:include href="./reading-question-generating-equivalence-relations.ptx"/>
+  
+  <xi:include href="./reading-question-universal-property-of-quotients.ptx"/>
 
   <conclusion>
     <p>

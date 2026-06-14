@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-equivalence-classes" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Equivalence classes
+  </title>
+  
+  <introduction>
+    <p>
+      Let <m> X = \set{ 0 , 1 , 2 , 3 , \dotsc , 10 } </m>. Write down all the equivalence classes for the given equivalence relation on <m> X </m> in roster notation.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Consider the equivalence relation <m> F </m> on <m> X </m> defined by the condition that for all <m> x , y \in X </m>, <m> x \mathrel{ F } y </m> if and only if the English words for <m> x </m> and <m> y </m> start with the same letter. Write down the equivalence classes in roster notation.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The equivalence classes are
+        
+        <md>
+          <mrow>
+            \class{ 0 }_{ F } \amp = \set{ 0 }
+          </mrow>
+          
+          <mrow>
+            \class{ 1 }_{ F } \amp = \set{ 1 }
+          </mrow>
+          
+          <mrow>
+            \class{ 2 }_{ F } = \class{ 3 }_{ F } = \class{ 10 }_{ F } \amp = \set{ 2 , 3 , 10 }
+          </mrow>
+          
+          <mrow>
+            \class{ 4 }_{ F } = \class{ 5 }_{ F } \amp = \set{ 4 , 5 }
+          </mrow>
+          
+          <mrow>
+            \class{ 6 }_{ F } = \class{ 7 }_{ F } \amp = \set{ 6 , 7 }
+          </mrow>
+          
+          <mrow>
+            \class{ 8 }_{ F } \amp = \set{ 8 }
+          </mrow>
+          
+          <mrow>
+            \class{ 8 }_{ F } \amp = \set{ 8 }
+          </mrow>
+        </md>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        <m> 0 </m> is the only element of <m> X </m> beginning with Z, and so
+        
+        <md>
+          \class{ 0 }_{ F } = \set{ 0 }
+        </md>.
+        
+        <m> 1 </m> is the only element of <m> X </m> beginning with O, and so
+        
+        <md>
+          \class{ 1 }_{ F } = \set{ 1 }
+        </md>.
+        
+        <m> 2 </m>, <m> 3 </m>, and <m> 10 </m> are the only elements of <m> X </m> beginning with T, and so
+        
+        <md>
+          \class{ 2 }_{ F } = \class{ 3 }_{ F } = \class{ 10 }_{ F } = \set{ 2 , 3 , 10 }
+        </md>.
+        
+        <m> 4 </m> and <m> 5 </m> are the only elements of <m> X </m> beginning with F, and so
+        
+        <md>
+          \class{ 4 }_{ F } = \class{ 5 }_{ F } = \set{ 4 , 5 }
+        </md>.
+        
+        <m> 6 </m> and <m> 7 </m> are the only elements of <m> X </m> beginning with S, and so
+        
+        <md>
+          \class{ 6 }_{ F } = \class{ 7 }_{ F } = \set{ 6 , 7 }
+        </md>.
+        
+        <m> 8 </m> is the only element of <m> X </m> beginning with E, and so
+        
+        <md>
+          \class{ 8 }_{ F } = \set{ 8 }
+        </md>.
+        
+        Finally, <m> 9 </m> is the only element of <m> X </m> beginning with N, and so
+        
+        <md>
+          \class{ 9 }_{ F } = \set{ 9 }
+        </md>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Consider the equivalence relation <m> L </m> on <m> X </m> defined by the condition that for all <m> x , y \in X </m>, <m> x \mathrel{ L } y </m> if and only if the English words for <m> x </m> and <m> y </m> end with the same letter. Write down all the equivalence classes in roster notation.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The equivalence classes are
+        
+        <md>
+          <mrow>
+            \class{ 0 }_{ L } = \class{ 2 }_{ L } \amp = \set{ 0 , 2 }
+          </mrow>
+          
+          <mrow>
+            \class{ 1 }_{ L } = \class{ 3 }_{ L } = \class{ 5 }_{ L } = \class{ 9 }_{ L } \amp = \set{ 1 , 3 , 5 , 9 }
+          </mrow>
+          
+          <mrow>
+            \class{ 4 }_{ L } = \amp = \set{ 4 }
+          </mrow>
+          
+          <mrow>
+            \class{ 6 }_{ L } = \amp = \set{ 6 }
+          </mrow>
+          
+          <mrow>
+            \class{ 7 }_{ L } = \class{ 10 }_{ L } \amp = \set{ 7 , 10 }
+          </mrow>
+          
+          <mrow>
+            \class{ 8 }_{ L } \amp = \set{ 8 }
+          </mrow>
+        </md>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        <m> 0 </m> and <m> 2 </m> are the only elements of <m> X </m> ending with O, and so
+        
+        <md>
+          \class{ 0 }_{ L } = \class{ 2 }_{ L } = \set{ 0 , 2 }
+        </md>.
+        
+        <m> 1 </m>, <m> 3 </m>, <m> 5 </m>, and <m> 9 </m> are the only elements of <m> X </m> ending with E, and so
+        
+        <md>
+          \class{ 1 }_{ L } = \class{ 3 }_{ L } = \class{ 5 }_{ L } = \class{ 9 }_{ L } = \set{ 1 , 3 , 5 , 9 }
+        </md>.
+        
+        <m> 4 </m> is the only element of <m> X </m> ending with R, and so
+        
+        <md>
+          \class{ 4 }_{ L } = \set{ 4 }
+        </md>.
+        
+        <m> 6 </m> is the only element of <m> X </m> ending with X, and so
+        
+        <md>
+          \class{ 6 }_{ L } = \set{ 6 }
+        </md>.
+        
+        <m> 7 </m> and <m> 10 </m> are the only elements of <m> X </m> ending with N, and so
+        
+        <md>
+          \class{ 7 }_{ L } = \class{ 10 }_{ L } = \set{ 7 , 10 }
+        </md>.
+        
+        <m> 8 </m> is the only element of <m> X </m> ending with T, and so
+        
+        <md>
+          \class{ 8 }_{ L } = \set{ 8 }
+        </md>.
+      </p>
+    </solution>
+  </exercise>
+</exercisegroup>

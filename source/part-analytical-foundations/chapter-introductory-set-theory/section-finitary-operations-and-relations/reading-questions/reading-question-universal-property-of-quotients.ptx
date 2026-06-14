@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="reading-question-universal-property-of-quotients" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Universal property of quotients
+  </title>
+  
+  <statement>
+    <p>
+      Let <m> \equiv </m> be an equivalence relation on a set <m> X </m>. A map <m> f \colon X \to Y </m> from <m> X </m> to a set <m> Y </m> is called <m> \equiv </m>-<term> invariant </term> if for all elements <m> x_{ 1 } , x_{ 2 } \in X </m>, if <m> x_{ 1 } \equiv x_{ 2 } </m>, then <m> f \of{ x_{ 1 } } = f \of{ x_{ 2 } } </m>.
+    </p>
+    
+    <p>
+      Prove that for every <m> \equiv </m>-invariant map <m> f \colon X \to Y </m>, there is a map <m> \overline{ f } \colon X / { \equiv } \to Y </m> so that <m> \overline{ f } \circ \pi_{ \equiv } = f </m>.
+    </p>
+  </statement>
+  
+  <solution>
+    <p>
+      Let <m> x_{ 1 } , x_{ 2 } \in X </m>, and suppose that <m> \class{ x_{ 1 } }_{ \equiv } = \class{ x_{ 2 } }_{ \equiv } </m>. Then <m> x_{ 1 } \equiv x_{ 2 } </m>, and so <m> f \of{ x_{ 1 } } = f \of{ x_{ 2 } } </m>. We conclude that the map <m> \overline{ f } \colon X / { \equiv } \to Y </m> defined by the formula
+      
+      <md>
+        \overline{ f } \of{ \class{ x }_{ \equiv } } = f \of{ x }
+      </md>
+      
+      is well-defined. Moreover, we note that
+      
+      <md>
+        \of{ \overline{ f } \circ \pi_{ \equiv } } \of{ x } = \overline{ f } \of{ \pi_{ \equiv } \of{ x } } = \overline{ f } \of{ \class{ x }_{ \equiv } } = f \of{ x }
+      </md>
+      
+      for all inputs <m> x \in X </m>, and so <m> \overline{ f } \circ \pi_{ \equiv } = f </m>.
+    </p>
+  </solution>
+</exercise>

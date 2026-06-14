@@ -7,7 +7,7 @@
 
   <introduction>
     <p>
-      There are many nonequivalent formalizations and models of the natural number system, but the standard axiomatization is due to Giuseppe Peano in the 19th century. Peano arithmetic is nonconstructive; it gives a description of the natural number system but not a model. We won't introduce any specific model of the natural number system, but, rest assured, there are several. For our purposes, <m> \N </m> itself can be any set which conforms to the following characterization:
+      There are many nonequivalent formalizations and models of the natural number system, but the standard axiomatization is due to Giuseppe Peano in the 19th century. <term> Peano arithmetic </term> is <term> non-constructive </term>; it gives a description of the natural number system but not a model. We won't introduce any specific model of the natural number system, but, rest assured, there are several. For our purposes, <m> \N </m> itself can be any set which conforms to the following characterization:
     </p>
   </introduction>
   
@@ -90,7 +90,7 @@
     
     <notation>
       <usage>
-        <m> \Comp </m>
+        <m> L </m>
       </usage>
       
       <description>
@@ -102,18 +102,18 @@
     
     <statement>
       <p>
-        The <term> natural number system </term> <m> \N </m> is a nonempty set with an element <m> 0 \in \N </m>, called <term> zero </term>, along with functions <m> \Succ \colon \N \to \N </m> and <m> \Add , \Mult \colon \N \times \N \to \N </m>, called the <term> successor function </term> and the <term> addition </term> and <term> multiplication operations </term> and a subset <m> \Comp \subseteq \N \times \N </m> of the Cartesian product <m> \N \times \N </m> of <m> \N </m> with itself, called the <term> standard ordering </term>, which satisfy the following properties:
+        The <term> natural number system </term> <m> \N </m> is a nonempty set with an element <m> 0 \in \N </m>, called <term> zero </term>, along with functions <m> \Succ \colon \N \to \N </m> and <m> \Add , \Mult \colon \N \times \N \to \N </m>, called the <term> successor function </term> and the <term> addition </term> and <term> multiplication operations </term> and a subset <m> L \subseteq \N \times \N </m> of the Cartesian product <m> \N \times \N </m> of <m> \N </m> with itself, called the <term> standard ordering </term>, which satisfy the following properties:
         
         <ol>
           <li>
             <p>
-              The successor <m> \Succ \of{ n } </m> of any natural number <m> n \in \N </m> is non-zero.
+              The <term> successor </term> <m> \Succ \of{ n } </m> of any natural number <m> n \in \N </m> is non-zero; that is <m> \Succ \of{ n } \neq 0 </m> for all natural numbers <m> n \in \N </m>.
             </p>
           </li>
           
           <li>
             <p>
-              The successor function <m> \Succ \colon \N \to \N </m> is injective.
+              The successor function <m> \Succ \colon \N \to \N </m> is injective; that is, for all natural numbers <m> m , n \in \N </m>, if <m> \Succ \of{ m } = \Succ \of{ n } </m>, then <m> m = n </m>.
             </p>
           </li>
           
@@ -143,11 +143,15 @@
           
           <li>
             <p>
-              For all natural numbers <m> l , m \in \N </m>, <m> \of{ l , m } \in \Comp </m> if and only if <m> \Add \of{ l , n } = m </m> for some natural number <m> n \in \N </m>.
+              For all natural numbers <m> l , m \in \N </m>, <m> \of{ l , m } \in L </m> if and only if <m> \Add \of{ l , n } = m </m> for some natural number <m> n \in \N </m>.
             </p>
           </li>
           
           <li>
+            <title>
+              Axiom of induction
+            </title>
+            
             <p>
               For all subsets <m> U \subseteq \N </m>, <m> U = \N </m> if and only if it satisfies the following conditions:
               
@@ -168,7 +172,7 @@
           </li>
         </ol>
         
-        Typically, for all natural numbers <m> m , n \in \N </m> we write <m> m + n = \Add \of{ m , n } </m> and <m> m n = m \cdot n = \Mult \of{ m , n } </m>, and we write <m> m \leq n </m> if and only if <m> \of{ m , n } \in \Comp </m>. The successor of <m> 0 </m> is denoted <m> 1 = \Succ \of{ 0 } </m>. Likewise, the successor of <m> 1 </m> is denoted <m> 2 = \Succ \of{ 1 } </m>, the successor of <m> 2 </m> is denoted <m> 3 = \Succ \of{ 2 } </m>, and so on. We see that
+        Typically, for all natural numbers <m> m , n \in \N </m> we write <m> m + n = \Add \of{ m , n } </m> and <m> m n = m \cdot n = \Mult \of{ m , n } </m>, and we write <m> m \leq n </m> if and only if <m> \of{ m , n } \in L </m>. The successor of <m> 0 </m> is denoted <m> 1 = \Succ \of{ 0 } </m>. Likewise, the successor of <m> 1 </m> is denoted <m> 2 = \Succ \of{ 1 } </m>, the successor of <m> 2 </m> is denoted <m> 3 = \Succ \of{ 2 } </m>, and so on. We see that
         
         <md>
           \Succ \of{ n } = \Succ \of{ \Add \of{ n , 0 } } = \Add \of{ n , \Succ \of{ 0 } } = n + 1
@@ -230,7 +234,11 @@
                   </p>
                 </li>
                 
-                <li>
+                <li>  
+                  <title>
+                    Axiom of induction
+                  </title>
+                  
                   <p>
                     For all natural numbers <m> n \in \N </m>, if <m> n \in U </m>, then <m> n + 1 \in U </m>.
                   </p>
@@ -244,7 +252,7 @@
   </definition>
   
   <p>
-    Under the usual (and original) interpretation of the natural number system <m> \N </m> as characterizing quantities of discrete physical objects, the above rules (with the possible exception of the final axiom, called the <term> axiom of induction </term>) may seem obviously true but also somewhat arbitrary. It is a fact, though we will not prove it here, that these axioms are independent of each other; it is impossible to derive one of the above statements from only the others. We hope that this, along with the results in this section about arithmetic, convince you that the above axiomatization is a good choice, in that it is efficient in the above sense and that it can be used to prove many arithmetical truths.
+    Under the usual (and original) interpretation of the natural number system <m> \N </m> as characterizing quantities of discrete physical objects, the above rules (with the possible exception of the axiom of induction) may seem obviously true but also somewhat arbitrary. It is a fact, though we will not prove it here, that these axioms are independent of each other; it is impossible to derive one of the above statements from only the others. We hope that this, along with the results in this section about arithmetic, convince you that the above axiomatization is a good choice, in that it is efficient in the above sense and that it can be used to prove many arithmetical truths.
   </p>
   
   <p>
