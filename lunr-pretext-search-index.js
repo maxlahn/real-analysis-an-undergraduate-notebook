@@ -16,7 +16,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "What Is a Set?",
-  "body": " What Is a Set?   set  element       is an element of         is not an element of    Since the early 20th century, the practice of mathematics has undergone a radical transformation, which grew out of the idea that the whole of the mathematical canon can and should be rephrased in the language of set theory. Informally, a set is a collection of objects, which are called its elements . If an object is an element of a set , then we write ; otherwise, if is not an element of , then we write .    Definitions of Sets   You may complain that the terms collection and object are vague and undefined, and you would be right to object; the above characterization of sets is definitely not as rigorous as we might desire, and is in fact internally inconsistent.  However, the technical difficulties associated with building a rigorous and internally consistent set theory are outside the scope of this course and in this context, far more trouble than they are worth. In fact, it's entirely possible that such an internally consistent set theory does not exist!  As such, we will leave this ambiguity in favor of moving on to more salient topics. Even though we will not encounter any such issues in this text, the definition above does lead to some interesting inconsistencies. We will explore one such contradiction, called , shortly. First, however, we introduce some shorthand notation which will be useful in specifying sets we wish to discuss.    Roster notation  roster notation  It's easy to completely describe a set which contains only a finite number of elements; we can simply write those elements down! Concretely, if is the set whose elements are precisely the objects , then we may write The above notation for specifying sets is called roster notation . Not all sets are finite, however, and it is obviously impossible to write down a complete roster of all of the elements of an infinite set. Therefore, we cannot generalize roster notation to sets which contain infinitely many elements.    Definable collection  definable collection  Let be a unary Boolean predicate (a statement whose truth value depends on a single variable ). The collection of objects which satisfy is said to be defined by , and is denoted . Such a collection of objects which satisfy such a Boolean predicate is called a definable collection . We will see that the collection of objects that satisfy a given Boolean predicate is not necessarily a set; this is the content of Russell's paradox.    Sets  empty set      the empty set   The following are examples of sets:   The empty set , denoted or , is the set with no elements; that is, for all objects .    The set is a non-empty set with only finitely many elements. Note that this set contains different types of objects. In general, we will not place any explicit restrictions on the types of objects allowed inside a set, although some formalizations of axiomatic set theories rely on this to avoid inconsistencies such as Russell's paradox.    The set of natural numbers (also sometimes called the whole numbers or counting numbers ) is a non-empty set with infinitely many elements. We will characterize the natural numbers in the usual manner of Peano arithmetic later in this chapter.       naïve set theory As we mentioned before, the set theory based on the definition above, which is called naïve set theory , is in fact inconsistent; taking this definition as the basis for an axiomatic system, we can derive a contradiction, which implies that we may in fact derive all possible statements, including those which are false! This inconsistency was first demonstrated by Bertrand Russell at the beginning of the 20th century, and bears his name.   Russell's paradox   Not all definable collections are sets.    By contradiction. Let be the definable collection of sets which do not contain themselves, and suppose for a contradiction that is a set. The question of whether or not contains itself is a natural one; however, we will see that both the positive and negative answers lead to contradictions.  This is because, if , then by the definition of . On the other hand, if , then by the same reasoning. Therefore, if and only if . This contradiction implies that is not a set, as desired.     Russell's paradox tells us that naïve set theory is inconsistent. However, as we stated before, it is no easy task to construct a consistent set theory which is strong enough to describe the sophisticated structures we wish to investigate while also weak enough to be internally consistent. However, since the question of whether modern formal set theories are consistent is beyond the scope of this text. With this in mind, we will continue formulating definitions and results in the language of naïve set theory, keeping in mind that rigorous systems of formal set theory (which do not suffer from Russell's paradox) exist in which they can be expressed and proven.     Set Containment   As we have just seen, not all definable collections of mathematical objects are sets. However, any collection of objects which themselves belong to a set is also a set in its own right; such a set of elements of a given set is called a subset.    Subset; superset  subset  superset  set containment  proper subset  proper superset  strict set containment   A set is a subset of a set if for all elements . In this case, we say that is contained in , and we write . Less commonly, we may call a superset of if is a subset of . In this case, we say that  contains  , and we write .  Also, a set is a proper subset of a set if but . In this case, we say that is strictly contained in , and we write . Analogously, is a proper superset of if is a proper subset of . In this case, we say that  strictly contains  , and we write .     Set equality  set equality   Two sets are considered equal if they contain exactly the same elements; that is, one set is equal to another set when objects are elements of if and only if they are elements of . This occurs precisely when both and .     Examples of subsets  The following are examples of subsets of sets:   For any set , the empty set and itself are subsets of .    The set of odd natural numbers is a proper subset of the set of natural numbers. Written more concisely, .       Transitivity of set containment   For any sets , , and , if and , then .    Suppose that and , and let . Since and , . Moreover, since and , .  In summary, we have shown that for all . We conclude that .     Set-builder notation  set-builder notation  Although not all definable collections are sets, any definable subcollection of a set is itself a set; that is, given a set and a unary Boolean predicate , the definable collection is a set (and in fact a subset of ). This subset will also be denoted in set-builder notation by .    Power set   The power set of a set is the set of subsets of ; this set is denoted , so that .     Power sets are non-empty   The power set of any set is non-empty; that is, .    Fix a set , and note that the statement for all is vacuously true, so that . Thus , and so is non-empty.    Fix a set , and note that the statement for all is a tautology, so that . Thus , and so is non-empty.     Analysis of the proofs of   constructive proof  non-constructive proof  Both of the above proofs of are correct, although they are nonequivalent. Both are valuable for different reasons; the first proof shows that the power set of a set is nonempty since the empty set $ \\emptyset $ is a subset of any set, and the second proof shows the same conclusion since any set is a subset of itself. These proofs are called constructive , in that they explicitly exhibited an object satisfied the desired properties (being an element of the power set of a given set). Proofs which are not constructive are called non-constructive .    In general, sets are likely to have many subsets, so that power sets of sets are likely to have a great many elements. We will investigate the notion of the number of elements of a set, called its cardinality , more precisely and in far greater depth at the end of this chapter.     Set Operations   conjunction  disjunction  negation       and         or        not    Test reference   We now introduce several ways to construct new sets from old ones which loosely correspond to the logical operators of conjunction  , disjunction  , and negation  , pronounced and , or and not , respectively.    Intersection; union; complement  intersection  union  complement      the intersection of and        the union of and        the complement of in     The intersection  of two sets and is the set whose elements are both elements of and elements of ; that is, . The union  of and is the set whose elements are either elements of or elements of ; that is, . The complement  of in is the set whose elements are elements of but not elements of ; that is, .     Set operations and containment   Fix sets , , and .    if and only if and .     if and only if and .     if and only if and .         First suppose that . Since , implies that . Similarly, since , implies that .  Conversely, now suppose that and , and let . Since and , . Similarly, since and , . Since and , we conclude that . In summary, we have shown that for all , so that .    First suppose that . Since , implies that . Similarly, since , implies that .  Conversely, now suppose that and . Let , so that or . If , then , since . Similarly, if , then , since . We conclude that . In summary, we have shown that for all , so that .    First suppose that , and let . Since and , , so that and . In summary, we have shown that for all , so that . Moreover, we have shown that for all , so that no element of is an element of ; that is, .  Conversely, now suppose that and , and let . Since and , . Moreover, since and , . Since and , we conclude that . In summary, we have shown that for all , and so .       Properties of the set operations   Fix sets , , and .    , and .     Commutativity : and .     Associativity : and .         Since , and by (1) and (2) of , respectively. Of course , so that .  Similarly, since and , by (2) of . Of course , and so .   , and so . Moreover, together with the observation that , this implies by (1) of that . Of course, , and so .  Similarly, , and so .  Finally, note that any element of is both an element of and not an element of , so that no such element can exist. Thus .    Since and , (1) of implies that . By symmetry, , so that .  Similarly, since and , (2) of implies that . By symmetry, , so that .    We note that , so that by (1) of . Similarly, , so that by another application of (1) of .  Conversely, we note that , so that by (1) of . Similarly, , so that by another application of (1) of . Thus .       In the next section, we will generalize the first two ways ( intersection and union ) to arbitrary sets of sets; this generalization will mirror the similarities between conjunction and universal quantification and between disjunction and existential quantification .     While sets and set theory form the foundations on which we will build our understanding of analysis, these topics are not the focus of this text. As such, we will leave behind the question of precise definitions of sets in favor of developing set-theoretic ideas which are more relevant to the world of analysis.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.    Power sets   Compute the power set of the set .    The power set of the set is the set .    Choosing a subset of the set is equivalent to making a unique sequence of three binary choices of whether to include each element , , and . We see that has the following subsets: , , , , , , , and . Therefore, the power set of the set is the set .     Set Operations   Compute the given set operations. Write your answer in roster or set-builder notation, or as a well-known set.     Compute , where is the set of even natural numbers and is the set of odd integers.     .    No natural number is both even and odd, and so .      Compute , where and .     .     contains all the elements of and all the elements of , so that .      Compute , where is the set of natural numbers divisible by , and is the set of even natural numbers.     .     contains all the odd multiples of , so that .      Short answers and\/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Reading Questions   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .    De Morgan's laws  De Morgan's laws   Let , , and be sets.     Prove that .    asdf      Prove that .    asdf     Taken together, these results are called De Morgan's laws .     The distributive properties of set operations  Distributive property   Let , , and be sets.     Prove that .    asdf      Prove that .    asdf     Taken together, these results are called the distributive properties of the set operations.     Power sets   Recall that the power set of a set is the set whose elements are all the subsets of .     Determine whether the following statement is true or false:  The power set of a set contains at least two distinct elements.  If the statement is true, prove it. If the statement is false, disprove it by providing a counterexample.    Revisit the proofs of .    asdf     Text after the parts.     Set operations and containment   Let and be sets.     Prove that if and only if .    Since , it suffices to show that if and only if . To that end, note that if , then (1) of implies that .  Conversely, we note that , so that if , then (1) of implies that .      Prove that if and only if .    Since , it suffices to show that if and only if . To that end, note that if , then (2) of implies that .  Conversely, we note that , so that if , then (2) of implies that .      Prove that if and only if .    First suppose that . Then for all , and so .  Conversely, now suppose that . Then , and so and . Since , . So is an element of but not ; we conclude that .      In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and\/or instructor rather than spoiling the answers.    "
+  "body": " What Is a Set?   set  element       is an element of         is not an element of    Since the early 20th century, the practice of mathematics has undergone a radical transformation, which grew out of the idea that the whole of the mathematical canon can and should be rephrased in the language of set theory. Informally, a set is a collection of objects, which are called its elements . If an object is an element of a set , then we write ; otherwise, if is not an element of , then we write .    Definitions of Sets   The careful reader may complain that the terms collection and object are vague and undefined, and they would be right to object; the above characterization of sets is definitely not as rigorous as we might desire, and is in fact internally inconsistent. However, the technical difficulties associated with building a rigorous and internally consistent set theory are outside the scope of this course and in this context, far more trouble than they are worth. In fact, it's entirely possible that such an internally consistent set theory does not exist!  As such, we will leave this ambiguity in favor of moving on to more salient topics. Even though we will not encounter any such issues in this text, the definition above does lead to some interesting inconsistencies. We will explore one such contradiction, called , shortly. First, however, we introduce some shorthand notation which will be useful in specifying sets we wish to discuss.    Roster notation  roster notation  It's easy to completely describe a set which contains only a finite number of elements; we can simply write a list of those elements down! Concretely, if is the set whose elements are precisely the objects , then we may write The above notation for specifying sets is called roster notation .  Not all sets are finite, however, and it is obviously impossible to write down a complete roster of all of the elements of an infinite set. We can carefully use ellipses to indicate a set with an infinite roster whose elements follow some discernible pattern. For example, we will see in that the set of natural numbers can be written . Unfortunately, this extension of roster notation still does not suffice for all sets. For example, we will see in that there is no such roster for the set of real numbers.    Definable collection  definable collection  Let be a unary Boolean predicate (a statement whose truth value depends on a single variable ). The collection of objects which satisfy is said to be defined by , and is denoted . Such a collection of objects which satisfy such a Boolean predicate is called a definable collection . We will see that the collection of objects that satisfy a given Boolean predicate is not necessarily a set; this is the content of .    Sets  empty set      the empty set   The following are examples of sets:   The empty set , denoted or , is the set with no elements; that is, for all objects .    The set is a non-empty set with only finitely many elements. Note that this set contains different types of objects. In general, we will not place any explicit restrictions on the types of objects allowed inside a set, although some formalizations of axiomatic set theories rely on this to avoid inconsistencies such as Russell's paradox.    The set of natural numbers (also sometimes called the whole numbers or counting numbers ) is a non-empty set with infinitely many elements. We will characterize the natural numbers in the usual manner of Peano arithmetic later in this chapter.       naïve set theory As we mentioned before, the set theory based on the definition above, which is called naïve set theory , is in fact inconsistent; taking this definition as the basis for an axiomatic system, we can derive a contradiction, which implies that we may in fact derive all possible statements, including those which are false! This inconsistency was first demonstrated by Bertrand Russell at the beginning of the 20th century, and bears his name.   Russell's paradox  Bertrand Russell   Not all definable collections are sets.    By contradiction. Let be the definable collection of sets which do not contain themselves, and suppose for a contradiction that is a set. The question of whether or not contains itself is a natural one; however, we will see that both the positive and negative answers lead to contradictions.  This is because, if , then by the definition of . On the other hand, if , then by the same reasoning. Therefore, if and only if . This contradiction implies that is not a set, as desired.      tells us that naïve set theory is inconsistent. However, as we stated before, it is no easy task to construct a consistent set theory which is strong enough to describe the sophisticated structures we wish to investigate while also weak enough to be internally consistent. However, since the question of whether modern formal set theories are consistent is beyond the scope of this text. With this in mind, we will continue formulating definitions and results in the language of naïve set theory, keeping in mind that rigorous systems of formal set theory (which do not suffer from ) exist in which they can be expressed and proven.     Set Containment   As we have just seen, not all definable collections of mathematical objects are sets. However, any collection of objects which themselves belong to a set is also a set in its own right; such a collection of elements of a given set is called a subset .    Set containment  subset  superset  set containment  proper subset  proper superset  strict set containment   A set is a subset of a set if for all objects , if , then . In this case, we say that is contained in , and we write . Less commonly, we may also call a superset of , say that contains , and write .  A set is a proper subset of a set if but . In this case, we say that is strictly contained in , and we write . Less commonly, we may also call a proper superset of , say that strictly contains , and write .     Set containment notation   Some authors use the symbols and in place of and to indicate set containment, and some authors use them in place of and to indicate strict set containment. We will avoid this ambiguity by opting not to write and at all.     Set equality  set equality   Two sets are considered equal if they contain exactly the same elements; that is, one set is equal to another set when objects are elements of if and only if they are elements of . This occurs precisely when both and .     Subsets  The following are examples of subsets of sets:   For any set , the empty set and itself are subsets of .    The set of odd natural numbers is a proper subset of the set of natural numbers. Written more concisely, .      An important property of the set containment relationship is its transitivity, which is the content of the following lemma:   Transitivity of set containment   For any sets , , and , if and , then .    Let . Since and , . Moreover, since and , . In summary, we have shown that for for all elements , and so .    Set containment is also useful for constructing new notations for specifying sets as definable collections. Crucially, although not all definable collections are sets, any definable subcollection of a set is itself a set.   Set-builder notation  set-builder notation  Given a set and a unary Boolean predicate , the definable collection is a set (and in fact a subset of ). This subset will also be denoted in set-builder notation by .   After learning about , the careful reader may have some trepidation about sets whose elements are themselves sets. However, not all such definable collections lead to contradictions. For example, the collection of all subsets of a given set also form a set.   Power set   The power set of a set is the set of all subsets of ; this set is denoted , so that .     Power sets are non-empty   The power set of any set is non-empty; that is, .    Fix a set , and note that the statement for all is vacuously true, so that . Thus , and so is non-empty.    Fix a set , and note that the statement for all is a tautology, so that . Thus , and so is non-empty.     Analysis of the proofs of   constructive proof  non-constructive proof  Both of the above proofs of are correct, although they are nonequivalent. Both are valuable for different reasons; the first proof shows that the power set of a set is nonempty since the empty set is a subset of any set, and the second proof shows the same conclusion since any set is a subset of itself. These proofs are called constructive , in that they explicitly exhibited an object satisfied the desired properties (being an element of the power set of a given set). Proofs which are not constructive are called non-constructive .    In general, sets are likely to have many subsets, so that power sets of sets are likely to have a great many elements. We will investigate the notion of the number of elements of a set, called its cardinality , more precisely and in far greater depth in at the end of this chapter.     Set Operations   conjunction  disjunction  negation       and         or        not    We now introduce several ways to construct new sets from old ones which loosely correspond to the logical operators of conjunction  , disjunction  , and negation  , pronounced and , or and not , respectively.    Set operations  intersection  union  complement      the intersection of and        the union of and        the complement of in     Let and be sets.   Intersection  The intersection  of two sets and is the set whose elements are both elements of and elements of ; that is, .    Union  The union  of two sets and is the set whose elements are either elements of and elements of (or both!); that is, .    Complement  The complement  of in is the set whose elements are elements of but not elements of ; that is, .       Informally, the intersection of two sets and is the largest set which is contained in both and ; the union of and is the smallest set which contains both and ; and the complement is the largest set which is contained in but disjoint from . These informal characterizations are formalized in the following result:   Set operations and containment   Let , , and be sets.    if and only if and .     if and only if and .     if and only if and .         First suppose that . Since , implies that . Similarly, since , implies that .  Conversely, now suppose that and , and let . Since and , . Similarly, since and , . Since and , we conclude that . In summary, we have shown that for all , so that .    First suppose that . Since , implies that . Similarly, since , implies that .  Conversely, now suppose that and . Let , so that or . If , then , since . Similarly, if , then , since . We conclude that . In summary, we have shown that for all , so that .    First suppose that , and let . Since and , , so that and . In summary, we have shown that for all , so that . Moreover, we have shown that for all , so that no element of is an element of ; that is, .  Conversely, now suppose that and , and let . Since and , . Moreover, since and , . Since and , we conclude that . In summary, we have shown that for all , and so .       Properties of the set operations       and for all sets .    Commutativity   and for all sets and .    Associativity   and for all sets , , and .         Since , and by (1) and (2) of , respectively. Of course , so that .  Similarly, since and , by (2) of . Of course , and so .   , and so . Moreover, together with the observation that , this implies by (1) of that . Of course, , and so .  Similarly, , and so .  Finally, note that any element of is both an element of and not an element of , so that no such element can exist. Thus .    Since and , (1) of implies that . By symmetry, , so that .  Similarly, since and , (2) of implies that . By symmetry, , so that .    We note that , so that by (1) of . Similarly, , so that by another application of (1) of .  Conversely, we note that , so that by (1) of . Similarly, , so that by another application of (1) of . Thus .       In in the next section, we will generalize the first two ways ( intersection and union ) of constructing sets to arbitrary sets of sets; this generalization will mirror the similarities between conjunction and universal quantification and between disjunction and existential quantification , respectively.     While sets and set theory form the foundations on which we will build our understanding of analysis, these topics are not the focus of this text. As such, we will leave behind the question of precise definitions of sets in favor of developing set-theoretic ideas which are more relevant to the world of analysis.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.    Elements of sets   Determine whether or not the given object is an element of the given set. Write your answer using the notation or .     Is an element of the set ?    Yes, .      Is an element of the set ?    No, .      Is an element of the set ?    If we interpret the roster notation as , then .      Is an element of the set ?    If we interpret the roster notation as , then .      Roster notation   Write down the specified set in roster notation.     Write down the set of even numbers between and in roster notation.     .      Write down the set of letters in your full name in roster notation.    The correct answer will differ depending on your full name. My full name is Max Lahn , and so I would answer .      Write down the set of colors in the rainbow in roster notation.    The correct answer will differ depending on what you consider to be separate colors. I would answer           Set containment   Let , , and be the sets defined by . Determine whether or not the stated set containment is true or false.     Is ?    No, .      Is ?    Yes, .    Yes,       Is ?    Yes, .    Yes,       Power sets   Write down the power sets of the given sets in roster notation.     Write down the power set of the set in roster notation.    The power set of the set is the set .    Choosing a subset of the set is equivalent to making a unique binary choices of whether or not to include the element . We see that has the following subsets: , and . Therefore, the power set of the set is the set .      Write down the power set of the set in roster notation.    The power set of the set is the set .    Choosing a subset of the set is equivalent to making a unique sequence of two binary choices of whether to include each element and . We see that has the following subsets: , , , and . Therefore, the power set of the set is the set .      Write down the power set of the set in roster notation.    The power set of the set is the set .    Choosing a subset of the set is equivalent to making a unique sequence of three binary choices of whether to include each element , , and . We see that has the following subsets: , , , , , , , and . Therefore, the power set of the set is the set .      Set Operations   Compute the given set operations. Write your answer in roster or set-builder notation, or as a well-known set.     Compute , where is the set of even natural numbers and is the set of odd integers.     .    No natural number is both even and odd, and so .      Compute , where and .     .     contains all the elements of and all the elements of , so that .      Compute , where is the set of natural numbers divisible by , and is the set of even natural numbers.     .     contains all the odd multiples of , so that .      Short answers and\/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Reading Questions   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .    The distributive properties of set operations  Distributive property    Prove that for all sets , , and .    Let . Then and , and so or . If , then , and so . On the other hand, if , then , and so .  In summary, we have shown that for all elements , and so .  Conversely, now let . Then or . If , then and . In particular, , and so .  In summary, we have shown that for all , and so ; we now conclude that .      Prove that for all sets , , and .    Let . Then or . If , then and , and so . On the other hand, if , then and . In this case, and , and so .  In summary, we have shown that for all elements , and so .  Conversely, now let . Then and . In particular, if , then and , and so . We conclude that .  In summary, we have shown that for all , and so ; we now conclude that .     Taken together, these results are called the distributive properties of the set operations.     De Morgan's laws  De Morgan's laws    Prove that for all sets , , and .    First let . Then and . We want to show that or . To that end, suppose that . Since , we must have .  But , and so ; that is, . Since if , then , we conclude that .  Conversely, now let , so that or . If , then and , so that . We conclude that .  In summary, we have shown that if and only if . We conclude that .      Prove that .    First let . Then and . If , then , and so ; we conclude that . Similarly, if , then , and so ; we conclude that . Thus .  Conversely, now let , so that and . Thus , , and . If , then or , and so ; we conclude that .  In summary, we have shown that if and only if . We conclude that .     Taken together, these results are called De Morgan's laws .     Power sets   Determine whether the following statement is true or false:  The power set of a set contains at least two distinct elements.  If the statement is true, prove it. If the statement is false, disprove it by providing a counterexample.    Revisit the proofs of .    The statement is false. For a counterexample, we consider the empty set . The only subset of the empty set is itself.     Set operations and containment   Let and be sets.     Prove that if and only if .    Since , it suffices to show that if and only if . To that end, note that if , then (1) of implies that .  Conversely, we note that , so that if , then (1) of implies that .      Prove that if and only if .    Since , it suffices to show that if and only if . To that end, note that if , then (2) of implies that .  Conversely, we note that , so that if , then (2) of implies that .      Prove that if and only if .    First suppose that . Then for all , and so .  Conversely, now suppose that . Then , and so and . Since , . So is an element of but not ; we conclude that .      In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and\/or instructor rather than spoiling the answers.    "
 },
 {
   "id": "section-what-is-a-set-2-5",
@@ -34,7 +34,7 @@ var ptx_lunr_docs = [
   "type": "Convention",
   "number": "1.1.1",
   "title": "Roster notation.",
-  "body": " Roster notation  roster notation  It's easy to completely describe a set which contains only a finite number of elements; we can simply write those elements down! Concretely, if is the set whose elements are precisely the objects , then we may write The above notation for specifying sets is called roster notation . Not all sets are finite, however, and it is obviously impossible to write down a complete roster of all of the elements of an infinite set. Therefore, we cannot generalize roster notation to sets which contain infinitely many elements.  "
+  "body": " Roster notation  roster notation  It's easy to completely describe a set which contains only a finite number of elements; we can simply write a list of those elements down! Concretely, if is the set whose elements are precisely the objects , then we may write The above notation for specifying sets is called roster notation .  Not all sets are finite, however, and it is obviously impossible to write down a complete roster of all of the elements of an infinite set. We can carefully use ellipses to indicate a set with an infinite roster whose elements follow some discernible pattern. For example, we will see in that the set of natural numbers can be written . Unfortunately, this extension of roster notation still does not suffice for all sets. For example, we will see in that there is no such roster for the set of real numbers.  "
 },
 {
   "id": "definition-definable-collection",
@@ -43,7 +43,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "1.1.2",
   "title": "Definable collection.",
-  "body": " Definable collection  definable collection  Let be a unary Boolean predicate (a statement whose truth value depends on a single variable ). The collection of objects which satisfy is said to be defined by , and is denoted . Such a collection of objects which satisfy such a Boolean predicate is called a definable collection . We will see that the collection of objects that satisfy a given Boolean predicate is not necessarily a set; this is the content of Russell's paradox.  "
+  "body": " Definable collection  definable collection  Let be a unary Boolean predicate (a statement whose truth value depends on a single variable ). The collection of objects which satisfy is said to be defined by , and is denoted . Such a collection of objects which satisfy such a Boolean predicate is called a definable collection . We will see that the collection of objects that satisfy a given Boolean predicate is not necessarily a set; this is the content of .  "
 },
 {
   "id": "example-sets",
@@ -70,68 +70,86 @@ var ptx_lunr_docs = [
   "type": "Proposition",
   "number": "1.1.4",
   "title": "Russell’s paradox.",
-  "body": " Russell's paradox   Not all definable collections are sets.    By contradiction. Let be the definable collection of sets which do not contain themselves, and suppose for a contradiction that is a set. The question of whether or not contains itself is a natural one; however, we will see that both the positive and negative answers lead to contradictions.  This is because, if , then by the definition of . On the other hand, if , then by the same reasoning. Therefore, if and only if . This contradiction implies that is not a set, as desired.   "
+  "body": " Russell's paradox  Bertrand Russell   Not all definable collections are sets.    By contradiction. Let be the definable collection of sets which do not contain themselves, and suppose for a contradiction that is a set. The question of whether or not contains itself is a natural one; however, we will see that both the positive and negative answers lead to contradictions.  This is because, if , then by the definition of . On the other hand, if , then by the same reasoning. Therefore, if and only if . This contradiction implies that is not a set, as desired.   "
 },
 {
-  "id": "definition-subset-superset",
+  "id": "subsection-set-containment-2-1",
   "level": "2",
-  "url": "section-what-is-a-set.html#definition-subset-superset",
+  "url": "section-what-is-a-set.html#subsection-set-containment-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "subset "
+},
+{
+  "id": "definition-set-containment",
+  "level": "2",
+  "url": "section-what-is-a-set.html#definition-set-containment",
   "type": "Definition",
   "number": "1.1.5",
-  "title": "Subset; superset.",
-  "body": " Subset; superset  subset  superset  set containment  proper subset  proper superset  strict set containment   A set is a subset of a set if for all elements . In this case, we say that is contained in , and we write . Less commonly, we may call a superset of if is a subset of . In this case, we say that  contains  , and we write .  Also, a set is a proper subset of a set if but . In this case, we say that is strictly contained in , and we write . Analogously, is a proper superset of if is a proper subset of . In this case, we say that  strictly contains  , and we write .   "
+  "title": "Set containment.",
+  "body": " Set containment  subset  superset  set containment  proper subset  proper superset  strict set containment   A set is a subset of a set if for all objects , if , then . In this case, we say that is contained in , and we write . Less commonly, we may also call a superset of , say that contains , and write .  A set is a proper subset of a set if but . In this case, we say that is strictly contained in , and we write . Less commonly, we may also call a proper superset of , say that strictly contains , and write .   "
+},
+{
+  "id": "convention-set-containment-notation",
+  "level": "2",
+  "url": "section-what-is-a-set.html#convention-set-containment-notation",
+  "type": "Convention",
+  "number": "1.1.6",
+  "title": "Set containment notation.",
+  "body": " Set containment notation   Some authors use the symbols and in place of and to indicate set containment, and some authors use them in place of and to indicate strict set containment. We will avoid this ambiguity by opting not to write and at all.   "
 },
 {
   "id": "definition-set-equality",
   "level": "2",
   "url": "section-what-is-a-set.html#definition-set-equality",
   "type": "Definition",
-  "number": "1.1.6",
+  "number": "1.1.7",
   "title": "Set equality.",
   "body": " Set equality  set equality   Two sets are considered equal if they contain exactly the same elements; that is, one set is equal to another set when objects are elements of if and only if they are elements of . This occurs precisely when both and .   "
 },
 {
-  "id": "example-examples-of-subsets",
+  "id": "example-subsets",
   "level": "2",
-  "url": "section-what-is-a-set.html#example-examples-of-subsets",
+  "url": "section-what-is-a-set.html#example-subsets",
   "type": "Example",
-  "number": "1.1.7",
-  "title": "Examples of subsets.",
-  "body": " Examples of subsets  The following are examples of subsets of sets:   For any set , the empty set and itself are subsets of .    The set of odd natural numbers is a proper subset of the set of natural numbers. Written more concisely, .     "
+  "number": "1.1.8",
+  "title": "Subsets.",
+  "body": " Subsets  The following are examples of subsets of sets:   For any set , the empty set and itself are subsets of .    The set of odd natural numbers is a proper subset of the set of natural numbers. Written more concisely, .     "
 },
 {
   "id": "lemma-transitivity-of-set-containment",
   "level": "2",
   "url": "section-what-is-a-set.html#lemma-transitivity-of-set-containment",
   "type": "Lemma",
-  "number": "1.1.8",
+  "number": "1.1.9",
   "title": "Transitivity of set containment.",
-  "body": " Transitivity of set containment   For any sets , , and , if and , then .    Suppose that and , and let . Since and , . Moreover, since and , .  In summary, we have shown that for all . We conclude that .   "
+  "body": " Transitivity of set containment   For any sets , , and , if and , then .    Let . Since and , . Moreover, since and , . In summary, we have shown that for for all elements , and so .   "
 },
 {
   "id": "convention-set-builder-notation",
   "level": "2",
   "url": "section-what-is-a-set.html#convention-set-builder-notation",
   "type": "Convention",
-  "number": "1.1.9",
+  "number": "1.1.10",
   "title": "Set-builder notation.",
-  "body": " Set-builder notation  set-builder notation  Although not all definable collections are sets, any definable subcollection of a set is itself a set; that is, given a set and a unary Boolean predicate , the definable collection is a set (and in fact a subset of ). This subset will also be denoted in set-builder notation by .  "
+  "body": " Set-builder notation  set-builder notation  Given a set and a unary Boolean predicate , the definable collection is a set (and in fact a subset of ). This subset will also be denoted in set-builder notation by .  "
 },
 {
   "id": "definition-power-set",
   "level": "2",
   "url": "section-what-is-a-set.html#definition-power-set",
   "type": "Definition",
-  "number": "1.1.10",
+  "number": "1.1.11",
   "title": "Power set.",
-  "body": " Power set   The power set of a set is the set of subsets of ; this set is denoted , so that .   "
+  "body": " Power set   The power set of a set is the set of all subsets of ; this set is denoted , so that .   "
 },
 {
   "id": "lemma-power-sets-are-non-empty",
   "level": "2",
   "url": "section-what-is-a-set.html#lemma-power-sets-are-non-empty",
   "type": "Lemma",
-  "number": "1.1.11",
+  "number": "1.1.12",
   "title": "Power sets are non-empty.",
   "body": " Power sets are non-empty   The power set of any set is non-empty; that is, .    Fix a set , and note that the statement for all is vacuously true, so that . Thus , and so is non-empty.    Fix a set , and note that the statement for all is a tautology, so that . Thus , and so is non-empty.   "
 },
@@ -140,99 +158,225 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-what-is-a-set.html#insight-analysis-of-the-proofs-of-lemma-power-sets-are-non-empty",
   "type": "Insight",
-  "number": "1.1.12",
-  "title": "Analysis of the proofs of Lemma 1.1.11.",
-  "body": " Analysis of the proofs of   constructive proof  non-constructive proof  Both of the above proofs of are correct, although they are nonequivalent. Both are valuable for different reasons; the first proof shows that the power set of a set is nonempty since the empty set $ \\emptyset $ is a subset of any set, and the second proof shows the same conclusion since any set is a subset of itself. These proofs are called constructive , in that they explicitly exhibited an object satisfied the desired properties (being an element of the power set of a given set). Proofs which are not constructive are called non-constructive .  "
+  "number": "1.1.13",
+  "title": "Analysis of the proofs of Lemma 1.1.12.",
+  "body": " Analysis of the proofs of   constructive proof  non-constructive proof  Both of the above proofs of are correct, although they are nonequivalent. Both are valuable for different reasons; the first proof shows that the power set of a set is nonempty since the empty set is a subset of any set, and the second proof shows the same conclusion since any set is a subset of itself. These proofs are called constructive , in that they explicitly exhibited an object satisfied the desired properties (being an element of the power set of a given set). Proofs which are not constructive are called non-constructive .  "
 },
 {
-  "id": "subsection-set-containment-11-1",
+  "id": "subsection-set-containment-15-1",
   "level": "2",
-  "url": "section-what-is-a-set.html#subsection-set-containment-11-1",
+  "url": "section-what-is-a-set.html#subsection-set-containment-15-1",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "cardinality "
 },
 {
-  "id": "subsection-set-operations-2-8",
+  "id": "subsection-set-operations-2-7",
   "level": "2",
-  "url": "section-what-is-a-set.html#subsection-set-operations-2-8",
+  "url": "section-what-is-a-set.html#subsection-set-operations-2-7",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "conjunction disjunction negation "
 },
 {
-  "id": "definition-intersection",
+  "id": "definition-set-operations",
   "level": "2",
-  "url": "section-what-is-a-set.html#definition-intersection",
+  "url": "section-what-is-a-set.html#definition-set-operations",
   "type": "Definition",
-  "number": "1.1.13",
-  "title": "Intersection; union; complement.",
-  "body": " Intersection; union; complement  intersection  union  complement      the intersection of and        the union of and        the complement of in     The intersection  of two sets and is the set whose elements are both elements of and elements of ; that is, . The union  of and is the set whose elements are either elements of or elements of ; that is, . The complement  of in is the set whose elements are elements of but not elements of ; that is, .   "
+  "number": "1.1.14",
+  "title": "Set operations.",
+  "body": " Set operations  intersection  union  complement      the intersection of and        the union of and        the complement of in     Let and be sets.   Intersection  The intersection  of two sets and is the set whose elements are both elements of and elements of ; that is, .    Union  The union  of two sets and is the set whose elements are either elements of and elements of (or both!); that is, .    Complement  The complement  of in is the set whose elements are elements of but not elements of ; that is, .      "
 },
 {
   "id": "proposition-set-operations-and-containment",
   "level": "2",
   "url": "section-what-is-a-set.html#proposition-set-operations-and-containment",
   "type": "Proposition",
-  "number": "1.1.14",
+  "number": "1.1.15",
   "title": "Set operations and containment.",
-  "body": " Set operations and containment   Fix sets , , and .    if and only if and .     if and only if and .     if and only if and .         First suppose that . Since , implies that . Similarly, since , implies that .  Conversely, now suppose that and , and let . Since and , . Similarly, since and , . Since and , we conclude that . In summary, we have shown that for all , so that .    First suppose that . Since , implies that . Similarly, since , implies that .  Conversely, now suppose that and . Let , so that or . If , then , since . Similarly, if , then , since . We conclude that . In summary, we have shown that for all , so that .    First suppose that , and let . Since and , , so that and . In summary, we have shown that for all , so that . Moreover, we have shown that for all , so that no element of is an element of ; that is, .  Conversely, now suppose that and , and let . Since and , . Moreover, since and , . Since and , we conclude that . In summary, we have shown that for all , and so .     "
+  "body": " Set operations and containment   Let , , and be sets.    if and only if and .     if and only if and .     if and only if and .         First suppose that . Since , implies that . Similarly, since , implies that .  Conversely, now suppose that and , and let . Since and , . Similarly, since and , . Since and , we conclude that . In summary, we have shown that for all , so that .    First suppose that . Since , implies that . Similarly, since , implies that .  Conversely, now suppose that and . Let , so that or . If , then , since . Similarly, if , then , since . We conclude that . In summary, we have shown that for all , so that .    First suppose that , and let . Since and , , so that and . In summary, we have shown that for all , so that . Moreover, we have shown that for all , so that no element of is an element of ; that is, .  Conversely, now suppose that and , and let . Since and , . Moreover, since and , . Since and , we conclude that . In summary, we have shown that for all , and so .     "
 },
 {
   "id": "corollary-properties-of-the-set-operations",
   "level": "2",
   "url": "section-what-is-a-set.html#corollary-properties-of-the-set-operations",
   "type": "Corollary",
-  "number": "1.1.15",
+  "number": "1.1.16",
   "title": "Properties of the set operations.",
-  "body": " Properties of the set operations   Fix sets , , and .    , and .     Commutativity : and .     Associativity : and .         Since , and by (1) and (2) of , respectively. Of course , so that .  Similarly, since and , by (2) of . Of course , and so .   , and so . Moreover, together with the observation that , this implies by (1) of that . Of course, , and so .  Similarly, , and so .  Finally, note that any element of is both an element of and not an element of , so that no such element can exist. Thus .    Since and , (1) of implies that . By symmetry, , so that .  Similarly, since and , (2) of implies that . By symmetry, , so that .    We note that , so that by (1) of . Similarly, , so that by another application of (1) of .  Conversely, we note that , so that by (1) of . Similarly, , so that by another application of (1) of . Thus .     "
+  "body": " Properties of the set operations       and for all sets .    Commutativity   and for all sets and .    Associativity   and for all sets , , and .         Since , and by (1) and (2) of , respectively. Of course , so that .  Similarly, since and , by (2) of . Of course , and so .   , and so . Moreover, together with the observation that , this implies by (1) of that . Of course, , and so .  Similarly, , and so .  Finally, note that any element of is both an element of and not an element of , so that no such element can exist. Thus .    Since and , (1) of implies that . By symmetry, , so that .  Similarly, since and , (2) of implies that . By symmetry, , so that .    We note that , so that by (1) of . Similarly, , so that by another application of (1) of .  Conversely, we note that , so that by (1) of . Similarly, , so that by another application of (1) of . Thus .     "
 },
 {
-  "id": "subsection-set-operations-6-1",
+  "id": "subsection-set-operations-7-1",
   "level": "2",
-  "url": "section-what-is-a-set.html#subsection-set-operations-6-1",
+  "url": "section-what-is-a-set.html#subsection-set-operations-7-1",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "intersection union "
 },
 {
-  "id": "exercises-power-sets",
+  "id": "exercise-elements-of-sets-3",
   "level": "2",
-  "url": "section-what-is-a-set.html#exercises-power-sets",
+  "url": "section-what-is-a-set.html#exercise-elements-of-sets-3",
   "type": "Exercise",
   "number": "1.1.4.1",
-  "title": "Power sets.",
-  "body": " Power sets   Compute the power set of the set .    The power set of the set is the set .    Choosing a subset of the set is equivalent to making a unique sequence of three binary choices of whether to include each element , , and . We see that has the following subsets: , , , , , , , and . Therefore, the power set of the set is the set .   "
+  "title": "",
+  "body": "  Is an element of the set ?    Yes, .   "
 },
 {
-  "id": "exercise-set-operations",
+  "id": "exercise-elements-of-sets-4",
   "level": "2",
-  "url": "section-what-is-a-set.html#exercise-set-operations",
+  "url": "section-what-is-a-set.html#exercise-elements-of-sets-4",
   "type": "Exercise",
   "number": "1.1.4.2",
-  "title": "Set Operations.",
-  "body": " Set Operations   Compute the given set operations. Write your answer in roster or set-builder notation, or as a well-known set.     Compute , where is the set of even natural numbers and is the set of odd integers.     .    No natural number is both even and odd, and so .      Compute , where and .     .     contains all the elements of and all the elements of , so that .      Compute , where is the set of natural numbers divisible by , and is the set of even natural numbers.     .     contains all the odd multiples of , so that .    "
+  "title": "",
+  "body": "  Is an element of the set ?    No, .   "
 },
 {
-  "id": "reading-question-de-morgans-laws",
+  "id": "exercise-elements-of-sets-5",
   "level": "2",
-  "url": "section-what-is-a-set.html#reading-question-de-morgans-laws",
-  "type": "Reading Question",
-  "number": "1.1.5.1",
-  "title": "De Morgan’s laws.",
-  "body": " De Morgan's laws  De Morgan's laws   Let , , and be sets.     Prove that .    asdf      Prove that .    asdf     Taken together, these results are called De Morgan's laws .   "
+  "url": "section-what-is-a-set.html#exercise-elements-of-sets-5",
+  "type": "Exercise",
+  "number": "1.1.4.3",
+  "title": "",
+  "body": "  Is an element of the set ?    If we interpret the roster notation as , then .   "
+},
+{
+  "id": "exercise-elements-of-sets-6",
+  "level": "2",
+  "url": "section-what-is-a-set.html#exercise-elements-of-sets-6",
+  "type": "Exercise",
+  "number": "1.1.4.4",
+  "title": "",
+  "body": "  Is an element of the set ?    If we interpret the roster notation as , then .   "
+},
+{
+  "id": "exercise-roster-notation-3",
+  "level": "2",
+  "url": "section-what-is-a-set.html#exercise-roster-notation-3",
+  "type": "Exercise",
+  "number": "1.1.4.5",
+  "title": "",
+  "body": "  Write down the set of even numbers between and in roster notation.     .   "
+},
+{
+  "id": "exercise-roster-notation-4",
+  "level": "2",
+  "url": "section-what-is-a-set.html#exercise-roster-notation-4",
+  "type": "Exercise",
+  "number": "1.1.4.6",
+  "title": "",
+  "body": "  Write down the set of letters in your full name in roster notation.    The correct answer will differ depending on your full name. My full name is Max Lahn , and so I would answer .   "
+},
+{
+  "id": "exercise-roster-notation-5",
+  "level": "2",
+  "url": "section-what-is-a-set.html#exercise-roster-notation-5",
+  "type": "Exercise",
+  "number": "1.1.4.7",
+  "title": "",
+  "body": "  Write down the set of colors in the rainbow in roster notation.    The correct answer will differ depending on what you consider to be separate colors. I would answer    "
+},
+{
+  "id": "exercise-set-containment-3",
+  "level": "2",
+  "url": "section-what-is-a-set.html#exercise-set-containment-3",
+  "type": "Exercise",
+  "number": "1.1.4.8",
+  "title": "",
+  "body": "  Is ?    No, .   "
+},
+{
+  "id": "exercise-set-containment-4",
+  "level": "2",
+  "url": "section-what-is-a-set.html#exercise-set-containment-4",
+  "type": "Exercise",
+  "number": "1.1.4.9",
+  "title": "",
+  "body": "  Is ?    Yes, .    Yes,    "
+},
+{
+  "id": "exercise-set-containment-5",
+  "level": "2",
+  "url": "section-what-is-a-set.html#exercise-set-containment-5",
+  "type": "Exercise",
+  "number": "1.1.4.10",
+  "title": "",
+  "body": "  Is ?    Yes, .    Yes,    "
+},
+{
+  "id": "exercises-power-sets-3",
+  "level": "2",
+  "url": "section-what-is-a-set.html#exercises-power-sets-3",
+  "type": "Exercise",
+  "number": "1.1.4.11",
+  "title": "",
+  "body": "  Write down the power set of the set in roster notation.    The power set of the set is the set .    Choosing a subset of the set is equivalent to making a unique binary choices of whether or not to include the element . We see that has the following subsets: , and . Therefore, the power set of the set is the set .   "
+},
+{
+  "id": "exercises-power-sets-4",
+  "level": "2",
+  "url": "section-what-is-a-set.html#exercises-power-sets-4",
+  "type": "Exercise",
+  "number": "1.1.4.12",
+  "title": "",
+  "body": "  Write down the power set of the set in roster notation.    The power set of the set is the set .    Choosing a subset of the set is equivalent to making a unique sequence of two binary choices of whether to include each element and . We see that has the following subsets: , , , and . Therefore, the power set of the set is the set .   "
+},
+{
+  "id": "exercises-power-sets-5",
+  "level": "2",
+  "url": "section-what-is-a-set.html#exercises-power-sets-5",
+  "type": "Exercise",
+  "number": "1.1.4.13",
+  "title": "",
+  "body": "  Write down the power set of the set in roster notation.    The power set of the set is the set .    Choosing a subset of the set is equivalent to making a unique sequence of three binary choices of whether to include each element , , and . We see that has the following subsets: , , , , , , , and . Therefore, the power set of the set is the set .   "
+},
+{
+  "id": "exercise-set-operations-3",
+  "level": "2",
+  "url": "section-what-is-a-set.html#exercise-set-operations-3",
+  "type": "Exercise",
+  "number": "1.1.4.14",
+  "title": "",
+  "body": "  Compute , where is the set of even natural numbers and is the set of odd integers.     .    No natural number is both even and odd, and so .   "
+},
+{
+  "id": "exercise-set-operations-4",
+  "level": "2",
+  "url": "section-what-is-a-set.html#exercise-set-operations-4",
+  "type": "Exercise",
+  "number": "1.1.4.15",
+  "title": "",
+  "body": "  Compute , where and .     .     contains all the elements of and all the elements of , so that .   "
+},
+{
+  "id": "exercise-set-operations-5",
+  "level": "2",
+  "url": "section-what-is-a-set.html#exercise-set-operations-5",
+  "type": "Exercise",
+  "number": "1.1.4.16",
+  "title": "",
+  "body": "  Compute , where is the set of natural numbers divisible by , and is the set of even natural numbers.     .     contains all the odd multiples of , so that .   "
 },
 {
   "id": "reading-question-distributivity-of-set-operations",
   "level": "2",
   "url": "section-what-is-a-set.html#reading-question-distributivity-of-set-operations",
   "type": "Reading Question",
-  "number": "1.1.5.2",
+  "number": "1.1.5.1",
   "title": "The distributive properties of set operations.",
-  "body": " The distributive properties of set operations  Distributive property   Let , , and be sets.     Prove that .    asdf      Prove that .    asdf     Taken together, these results are called the distributive properties of the set operations.   "
+  "body": " The distributive properties of set operations  Distributive property    Prove that for all sets , , and .    Let . Then and , and so or . If , then , and so . On the other hand, if , then , and so .  In summary, we have shown that for all elements , and so .  Conversely, now let . Then or . If , then and . In particular, , and so .  In summary, we have shown that for all , and so ; we now conclude that .      Prove that for all sets , , and .    Let . Then or . If , then and , and so . On the other hand, if , then and . In this case, and , and so .  In summary, we have shown that for all elements , and so .  Conversely, now let . Then and . In particular, if , then and , and so . We conclude that .  In summary, we have shown that for all , and so ; we now conclude that .     Taken together, these results are called the distributive properties of the set operations.   "
+},
+{
+  "id": "reading-question-de-morgans-laws",
+  "level": "2",
+  "url": "section-what-is-a-set.html#reading-question-de-morgans-laws",
+  "type": "Reading Question",
+  "number": "1.1.5.2",
+  "title": "De Morgan’s laws.",
+  "body": " De Morgan's laws  De Morgan's laws    Prove that for all sets , , and .    First let . Then and . We want to show that or . To that end, suppose that . Since , we must have .  But , and so ; that is, . Since if , then , we conclude that .  Conversely, now let , so that or . If , then and , so that . We conclude that .  In summary, we have shown that if and only if . We conclude that .      Prove that .    First let . Then and . If , then , and so ; we conclude that . Similarly, if , then , and so ; we conclude that . Thus .  Conversely, now let , so that and . Thus , , and . If , then or , and so ; we conclude that .  In summary, we have shown that if and only if . We conclude that .     Taken together, these results are called De Morgan's laws .   "
 },
 {
   "id": "reading-question-power-sets",
@@ -241,7 +385,7 @@ var ptx_lunr_docs = [
   "type": "Reading Question",
   "number": "1.1.5.3",
   "title": "Power sets.",
-  "body": " Power sets   Recall that the power set of a set is the set whose elements are all the subsets of .     Determine whether the following statement is true or false:  The power set of a set contains at least two distinct elements.  If the statement is true, prove it. If the statement is false, disprove it by providing a counterexample.    Revisit the proofs of .    asdf     Text after the parts.   "
+  "body": " Power sets   Determine whether the following statement is true or false:  The power set of a set contains at least two distinct elements.  If the statement is true, prove it. If the statement is false, disprove it by providing a counterexample.    Revisit the proofs of .    The statement is false. For a counterexample, we consider the empty set . The only subset of the empty set is itself.   "
 },
 {
   "id": "reading-question-set-operations-and-containment",
