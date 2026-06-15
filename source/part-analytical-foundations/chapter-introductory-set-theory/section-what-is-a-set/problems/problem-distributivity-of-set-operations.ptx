@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-distributivity-of-set-operations" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    The distributive properties of set operations
+  </title>
+  
+  <idx>
+    Distributive property
+  </idx>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that <m> S \cap \of{ T \cup U } = \of{ S \cap T } \cup \of{ S \cap U } </m> for all sets <m> S </m>, <m> T </m>, and <m> U </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Let <m> x \in S \cap \of{ T \cup U } </m>. Then <m> x \in S </m> and <m> x \in T \cup U </m>, and so <m> x \in T </m> or <m> x \in U </m>. If <m> x \in T </m>, then <m> x \in S \cap T </m>, and so <m> x \in \of{ S \cap T } \cup \of{ S \cap U } </m>. On the other hand, if <m> x \in U </m>, then <m> x \in S \cap U </m>, and so <m> x \in \of{ S \cap T } \cup \of{ S \cap U } </m>.
+      </p>
+      
+      <p>
+        In summary, we have shown that <m> x \in \of{ S \cap T } \cup \of{ S \cap U } </m> for all elements <m> x \in S \cap \of{ T \cup U } </m>, and so
+        
+        <md>
+          S \cap \of{ T \cup U } \subseteq \of{ S \cap T } \cup \of{ S \cap U }
+        </md>.
+      </p>
+      
+      <p>
+        Conversely, now let <m> x \in \of{ S \cap T } \cup \of{ S \cap U } </m>. Then <m> x \in S \cap T </m> or <m> x \in S \cap U </m>. If <m> x \in S \cap T </m>, then <m> x \in S </m> and <m> x \in T </m>. In particular, <m> x \in T \cup U </m>, and so <m> x \in S \cap \of{ T \cup U } </m>.
+      </p>
+      
+      <p>
+        In summary, we have shown that <m> x \in S \cap \of{ T \cup U } </m> for all <m> x \in \of{ S \cap T } \cup \of{ S \cap U } </m>, and so
+        
+        <md>
+          \of{ S \cap T } \cup \of{ S \cap U } \subseteq S \cap \of{ T \cup U }
+        </md>;
+        
+        we now conclude that <m> S \cap \of{ T \cup U } = \of{ S \cap T } \cup \of{ S \cap U } </m>.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that <m> S \cup \of{ T \cap U } = \of{ S \cup T } \cap \of{ S \cup U } </m> for all sets <m> S </m>, <m> T </m>, and <m> U </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Let <m> x \in S \cup \of{ T \cap U } </m>. Then <m> x \in S </m> or <m> x \in T \cap U </m>. If <m> x \in S </m>, then <m> x \in S \cup T </m> and <m> x \in S \cup U </m>, and so <m> x \in \of{ S \cup T } \cap \of{ S \cup U } </m>. On the other hand, if <m> x \in T \cap U </m>, then <m> x \in T </m> and <m> x \in U </m>. In this case, <m> x \in S \cup T </m> and <m> x \in S \cup U </m>, and so <m> x \in \of{ S \cup T } \cap \of{ S \cup U } </m>.
+      </p>
+      
+      <p>
+        In summary, we have shown that <m> x \in \of{ S \cup T } \cap \of{ S \cup U } </m> for all elements <m> x \in S \cup \of{ T \cap U } </m>, and so
+        
+        <md>
+          S \cup \of{ T \cap U } \subseteq \of{ S \cup T } \cap \of{ S \cup U }
+        </md>.
+      </p>
+      
+      <p>
+        Conversely, now let <m> x \in \of{ S \cup T } \cap \of{ S \cup U } </m>. Then <m> x \in S \cup T </m> and <m> x \in S \cup U </m>. In particular, if <m> x \notin S </m>, then <m> x \in T </m> and <m> x \in U </m>, and so <m> x \in T \cap U </m>. We conclude that <m> x \in S \cup \of{ T \cap U } </m>.
+      </p>
+      
+      <p>
+        In summary, we have shown that <m> x \in S \cup \of{ T \cap U } </m> for all <m> x \in \of{ S \cup T } \cap \of{ S \cup U } </m>, and so
+        
+        <md>
+          \of{ S \cup T } \cap \of{ S \cup U } \subseteq S \cup \of{ T \cap U }
+        </md>;
+        
+        we now conclude that <m> S \cup \of{ T \cap U } = \of{ S \cup T } \cap \of{ S \cup U } </m>.
+      </p>
+    </solution>
+  </task>
+  
+  <conclusion>
+    <p>
+      Taken together, these results are called the <term> distributive properties </term> of the set operations.
+    </p>
+  </conclusion>
+</exercise>

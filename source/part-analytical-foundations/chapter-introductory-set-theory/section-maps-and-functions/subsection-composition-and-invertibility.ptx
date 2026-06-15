@@ -354,7 +354,7 @@
   </example>
   
   <p>
-    It is no accident that the examples for left- and right- invertibility coincided with the examples for injectivity and surjectivity. It turns out that injectivity is essentially equivalent to left-invertibility, and surjectivity is equivalent to right-invertibility. This is the content of the following theorem, whose proof relies heavily on <xref ref="reading-question-composition-and-injectivity-surjectivity-bijectivity"/>.
+    It is no accident that the examples for left- and right- invertibility coincided with the examples for injectivity and surjectivity. It turns out that injectivity is essentially equivalent to left-invertibility, and surjectivity is equivalent to right-invertibility. This is the content of the following theorem, whose proof relies heavily on <xref ref="problem-composition-and-injectivity-surjectivity-bijectivity"/>.
   </p>
   
   <theorem xml:id="theorem-invertibility">
@@ -392,7 +392,7 @@
       <ol>
         <li>
           <p>
-            Suppose that <m> f </m> is left-invertible, so that <m> g \circ f = \id_{ X } </m> for some map <m> g \colon Y \to X </m>. That <m> f </m> is injective follows from the injectivity of the identity map <m> \id_{ X } </m> and (d) of <xref ref="reading-question-composition-and-injectivity-surjectivity-bijectivity"/>.
+            Suppose that <m> f </m> is left-invertible, so that <m> g \circ f = \id_{ X } </m> for some map <m> g \colon Y \to X </m>. That <m> f </m> is injective follows from the injectivity of the identity map <m> \id_{ X } </m> and (d) of <xref ref="problem-composition-and-injectivity-surjectivity-bijectivity"/>.
           </p>
         </li>
         
@@ -414,7 +414,7 @@
         
         <li>
           <p>
-            Finally, suppose that <m> f </m> is right-invertible, so that <m> f \circ g = \id_{ Y } </m> for some map <m> g \colon Y \to X </m>. That <m> f </m> is surjective follows from the surjectivity of the identity map <m> \id_{ Y } </m> and (e) of <xref ref="reading-question-composition-and-injectivity-surjectivity-bijectivity"/>.
+            Finally, suppose that <m> f </m> is right-invertible, so that <m> f \circ g = \id_{ Y } </m> for some map <m> g \colon Y \to X </m>. That <m> f </m> is surjective follows from the surjectivity of the identity map <m> \id_{ Y } </m> and (e) of <xref ref="problem-composition-and-injectivity-surjectivity-bijectivity"/>.
           </p>
         </li>
       </ol>

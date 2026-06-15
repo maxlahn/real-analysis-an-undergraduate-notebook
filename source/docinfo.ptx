@@ -506,8 +506,7 @@
     \usetikzlibrary{decorations.markings}
   </latex-image-preamble>
 
-  <!-- It is possible to rename elements: -->
-  <!-- <rename element="readingquestion" xml:lang="en-US">Problem</rename> -->
+  <rename element="readingquestion" xml:lang="en-US">Problem</rename>
 
   <cross-references text="type-global-title"/>
 </docinfo>

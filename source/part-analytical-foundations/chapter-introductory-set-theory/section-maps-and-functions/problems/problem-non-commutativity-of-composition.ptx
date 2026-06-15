@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-non-commutativity-of-composition" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Non-commutativity of composition
+  </title>
+  
+  <task>
+    <statement>
+      <p>
+        Give examples of maps <m> f </m> and <m> g </m> so that the composition <m> g \circ f </m> is well-defined but the composition <m> f \circ g </m> is not.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Let <m> X = \set{ 0 } </m>, <m> Y = \set{ 1 } </m>, and <m> Z = \set{ 2 } </m>, and consider the maps <m> f \colon X \to Y </m> and <m> g \colon Y \to Z </m> defined by <m> f \of{ 0 } = 1 </m> and <m> g \of{ 1 } = 2 </m>.
+      </p>
+      
+      <p>
+        Since the codomain <m> Y </m> of <m> f </m> is the domain of <m> g </m>, the composition <m> g \circ f </m> is well-defined. However, since the codomain <m> Z </m> of <m> g </m> is not the domain <m> X </m> of <m> f </m>, the composition <m> f \circ g </m> is not well-defined.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Give examples of maps <m> f </m> and <m> g </m> so that the compositions <m> g \circ f </m> and <m> f \circ g </m> are well-defined but <m> g \circ f \neq f \circ g </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Let <m> X = \set{ 0 , 1 , 2 } </m>, and consider the maps <m> f , g \colon X \to X </m> from <m> X </m> to itself defined by
+        
+        <md>
+          <mrow>
+            f \of{ 0 } \amp = 1 \amp f \of{ 1 } \amp = 2 \amp f \of{ 2 } \amp = 0
+          </mrow>
+          
+          <mrow>
+            g \of{ 0 } \amp = 1 \amp g \of{ 1 } \amp = 0 \amp g \of{ 2 } \amp = 2
+          </mrow>
+        </md>
+        
+        Then
+        
+        <md>
+          <mrow>
+            \of{ g \circ f } \of{ 0 } \amp = g \of{ f \of{ 0 } } = g \of{ 1 } = 0
+          </mrow>
+          
+          <mrow>
+            \amp \neq 2 = f \of{ 1 } = f \of{ g \of{ 0 } } = \of{ f \circ g } \of{ 0 }
+          </mrow>
+        </md>,
+        
+        and so <m> g \circ f \neq f \circ g </m>.
+      </p>
+    </solution>
+  </task>
+</exercise>

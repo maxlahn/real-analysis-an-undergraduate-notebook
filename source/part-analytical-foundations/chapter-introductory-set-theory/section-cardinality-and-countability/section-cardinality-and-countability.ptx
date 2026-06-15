@@ -23,7 +23,7 @@
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-cardinality-and-countability.ptx"/>
+  <xi:include href="./exercises-cardinality-and-countability.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-cardinality-and-countability.ptx"/>
+  <xi:include href="./problems-cardinality-and-countability.ptx"/>
 </section>

@@ -191,7 +191,7 @@
             </title>
             
             <p>
-              Composition <m> \circ \colon \of{ X^{ X } }^{ 2 } \to X^{ X } </m> is an associative but non-commutative binary operation on the set <m> X^{ X } </m> of maps from a set <m> X </m> to itself by <xref ref="proposition-associativity-of-composition"/> and <xref ref="reading-question-non-commutativity-of-composition"/>.
+              Composition <m> \circ \colon \of{ X^{ X } }^{ 2 } \to X^{ X } </m> is an associative but non-commutative binary operation on the set <m> X^{ X } </m> of maps from a set <m> X </m> to itself by <xref ref="proposition-associativity-of-composition"/> and <xref ref="problem-non-commutativity-of-composition"/>.
             </p>
           </li>
           

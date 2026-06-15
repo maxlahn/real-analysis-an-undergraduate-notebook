@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-generating-equivalence-relations" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Generating equivalence relations
+  </title>
+  
+  <introduction>
+    <p>
+      Let <m> X </m> be a set.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that the intersection <m> R = \bigcap_{ j \in \mathcal{ J } }{ R_{ j } } </m> of any indexed family <m> \of{ R_{ j } }_{ j \in \mathcal{ J } } </m> of equivalence relations <m> R_{ j } </m> on <m> X </m> is an equivalence relation on <m> X </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Let <m> x \in X </m>. Since for each index <m> j \in \mathcal{ J } </m>, the equivalence relation <m> R_{ j } </m> is reflexive, we have <m> \of{ x , x } \in R_{ j } </m>. Thus
+        
+        <md>
+          \of{ x , x } \in \bigcap_{ j \in \mathcal{ J } }{ R_{ j } } = R
+        </md>,
+        
+        and so <m> R </m> is reflexive.
+      </p>
+      
+      <p>
+        Now let <m> x_{ 1 } , x_{ 2 } \in X </m>, and suppose that <m> \of{ x_{ 1 } , x_{ 2 } } \in R </m>. Then <m> \of{ x_{ 1 } , x_{ 2 } } \in R_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>, and so <m> \of{ x_{ 2 } , x_{ 1 } } \in R_{ j } </m> for all such indices by symmetry. Thus
+        
+        <md>
+          \of{ x_{ 2 } , x_{ 1 } } \in \bigcap_{ j \in \mathcal{ J } }{ R_{ j } } = R
+        </md>,
+        
+        and so <m> R </m> is symmetric.
+      </p>
+      
+      <p>
+        Finally, let <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in X </m>, and suppose that <m> \of{ x_{ 1 } , x_{ 2 } } , \of{ x_{ 2 } , x_{ 3 } } \in R </m>. Then <m> \of{ x_{ 1 } , x_{ 2 } } , \of{ x_{ 2 } , x_{ 3 } } \in R_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>, and so <m> \of{ x_{ 1 } , x_{ 3 } } \in R_{ j } </m> for all such indices by transitivity. Thus
+        
+        <md>
+          \of{ x_{ 1 } , x_{ 3 } } \in \bigcap_{ j \in \mathcal{ J } }{ R_{ j } } = R
+        </md>,
+        
+        and so <m> R </m> is transitive. Since <m> R </m> is reflexive, symmetric, and transitive, it is an equivalence relation on <m> X </m>.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <idx>
+      refinement
+    </idx>
+    
+    <idx>
+      generated equivalence relation
+    </idx>
+    
+    <statement>
+      <p>
+        Prove that for any binary relation <m> R </m> on <m> X </m>, there is a unique equivalence relation <m> S </m> on <m> X </m> which satisfies the following conditions:
+        
+        <ol>
+          <li>
+            <p>
+              <m> S </m> is a <term> refinement </term> of <m> R </m>; that is, <m> R \subseteq S </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              <m> S </m> is <term> coarser </term> than any equivalence relation which <term> refines </term> <m> R </m>; that is, <m> S \subseteq T </m> for any equivalence relation <m> T </m> on <m> X </m> so that <m> R \subseteq T </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Denote by <m> \mathcal{ T } </m> the set of equivalence relations on <m> X </m> which contain <m> R </m>, and let
+        
+        <md>
+          S = \bigcap_{ T \in \mathcal{ T } }{ T }
+        </md>.
+        
+        By (a) above, <m> S </m> is an equivalence relation on <m> X </m>. Since <m> R \subseteq T </m> for all <m> T \in \mathcal{ T } </m>, (a) of <xref ref="reading-question-indexed-intersections-and-unions"/> implies that <m> R \subseteq S </m>; that is, <m> S </m> satisfies condition (1). On the other hand, <m> S \subseteq T </m> for all <m> T \in \mathcal{ T } </m>, and so <m> S </m> satisfies condition (2).
+      </p>
+      
+      <p>
+        Uniqueness of <m> S </m> follows from the fact that <m> S \in \mathcal{ T } </m>; specifically, if an equivalence <m> T </m> satisfies condition (1), then <m> T \in \mathcal{ T } </m> and so <m> S \subseteq T </m>. If <m> T </m> also satisfies condition (2), then <m> T \subseteq S </m>, and so <m> T = S </m>.
+      </p>
+    </solution>
+  </task>
+  
+  <conclusion>
+    <p>
+      The unique equivalence relation on <m> X </m> constructed in (b) above is called the equivalence relation <term> generated </term> by <m> R </m>.
+    </p>
+  </conclusion>
+</exercise>

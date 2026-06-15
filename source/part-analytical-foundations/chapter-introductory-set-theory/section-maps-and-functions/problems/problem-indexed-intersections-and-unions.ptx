@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-indexed-intersections-and-unions" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Indexed intersections and unions
+  </title>
+  
+  <introduction>
+    <p>
+      Let <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> be a family of subsets <m> U_{ j } \subseteq X </m> of a set <m> X </m> indexed by a set <m> \mathcal{ J } </m>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that for any subset <m> V \subseteq X </m>,
+        
+        <md>
+          V \subseteq \bigcap_{ j \in \mathcal{ J } }{ U_{ j } }
+        </md>
+        
+        if and only if <m> V \subseteq U_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>, and
+        
+        <md>
+          \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } \subseteq V
+        </md>
+        
+        if and only if <m> U_{ j } \subseteq V </m> for all indices <m> j \in \mathcal{ J } </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        First suppose that <m> V \subseteq \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } </m>. Then for all <m> x \in V </m>,
+        
+        <md>
+          x \in \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \setmid{ x \in X }{ x \in U_{ j } \textrm{ for all } j \in \mathcal{ J } }
+        </md>,
+        
+        and so <m> x \in U_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>. Thus <m> V \subseteq U_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> V \subseteq U_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>, and let <m> x \in V </m>. Then <m> x \in U_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>, and so
+        
+        <md>
+          x \in \setmid{ x \in X }{ x \in U_{ j } \textrm{ for all } j \in \mathcal{ J } } = \bigcap_{ j \in \mathcal{ J } }{ U_{ j } }
+        </md>.
+        
+        We conclude that <m> V \subseteq \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } </m>.
+      </p>
+      
+      <p>
+        Now suppose that <m> \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } \subseteq V </m>. Fix an index <m> k \in \mathcal{ J } </m>, and let <m> x \in U_{ k } </m>. Then
+        
+        <md>
+          x \in \setmid{ x \in X }{ x \in U_{ j } \textrm{ for some } j \in \mathcal{ J } } = \bigcup_{ j \in \mathcal{ J } }{ U_{ j } }
+        </md>,
+        
+        and so <m> x \in V </m>. We conclude that <m> U_{ k } \subseteq V </m>, and note that this holds for all indices <m> k \in \mathcal{ J } </m>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> U_{ j } \subseteq V </m> for all indices <m> j \in \mathcal{ J } </m>, and let <m> x \in \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } </m>. Then
+        
+        <md>
+          x \in \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } = \setmid{ x \in X }{ x \in U_{ j } \textrm{ for some } j \in \mathcal{ J } }
+        </md>,
+        
+        and so <m> x \in U_{ j } </m> for some index <m> j \in \mathcal{ J } </m>. Since <m> U_{ j } \subseteq V </m>, we have <m> x \in V </m>. We conclude that <m> \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } \subseteq V </m>.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that
+        
+        <md>
+          \bigcap_{ k \in \mathcal{ K } }{ U_{ f \of{ k } } } = \bigcap_{ j \in \mathcal{ J } }{ U_{ j } }
+        </md>
+        
+        and
+        
+        <md>
+          \bigcup_{ k \in \mathcal{ K } }{ U_{ f \of{ k } } } = \bigcup_{ j \in \mathcal{ J } }{ U_{ j } }
+        </md>
+        
+        for any set <m> \mathcal{ K } </m> and surjection <m> f \colon \mathcal{ K } \to \mathcal{ J } </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Let <m> x \in X </m>, and suppose first that <m> x \in U_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>. Then <m> f \of{ k } \in \mathcal{ J } </m> for all indices <m> k \in \mathcal{ K } </m>, and so <m> x \in U_{ f \of{ k } } </m> for all such indices. Thus
+        
+        <md>
+          \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } \subseteq \bigcap_{ k \in \mathcal{ K } }{ U_{ f \of{ k } } }
+        </md>.
+        
+        Conversely, now suppose that <m> x \in U_{ f \of{ k } } </m> for all indices <m> k \in \mathcal{ K } </m>. Since <m> f \colon \mathcal{ K } \to \mathcal{ J } </m> is surjective, this implies that <m> x \in U_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>. Thus
+        
+        <md>
+          \bigcap_{ k \in \mathcal{ K } }{ U_{ f \of{ k } } } \subseteq \bigcap_{ j \in \mathcal{ J } }{ U_{ j } }
+        </md>,
+        
+        and so
+        
+        <md>
+          \bigcap_{ k \in \mathcal{ K } }{ U_{ f \of{ k } } } = \bigcap_{ j \in \mathcal{ J } }{ U_{ j } }
+        </md>.
+      </p>
+      
+      <p>
+        Now suppose that <m> x \in U_{ j } </m> for some index <m> j \in \mathcal{ J } </m>. Since <m> f \colon \mathcal{ K } \to \mathcal{ J } </m> is surjective, <m> f \of{ k } = j </m> for some index <m> k \in \mathcal{ K } </m>, and so <m> x \in U_{ j } = U_{ f \of{ k } } </m>. In particular, <m> x \in U_{ f \of{ k } } </m> for some index <m> k \in \mathcal{ K } </m>, and so
+        
+        <md>
+          \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } \subseteq \bigcup_{ k \in \mathcal{ K } }{ U_{ f \of{ k } } }
+        </md>.
+        
+        Conversely, now suppose that <m> x \in U_{ f \of{ k } } </m> for some index <m> k \in \mathcal{ K } </m>. Since <m> f \of{ k } \in \mathcal{ J } </m> is surjective, this implies that <m> x \in U_{ j } </m> for some index <m> j = f \of{ k } \in \mathcal{ J } </m>. Thus
+        
+        <md>
+          \bigcup_{ k \in \mathcal{ K } }{ U_{ f \of{ k } } } \subseteq \bigcup_{ j \in \mathcal{ J } }{ U_{ j } }
+        </md>,
+        
+        and so
+        
+        <md>
+          \bigcup_{ k \in \mathcal{ K } }{ U_{ f \of{ k } } } = \bigcup_{ j \in \mathcal{ J } }{ U_{ j } }
+        </md>.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that
+        
+        <md>
+          V \cup \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcap_{ j \in \mathcal{ J } }{ \of{ V \cup U_{ j } } }
+        </md>
+        
+        and
+        
+        <md>
+          V \cap \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcup_{ j \in \mathcal{ J } }{ \of{ V \cap U_{ j } } }
+        </md>
+        
+        for any subset <m> V \subseteq X </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Let <m> x \in X </m>, and suppose that <m> x \in V \cup \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } </m>. Then <m> x \in V </m> or <m> x \in U_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>. If <m> x \in V </m>, then <m> x \in V \cup U_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>, and so
+        
+        <md>
+          x \in \bigcap_{ j \in \mathcal{ J } }{ V \cup U_{ j } }
+        </md>.
+        
+        On the other hand, if <m> x \notin V </m>, then <m> x \in U_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>, and so <m> x \in V \cup U_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>; that is,
+        
+        <md>
+          x \in \bigcap_{ j \in \mathcal{ J } }{ V \cup U_{ j } }
+        </md>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> x \in \bigcap_{ j \in \mathcal{ J } }{ V \cup U_{ j } } </m>. Then <m> x \in V \cup U_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>. If <m> x \notin V </m>, then <m> x \in U_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>, and so <m> x \in \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } </m>. We conclude that
+        
+        <md>
+          x \in V \cup \bigcap_{ j \in \mathcal{ J } }{ U_{ j } }
+        </md>.
+        
+        In summary, we have shown that <m> x \in V \cup \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } </m> if and only if <m> x \in \bigcap_{ j \in \mathcal{ J } }{ V \cup U_{ j } } </m>, and so
+        
+        <md>
+          V \cup \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcap_{ k \in \mathcal{ J } }{ V \cup U_{ k } }
+        </md>.
+      </p>
+      
+      <p>
+        Now suppose that <m> x \in V \cap \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } </m>. Then <m> x \in V </m>, and <m> x \in U_{ j } </m> for some index <m> j \in \mathcal{ J } </m>. In particular, <m> x \in V \cap U_{ j } </m> for some index <m> j \in \mathcal{ J } </m>, and so
+        
+        <md>
+          x \in \bigcup_{ j \in \mathcal{ J } }{ V \cap U_{ j } }
+        </md>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> x \in \bigcup_{ j \in \mathcal{ J } }{ V \cap U_{ j } } </m>. Then <m> x \in V \cap U_{ j } </m> for some index <m> j \in \mathcal{ J } </m>, and so <m> x \in V </m> and <m> x \in U_{ j } </m> for some index <m> j \in \mathcal{ J } </m>. We conclude that
+        
+        <md>
+          x \in V \cap \bigcup_{ j \in \mathcal{ J } }{ U_{ j } }
+        </md>.
+        
+        In summary, we have shown that <m> x \in V \cap \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } </m> if and only if <m> x \in \bigcup_{ j \in \mathcal{ J } }{ V \cap U_{ j } } </m>, and so
+        
+        <md>
+          V \cap \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcup_{ j \in \mathcal{ J } }{ V \cap U_{ j } }
+        </md>.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that
+        
+        <md>
+          V \setminus \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcup_{ j \in \mathcal{ J } }{ \of{ V \setminus U_{ j } } }
+        </md>
+        
+        and
+        
+        <md>
+          V \setminus \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcup_{ j \in \mathcal{ J } }{ \of{ V \setminus U_{ j } } }
+        </md>
+        
+        for any subset <m> V \subseteq X </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Let <m> x \in X </m>, and suppose that <m> x \in V \setminus \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } </m>. Then <m> x \in V </m> and <m> x \notin \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } </m>. So <m> x \notin U_{ j } </m> for some index <m> j \in \mathcal{ J } </m>, and so <m> x \in V \setminus U_{ j } </m> for some index <m> j \in \mathcal{ J } </m>; that is,
+        
+        <md>
+          x \in \bigcup_{ j \in \mathcal{ J } }{ V \setminus U_{ j } }
+        </md>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> x \in \bigcup_{ j \in \mathcal{ J } }{ V \setminus U_{ j } } </m>. Then <m> x \in V \setminus U_{ j } </m> for some index <m> j \in \mathcal{ J } </m>, and so <m> x \in V </m> and <m> x \notin U_{ j } </m> for some index <m> j \in \mathcal{ J } </m>. In particular, <m> x \notin \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } </m>, and so
+        
+        <md>
+          x \in V \setminus \bigcap_{ j \in \mathcal{ J } }{ U_{ j } }
+        </md>.
+        
+        In summary, we have shown that <m> x \in V \setminus \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } </m> if and only if <m> x \in \bigcup_{ j \in \mathcal{ J } }{ V \setminus U_{ j } } </m>, and so
+        
+        <md>
+          V \setminus \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcup_{ k \in \mathcal{ J } }{ V \setminus U_{ k } }
+        </md>.
+      </p>
+      
+      <p>
+        Let <m> x \in X </m>, and suppose that <m> x \in V \setminus \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } </m>. Then <m> x \in V </m> and <m> x \notin \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } </m>. So <m> x \notin U_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>, and so <m> x \in V \setminus U_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>; that is,
+        
+        <md>
+          x \in \bigcap_{ j \in \mathcal{ J } }{ V \setminus U_{ j } }
+        </md>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> x \in \bigcap_{ j \in \mathcal{ J } }{ V \setminus U_{ j } } </m>. Then <m> x \in V \setminus U_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>, and so <m> x \in V </m> and <m> x \notin U_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>. In particular, <m> x \notin \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } </m>, and so
+        
+        <md>
+          x \in V \setminus \bigcup_{ j \in \mathcal{ J } }{ U_{ j } }
+        </md>.
+        
+        In summary, we have shown that <m> x \in V \setminus \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } </m> if and only if <m> x \in \bigcap_{ j \in \mathcal{ J } }{ V \setminus U_{ j } } </m>, and so
+        
+        <md>
+          V \setminus \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcap_{ k \in \mathcal{ J } }{ V \setminus U_{ k } }
+        </md>.
+      </p>
+    </solution>
+  </task>
+</exercise>

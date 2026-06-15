@@ -51,7 +51,7 @@
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-what-is-a-set.ptx"/>
+  <xi:include href="./exercises-what-is-a-set.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-what-is-a-set.ptx"/>
+  <xi:include href="./problems-what-is-a-set.ptx"/>
 </section>

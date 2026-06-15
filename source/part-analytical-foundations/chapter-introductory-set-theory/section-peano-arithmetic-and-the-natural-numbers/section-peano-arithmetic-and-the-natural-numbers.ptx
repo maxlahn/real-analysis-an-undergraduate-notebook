@@ -23,7 +23,7 @@
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-peano-arithmetic-and-the-natural-numbers.ptx"/>
+  <xi:include href="./exercises-peano-arithmetic-and-the-natural-numbers.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-peano-arithmetic-and-the-natural-numbers.ptx"/>
+  <xi:include href="./problems-peano-arithmetic-and-the-natural-numbers.ptx"/>
 </section>

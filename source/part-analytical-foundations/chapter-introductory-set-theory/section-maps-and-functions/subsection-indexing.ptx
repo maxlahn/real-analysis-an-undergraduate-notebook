@@ -201,7 +201,7 @@
             </title>
             
             <p>
-              Analogously to <xref ref="reading-question-distributivity-of-set-operations"/>,
+              Analogously to <xref ref="problem-distributivity-of-set-operations"/>,
               
               <md>
                 V \cup \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcap_{ j \in \mathcal{ J } }{ \of{ V \cup U_{ j } } }
@@ -223,7 +223,7 @@
             </title>
             
             <p>
-              Analogously to <xref ref="reading-question-de-morgans-laws"/>,
+              Analogously to <xref ref="problem-de-morgans-laws"/>,
               
               <md>
                 V \setminus \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcup_{ j \in \mathcal{ J } }{ \of{ V \setminus U_{ j } } }
@@ -245,7 +245,7 @@
 
   <conclusion>
     <p>
-      You will have an opportunity to prove the above results in the reading questions for this section.
+      You will have an opportunity to prove the above results in the problems for this section.
     </p>
   </conclusion>
 </subsection>

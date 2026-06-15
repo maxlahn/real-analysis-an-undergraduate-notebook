@@ -23,7 +23,7 @@
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-finitary-operations-and-relations.ptx"/>
+  <xi:include href="./exercises-finitary-operations-and-relations.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-finitary-operations-and-relations.ptx"/>
+  <xi:include href="./problems-finitary-operations-and-relations.ptx"/>
 </section>

@@ -19,7 +19,7 @@
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-TITLE.ptx"/>
+  <xi:include href="./exercises-TITLE.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-TITLE.ptx"/>
+  <xi:include href="./problems-TITLE.ptx"/>
 </section>

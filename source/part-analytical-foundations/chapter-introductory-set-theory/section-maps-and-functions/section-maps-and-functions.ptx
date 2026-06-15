@@ -23,7 +23,7 @@
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-maps-and-functions.ptx"/>
+  <xi:include href="./exercises-maps-and-functions.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-maps-and-functions.ptx"/>
+  <xi:include href="./problems-maps-and-functions.ptx"/>
 </section>

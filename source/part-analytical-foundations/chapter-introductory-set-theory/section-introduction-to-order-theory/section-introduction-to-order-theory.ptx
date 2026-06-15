@@ -7,7 +7,7 @@
 
   <introduction>
     <p>
-      In this section, we will investigate another class of binary relations, which can be used to establish a notion of an ordering on a set. Touchstone examples will be the standard ordering of the natural numbers and the ordering of sets by containment.
+      In this section, we will investigate another class of binary relations, which can be used to establish a notion of an <term> ordering </term> on a set. Touchstone examples will be the standard ordering <m> \leq </m> of the natural numbers, which is a <term> total order </term>, and set containment <m> \subseteq </m>, which is only a <term> partial order </term>.
     </p>
   </introduction>
 
@@ -23,7 +23,7 @@
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-introduction-to-order-theory.ptx"/>
+  <xi:include href="./exercises-introduction-to-order-theory.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-introduction-to-order-theory.ptx"/>
+  <xi:include href="./problems-introduction-to-order-theory.ptx"/>
 </section>

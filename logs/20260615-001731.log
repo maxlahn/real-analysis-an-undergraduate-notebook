@@ -1,0 +1,57 @@
+INFO    : Building target print
+INFO    : XSL conversion of /project/source/main.ptx by /root/.ptx/2.41.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /root/.ptx/2.41.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /project/output/print.
+INFO    : discovering source file's directory name: /project/source
+INFO    : verifying and expanding input directory: /project/source/../generated-assets
+INFO    : input directory expanded to absolute path: /project/generated-assets
+INFO    : verifying and expanding input directory: /project/source/../assets
+INFO    : input directory expanded to absolute path: /project/assets
+INFO    : XSL conversion of /project/source/main.ptx by /root/.ptx/2.41.2/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /root/.ptx/2.41.2/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : converting /project/source/main.ptx to LaTeX as /ptx-7hcqwgw2/main.tex
+INFO    : XSL conversion of /project/source/main.ptx by /root/.ptx/2.41.2/core/xsl/pretext-latex.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * PTX:INFO:   checking all deprecated elements.
+ERROR   : * PTX:ERROR:   a cross-reference ("xref") uses references [reading-question-composition-and-injectivity-surjectivity-bijectivity] that do not point to any target, or perhaps point to multiple targets.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source, or maybe an auxiliary file contains a duplicate.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+INFO    : *              located at: pretext/book/part/chapter/section/subsection/p/xref
+INFO    : *              located within: "subsection-composition-and-invertibility" (xml:id), "
+    Composition and Invertibility
+  " (title)
+ERROR   : * PTX:ERROR:   a cross-reference ("xref") uses references [reading-question-composition-and-injectivity-surjectivity-bijectivity] that do not point to any target, or perhaps point to multiple targets.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source, or maybe an auxiliary file contains a duplicate.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+INFO    : *              located at: pretext/book/part/chapter/section/subsection/theorem/proof/ol/li/p/xref
+INFO    : *              located within: "theorem-invertibility" (xml:id), "
+      Invertibility
+    " (title)
+ERROR   : * PTX:ERROR:   a cross-reference ("xref") uses references [reading-question-composition-and-injectivity-surjectivity-bijectivity] that do not point to any target, or perhaps point to multiple targets.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source, or maybe an auxiliary file contains a duplicate.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+ERROR   : * PTX:ERROR:   a cross-reference ("xref") uses references [reading-question-non-commutativity-of-composition] that do not point to any target, or perhaps point to multiple targets.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source, or maybe an auxiliary file contains a duplicate.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+INFO    : *              located at: pretext/book/part/chapter/section/subsection/example/statement/p/ul/li/p/xref
+INFO    : *              located within: "
+              Composition of maps
+            " (title)
+ERROR   : * PTX:ERROR:   a cross-reference ("xref") uses references [reading-question-non-commutativity-of-cartesian-products] that do not point to any target, or perhaps point to multiple targets.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source, or maybe an auxiliary file contains a duplicate.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+INFO    : *              located at: pretext/book/part/chapter/section/reading-questions/exercise/introduction/p/xref
+INFO    : *              located within: "reading-question-revisiting-commutativity-associativity-of-cartesian-products" (xml:id), "
+    Revisiting commutativity/associativity of Cartesian products
+  " (title)
+INFO    : successful application of /root/.ptx/2.41.2/core/xsl/pretext-latex.xsl
+INFO    : Rerunning LaTeX for main.tex (pass 2)
+INFO    : Rerunning LaTeX for main.tex (pass 3)
+INFO    : Removing temporary directory /ptx-7hcqwgw2
+INFO    : Removing temporary directory /ptx-ro0gob5e
+INFO    : Removing temporary directory /ptx-ykeyci31
+INFO    : 
+Finished build for target print. The output is in /project/output/print.
+
+CRITICAL: There were errors during the build.  See above.
+INFO    : ------------------------
+CRITICAL: Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------
