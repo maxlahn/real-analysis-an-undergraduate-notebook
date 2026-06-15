@@ -19,7 +19,7 @@
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-the-complete-ordered-field.ptx"/>
+  <xi:include href="./exercises-the-complete-ordered-field.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-the-complete-ordered-field.ptx"/>
+  <xi:include href="./problems-the-complete-ordered-field.ptx"/>
 </section>

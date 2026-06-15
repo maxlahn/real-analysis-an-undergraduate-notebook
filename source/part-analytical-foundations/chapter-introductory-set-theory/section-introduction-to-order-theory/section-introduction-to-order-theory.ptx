@@ -11,7 +11,7 @@
     </p>
   </introduction>
 
-  <xi:include href="./subsection-partial-orders.ptx"/>
+  <xi:include href="./subsection-preorders-and-partial-orders.ptx"/>
 
   <xi:include href="./subsection-boundedness-and-extrema.ptx"/>
 
@@ -19,7 +19,7 @@
 
   <conclusion>
     <p>
-      We will revisit ordering relations in the next chapter, when we extend the standard ordering on the natural numbers to many of the extensions of the natural number system which we construct.
+      We will revisit ordering relations in <xref ref="chapter-constructing-the-number-systems"/>, when we extend the standard ordering on the natural numbers to many of the extensions of the natural number system which we construct.
     </p>
   </conclusion>
 

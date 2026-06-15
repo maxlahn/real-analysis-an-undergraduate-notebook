@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="section-the-integers-and-rational-numbers" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="section-the-integers-and-the-rational-numbers" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>
     The Integers and the Rational Numbers
   </title>
@@ -19,7 +19,7 @@
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-the-integers-and-rational-numbers.ptx"/>
+  <xi:include href="./exercises-the-integers-and-the-rational-numbers.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-the-integers-and-rational-numbers.ptx"/>
+  <xi:include href="./problems-the-integers-and-the-rational-numbers.ptx"/>
 </section>

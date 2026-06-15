@@ -19,7 +19,7 @@
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-beyond-the-real-number-system.ptx"/>
+  <xi:include href="./exercises-beyond-the-real-number-system.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-beyond-the-real-number-system.ptx"/>
+  <xi:include href="./problems-beyond-the-real-number-system.ptx"/>
 </section>

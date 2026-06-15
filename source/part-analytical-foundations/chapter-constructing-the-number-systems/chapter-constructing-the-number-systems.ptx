@@ -11,7 +11,7 @@
     </p>
   </introduction>
 
-  <xi:include href="./section-the-integers-and-rational-numbers/section-the-integers-and-rational-numbers.ptx"/>
+  <xi:include href="./section-the-integers-and-the-rational-numbers/section-the-integers-and-the-rational-numbers.ptx"/>
 
   <xi:include href="./section-constructing-the-real-numbers/section-constructing-the-real-numbers.ptx"/>
 

@@ -19,11 +19,11 @@
 
   <conclusion>
     <p>
-      Text after the last subsection.
+      In the next section, we will continue to explore the properties of the real number system. In particular, we will characterize <m> \R </m> as the unique <term> Dedekind complete </term> <term> ordered field </term>.
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-constructing-the-real-numbers.ptx"/>
+  <xi:include href="./exercises-constructing-the-real-numbers.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-constructing-the-real-numbers.ptx"/>
+  <xi:include href="./problems-constructing-the-real-numbers.ptx"/>
 </section>
