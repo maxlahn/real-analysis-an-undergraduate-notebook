@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-addition-of-dedekind-cuts" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Addition of Dedekind Cuts
+  </title>
+
+  <introduction>
+    <p>
+      Finally, we begin to define arithmetic for Dedekind cuts. We emphasize that the utility of what follows is neither the details of the construction nor the methods of proof, but rather the very fact that the operations exist with the same properties we would expect. That is to say, we will eventually lose sight of the particularities of the construction of the real number system by Dedekind cuts and treat real numbers as objects which obey the rules of arithmetic.
+    </p>
+  </introduction>
+  
+  <lemma xml:id="lemma-addition-of-dedekind-cuts">
+    <title>
+      Addition of Dedekind cuts
+    </title>
+    
+    <statement>
+      <p>
+        Given two Dedekind cuts <m> X , Y \in \R </m>, the set
+        
+        <md>
+          \setmid{ p + q \in \Q }{ p \in X \textrm{ and } q \in Y }
+        </md>
+        
+        is a Dedekind cut.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Denote by <m> Z </m> the set
+        
+        <md>
+          Z = \setmid{ p + q \in \Q }{ p \in X \textrm{ and } q \in Y }
+        </md>.
+        
+        Since <m> X </m> and <m> Y </m> are Dedekind cuts, they are non-empty subsets of <m> \Q </m>, and so there are rational numbers <m> p \in X </m> and <m> q \in Y </m>. Thus <m> p + q \in Z </m>, and so <m> Z </m> is also non-empty.
+      </p>
+      
+      <p>
+        On the other hand, <m> X </m> and <m> Y </m> are proper subsets of <m> \Q </m>, and so there are rational numbers <m> r \in \Q \setminus X </m> and <m> s \in \Q \setminus Y </m>. We observe that that <m> r \gt p </m> for all <m> p \in X </m> and <m> s \gt q </m> for all <m> q \in Y </m>. In particular, for all <m> t \in Z </m> there are rational numbers <m> p \in X </m> and <m> q \in Y </m> so that <m> t = p + q </m>, and so
+        
+        <md>
+          r + s \gt p + q = t
+        </md>
+        
+        In particular, <m> r + s \notin Z </m>, and so <m> Z </m> is also a proper subset of <m> \Q </m>.
+      </p>
+      
+      <p>
+        Now let <m> r , s \in \Q </m> be rational numbers, and suppose that <m> s \leq r </m> and <m> r \in Z </m>. We wish to show that <m> s \in Z </m>. To that end, we see that <m> r = p + q </m> for some rational numbers <m> p \in X </m> and <m> q \in Y </m>. Since <m> s - r \leq 0 </m>,
+        
+        <md>
+          q + \of{ s - r } \leq q + 0 = q \in Y
+        </md>,
+        
+        and so <m> q + \of{ s - r } \in Y </m>. This implies that
+        
+        <md>
+          s = r + \of{ s - r } = p + \of{ q + \of{ s - r } } \in Z
+        </md>.
+      </p>
+      
+      <p>
+        It remains to show that <m> Z </m> does not have a maximum. To that end, let <m> r_{ 1 } \in Z </m>, so that <m> r_{ 1 } = p_{ 1 } + q_{ 1 } </m> for some rational numbers <m> p_{ 1 } \in X </m> and <m> q_{ 1 } \in Y </m>. Since <m> X </m> and <m> Y </m> are Dedekind cuts, they do not have maxima, and so <m> p_{ 1 } \lt p_{ 2 } </m> and <m> q_{ 1 } \lt q_{ 2 } </m> for some rational numbers <m> p_{ 2 } \in X </m> and <m> q_{ 2 } \in Y </m>. We conclude that <m> r_{ 2 } = p_{ 2 } + q_{ 2 } \in Z </m>, and that
+        
+        <md>
+          r_{ 1 } = p_{ 1 } + q_{ 1 } \lt p_{ 2 } + q_{ 2 } = r_{ 2 }
+        </md>.
+        
+        Thus <m> Z </m> does not have a maximum, and so is a Dedekind cut.
+      </p>
+    </proof>
+  </lemma>
+  
+  <definition xml:id="definition-addition-of-dedekind-cuts">
+    <title>
+      Addition of Dedekind cuts
+    </title>
+    
+    <idx>
+      addition
+    </idx>
+    
+    <statement>
+      <p>
+        The <term> sum </term> <m> X + Y </m> of two Dedekind cuts <m> X , Y \in \R </m> is the Dedekind cut defined by
+        
+        <md>
+          X + Y = \setmid{ p + q \in \Q }{ p \in X \textrm{ and } q \in Y }
+        </md>.
+        
+        This defines a binary operation <m> + </m> on the set <m> \R </m> of Dedekind cuts.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    We first observe that addition of rational Dedekind cuts mirrors the addition of the corresponding rational numbers.
+  </p>
+  
+  <lemma xml:id="lemma-addition-of-rational-dedekind-cuts">
+    <title>
+      Addition of rational Dedekind cuts
+    </title>
+    
+    <statement>
+      <p>
+        <m> X_{ p } + X_{ q } = X_{ p + q } </m> for all rational numbers <m> p , q \in \Q </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> r \in \Q </m> be a rational number, and suppose first that <m> r \in X_{ p } + X_{ q } </m>. Then <m> r = s + t </m> for some rational numbers <m> s \in X_{ p } </m> and <m> t \in X_{ q } </m>, so that <m> s \lt p </m> and <m> t \lt q </m>. We observe that
+        
+        <md>
+          r = s + t \lt p + q
+        </md>,
+        
+        and so <m> r \in X_{ p + q } </m>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> r \in X_{ p + q } </m>, so that <m> r \lt p + q </m>. Consider the rational numbers
+        
+        <md>
+          <mrow>
+            s \amp = p + \frac{ r - \of{ p + q } }{ 2 } \amp t \amp = q + \frac{ r - \of{ p + q } }{ 2 }
+          </mrow>
+        </md>.
+        
+        Since <m> \of{ \frac{ r - \of{ p + q } }{ 2 } } \lt 0 </m>, <m> s \lt p </m> and <m> t \lt q </m>, and so <m> s \in X_{ p } </m> and <m> t \in X_{ q } </m>. We conclude that
+        
+        <md>
+          <mrow>
+            r \amp = p + q + \of{ r - \of{ p + q } } = p + \frac{ r - \of{ p + q } }{ 2 } + q + \frac{ r - \of{ p + q } }{ 2 }
+          </mrow>
+          
+          <mrow>
+            \amp = s + t \in X_{ p } + X_{ q }
+          </mrow>
+        </md>.
+      </p>
+      
+      <p>
+        In summary, we have shown that <m> r \in X_{ p } + X_{ q } </m> if and only if <m> r \in X_{ p + q } </m>, and so <m> X_{ p } + X_{ q } = X_{ p + q } </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <proposition xml:id="proposition-addition-of-dedekind-cuts">
+    <title>
+      Addition of Dedekind cuts
+    </title>
+    
+    <statement>
+      <p>
+        Addition <m> + </m> of Dedekind cuts has the following properties:
+        
+        <ol>
+          <li>
+            <title>
+              Commutativity
+            </title>
+            
+            <p>
+              <m> X + Y = Y + X </m> for all Dedekind cuts <m> X , Y \in \R </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Associativity
+            </title>
+            
+            <p>
+              <m> \of{ X + Y } + Z = X + \of{ Y + Z } </m> for all Dedekind cuts <m> X , Y , Z \in \R </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Identity element
+            </title>
+            
+            <p>
+              The rational Dedekind cut <m> X_{ 0 } </m> associated to <m> 0 </m> is an additive identity element; that is, <m> X + X_{ 0 } = X_{ 0 } + X = X </m> for all Dedekind cuts <m> X \in \R </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Inverses
+            </title>
+            
+            <p>
+              For all Dedekind cuts <m> X \in \R </m>, there is a Dedekind cut <m> Y \in \R </m> so that <m> X + Y = X_{ 0 } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Compatibility with the standard order
+            </title>
+            
+            <p>
+              For all Dedekind cuts <m> W , X , Y , Z \in \R </m>, if <m> W \subseteq Y </m> and <m> X \subseteq Z </m>, then <m> W + X \subseteq Y + Z </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            We note that
+            
+            <md>
+              <mrow>
+                X + Y \amp = \setmid{ p + q \in \Q }{ p \in X \textrm{ and } q \in Y }
+              </mrow>
+              
+              <mrow>
+                \amp = \setmid{ q + p \in \Q }{ q \in Y \textrm{ and } p \in X } = Y + X
+              </mrow>
+            </md>
+            
+            for all Dedekind cuts <m> X , Y \in \R </m>, and so addition <m> + </m> of Dedekind cuts is commutative.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            We note that
+            
+            <md>
+              <mrow>
+                \of{ X + Y } + Z \amp = \setmid{ s + r \in \Q }{ s \in X + Y \textrm{ and } r \in Z }
+              </mrow>
+              
+              <mrow>
+                \amp = \setmid{ \of{ p + q } + r \in \Q }{ p \in X \textrm{ and } q \in Y \textrm{ and } r \in Z }
+              </mrow>
+              
+              <mrow>
+                \amp = \setmid{ p + \of{ q + r } \in \Q }{ p \in X \textrm{ and } q \in Y \textrm{ and } r \in Z }
+              </mrow>
+              
+              <mrow>
+                \amp = \setmid{ p + t \in \Q }{ p \in X \textrm{ and } t \in Y + Z } = X + \of{ Y + Z }
+              </mrow>
+            </md>.
+            
+            for all Dedekind cuts <m> X , Y , Z \in \R </m>, and so addition <m> + </m> of Dedekind cuts is associative.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Let <m> p \in \Q </m> be a rational number, and suppose first that <m> p \in X + X_{ 0 } </m>. Then <m> p = q + r </m> for some rational numbers <m> q \in X </m> and <m> r \in X_{ 0 } </m>. Since
+            
+            <md>
+              X_{ 0 } = \setmid{ s \in \Q }{ s \lt 0 }
+            </md>
+            
+            is the set of negative rational numbers,
+            
+            <md>
+              p = q + r \lt q + 0 = q \in X
+            </md>,
+            
+            and so <m> p \in X </m>.
+          </p>
+          
+          <p>
+            Conversely, now suppose that <m> p \in X </m>. Since <m> X </m> does not have a maximum, <m> r \in X </m> for some rational number <m> r \gt p </m>. Let <m> s = p - r \in X_{ 0 } </m>, and note that
+            
+            <md>
+              p = r + \of{ p - r } = r + s
+            </md>
+            
+            is the sum of a rational number <m> r \in X </m> and a rational number <m> p - r \in X_{ 0 } </m>. We conclude that <m> p \in X + X_{ 0 } </m>.
+          </p>
+          
+          <p>
+            In summary, we have shown that <m> p \in X + X_{ 0 } </m> if and only if <m> p \in X </m>, and so <m> X + X_{ 0 } = X </m>. That <m> X_{ 0 } + X = X </m> now follows from (1) above.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            There are two cases: either <m> X </m> is rational, or <m> X </m> is irrational. If <m> X </m> is rational, say <m> X = X_{ q } </m> for some rational number <m> q \in \Q </m>, then we may choose <m> Y = X_{ -q } </m>, since <xref ref="lemma-addition-of-rational-dedekind-cuts"/> implies that
+            
+            <md>
+              X + Y = X_{ q } + X_{ -q } = X_{ q + \of{ -q } } = X_{ 0 }
+            </md>.
+          </p>
+          
+          <p>
+            So we may suppose that <m> X </m> is irrational. Let
+            
+            <md>
+              Y = \setmid{ q \in \Q }{ -q \notin X }
+            </md>.
+            
+            Since <m> X </m> is a non-empty proper subset of <m> \Q </m>, so too is its complement <m> \Q \setminus X </m>, which implies that <m> Y </m> is also non-empty and proper. We aim to show first that <m> Y </m> is a Dedekind cut.
+          </p>
+          
+          <p>
+            To that end, let <m> p , q \in \Q </m> be rational numbers, and suppose that <m> p \lt q </m> and <m> q \in Y </m>. Then <m> -q \notin X </m>, and so <m> -q \gt r </m> for all rational numbers <m> r \in X </m>. We observe that
+            
+            <md>
+              -p \geq -q \gt r
+            </md>
+            
+            for all rational numbers <m> r \in X </m>, and so <m> -p \notin X </m>; that is, <m> p \in Y </m>.
+          </p>
+          
+          <p>
+            Now let <m> q \in Y </m>, so that <m> -q \notin X </m>. Since <m> X </m> is irrational, <xref ref="lemma-rational-dedekind-cuts"/> implies that <m> \Q \setminus X </m> does not have a minimum. Thus there is some rational number <m> r \in \Q \setminus X </m> so that <m> r \lt -q </m>. We conclude that <m> -r \in Y </m> and <m> -r \gt q </m>, so that <m> Y </m> does not have a maximum.
+          </p>
+          
+          <p>
+            We have shown that <m> Y </m> is a Dedekind cut, but it remains to show that <m> X + Y = X_{ 0 } </m>. To that end, let <m> r \in \Q </m> be a rational number, and suppose first that <m> r \in X + Y </m>. Then <m> r = p + q </m> for some <m> p \in X </m> and <m> q \in Y </m>. Since <m> -q \notin X </m>, we must have <m> p \lt -q </m>, so that <m> r = p + q \lt 0 </m>; that is, <m> r \in X_{ 0 } </m>.
+          </p>
+          
+          <p>
+            Conversely, now suppose that <m> r \in X_{ 0 } </m>, so that <m> r \lt 0 </m>. In particular, <m> -r \gt 0 </m>. If <m> p + \of{ -r } \in X </m> for all rational numbers <m> p \in X </m>, then <m> X </m> is not bounded from above, which would imply that <m> X = \Q </m>. Thus <m> p - r \notin X </m> for some rational number <m> p \in X </m>. We conclude that
+            
+            <md>
+              r = p + \of{ r - p } \in X + Y
+            </md>
+            
+            is the sum of two rational numbers <m> p \in X </m> and <m> r - p \in Y </m>.
+          </p>
+          
+          <p>
+            In summary, we have shown that <m> r \in X + Y </m> if and only if <m> r \in X_{ 0 } </m>, and so <m> X + Y = X_{ 0 } </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            We observe that if <m> W \subseteq Y </m> and <m> X \subseteq Z </m>, then
+            
+            <md>
+              <mrow>
+                W + X \amp = \setmid{ p + q \in \Q }{ p \in W \textrm{ and } q \in X }
+              </mrow>
+              
+              <mrow>
+                \amp \subseteq \setmid{ p + q \in \Q }{ p \in Y \textrm{ and } q \in Z } = Y + Z
+              </mrow>
+            </md>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </proposition>
+
+  <conclusion>
+    <p>
+      All that remains is to define the multiplication of Dedekind cuts and derive relevant results about multiplication itself and its relation to addition and comparison.
+    </p>
+  </conclusion>
+</subsection>

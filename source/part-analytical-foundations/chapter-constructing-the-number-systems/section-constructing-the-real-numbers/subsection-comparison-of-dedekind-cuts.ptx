@@ -7,147 +7,171 @@
 
   <introduction>
     <p>
-      Text before the first subdivision.
+      Our two perspectives on the set <m> \Q </m> (as equivalence classes of fractions and as rational Dedekind cuts) yield two natural orderings: the standard ordering <m> \leq </m> and the partial order of set containment. In fact, these orderings agree.
     </p>
   </introduction>
   
-  
-
-  <conclusion>
-    <p>
-      Text after the last subdivision.
-    </p>
-  </conclusion>
-</subsection>
-
-<!--
-
-  <definition xml:id="definition-TITLE">
+  <corollary xml:id="corollary-ordering-dedekind-cuts-by-containment">
     <title>
-      TITLE
+      Ordering Dedekind cuts by containment
     </title>
-    
-    <idx>
-      TERM
-    </idx>
-    
-    <notation>
-      <usage>
-        <m>  </m>
-      </usage>
-      
-      <description>
-        <p>
-          
-        </p>
-      </description>
-    </notation>
     
     <statement>
       <p>
+        The standard ordering <m> \leq </m> on the rational numbers <m> \Q </m> is the pullback of set containment <m> \subseteq </m> on the set <m> \R </m> of Dedekind cuts.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> q_{ 1 } , q_{ 2 } \in \Q </m> be rational numbers. We note that
         
+        <md>
+          <mrow>
+            X_{ q_{ 1 } } \amp = \setmid{ p \in \Q }{ p \lt q_{ 1 } }
+          </mrow>
+          
+          <mrow>
+            X_{ q_{ 2 } } \amp = \setmid{ p \in \Q }{ p \lt q_{ 2 } }
+          </mrow>
+        </md>.
+        
+        First suppose that <m> q_{ 1 } \leq q_{ 2 } </m>. If <m> p \in X_{ q_{ 1 } } </m>, then
+        
+        <md>
+          p \lt q_{ 1 } \leq q_{ 2 }
+        </md>
+        
+        and so <m> p \in X_{ q_{ 2 } } </m>; that is,
+        
+        <md>
+          \iota \of{ q_{ 1 } } = X_{ q_{ 1 } } \subseteq X_{ q_{ 2 } } = \iota \of{ q_{ 2 } }
+        </md>,
+        
+        so that <m> q_{ 1 } \subseteq_{ \iota } q_{ 2 } </m>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> q_{ 1 } \subseteq_{ \iota } q_{ 2 } </m>. Then
+        
+        <md>
+          X_{ q_{ 1 } } = \iota \of{ q_{ 1 } } \subseteq \iota \of{ q_{ 2 } } = X_{ q_{ 2 } }
+        </md>.
+        
+        If <m> q_{ 1 } \gt q_{ 2 } </m>, then
+        
+        <md>
+          q_{ 2 } \lt \frac{ q_{ 1 } + q_{ 2 } }{ 2 } \lt q_{ 1 }
+        </md>,
+        
+        and so <m> \frac{ q_{ 1 } + q_{ 2 } }{ 2 } \in X_{ q_{ 1 } } \setminus X_{ q_{ 2 } } </m>. This would imply that <m> X_{ q_{ 1 } } \not \subseteq X_{ q_{ 2 } } </m>, and so we must have <m> q_{ 1 } \leq q_{ 2 } </m>.
+      </p>
+      
+      <p>
+        In summary, we have shown that <m> q_{ 1 } \leq q_{ 2 } </m> if and only if <m> q_{ 1 } \subseteq_{ \iota } q_{ 2 } </m>, and so <m> \leq </m> and <m> \subseteq_{ \iota } </m> are the same binary relation on <m> \Q </m>.
+      </p>
+    </proof>
+  </corollary>
+  
+  <p>
+    <xref ref="corollary-ordering-dedekind-cuts-by-containment"/> implies that comparing rational numbers is the same as comparing their associated rational Dedekind cuts by containment. This gives us the template for how to compare Dedekind cuts in general: we compare by set containment.
+  </p>
+
+  <theorem xml:id="theorem-comparison-of-dedekind-cuts">
+    <title>
+      Comparison of Dedekind cuts
+    </title>
+    
+    <statement>
+      <p>
+        Set containment <m> \subseteq </m> is a total order on the set <m> \R </m> of Dedekind cuts.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Since set containment is a partial order, it suffices to show only totality. To that end, let <m> X , Y \in \R </m> be Dedekind cuts, and suppose that <m> X \not \subseteq Y </m>. Then there is some rational number <m> q \in X </m> so that <m> q \notin Y </m>.
+      </p>
+      
+      <p>
+        Let <m> p \in Y </m>. If <m> q \leq p </m>, then we would have <m> q \in Y </m>, and so we must have <m> p \leq q </m>. But this implies that <m> p \in X </m>, and so <m> Y \subseteq X </m>.
+      </p>
+      
+      <p>
+        In summary, we have shown that for all Dedekind cuts <m> X , Y \in \R </m>, either <m> X \subseteq Y </m> or <m> Y \subseteq X </m>. Thus set containment <m> \subseteq </m> is a total order on the set <m> \R </m> of Dedekind cuts.
+      </p>
+    </proof>
+  </theorem>
+  
+  <p>
+    Just as with the integers <m> \Z </m> and rational numbers <m> \Q </m>, we can use the standard ordering on <m> \R </m> to distinguish Dedekind cuts by their <term> sign </term>: either <term> positive </term>, <term> negative </term>, or <term> zero </term>.
+  </p>
+  
+  <definition xml:id="definition-sign-of-a-dedekind-cut">
+    <title>
+      Sign of a Dedekind cut
+    </title>
+    
+    <statement>
+      <p>
+        Recall that
+        
+        <md>
+          X_{ 0 } = \setmid{ q \in \Q }{ q \lt 0 }
+        </md>
+        
+        is the rational Dedekind cut associated to the rational number <m> 0 </m>.
+        
+        <ul>
+          <li>
+            <title>
+              Positivity
+            </title>
+            
+            <p>
+              A Dedekind cut <m> X \in \R </m> is called <term> positive </term> if it strictly contains <m> X_{ 0 } </m>; that is, <m> X </m> is positive if <m> X \supsetneq X_{ 0 } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Negativity
+            </title>
+            
+            <p>
+              A Dedekind cut <m> X \in \R </m> is called <term> negative </term> if it is strictly contained in <m> X_{ 0 } </m>; that is, <m> X </m> is negative if <m> X \subsetneq X_{ 0 } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Non-negativity
+            </title>
+            
+            <p>
+              A Dedekind cut <m> X \in \R </m> is called <term> non-negative </term> if it contains <m> X_{ 0 } </m>; that is, <m> X </m> is non-negative if <m> X \supseteq X_{ 0 } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Non-positivity
+            </title>
+            
+            <p>
+              A Dedekind cut <m> X \in \R </m> is called <term> non-positive </term> if it is contained in <m> X_{ 0 } </m>; that is, <m> X </m> is positive if <m> X \subseteq X_{ 0 } </m>.
+            </p>
+          </li>
+        </ul>
+        
+        In particular, the <term> sign </term> of a Dedekind cut is either positive, negative, or zero.
       </p>
     </statement>
   </definition>
 
-  <lemma xml:id="lemma-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </lemma>
-
-  <proposition xml:id="proposition-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </proposition>
-
-  <theorem xml:id="theorem-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </theorem>
-
-  <corollary xml:id="corollary-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </corollary>
-
-  <example xml:id="example-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-  </example>
-
--->
+  <conclusion>
+    <p>
+      This classification of Dedekind cuts by sign will be useful in formalizing the multiplication of Dedekind cuts. We now proceed in that direction, extending the usual operations of arithmetic on <m> \Q </m> to binary operations on <m> \R </m> and determining their properties.
+    </p>
+  </conclusion>
+</subsection>

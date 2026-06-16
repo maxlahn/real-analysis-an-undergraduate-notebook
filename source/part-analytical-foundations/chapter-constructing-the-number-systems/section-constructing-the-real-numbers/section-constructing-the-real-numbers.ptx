@@ -13,9 +13,11 @@
 
   <xi:include href="./subsection-cutting-the-rational-numbers.ptx"/>
 
-  <xi:include href="./subsection-arithmetic-of-dedekind-cuts.ptx"/>
-
   <xi:include href="./subsection-comparison-of-dedekind-cuts.ptx"/>
+
+  <xi:include href="./subsection-addition-of-dedekind-cuts.ptx"/>
+
+  <xi:include href="./subsection-multiplication-of-dedekind-cuts.ptx"/>
 
   <conclusion>
     <p>

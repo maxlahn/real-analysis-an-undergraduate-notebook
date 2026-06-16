@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-multiplication-of-dedekind-cuts" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Multiplication of Dedekind Cuts
+  </title>
+
+  <introduction>
+    <p>
+      Finally, we define multiplication for Dedekind cuts. We will see that this definition depends in a complicated way on the signs of the two factors. As a result of this case-by-case definition of multiplication, we offer the remaining results of this section without proof.
+    </p>
+  </introduction>
+  
+  <lemma xml:id="lemma-multiplication-of-positive-Dedekind-cuts">
+    <title>
+      Multiplication of positive Dedekind cuts
+    </title>
+    
+    <statement>
+      <p>
+        Given two positive Dedekind cuts <m> X , Y \in \R </m>, the set
+        
+        <md>
+          \setmid{ p q \in \Q }{ p \in X \textrm{ and } q \in Y \textrm{ and } \of{ p \geq 0 \textrm{ or } q \geq 0 } }
+        </md>
+        
+        is a Dedekind cut.
+      </p>
+    </statement>
+    
+    <!-- <proof>
+      <p>
+        Denote by <m> Z </m> the set
+        
+        <md>
+          \setmid{ p q \in \Q }{ p \in X \textrm{ and } q \in Y \textrm{ and } \of{ p \geq 0 \textrm{ or } q \geq 0 } }
+        </md>.
+        
+        Since <m> X </m> and <m> Y </m> are positive Dedekind cuts, <m> X_{ 0 } \subsetneq X </m> and <m> X_{ 0 } \subsetneq Y </m>, and so <m> X </m> and <m> Y </m> each contain at least one non-negative rational number; that is, there are <m> p \in X </m> and <m> q \in Y </m> so that <m> p \geq 0 </m> and <m> q \geq 0 </m>. We observe that <m> p q \in Z </m>, so that <m> Z </m> is also non-empty.
+      </p>
+      
+      <p>
+        On the other hand, since <m> X </m> and <m> Y </m> are proper subsets of the rational numbers <m> \Q </m>, there are positive rational numbers <m> r , s \in \Q </m> so that <m> r \notin X </m> and <m> s \notin Y </m>. We observe that <m> p \lt r </m> for all rational numbers <m> p \in \Q </m> and <m> q \lt s </m> for all rational numbers <m> q \in Y </m>.
+      </p>
+    </proof> -->
+  </lemma>
+  
+  <definition xml:id="definition-multiplication-of-dedekind-cuts">
+    <title>
+      Multiplication of Dedekind cuts
+    </title>
+    
+    <idx>
+      multiplication
+    </idx>
+    
+    <statement>
+      <p>
+        The <term> product </term> <m> X \cdot Y </m> of two Dedekind cuts <m> X , Y \in \R </m> is the Dedekind cut defined by the following formulae:
+        
+        <ul>
+          <li>
+            <title>
+              Zero
+            </title>
+            
+            <p>
+              If either <m> X = X_{ 0 } </m> or <m> Y = X_{ 0 } </m>, then <m> X \cdot Y = X_{ 0 } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Positive times positive
+            </title>
+            
+            <p>
+              If both <m> X </m> and <m> Y </m> are positive, then
+              
+              <md>
+                X \times Y = \setmid{ p q \in \Q }{ p \in X \textrm{ and } q \in Y \textrm{ and } \of{ p \geq 0 \textrm{ or } q \geq 0 } }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Positive times negative
+            </title>
+            
+            <p>
+              If <m> X </m> is positive and <m> Y </m> is negative, then
+              
+              <md>
+                X \times Y = -\of{ X \times \of{ -Y } }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Negative times positive
+            </title>
+            
+            <p>
+              If <m> X </m> is negative and <m> Y </m> is positive, then
+              
+              <md>
+                X \times Y = -\of{ \of{ -X } \times Y }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Negative times negative
+            </title>
+            
+            <p>
+              If both <m> X </m> and <m> Y </m> are negative, then
+              
+              <md>
+                X \times Y = \of{ -X } \times \of{ -Y }
+              </md>.
+            </p>
+          </li>
+        </ul>
+        
+        This defines a binary operation <m> \cdot </m> on the set <m> \R </m> of Dedekind cuts.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    We end with a compilation of all relevant results about the arithmetic of Dedekind cuts. While one can verify these results, we omit the proofs of those that involve multiplication in order to simplify the narrative of exposition. Indeed, these proofs rely on casework which, while not difficult, would require more time than we can dedicate to this topic.
+  </p>
+  
+  <theorem xml:id="theorem-arithmetic-of-dedekind-cuts">
+    <title>
+      Arithmetic of Dedekind cuts
+    </title>
+    
+    <statement>
+      <p>
+        The addition and multiplication of Dedekind cuts has the following properties:
+        
+        <ul>
+          <li>
+            <title>
+              Commutativity of addition
+            </title>
+            
+            <p>
+              <m> X + Y = Y + X </m> for all Dedekind cuts <m> X , Y \in \R </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Associativity of addition
+            </title>
+            
+            <p>
+              <m> \of{ X + Y } + Z = X + \of{ Y + Z } </m> and <m> \of{ X \cdot Y } \cdot Z = X \cdot \of{ Y \cdot Z } </m> for all Dedekind cuts <m> X , Y , Z \in \R </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Additive identity element
+            </title>
+            
+            <p>
+              The rational Dedekind cut <m> X_{ 0 } </m> associated to <m> 0 </m> is an additive identity element; that is, <m> X + X_{ 0 } = X_{ 0 } + X = X </m> for all Dedekind cuts <m> X \in \R </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Additive inverses
+            </title>
+            
+            <p>
+              For all Dedekind cuts <m> X \in \R </m>, there is a Dedekind cut <m> -X \in \R </m> so that <m> X + \of{ -X } = \of{ -X } + X = X_{ 0 } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Commutativity of multiplication
+            </title>
+            
+            <p>
+              <m> X \cdot Y = Y \cdot X </m> for all Dedekind cuts <m> X , Y \in \R </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Associativity of multiplication
+            </title>
+            
+            <p>
+              <m> \of{ X \cdot Y } \cdot Z = X \cdot \of{ Y \cdot Z } </m> for all Dedekind cuts <m> X , Y , Z \in \R </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Multiplicative identity element
+            </title>
+            
+            <p>
+              The rational Dedekind cut <m> X_{ 1 } </m> associated to <m> 1 </m> is a multiplicative identity element; that is, <m> X \cdot X_{ 1 } = X_{ 1 } \cdot X = X </m> for all Dedekind cuts <m> X \in \R </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Multiplicative inverses
+            </title>
+            
+            <p>
+              For all Dedekind cuts <m> X \in \R </m>, if <m> X \neq X_{ 0 } </m>, then there is a Dedekind cut <m> X^{ -1 } \in \R </m> so that <m> X \cdot X^{ -1 } = X^{ -1 } \cdot X = X_{ 1 } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Distributivity of multiplication over addition
+            </title>
+            
+            <p>
+              For all Dedekind cuts <m> X , Y , Z \in \R </m>, both
+              
+              <md>
+                X \cdot \of{ Y + Z } = \of{ X \cdot Y } + \of{ X \cdot Z }
+              </md>
+              
+              and
+              
+              <md>
+                \of{ X + Y } \cdot Z = \of{ X \cdot Z } + \of{ Y \cdot Z }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Compatibility of addition and the standard order
+            </title>
+            
+            <p>
+              For all Dedekind cuts <m> W , X , Y , Z \in \R </m>, if <m> W \subseteq Y </m> and <m> X \subseteq Z </m>, then <m> W + X \subseteq Y + Z </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Compatibility of multiplication and the standard order
+            </title>
+            
+            <p>
+              For all Dedekind cuts <m> X , Y \in \R </m>, if <m> X </m> and <m> Y </m> are non-negative, then so too is their product <m> X \cdot Y </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </theorem>
+
+  <conclusion>
+    <p>
+      All of the above properties of the arithmetic of Dedekind cuts not involving multiplication have already been proven. Again, we highlight that while proofs of the remaining parts are not too difficult to construct, they rely on significant casework involving signs; we unfortunately don't have time to study these proofs in detail.
+    </p>
+  </conclusion>
+</subsection>

@@ -651,10 +651,11 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="section-constructing-the-real-numbers.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Constructing the Real Numbers</span></a></div>
 <ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#subsection-cutting-the-rational-numbers" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Cutting the Rational Numbers</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#subsection-arithmetic-of-dedekind-cuts" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Arithmetic of Dedekind Cuts</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#subsection-comparison-of-dedekind-cuts" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Comparison of Dedekind Cuts</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#exercises-constructing-the-real-numbers" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#problems-constructing-the-real-numbers" class="internal"><span class="codenumber">2.2.5</span> <span class="title">Problems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#subsection-comparison-of-dedekind-cuts" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Comparison of Dedekind Cuts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#subsection-addition-of-dedekind-cuts" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Addition of Dedekind Cuts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#subsection-multiplication-of-dedekind-cuts" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Multiplication of Dedekind Cuts</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#exercises-constructing-the-real-numbers" class="internal"><span class="codenumber">2.2.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#problems-constructing-the-real-numbers" class="internal"><span class="codenumber">2.2.6</span> <span class="title">Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -897,26 +898,41 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cutting the Rational Numbers</span>
 </h3>
 <section class="introduction" id="subsection-cutting-the-rational-numbers-2">
-<div class="para" id="subsection-cutting-the-rational-numbers-2-1">Text before the first subdivision.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-cutting-the-rational-numbers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsection-cutting-the-rational-numbers-2-1">So far, our progression through the standard number systems <span class="process-math">\(\N \subsetneq \Z \subsetneq \Q \)</span> has proceeded in order of containment. Every time we have expanded our perspective to consider larger number systems, it has resulted in only the acquisition of new desirable properties. This is an artefact of our focus on the analytical rather than say the number-theoretical; there are for example incredibly interesting properties of the natural numbers <span class="process-math">\(\N \)</span> and the integers <span class="process-math">\(\Z \)</span> which are lost in the jump to the rational numbers <span class="process-math">\(\Q \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsection-cutting-the-rational-numbers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsection-cutting-the-rational-numbers-2-2">
+<div class="para">However, we have yet to see any deficiencies with the rational number system <span class="process-math">\(\Q \)</span> which would motivate seeking an extension. These deficiencies exist, and we will see in <a href="section-the-complete-ordered-field.html" class="internal" title="Section 2.3: The Complete Ordered Field">Section 2.3 The Complete Ordered Field</a> and later in <a href="section-completeness-and-compactness.html" class="internal" title="Section 3.6: Completeness and Compactness">Section 3.6 Completeness and Compactness</a> the benefits in working in the <dfn class="terminology">real numbers</dfn> <span class="process-math">\(\R \text{.}\)</span> As a brief example, we note that <span class="process-math">\(\Q \)</span> can be written as a particular type of disjoint union <span class="process-math">\(\Q = X \sqcup Y \text{,}\)</span> where</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/section-the-complete-ordered-field.html ./knowl/xref/section-completeness-and-compactness.html" id="subsection-cutting-the-rational-numbers-2-2-8">
+\begin{align*}
+X \amp = \setmid{ q \in \Q }{ q \lt 0 \textrm{ or } q^{ 2 } \lt 2 }\\
+Y \amp = \setmid{ q \in \Q }{ q \gt 0 \textrm{ and } q^{ 2 } \gt 2 }\text{.}
+\end{align*}
+</div>
+<div class="para">are defined by strict inequalities. This decomposition of <span class="process-math">\(\Q \)</span> is an example of a <dfn class="terminology">Dedekind cut</dfn>, and we will see that such a decomposition of <span class="process-math">\(\R \)</span> cannot exist.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsection-cutting-the-rational-numbers-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <article class="definition definition-like" id="definition-dedekind-cut"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dedekind cut.</span>
 </h4>
-<div class="para" id="definition-dedekind-cut-3-1">A proper, non-empty subset <span class="process-math">\(0 \subseteq X \subseteq \Q \)</span> of the rational numbers <span class="process-math">\(\Q \)</span> is called a <dfn class="terminology">Dedekind cut</dfn> if it satisfies the following conditions:<div class="autopermalink" data-description="Paragraph"><a href="#definition-dedekind-cut-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<ol class="decimal" id="definition-dedekind-cut-3-2">
-<li id="definition-dedekind-cut-3-2-1">
-<div class="para" id="definition-dedekind-cut-3-2-1-1">For all rational numbers <span class="process-math">\(q_{ 1 } , q_{ 2 } \in \Q \text{,}\)</span> if <span class="process-math">\(q_{ 1 } \leq q_{ 2 } \)</span> and <span class="process-math">\(q_{ 2 } \in X \text{,}\)</span> then <span class="process-math">\(q_{ 1 } \in X \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-dedekind-cut-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="definition-dedekind-cut-4-1">
+<div class="para">A proper, non-empty subset <span class="process-math">\(\emptyset \subsetneq X \subsetneq \Q \)</span> of the rational numbers <span class="process-math">\(\Q \)</span> is called a <dfn class="terminology">Dedekind cut</dfn> if it satisfies the following conditions:</div>
+<ol class="decimal" id="definition-dedekind-cut-4-1-4">
+<li id="definition-dedekind-cut-4-1-4-1">
+<div class="para" id="definition-dedekind-cut-4-1-4-1-1">For all rational numbers <span class="process-math">\(q_{ 1 } , q_{ 2 } \in \Q \text{,}\)</span> if <span class="process-math">\(q_{ 1 } \leq q_{ 2 } \)</span> and <span class="process-math">\(q_{ 2 } \in X \text{,}\)</span> then <span class="process-math">\(q_{ 1 } \in X \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-dedekind-cut-4-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#definition-dedekind-cut-3-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item 1"><a href="#definition-dedekind-cut-4-1-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="definition-dedekind-cut-3-2-2">
-<div class="para" id="definition-dedekind-cut-3-2-2-1">
-<span class="process-math">\(X \)</span> does not have a maximum; that is, for all elements <span class="process-math">\(q_{ 1 } \in X \text{,}\)</span> there is an element <span class="process-math">\(q_{ 2 } \in X \)</span> so that <span class="process-math">\(q_{ 1 } \lt q_{ 2 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-dedekind-cut-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="definition-dedekind-cut-4-1-4-2">
+<div class="para" id="definition-dedekind-cut-4-1-4-2-1">
+<span class="process-math">\(X \)</span> does not have a maximum; that is, for all elements <span class="process-math">\(q_{ 1 } \in X \text{,}\)</span> there is an element <span class="process-math">\(q_{ 2 } \in X \)</span> so that <span class="process-math">\(q_{ 1 } \lt q_{ 2 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-dedekind-cut-4-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#definition-dedekind-cut-3-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#definition-dedekind-cut-4-1-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 </ol>
+<div class="para">The set of Dedekind cuts is denoted <span class="process-math">\(\R \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-dedekind-cut-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" data-description="Definition 2.2.1: Dedekind cut"><a href="#definition-dedekind-cut" title="Copy heading and permalink for Definition 2.2.1: Dedekind cut" aria-label="Copy heading and permalink for Definition 2.2.1: Dedekind cut">🔗</a></div>
 </article>
 <details id="example-dedekind-cuts" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
@@ -1028,78 +1044,739 @@ p = \frac{ 2 q + 2 }{ 2 + q } = \frac{ 2 q + q^{ 2 } }{ 2 + q } + \frac{ 2 - q^{
 \amp = \frac{ 4 - 2 q^{ 2 } }{ \of{ 2 + q }^{ 2 } } = \frac{ 2 \of{ 2 - q^{ 2 } } }{ \of{ 2 + q }^{ 2 } } \gt 0\text{,}
 \end{align*}
 </div>
-<div class="para">so that <span class="process-math">\(p^{ 2 } \lt 2 \text{;}\)</span> that is, <span class="process-math">\(p \in X \text{.}\)</span> We conclude that <span class="process-math">\(X \)</span> is a Dedekind cut.</div>
+<div class="para">so that <span class="process-math">\(p^{ 2 } \lt 2 \text{;}\)</span> that is, <span class="process-math">\(p \in X \text{.}\)</span> We conclude that <span class="process-math">\(X \)</span> is a Dedekind cut, and so it suffices to show that <span class="process-math">\(X \)</span> is not rational.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#proposition-not-all-dedekind-cuts-are-rational-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="proposition-not-all-dedekind-cuts-are-rational-3-3">
-<div class="para">We note that <span class="process-math">\(X \)</span> has complement</div>
-<div class="displaymath process-math" id="proposition-not-all-dedekind-cuts-are-rational-3-3-2">
+<div class="para">To that end, we note that <span class="process-math">\(X \)</span> has complement</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-rational-dedekind-cuts.html" id="proposition-not-all-dedekind-cuts-are-rational-3-3-2">
 \begin{equation*}
 \Q \setminus X = \setmid{ q \in \Q }{ q \geq 0 \textrm{ and } q^{ 2 } \geq 2 }\text{.}
 \end{equation*}
 </div>
-<div class="para">In fact, since <span class="process-math">\(q^{ 2 } \neq 2 \)</span> for all rational numbers <span class="process-math">\(q \in \Q \text{,}\)</span>
-</div>
-<div class="displaymath process-math" id="proposition-not-all-dedekind-cuts-are-rational-3-3-5">
+<div class="para">In fact, since <span class="process-math">\(q^{ 2 } \neq 2 \)</span> for all rational numbers <span class="process-math">\(q \in \Q \)</span> (this fact is proven in any introductory number theory course),</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-rational-dedekind-cuts.html" id="proposition-not-all-dedekind-cuts-are-rational-3-3-5">
 \begin{equation*}
 \Q \setminus X = \setmid{ q \in \Q }{ q \geq 0 \textrm{ and } q^{ 2 } \gt 2 }\text{.}
 \end{equation*}
 </div>
-<div class="para">This set has no minimum element, and so <span class="process-math">\(X \)</span> is not rational.</div>
+<div class="para">We will show that <span class="process-math">\(\Q \setminus X \)</span> has no minimum element. Indeed, let <span class="process-math">\(q \in \Q \setminus X \text{,}\)</span> so that <span class="process-math">\(q \geq 0 \)</span> and <span class="process-math">\(q^{ 2 } \gt 2 \text{.}\)</span> We again consider the rational number</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-rational-dedekind-cuts.html" id="proposition-not-all-dedekind-cuts-are-rational-3-3-10">
+\begin{equation*}
+p = \frac{ 2 q + 2 }{ 2 + q } \in \Q\text{.}
+\end{equation*}
+</div>
+<div class="para">We see that <span class="process-math">\(p \geq 0 \text{.}\)</span> Moreover, now that <span class="process-math">\(q^{ 2 } \gt 2 \text{,}\)</span> we observe that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-rational-dedekind-cuts.html" id="proposition-not-all-dedekind-cuts-are-rational-3-3-13">
+\begin{equation*}
+p = \frac{ 2 q + 2 }{ 2 + q } = \frac{ 2 q + q^{ 2 } }{ 2 + q } + \frac{ 2 - q^{ 2 } }{ 2 + q } = q + \frac{ 2 - q^{ 2 } }{ 2 + q } \lt q
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-rational-dedekind-cuts.html" id="proposition-not-all-dedekind-cuts-are-rational-3-3-14">
+\begin{align*}
+2 - p^{ 2 } \amp = \frac{ 2 \of{ 2 + q }^{ 2 } }{ \of{ 2 + q }^{ 2 } } - \frac{ \of{ 2 q + 2 }^{ 2 } }{ \of{ 2 + q }^{ 2 } }\\
+\amp = \frac{ 4 - 2 q^{ 2 } }{ \of{ 2 + q }^{ 2 } } = \frac{ 2 \of{ 2 - q^{ 2 } } }{ \of{ 2 + q }^{ 2 } } \lt 0\text{,}
+\end{align*}
+</div>
+<div class="para">so that <span class="process-math">\(p^{ 2 } \gt 2 \text{.}\)</span> In particular, <span class="process-math">\(p \lt q \)</span> and <span class="process-math">\(p \in \Q \setminus X \text{.}\)</span> Thus <span class="process-math">\(\Q \setminus X \)</span> has no minimum element, and so <a href="section-constructing-the-real-numbers.html#lemma-rational-dedekind-cuts" class="xref" data-knowl="./knowl/xref/lemma-rational-dedekind-cuts.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 2.2.3: Rational Dedekind cuts">Lemma 2.2.3 Rational Dedekind cuts</a> implies that <span class="process-math">\(X \)</span> is not rational.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#proposition-not-all-dedekind-cuts-are-rational-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Proof 2.2.4.1"><a href="#proposition-not-all-dedekind-cuts-are-rational-3" title="Copy heading and permalink for Proof 2.2.4.1" aria-label="Copy heading and permalink for Proof 2.2.4.1">🔗</a></div>
 </article></details>
-<section class="conclusion" id="subsection-cutting-the-rational-numbers-8">
-<div class="para" id="subsection-cutting-the-rational-numbers-8-1">Text after the last subdivision.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-cutting-the-rational-numbers-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="subsection-cutting-the-rational-numbers-8">
+<div class="para">Once we define the arithmetic of Dedekind cuts, we will see that the Dedekind cut</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-not-all-dedekind-cuts-are-rational.html" id="subsection-cutting-the-rational-numbers-8-1">
+\begin{equation*}
+X = \setmid{ q \in \Q }{ q \lt 0 \textrm{ or } q^{ 2 } \lt 2 }
+\end{equation*}
+</div>
+<div class="para">from the above proof of <a href="section-constructing-the-real-numbers.html#proposition-not-all-dedekind-cuts-are-rational" class="xref" data-knowl="./knowl/xref/proposition-not-all-dedekind-cuts-are-rational.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 2.2.4: Irrational Dedekind cuts">Proposition 2.2.4 Irrational Dedekind cuts</a> represents the <dfn class="terminology">irrational</dfn> real number <span class="process-math">\(\sqrt{ 2 } \text{.}\)</span> First, however, we observe that the rational numbers <span class="process-math">\(\Q \)</span> inject into <span class="process-math">\(\R \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsection-cutting-the-rational-numbers-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-rational-numbers-as-real-numbers"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rational numbers as real numbers.</span>
+</h4>
+<div class="para" id="proposition-rational-numbers-as-real-numbers-2-1">The map <span class="process-math">\(\iota \colon \Q \to \R \)</span> defined by the formula <span class="process-math">\(\iota \of{ q } = X_{ q } \)</span> is injective.<div class="autopermalink" data-description="Paragraph"><a href="#proposition-rational-numbers-as-real-numbers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 2.2.5: Rational numbers as real numbers"><a href="#proposition-rational-numbers-as-real-numbers" title="Copy heading and permalink for Proposition 2.2.5: Rational numbers as real numbers" aria-label="Copy heading and permalink for Proposition 2.2.5: Rational numbers as real numbers">🔗</a></div>
+</article>
+<details id="proposition-rational-numbers-as-real-numbers-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="proposition-rational-numbers-as-real-numbers-3-1">
+<div class="para">Let <span class="process-math">\(q_{ 1 } , q_{ 2 } \in \Q \)</span> be rational numbers, and suppose that <span class="process-math">\(\iota \of{ q_{ 1 } } = \iota \of{ q_{ 2 } } \text{.}\)</span> As shown in the proof of <a href="section-constructing-the-real-numbers.html#lemma-rational-dedekind-cuts" class="xref" data-knowl="./knowl/xref/lemma-rational-dedekind-cuts.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 2.2.3: Rational Dedekind cuts">Lemma 2.2.3 Rational Dedekind cuts</a>, <span class="process-math">\(\min \of{ X_{ q } } = q \)</span> for all rational numbers <span class="process-math">\(q \in \Q \text{.}\)</span> Therefore,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-rational-dedekind-cuts.html" id="proposition-rational-numbers-as-real-numbers-3-1-6">
+\begin{align*}
+q_{ 1 } \amp = \min \of{ X_{ q_{ 1 } } } = \min \of{ \iota \of{ q_{ 1 } } }\\
+\amp = \min \of{ \iota \of{ q_{ 2 } } } = \min \of{ X_{ q_{ 2 } } } = q_{ 2 }\text{.}
+\end{align*}
+</div>
+<div class="para">Thus <span class="process-math">\(\iota \colon \Q \to \R \)</span> is injective.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-rational-numbers-as-real-numbers-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.2.5.1"><a href="#proposition-rational-numbers-as-real-numbers-3" title="Copy heading and permalink for Proof 2.2.5.1" aria-label="Copy heading and permalink for Proof 2.2.5.1">🔗</a></div>
+</article></details>
+<section class="conclusion" id="subsection-cutting-the-rational-numbers-10">
+<div class="para" id="subsection-cutting-the-rational-numbers-10-1">Going forward, we will often exploit the injection <span class="process-math">\(\iota \colon \Q \to \R \)</span> to pretend that <span class="process-math">\(\Q \subseteq \R \)</span> by identifying a rational number with its associated rational Dedekind cut. We will now construct a total order <span class="process-math">\(\leq \)</span> on <span class="process-math">\(\R \)</span> which extends the standard order on <span class="process-math">\(\Q \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsection-cutting-the-rational-numbers-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><div class="autopermalink" data-description="Subsection 2.2.1: Cutting the Rational Numbers"><a href="#subsection-cutting-the-rational-numbers" title="Copy heading and permalink for Subsection 2.2.1: Cutting the Rational Numbers" aria-label="Copy heading and permalink for Subsection 2.2.1: Cutting the Rational Numbers">🔗</a></div>
-</section>
-<section class="subsection" id="subsection-arithmetic-of-dedekind-cuts">
-<h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Arithmetic of Dedekind Cuts</span>
-</h3>
-<section class="introduction" id="subsection-arithmetic-of-dedekind-cuts-2">
-<div class="para" id="subsection-arithmetic-of-dedekind-cuts-2-1">Text before the first subdivision.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-arithmetic-of-dedekind-cuts-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section>
-<section class="conclusion" id="subsection-arithmetic-of-dedekind-cuts-3">
-<div class="para" id="subsection-arithmetic-of-dedekind-cuts-3-1">Text after the last subdivision.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-arithmetic-of-dedekind-cuts-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" data-description="Subsection 2.2.2: Arithmetic of Dedekind Cuts"><a href="#subsection-arithmetic-of-dedekind-cuts" title="Copy heading and permalink for Subsection 2.2.2: Arithmetic of Dedekind Cuts" aria-label="Copy heading and permalink for Subsection 2.2.2: Arithmetic of Dedekind Cuts">🔗</a></div>
 </section>
 <section class="subsection" id="subsection-comparison-of-dedekind-cuts">
 <h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comparison of Dedekind Cuts</span>
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comparison of Dedekind Cuts</span>
 </h3>
 <section class="introduction" id="subsection-comparison-of-dedekind-cuts-2">
-<div class="para" id="subsection-comparison-of-dedekind-cuts-2-1">Text before the first subdivision.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-comparison-of-dedekind-cuts-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsection-comparison-of-dedekind-cuts-2-1">Our two perspectives on the set <span class="process-math">\(\Q \)</span> (as equivalence classes of fractions and as rational Dedekind cuts) yield two natural orderings: the standard ordering <span class="process-math">\(\leq \)</span> and the partial order of set containment. In fact, these orderings agree.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-comparison-of-dedekind-cuts-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="subsection-comparison-of-dedekind-cuts-3">
-<div class="para" id="subsection-comparison-of-dedekind-cuts-3-1">Text after the last subdivision.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-comparison-of-dedekind-cuts-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" data-description="Subsection 2.2.3: Comparison of Dedekind Cuts"><a href="#subsection-comparison-of-dedekind-cuts" title="Copy heading and permalink for Subsection 2.2.3: Comparison of Dedekind Cuts" aria-label="Copy heading and permalink for Subsection 2.2.3: Comparison of Dedekind Cuts">🔗</a></div>
+<article class="corollary theorem-like" id="corollary-ordering-dedekind-cuts-by-containment"><h4 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Ordering Dedekind cuts by containment.</span>
+</h4>
+<div class="para" id="corollary-ordering-dedekind-cuts-by-containment-2-1">The standard ordering <span class="process-math">\(\leq \)</span> on the rational numbers <span class="process-math">\(\Q \)</span> is the pullback of set containment <span class="process-math">\(\subseteq \)</span> on the set <span class="process-math">\(\R \)</span> of Dedekind cuts.<div class="autopermalink" data-description="Paragraph"><a href="#corollary-ordering-dedekind-cuts-by-containment-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 2.2.6: Ordering Dedekind cuts by containment"><a href="#corollary-ordering-dedekind-cuts-by-containment" title="Copy heading and permalink for Corollary 2.2.6: Ordering Dedekind cuts by containment" aria-label="Copy heading and permalink for Corollary 2.2.6: Ordering Dedekind cuts by containment">🔗</a></div>
+</article>
+<details id="corollary-ordering-dedekind-cuts-by-containment-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="corollary-ordering-dedekind-cuts-by-containment-3-1">
+<div class="para">Let <span class="process-math">\(q_{ 1 } , q_{ 2 } \in \Q \)</span> be rational numbers. We note that</div>
+<div class="displaymath process-math" id="corollary-ordering-dedekind-cuts-by-containment-3-1-2">
+\begin{align*}
+X_{ q_{ 1 } } \amp = \setmid{ p \in \Q }{ p \lt q_{ 1 } }\\
+X_{ q_{ 2 } } \amp = \setmid{ p \in \Q }{ p \lt q_{ 2 } }\text{.}
+\end{align*}
+</div>
+<div class="para">First suppose that <span class="process-math">\(q_{ 1 } \leq q_{ 2 } \text{.}\)</span> If <span class="process-math">\(p \in X_{ q_{ 1 } } \text{,}\)</span> then</div>
+<div class="displaymath process-math" id="corollary-ordering-dedekind-cuts-by-containment-3-1-5">
+\begin{equation*}
+p \lt q_{ 1 } \leq q_{ 2 }
+\end{equation*}
+</div>
+<div class="para">and so <span class="process-math">\(p \in X_{ q_{ 2 } } \text{;}\)</span> that is,</div>
+<div class="displaymath process-math" id="corollary-ordering-dedekind-cuts-by-containment-3-1-7">
+\begin{equation*}
+\iota \of{ q_{ 1 } } = X_{ q_{ 1 } } \subseteq X_{ q_{ 2 } } = \iota \of{ q_{ 2 } }\text{,}
+\end{equation*}
+</div>
+<div class="para">so that <span class="process-math">\(q_{ 1 } \subseteq_{ \iota } q_{ 2 } \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#corollary-ordering-dedekind-cuts-by-containment-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="corollary-ordering-dedekind-cuts-by-containment-3-2">
+<div class="para">Conversely, now suppose that <span class="process-math">\(q_{ 1 } \subseteq_{ \iota } q_{ 2 } \text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="corollary-ordering-dedekind-cuts-by-containment-3-2-2">
+\begin{equation*}
+X_{ q_{ 1 } } = \iota \of{ q_{ 1 } } \subseteq \iota \of{ q_{ 2 } } = X_{ q_{ 2 } }\text{.}
+\end{equation*}
+</div>
+<div class="para">If <span class="process-math">\(q_{ 1 } \gt q_{ 2 } \text{,}\)</span> then</div>
+<div class="displaymath process-math" id="corollary-ordering-dedekind-cuts-by-containment-3-2-4">
+\begin{equation*}
+q_{ 2 } \lt \frac{ q_{ 1 } + q_{ 2 } }{ 2 } \lt q_{ 1 }\text{,}
+\end{equation*}
+</div>
+<div class="para">and so <span class="process-math">\(\frac{ q_{ 1 } + q_{ 2 } }{ 2 } \in X_{ q_{ 1 } } \setminus X_{ q_{ 2 } } \text{.}\)</span> This would imply that <span class="process-math">\(X_{ q_{ 1 } } \not \subseteq X_{ q_{ 2 } } \text{,}\)</span> and so we must have <span class="process-math">\(q_{ 1 } \leq q_{ 2 } \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#corollary-ordering-dedekind-cuts-by-containment-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="corollary-ordering-dedekind-cuts-by-containment-3-3">In summary, we have shown that <span class="process-math">\(q_{ 1 } \leq q_{ 2 } \)</span> if and only if <span class="process-math">\(q_{ 1 } \subseteq_{ \iota } q_{ 2 } \text{,}\)</span> and so <span class="process-math">\(\leq \)</span> and <span class="process-math">\(\subseteq_{ \iota } \)</span> are the same binary relation on <span class="process-math">\(\Q \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#corollary-ordering-dedekind-cuts-by-containment-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.2.6.1"><a href="#corollary-ordering-dedekind-cuts-by-containment-3" title="Copy heading and permalink for Proof 2.2.6.1" aria-label="Copy heading and permalink for Proof 2.2.6.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-comparison-of-dedekind-cuts-4">
+<a href="section-constructing-the-real-numbers.html#corollary-ordering-dedekind-cuts-by-containment" class="xref" data-knowl="./knowl/xref/corollary-ordering-dedekind-cuts-by-containment.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 2.2.6: Ordering Dedekind cuts by containment">Corollary 2.2.6 Ordering Dedekind cuts by containment</a> implies that comparing rational numbers is the same as comparing their associated rational Dedekind cuts by containment. This gives us the template for how to compare Dedekind cuts in general: we compare by set containment.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-comparison-of-dedekind-cuts-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="theorem-comparison-of-dedekind-cuts"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comparison of Dedekind cuts.</span>
+</h4>
+<div class="para" id="theorem-comparison-of-dedekind-cuts-2-1">Set containment <span class="process-math">\(\subseteq \)</span> is a total order on the set <span class="process-math">\(\R \)</span> of Dedekind cuts.<div class="autopermalink" data-description="Paragraph"><a href="#theorem-comparison-of-dedekind-cuts-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.2.7: Comparison of Dedekind cuts"><a href="#theorem-comparison-of-dedekind-cuts" title="Copy heading and permalink for Theorem 2.2.7: Comparison of Dedekind cuts" aria-label="Copy heading and permalink for Theorem 2.2.7: Comparison of Dedekind cuts">🔗</a></div>
+</article>
+<details id="theorem-comparison-of-dedekind-cuts-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="theorem-comparison-of-dedekind-cuts-3-1">Since set containment is a partial order, it suffices to show only totality. To that end, let <span class="process-math">\(X , Y \in \R \)</span> be Dedekind cuts, and suppose that <span class="process-math">\(X \not \subseteq Y \text{.}\)</span> Then there is some rational number <span class="process-math">\(q \in X \)</span> so that <span class="process-math">\(q \notin Y \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-comparison-of-dedekind-cuts-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="theorem-comparison-of-dedekind-cuts-3-2">Let <span class="process-math">\(p \in Y \text{.}\)</span> If <span class="process-math">\(q \leq p \text{,}\)</span> then we would have <span class="process-math">\(q \in Y \text{,}\)</span> and so we must have <span class="process-math">\(p \leq q \text{.}\)</span> But this implies that <span class="process-math">\(p \in X \text{,}\)</span> and so <span class="process-math">\(Y \subseteq X \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-comparison-of-dedekind-cuts-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="theorem-comparison-of-dedekind-cuts-3-3">In summary, we have shown that for all Dedekind cuts <span class="process-math">\(X , Y \in \R \text{,}\)</span> either <span class="process-math">\(X \subseteq Y \)</span> or <span class="process-math">\(Y \subseteq X \text{.}\)</span> Thus set containment <span class="process-math">\(\subseteq \)</span> is a total order on the set <span class="process-math">\(\R \)</span> of Dedekind cuts.<div class="autopermalink" data-description="Paragraph"><a href="#theorem-comparison-of-dedekind-cuts-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.2.7.1"><a href="#theorem-comparison-of-dedekind-cuts-3" title="Copy heading and permalink for Proof 2.2.7.1" aria-label="Copy heading and permalink for Proof 2.2.7.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-comparison-of-dedekind-cuts-6">Just as with the integers <span class="process-math">\(\Z \)</span> and rational numbers <span class="process-math">\(\Q \text{,}\)</span> we can use the standard ordering on <span class="process-math">\(\R \)</span> to distinguish Dedekind cuts by their <dfn class="terminology">sign</dfn>: either <dfn class="terminology">positive</dfn>, <dfn class="terminology">negative</dfn>, or <dfn class="terminology">zero</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-comparison-of-dedekind-cuts-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-sign-of-a-dedekind-cut"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sign of a Dedekind cut.</span>
+</h4>
+<div class="para logical" id="definition-sign-of-a-dedekind-cut-2-1">
+<div class="para">Recall that</div>
+<div class="displaymath process-math" id="definition-sign-of-a-dedekind-cut-2-1-1">
+\begin{equation*}
+X_{ 0 } = \setmid{ q \in \Q }{ q \lt 0 }
+\end{equation*}
+</div>
+<div class="para">is the rational Dedekind cut associated to the rational number <span class="process-math">\(0 \text{.}\)</span>
+</div>
+<ul class="disc" id="definition-sign-of-a-dedekind-cut-2-1-3">
+<li id="definition-sign-of-a-dedekind-cut-2-1-3-1">
+<span class="heading li--heading"><span class="title li--heading-title">Positivity.</span></span>
+<div class="para" id="definition-sign-of-a-dedekind-cut-2-1-3-1-2">A Dedekind cut <span class="process-math">\(X \in \R \)</span> is called <dfn class="terminology">positive</dfn> if it strictly contains <span class="process-math">\(X_{ 0 } \text{;}\)</span> that is, <span class="process-math">\(X \)</span> is positive if <span class="process-math">\(X \supsetneq X_{ 0 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-sign-of-a-dedekind-cut-2-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Positivity"><a href="#definition-sign-of-a-dedekind-cut-2-1-3-1" title="Copy heading and permalink for Item: Positivity" aria-label="Copy heading and permalink for Item: Positivity">🔗</a></div>
+</li>
+<li id="definition-sign-of-a-dedekind-cut-2-1-3-2">
+<span class="heading li--heading"><span class="title li--heading-title">Negativity.</span></span>
+<div class="para" id="definition-sign-of-a-dedekind-cut-2-1-3-2-2">A Dedekind cut <span class="process-math">\(X \in \R \)</span> is called <dfn class="terminology">negative</dfn> if it is strictly contained in <span class="process-math">\(X_{ 0 } \text{;}\)</span> that is, <span class="process-math">\(X \)</span> is negative if <span class="process-math">\(X \subsetneq X_{ 0 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-sign-of-a-dedekind-cut-2-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Negativity"><a href="#definition-sign-of-a-dedekind-cut-2-1-3-2" title="Copy heading and permalink for Item: Negativity" aria-label="Copy heading and permalink for Item: Negativity">🔗</a></div>
+</li>
+<li id="definition-sign-of-a-dedekind-cut-2-1-3-3">
+<span class="heading li--heading"><span class="title li--heading-title">Non-negativity.</span></span>
+<div class="para" id="definition-sign-of-a-dedekind-cut-2-1-3-3-2">A Dedekind cut <span class="process-math">\(X \in \R \)</span> is called <dfn class="terminology">non-negative</dfn> if it contains <span class="process-math">\(X_{ 0 } \text{;}\)</span> that is, <span class="process-math">\(X \)</span> is non-negative if <span class="process-math">\(X \supseteq X_{ 0 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-sign-of-a-dedekind-cut-2-1-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Non-negativity"><a href="#definition-sign-of-a-dedekind-cut-2-1-3-3" title="Copy heading and permalink for Item: Non-negativity" aria-label="Copy heading and permalink for Item: Non-negativity">🔗</a></div>
+</li>
+<li id="definition-sign-of-a-dedekind-cut-2-1-3-4">
+<span class="heading li--heading"><span class="title li--heading-title">Non-positivity.</span></span>
+<div class="para" id="definition-sign-of-a-dedekind-cut-2-1-3-4-2">A Dedekind cut <span class="process-math">\(X \in \R \)</span> is called <dfn class="terminology">non-positive</dfn> if it is contained in <span class="process-math">\(X_{ 0 } \text{;}\)</span> that is, <span class="process-math">\(X \)</span> is positive if <span class="process-math">\(X \subseteq X_{ 0 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-sign-of-a-dedekind-cut-2-1-3-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Non-positivity"><a href="#definition-sign-of-a-dedekind-cut-2-1-3-4" title="Copy heading and permalink for Item: Non-positivity" aria-label="Copy heading and permalink for Item: Non-positivity">🔗</a></div>
+</li>
+</ul>
+<div class="para">In particular, the <dfn class="terminology">sign</dfn> of a Dedekind cut is either positive, negative, or zero.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-sign-of-a-dedekind-cut-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.2.8: Sign of a Dedekind cut"><a href="#definition-sign-of-a-dedekind-cut" title="Copy heading and permalink for Definition 2.2.8: Sign of a Dedekind cut" aria-label="Copy heading and permalink for Definition 2.2.8: Sign of a Dedekind cut">🔗</a></div>
+</article>
+<section class="conclusion" id="subsection-comparison-of-dedekind-cuts-8">
+<div class="para" id="subsection-comparison-of-dedekind-cuts-8-1">This classification of Dedekind cuts by sign will be useful in formalizing the multiplication of Dedekind cuts. We now proceed in that direction, extending the usual operations of arithmetic on <span class="process-math">\(\Q \)</span> to binary operations on <span class="process-math">\(\R \)</span> and determining their properties.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-comparison-of-dedekind-cuts-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Subsection 2.2.2: Comparison of Dedekind Cuts"><a href="#subsection-comparison-of-dedekind-cuts" title="Copy heading and permalink for Subsection 2.2.2: Comparison of Dedekind Cuts" aria-label="Copy heading and permalink for Subsection 2.2.2: Comparison of Dedekind Cuts">🔗</a></div>
 </section>
-<section class="conclusion" id="section-constructing-the-real-numbers-6">
-<div class="para" id="section-constructing-the-real-numbers-6-1">In the next section, we will continue to explore the properties of the real number system. In particular, we will characterize <span class="process-math">\(\R \)</span> as the unique <dfn class="terminology">Dedekind complete</dfn> <dfn class="terminology">ordered field</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#section-constructing-the-real-numbers-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="subsection" id="subsection-addition-of-dedekind-cuts">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Addition of Dedekind Cuts</span>
+</h3>
+<section class="introduction" id="subsection-addition-of-dedekind-cuts-2">
+<div class="para" id="subsection-addition-of-dedekind-cuts-2-1">Finally, we begin to define arithmetic for Dedekind cuts. We emphasize that the utility of what follows is neither the details of the construction nor the methods of proof, but rather the very fact that the operations exist with the same properties we would expect. That is to say, we will eventually lose sight of the particularities of the construction of the real number system by Dedekind cuts and treat real numbers as objects which obey the rules of arithmetic.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-addition-of-dedekind-cuts-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="lemma theorem-like" id="lemma-addition-of-dedekind-cuts"><h4 class="heading">
+<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Addition of Dedekind cuts.</span>
+</h4>
+<div class="para logical" id="lemma-addition-of-dedekind-cuts-2-1">
+<div class="para">Given two Dedekind cuts <span class="process-math">\(X , Y \in \R \text{,}\)</span> the set</div>
+<div class="displaymath process-math" id="lemma-addition-of-dedekind-cuts-2-1-2">
+\begin{equation*}
+\setmid{ p + q \in \Q }{ p \in X \textrm{ and } q \in Y }
+\end{equation*}
+</div>
+<div class="para">is a Dedekind cut.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lemma-addition-of-dedekind-cuts-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Lemma 2.2.9: Addition of Dedekind cuts"><a href="#lemma-addition-of-dedekind-cuts" title="Copy heading and permalink for Lemma 2.2.9: Addition of Dedekind cuts" aria-label="Copy heading and permalink for Lemma 2.2.9: Addition of Dedekind cuts">🔗</a></div>
+</article>
+<details id="lemma-addition-of-dedekind-cuts-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="lemma-addition-of-dedekind-cuts-3-1">
+<div class="para">Denote by <span class="process-math">\(Z \)</span> the set</div>
+<div class="displaymath process-math" id="lemma-addition-of-dedekind-cuts-3-1-2">
+\begin{equation*}
+Z = \setmid{ p + q \in \Q }{ p \in X \textrm{ and } q \in Y }\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(X \)</span> and <span class="process-math">\(Y \)</span> are Dedekind cuts, they are non-empty subsets of <span class="process-math">\(\Q \text{,}\)</span> and so there are rational numbers <span class="process-math">\(p \in X \)</span> and <span class="process-math">\(q \in Y \text{.}\)</span> Thus <span class="process-math">\(p + q \in Z \text{,}\)</span> and so <span class="process-math">\(Z \)</span> is also non-empty.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lemma-addition-of-dedekind-cuts-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="lemma-addition-of-dedekind-cuts-3-2">
+<div class="para">On the other hand, <span class="process-math">\(X \)</span> and <span class="process-math">\(Y \)</span> are proper subsets of <span class="process-math">\(\Q \text{,}\)</span> and so there are rational numbers <span class="process-math">\(r \in \Q \setminus X \)</span> and <span class="process-math">\(s \in \Q \setminus Y \text{.}\)</span> We observe that that <span class="process-math">\(r \gt p \)</span> for all <span class="process-math">\(p \in X \)</span> and <span class="process-math">\(s \gt q \)</span> for all <span class="process-math">\(q \in Y \text{.}\)</span> In particular, for all <span class="process-math">\(t \in Z \)</span> there are rational numbers <span class="process-math">\(p \in X \)</span> and <span class="process-math">\(q \in Y \)</span> so that <span class="process-math">\(t = p + q \text{,}\)</span> and so</div>
+<div class="displaymath process-math" id="lemma-addition-of-dedekind-cuts-3-2-14">
+\begin{equation*}
+r + s \gt p + q = t
+\end{equation*}
+</div>
+<div class="para">In particular, <span class="process-math">\(r + s \notin Z \text{,}\)</span> and so <span class="process-math">\(Z \)</span> is also a proper subset of <span class="process-math">\(\Q \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lemma-addition-of-dedekind-cuts-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="lemma-addition-of-dedekind-cuts-3-3">
+<div class="para">Now let <span class="process-math">\(r , s \in \Q \)</span> be rational numbers, and suppose that <span class="process-math">\(s \leq r \)</span> and <span class="process-math">\(r \in Z \text{.}\)</span> We wish to show that <span class="process-math">\(s \in Z \text{.}\)</span> To that end, we see that <span class="process-math">\(r = p + q \)</span> for some rational numbers <span class="process-math">\(p \in X \)</span> and <span class="process-math">\(q \in Y \text{.}\)</span> Since <span class="process-math">\(s - r \leq 0 \text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="lemma-addition-of-dedekind-cuts-3-3-9">
+\begin{equation*}
+q + \of{ s - r } \leq q + 0 = q \in Y\text{,}
+\end{equation*}
+</div>
+<div class="para">and so <span class="process-math">\(q + \of{ s - r } \in Y \text{.}\)</span> This implies that</div>
+<div class="displaymath process-math" id="lemma-addition-of-dedekind-cuts-3-3-11">
+\begin{equation*}
+s = r + \of{ s - r } = p + \of{ q + \of{ s - r } } \in Z\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lemma-addition-of-dedekind-cuts-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="lemma-addition-of-dedekind-cuts-3-4">
+<div class="para">It remains to show that <span class="process-math">\(Z \)</span> does not have a maximum. To that end, let <span class="process-math">\(r_{ 1 } \in Z \text{,}\)</span> so that <span class="process-math">\(r_{ 1 } = p_{ 1 } + q_{ 1 } \)</span> for some rational numbers <span class="process-math">\(p_{ 1 } \in X \)</span> and <span class="process-math">\(q_{ 1 } \in Y \text{.}\)</span> Since <span class="process-math">\(X \)</span> and <span class="process-math">\(Y \)</span> are Dedekind cuts, they do not have maxima, and so <span class="process-math">\(p_{ 1 } \lt p_{ 2 } \)</span> and <span class="process-math">\(q_{ 1 } \lt q_{ 2 } \)</span> for some rational numbers <span class="process-math">\(p_{ 2 } \in X \)</span> and <span class="process-math">\(q_{ 2 } \in Y \text{.}\)</span> We conclude that <span class="process-math">\(r_{ 2 } = p_{ 2 } + q_{ 2 } \in Z \text{,}\)</span> and that</div>
+<div class="displaymath process-math" id="lemma-addition-of-dedekind-cuts-3-4-13">
+\begin{equation*}
+r_{ 1 } = p_{ 1 } + q_{ 1 } \lt p_{ 2 } + q_{ 2 } = r_{ 2 }\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus <span class="process-math">\(Z \)</span> does not have a maximum, and so is a Dedekind cut.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lemma-addition-of-dedekind-cuts-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.2.9.1"><a href="#lemma-addition-of-dedekind-cuts-3" title="Copy heading and permalink for Proof 2.2.9.1" aria-label="Copy heading and permalink for Proof 2.2.9.1">🔗</a></div>
+</article></details>
+<article class="definition definition-like" id="definition-addition-of-dedekind-cuts"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Addition of Dedekind cuts.</span>
+</h4>
+<div class="para logical" id="definition-addition-of-dedekind-cuts-3-1">
+<div class="para">The <dfn class="terminology">sum</dfn> <span class="process-math">\(X + Y \)</span> of two Dedekind cuts <span class="process-math">\(X , Y \in \R \)</span> is the Dedekind cut defined by</div>
+<div class="displaymath process-math" id="definition-addition-of-dedekind-cuts-3-1-4">
+\begin{equation*}
+X + Y = \setmid{ p + q \in \Q }{ p \in X \textrm{ and } q \in Y }\text{.}
+\end{equation*}
+</div>
+<div class="para">This defines a binary operation <span class="process-math">\(+ \)</span> on the set <span class="process-math">\(\R \)</span> of Dedekind cuts.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-addition-of-dedekind-cuts-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.2.10: Addition of Dedekind cuts"><a href="#definition-addition-of-dedekind-cuts" title="Copy heading and permalink for Definition 2.2.10: Addition of Dedekind cuts" aria-label="Copy heading and permalink for Definition 2.2.10: Addition of Dedekind cuts">🔗</a></div>
+</article>
+<div class="para" id="subsection-addition-of-dedekind-cuts-5">We first observe that addition of rational Dedekind cuts mirrors the addition of the corresponding rational numbers.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-addition-of-dedekind-cuts-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="lemma theorem-like" id="lemma-addition-of-rational-dedekind-cuts"><h4 class="heading">
+<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Addition of rational Dedekind cuts.</span>
+</h4>
+<div class="para" id="lemma-addition-of-rational-dedekind-cuts-2-1">
+<span class="process-math">\(X_{ p } + X_{ q } = X_{ p + q } \)</span> for all rational numbers <span class="process-math">\(p , q \in \Q \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lemma-addition-of-rational-dedekind-cuts-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Lemma 2.2.11: Addition of rational Dedekind cuts"><a href="#lemma-addition-of-rational-dedekind-cuts" title="Copy heading and permalink for Lemma 2.2.11: Addition of rational Dedekind cuts" aria-label="Copy heading and permalink for Lemma 2.2.11: Addition of rational Dedekind cuts">🔗</a></div>
+</article>
+<details id="lemma-addition-of-rational-dedekind-cuts-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="lemma-addition-of-rational-dedekind-cuts-3-1">
+<div class="para">Let <span class="process-math">\(r \in \Q \)</span> be a rational number, and suppose first that <span class="process-math">\(r \in X_{ p } + X_{ q } \text{.}\)</span> Then <span class="process-math">\(r = s + t \)</span> for some rational numbers <span class="process-math">\(s \in X_{ p } \)</span> and <span class="process-math">\(t \in X_{ q } \text{,}\)</span> so that <span class="process-math">\(s \lt p \)</span> and <span class="process-math">\(t \lt q \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="lemma-addition-of-rational-dedekind-cuts-3-1-8">
+\begin{equation*}
+r = s + t \lt p + q\text{,}
+\end{equation*}
+</div>
+<div class="para">and so <span class="process-math">\(r \in X_{ p + q } \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lemma-addition-of-rational-dedekind-cuts-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="lemma-addition-of-rational-dedekind-cuts-3-2">
+<div class="para">Conversely, now suppose that <span class="process-math">\(r \in X_{ p + q } \text{,}\)</span> so that <span class="process-math">\(r \lt p + q \text{.}\)</span> Consider the rational numbers</div>
+<div class="displaymath process-math" id="lemma-addition-of-rational-dedekind-cuts-3-2-3">
+\begin{align*}
+s \amp = p + \frac{ r - \of{ p + q } }{ 2 } \amp t \amp = q + \frac{ r - \of{ p + q } }{ 2 }\text{.}
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(\of{ \frac{ r - \of{ p + q } }{ 2 } } \lt 0 \text{,}\)</span> <span class="process-math">\(s \lt p \)</span> and <span class="process-math">\(t \lt q \text{,}\)</span> and so <span class="process-math">\(s \in X_{ p } \)</span> and <span class="process-math">\(t \in X_{ q } \text{.}\)</span> We conclude that</div>
+<div class="displaymath process-math" id="lemma-addition-of-rational-dedekind-cuts-3-2-9">
+\begin{align*}
+r \amp = p + q + \of{ r - \of{ p + q } } = p + \frac{ r - \of{ p + q } }{ 2 } + q + \frac{ r - \of{ p + q } }{ 2 }\\
+\amp = s + t \in X_{ p } + X_{ q }\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lemma-addition-of-rational-dedekind-cuts-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="lemma-addition-of-rational-dedekind-cuts-3-3">In summary, we have shown that <span class="process-math">\(r \in X_{ p } + X_{ q } \)</span> if and only if <span class="process-math">\(r \in X_{ p + q } \text{,}\)</span> and so <span class="process-math">\(X_{ p } + X_{ q } = X_{ p + q } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lemma-addition-of-rational-dedekind-cuts-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.2.11.1"><a href="#lemma-addition-of-rational-dedekind-cuts-3" title="Copy heading and permalink for Proof 2.2.11.1" aria-label="Copy heading and permalink for Proof 2.2.11.1">🔗</a></div>
+</article></details>
+<article class="proposition theorem-like" id="proposition-addition-of-dedekind-cuts"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Addition of Dedekind cuts.</span>
+</h4>
+<div class="para logical" id="proposition-addition-of-dedekind-cuts-2-1">
+<div class="para">Addition <span class="process-math">\(+ \)</span> of Dedekind cuts has the following properties:</div>
+<ol class="decimal" id="proposition-addition-of-dedekind-cuts-2-1-2">
+<li id="proposition-addition-of-dedekind-cuts-2-1-2-1">
+<span class="heading li--heading"><span class="title li--heading-title">Commutativity.</span></span>
+<div class="para" id="proposition-addition-of-dedekind-cuts-2-1-2-1-2">
+<span class="process-math">\(X + Y = Y + X \)</span> for all Dedekind cuts <span class="process-math">\(X , Y \in \R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#proposition-addition-of-dedekind-cuts-2-1-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1: Commutativity"><a href="#proposition-addition-of-dedekind-cuts-2-1-2-1" title="Copy heading and permalink for Item 1: Commutativity" aria-label="Copy heading and permalink for Item 1: Commutativity">🔗</a></div>
+</li>
+<li id="proposition-addition-of-dedekind-cuts-2-1-2-2">
+<span class="heading li--heading"><span class="title li--heading-title">Associativity.</span></span>
+<div class="para" id="proposition-addition-of-dedekind-cuts-2-1-2-2-2">
+<span class="process-math">\(\of{ X + Y } + Z = X + \of{ Y + Z } \)</span> for all Dedekind cuts <span class="process-math">\(X , Y , Z \in \R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#proposition-addition-of-dedekind-cuts-2-1-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2: Associativity"><a href="#proposition-addition-of-dedekind-cuts-2-1-2-2" title="Copy heading and permalink for Item 2: Associativity" aria-label="Copy heading and permalink for Item 2: Associativity">🔗</a></div>
+</li>
+<li id="proposition-addition-of-dedekind-cuts-2-1-2-3">
+<span class="heading li--heading"><span class="title li--heading-title">Identity element.</span></span>
+<div class="para" id="proposition-addition-of-dedekind-cuts-2-1-2-3-2">The rational Dedekind cut <span class="process-math">\(X_{ 0 } \)</span> associated to <span class="process-math">\(0 \)</span> is an additive identity element; that is, <span class="process-math">\(X + X_{ 0 } = X_{ 0 } + X = X \)</span> for all Dedekind cuts <span class="process-math">\(X \in \R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#proposition-addition-of-dedekind-cuts-2-1-2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3: Identity element"><a href="#proposition-addition-of-dedekind-cuts-2-1-2-3" title="Copy heading and permalink for Item 3: Identity element" aria-label="Copy heading and permalink for Item 3: Identity element">🔗</a></div>
+</li>
+<li id="proposition-addition-of-dedekind-cuts-2-1-2-4">
+<span class="heading li--heading"><span class="title li--heading-title">Inverses.</span></span>
+<div class="para" id="proposition-addition-of-dedekind-cuts-2-1-2-4-2">For all Dedekind cuts <span class="process-math">\(X \in \R \text{,}\)</span> there is a Dedekind cut <span class="process-math">\(Y \in \R \)</span> so that <span class="process-math">\(X + Y = X_{ 0 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#proposition-addition-of-dedekind-cuts-2-1-2-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4: Inverses"><a href="#proposition-addition-of-dedekind-cuts-2-1-2-4" title="Copy heading and permalink for Item 4: Inverses" aria-label="Copy heading and permalink for Item 4: Inverses">🔗</a></div>
+</li>
+<li id="proposition-addition-of-dedekind-cuts-2-1-2-5">
+<span class="heading li--heading"><span class="title li--heading-title">Compatibility with the standard order.</span></span>
+<div class="para" id="proposition-addition-of-dedekind-cuts-2-1-2-5-2">For all Dedekind cuts <span class="process-math">\(W , X , Y , Z \in \R \text{,}\)</span> if <span class="process-math">\(W \subseteq Y \)</span> and <span class="process-math">\(X \subseteq Z \text{,}\)</span> then <span class="process-math">\(W + X \subseteq Y + Z \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#proposition-addition-of-dedekind-cuts-2-1-2-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5: Compatibility with the standard order"><a href="#proposition-addition-of-dedekind-cuts-2-1-2-5" title="Copy heading and permalink for Item 5: Compatibility with the standard order" aria-label="Copy heading and permalink for Item 5: Compatibility with the standard order">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-addition-of-dedekind-cuts-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 2.2.12: Addition of Dedekind cuts"><a href="#proposition-addition-of-dedekind-cuts" title="Copy heading and permalink for Proposition 2.2.12: Addition of Dedekind cuts" aria-label="Copy heading and permalink for Proposition 2.2.12: Addition of Dedekind cuts">🔗</a></div>
+</article>
+<details id="proposition-addition-of-dedekind-cuts-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<ol class="decimal" id="proposition-addition-of-dedekind-cuts-3-1">
+<li id="proposition-addition-of-dedekind-cuts-3-1-1">
+<div class="para logical" id="proposition-addition-of-dedekind-cuts-3-1-1-1">
+<div class="para">We note that</div>
+<div class="displaymath process-math" id="proposition-addition-of-dedekind-cuts-3-1-1-1-1">
+\begin{align*}
+X + Y \amp = \setmid{ p + q \in \Q }{ p \in X \textrm{ and } q \in Y }\\
+\amp = \setmid{ q + p \in \Q }{ q \in Y \textrm{ and } p \in X } = Y + X
+\end{align*}
+</div>
+<div class="para">for all Dedekind cuts <span class="process-math">\(X , Y \in \R \text{,}\)</span> and so addition <span class="process-math">\(+ \)</span> of Dedekind cuts is commutative.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-addition-of-dedekind-cuts-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#proposition-addition-of-dedekind-cuts-3-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="proposition-addition-of-dedekind-cuts-3-1-2">
+<div class="para logical" id="proposition-addition-of-dedekind-cuts-3-1-2-1">
+<div class="para">We note that</div>
+<div class="displaymath process-math" id="proposition-addition-of-dedekind-cuts-3-1-2-1-1">
+\begin{align*}
+\of{ X + Y } + Z \amp = \setmid{ s + r \in \Q }{ s \in X + Y \textrm{ and } r \in Z }\\
+\amp = \setmid{ \of{ p + q } + r \in \Q }{ p \in X \textrm{ and } q \in Y \textrm{ and } r \in Z }\\
+\amp = \setmid{ p + \of{ q + r } \in \Q }{ p \in X \textrm{ and } q \in Y \textrm{ and } r \in Z }\\
+\amp = \setmid{ p + t \in \Q }{ p \in X \textrm{ and } t \in Y + Z } = X + \of{ Y + Z }\text{.}
+\end{align*}
+</div>
+<div class="para">for all Dedekind cuts <span class="process-math">\(X , Y , Z \in \R \text{,}\)</span> and so addition <span class="process-math">\(+ \)</span> of Dedekind cuts is associative.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-addition-of-dedekind-cuts-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#proposition-addition-of-dedekind-cuts-3-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="proposition-addition-of-dedekind-cuts-3-1-3">
+<div class="para logical" id="proposition-addition-of-dedekind-cuts-3-1-3-1">
+<div class="para">Let <span class="process-math">\(p \in \Q \)</span> be a rational number, and suppose first that <span class="process-math">\(p \in X + X_{ 0 } \text{.}\)</span> Then <span class="process-math">\(p = q + r \)</span> for some rational numbers <span class="process-math">\(q \in X \)</span> and <span class="process-math">\(r \in X_{ 0 } \text{.}\)</span> Since</div>
+<div class="displaymath process-math" id="proposition-addition-of-dedekind-cuts-3-1-3-1-6">
+\begin{equation*}
+X_{ 0 } = \setmid{ s \in \Q }{ s \lt 0 }
+\end{equation*}
+</div>
+<div class="para">is the set of negative rational numbers,</div>
+<div class="displaymath process-math" id="proposition-addition-of-dedekind-cuts-3-1-3-1-7">
+\begin{equation*}
+p = q + r \lt q + 0 = q \in X\text{,}
+\end{equation*}
+</div>
+<div class="para">and so <span class="process-math">\(p \in X \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-addition-of-dedekind-cuts-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-addition-of-dedekind-cuts-3-1-3-2">
+<div class="para">Conversely, now suppose that <span class="process-math">\(p \in X \text{.}\)</span> Since <span class="process-math">\(X \)</span> does not have a maximum, <span class="process-math">\(r \in X \)</span> for some rational number <span class="process-math">\(r \gt p \text{.}\)</span> Let <span class="process-math">\(s = p - r \in X_{ 0 } \text{,}\)</span> and note that</div>
+<div class="displaymath process-math" id="proposition-addition-of-dedekind-cuts-3-1-3-2-6">
+\begin{equation*}
+p = r + \of{ p - r } = r + s
+\end{equation*}
+</div>
+<div class="para">is the sum of a rational number <span class="process-math">\(r \in X \)</span> and a rational number <span class="process-math">\(p - r \in X_{ 0 } \text{.}\)</span> We conclude that <span class="process-math">\(p \in X + X_{ 0 } \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-addition-of-dedekind-cuts-3-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="proposition-addition-of-dedekind-cuts-3-1-3-3">In summary, we have shown that <span class="process-math">\(p \in X + X_{ 0 } \)</span> if and only if <span class="process-math">\(p \in X \text{,}\)</span> and so <span class="process-math">\(X + X_{ 0 } = X \text{.}\)</span> That <span class="process-math">\(X_{ 0 } + X = X \)</span> now follows from (1) above.<div class="autopermalink" data-description="Paragraph"><a href="#proposition-addition-of-dedekind-cuts-3-1-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#proposition-addition-of-dedekind-cuts-3-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="proposition-addition-of-dedekind-cuts-3-1-4">
+<div class="para logical" id="proposition-addition-of-dedekind-cuts-3-1-4-1">
+<div class="para">There are two cases: either <span class="process-math">\(X \)</span> is rational, or <span class="process-math">\(X \)</span> is irrational. If <span class="process-math">\(X \)</span> is rational, say <span class="process-math">\(X = X_{ q } \)</span> for some rational number <span class="process-math">\(q \in \Q \text{,}\)</span> then we may choose <span class="process-math">\(Y = X_{ -q } \text{,}\)</span> since <a href="section-constructing-the-real-numbers.html#lemma-addition-of-rational-dedekind-cuts" class="xref" data-knowl="./knowl/xref/lemma-addition-of-rational-dedekind-cuts.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 2.2.11: Addition of rational Dedekind cuts">Lemma 2.2.11 Addition of rational Dedekind cuts</a> implies that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-addition-of-rational-dedekind-cuts.html" id="proposition-addition-of-dedekind-cuts-3-1-4-1-8">
+\begin{equation*}
+X + Y = X_{ q } + X_{ -q } = X_{ q + \of{ -q } } = X_{ 0 }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-addition-of-dedekind-cuts-3-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-addition-of-dedekind-cuts-3-1-4-2">
+<div class="para">So we may suppose that <span class="process-math">\(X \)</span> is irrational. Let</div>
+<div class="displaymath process-math" id="proposition-addition-of-dedekind-cuts-3-1-4-2-2">
+\begin{equation*}
+Y = \setmid{ q \in \Q }{ -q \notin X }\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(X \)</span> is a non-empty proper subset of <span class="process-math">\(\Q \text{,}\)</span> so too is its complement <span class="process-math">\(\Q \setminus X \text{,}\)</span> which implies that <span class="process-math">\(Y \)</span> is also non-empty and proper. We aim to show first that <span class="process-math">\(Y \)</span> is a Dedekind cut.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-addition-of-dedekind-cuts-3-1-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-addition-of-dedekind-cuts-3-1-4-3">
+<div class="para">To that end, let <span class="process-math">\(p , q \in \Q \)</span> be rational numbers, and suppose that <span class="process-math">\(p \lt q \)</span> and <span class="process-math">\(q \in Y \text{.}\)</span> Then <span class="process-math">\(-q \notin X \text{,}\)</span> and so <span class="process-math">\(-q \gt r \)</span> for all rational numbers <span class="process-math">\(r \in X \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="proposition-addition-of-dedekind-cuts-3-1-4-3-7">
+\begin{equation*}
+-p \geq -q \gt r
+\end{equation*}
+</div>
+<div class="para">for all rational numbers <span class="process-math">\(r \in X \text{,}\)</span> and so <span class="process-math">\(-p \notin X \text{;}\)</span> that is, <span class="process-math">\(p \in Y \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-addition-of-dedekind-cuts-3-1-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="proposition-addition-of-dedekind-cuts-3-1-4-4">Now let <span class="process-math">\(q \in Y \text{,}\)</span> so that <span class="process-math">\(-q \notin X \text{.}\)</span> Since <span class="process-math">\(X \)</span> is irrational, <a href="section-constructing-the-real-numbers.html#lemma-rational-dedekind-cuts" class="xref" data-knowl="./knowl/xref/lemma-rational-dedekind-cuts.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 2.2.3: Rational Dedekind cuts">Lemma 2.2.3 Rational Dedekind cuts</a> implies that <span class="process-math">\(\Q \setminus X \)</span> does not have a minimum. Thus there is some rational number <span class="process-math">\(r \in \Q \setminus X \)</span> so that <span class="process-math">\(r \lt -q \text{.}\)</span> We conclude that <span class="process-math">\(-r \in Y \)</span> and <span class="process-math">\(-r \gt q \text{,}\)</span> so that <span class="process-math">\(Y \)</span> does not have a maximum.<div class="autopermalink" data-description="Paragraph"><a href="#proposition-addition-of-dedekind-cuts-3-1-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="proposition-addition-of-dedekind-cuts-3-1-4-5">We have shown that <span class="process-math">\(Y \)</span> is a Dedekind cut, but it remains to show that <span class="process-math">\(X + Y = X_{ 0 } \text{.}\)</span> To that end, let <span class="process-math">\(r \in \Q \)</span> be a rational number, and suppose first that <span class="process-math">\(r \in X + Y \text{.}\)</span> Then <span class="process-math">\(r = p + q \)</span> for some <span class="process-math">\(p \in X \)</span> and <span class="process-math">\(q \in Y \text{.}\)</span> Since <span class="process-math">\(-q \notin X \text{,}\)</span> we must have <span class="process-math">\(p \lt -q \text{,}\)</span> so that <span class="process-math">\(r = p + q \lt 0 \text{;}\)</span> that is, <span class="process-math">\(r \in X_{ 0 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#proposition-addition-of-dedekind-cuts-3-1-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-addition-of-dedekind-cuts-3-1-4-6">
+<div class="para">Conversely, now suppose that <span class="process-math">\(r \in X_{ 0 } \text{,}\)</span> so that <span class="process-math">\(r \lt 0 \text{.}\)</span> In particular, <span class="process-math">\(-r \gt 0 \text{.}\)</span> If <span class="process-math">\(p + \of{ -r } \in X \)</span> for all rational numbers <span class="process-math">\(p \in X \text{,}\)</span> then <span class="process-math">\(X \)</span> is not bounded from above, which would imply that <span class="process-math">\(X = \Q \text{.}\)</span> Thus <span class="process-math">\(p - r \notin X \)</span> for some rational number <span class="process-math">\(p \in X \text{.}\)</span> We conclude that</div>
+<div class="displaymath process-math" id="proposition-addition-of-dedekind-cuts-3-1-4-6-10">
+\begin{equation*}
+r = p + \of{ r - p } \in X + Y
+\end{equation*}
+</div>
+<div class="para">is the sum of two rational numbers <span class="process-math">\(p \in X \)</span> and <span class="process-math">\(r - p \in Y \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-addition-of-dedekind-cuts-3-1-4-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="proposition-addition-of-dedekind-cuts-3-1-4-7">In summary, we have shown that <span class="process-math">\(r \in X + Y \)</span> if and only if <span class="process-math">\(r \in X_{ 0 } \text{,}\)</span> and so <span class="process-math">\(X + Y = X_{ 0 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#proposition-addition-of-dedekind-cuts-3-1-4-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#proposition-addition-of-dedekind-cuts-3-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="proposition-addition-of-dedekind-cuts-3-1-5">
+<div class="para logical" id="proposition-addition-of-dedekind-cuts-3-1-5-1">
+<div class="para">We observe that if <span class="process-math">\(W \subseteq Y \)</span> and <span class="process-math">\(X \subseteq Z \text{,}\)</span> then</div>
+<div class="displaymath process-math" id="proposition-addition-of-dedekind-cuts-3-1-5-1-3">
+\begin{align*}
+W + X \amp = \setmid{ p + q \in \Q }{ p \in W \textrm{ and } q \in X }\\
+\amp \subseteq \setmid{ p + q \in \Q }{ p \in Y \textrm{ and } q \in Z } = Y + Z\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-addition-of-dedekind-cuts-3-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#proposition-addition-of-dedekind-cuts-3-1-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Proof 2.2.12.1"><a href="#proposition-addition-of-dedekind-cuts-3" title="Copy heading and permalink for Proof 2.2.12.1" aria-label="Copy heading and permalink for Proof 2.2.12.1">🔗</a></div>
+</article></details>
+<section class="conclusion" id="subsection-addition-of-dedekind-cuts-8">
+<div class="para" id="subsection-addition-of-dedekind-cuts-8-1">All that remains is to define the multiplication of Dedekind cuts and derive relevant results about multiplication itself and its relation to addition and comparison.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-addition-of-dedekind-cuts-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Subsection 2.2.3: Addition of Dedekind Cuts"><a href="#subsection-addition-of-dedekind-cuts" title="Copy heading and permalink for Subsection 2.2.3: Addition of Dedekind Cuts" aria-label="Copy heading and permalink for Subsection 2.2.3: Addition of Dedekind Cuts">🔗</a></div>
+</section>
+<section class="subsection" id="subsection-multiplication-of-dedekind-cuts">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Multiplication of Dedekind Cuts</span>
+</h3>
+<section class="introduction" id="subsection-multiplication-of-dedekind-cuts-2">
+<div class="para" id="subsection-multiplication-of-dedekind-cuts-2-1">Finally, we define multiplication for Dedekind cuts. We will see that this definition depends in a complicated way on the signs of the two factors. As a result of this case-by-case definition of multiplication, we offer the remaining results of this section without proof.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-multiplication-of-dedekind-cuts-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="lemma theorem-like" id="lemma-multiplication-of-positive-Dedekind-cuts"><h4 class="heading">
+<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Multiplication of positive Dedekind cuts.</span>
+</h4>
+<div class="para logical" id="lemma-multiplication-of-positive-Dedekind-cuts-2-1">
+<div class="para">Given two positive Dedekind cuts <span class="process-math">\(X , Y \in \R \text{,}\)</span> the set</div>
+<div class="displaymath process-math" id="lemma-multiplication-of-positive-Dedekind-cuts-2-1-2">
+\begin{equation*}
+\setmid{ p q \in \Q }{ p \in X \textrm{ and } q \in Y \textrm{ and } \of{ p \geq 0 \textrm{ or } q \geq 0 } }
+\end{equation*}
+</div>
+<div class="para">is a Dedekind cut.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lemma-multiplication-of-positive-Dedekind-cuts-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Lemma 2.2.13: Multiplication of positive Dedekind cuts"><a href="#lemma-multiplication-of-positive-Dedekind-cuts" title="Copy heading and permalink for Lemma 2.2.13: Multiplication of positive Dedekind cuts" aria-label="Copy heading and permalink for Lemma 2.2.13: Multiplication of positive Dedekind cuts">🔗</a></div>
+</article>
+<article class="definition definition-like" id="definition-multiplication-of-dedekind-cuts"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Multiplication of Dedekind cuts.</span>
+</h4>
+<div class="para logical" id="definition-multiplication-of-dedekind-cuts-3-1">
+<div class="para">The <dfn class="terminology">product</dfn> <span class="process-math">\(X \cdot Y \)</span> of two Dedekind cuts <span class="process-math">\(X , Y \in \R \)</span> is the Dedekind cut defined by the following formulae:</div>
+<ul class="disc" id="definition-multiplication-of-dedekind-cuts-3-1-4">
+<li id="definition-multiplication-of-dedekind-cuts-3-1-4-1">
+<span class="heading li--heading"><span class="title li--heading-title">Zero.</span></span>
+<div class="para" id="definition-multiplication-of-dedekind-cuts-3-1-4-1-2">If either <span class="process-math">\(X = X_{ 0 } \)</span> or <span class="process-math">\(Y = X_{ 0 } \text{,}\)</span> then <span class="process-math">\(X \cdot Y = X_{ 0 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-multiplication-of-dedekind-cuts-3-1-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Zero"><a href="#definition-multiplication-of-dedekind-cuts-3-1-4-1" title="Copy heading and permalink for Item: Zero" aria-label="Copy heading and permalink for Item: Zero">🔗</a></div>
+</li>
+<li id="definition-multiplication-of-dedekind-cuts-3-1-4-2">
+<span class="heading li--heading"><span class="title li--heading-title">Positive times positive.</span></span>
+<div class="para logical" id="definition-multiplication-of-dedekind-cuts-3-1-4-2-2">
+<div class="para">If both <span class="process-math">\(X \)</span> and <span class="process-math">\(Y \)</span> are positive, then</div>
+<div class="displaymath process-math" id="definition-multiplication-of-dedekind-cuts-3-1-4-2-2-3">
+\begin{equation*}
+X \times Y = \setmid{ p q \in \Q }{ p \in X \textrm{ and } q \in Y \textrm{ and } \of{ p \geq 0 \textrm{ or } q \geq 0 } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-multiplication-of-dedekind-cuts-3-1-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Positive times positive"><a href="#definition-multiplication-of-dedekind-cuts-3-1-4-2" title="Copy heading and permalink for Item: Positive times positive" aria-label="Copy heading and permalink for Item: Positive times positive">🔗</a></div>
+</li>
+<li id="definition-multiplication-of-dedekind-cuts-3-1-4-3">
+<span class="heading li--heading"><span class="title li--heading-title">Positive times negative.</span></span>
+<div class="para logical" id="definition-multiplication-of-dedekind-cuts-3-1-4-3-2">
+<div class="para">If <span class="process-math">\(X \)</span> is positive and <span class="process-math">\(Y \)</span> is negative, then</div>
+<div class="displaymath process-math" id="definition-multiplication-of-dedekind-cuts-3-1-4-3-2-3">
+\begin{equation*}
+X \times Y = -\of{ X \times \of{ -Y } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-multiplication-of-dedekind-cuts-3-1-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Positive times negative"><a href="#definition-multiplication-of-dedekind-cuts-3-1-4-3" title="Copy heading and permalink for Item: Positive times negative" aria-label="Copy heading and permalink for Item: Positive times negative">🔗</a></div>
+</li>
+<li id="definition-multiplication-of-dedekind-cuts-3-1-4-4">
+<span class="heading li--heading"><span class="title li--heading-title">Negative times positive.</span></span>
+<div class="para logical" id="definition-multiplication-of-dedekind-cuts-3-1-4-4-2">
+<div class="para">If <span class="process-math">\(X \)</span> is negative and <span class="process-math">\(Y \)</span> is positive, then</div>
+<div class="displaymath process-math" id="definition-multiplication-of-dedekind-cuts-3-1-4-4-2-3">
+\begin{equation*}
+X \times Y = -\of{ \of{ -X } \times Y }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-multiplication-of-dedekind-cuts-3-1-4-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Negative times positive"><a href="#definition-multiplication-of-dedekind-cuts-3-1-4-4" title="Copy heading and permalink for Item: Negative times positive" aria-label="Copy heading and permalink for Item: Negative times positive">🔗</a></div>
+</li>
+<li id="definition-multiplication-of-dedekind-cuts-3-1-4-5">
+<span class="heading li--heading"><span class="title li--heading-title">Negative times negative.</span></span>
+<div class="para logical" id="definition-multiplication-of-dedekind-cuts-3-1-4-5-2">
+<div class="para">If both <span class="process-math">\(X \)</span> and <span class="process-math">\(Y \)</span> are negative, then</div>
+<div class="displaymath process-math" id="definition-multiplication-of-dedekind-cuts-3-1-4-5-2-3">
+\begin{equation*}
+X \times Y = \of{ -X } \times \of{ -Y }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-multiplication-of-dedekind-cuts-3-1-4-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Negative times negative"><a href="#definition-multiplication-of-dedekind-cuts-3-1-4-5" title="Copy heading and permalink for Item: Negative times negative" aria-label="Copy heading and permalink for Item: Negative times negative">🔗</a></div>
+</li>
+</ul>
+<div class="para">This defines a binary operation <span class="process-math">\(\cdot \)</span> on the set <span class="process-math">\(\R \)</span> of Dedekind cuts.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-multiplication-of-dedekind-cuts-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.2.14: Multiplication of Dedekind cuts"><a href="#definition-multiplication-of-dedekind-cuts" title="Copy heading and permalink for Definition 2.2.14: Multiplication of Dedekind cuts" aria-label="Copy heading and permalink for Definition 2.2.14: Multiplication of Dedekind cuts">🔗</a></div>
+</article>
+<div class="para" id="subsection-multiplication-of-dedekind-cuts-5">We end with a compilation of all relevant results about the arithmetic of Dedekind cuts. While one can verify these results, we omit the proofs of those that involve multiplication in order to simplify the narrative of exposition. Indeed, these proofs rely on casework which, while not difficult, would require more time than we can dedicate to this topic.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-multiplication-of-dedekind-cuts-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="theorem-arithmetic-of-dedekind-cuts"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Arithmetic of Dedekind cuts.</span>
+</h4>
+<div class="para logical" id="theorem-arithmetic-of-dedekind-cuts-2-1">
+<div class="para">The addition and multiplication of Dedekind cuts has the following properties:</div>
+<ul class="disc" id="theorem-arithmetic-of-dedekind-cuts-2-1-1">
+<li id="theorem-arithmetic-of-dedekind-cuts-2-1-1-1">
+<span class="heading li--heading"><span class="title li--heading-title">Commutativity of addition.</span></span>
+<div class="para" id="theorem-arithmetic-of-dedekind-cuts-2-1-1-1-2">
+<span class="process-math">\(X + Y = Y + X \)</span> for all Dedekind cuts <span class="process-math">\(X , Y \in \R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Commutativity of addition"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1-1-1" title="Copy heading and permalink for Item: Commutativity of addition" aria-label="Copy heading and permalink for Item: Commutativity of addition">🔗</a></div>
+</li>
+<li id="theorem-arithmetic-of-dedekind-cuts-2-1-1-2">
+<span class="heading li--heading"><span class="title li--heading-title">Associativity of addition.</span></span>
+<div class="para" id="theorem-arithmetic-of-dedekind-cuts-2-1-1-2-2">
+<span class="process-math">\(\of{ X + Y } + Z = X + \of{ Y + Z } \)</span> and <span class="process-math">\(\of{ X \cdot Y } \cdot Z = X \cdot \of{ Y \cdot Z } \)</span> for all Dedekind cuts <span class="process-math">\(X , Y , Z \in \R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Associativity of addition"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1-1-2" title="Copy heading and permalink for Item: Associativity of addition" aria-label="Copy heading and permalink for Item: Associativity of addition">🔗</a></div>
+</li>
+<li id="theorem-arithmetic-of-dedekind-cuts-2-1-1-3">
+<span class="heading li--heading"><span class="title li--heading-title">Additive identity element.</span></span>
+<div class="para" id="theorem-arithmetic-of-dedekind-cuts-2-1-1-3-2">The rational Dedekind cut <span class="process-math">\(X_{ 0 } \)</span> associated to <span class="process-math">\(0 \)</span> is an additive identity element; that is, <span class="process-math">\(X + X_{ 0 } = X_{ 0 } + X = X \)</span> for all Dedekind cuts <span class="process-math">\(X \in \R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Additive identity element"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1-1-3" title="Copy heading and permalink for Item: Additive identity element" aria-label="Copy heading and permalink for Item: Additive identity element">🔗</a></div>
+</li>
+<li id="theorem-arithmetic-of-dedekind-cuts-2-1-1-4">
+<span class="heading li--heading"><span class="title li--heading-title">Additive inverses.</span></span>
+<div class="para" id="theorem-arithmetic-of-dedekind-cuts-2-1-1-4-2">For all Dedekind cuts <span class="process-math">\(X \in \R \text{,}\)</span> there is a Dedekind cut <span class="process-math">\(-X \in \R \)</span> so that <span class="process-math">\(X + \of{ -X } = \of{ -X } + X = X_{ 0 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1-1-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Additive inverses"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1-1-4" title="Copy heading and permalink for Item: Additive inverses" aria-label="Copy heading and permalink for Item: Additive inverses">🔗</a></div>
+</li>
+<li id="theorem-arithmetic-of-dedekind-cuts-2-1-1-5">
+<span class="heading li--heading"><span class="title li--heading-title">Commutativity of multiplication.</span></span>
+<div class="para" id="theorem-arithmetic-of-dedekind-cuts-2-1-1-5-2">
+<span class="process-math">\(X \cdot Y = Y \cdot X \)</span> for all Dedekind cuts <span class="process-math">\(X , Y \in \R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1-1-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Commutativity of multiplication"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1-1-5" title="Copy heading and permalink for Item: Commutativity of multiplication" aria-label="Copy heading and permalink for Item: Commutativity of multiplication">🔗</a></div>
+</li>
+<li id="theorem-arithmetic-of-dedekind-cuts-2-1-1-6">
+<span class="heading li--heading"><span class="title li--heading-title">Associativity of multiplication.</span></span>
+<div class="para" id="theorem-arithmetic-of-dedekind-cuts-2-1-1-6-2">
+<span class="process-math">\(\of{ X \cdot Y } \cdot Z = X \cdot \of{ Y \cdot Z } \)</span> for all Dedekind cuts <span class="process-math">\(X , Y , Z \in \R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1-1-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Associativity of multiplication"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1-1-6" title="Copy heading and permalink for Item: Associativity of multiplication" aria-label="Copy heading and permalink for Item: Associativity of multiplication">🔗</a></div>
+</li>
+<li id="theorem-arithmetic-of-dedekind-cuts-2-1-1-7">
+<span class="heading li--heading"><span class="title li--heading-title">Multiplicative identity element.</span></span>
+<div class="para" id="theorem-arithmetic-of-dedekind-cuts-2-1-1-7-2">The rational Dedekind cut <span class="process-math">\(X_{ 1 } \)</span> associated to <span class="process-math">\(1 \)</span> is a multiplicative identity element; that is, <span class="process-math">\(X \cdot X_{ 1 } = X_{ 1 } \cdot X = X \)</span> for all Dedekind cuts <span class="process-math">\(X \in \R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1-1-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Multiplicative identity element"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1-1-7" title="Copy heading and permalink for Item: Multiplicative identity element" aria-label="Copy heading and permalink for Item: Multiplicative identity element">🔗</a></div>
+</li>
+<li id="theorem-arithmetic-of-dedekind-cuts-2-1-1-8">
+<span class="heading li--heading"><span class="title li--heading-title">Multiplicative inverses.</span></span>
+<div class="para" id="theorem-arithmetic-of-dedekind-cuts-2-1-1-8-2">For all Dedekind cuts <span class="process-math">\(X \in \R \text{,}\)</span> if <span class="process-math">\(X \neq X_{ 0 } \text{,}\)</span> then there is a Dedekind cut <span class="process-math">\(X^{ -1 } \in \R \)</span> so that <span class="process-math">\(X \cdot X^{ -1 } = X^{ -1 } \cdot X = X_{ 1 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1-1-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Multiplicative inverses"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1-1-8" title="Copy heading and permalink for Item: Multiplicative inverses" aria-label="Copy heading and permalink for Item: Multiplicative inverses">🔗</a></div>
+</li>
+<li id="theorem-arithmetic-of-dedekind-cuts-2-1-1-9">
+<span class="heading li--heading"><span class="title li--heading-title">Distributivity of multiplication over addition.</span></span>
+<div class="para logical" id="theorem-arithmetic-of-dedekind-cuts-2-1-1-9-2">
+<div class="para">For all Dedekind cuts <span class="process-math">\(X , Y , Z \in \R \text{,}\)</span> both</div>
+<div class="displaymath process-math" id="theorem-arithmetic-of-dedekind-cuts-2-1-1-9-2-2">
+\begin{equation*}
+X \cdot \of{ Y + Z } = \of{ X \cdot Y } + \of{ X \cdot Z }
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" id="theorem-arithmetic-of-dedekind-cuts-2-1-1-9-2-3">
+\begin{equation*}
+\of{ X + Y } \cdot Z = \of{ X \cdot Z } + \of{ Y \cdot Z }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1-1-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Distributivity of multiplication over addition"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1-1-9" title="Copy heading and permalink for Item: Distributivity of multiplication over addition" aria-label="Copy heading and permalink for Item: Distributivity of multiplication over addition">🔗</a></div>
+</li>
+<li id="theorem-arithmetic-of-dedekind-cuts-2-1-1-10">
+<span class="heading li--heading"><span class="title li--heading-title">Compatibility of addition and the standard order.</span></span>
+<div class="para" id="theorem-arithmetic-of-dedekind-cuts-2-1-1-10-2">For all Dedekind cuts <span class="process-math">\(W , X , Y , Z \in \R \text{,}\)</span> if <span class="process-math">\(W \subseteq Y \)</span> and <span class="process-math">\(X \subseteq Z \text{,}\)</span> then <span class="process-math">\(W + X \subseteq Y + Z \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1-1-10-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Compatibility of addition and the standard order"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1-1-10" title="Copy heading and permalink for Item: Compatibility of addition and the standard order" aria-label="Copy heading and permalink for Item: Compatibility of addition and the standard order">🔗</a></div>
+</li>
+<li id="theorem-arithmetic-of-dedekind-cuts-2-1-1-11">
+<span class="heading li--heading"><span class="title li--heading-title">Compatibility of multiplication and the standard order.</span></span>
+<div class="para" id="theorem-arithmetic-of-dedekind-cuts-2-1-1-11-2">For all Dedekind cuts <span class="process-math">\(X , Y \in \R \text{,}\)</span> if <span class="process-math">\(X \)</span> and <span class="process-math">\(Y \)</span> are non-negative, then so too is their product <span class="process-math">\(X \cdot Y \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1-1-11-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Compatibility of multiplication and the standard order"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1-1-11" title="Copy heading and permalink for Item: Compatibility of multiplication and the standard order" aria-label="Copy heading and permalink for Item: Compatibility of multiplication and the standard order">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-arithmetic-of-dedekind-cuts-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.2.15: Arithmetic of Dedekind cuts"><a href="#theorem-arithmetic-of-dedekind-cuts" title="Copy heading and permalink for Theorem 2.2.15: Arithmetic of Dedekind cuts" aria-label="Copy heading and permalink for Theorem 2.2.15: Arithmetic of Dedekind cuts">🔗</a></div>
+</article>
+<section class="conclusion" id="subsection-multiplication-of-dedekind-cuts-7">
+<div class="para" id="subsection-multiplication-of-dedekind-cuts-7-1">All of the above properties of the arithmetic of Dedekind cuts not involving multiplication have already been proven. Again, we highlight that while proofs of the remaining parts are not too difficult to construct, they rely on significant casework involving signs; we unfortunately don’t have time to study these proofs in detail.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-multiplication-of-dedekind-cuts-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Subsection 2.2.4: Multiplication of Dedekind Cuts"><a href="#subsection-multiplication-of-dedekind-cuts" title="Copy heading and permalink for Subsection 2.2.4: Multiplication of Dedekind Cuts" aria-label="Copy heading and permalink for Subsection 2.2.4: Multiplication of Dedekind Cuts">🔗</a></div>
+</section>
+<section class="conclusion" id="section-constructing-the-real-numbers-7">
+<div class="para" id="section-constructing-the-real-numbers-7-1">In the next section, we will continue to explore the properties of the real number system. In particular, we will characterize <span class="process-math">\(\R \)</span> as the unique <dfn class="terminology">Dedekind complete</dfn> <dfn class="terminology">ordered field</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#section-constructing-the-real-numbers-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="reading-questions" id="exercises-constructing-the-real-numbers">
 <h3 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
 </h3>
 <section class="introduction" id="exercises-constructing-the-real-numbers-2">
 <div class="para" id="exercises-constructing-the-real-numbers-2-1">The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-constructing-the-real-numbers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="conclusion" id="exercises-constructing-the-real-numbers-3">
 <div class="para" id="exercises-constructing-the-real-numbers-3-1">Short answers and/or in-depth solutions to these exercises are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-constructing-the-real-numbers-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" data-description="Reading Questions 2.2.4: Exercises"><a href="#exercises-constructing-the-real-numbers" title="Copy heading and permalink for Reading Questions 2.2.4: Exercises" aria-label="Copy heading and permalink for Reading Questions 2.2.4: Exercises">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Reading Questions 2.2.5: Exercises"><a href="#exercises-constructing-the-real-numbers" title="Copy heading and permalink for Reading Questions 2.2.5: Exercises" aria-label="Copy heading and permalink for Reading Questions 2.2.5: Exercises">🔗</a></div>
 </section>
 <section class="reading-questions" id="problems-constructing-the-real-numbers">
 <h3 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
 </h3>
 <section class="introduction" id="problems-constructing-the-real-numbers-2">
 <div class="para" id="problems-constructing-the-real-numbers-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" data-description="Paragraph"><a href="#problems-constructing-the-real-numbers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="conclusion" id="problems-constructing-the-real-numbers-3">
 <div class="para" id="problems-constructing-the-real-numbers-3-1">In-depth solutions to these problems are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#problems-constructing-the-real-numbers-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" data-description="Reading Questions 2.2.5: Problems"><a href="#problems-constructing-the-real-numbers" title="Copy heading and permalink for Reading Questions 2.2.5: Problems" aria-label="Copy heading and permalink for Reading Questions 2.2.5: Problems">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Reading Questions 2.2.6: Problems"><a href="#problems-constructing-the-real-numbers" title="Copy heading and permalink for Reading Questions 2.2.6: Problems" aria-label="Copy heading and permalink for Reading Questions 2.2.6: Problems">🔗</a></div>
 </section><div class="autopermalink" data-description="Section 2.2: Constructing the Real Numbers"><a href="#section-constructing-the-real-numbers" title="Copy heading and permalink for Section 2.2: Constructing the Real Numbers" aria-label="Copy heading and permalink for Section 2.2: Constructing the Real Numbers">🔗</a></div>
 </section>
 </div>
