@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proposition theorem-like"><h2 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Irrational Dedekind cuts.</span>
+</h2>
+<div class="para">Not all Dedekind cuts are rational.<div class="autopermalink" data-description="Paragraph"><a href="#proposition-not-all-dedekind-cuts-are-rational-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 2.2.4: Irrational Dedekind cuts"><a href="#proposition-not-all-dedekind-cuts-are-rational" title="Copy heading and permalink for Proposition 2.2.4: Irrational Dedekind cuts" aria-label="Copy heading and permalink for Proposition 2.2.4: Irrational Dedekind cuts">🔗</a></div>
+</article>
+<details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical">
+<div class="para">Consider the subset</div>
+<div class="displaymath process-math">
+\begin{equation*}
+X = \setmid{ q \in \Q }{ q \lt 0 \textrm{ or } q^{ 2 } \lt 2 }
+\end{equation*}
+</div>
+<div class="para">of the rational numbers <span class="process-math">\(\Q \text{.}\)</span> We observe that <span class="process-math">\(X \)</span> is a non-empty and proper subset of <span class="process-math">\(\Q \text{,}\)</span> since it contains <span class="process-math">\(1 \)</span> but not <span class="process-math">\(2 \text{.}\)</span> Let <span class="process-math">\(p_{ 1 } , p_{ 2 } \in \Q \)</span> be rational numbers, and suppose that <span class="process-math">\(p_{ 1 } \leq p_{ 2 } \)</span> and <span class="process-math">\(p_{ 2 } \in X \text{.}\)</span> If <span class="process-math">\(p_{ 2 } \lt 0 \text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p_{ 1 } \leq p_{ 2 } \lt 0\text{,}
+\end{equation*}
+</div>
+<div class="para">and so <span class="process-math">\(p_{ 1 } \in X \text{.}\)</span> On the other hand, if <span class="process-math">\(p_{ 2 }^{ 2 } \lt 2 \text{,}\)</span> then either <span class="process-math">\(p_{ 1 } \lt 0 \)</span> or <span class="process-math">\(0 \leq p_{ 1 } \leq p_{ 2 } \text{,}\)</span> in which case <span class="process-math">\(p_{ 1 }^{ 2 } \leq p_{ 2 }^{ 2 } \lt 2 \text{.}\)</span> In either case, we conclude that <span class="process-math">\(p_{ 1 } \in X \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-not-all-dedekind-cuts-are-rational-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Finally, let <span class="process-math">\(q \in X \text{.}\)</span> If <span class="process-math">\(q \leq 0 \text{,}\)</span> then let <span class="process-math">\(p = 1 \text{,}\)</span> and note that <span class="process-math">\(p \in X \)</span> and <span class="process-math">\(q \lt p \text{.}\)</span> On the other hand, suppose that <span class="process-math">\(q \gt 0 \)</span> and <span class="process-math">\(q^{ 2 } \lt 2 \text{,}\)</span> and consider the rational number</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p = \frac{ 2 q + 2 }{ 2 + q } \in \Q\text{.}
+\end{equation*}
+</div>
+<div class="para">Note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p = \frac{ 2 q + 2 }{ 2 + q } = \frac{ 2 q + q^{ 2 } }{ 2 + q } + \frac{ 2 - q^{ 2 } }{ 2 + q } = q + \frac{ 2 - q^{ 2 } }{ 2 + q } \gt q\text{,}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{align*}
+2 - p^{ 2 } \amp = \frac{ 2 \of{ 2 + q }^{ 2 } }{ \of{ 2 + q }^{ 2 } } - \frac{ \of{ 2 q + 2 }^{ 2 } }{ \of{ 2 + q }^{ 2 } }\\
+\amp = \frac{ 4 - 2 q^{ 2 } }{ \of{ 2 + q }^{ 2 } } = \frac{ 2 \of{ 2 - q^{ 2 } } }{ \of{ 2 + q }^{ 2 } } \gt 0\text{,}
+\end{align*}
+</div>
+<div class="para">so that <span class="process-math">\(p^{ 2 } \lt 2 \text{;}\)</span> that is, <span class="process-math">\(p \in X \text{.}\)</span> We conclude that <span class="process-math">\(X \)</span> is a Dedekind cut, and so it suffices to show that <span class="process-math">\(X \)</span> is not rational.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-not-all-dedekind-cuts-are-rational-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">To that end, we note that <span class="process-math">\(X \)</span> has complement</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-rational-dedekind-cuts.html">
+\begin{equation*}
+\Q \setminus X = \setmid{ q \in \Q }{ q \geq 0 \textrm{ and } q^{ 2 } \geq 2 }\text{.}
+\end{equation*}
+</div>
+<div class="para">In fact, since <span class="process-math">\(q^{ 2 } \neq 2 \)</span> for all rational numbers <span class="process-math">\(q \in \Q \)</span> (this fact is proven in any introductory number theory course),</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-rational-dedekind-cuts.html">
+\begin{equation*}
+\Q \setminus X = \setmid{ q \in \Q }{ q \geq 0 \textrm{ and } q^{ 2 } \gt 2 }\text{.}
+\end{equation*}
+</div>
+<div class="para">We will show that <span class="process-math">\(\Q \setminus X \)</span> has no minimum element. Indeed, let <span class="process-math">\(q \in \Q \setminus X \text{,}\)</span> so that <span class="process-math">\(q \geq 0 \)</span> and <span class="process-math">\(q^{ 2 } \gt 2 \text{.}\)</span> We again consider the rational number</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-rational-dedekind-cuts.html">
+\begin{equation*}
+p = \frac{ 2 q + 2 }{ 2 + q } \in \Q\text{.}
+\end{equation*}
+</div>
+<div class="para">We see that <span class="process-math">\(p \geq 0 \text{.}\)</span> Moreover, now that <span class="process-math">\(q^{ 2 } \gt 2 \text{,}\)</span> we observe that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-rational-dedekind-cuts.html">
+\begin{equation*}
+p = \frac{ 2 q + 2 }{ 2 + q } = \frac{ 2 q + q^{ 2 } }{ 2 + q } + \frac{ 2 - q^{ 2 } }{ 2 + q } = q + \frac{ 2 - q^{ 2 } }{ 2 + q } \lt q
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-rational-dedekind-cuts.html">
+\begin{align*}
+2 - p^{ 2 } \amp = \frac{ 2 \of{ 2 + q }^{ 2 } }{ \of{ 2 + q }^{ 2 } } - \frac{ \of{ 2 q + 2 }^{ 2 } }{ \of{ 2 + q }^{ 2 } }\\
+\amp = \frac{ 4 - 2 q^{ 2 } }{ \of{ 2 + q }^{ 2 } } = \frac{ 2 \of{ 2 - q^{ 2 } } }{ \of{ 2 + q }^{ 2 } } \lt 0\text{,}
+\end{align*}
+</div>
+<div class="para">so that <span class="process-math">\(p^{ 2 } \gt 2 \text{.}\)</span> In particular, <span class="process-math">\(p \lt q \)</span> and <span class="process-math">\(p \in \Q \setminus X \text{.}\)</span> Thus <span class="process-math">\(\Q \setminus X \)</span> has no minimum element, and so <a href="section-constructing-the-real-numbers.html#lemma-rational-dedekind-cuts" class="xref" data-knowl="./knowl/xref/lemma-rational-dedekind-cuts.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 2.2.3: Rational Dedekind cuts">Lemma 2.2.3 Rational Dedekind cuts</a> implies that <span class="process-math">\(X \)</span> is not rational.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-not-all-dedekind-cuts-are-rational-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.2.4.1"><a href="#proposition-not-all-dedekind-cuts-are-rational-3" title="Copy heading and permalink for Proof 2.2.4.1" aria-label="Copy heading and permalink for Proof 2.2.4.1">🔗</a></div>
+</article></details><span class="incontext"><a class="internal" href="section-constructing-the-real-numbers.html#proposition-not-all-dedekind-cuts-are-rational">In Context</a></span>
+</body>
+</html>
