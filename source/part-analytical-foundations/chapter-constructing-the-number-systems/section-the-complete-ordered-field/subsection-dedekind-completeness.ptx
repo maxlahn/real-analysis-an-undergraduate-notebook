@@ -148,61 +148,35 @@
     
     <statement>
       <p>
-        Let <m> \emptyset \subsetneq U \subseteq \R </m> be a non-empty subset of the real numbers <m> \R </m>.
-        
-        <ol>
-          <li>
-            <p>
-              If <m> U </m> is bounded from above, then <m> U </m> has a supremum in <m> \R </m>.
-            </p>
-          </li>
-          
-          <li>
-            <p>
-              If <m> U </m> is bounded from below, then <m> U </m> has an infimum in <m> \R </m>.
-            </p>
-          </li>
-        </ol>
-        
-        In particular, the real number system <m> \of{ \R , + , \cdot , \leq } </m> is Dedekind complete.
+        The real number system <m> \of{ \R , + , \cdot , \leq } </m> is Dedekind complete.
       </p>
     </statement>
     
     <proof>
       <p>
-        <ol>
-          <li>
-            <p>
-              Consider the indexed union
-              
-              <md>
-                S = \bigcup_{ X \in U }{ X } = \setmid{ q \in \Q }{ q \in X \textrm{ for some } X \in U }
-              </md>.
-              
-              We note that (a) of <xref ref="problem-indexed-intersections-and-unions"/> implies that for a Dedekind cut <m> Y \in \R </m>, <m> S \subseteq Y </m> if and only if <m> X \subseteq Y </m> for all <m> X \in U </m>; that is, any upper bound for <m> U </m> in <m> \R </m> contains <m> S </m>, so that
-              
-              <md>
-                S = \min \of{ \setmid{ Y \in \R }{ X \subseteq Y \textrm{ for all } X \in U } } = \sup \of{ U }
-              </md>.
-            </p>
-          </li>
-          
-          <li>
-            <p>
-              Consider the indexed intersection
-              
-              <md>
-                I = \bigcap_{ X \in U }{ X } = \setmid{ q \in \Q }{ q \in X \textrm{ for all } X \in U }
-              </md>.
-              
-              We note that (a) of <xref ref="problem-indexed-intersections-and-unions"/> implies that for a Dedekind cut <m> Y \in \R </m>, <m> Y \subseteq I </m> if and only if <m> Y \subseteq X </m> for all <m> X \in U </m>; that is, <m> I </m> contains any lower bound for <m> U </m> in <m> \R </m>, so that
-              
-              <md>
-                I = \max \of{ \setmid{ Y \in \R }{ Y \subseteq X \textrm{ for all } X \in U } } = \inf \of{ U }
-              </md>.
-            </p>
-          </li>
-        </ol>      
+        Let <m> \emptyset \subsetneq U \subseteq \R </m> be a non-empty subset of <m> U </m> which is bounded from above, and consider the indexed union
+        
+        <md>
+          S = \bigcup_{ X \in U }{ X } = \setmid{ q \in \Q }{ q \in X \textrm{ for some } X \in U }
+        </md>.
+        
+        Since <m> U </m> is a non-empty collection of non-empty subsets of <m> \Q </m>, <m> S </m> is non-empty. Moreover, since <m> U </m> is bounded from above, there is some Dedekind cut <m> Y \in \R </m> so that <m> X \subseteq Y </m> for all <m> X \in U </m>. In particular, if <m> q \in \Q \setminus Y </m>, then <m> q \notin X </m> for all <m> X \in U </m>, and so <m> q \notin S </m>.
+      </p>
+      
+      <p>
+        Let <m> p , q \in \Q </m> be rational numbers, and suppose that <m> p \leq q </m> and <m> q \in S </m>. Since <m> q \in S </m>, <m> q \in X </m> for some <m> X \in U </m>, and so <m> p \in X \subseteq S </m>.
+      </p>
+      
+      <p>
+        Now let <m> p \in S </m>, so that <m> p \in X </m> for some <m> X \in U </m>. Since <m> X </m> does not have a maximum, there is some rational number <m> q \in X \subseteq S </m> so that <m> p \lt q </m>. We conclude that <m> S </m> does not have a maximum, and so is a Dedekind cut.
+      </p>
+      
+      <p>
+        We note that (a) of <xref ref="problem-indexed-intersections-and-unions"/> implies that for a Dedekind cut <m> Y \in \R </m>, <m> S \subseteq Y </m> if and only if <m> X \subseteq Y </m> for all <m> X \in U </m>; that is, any upper bound for <m> U </m> in <m> \R </m> contains <m> S </m>, so that
+        
+        <md>
+          S = \min \of{ \setmid{ Y \in \R }{ X \subseteq Y \textrm{ for all } X \in U } } = \sup \of{ U }
+        </md>.
       </p>
     </proof>
   </theorem>

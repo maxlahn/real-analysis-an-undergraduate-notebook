@@ -7,11 +7,15 @@
 
   <introduction>
     <p>
-      Text before the first subsection.
+      In this section, we address several common extensions to the real number system <m> \R </m>. Some of these, like the <term> complex numbers </term> and the <term> quaternions </term>, see extensions to arithmetic (at the cost of some of the ordered field axioms). Others, like the <term> extended real numbers </term>, abandon arithmetic altogether in favor of certain order-theoretic properties.
     </p>
   </introduction>
 
-  <!-- <xi:include href="./subsection-TITLE.ptx"/> -->
+  <xi:include href="./subsection-the-complex-numbers.ptx"/>
+
+  <xi:include href="./subsection-infinity.ptx"/>
+
+  <!-- <xi:include href="./subsection-beyond-the-complex-numbers.ptx"/> -->
 
   <conclusion>
     <p>

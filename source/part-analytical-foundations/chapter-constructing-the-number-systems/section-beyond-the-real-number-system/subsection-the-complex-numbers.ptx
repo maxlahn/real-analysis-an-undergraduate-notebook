@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-the-complex-numbers" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    The Complex Numbers
+  </title>
+
+  <introduction>
+    <p>
+      Despite not playing a large role in the field of real analysis, the <term> complex number system </term> is ubiquitous throughout mathematics and merits at least a brief mention. The extension of the real numbers to the complex numbers ameliorates an algebraic insufficiency of <m> \R </m>, namely that it does not contain the roots of all polynomials. For example, there is no real number <m> x \in \R </m> so that <m> x^{ 2 } + 1 = 0 </m>.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-complex-number">
+    <title>
+      Complex number
+    </title>
+    
+    <idx>
+      complex number
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        A <term> complex number </term> is an ordered pair <m> z = \of{ x , y } </m> of real numbers <m> x , y \in \R </m>, the first of which is called the <term> real part </term> and is denoted <m> \Re \of{ z } = x </m> and the second of which is called the <term> imaginary part </term> and is denoted <m> \Im \of{ z } = y </m>. The set of all complex numbers is denoted <m> \C </m>.
+      </p>
+      
+      <p>
+        The <term> sum </term> <m> z_{ 1 } + z_{ 2 } </m> and <term> product </term> <m> z_{ 1 } z_{ 2 } </m> of two complex numbers <m> z_{ 1 } , z_{ 2 } \in \C </m> are the complex numbers defined by the formulae
+        
+        <md>
+          <mrow>
+            z_{ 1 } + z_{ 2 } \amp = \of{ \Re \of{ z_{ 1 } } + \Re \of{ z_{ 2 } } , \Im \of{ z_{ 1 } } + \Im \of{ z_{ 2 } } }
+          </mrow>
+          
+          <mrow>
+            z_{ 1 } z_{ 2 } \amp = \of{ \Re \of{ z_{ 1 } } \cdot \Re \of{ z_{ 2 } } - \Im \of{ z_{ 1 } } \cdot \Im \of{ z_{ 2 } } , \Re \of{ z_{ 1 } } \cdot \Im \of{ z_{ 2 } } + \Im \of{ z_{ 1 } } \cdot \Re \of{ z_{ 2 } } }
+          </mrow>
+        </md>.
+        
+        The <term> imaginary unit </term> <m> i </m> is the complex number <m> \of{ 0 , 1 } </m>, and we note that
+        
+        <md>
+          i \cdot i = \of{ 0 , 1 } \cdot \of{ 0 , 1 } = \of{ 0 \cdot 0 - 1 \cdot 1 , 0 \cdot 1 + 1 \cdot 0 } = \of{ -1 , 0 }
+        </md>.
+      </p>
+    </statement>
+  </definition>
+  
+  <lemma xml:id="lemma-real-numbers-are-complex-numbers">
+    <title>
+      Real numbers as complex numbers
+    </title>
+    
+    <statement>
+      <p>
+        There is an injective map <m> \iota \colon \R \to \C </m> so that <m> \iota \of{ x_{ 1 } + x_{ 2 } } = \iota \of{ x_{ 1 } } + \iota \of{ x_{ 2 } } </m> and <m> \iota \of{ x_{ 1 } x_{ 2 } } = \iota \of{ x_{ 1 } } \cdot \iota \of{ x_{ 2 } } </m> for all real numbers <m> x_{ 1 } , x_{ 2 } \in \R </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \iota \colon \R \to \C </m> be the function defined by the formula <m> \iota \of{ x } = \of{ x , 0 } </m>. Since projection <m> \pi \colon \C \to \R </m> onto the first factor is a left inverse to <m> \iota </m>, <m> \iota </m> is left-invertible and hence injective by (1) of <xref ref="theorem-invertibility"/>. Moreover,
+        
+        <md>
+          \iota \of{ x_{ 1 } + x_{ 2 } } = \of{ x_{ 1 } + x_{ 2 } , 0 } = \of{ x_{ 1 } , 0 } + \of{ x_{ 2 } , 0 } = \iota \of{ x_{ 1 } } + \iota \of{ x_{ 2 } }
+        </md>,
+        
+        and
+        
+        <md>
+          <mrow>
+            \iota \of{ x_{ 1 } x_{ 2 } } \amp = \of{ x_{ 1 } x_{ 2 } , 0 } = \of{ x_{ 1 } x_{ 2 } - 0 \cdot 0 , x_{ 1 } \cdot 0 - 0 \cdot x_{ 2 } }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ x_{ 1 } , 0 } \cdot \of{ x_{ 2 } , 0 } = \iota \of{ x_{ 1 } } \cdot \iota \of{ x_{ 2 } }
+          </mrow>
+        </md>
+        
+        for all real numbers <m> x_{ 1 } , x_{ 2 } \in \R </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <p>
+    As in previous extensions of the usual number systems, we will use the injective map <m> \iota \colon \R \to \C </m> defined in <xref ref="lemma-real-numbers-are-complex-numbers"/> to view the real numbers <m> \R </m> as a subset of the complex numbers <m> \C </m>. As a first example of this, we will denote the complex number <m> \of{ x , y } </m> as <m> x + y i </m> going forward.
+  </p>
+  
+  <definition xml:id="definition-complex-conjugate">
+    <title>
+      Complex conjugate
+    </title>
+    
+    <idx>
+      (complex) conjugate
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \overline{ z } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the conjugate of <m> z </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        The <term> conjugate </term> <m> \overline{ z } </m> of a complex number <m> x + y i \in \C </m> is the complex number <m> \overline{ z } = x - y i </m>.
+      </p>
+    </statement>
+  </definition>
+  
+  <lemma xml:id="lemma-complex-conjugate">
+    <title>
+      Complex conjugates
+    </title>
+    
+    <statement>
+      <p>
+        For all complex numbers <m> z \in \C </m>, <m> z \overline{ z } </m> is a non-negative real number, and <m> z \overline{ z } </m> is positive if and only if <m> z \neq 0 </m> is non-zero
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> z = x + y i \in \C </m> be a complex number, and note that
+        
+        <md>
+          z \overline{ z } = \of{ x + y i } \of{ x - y i } = \of{ x^{ 2 } + y^{ 2 } } + 0 i = x^{ 2 } + y^{ 2 }
+        </md>
+        
+        is a sum of squares of real numbers, and hence is non-negative. Moreover, <m> z \overline{ z } = x^{ 2 } + y^{ 2 } </m> is positive unless <m> x = y = 0 </m>, in which case <m> z = 0 </m> as well.
+      </p>
+    </proof>
+  </lemma>
+  
+  <definition xml:id="definition-magnitude-of-a-complex-number">
+    <title>
+      Magnitude of a complex number
+    </title>
+    
+    <idx>
+      magnitude
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \abs{ z } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the magnitude of <m> z </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        The <term> magnitude </term> <m> \abs{ z } </m> of a complex number <m> z \in \C </m> is the non-negative real number defined by <m> \abs{ z }^{ 2 } = z \overline{ z } </m>.
+      </p>
+    </statement>
+  </definition>
+  
+  <proposition xml:id="proposition-the-field-of-complex-numbers">
+    <title>
+      The field of complex numbers
+    </title>
+    
+    <statement>
+      <p>
+        <m> \of{ \C , + , \oparg } </m> is a field.
+      </p>
+    </statement>
+    
+    <!-- <proof>
+      <p>
+        Let <m> z_{ 1 } , z_{ 2 } \in \C </m> be complex numbers with real and imaginary parts <m> x_{ 1 } = \Re \of{ z_{ 1 } } </m>, <m> y_{ 1 } = \Im \of{ z_{ 1 } } </m>, <m> x_{ 2 } = \Re \of{ z_{ 2 } } </m>, and <m> y_{ 2 } = \Re \of{ z_{ 2 } } </m>, respectively; that is, <m> z_{ 1 } = \of{ x_{ 1 } , y_{ 1 } } </m> and <m> z_{ 2 } = \of{ x_{ 2 } , y_{ 2 } } </m>. We observe that
+        
+        <md>
+          <mrow>
+            z_{ 1 } + z_{ 2 } \amp = \of{ x_{ 1 } , y_{ 1 } } + \of{ x_{ 2 } , y_{ 2 } } = \of{ x_{ 1 } + x_{ 2 } , y_{ 1 } + y_{ 2 } }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ x_{ 2 } + x_{ 1 } , y_{ 2 } + y_{ 1 } } = \of{ x_{ 2 } , y_{ 2 } } + \of{ x_{ 1 } , y_{ 1 } } = z_{ 2 } + z_{ 1 }
+          </mrow>
+        </md>,
+        
+        and
+        
+        <md>
+          <mrow>
+            z_{ 1 } \cdot z_{ 2 } \amp = \of{ x_{ 1 } , y_{ 1 } } \cdot \of{ x_{ 2 } , y_{ 2 } } = \of{ x_{ 1 } \cdot x_{ 2 } - y_{ 1 } \cdot y_{ 2 } , x_{ 1 } \cdot y_{ 2 } - x_{ 2 } \cdot y_{ 1 } }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ x_{ 2 } \cdot x_{ 1 } - y_{ 2 } \cdot y_{ 1 } , x_{ 2 } \cdot y_{ 1 } - x_{ 1 } \cdot y_{ 2 } } = \of{ x_{ 2 } , y_{ 2 } } \cdot \of{ x_{ 1 } , y_{ 1 } } = z_{ 2 } \cdot z_{ 1 }
+          </mrow>
+        </md>,
+        
+        so that addition <m> + </m> and multiplication <m> \cdot </m> of complex numbers is commutative.
+      </p>
+      
+      <p>
+        Let <m> z_{ 1 } , z_{ 2 } , z_{ 3 } \in \C </m> be complex numbers with real and imaginary parts <m> x_{ 1 } = \Re \of{ z_{ 1 } } </m>, <m> y_{ 1 } = \Im \of{ z_{ 1 } } </m>, <m> x_{ 2 } = \Re \of{ z_{ 2 } } </m>, <m> y_{ 2 } = \Re \of{ z_{ 2 } } </m>, <m> x_{ 3 } = \Re \of{ z_{ 3 } } </m>, and <m> y_{ 3 } = \Im \of{ z_{ 3 } } </m>, respectively; that is, <m> z_{ 1 } = \of{ x_{ 1 } , y_{ 1 } } </m>, <m> z_{ 2 } = \of{ x_{ 2 } , y_{ 2 } } </m>, and <m> z_{ 3 } \of{ x_{ 3 } , y_{ 3 } } </m>. We observe that
+        
+        <md>
+          <mrow>
+            \of{ x_{ 1 } + x_{ 2 } } + x_{ 3 } \amp = \of{ \of{ x_{ 1 } , y_{ 1 } } + \of{ x_{ 2 } , y_{ 2 } } } + z_{ 3 } = \of{ x_{ 1 } + x_{ 2 } , y_{ 1 } + y_{ 2 } } + \of{ x_{ 3 } , y_{ 3 } }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ \of{ x_{ 1 } + x_{ 2 } } + x_{ 3 } , \of{ y_{ 1 } + y_{ 2 } } + y_{ 3 } } = \of{ x_{ 1 } + \of{ x_{ 2 } + x_{ 3 } } , y_{ 1 } + \of{ y_{ 2 } + y_{ 3 } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ x_{ 1 } , y_{ 1 } } + \of{ x_{ 2 } + x_{ 3 } , y_{ 2 } + y_{ 3 } } = z_{ 1 } + \of{ \of{ x_{ 1 } , y_{ 1 } } + \of{ x_{ 2 } , y_{ 2 } } } = z_{ 1 } + \of{ z_{ 2 } + z_{ 3 } }
+          </mrow>
+        </md>
+        
+        and
+        
+        <md>
+          <mrow>
+            \of{ x_{ 1 } \cdot x_{ 2 } } \cdot x_{ 3 } \amp = \of{ \of{ x_{ 1 } , y_{ 1 } } \cdot \of{ x_{ 2 } , y_{ 2 } } } \cdot z_{ 3 }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ x_{ 1 } x_{ 2 } - y_{ 1 } y_{ 2 } , x_{ 1 } y_{ 2 } - y_{ 1 } x_{ 2 } } \cdot \of{ x_{ 3 } , y_{ 3 } }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ \of{ x_{ 1 } x_{ 2 } - y_{ 1 } y_{ 2 } } x_{ 3 } - \of{ x_{ 1 } y_{ 2 } - y_{ 1 } x_{ 2 } } y_{ 3 } , \of{ x_{ 1 } x_{ 2 } - y_{ 1 } y_{ 2 } } y_{ 3 } - \of{ x_{ 1 } y_{ 2 } - y_{ 1 } x_{ 2 } } x_{ 3 } }
+          </mrow>
+        </md>,
+        
+        so that addition <m> + </m> and multiplication <m> \cdot </m> are associative.
+      </p>
+    </proof> -->
+  </proposition>
+  
+  <p>
+    While the complex numbers <m> \C </m> are a field, they are not an ordered field.
+  </p>
+  
+  <proposition xml:id="proposition-orders-on-the-complex-numbers">
+    <title>
+      Orders on the complex numbers
+    </title>
+    
+    <statement>
+      <p>
+        There is no total order <m> \leq </m> on the complex numbers <m> \C </m> so that <m> \of{ \C , + , \cdot , \leq } </m> is an ordered field.
+      </p>
+    </statement>
+  </proposition>
+
+  <conclusion>
+    <p>
+      So the addition of the non-real complex numbers to the real number system <m> \R </m> comes at the expense of some of the ordered field axioms. We will see that this is also true of further extensions; for example, multiplication of <term> quaternions </term> is not commutative.
+    </p>
+  </conclusion>
+</subsection>

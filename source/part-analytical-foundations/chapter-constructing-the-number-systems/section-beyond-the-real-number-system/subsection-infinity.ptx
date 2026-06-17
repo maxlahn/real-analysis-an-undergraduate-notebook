@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-infinity" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Infinity
+  </title>
+
+  <introduction>
+    <p>
+      <!-- Text before the first subdivision. -->
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-extended-real-number">
+    <title>
+      Extended real number
+    </title>
+    
+    <idx>
+      extended real number
+    </idx>
+    
+    <idx>
+      infinity
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \overline{ \R } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the set of extended real numbers
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \infty </m>
+      </usage>
+      
+      <description>
+        <p>
+          positive infinity
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> -\infty </m>
+      </usage>
+      
+      <description>
+        <p>
+          negative infinity
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        An <term> extended real number </term> is either a real number or one of two <term> infinite </term> elements <m> \infty </m> or <m> -\infty </m>. The set of extended real numbers is denoted <m> \overline{ \R } = \R \cup \set{ \infty , -\infty } </m>.
+      </p>
+      
+      <p>
+        The standard ordering <m> \leq </m> on the real numbers <m> \R </m> is extended to a total order on <m> \overline{ \R } </m> by requiring <m> -\infty \leq x \leq \infty </m> for all real numbers <m> x \in \R </m>.
+      </p>
+    </statement>
+  </definition>
+  
+  <definition xml:id="definition-interval">
+    <title>
+      Interval
+    </title>
+    
+    <idx>
+      interval
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> a , b \in \overline{ \R } </m> be extended real numbers so that <m> a \leq b </m>.
+        
+        <ol>
+          <li>
+            <title>
+              Closed interval
+            </title>
+            
+            <p>
+              The <term> closed interval </term> <m> \clint{ a }{ b } </m> from <m> a </m> to <m> b </m> is the subset of the extended real numbers <m> \overline{ \R } </m> defined by
+              
+              <md>
+                \clint{ a }{ b } = \setmid{ x \in \overline{ \R } }{ a \leq x \leq b }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Open interval
+            </title>
+            
+            <p>
+              The <term> open interval </term> <m> \opint{ a }{ b } </m> from <m> a </m> to <m> b </m> is the subset of the extended real numbers <m> \overline{ \R } </m> defined by
+              
+              <md>
+                \opint{ a }{ b } = \setmid{ x \in \overline{ \R } }{ a \lt x \lt b }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Half-closed, half-open interval
+            </title>
+            
+            <p>
+              The <term> half-closed, half-open interval </term> <m> \clopint{ a }{ b } </m> from <m> a </m> to <m> b </m> is the subset of the extended real numbers <m> \overline{ \R } </m> defined by
+              
+              <md>
+                \clopint{ a }{ b } = \setmid{ x \in \overline{ \R } }{ a \leq x \lt b }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Closed interval
+            </title>
+            
+            <p>
+              The <term> half-open, half-closed interval </term> <m> \opclint{ a }{ b } </m> from <m> a </m> to <m> b </m> is the subset of the extended real numbers <m> \overline{ \R } </m> defined by
+              
+              <md>
+                \opclint{ a }{ b } = \setmid{ x \in \overline{ \R } }{ a \lt x \leq b }
+              </md>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-intervals">
+    <title>
+      Intervals
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of intervals:
+        
+        <ul>
+          <li>
+            <title>
+              (Extended) real numbers
+            </title>
+            
+            <p>
+              The real numbers <m> \R </m> and the extended real numbers <m> \overline{ \R } </m> are open and closed intervals, respectively; concretely, <m> \R = \opint{ -\infty }{ \infty } </m> and <m> \overline{ \R } = \clint{ -\infty }{ \infty } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Dedekind cuts
+            </title>
+            
+            <p>
+              Given a real number <m> x \in \R </m>, the Dedekind cut <m> X </m> corresponding to <m> x </m> is <m> X = \Q \cap \opint{ -\infty }{ x } </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+
+  <theorem xml:id="theorem-suprema-and-infima">
+    <title>
+      Suprema and infima
+    </title>
+    
+    <statement>
+      <p>
+        Any subset of the extended real numbers <m> \overline{ \R } </m> has a supremum in <m> \overline{ \R } </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> U \subseteq \overline{ \R } </m> be a subset of the extended real numbers <m> \R </m>. If <m> \infty \in U </m>, then <m> \sup \of{ U } = \max \of{ U } = \infty </m>. If <m> \infty \notin U </m> and <m> U \cap \R </m> is not bounded from above, then
+        
+        <md>
+          \sup \of{ U } = \sup \of{ U \cap \R } = \infty
+        </md>.
+        
+        If <m> \infty \notin U </m> and <m> U \cap \R \neq \emptyset </m> is bounded from above, then
+        
+        <md>
+          \sup \of{ U } = \sup \of{ U \cap \R }
+        </md>.
+        
+        Finally, if <m> \infty \notin U </m> and <m> U \cap \R = \emptyset </m>, then <m> \sup \of{ U } = -\infty </m>.
+      </p>
+    </proof>
+  </theorem>
+
+  <conclusion>
+    <idx>
+      indeterminate form
+    </idx>
+    
+    <p>
+      We note that the binary operations of addition and multiplication do not fully extend to the set <m> \overline{ \R } </m> of extended real numbers. Indeed, there are several <term> indeterminate forms </term> like <m> \infty + \of{ -\infty } </m> and <m> 0 \cdot \infty </m> which cannot be consistently resolved.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->
