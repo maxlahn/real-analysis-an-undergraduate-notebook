@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-dedekind-completeness" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Dedekind completeness
+  </title>
+
+  <introduction>
+    <p>
+      So far, we have failed to meaningfully distinguish between the properties enjoyed by the rational number system <m> \Q </m> and the real number system <m> \R </m>. We now address this issue via the notion of <term> Dedekind completeness </term>. Informally, Dedekind completeness is defined in terms of the set of upper bounds of a subset which is bounded from above (or dually the set of lower bounds of a subset which is bounded from below).
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-supremum-infimum">
+    <title>
+      Supremum; infimum
+    </title>
+    
+    <idx>
+      supremum
+    </idx>
+    
+    <idx>
+      least upper bound
+    </idx>
+    
+    <idx>
+      infimum
+    </idx>
+    
+    <idx>
+      greatest lower bound
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \sup \of{ U } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the supremum of <m> U </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \inf \of{ U } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the infimum of <m> U </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a partially ordered set <m> \of{ X , \preceq } </m>.
+        
+        <ul>
+          <li>
+            <title>
+              Supremum
+            </title>
+            
+            <p>
+              If the set of upper bounds for <m> U </m> in <m> X </m> has a minimum, then this minimum is called the <term> supremum </term> (or <term> least upper bound </term>) of <m> U </m> and is denoted <m> \sup \of{ U } </m>; that is,
+              
+              <md>
+                \sup \of{ U } = \min \of{ \setmid{ x \in X }{ u \leq x \textrm{ for all } u \in U } }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Infimum
+            </title>
+            
+            <p>
+              If the set of lower bounds for <m> U </m> in <m> X </m> has a maximum, then this maximum is called the <term> infimum </term> (or <term> greatest lower bound </term>) of <m> U </m> and is denoted <m> \inf \of{ U } </m>; that is,
+              
+              <md>
+                \inf \of{ U } = \max \of{ \setmid{ x \in X }{ x \leq u \textrm{ for all } u \in U } }
+              </md>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-suprema-and-infima">
+    <title>
+      Suprema and infima
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> be an indexed family of subsets <m> U_{ j } \subseteq X </m> of a set <m> X </m>. These subsets <m> U_{ j } </m> are elements of the power set <m> \ps \of{ X } </m>, which is partially ordered by set containment <m> \subseteq </m>.
+      </p>
+      
+      <p>
+        We may reinterpret (a) of <xref ref="problem-indexed-intersections-and-unions"/> as saying that the indexed intersection <m> \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } </m> and the indexed union <m> \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } </m> are the infimum and supremum of <m> \set{ U_{ j } }_{ j \in \mathcal{ J } } </m>.
+      </p>
+    </statement>
+  </example>
+
+  <remark xml:id="remark-suprema-of-dedekind-cuts">
+    <title>
+      Suprema of Dedekind cuts
+    </title>
+    
+    <statement>
+      <p>
+        The complement <m> \Q \setminus X </m> of a Dedekind cut <m> X \in \R </m> is exactly the set of upper bounds of <m> X </m> in <m> \Q </m>, and so <xref ref="lemma-rational-dedekind-cuts"/> implies that <m> X </m> is rational if and only if it has a supremum in <m> \Q </m>.
+      </p>
+      
+      <p>
+        This is the deficiency of the rational numbers <m> \Q </m> from the analytic perspective: <xref ref="proposition-irrational-dedekind-cuts"/> posits the existence of subsets of <m> \Q </m> which are bounded from above <alert> and yet do not have suprema </alert>. We will shortly see that this is not the case in the real number system <m> \R </m>.
+      </p>
+    </statement>
+  </remark>
+  
+  <definition xml:id="definition-dedekind-completeness">
+    <title>
+      Dedekind completeness
+    </title>
+    
+    <idx>
+      Dedekind completeness
+    </idx>
+    
+    <statement>
+      <p>
+        An ordered field <m> \of{ F , + , \cdot , \leq } </m> is called <term> Dedekind complete </term> if every non-empty subset of <m> F </m> which is bounded from above has a supremum.
+      </p>
+    </statement>
+  </definition>
+  
+  <theorem xml:id="theorem-dedekind-completeness-of-the-real-numbers">
+    <title>
+      Dedekind completeness of the real numbers
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \emptyset \subsetneq U \subseteq \R </m> be a non-empty subset of the real numbers <m> \R </m>.
+        
+        <ol>
+          <li>
+            <p>
+              If <m> U </m> is bounded from above, then <m> U </m> has a supremum in <m> \R </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              If <m> U </m> is bounded from below, then <m> U </m> has an infimum in <m> \R </m>.
+            </p>
+          </li>
+        </ol>
+        
+        In particular, the real number system <m> \of{ \R , + , \cdot , \leq } </m> is Dedekind complete.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        <ol>
+          <li>
+            <p>
+              Consider the indexed union
+              
+              <md>
+                S = \bigcup_{ X \in U }{ X } = \setmid{ q \in \Q }{ q \in X \textrm{ for some } X \in U }
+              </md>.
+              
+              We note that (a) of <xref ref="problem-indexed-intersections-and-unions"/> implies that for a Dedekind cut <m> Y \in \R </m>, <m> S \subseteq Y </m> if and only if <m> X \subseteq Y </m> for all <m> X \in U </m>; that is, any upper bound for <m> U </m> in <m> \R </m> contains <m> S </m>, so that
+              
+              <md>
+                S = \min \of{ \setmid{ Y \in \R }{ X \subseteq Y \textrm{ for all } X \in U } } = \sup \of{ U }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Consider the indexed intersection
+              
+              <md>
+                I = \bigcap_{ X \in U }{ X } = \setmid{ q \in \Q }{ q \in X \textrm{ for all } X \in U }
+              </md>.
+              
+              We note that (a) of <xref ref="problem-indexed-intersections-and-unions"/> implies that for a Dedekind cut <m> Y \in \R </m>, <m> Y \subseteq I </m> if and only if <m> Y \subseteq X </m> for all <m> X \in U </m>; that is, <m> I </m> contains any lower bound for <m> U </m> in <m> \R </m>, so that
+              
+              <md>
+                I = \max \of{ \setmid{ Y \in \R }{ Y \subseteq X \textrm{ for all } X \in U } } = \inf \of{ U }
+              </md>.
+            </p>
+          </li>
+        </ol>      
+      </p>
+    </proof>
+  </theorem>
+  
+  <p>
+    We will see that <xref ref="theorem-dedekind-completeness-of-the-real-numbers"/> has far-reaching consequences for the discipline of real analysis, most notably in the existence of limits for certain objects constructed out of the real numbers <m> \R </m>. First, however, we present the following non-constructive characterization of <m> \R </m> as the <em> unique </em> Dedekind complete ordered field.
+  </p>
+  
+  <theorem xml:id="theorem-uniqueness-of-the-real-numbers">
+    <title>
+      Uniqueness of the real numbers
+    </title>
+    
+    <statement>
+      <p>
+        If <m> \of{ F , + , \cdot , \leq } </m> is a Dedekind complete ordered field, then there is a bijection <m> \varphi \colon \R \to F </m> so that for all real numbers <m> x , y \in \R </m>, <m> \varphi \of{ x + y } = \varphi \of{ x } + \varphi \of{ y } </m>, <m> \varphi \of{ x \cdot y } = \varphi \of{ x } \cdot \varphi \of{ y } </m>, and if <m> x \leq y </m>, then <m> \varphi \of{ x } \leq \varphi \of{ y } </m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <conclusion>
+    <p>
+      With <xref ref="theorem-uniqueness-of-the-real-numbers"/>, we are now ready to shake off the burden of viewing the real number system <m> \R </m> through the perspective of Dedekind cuts. All relevant properties of the analysis of real numbers can be derived abstractly from the axioms of a Dedekind complete ordered field, and as a consequence, we will see that we no longer need to rely on any specific formal model of <m> \R </m>.
+    </p>
+  </conclusion>
+</subsection>

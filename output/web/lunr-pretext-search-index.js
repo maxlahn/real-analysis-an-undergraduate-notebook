@@ -1648,9 +1648,9 @@ var ptx_lunr_docs = [
   "body": " Rational Dedekind cuts   A Dedekind cut is rational if and only if its complement has a minimum.    Let be a Dedekind cut, and suppose that for some rational number . Note that has complement . This set contains , since . Moreover, for all elements . Thus .  Conversely, now suppose that has a minimum element, say . Let , and suppose that . If , then that would imply that . This contradiction implies that . On the other hand, if , then , since . Thus is rational.   "
 },
 {
-  "id": "proposition-not-all-dedekind-cuts-are-rational",
+  "id": "proposition-irrational-dedekind-cuts",
   "level": "2",
-  "url": "section-constructing-the-real-numbers.html#proposition-not-all-dedekind-cuts-are-rational",
+  "url": "section-constructing-the-real-numbers.html#proposition-irrational-dedekind-cuts",
   "type": "Proposition",
   "number": "2.2.4",
   "title": "Irrational Dedekind cuts.",
@@ -1789,7 +1789,160 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.3",
   "title": "The Complete Ordered Field",
-  "body": " The Complete Ordered Field   Text before the first subsection.     Text after the last subsection.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available in . However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Problems   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these problems are available in . However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and\/or instructor rather than spoiling the answers.    "
+  "body": " The Complete Ordered Field   In the previous section, we gave an explicit and detailed construction of the real number system . In this section, we give an alternative and non-constructive characterization of as the unique Dedekind complete  ordered field . This will set the stage for abandoning the Dedekind cut perspective in favor of an abstract conception of the properties of the real number system.    The Ordered Field Axioms   We begin by revisiting the properties of the arithmetic of Dedekind cuts collected in . These properties define an algebraic object called a field .    Field  field   Let and be binary operations on a set , called addition and multiplication . The ordered triple is called a field if the binary operations satisfy the following conditions:   Commutativity of addition   for all elements .    Associativity of addition   for all elements .    Additive identity element  There is an element so that for all elements .    Additive inverses  For all elements , there is an element so that .    Commutativity of multiplication   for all elements .    Associativity of addition   for all elements .    Multiplicative identity element  There is an element so that for all elements .    Additive inverses  For all elements , if then there is an element so that .    Distributivity of multiplication over addition   and for all elements .   If is a field, then the set is called its ground set or underlying set . If the binary operations and are clear from context, then we will usually abuse notation and refer to a field by the ground set alone.     Fields   The following are examples of fields:   The field of rational numbers  Addition and multiplication of rational numbers satisfies the above field axioms, and so is a field.    The field of real numbers  Addition and multiplication of real numbers satisfies the above field axioms by , and so is a field.    The field of rational functions  rational function  removable discontinuity       the field of rational functions    Let be a natural number, and fix real numbers . A real-valued function is called a rational function if it has a formula of the form for some polynomials and . Such a rational function has a removable discontinuity at if both and have a root at , and the corresponding factor appears at least as many times in the factorization of as it does in the factorization of .  The set of rational functions without removable discontinuities is denoted . One can verify that the addition and multiplication of these rational functions satisfies the field axioms, and so is a field.       We have seen that the fields and of rational and real numbers are equipped with additional structure beyond that of arithmetic: we can compare rational numbers and real numbers by the standard orders on and , respectively. These are total orders, and we have seen they are compatible with arithmetic in key ways. Generalizing these relationships, we arrive at the notion of an ordered field .   Ordered field  ordered field   Let and be binary operations on a set , called addition and multiplication , and consider a binary relation on , called comparison . The ordered quadruple is called an ordered field if it satisfies the following conditions:   The ordered triple is a field.    The ordered pair is a totally ordered set.    Compatibility of addition and comparison  For all elements , if , then .    Compatibility of multiplication and comparison  For all elements , if and , then .   If is an ordered field, then the set is called its ground set or underlying set . If the binary operations and and the binary relation are clear from context, then we will usually refer to an ordered field by the ground set alone.     Ordered fields   The following are examples of ordered fields:   The ordered field of rational numbers  Addition , multiplication , and comparison of rational numbers satisfies the above ordered field axioms, and so is an ordered field.    The ordered field of real numbers  Addition , multiplication , and comparison of rational numbers satisfies the above ordered field axioms by , and so is an ordered field.        That the above list of examples includes both the rational numbers and the real numbers begs the question: Why bother with the real numbers , when the rational numbers are already an ordered field?     Dedekind completeness   So far, we have failed to meaningfully distinguish between the properties enjoyed by the rational number system and the real number system . We now address this issue via the notion of Dedekind completeness . Informally, Dedekind completeness is defined in terms of the set of upper bounds of a subset which is bounded from above (or dually the set of lower bounds of a subset which is bounded from below).    Supremum; infimum  supremum  least upper bound  infimum  greatest lower bound       the supremum of          the infimum of      Let be a subset of a partially ordered set .   Supremum  If the set of upper bounds for in has a minimum, then this minimum is called the supremum (or least upper bound ) of and is denoted ; that is, .    Infimum  If the set of lower bounds for in has a maximum, then this maximum is called the infimum (or greatest lower bound ) of and is denoted ; that is, .        Suprema and infima   Let be an indexed family of subsets of a set . These subsets are elements of the power set , which is partially ordered by set containment .  We may reinterpret (a) of as saying that the indexed intersection and the indexed union are the infimum and supremum of .     Suprema of Dedekind cuts   The complement of a Dedekind cut is exactly the set of upper bounds of in , and so implies that is rational if and only if it has a supremum in .  This is the deficiency of the rational numbers from the analytic perspective: posits the existence of subsets of which are bounded from above and yet do not have suprema . We will shortly see that this is not the case in the real number system .     Dedekind completeness  Dedekind completeness   An ordered field is called Dedekind complete if every non-empty subset of which is bounded from above has a supremum.     Dedekind completeness of the real numbers   Let be a non-empty subset of the real numbers .   If is bounded from above, then has a supremum in .    If is bounded from below, then has an infimum in .   In particular, the real number system is Dedekind complete.       Consider the indexed union . We note that (a) of implies that for a Dedekind cut , if and only if for all ; that is, any upper bound for in contains , so that .    Consider the indexed intersection . We note that (a) of implies that for a Dedekind cut , if and only if for all ; that is, contains any lower bound for in , so that .       We will see that has far-reaching consequences for the discipline of real analysis, most notably in the existence of limits for certain objects constructed out of the real numbers . First, however, we present the following non-constructive characterization of as the unique Dedekind complete ordered field.   Uniqueness of the real numbers   If is a Dedekind complete ordered field, then there is a bijection so that for all real numbers , , , and if , then .     With , we are now ready to shake off the burden of viewing the real number system through the perspective of Dedekind cuts. All relevant properties of the analysis of real numbers can be derived abstractly from the axioms of a Dedekind complete ordered field, and as a consequence, we will see that we no longer need to rely on any specific formal model of .     In the next section, we will construct various extensions of the real number system . In particular, we will see the extended real numbers , the complex numbers , and the quaternions .    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available in . However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Problems   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .    Uniqueness in a field   Let be a field     Show that the additive identity element is unique.    Let , and suppose that is an additive identity element; that is, suppose that for all . Then in particular, .      Show that the multiplicative identity element is unique.    Let , and suppose that is a multiplicative identity element; that is, suppose that for all . Then in particular, .      Show that additive inverses are unique; that is, given elements , show that if , then .    Suppose that for some elements , and note that .      Show that multiplicative inverses are unique; that is, given elements , show that if , then .    Suppose that for some elements , and note that .      Sign in an ordered field  sign  positive  negative   Let be an ordered field. As in the case of the rational numbers and the real numbers , we can define the sign of an element of by comparison with the additive identity element :   Positivity  A non-zero element is called positive if .    Negativity  A non-zero element is called negative if .    Zero  The additive identity element is not positive or negative.        Let . Show that if , then and its additive inverse have opposite sign.    Add to the inequality defining the sign of .    We first note that if , then . Thus if , then . If is positive, then , and so , and so is negative. On the other hand, if is negative, then , and so , and so is positive.      Show that for all elements .    We observe that , and so is an additive inverse for . Thus (c) in implies that .      Show that the product of two negative elements is positive.    Let be negative elements. Then and ; we first argue that . Indeed, if , then . This contradiction implies that . We now observe that (a) implies that and are positive. Moreover, (b) implies that is positive.      In-depth solutions to these problems are available in . However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and\/or instructor rather than spoiling the answers.    "
+},
+{
+  "id": "section-the-complete-ordered-field-2-1",
+  "level": "2",
+  "url": "section-the-complete-ordered-field.html#section-the-complete-ordered-field-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Dedekind complete ordered field "
+},
+{
+  "id": "subsection-the-ordered-field-axioms-2-1",
+  "level": "2",
+  "url": "section-the-complete-ordered-field.html#subsection-the-ordered-field-axioms-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "field "
+},
+{
+  "id": "definition-field",
+  "level": "2",
+  "url": "section-the-complete-ordered-field.html#definition-field",
+  "type": "Definition",
+  "number": "2.3.1",
+  "title": "Field.",
+  "body": " Field  field   Let and be binary operations on a set , called addition and multiplication . The ordered triple is called a field if the binary operations satisfy the following conditions:   Commutativity of addition   for all elements .    Associativity of addition   for all elements .    Additive identity element  There is an element so that for all elements .    Additive inverses  For all elements , there is an element so that .    Commutativity of multiplication   for all elements .    Associativity of addition   for all elements .    Multiplicative identity element  There is an element so that for all elements .    Additive inverses  For all elements , if then there is an element so that .    Distributivity of multiplication over addition   and for all elements .   If is a field, then the set is called its ground set or underlying set . If the binary operations and are clear from context, then we will usually abuse notation and refer to a field by the ground set alone.   "
+},
+{
+  "id": "example-fields",
+  "level": "2",
+  "url": "section-the-complete-ordered-field.html#example-fields",
+  "type": "Example",
+  "number": "2.3.2",
+  "title": "Fields.",
+  "body": " Fields   The following are examples of fields:   The field of rational numbers  Addition and multiplication of rational numbers satisfies the above field axioms, and so is a field.    The field of real numbers  Addition and multiplication of real numbers satisfies the above field axioms by , and so is a field.    The field of rational functions  rational function  removable discontinuity       the field of rational functions    Let be a natural number, and fix real numbers . A real-valued function is called a rational function if it has a formula of the form for some polynomials and . Such a rational function has a removable discontinuity at if both and have a root at , and the corresponding factor appears at least as many times in the factorization of as it does in the factorization of .  The set of rational functions without removable discontinuities is denoted . One can verify that the addition and multiplication of these rational functions satisfies the field axioms, and so is a field.      "
+},
+{
+  "id": "subsection-the-ordered-field-axioms-5",
+  "level": "2",
+  "url": "section-the-complete-ordered-field.html#subsection-the-ordered-field-axioms-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "ordered field "
+},
+{
+  "id": "definition-ordered-field",
+  "level": "2",
+  "url": "section-the-complete-ordered-field.html#definition-ordered-field",
+  "type": "Definition",
+  "number": "2.3.3",
+  "title": "Ordered field.",
+  "body": " Ordered field  ordered field   Let and be binary operations on a set , called addition and multiplication , and consider a binary relation on , called comparison . The ordered quadruple is called an ordered field if it satisfies the following conditions:   The ordered triple is a field.    The ordered pair is a totally ordered set.    Compatibility of addition and comparison  For all elements , if , then .    Compatibility of multiplication and comparison  For all elements , if and , then .   If is an ordered field, then the set is called its ground set or underlying set . If the binary operations and and the binary relation are clear from context, then we will usually refer to an ordered field by the ground set alone.   "
+},
+{
+  "id": "example-ordered-fields",
+  "level": "2",
+  "url": "section-the-complete-ordered-field.html#example-ordered-fields",
+  "type": "Example",
+  "number": "2.3.4",
+  "title": "Ordered fields.",
+  "body": " Ordered fields   The following are examples of ordered fields:   The ordered field of rational numbers  Addition , multiplication , and comparison of rational numbers satisfies the above ordered field axioms, and so is an ordered field.    The ordered field of real numbers  Addition , multiplication , and comparison of rational numbers satisfies the above ordered field axioms by , and so is an ordered field.      "
+},
+{
+  "id": "subsection-dedekind-completeness-2-1",
+  "level": "2",
+  "url": "section-the-complete-ordered-field.html#subsection-dedekind-completeness-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Dedekind completeness "
+},
+{
+  "id": "definition-supremum-infimum",
+  "level": "2",
+  "url": "section-the-complete-ordered-field.html#definition-supremum-infimum",
+  "type": "Definition",
+  "number": "2.3.5",
+  "title": "Supremum; infimum.",
+  "body": " Supremum; infimum  supremum  least upper bound  infimum  greatest lower bound       the supremum of          the infimum of      Let be a subset of a partially ordered set .   Supremum  If the set of upper bounds for in has a minimum, then this minimum is called the supremum (or least upper bound ) of and is denoted ; that is, .    Infimum  If the set of lower bounds for in has a maximum, then this maximum is called the infimum (or greatest lower bound ) of and is denoted ; that is, .      "
+},
+{
+  "id": "example-suprema-and-infima",
+  "level": "2",
+  "url": "section-the-complete-ordered-field.html#example-suprema-and-infima",
+  "type": "Example",
+  "number": "2.3.6",
+  "title": "Suprema and infima.",
+  "body": " Suprema and infima   Let be an indexed family of subsets of a set . These subsets are elements of the power set , which is partially ordered by set containment .  We may reinterpret (a) of as saying that the indexed intersection and the indexed union are the infimum and supremum of .   "
+},
+{
+  "id": "remark-suprema-of-dedekind-cuts",
+  "level": "2",
+  "url": "section-the-complete-ordered-field.html#remark-suprema-of-dedekind-cuts",
+  "type": "Remark",
+  "number": "2.3.7",
+  "title": "Suprema of Dedekind cuts.",
+  "body": " Suprema of Dedekind cuts   The complement of a Dedekind cut is exactly the set of upper bounds of in , and so implies that is rational if and only if it has a supremum in .  This is the deficiency of the rational numbers from the analytic perspective: posits the existence of subsets of which are bounded from above and yet do not have suprema . We will shortly see that this is not the case in the real number system .   "
+},
+{
+  "id": "definition-dedekind-completeness",
+  "level": "2",
+  "url": "section-the-complete-ordered-field.html#definition-dedekind-completeness",
+  "type": "Definition",
+  "number": "2.3.8",
+  "title": "Dedekind completeness.",
+  "body": " Dedekind completeness  Dedekind completeness   An ordered field is called Dedekind complete if every non-empty subset of which is bounded from above has a supremum.   "
+},
+{
+  "id": "theorem-dedekind-completeness-of-the-real-numbers",
+  "level": "2",
+  "url": "section-the-complete-ordered-field.html#theorem-dedekind-completeness-of-the-real-numbers",
+  "type": "Theorem",
+  "number": "2.3.9",
+  "title": "Dedekind completeness of the real numbers.",
+  "body": " Dedekind completeness of the real numbers   Let be a non-empty subset of the real numbers .   If is bounded from above, then has a supremum in .    If is bounded from below, then has an infimum in .   In particular, the real number system is Dedekind complete.       Consider the indexed union . We note that (a) of implies that for a Dedekind cut , if and only if for all ; that is, any upper bound for in contains , so that .    Consider the indexed intersection . We note that (a) of implies that for a Dedekind cut , if and only if for all ; that is, contains any lower bound for in , so that .      "
+},
+{
+  "id": "theorem-uniqueness-of-the-real-numbers",
+  "level": "2",
+  "url": "section-the-complete-ordered-field.html#theorem-uniqueness-of-the-real-numbers",
+  "type": "Theorem",
+  "number": "2.3.10",
+  "title": "Uniqueness of the real numbers.",
+  "body": " Uniqueness of the real numbers   If is a Dedekind complete ordered field, then there is a bijection so that for all real numbers , , , and if , then .   "
+},
+{
+  "id": "section-the-complete-ordered-field-5-1",
+  "level": "2",
+  "url": "section-the-complete-ordered-field.html#section-the-complete-ordered-field-5-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "extended real numbers complex numbers quaternions "
+},
+{
+  "id": "problem-uniqueness-in-a-field",
+  "level": "2",
+  "url": "section-the-complete-ordered-field.html#problem-uniqueness-in-a-field",
+  "type": "Problem",
+  "number": "2.3.4.1",
+  "title": "Uniqueness in a field.",
+  "body": " Uniqueness in a field   Let be a field     Show that the additive identity element is unique.    Let , and suppose that is an additive identity element; that is, suppose that for all . Then in particular, .      Show that the multiplicative identity element is unique.    Let , and suppose that is a multiplicative identity element; that is, suppose that for all . Then in particular, .      Show that additive inverses are unique; that is, given elements , show that if , then .    Suppose that for some elements , and note that .      Show that multiplicative inverses are unique; that is, given elements , show that if , then .    Suppose that for some elements , and note that .    "
+},
+{
+  "id": "problem-sign-in-an-ordered-field",
+  "level": "2",
+  "url": "section-the-complete-ordered-field.html#problem-sign-in-an-ordered-field",
+  "type": "Problem",
+  "number": "2.3.4.2",
+  "title": "Sign in an ordered field.",
+  "body": " Sign in an ordered field  sign  positive  negative   Let be an ordered field. As in the case of the rational numbers and the real numbers , we can define the sign of an element of by comparison with the additive identity element :   Positivity  A non-zero element is called positive if .    Negativity  A non-zero element is called negative if .    Zero  The additive identity element is not positive or negative.        Let . Show that if , then and its additive inverse have opposite sign.    Add to the inequality defining the sign of .    We first note that if , then . Thus if , then . If is positive, then , and so , and so is negative. On the other hand, if is negative, then , and so , and so is positive.      Show that for all elements .    We observe that , and so is an additive inverse for . Thus (c) in implies that .      Show that the product of two negative elements is positive.    Let be negative elements. Then and ; we first argue that . Indeed, if , then . This contradiction implies that . We now observe that (a) implies that and are positive. Moreover, (b) implies that is positive.    "
 },
 {
   "id": "section-beyond-the-real-number-system",

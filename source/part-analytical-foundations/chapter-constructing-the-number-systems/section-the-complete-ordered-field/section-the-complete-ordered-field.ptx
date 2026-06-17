@@ -7,15 +7,17 @@
 
   <introduction>
     <p>
-      Text before the first subsection.
+      In the previous section, we gave an explicit and detailed construction of the real number system <m> \R </m>. In this section, we give an alternative and non-constructive characterization of <m> \R </m> as the unique <term> Dedekind complete </term> <term> ordered field </term>. This will set the stage for abandoning the Dedekind cut perspective in favor of an abstract conception of the properties of the real number system.
     </p>
   </introduction>
 
-  <!-- <xi:include href="./subsection-TITLE.ptx"/> -->
+  <xi:include href="./subsection-the-ordered-field-axioms.ptx"/>
+
+  <xi:include href="./subsection-dedekind-completeness.ptx"/>
 
   <conclusion>
     <p>
-      Text after the last subsection.
+      In the next section, we will construct various extensions of the real number system <m> \R </m>. In particular, we will see the <term> extended real numbers </term>, the <term> complex numbers </term>, and the <term> quaternions </term>.
     </p>
   </conclusion>
 

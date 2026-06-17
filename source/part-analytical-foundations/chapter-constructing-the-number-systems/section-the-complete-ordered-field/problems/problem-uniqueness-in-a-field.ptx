@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-uniqueness-in-a-field" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Uniqueness in a field
+  </title>
+  
+  <introduction>
+    <p>
+      Let <m> \of{ F , + , \cdot } </m> be a field
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Show that the additive identity element <m> 0 \in F </m> is unique.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Let <m> x \in F </m>, and suppose that <m> x </m> is an additive identity element; that is, suppose that <m> x + y = y + x = y </m> for all <m> y \in F </m>. Then in particular,
+        
+        <md>
+          x = x + 0 = 0
+        </md>.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Show that the multiplicative identity element <m> 1 \in F </m> is unique.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Let <m> x \in F </m>, and suppose that <m> x </m> is a multiplicative identity element; that is, suppose that <m> x \cdot y = y \cdot x = y </m> for all <m> y \in F </m>. Then in particular,
+        
+        <md>
+          x = x \cdot 1 = 1
+        </md>.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Show that additive inverses are unique; that is, given elements <m> x , y , z \in F </m>, show that if
+        
+        <md>
+          x + y = x + z = 0
+        </md>,
+        
+        then <m> y = z </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Suppose that <m> x + y = x + z = 0 </m> for some elements <m> x , y , z \in F </m>, and note that
+        
+        <md>
+          y = y + 0 = y + x + z = x + y + z = 0 + z = z
+        </md>.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Show that multiplicative inverses are unique; that is, given elements <m> x , y , z \in F </m>, show that if
+        
+        <md>
+          x \cdot y = x \cdot z = 1
+        </md>,
+        
+        then <m> y = z </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Suppose that <m> x \cdot y = x \cdot z = 1 </m> for some elements <m> x , y , z \in F </m>, and note that
+        
+        <md>
+          y = y \cdot 1 = y \cdot x \cdot z = x \cdot y \cdot z = 1 \cdot z = z
+        </md>.
+      </p>
+    </solution>
+  </task>
+</exercise>

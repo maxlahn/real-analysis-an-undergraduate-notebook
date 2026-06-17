@@ -155,7 +155,7 @@
     </proof>
   </lemma>
   
-  <proposition xml:id="proposition-not-all-dedekind-cuts-are-rational">
+  <proposition xml:id="proposition-irrational-dedekind-cuts">
     <title>
       Irrational Dedekind cuts
     </title>
@@ -260,7 +260,7 @@
       X = \setmid{ q \in \Q }{ q \lt 0 \textrm{ or } q^{ 2 } \lt 2 }
     </md>
     
-    from the above proof of <xref ref="proposition-not-all-dedekind-cuts-are-rational"/> represents the <term> irrational </term> real number <m> \sqrt{ 2 } </m>. First, however, we observe that the rational numbers <m> \Q </m> inject into <m> \R </m>.
+    from the above proof of <xref ref="proposition-irrational-dedekind-cuts"/> represents the <term> irrational </term> real number <m> \sqrt{ 2 } </m>. First, however, we observe that the rational numbers <m> \Q </m> inject into <m> \R </m>.
   </p>
   
   <proposition xml:id="proposition-rational-numbers-as-real-numbers">
