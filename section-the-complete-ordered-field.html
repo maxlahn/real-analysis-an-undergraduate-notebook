@@ -661,8 +661,10 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="section-the-complete-ordered-field.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Complete Ordered Field</span></a></div>
 <ul class="structural toc-item-list active">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#exercises-the-complete-ordered-field" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#problems-the-complete-ordered-field" class="internal"><span class="codenumber">2.3</span> <span class="title">Problems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#subsection-the-ordered-field-axioms" class="internal"><span class="codenumber">2.3.1</span> <span class="title">The Ordered Field Axioms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#subsection-dedekind-completeness" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Dedekind completeness</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#exercises-the-complete-ordered-field" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#problems-the-complete-ordered-field" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -891,32 +893,467 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Complete Ordered Field</span>
 </h2>
 <section class="introduction" id="section-the-complete-ordered-field-2">
-<div class="para" id="section-the-complete-ordered-field-2-1">Text before the first subsection.<div class="autopermalink" data-description="Paragraph"><a href="#section-the-complete-ordered-field-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="section-the-complete-ordered-field-2-1">In the previous section, we gave an explicit and detailed construction of the real number system <span class="process-math">\(\R \text{.}\)</span> In this section, we give an alternative and non-constructive characterization of <span class="process-math">\(\R \)</span> as the unique <dfn class="terminology">Dedekind complete</dfn> <dfn class="terminology">ordered field</dfn>. This will set the stage for abandoning the Dedekind cut perspective in favor of an abstract conception of the properties of the real number system.<div class="autopermalink" data-description="Paragraph"><a href="#section-the-complete-ordered-field-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="section-the-complete-ordered-field-3">
-<div class="para" id="section-the-complete-ordered-field-3-1">Text after the last subsection.<div class="autopermalink" data-description="Paragraph"><a href="#section-the-complete-ordered-field-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="subsection" id="subsection-the-ordered-field-axioms">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Ordered Field Axioms</span>
+</h3>
+<section class="introduction" id="subsection-the-ordered-field-axioms-2">
+<div class="para" id="subsection-the-ordered-field-axioms-2-1">We begin by revisiting the properties of the arithmetic of Dedekind cuts collected in <a href="section-constructing-the-real-numbers.html" class="internal" title="Section 2.2: Constructing the Real Numbers">Section 2.2 Constructing the Real Numbers</a>. These properties define an algebraic object called a <dfn class="terminology">field</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-the-ordered-field-axioms-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="definition definition-like" id="definition-field"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Field.</span>
+</h4>
+<div class="para logical" id="definition-field-3-1">
+<div class="para">Let <span class="process-math">\(+ \)</span> and <span class="process-math">\(\cdot \)</span> be binary operations on a set <span class="process-math">\(F \text{,}\)</span> called <dfn class="terminology">addition</dfn> and <dfn class="terminology">multiplication</dfn>. The ordered triple <span class="process-math">\(\of{ F , + , \cdot } \)</span> is called a <dfn class="terminology">field</dfn> if the binary operations satisfy the following conditions:</div>
+<ul class="disc" id="definition-field-3-1-8">
+<li id="definition-field-3-1-8-1">
+<span class="heading li--heading"><span class="title li--heading-title">Commutativity of addition.</span></span>
+<div class="para" id="definition-field-3-1-8-1-2">
+<span class="process-math">\(x + y = y + x \)</span> for all elements <span class="process-math">\(x , y \in F \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-field-3-1-8-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Commutativity of addition"><a href="#definition-field-3-1-8-1" title="Copy heading and permalink for Item: Commutativity of addition" aria-label="Copy heading and permalink for Item: Commutativity of addition">🔗</a></div>
+</li>
+<li id="definition-field-3-1-8-2">
+<span class="heading li--heading"><span class="title li--heading-title">Associativity of addition.</span></span>
+<div class="para" id="definition-field-3-1-8-2-2">
+<span class="process-math">\(\of{ x + y } + z = x + \of{ y + z } \)</span> for all elements <span class="process-math">\(x , y , z \in F \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-field-3-1-8-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Associativity of addition"><a href="#definition-field-3-1-8-2" title="Copy heading and permalink for Item: Associativity of addition" aria-label="Copy heading and permalink for Item: Associativity of addition">🔗</a></div>
+</li>
+<li id="definition-field-3-1-8-3">
+<span class="heading li--heading"><span class="title li--heading-title">Additive identity element.</span></span>
+<div class="para" id="definition-field-3-1-8-3-2">There is an element <span class="process-math">\(0 \in F \)</span> so that <span class="process-math">\(x + 0 = 0 + x = x \)</span> for all elements <span class="process-math">\(x \in F \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-field-3-1-8-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Additive identity element"><a href="#definition-field-3-1-8-3" title="Copy heading and permalink for Item: Additive identity element" aria-label="Copy heading and permalink for Item: Additive identity element">🔗</a></div>
+</li>
+<li id="definition-field-3-1-8-4">
+<span class="heading li--heading"><span class="title li--heading-title">Additive inverses.</span></span>
+<div class="para" id="definition-field-3-1-8-4-2">For all elements <span class="process-math">\(x \in X \text{,}\)</span> there is an element <span class="process-math">\(-x \in F \)</span> so that <span class="process-math">\(x + \of{ -x } = \of{ -x } + x = 0 \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-field-3-1-8-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Additive inverses"><a href="#definition-field-3-1-8-4" title="Copy heading and permalink for Item: Additive inverses" aria-label="Copy heading and permalink for Item: Additive inverses">🔗</a></div>
+</li>
+<li id="definition-field-3-1-8-5">
+<span class="heading li--heading"><span class="title li--heading-title">Commutativity of multiplication.</span></span>
+<div class="para" id="definition-field-3-1-8-5-2">
+<span class="process-math">\(x \cdot y = y \cdot x \)</span> for all elements <span class="process-math">\(x , y \in F \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-field-3-1-8-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Commutativity of multiplication"><a href="#definition-field-3-1-8-5" title="Copy heading and permalink for Item: Commutativity of multiplication" aria-label="Copy heading and permalink for Item: Commutativity of multiplication">🔗</a></div>
+</li>
+<li id="definition-field-3-1-8-6">
+<span class="heading li--heading"><span class="title li--heading-title">Associativity of addition.</span></span>
+<div class="para" id="definition-field-3-1-8-6-2">
+<span class="process-math">\(\of{ x \cdot y } \cdot z = x \cdot \of{ y \cdot z } \)</span> for all elements <span class="process-math">\(x , y , z \in F \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-field-3-1-8-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Associativity of addition"><a href="#definition-field-3-1-8-6" title="Copy heading and permalink for Item: Associativity of addition" aria-label="Copy heading and permalink for Item: Associativity of addition">🔗</a></div>
+</li>
+<li id="definition-field-3-1-8-7">
+<span class="heading li--heading"><span class="title li--heading-title">Multiplicative identity element.</span></span>
+<div class="para" id="definition-field-3-1-8-7-2">There is an element <span class="process-math">\(1 \in F \setminus \set{ 0 } \)</span> so that <span class="process-math">\(x \cdot 1 = 1 \cdot x = x \)</span> for all elements <span class="process-math">\(x \in F \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-field-3-1-8-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Multiplicative identity element"><a href="#definition-field-3-1-8-7" title="Copy heading and permalink for Item: Multiplicative identity element" aria-label="Copy heading and permalink for Item: Multiplicative identity element">🔗</a></div>
+</li>
+<li id="definition-field-3-1-8-8">
+<span class="heading li--heading"><span class="title li--heading-title">Additive inverses.</span></span>
+<div class="para" id="definition-field-3-1-8-8-2">For all elements <span class="process-math">\(x \in X \text{,}\)</span> if <span class="process-math">\(x \neq 0 \)</span> then there is an element <span class="process-math">\(x^{ -1 } \in F \)</span> so that <span class="process-math">\(x \cdot x^{ -1 } = x^{ -1 } \cdot x = 1 \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-field-3-1-8-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Additive inverses"><a href="#definition-field-3-1-8-8" title="Copy heading and permalink for Item: Additive inverses" aria-label="Copy heading and permalink for Item: Additive inverses">🔗</a></div>
+</li>
+<li id="definition-field-3-1-8-9">
+<span class="heading li--heading"><span class="title li--heading-title">Distributivity of multiplication over addition.</span></span>
+<div class="para" id="definition-field-3-1-8-9-2">
+<span class="process-math">\(x \cdot \of{ y + z } = \of{ x \cdot y } + \of{ x \cdot z } \)</span> and <span class="process-math">\(\of{ x + y } \cdot z = \of{ x \cdot z } + y \cdot z \)</span> for all elements <span class="process-math">\(x , y , z \in F \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-field-3-1-8-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Distributivity of multiplication over addition"><a href="#definition-field-3-1-8-9" title="Copy heading and permalink for Item: Distributivity of multiplication over addition" aria-label="Copy heading and permalink for Item: Distributivity of multiplication over addition">🔗</a></div>
+</li>
+</ul>
+<div class="para">If <span class="process-math">\(\of{ F , + , \cdot } \)</span> is a field, then the set <span class="process-math">\(F \)</span> is called its <dfn class="terminology">ground set</dfn> or <dfn class="terminology">underlying set</dfn>. If the binary operations <span class="process-math">\(+ \)</span> and <span class="process-math">\(\cdot \)</span> are clear from context, then we will usually abuse notation and refer to a field by the ground set alone.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-field-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.3.1: Field"><a href="#definition-field" title="Copy heading and permalink for Definition 2.3.1: Field" aria-label="Copy heading and permalink for Definition 2.3.1: Field">🔗</a></div>
+</article>
+<details id="example-fields" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fields.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-fields-2-1">
+<div class="para">The following are examples of fields:</div>
+<ul class="disc" id="example-fields-2-1-1">
+<li id="example-fields-2-1-1-1">
+<span class="heading li--heading"><span class="title li--heading-title">The field of rational numbers.</span></span>
+<div class="para" id="example-fields-2-1-1-1-2">Addition <span class="process-math">\(+ \)</span> and multiplication <span class="process-math">\(\cdot \)</span> of rational numbers satisfies the above field axioms, and so <span class="process-math">\(\Q \)</span> is a field.<div class="autopermalink" data-description="Paragraph"><a href="#example-fields-2-1-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: The field of rational numbers"><a href="#example-fields-2-1-1-1" title="Copy heading and permalink for Item: The field of rational numbers" aria-label="Copy heading and permalink for Item: The field of rational numbers">🔗</a></div>
+</li>
+<li id="example-fields-2-1-1-2">
+<span class="heading li--heading"><span class="title li--heading-title">The field of real numbers.</span></span>
+<div class="para" id="example-fields-2-1-1-2-2">Addition <span class="process-math">\(+ \)</span> and multiplication <span class="process-math">\(\cdot \)</span> of real numbers satisfies the above field axioms by <a href="section-constructing-the-real-numbers.html#theorem-arithmetic-of-dedekind-cuts" class="xref" data-knowl="./knowl/xref/theorem-arithmetic-of-dedekind-cuts.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.2.15: Arithmetic of Dedekind cuts">Theorem 2.2.15 Arithmetic of Dedekind cuts</a>, and so <span class="process-math">\(\R \)</span> is a field.<div class="autopermalink" data-description="Paragraph"><a href="#example-fields-2-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: The field of real numbers"><a href="#example-fields-2-1-1-2" title="Copy heading and permalink for Item: The field of real numbers" aria-label="Copy heading and permalink for Item: The field of real numbers">🔗</a></div>
+</li>
+<li id="example-fields-2-1-1-3">
+<span class="heading li--heading"><span class="title li--heading-title">The field of rational functions.</span></span>
+<div class="para logical" id="example-fields-2-1-1-3-5">
+<div class="para">Let <span class="process-math">\(n \in \N \)</span> be a natural number, and fix real numbers <span class="process-math">\(x_{ 1 } , \dots c, x_{ n } \in \R \text{.}\)</span> A real-valued function <span class="process-math">\(f \colon \R \setminus \set{ x_{ 1 } , \dotsc , x_{ n } } \to \R \)</span> is called a <dfn class="terminology">rational function</dfn> if it has a formula of the form</div>
+<div class="displaymath process-math" id="example-fields-2-1-1-3-5-5">
+\begin{equation*}
+f \of{ x } = \frac{ p \of{ x } }{ q \of{ x } }
+\end{equation*}
+</div>
+<div class="para">for some polynomials <span class="process-math">\(p \of{ x } \)</span> and <span class="process-math">\(q \of{ x } \text{.}\)</span> Such a rational function <span class="process-math">\(f \of{ x } \)</span> has a <dfn class="terminology">removable discontinuity</dfn> at <span class="process-math">\(x_{ k } \)</span> if both <span class="process-math">\(p \of{ x } \)</span> and <span class="process-math">\(q \of{ x } \)</span> have a root at <span class="process-math">\(x = x_{ k } \text{,}\)</span> and the corresponding factor <span class="process-math">\(\of{ x - x_{ k } } \)</span> appears at least as many times in the factorization of <span class="process-math">\(p \of{ x } \)</span> as it does in the factorization of <span class="process-math">\(q \of{ x } \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-fields-2-1-1-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-fields-2-1-1-3-6">The set of rational functions without removable discontinuities is denoted <span class="process-math">\(\R \of{ x } \text{.}\)</span> One can verify that the addition and multiplication of these rational functions satisfies the field axioms, and so <span class="process-math">\(\R \of{ x } \)</span> is a field.<div class="autopermalink" data-description="Paragraph"><a href="#example-fields-2-1-1-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: The field of rational functions"><a href="#example-fields-2-1-1-3" title="Copy heading and permalink for Item: The field of rational functions" aria-label="Copy heading and permalink for Item: The field of rational functions">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-fields-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.3.2: Fields"><a href="#example-fields" title="Copy heading and permalink for Example 2.3.2: Fields" aria-label="Copy heading and permalink for Example 2.3.2: Fields">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-the-ordered-field-axioms-5">We have seen that the fields <span class="process-math">\(\Q \)</span> and <span class="process-math">\(\R \)</span> of rational and real numbers are equipped with additional structure beyond that of arithmetic: we can compare rational numbers and real numbers by the standard orders <span class="process-math">\(\leq \)</span> on <span class="process-math">\(\Q \)</span> and <span class="process-math">\(\R \text{,}\)</span> respectively. These are total orders, and we have seen they are compatible with arithmetic in key ways. Generalizing these relationships, we arrive at the notion of an <dfn class="terminology">ordered field</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-the-ordered-field-axioms-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-ordered-field"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Ordered field.</span>
+</h4>
+<div class="para logical" id="definition-ordered-field-3-1">
+<div class="para">Let <span class="process-math">\(+ \)</span> and <span class="process-math">\(\cdot \)</span> be binary operations on a set <span class="process-math">\(F \text{,}\)</span> called <dfn class="terminology">addition</dfn> and <dfn class="terminology">multiplication</dfn>, and consider a binary relation <span class="process-math">\(\leq \)</span> on <span class="process-math">\(F \text{,}\)</span> called <dfn class="terminology">comparison</dfn>. The ordered quadruple <span class="process-math">\(\of{ F , + , \cdot , \leq } \)</span> is called an <dfn class="terminology">ordered field</dfn> if it satisfies the following conditions:</div>
+<ul class="disc" id="definition-ordered-field-3-1-11">
+<li id="definition-ordered-field-3-1-11-1">
+<div class="para" id="definition-ordered-field-3-1-11-1-1">The ordered triple <span class="process-math">\(\of{ F , + , \cdot } \)</span> is a field.<div class="autopermalink" data-description="Paragraph"><a href="#definition-ordered-field-3-1-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#definition-ordered-field-3-1-11-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="definition-ordered-field-3-1-11-2">
+<div class="para" id="definition-ordered-field-3-1-11-2-1">The ordered pair <span class="process-math">\(\of{ F , \leq } \)</span> is a totally ordered set.<div class="autopermalink" data-description="Paragraph"><a href="#definition-ordered-field-3-1-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#definition-ordered-field-3-1-11-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="definition-ordered-field-3-1-11-3">
+<span class="heading li--heading"><span class="title li--heading-title">Compatibility of addition and comparison.</span></span>
+<div class="para" id="definition-ordered-field-3-1-11-3-2">For all elements <span class="process-math">\(x , y , z \in F \text{,}\)</span> if <span class="process-math">\(x \leq y \text{,}\)</span> then <span class="process-math">\(x + z \leq y + z \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-ordered-field-3-1-11-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Compatibility of addition and comparison"><a href="#definition-ordered-field-3-1-11-3" title="Copy heading and permalink for Item: Compatibility of addition and comparison" aria-label="Copy heading and permalink for Item: Compatibility of addition and comparison">🔗</a></div>
+</li>
+<li id="definition-ordered-field-3-1-11-4">
+<span class="heading li--heading"><span class="title li--heading-title">Compatibility of multiplication and comparison.</span></span>
+<div class="para" id="definition-ordered-field-3-1-11-4-2">For all elements <span class="process-math">\(x , y \in F \text{,}\)</span> if <span class="process-math">\(0 \leq x \)</span> and <span class="process-math">\(0 \leq y \text{,}\)</span> then <span class="process-math">\(0 \leq x \cdot y \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-ordered-field-3-1-11-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Compatibility of multiplication and comparison"><a href="#definition-ordered-field-3-1-11-4" title="Copy heading and permalink for Item: Compatibility of multiplication and comparison" aria-label="Copy heading and permalink for Item: Compatibility of multiplication and comparison">🔗</a></div>
+</li>
+</ul>
+<div class="para">If <span class="process-math">\(\of{ F , + , \cdot , \leq } \)</span> is an ordered field, then the set <span class="process-math">\(F \)</span> is called its <dfn class="terminology">ground set</dfn> or <dfn class="terminology">underlying set</dfn>. If the binary operations <span class="process-math">\(+ \)</span> and <span class="process-math">\(\cdot \)</span> and the binary relation <span class="process-math">\(\leq \)</span> are clear from context, then we will usually refer to an ordered field by the ground set alone.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-ordered-field-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.3.3: Ordered field"><a href="#definition-ordered-field" title="Copy heading and permalink for Definition 2.3.3: Ordered field" aria-label="Copy heading and permalink for Definition 2.3.3: Ordered field">🔗</a></div>
+</article>
+<details id="example-ordered-fields" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Ordered fields.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-ordered-fields-2-1">
+<div class="para">The following are examples of ordered fields:</div>
+<ul class="disc" id="example-ordered-fields-2-1-1">
+<li id="example-ordered-fields-2-1-1-1">
+<span class="heading li--heading"><span class="title li--heading-title">The ordered field of rational numbers.</span></span>
+<div class="para" id="example-ordered-fields-2-1-1-1-2">Addition <span class="process-math">\(+ \text{,}\)</span> multiplication <span class="process-math">\(\cdot \text{,}\)</span> and comparison <span class="process-math">\(\leq \)</span> of rational numbers satisfies the above ordered field axioms, and so <span class="process-math">\(\Q \)</span> is an ordered field.<div class="autopermalink" data-description="Paragraph"><a href="#example-ordered-fields-2-1-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: The ordered field of rational numbers"><a href="#example-ordered-fields-2-1-1-1" title="Copy heading and permalink for Item: The ordered field of rational numbers" aria-label="Copy heading and permalink for Item: The ordered field of rational numbers">🔗</a></div>
+</li>
+<li id="example-ordered-fields-2-1-1-2">
+<span class="heading li--heading"><span class="title li--heading-title">The ordered field of real numbers.</span></span>
+<div class="para" id="example-ordered-fields-2-1-1-2-2">Addition <span class="process-math">\(+ \text{,}\)</span> multiplication <span class="process-math">\(\cdot \text{,}\)</span> and comparison <span class="process-math">\(\leq \)</span> of rational numbers satisfies the above ordered field axioms by <a href="section-constructing-the-real-numbers.html#theorem-arithmetic-of-dedekind-cuts" class="xref" data-knowl="./knowl/xref/theorem-arithmetic-of-dedekind-cuts.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.2.15: Arithmetic of Dedekind cuts">Theorem 2.2.15 Arithmetic of Dedekind cuts</a>, and so <span class="process-math">\(\R \)</span> is an ordered field.<div class="autopermalink" data-description="Paragraph"><a href="#example-ordered-fields-2-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: The ordered field of real numbers"><a href="#example-ordered-fields-2-1-1-2" title="Copy heading and permalink for Item: The ordered field of real numbers" aria-label="Copy heading and permalink for Item: The ordered field of real numbers">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-ordered-fields-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.3.4: Ordered fields"><a href="#example-ordered-fields" title="Copy heading and permalink for Example 2.3.4: Ordered fields" aria-label="Copy heading and permalink for Example 2.3.4: Ordered fields">🔗</a></div>
+</article></details>
+<section class="conclusion" id="subsection-the-ordered-field-axioms-8">
+<div class="para" id="subsection-the-ordered-field-axioms-8-1">That the above list of examples includes both the rational numbers <span class="process-math">\(\Q \)</span> and the real numbers <span class="process-math">\(\R \)</span> begs the question: Why bother with the real numbers <span class="process-math">\(\R \text{,}\)</span> when the rational numbers <span class="process-math">\(\Q \)</span> are already an ordered field?<div class="autopermalink" data-description="Paragraph"><a href="#subsection-the-ordered-field-axioms-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Subsection 2.3.1: The Ordered Field Axioms"><a href="#subsection-the-ordered-field-axioms" title="Copy heading and permalink for Subsection 2.3.1: The Ordered Field Axioms" aria-label="Copy heading and permalink for Subsection 2.3.1: The Ordered Field Axioms">🔗</a></div>
+</section>
+<section class="subsection" id="subsection-dedekind-completeness">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dedekind completeness</span>
+</h3>
+<section class="introduction" id="subsection-dedekind-completeness-2">
+<div class="para" id="subsection-dedekind-completeness-2-1">So far, we have failed to meaningfully distinguish between the properties enjoyed by the rational number system <span class="process-math">\(\Q \)</span> and the real number system <span class="process-math">\(\R \text{.}\)</span> We now address this issue via the notion of <dfn class="terminology">Dedekind completeness</dfn>. Informally, Dedekind completeness is defined in terms of the set of upper bounds of a subset which is bounded from above (or dually the set of lower bounds of a subset which is bounded from below).<div class="autopermalink" data-description="Paragraph"><a href="#subsection-dedekind-completeness-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="definition definition-like" id="definition-supremum-infimum"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Supremum; infimum.</span>
+</h4>
+<div class="para logical" id="definition-supremum-infimum-8-1">
+<div class="para">Let <span class="process-math">\(U \subseteq X \)</span> be a subset of a partially ordered set <span class="process-math">\(\of{ X , \preceq } \text{.}\)</span>
+</div>
+<ul class="disc" id="definition-supremum-infimum-8-1-3">
+<li id="definition-supremum-infimum-8-1-3-1">
+<span class="heading li--heading"><span class="title li--heading-title">Supremum.</span></span>
+<div class="para logical" id="definition-supremum-infimum-8-1-3-1-2">
+<div class="para">If the set of upper bounds for <span class="process-math">\(U \)</span> in <span class="process-math">\(X \)</span> has a minimum, then this minimum is called the <dfn class="terminology">supremum</dfn> (or <dfn class="terminology">least upper bound</dfn>) of <span class="process-math">\(U \)</span> and is denoted <span class="process-math">\(\sup \of{ U } \text{;}\)</span> that is,</div>
+<div class="displaymath process-math" id="definition-supremum-infimum-8-1-3-1-2-7">
+\begin{equation*}
+\sup \of{ U } = \min \of{ \setmid{ x \in X }{ u \leq x \textrm{ for all } u \in U } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-supremum-infimum-8-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Supremum"><a href="#definition-supremum-infimum-8-1-3-1" title="Copy heading and permalink for Item: Supremum" aria-label="Copy heading and permalink for Item: Supremum">🔗</a></div>
+</li>
+<li id="definition-supremum-infimum-8-1-3-2">
+<span class="heading li--heading"><span class="title li--heading-title">Infimum.</span></span>
+<div class="para logical" id="definition-supremum-infimum-8-1-3-2-2">
+<div class="para">If the set of lower bounds for <span class="process-math">\(U \)</span> in <span class="process-math">\(X \)</span> has a maximum, then this maximum is called the <dfn class="terminology">infimum</dfn> (or <dfn class="terminology">greatest lower bound</dfn>) of <span class="process-math">\(U \)</span> and is denoted <span class="process-math">\(\inf \of{ U } \text{;}\)</span> that is,</div>
+<div class="displaymath process-math" id="definition-supremum-infimum-8-1-3-2-2-7">
+\begin{equation*}
+\inf \of{ U } = \max \of{ \setmid{ x \in X }{ x \leq u \textrm{ for all } u \in U } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-supremum-infimum-8-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Infimum"><a href="#definition-supremum-infimum-8-1-3-2" title="Copy heading and permalink for Item: Infimum" aria-label="Copy heading and permalink for Item: Infimum">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-supremum-infimum-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.3.5: Supremum; infimum"><a href="#definition-supremum-infimum" title="Copy heading and permalink for Definition 2.3.5: Supremum; infimum" aria-label="Copy heading and permalink for Definition 2.3.5: Supremum; infimum">🔗</a></div>
+</article>
+<details id="example-suprema-and-infima" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Suprema and infima.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="example-suprema-and-infima-2-1">Let <span class="process-math">\(\of{ U_{ j } }_{ j \in \mathcal{ J } } \)</span> be an indexed family of subsets <span class="process-math">\(U_{ j } \subseteq X \)</span> of a set <span class="process-math">\(X \text{.}\)</span> These subsets <span class="process-math">\(U_{ j } \)</span> are elements of the power set <span class="process-math">\(\ps \of{ X } \text{,}\)</span> which is partially ordered by set containment <span class="process-math">\(\subseteq \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-suprema-and-infima-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="example-suprema-and-infima-2-2">We may reinterpret (a) of <a href="section-maps-and-functions.html#problem-indexed-intersections-and-unions" class="xref" data-knowl="./knowl/xref/problem-indexed-intersections-and-unions.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.2.5.5: Indexed intersections and unions">Problem 1.2.5.5 Indexed intersections and unions</a> as saying that the indexed intersection <span class="process-math">\(\bigcap_{ j \in \mathcal{ J } }{ U_{ j } } \)</span> and the indexed union <span class="process-math">\(\bigcup_{ j \in \mathcal{ J } }{ U_{ j } } \)</span> are the infimum and supremum of <span class="process-math">\(\set{ U_{ j } }_{ j \in \mathcal{ J } } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-suprema-and-infima-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.3.6: Suprema and infima"><a href="#example-suprema-and-infima" title="Copy heading and permalink for Example 2.3.6: Suprema and infima" aria-label="Copy heading and permalink for Example 2.3.6: Suprema and infima">🔗</a></div>
+</article></details>
+<article class="remark remark-like" id="remark-suprema-of-dedekind-cuts"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Suprema of Dedekind cuts.</span>
+</h4>
+<div class="para" id="remark-suprema-of-dedekind-cuts-2-1">The complement <span class="process-math">\(\Q \setminus X \)</span> of a Dedekind cut <span class="process-math">\(X \in \R \)</span> is exactly the set of upper bounds of <span class="process-math">\(X \)</span> in <span class="process-math">\(\Q \text{,}\)</span> and so <a href="section-constructing-the-real-numbers.html#lemma-rational-dedekind-cuts" class="xref" data-knowl="./knowl/xref/lemma-rational-dedekind-cuts.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 2.2.3: Rational Dedekind cuts">Lemma 2.2.3 Rational Dedekind cuts</a> implies that <span class="process-math">\(X \)</span> is rational if and only if it has a supremum in <span class="process-math">\(\Q \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#remark-suprema-of-dedekind-cuts-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="remark-suprema-of-dedekind-cuts-2-2">This is the deficiency of the rational numbers <span class="process-math">\(\Q \)</span> from the analytic perspective: <a href="section-constructing-the-real-numbers.html#proposition-irrational-dedekind-cuts" class="xref" data-knowl="./knowl/xref/proposition-irrational-dedekind-cuts.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 2.2.4: Irrational Dedekind cuts">Proposition 2.2.4 Irrational Dedekind cuts</a> posits the existence of subsets of <span class="process-math">\(\Q \)</span> which are bounded from above <em class="alert">and yet do not have suprema</em>. We will shortly see that this is not the case in the real number system <span class="process-math">\(\R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#remark-suprema-of-dedekind-cuts-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 2.3.7: Suprema of Dedekind cuts"><a href="#remark-suprema-of-dedekind-cuts" title="Copy heading and permalink for Remark 2.3.7: Suprema of Dedekind cuts" aria-label="Copy heading and permalink for Remark 2.3.7: Suprema of Dedekind cuts">🔗</a></div>
+</article>
+<article class="definition definition-like" id="definition-dedekind-completeness"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dedekind completeness.</span>
+</h4>
+<div class="para" id="definition-dedekind-completeness-3-1">An ordered field <span class="process-math">\(\of{ F , + , \cdot , \leq } \)</span> is called <dfn class="terminology">Dedekind complete</dfn> if every non-empty subset of <span class="process-math">\(F \)</span> which is bounded from above has a supremum.<div class="autopermalink" data-description="Paragraph"><a href="#definition-dedekind-completeness-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.3.8: Dedekind completeness"><a href="#definition-dedekind-completeness" title="Copy heading and permalink for Definition 2.3.8: Dedekind completeness" aria-label="Copy heading and permalink for Definition 2.3.8: Dedekind completeness">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="theorem-dedekind-completeness-of-the-real-numbers"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dedekind completeness of the real numbers.</span>
+</h4>
+<div class="para logical" id="theorem-dedekind-completeness-of-the-real-numbers-2-1">
+<div class="para">Let <span class="process-math">\(\emptyset \subsetneq U \subseteq \R \)</span> be a non-empty subset of the real numbers <span class="process-math">\(\R \text{.}\)</span>
+</div>
+<ol class="decimal" id="theorem-dedekind-completeness-of-the-real-numbers-2-1-3">
+<li id="theorem-dedekind-completeness-of-the-real-numbers-2-1-3-1">
+<div class="para" id="theorem-dedekind-completeness-of-the-real-numbers-2-1-3-1-1">If <span class="process-math">\(U \)</span> is bounded from above, then <span class="process-math">\(U \)</span> has a supremum in <span class="process-math">\(\R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-dedekind-completeness-of-the-real-numbers-2-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#theorem-dedekind-completeness-of-the-real-numbers-2-1-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="theorem-dedekind-completeness-of-the-real-numbers-2-1-3-2">
+<div class="para" id="theorem-dedekind-completeness-of-the-real-numbers-2-1-3-2-1">If <span class="process-math">\(U \)</span> is bounded from below, then <span class="process-math">\(U \)</span> has an infimum in <span class="process-math">\(\R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-dedekind-completeness-of-the-real-numbers-2-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#theorem-dedekind-completeness-of-the-real-numbers-2-1-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="para">In particular, the real number system <span class="process-math">\(\of{ \R , + , \cdot , \leq } \)</span> is Dedekind complete.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-dedekind-completeness-of-the-real-numbers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.3.9: Dedekind completeness of the real numbers"><a href="#theorem-dedekind-completeness-of-the-real-numbers" title="Copy heading and permalink for Theorem 2.3.9: Dedekind completeness of the real numbers" aria-label="Copy heading and permalink for Theorem 2.3.9: Dedekind completeness of the real numbers">🔗</a></div>
+</article>
+<details id="theorem-dedekind-completeness-of-the-real-numbers-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="theorem-dedekind-completeness-of-the-real-numbers-3-1">
+<ol class="decimal" id="theorem-dedekind-completeness-of-the-real-numbers-3-1-1">
+<li id="theorem-dedekind-completeness-of-the-real-numbers-3-1-1-1">
+<div class="para logical" id="theorem-dedekind-completeness-of-the-real-numbers-3-1-1-1-1">
+<div class="para">Consider the indexed union</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/problem-indexed-intersections-and-unions.html" id="theorem-dedekind-completeness-of-the-real-numbers-3-1-1-1-1-1">
+\begin{equation*}
+S = \bigcup_{ X \in U }{ X } = \setmid{ q \in \Q }{ q \in X \textrm{ for some } X \in U }\text{.}
+\end{equation*}
+</div>
+<div class="para">We note that (a) of <a href="section-maps-and-functions.html#problem-indexed-intersections-and-unions" class="xref" data-knowl="./knowl/xref/problem-indexed-intersections-and-unions.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.2.5.5: Indexed intersections and unions">Problem 1.2.5.5 Indexed intersections and unions</a> implies that for a Dedekind cut <span class="process-math">\(Y \in \R \text{,}\)</span> <span class="process-math">\(S \subseteq Y \)</span> if and only if <span class="process-math">\(X \subseteq Y \)</span> for all <span class="process-math">\(X \in U \text{;}\)</span> that is, any upper bound for <span class="process-math">\(U \)</span> in <span class="process-math">\(\R \)</span> contains <span class="process-math">\(S \text{,}\)</span> so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/problem-indexed-intersections-and-unions.html" id="theorem-dedekind-completeness-of-the-real-numbers-3-1-1-1-1-10">
+\begin{equation*}
+S = \min \of{ \setmid{ Y \in \R }{ X \subseteq Y \textrm{ for all } X \in U } } = \sup \of{ U }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-dedekind-completeness-of-the-real-numbers-3-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#theorem-dedekind-completeness-of-the-real-numbers-3-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="theorem-dedekind-completeness-of-the-real-numbers-3-1-1-2">
+<div class="para logical" id="theorem-dedekind-completeness-of-the-real-numbers-3-1-1-2-1">
+<div class="para">Consider the indexed intersection</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/problem-indexed-intersections-and-unions.html" id="theorem-dedekind-completeness-of-the-real-numbers-3-1-1-2-1-1">
+\begin{equation*}
+I = \bigcap_{ X \in U }{ X } = \setmid{ q \in \Q }{ q \in X \textrm{ for all } X \in U }\text{.}
+\end{equation*}
+</div>
+<div class="para">We note that (a) of <a href="section-maps-and-functions.html#problem-indexed-intersections-and-unions" class="xref" data-knowl="./knowl/xref/problem-indexed-intersections-and-unions.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.2.5.5: Indexed intersections and unions">Problem 1.2.5.5 Indexed intersections and unions</a> implies that for a Dedekind cut <span class="process-math">\(Y \in \R \text{,}\)</span> <span class="process-math">\(Y \subseteq I \)</span> if and only if <span class="process-math">\(Y \subseteq X \)</span> for all <span class="process-math">\(X \in U \text{;}\)</span> that is, <span class="process-math">\(I \)</span> contains any lower bound for <span class="process-math">\(U \)</span> in <span class="process-math">\(\R \text{,}\)</span> so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/problem-indexed-intersections-and-unions.html" id="theorem-dedekind-completeness-of-the-real-numbers-3-1-1-2-1-10">
+\begin{equation*}
+I = \max \of{ \setmid{ Y \in \R }{ Y \subseteq X \textrm{ for all } X \in U } } = \inf \of{ U }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-dedekind-completeness-of-the-real-numbers-3-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#theorem-dedekind-completeness-of-the-real-numbers-3-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-dedekind-completeness-of-the-real-numbers-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.3.9.1"><a href="#theorem-dedekind-completeness-of-the-real-numbers-3" title="Copy heading and permalink for Proof 2.3.9.1" aria-label="Copy heading and permalink for Proof 2.3.9.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-dedekind-completeness-8">We will see that <a href="section-the-complete-ordered-field.html#theorem-dedekind-completeness-of-the-real-numbers" class="xref" data-knowl="./knowl/xref/theorem-dedekind-completeness-of-the-real-numbers.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.3.9: Dedekind completeness of the real numbers">Theorem 2.3.9 Dedekind completeness of the real numbers</a> has far-reaching consequences for the discipline of real analysis, most notably in the existence of limits for certain objects constructed out of the real numbers <span class="process-math">\(\R \text{.}\)</span> First, however, we present the following non-constructive characterization of <span class="process-math">\(\R \)</span> as the <em class="emphasis">unique</em> Dedekind complete ordered field.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-dedekind-completeness-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="theorem-uniqueness-of-the-real-numbers"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uniqueness of the real numbers.</span>
+</h4>
+<div class="para" id="theorem-uniqueness-of-the-real-numbers-2-1">If <span class="process-math">\(\of{ F , + , \cdot , \leq } \)</span> is a Dedekind complete ordered field, then there is a bijection <span class="process-math">\(\varphi \colon \R \to F \)</span> so that for all real numbers <span class="process-math">\(x , y \in \R \text{,}\)</span> <span class="process-math">\(\varphi \of{ x + y } = \varphi \of{ x } + \varphi \of{ y } \text{,}\)</span> <span class="process-math">\(\varphi \of{ x \cdot y } = \varphi \of{ x } \cdot \varphi \of{ y } \text{,}\)</span> and if <span class="process-math">\(x \leq y \text{,}\)</span> then <span class="process-math">\(\varphi \of{ x } \leq \varphi \of{ y } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-uniqueness-of-the-real-numbers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.3.10: Uniqueness of the real numbers"><a href="#theorem-uniqueness-of-the-real-numbers" title="Copy heading and permalink for Theorem 2.3.10: Uniqueness of the real numbers" aria-label="Copy heading and permalink for Theorem 2.3.10: Uniqueness of the real numbers">🔗</a></div>
+</article>
+<section class="conclusion" id="subsection-dedekind-completeness-10">
+<div class="para" id="subsection-dedekind-completeness-10-1">With <a href="section-the-complete-ordered-field.html#theorem-uniqueness-of-the-real-numbers" class="xref" data-knowl="./knowl/xref/theorem-uniqueness-of-the-real-numbers.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.3.10: Uniqueness of the real numbers">Theorem 2.3.10 Uniqueness of the real numbers</a>, we are now ready to shake off the burden of viewing the real number system <span class="process-math">\(\R \)</span> through the perspective of Dedekind cuts. All relevant properties of the analysis of real numbers can be derived abstractly from the axioms of a Dedekind complete ordered field, and as a consequence, we will see that we no longer need to rely on any specific formal model of <span class="process-math">\(\R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsection-dedekind-completeness-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Subsection 2.3.2: Dedekind completeness"><a href="#subsection-dedekind-completeness" title="Copy heading and permalink for Subsection 2.3.2: Dedekind completeness" aria-label="Copy heading and permalink for Subsection 2.3.2: Dedekind completeness">🔗</a></div>
+</section>
+<section class="conclusion" id="section-the-complete-ordered-field-5">
+<div class="para" id="section-the-complete-ordered-field-5-1">In the next section, we will construct various extensions of the real number system <span class="process-math">\(\R \text{.}\)</span> In particular, we will see the <dfn class="terminology">extended real numbers</dfn>, the <dfn class="terminology">complex numbers</dfn>, and the <dfn class="terminology">quaternions</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#section-the-complete-ordered-field-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="reading-questions" id="exercises-the-complete-ordered-field">
 <h3 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
 </h3>
 <section class="introduction" id="exercises-the-complete-ordered-field-2">
 <div class="para" id="exercises-the-complete-ordered-field-2-1">The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-the-complete-ordered-field-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="conclusion" id="exercises-the-complete-ordered-field-3">
 <div class="para" id="exercises-the-complete-ordered-field-3-1">Short answers and/or in-depth solutions to these exercises are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-the-complete-ordered-field-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" data-description="Reading Questions 2.3: Exercises"><a href="#exercises-the-complete-ordered-field" title="Copy heading and permalink for Reading Questions 2.3: Exercises" aria-label="Copy heading and permalink for Reading Questions 2.3: Exercises">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Reading Questions 2.3.3: Exercises"><a href="#exercises-the-complete-ordered-field" title="Copy heading and permalink for Reading Questions 2.3.3: Exercises" aria-label="Copy heading and permalink for Reading Questions 2.3.3: Exercises">🔗</a></div>
 </section>
 <section class="reading-questions" id="problems-the-complete-ordered-field">
 <h3 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
 </h3>
 <section class="introduction" id="problems-the-complete-ordered-field-2">
 <div class="para" id="problems-the-complete-ordered-field-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" data-description="Paragraph"><a href="#problems-the-complete-ordered-field-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="problems-the-complete-ordered-field-3">
-<div class="para" id="problems-the-complete-ordered-field-3-1">In-depth solutions to these problems are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#problems-the-complete-ordered-field-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" data-description="Reading Questions 2.3: Problems"><a href="#problems-the-complete-ordered-field" title="Copy heading and permalink for Reading Questions 2.3: Problems" aria-label="Copy heading and permalink for Reading Questions 2.3: Problems">🔗</a></div>
+<article class="exercise exercise-like" id="problem-uniqueness-in-a-field"><h4 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uniqueness in a field.</span>
+</h4>
+<div class="introduction" id="problem-uniqueness-in-a-field-2">
+<div class="para" id="problem-uniqueness-in-a-field-2-1">Let <span class="process-math">\(\of{ F , + , \cdot } \)</span> be a field<div class="autopermalink" data-description="Paragraph"><a href="#problem-uniqueness-in-a-field-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="problem-uniqueness-in-a-field-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="problem-uniqueness-in-a-field-3-1-1">Show that the additive identity element <span class="process-math">\(0 \in F \)</span> is unique.<div class="autopermalink" data-description="Paragraph"><a href="#problem-uniqueness-in-a-field-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.3.4.1.a"><a href="#problem-uniqueness-in-a-field-3" title="Copy heading and permalink for Task 2.3.4.1.a" aria-label="Copy heading and permalink for Task 2.3.4.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="problem-uniqueness-in-a-field-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="problem-uniqueness-in-a-field-4-1-1">Show that the multiplicative identity element <span class="process-math">\(1 \in F \)</span> is unique.<div class="autopermalink" data-description="Paragraph"><a href="#problem-uniqueness-in-a-field-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.3.4.1.b"><a href="#problem-uniqueness-in-a-field-4" title="Copy heading and permalink for Task 2.3.4.1.b" aria-label="Copy heading and permalink for Task 2.3.4.1.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="problem-uniqueness-in-a-field-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para logical" id="problem-uniqueness-in-a-field-5-1-1">
+<div class="para">Show that additive inverses are unique; that is, given elements <span class="process-math">\(x , y , z \in F \text{,}\)</span> show that if</div>
+<div class="displaymath process-math" id="problem-uniqueness-in-a-field-5-1-1-2">
+\begin{equation*}
+x + y = x + z = 0\text{,}
+\end{equation*}
+</div>
+<div class="para">then <span class="process-math">\(y = z \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#problem-uniqueness-in-a-field-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.3.4.1.c"><a href="#problem-uniqueness-in-a-field-5" title="Copy heading and permalink for Task 2.3.4.1.c" aria-label="Copy heading and permalink for Task 2.3.4.1.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="problem-uniqueness-in-a-field-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para logical" id="problem-uniqueness-in-a-field-6-1-1">
+<div class="para">Show that multiplicative inverses are unique; that is, given elements <span class="process-math">\(x , y , z \in F \text{,}\)</span> show that if</div>
+<div class="displaymath process-math" id="problem-uniqueness-in-a-field-6-1-1-2">
+\begin{equation*}
+x \cdot y = x \cdot z = 1\text{,}
+\end{equation*}
+</div>
+<div class="para">then <span class="process-math">\(y = z \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#problem-uniqueness-in-a-field-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.3.4.1.d"><a href="#problem-uniqueness-in-a-field-6" title="Copy heading and permalink for Task 2.3.4.1.d" aria-label="Copy heading and permalink for Task 2.3.4.1.d">🔗</a></div>
+</article><div class="autopermalink" data-description="Problem 2.3.4.1: Uniqueness in a field"><a href="#problem-uniqueness-in-a-field" title="Copy heading and permalink for Problem 2.3.4.1: Uniqueness in a field" aria-label="Copy heading and permalink for Problem 2.3.4.1: Uniqueness in a field">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="problem-sign-in-an-ordered-field"><h4 class="heading">
+<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sign in an ordered field.</span>
+</h4>
+<div class="introduction" id="problem-sign-in-an-ordered-field-5">
+<div class="para logical" id="problem-sign-in-an-ordered-field-5-1">
+<div class="para">Let <span class="process-math">\(\of{ F , + , \cdot , \leq } \)</span> be an ordered field. As in the case of the rational numbers <span class="process-math">\(\Q \)</span> and the real numbers <span class="process-math">\(\R \text{,}\)</span> we can define the <dfn class="terminology">sign</dfn> of an element of <span class="process-math">\(F \)</span> by comparison with the additive identity element <span class="process-math">\(0 \text{:}\)</span>
+</div>
+<ul class="disc" id="problem-sign-in-an-ordered-field-5-1-7">
+<li id="problem-sign-in-an-ordered-field-5-1-7-1">
+<span class="heading li--heading"><span class="title li--heading-title">Positivity.</span></span>
+<div class="para" id="problem-sign-in-an-ordered-field-5-1-7-1-2">A non-zero element <span class="process-math">\(x \in F \setminus \set{ 0 } \)</span> is called <dfn class="terminology">positive</dfn> if <span class="process-math">\(0 \leq x \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#problem-sign-in-an-ordered-field-5-1-7-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Positivity"><a href="#problem-sign-in-an-ordered-field-5-1-7-1" title="Copy heading and permalink for Item: Positivity" aria-label="Copy heading and permalink for Item: Positivity">🔗</a></div>
+</li>
+<li id="problem-sign-in-an-ordered-field-5-1-7-2">
+<span class="heading li--heading"><span class="title li--heading-title">Negativity.</span></span>
+<div class="para" id="problem-sign-in-an-ordered-field-5-1-7-2-2">A non-zero element <span class="process-math">\(x \in F \setminus \set{ 0 } \)</span> is called <dfn class="terminology">negative</dfn> if <span class="process-math">\(x \leq 0 \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#problem-sign-in-an-ordered-field-5-1-7-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Negativity"><a href="#problem-sign-in-an-ordered-field-5-1-7-2" title="Copy heading and permalink for Item: Negativity" aria-label="Copy heading and permalink for Item: Negativity">🔗</a></div>
+</li>
+<li id="problem-sign-in-an-ordered-field-5-1-7-3">
+<span class="heading li--heading"><span class="title li--heading-title">Zero.</span></span>
+<div class="para" id="problem-sign-in-an-ordered-field-5-1-7-3-2">The additive identity element <span class="process-math">\(0 \in F \)</span> is not positive or negative.<div class="autopermalink" data-description="Paragraph"><a href="#problem-sign-in-an-ordered-field-5-1-7-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Zero"><a href="#problem-sign-in-an-ordered-field-5-1-7-3" title="Copy heading and permalink for Item: Zero" aria-label="Copy heading and permalink for Item: Zero">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#problem-sign-in-an-ordered-field-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="problem-sign-in-an-ordered-field-6"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="problem-sign-in-an-ordered-field-6-1-1">Let <span class="process-math">\(x \in F \text{.}\)</span> Show that if <span class="process-math">\(x \neq 0 \text{,}\)</span> then <span class="process-math">\(x \)</span> and its additive inverse <span class="process-math">\(-x \)</span> have opposite sign.<div class="autopermalink" data-description="Paragraph"><a href="#problem-sign-in-an-ordered-field-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="problem-sign-in-an-ordered-field-6-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="problem-sign-in-an-ordered-field-6-2-1">Add <span class="process-math">\(-x \)</span> to the inequality defining the sign of <span class="process-math">\(x \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#problem-sign-in-an-ordered-field-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.3.4.2.a.1"><a href="#problem-sign-in-an-ordered-field-6-2" title="Copy heading and permalink for Hint 2.3.4.2.a.1" aria-label="Copy heading and permalink for Hint 2.3.4.2.a.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Task 2.3.4.2.a"><a href="#problem-sign-in-an-ordered-field-6" title="Copy heading and permalink for Task 2.3.4.2.a" aria-label="Copy heading and permalink for Task 2.3.4.2.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="problem-sign-in-an-ordered-field-7"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="problem-sign-in-an-ordered-field-7-1-1">Show that <span class="process-math">\(\of{ -1 } \cdot x = -x \)</span> for all elements <span class="process-math">\(x \in F \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#problem-sign-in-an-ordered-field-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.3.4.2.b"><a href="#problem-sign-in-an-ordered-field-7" title="Copy heading and permalink for Task 2.3.4.2.b" aria-label="Copy heading and permalink for Task 2.3.4.2.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="problem-sign-in-an-ordered-field-8"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="problem-sign-in-an-ordered-field-8-1-1">Show that the product of two negative elements is positive.<div class="autopermalink" data-description="Paragraph"><a href="#problem-sign-in-an-ordered-field-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.3.4.2.c"><a href="#problem-sign-in-an-ordered-field-8" title="Copy heading and permalink for Task 2.3.4.2.c" aria-label="Copy heading and permalink for Task 2.3.4.2.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Problem 2.3.4.2: Sign in an ordered field"><a href="#problem-sign-in-an-ordered-field" title="Copy heading and permalink for Problem 2.3.4.2: Sign in an ordered field" aria-label="Copy heading and permalink for Problem 2.3.4.2: Sign in an ordered field">🔗</a></div>
+</article>
+<section class="conclusion" id="problems-the-complete-ordered-field-5">
+<div class="para" id="problems-the-complete-ordered-field-5-1">In-depth solutions to these problems are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#problems-the-complete-ordered-field-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Reading Questions 2.3.4: Problems"><a href="#problems-the-complete-ordered-field" title="Copy heading and permalink for Reading Questions 2.3.4: Problems" aria-label="Copy heading and permalink for Reading Questions 2.3.4: Problems">🔗</a></div>
 </section><div class="autopermalink" data-description="Section 2.3: The Complete Ordered Field"><a href="#section-the-complete-ordered-field" title="Copy heading and permalink for Section 2.3: The Complete Ordered Field" aria-label="Copy heading and permalink for Section 2.3: The Complete Ordered Field">🔗</a></div>
 </section>
 </div>
