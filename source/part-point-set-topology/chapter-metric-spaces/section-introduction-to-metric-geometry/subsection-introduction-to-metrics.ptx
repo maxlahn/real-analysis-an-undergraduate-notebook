@@ -154,7 +154,7 @@
               Consider the real-valued function <m> \rho \colon \opint{ 0 }{ \infty }^{ 2 } \to \R </m> defined by the formula
               
               <md>
-                \rho \of{ x , y } = \abs{ \ln{ \of{ \frac{ x_{ 1 } }{ x_{ 2 } } } } }
+                \rho \of{ x , y } = \abs{ \ln{ \of{ \frac{ x }{ y } } } }
               </md>
               
               As defined above, <m> \rho </m> is a metric on the open interval <m> \opint{ 0 }{ \infty } </m>, and so <m> \of{ \opint{ 0 }{ \infty } , \rho } </m> is a metric space.
@@ -188,8 +188,8 @@
               <md>
                 \delta_{ X } \of{ x_{ 1 } , x_{ 2 } } =
                   \begin{cases}
-                    1 \amp x_{ 1 } = x_{ 2 } \\
-                    0 \amp x_{ 1 } \neq x_{ 2 }
+                    0 \amp x_{ 1 } = x_{ 2 } \\
+                    1 \amp x_{ 1 } \neq x_{ 2 }
                   \end{cases}
               </md>.
               

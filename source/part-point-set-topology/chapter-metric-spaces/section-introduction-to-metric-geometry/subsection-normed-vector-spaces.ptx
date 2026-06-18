@@ -124,19 +124,17 @@
               Euclidean norm
             </idx>
             
-            
-            
             <p>
               Let <m> n \in \N </m> be a natural number, and fix a positive real number <m> p \gt 0 </m>. The <term> <m> p </m>-norm </term> <m> \norm{ \oparg }_{ p } \colon \R^{ n } \to \R </m> on <m> n </m>-dimensional real coordinate space <m> \R^{ n } </m> is the real-valued function defined by the formula
               
               <md>
-                \norm{ \vect{ x } }_{ p } = \sqrt{ \sum_{ k = 1 }^{ n }{ x_{ k }^{ 2 } } }
+                \norm{ \vect{ x } }_{ p } = \of{ \sum_{ k = 1 }^{ n }{ x_{ k }^{ p } } }^{ \frac{ 1 }{ p } }
               </md>.
               
               Similarly, the <term> <m> p </m>-norm </term> <m> \norm{ \oparg }_{ p } \colon \C^{ n } \to \R </m> on <m> n </m>-dimensional complex coordinate space <m> \C^{ n } </m> is the real-valued function defined by the formula
               
               <md>
-                \norm{ \vect{ z } }_{ p } = \sqrt{ \sum_{ k = 1 }^{ n }{ \abs{ z_{ k } }^{ 2 } } }
+                \norm{ \vect{ z } }_{ p } = \of{ \sum_{ k = 1 }^{ n }{ z_{ k }^{ p } } }^{ \frac{ 1 }{ p } }
               </md>.
               
               If <m> p \geq 1 </m>, then the <m> p </m>-norms are norms on <m> \R^{ n } </m> and <m> \C^{ n } </m>, and so <m> \of{ \R^{ n } , \norm{ \oparg }_{ p } } </m> and <m> \of{ \C^{ n } , \norm{ \oparg }_{ p } } </m> are normed vector spaces.
