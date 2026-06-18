@@ -7,30 +7,30 @@
 
   <introduction>
     <p>
-      In this chapter, we introduce metric spaces, which generalize the notion of distance in the physical world, and are the natural setting for beginning our study of analysis. Analysis as a field of mathematics is concerned with the limiting behavior of mathematical objects. In a metric space, it makes sense to talk about the distance between any two points. Armed only with this notion of distance, we will define what it means
+      In this chapter, we introduce <term> metric spaces </term>, which generalize the notion of distance in the physical world, and are the natural setting for beginning our study of analysis. Analysis as a field of mathematics is concerned with the limiting behavior of mathematical objects. In a metric space, it makes sense to talk about the distance between any two points. Armed only with this notion of distance, we will define what it means
       
       <ul>
         <li>
           <p>
-            for sequences and functions to converge to a limit;
+            for sequences and functions to <term> converge </term> to a <term> limit </term>;
           </p>
         </li>
         
         <li>
           <p>
-            for sets to be open and/or closed;
+            for sets to be <term> open </term> and/or closed;
           </p>
         </li>
         
         <li>
           <p>
-            for maps to be continuous; and
+            for maps to be <term> continuous </term>; and
           </p>
         </li>
         
         <li>
           <p>
-            for metric spaces to be complete.
+            for metric spaces to be <term> complete </term>.
           </p>
         </li>
       </ul>
