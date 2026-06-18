@@ -14,7 +14,7 @@
 
     <xi:include href="./frontmatter.ptx"/>
 
-    <xi:include href="./part-analytical-foundations/part-analytical-foundations.ptx"/>
+    <xi:include href="./part-foundations-of-analysis/part-foundations-of-analysis.ptx"/>
 
     <xi:include href="./part-point-set-topology/part-point-set-topology.ptx"/>
 

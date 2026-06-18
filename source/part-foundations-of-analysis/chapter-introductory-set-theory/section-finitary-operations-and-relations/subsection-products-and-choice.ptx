@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-products-and-choice" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Products and Choice
+  </title>
+
+  <introduction>
+    <p>
+      Previously, we have used the mathematical convention of indexing to generalize the intersection and union of two sets. We may also use indexing to generalize the Cartesian product of two sets to construct products of arbitrary indexed families of sets. In this section, we will develop this <term> generalized Cartesian product </term>, and use it to introduce operations and relations on a set. Instead of containing ordered pairs of elements, our new Cartesian product consists of indexed families of elements.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-cartesian-product-2">
+    <title>
+      Cartesian product
+    </title>
+    
+    <idx>
+      Cartesian product
+    </idx>
+    
+    <idx>
+      Cartesian factor
+    </idx>
+    
+    <idx>
+      projection
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \prod_{ j \in \mathcal{ J } }{ U_{ j } } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the Cartesian product of a family <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> of sets <m> U </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \pi_{ k } </m>
+      </usage>
+      
+      <description>
+        <p>
+          projection onto the <m> k </m>th factor
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> be a family of subsets <m> U_{ j } \subseteq X </m> of a set <m> X </m>, called <term> (Cartesian) factors </term>, indexed by a set <m> \mathcal{ J } </m>.
+        <ol>
+          <li>
+            <title>
+              Cartesian product
+            </title>
+            
+            <p>
+              The <term> Cartesian product </term> <m> \prod_{ j \in \mathcal{ J } }{ U_{ j } } </m> of this indexed family is the set
+              
+              <md>
+                \prod_{ j \in \mathcal{ J } }{ U_{ j } } = \setmid{ \of{ u_{ j } }_{ j \in \mathcal{ J } } \in X^{ \mathcal{ J } } }{ u_{ j } \in U_{ j } \textrm{ for all } j \in \mathcal{ J } }
+              </md>
+              
+              of families <m> \of{ u_{ j } }_{ j \in \mathcal{ J } } </m> of elements <m> u_{ j } \in X </m> with the property that <m> u_{ j } \in U_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Projection
+            </title>
+            
+            <p>
+              For each index <m> k \in \mathcal{ J } </m>, <term> projection onto the <m> k </m>th factor </term> is the map <m> \pi_{ k } \colon \prod_{ j \in \mathcal{ J } }{ U_{ j } } \to U_{ k } </m> is the map from the Cartesian product <m> \prod_{ j \in \mathcal{ J } }{ U_{ j } } </m> to the <m> k </m>th factor <m> U_{ k } </m> defined by the formula
+              
+              <md>
+                \pi_{ \prod_{ j \in \mathcal{ J } }{ U_{ j } } }^{ U_{ k } } \of{ u_{ j } }_{ j \in \mathcal{ J } } = u_{ k }
+              </md>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </definition>
+  
+  <convention xml:id="convention-empty-and-singleton-products">
+    <title>
+      Empty and singleton products
+    </title>
+    
+    <statement>
+      <p>
+        <ul>
+          <li>
+            <title>
+              Empty product
+            </title>
+            <p>
+              What does a family indexed by the empty set look like? There is a unique map from the empty set <m> \emptyset </m> to a set <m> X </m>, and so there is only one such family
+              
+              <md>
+                \of{ x_{ j } }_{ j \in \emptyset }
+              </md>
+              
+              of elements <m> x_{ j } </m> of <m> X </m> indexed by the empty set <m> \emptyset </m>. This unique indexed family is usually denoted <m> \of{} </m>. By the above remark,
+              
+              <md>
+                \prod_{ j \in \emptyset }{ U_{ j } } = \set{ \of{} }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Singleton product
+            </title>
+            
+            <p>
+              Similarly, a family <m> \of{ x_{ j } }_{ j \in \set{ j } } </m> of elements <m> x_{ j } \in X </m> of a set <m> S </m> indexed by a singleton set <m> \set{ j } </m> is uniquely determined by the image <m> x_{ j } </m> of the index <m> j </m>. Such an indexed family is denoted
+              
+              <md>
+                \of{ x_{ j } } = \of{ x_{ j } }_{ j \in \set{ j } }
+              </md>.
+              
+              We usually act under the convention <m> \of{ x_{ j } } = x_{ j } </m>, so that
+              
+              <md>
+                \prod_{ j \in \set{ j } }{ U_{ j } } = U_{ j }
+              </md>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </convention>
+  
+  <p>
+    It may seem intuitive or obvious that the Cartesian product of an indexed family of nonempty sets is itself nonempty. After all, one can specify an indexed family of elements of these sets just by choosing an element of each nonempty set. This notion of a choice of elements of nonempty sets gives the following axiom its name.
+  </p>
+  
+  <axiom xml:id="axiom-axiom-of-choice">
+    <title>
+      Axiom of choice
+    </title>
+    
+    <idx>
+      axiom of choice
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> be an indexed family of subsets <m> U_{ j } \subseteq X </m> of a set <m> X </m>. If <m> U_{ j } \neq \emptyset </m> for all indices <m> j \in \mathcal{ J } </m>, then the Cartesian product
+        
+        <md>
+          \prod_{ j \in \mathcal{ J } }{ U_{ j } } \neq \emptyset
+        </md>
+        
+        is also non-empty.
+      </p>
+    </statement>
+  </axiom>
+  
+  <p>
+    We will take the <xref ref="axiom-axiom-of-choice" text="title"/> as true for the remainder of this text. While seemingly too specific to be of much use, this axiom can be used to prove many useful results. In particular, we can use it to complete the characterization of invertibility given in <xref ref="theorem-invertibility"/>.
+  </p>
+  
+  <corollary xml:id="corollary-invertibility-2">
+    <title>
+      Invertibility
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> be a map from a set <m> X </m> to a set <m> Y </m>.
+        
+        <ol>
+          <li>
+            <title>
+              Left-invertibility
+            </title>
+            
+            <p>
+              <m> f </m> is left-invertible if and only if <m> f </m> is injective or <m> X = \emptyset </m> is empty.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Right-invertibility
+            </title>
+            
+            <p>
+              <m> f </m> is right-invertible if and only if <m> f </m> is surjective.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Invertibility
+            </title>
+            
+            <p>
+              <m> f </m> is invertible if and only if <m> f </m> is bijective.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            This follows directly from (1) and (2) of <xref ref="theorem-invertibility"/>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            The forward implication is (3) of <xref ref="theorem-invertibility"/>. Thus we may suppose that <m> f </m> is surjective. Then for each output <m> y \in Y </m>, the pre-image
+            
+            <md>
+              f^{ -1 } \of{ y } = \setmid{ x \in X }{ f \of{ x } = y } \neq \emptyset
+            </md>
+            
+            is a non-empty subset of <m> X </m>, and so the <xref ref="axiom-axiom-of-choice" text="title"/> implies that the Cartesian product
+            
+            <md>
+              \prod_{ y \in Y }{ f^{ -1 } \of{ y } } \neq \emptyset
+            </md>
+            
+            is a non-empty subset of <m> X^{ Y } </m>. Choose an element <m> g = \of{ x_{ y } }_{ y \in Y } \in \prod_{ y \in Y }{ f^{ -1 } \of{ y } } </m>, and note that for all <m> y \in Y </m>, <m> g \of{ y } = x_{ y } \in f^{ -1 } \of{ y } </m>, so that
+            
+            <md>
+              \of{ f \circ g } \of{ y } = f \of{ g \of{ y } } = y = \id_{ Y } \of{ y }
+            </md>;
+            
+            that is, <m> f \circ g = \id_{ Y } </m> so that <m> g </m> is a right inverse to <m> f </m>. Hence <m> f </m> is right-invertible.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            This is (3) of <xref ref="theorem-invertibility"/>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </corollary>
+  
+  <p>
+    One particularly useful kind of Cartesian product is obtained by taking all factors to be the same set. The resulting <term> Cartesian powers </term> will be used to define both finitary operations and finitary relations.
+  </p>
+  
+  <definition xml:id="definition-cartesian-power">
+    <title>
+      Cartesian power
+    </title>
+    
+    <idx>
+      Cartesian power
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> X^{ n } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the <m> n </m>th Cartesian power of a set <m> X </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> X </m> be a set and <m> n \in \N </m> be a natural number. The <m> n </m>th <term> Cartesian power </term> <m> X^{ n } </m> of <m> X </m> is the Cartesian product
+        
+        <md>
+          X^{ n } = \prod_{ k = 1 }^{ n }{ X } = \setmid{ \of{ x_{ k } }_{ k = 1 }^{ n } }{ x_{ k } \in X \textrm{ for all } 1 \leq k \leq n }
+        </md>.
+      </p>
+    </statement>
+  </definition>
+
+  <conclusion>
+    <p>
+      We will now move on to study the Cartesian powers of sets. Maps from the Cartesian power of a set to the set itself will be called <term> finitary operations </term> on that set, and subsets of the Cartesian power of a set will be called <term> finitary relations </term> on that set.
+    </p>
+  </conclusion>
+</subsection>

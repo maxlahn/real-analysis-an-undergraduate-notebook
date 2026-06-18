@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-extremal-subsets" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Extremal subsets
+  </title>
+  
+  <statement>
+    <p>
+      Find the extremal elements of the partially ordered set <m> \ps \of{ \N } \setminus \set{ \emptyset , \N } </m>.
+    </p>
+  </statement>
+  
+  <solution>
+    <p>
+      Denote by <m> X </m> the partially ordered set <m> \ps \of{ \N } \setminus \set{ \emptyset , \N } </m>. For all natural numbers <m> n \in \N </m>, the only subsets of the set <m> \set{ n } </m> are <m> \emptyset </m> and <m> \set{ n } </m> itself. Thus <m> \set{ n } </m> is minimal in <m> X </m>. On the other hand, any proper subset of <m> \N </m> which contains at least two natural numbers has a proper non-empty subset, and so is not minimal in <m> X </m>.
+    </p>
+    
+    <p>
+      For all natural numbers <m> n \in \N </m>, the only subsets of <m> \N </m> which contain <m> \N \setminus \set{ n } </m> are <m> \N </m> and <m> \N \setminus \set{ n } </m> itself. Thus <m> \N \setminus \set{ n } </m> is maximal in <m> X </m>. On the other hand, any non-empty subset of <m> \N </m> which misses at least two natural numbers is contained in a strictly larger proper subset, and so is not maximal in <m> X </m>.
+    </p>
+  </solution>
+</exercise>

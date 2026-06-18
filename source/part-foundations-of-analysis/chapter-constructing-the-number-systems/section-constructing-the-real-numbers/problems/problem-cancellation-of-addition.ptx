@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-cancellation-of-addition" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Cancellation of addition
+  </title>
+  
+  <statement>
+    <p>
+      Prove that for all Dedekind cuts <m> X , Y , Z \in \R </m>, if <m> X + Z \subseteq Y + Z </m>, then <m> X \subseteq Y </m>.
+    </p>
+  </statement>
+  
+  <solution>
+    <p>
+      If <m> X + Z \subseteq Y + Z </m>, then
+      
+      <md>
+        X = X + X_{ 0 } = X + Z + \of{ -Z } \leq Y + Z + \of{ -Z } = Y + X_{ 0 } = Y
+      </md>
+      
+      by <xref ref="theorem-arithmetic-of-dedekind-cuts"/>.
+    </p>
+  </solution>
+</exercise>

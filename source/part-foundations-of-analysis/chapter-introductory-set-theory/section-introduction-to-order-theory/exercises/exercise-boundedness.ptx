@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-boundedness" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Boundedness
+  </title>
+  
+  <introduction>
+    <p>
+      Determine the boundedness of the following subsets of the totally ordered set <m> \N </m>.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Which of the following subsets of the totally ordered set <m> \N </m> are bounded from below?
+      </p>
+    </statement>
+    
+    <choices multiple-correct="yes">
+      <choice correct="yes">
+        <statement>
+          <p>
+            <m> \emptyset </m>
+          </p>
+        </statement>
+      </choice>
+      
+      <choice correct="yes">
+        <statement>
+          <p>
+            <m> \set{ 1 , 2 } </m>
+          </p>
+        </statement>
+      </choice>
+      
+      <choice correct="yes">
+        <statement>
+          <p>
+            <m> \N \setminus \set{ 1 , 2 } </m>
+          </p>
+        </statement>
+      </choice>
+      
+      <choice correct="yes">
+        <statement>
+          <p>
+            <m> \N \setminus \set{ 0 } </m>
+          </p>
+        </statement>
+      </choice>
+      
+      <choice correct="yes">
+        <statement>
+          <p>
+            <m> \N </m>
+          </p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Which of the following subsets of the totally ordered set <m> \N </m> are bounded from above?
+      </p>
+    </statement>
+    
+    <choices multiple-correct="yes">
+      <choice correct="yes">
+        <statement>
+          <p>
+            <m> \emptyset </m>
+          </p>
+        </statement>
+      </choice>
+      
+      <choice correct="yes">
+        <statement>
+          <p>
+            <m> \set{ 1 , 2 } </m>
+          </p>
+        </statement>
+      </choice>
+      
+      <choice correct="no">
+        <statement>
+          <p>
+            <m> \N \setminus \set{ 1 , 2 } </m>
+          </p>
+        </statement>
+      </choice>
+      
+      <choice correct="no">
+        <statement>
+          <p>
+            <m> \N \setminus \set{ 0 } </m>
+          </p>
+        </statement>
+      </choice>
+      
+      <choice correct="no">
+        <statement>
+          <p>
+            <m> \N </m>
+          </p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Which of the following subsets of the totally ordered set <m> \N </m> are bounded?
+      </p>
+    </statement>
+    
+    <choices multiple-correct="yes">
+      <choice correct="yes">
+        <statement>
+          <p>
+            <m> \emptyset </m>
+          </p>
+        </statement>
+      </choice>
+      
+      <choice correct="yes">
+        <statement>
+          <p>
+            <m> \set{ 1 , 2 } </m>
+          </p>
+        </statement>
+      </choice>
+      
+      <choice correct="yes">
+        <statement>
+          <p>
+            <m> \N \setminus \set{ 1 , 2 } </m>
+          </p>
+        </statement>
+      </choice>
+      
+      <choice correct="yes">
+        <statement>
+          <p>
+            <m> \N \setminus \set{ 0 } </m>
+          </p>
+        </statement>
+      </choice>
+      
+      <choice correct="yes">
+        <statement>
+          <p>
+            <m> \N </m>
+          </p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+</exercisegroup>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-indexing" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Indexing
+  </title>
+
+  <introduction>
+    <p>
+      Considered as an association between sets, a map can be thought to index its image by the elements of its domain. That is, a map can transfer information from its domain to its image. Just what this transferred information looks like can vary tremendously, but suffice it to say that this notion of indexing is fundamental and will recur throughout this text.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-indexed-family-set">
+    <title>
+      Indexed family/set
+    </title>
+    
+    <idx>
+      index
+    </idx>
+    
+    <idx>
+      indexing set
+    </idx>
+    
+    <idx>
+      indexed family
+    </idx>
+    
+    <idx>
+      indexed set
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \of{ x_{ j } }_{ j \in \mathcal{ J } } </m>
+      </usage>
+      
+      <description>
+        <p>
+          a family of objects <m> x_{ j } </m> indexed by <m> j \in \mathcal{ J } </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \set{ x_{ j } }_{ j \in \mathcal{ J } } </m>
+      </usage>
+      
+      <description>
+        <p>
+          a set of objects <m> x_{ j } </m> indexed by <m> j \in \mathcal{ J } </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Consider a map <m> x \colon \mathcal{ J } \to X </m> from a set <m> \mathcal{ J } </m>, called the <term> indexing set </term> and whose elements are called <term> indices </term>, to a set <m> X </m>. The image of such an index <m> j \in \mathcal{ J } </m> under such an <term> (indexed) family </term> <m> x </m> is often denoted <m> x_{ j } = x \of{ j } </m>, and <m> x </m> is often denoted <m> \of{ x_{ j } }_{ j \in \mathcal{ J } } </m>. We say that <m> \im \of{ x } </m> is <term> indexed </term> by <m> \mathcal{ J } </m>, and we write
+        
+        <md>
+          \set{ x_{ j } }_{ j \in \mathcal{ J } } = \setmid{ x_{ j } \in X }{ j \in \mathcal{ J } } = \im \of{ x }
+        </md>.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    We can also use this notion of indexing to generalize the intersection and union of sets to act on arbitrary collections of sets. This generalization of the intersection and union of two sets relies on the natural similarities between logical conjunction <m> \land </m> and universal quantification <m> \forall </m> and between logical disjunction <m> \lor </m> and existential quantification <m> \exists </m>, respectively.
+  </p>
+  
+  <definition xml:id="definition-indexed-set-operations">
+    <title>
+      Indexed set operations
+    </title>
+    
+    <idx>
+      intersection
+    </idx>
+    
+    <idx>
+      union
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the intersection of an indexed family <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> of sets <m> U_{ j } </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the union of an indexed family <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> of sets <m> U_{ j } </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> be a family of subsets <m> U_{ j } \subseteq X </m> of a set <m> X </m> indexed by a set <m> \mathcal{ J } </m>.
+        
+        <ol>
+          <li>
+            <title>
+              Intersection
+            </title>
+            
+            <p>
+              The <term> intersection </term> <m> \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } </m> of this indexed family of subsets is the subset of <m> X </m> defined by
+              
+              <md>
+                \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \setmid{ x \in X }{ x \in U_{ j } \textrm{ for all } j \in \mathcal{ J } }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Union
+            </title>
+            
+            <p>
+              The <term> union </term> <m> \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } </m> of this indexed family of subsets is the subset of <m> X </m> defined by
+              
+              <md>
+                \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } = \setmid{ x \in X }{ x \in U_{ j } \textrm{ for some } j \in \mathcal{ J } }
+              </md>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    These generalizations of the intersection and union of two sets extend naturally to generalizations of each of the results proven in the previous section.
+  </p>
+  
+  <theorem xml:id="theorem-analogous-properties-of-indexed-intersections-and-unions">
+    <title>
+      Analogous properties of indexed intersections and unions
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> be a family of subsets <m> U_{ j } \subseteq X </m> of a set <m> X </m> indexed by a set <m> \mathcal{ J } </m>.
+        
+        <ol>
+          <li>
+            <p>
+              Analogously to <xref ref="proposition-set-operations-and-containment"/>, for any subset <m> V \subseteq X </m>,
+              
+              <md>
+                V \subseteq \bigcap_{ j \in \mathcal{ J } }{ U_{ j } }
+              </md>
+              
+              if and only if <m> V \subseteq U_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>. Moreover,
+              
+              <md>
+                \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } \subseteq V
+              </md>
+              
+              if and only if <m> U_{ j } \subseteq V </m> for all indices <m> j \in \mathcal{ J } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Reindexing
+            </title>
+            
+            <p>
+              Analogously to (2) of <xref ref="corollary-properties-of-the-set-operations"/>,
+              
+              <md>
+                \bigcap_{ k \in \mathcal{ K } }{ U_{ f \of{ k } } } = \bigcap_{ j \in \mathcal{ J } }{ U_{ j } }
+              </md>
+              
+              and
+              
+              <md>
+                \bigcup_{ k \in \mathcal{ K } }{ U_{ f \of{ k } } } = \bigcup_{ j \in \mathcal{ J } }{ U_{ j } }
+              </md>
+              
+              for any set <m> \mathcal{ K } </m> and surjection <m> f \colon \mathcal{ K } \to \mathcal{ J } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Distributivity
+            </title>
+            
+            <p>
+              Analogously to <xref ref="problem-distributivity-of-set-operations"/>,
+              
+              <md>
+                V \cup \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcap_{ j \in \mathcal{ J } }{ \of{ V \cup U_{ j } } }
+              </md>
+              
+              and
+              
+              <md>
+                V \cap \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcup_{ j \in \mathcal{ J } }{ \of{ V \cap U_{ j } } }
+              </md>
+              
+              for any subset <m> V \subseteq X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              De Morgan's laws
+            </title>
+            
+            <p>
+              Analogously to <xref ref="problem-de-morgans-laws"/>,
+              
+              <md>
+                V \setminus \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcup_{ j \in \mathcal{ J } }{ \of{ V \setminus U_{ j } } }
+              </md>
+              
+              and
+              
+              <md>
+                V \setminus \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcap_{ j \in \mathcal{ J } }{ \of{ V \setminus U_{ j } } }
+              </md>
+              
+              for any subset <m> V \subseteq X </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <conclusion>
+    <p>
+      You will have an opportunity to prove the above results in the problems for this section.
+    </p>
+  </conclusion>
+</subsection>

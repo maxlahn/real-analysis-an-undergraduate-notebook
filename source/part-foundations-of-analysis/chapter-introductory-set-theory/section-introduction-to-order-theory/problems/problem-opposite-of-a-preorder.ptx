@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-opposite-of-an-order" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Opposite of an order
+  </title>
+  
+  <idx>
+    opposite
+  </idx>
+  
+  <introduction>
+    <p>
+      The <term> opposite </term> <m> \op{ R } </m> of a binary relation <m> R </m> on a set <m> X </m> is the binary relation defined by
+      
+      <md>
+        \op{ R } = \setmid{ \of{ x_{ 2 } , x_{ 1 } } \in X^{ 2 } }{ \of{ x_{ 1 } , x_{ 2 } } \in R }
+      </md>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that the opposite of a preorder is a preorder.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Let <m> \precsim </m> be a preorder on a set <m> X </m>, and denote by <m> \succsim </m> the opposite. We will show that the binary operation <m> \succsim </m> is reflexive and transitive. To that end, first let <m> x \in X </m>. The reflexivity of <m> \precsim </m> implies that <m> x \precsim x </m>, and so <m> x \succsim x </m>. Thus the binary relation <m> \succsim </m> is reflexive.
+      </p>
+      
+      <p>
+        Now let <m> x , y , z \in X </m>, and suppose that <m> x \succsim y </m> and <m> y \succsim z </m>. Then <m> z \precsim y </m> and <m> y \precsim x </m>, and so the transitivity of <m> \precsim </m> implies that <m> z \precsim x </m>. Thus <m> x \succsim z </m>, and so the binary relation <m> \succsim </m> is transitive.
+      </p>
+      
+      <p>
+        Since the binary relation <m> \succsim </m> is reflexive and transitive, it is a preorder on <m> X </m>.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that the opposite of a partial order is a partial order.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Let <m> \preceq </m> be a partial order on a set <m> X </m>, and denote by <m> \succeq </m> the opposite. Since <m> \preceq </m> is a preorder, <m> \succeq </m> is a preorder on <m> X </m> by (a) above. Thus <m> \succeq </m> is reflexive and transitive, and so it remains to show that <m> \succeq </m> is anti-symmetric.
+      </p>
+      
+      <p>
+        To that end, let <m> x , y \in X </m>, and suppose that both <m> x \succeq y </m> and <m> y \succeq x </m>. Then <m> y \preceq x </m> and <m> x \preceq y </m>, and so the anti-symmetry of <m> \preceq </m> implies that <m> x = y </m>. Thus <m> \succeq </m> is anti-symmetric.
+      </p>
+      
+      <p>
+        Since the binary relation <m> \succeq </m> is reflexive, anti-symmetric, and transitive, it is a partial order on <m> X </m>.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that the opposite of a total order is a total order.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Let <m> \leq </m> be a total order on a set <m> X </m>, and denote by <m> \geq </m> the opposite. Since <m> \leq </m> is a partial order, <m> \geq </m> is a partial order on <m> X </m> by (b) above. Thus <m> \geq </m> is reflexive, anti-symmetric, and transitive, and so it remains to show that <m> \geq </m> is total. To that end, let <m> x , y \in X </m>. The totality of <m> \leq </m> implies that either <m> x \leq y </m> or <m> y \leq x </m>. Thus <m> y \geq x </m> and <m> x \geq y </m>, and so the binary relation <m> \geq </m> is total.
+      </p>
+      
+      <p>
+        Since <m> \geq </m> is anti-symmetric, transitive, and total, it is a total order on <m> X </m>.
+      </p>
+    </solution>
+  </task>
+</exercise>

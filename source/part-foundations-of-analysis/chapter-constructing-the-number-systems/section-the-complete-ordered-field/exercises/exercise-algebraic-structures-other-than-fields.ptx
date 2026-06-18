@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-algebraic-structures-other-than-fields" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Algebraic structures other than fields
+  </title>
+  
+  <introduction>
+    <p>
+      Determine which of the ordered field axioms are satisfied by the given algebraic structure.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Which of the ordered field axioms are not satisfied by the set <m> \Z </m> of integers?
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        The integers <m> \Z </m> satisfy all the ordered field axioms except the existence of multiplicative inverses. In fact, only <m> 1 </m> and <m> -1 </m> have multiplicative inverses.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Which of the ordered field axioms are not satisfied by the set <m> \N </m> of natural numbers?
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        The natural numbers <m> \N </m> satisfy all the ordered field axioms except the existence of additive and multiplicative inverses. In fact, only <m> 0 </m> has an additive inverse, and only <m> 1 </m> has a multiplicative inverse.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> X </m> be a set. Which of the ordered field axioms are not satisfied by the ordered quadruple <m> \of{ \ps \of{ X } , \cup , \cap , \subseteq } </m>?
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        The ordered quadruple <m> \of{ \ps \of{ X } , \cap , \cup , \subseteq } </m> satisfies all the ordered field axioms except the existence additive inverses, the existence of multiplicative inverses, and totality.
+      </p>
+    </solution>
+  </exercise>
+</exercisegroup>

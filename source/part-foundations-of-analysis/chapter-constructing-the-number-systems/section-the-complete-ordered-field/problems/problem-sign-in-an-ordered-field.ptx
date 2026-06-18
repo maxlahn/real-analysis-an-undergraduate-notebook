@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-sign-in-an-ordered-field" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Sign in an ordered field
+  </title>
+  
+  <idx>
+    sign
+  </idx>
+  
+  <idx>
+    positive
+  </idx>
+  
+  <idx>
+    negative
+  </idx>
+  
+  <introduction>
+    <p>
+      Let <m> \of{ F , + , \cdot , \leq } </m> be an ordered field. As in the case of the rational numbers <m> \Q </m> and the real numbers <m> \R </m>, we can define the <term> sign </term> of an element of <m> F </m> by comparison with the additive identity element <m> 0 </m>:
+      
+      <ul>
+        <li>
+          <title>
+            Positivity
+          </title>
+          
+          <p>
+            A non-zero element <m> x \in F \setminus \set{ 0 } </m> is called <term> positive </term> if <m> 0 \leq x </m>.
+          </p>
+        </li>
+        
+        <li>
+          <title>
+            Negativity
+          </title>
+          
+          <p>
+            A non-zero element <m> x \in F \setminus \set{ 0 } </m> is called <term> negative </term> if <m> x \leq 0 </m>.
+          </p>
+        </li>
+        
+        <li>
+          <title>
+            Zero
+          </title>
+          
+          <p>
+            The additive identity element <m> 0 \in F </m> is not positive or negative.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Let <m> x \in F </m>. Show that if <m> x \neq 0 </m>, then <m> x </m> and its additive inverse <m> -x </m> have opposite sign.
+      </p>
+    </statement>
+    
+    <hint>
+      <p>
+        Add <m> -x </m> to the inequality defining the sign of <m> x </m>.
+      </p>
+    </hint>
+    
+    <solution>
+      <p>
+        We first note that if <m> -x = 0 </m>, then
+        
+        <md>
+          x = x + 0 = x + \of{ -x } = 0
+        </md>.
+        
+        Thus if <m> x \neq 0 </m>, then <m> -x \neq 0 </m>. If <m> x </m> is positive, then <m> 0 \leq x </m>, and so
+        
+        <md>
+          -x = 0 + \of{ -x } \leq x + \of{ -x } = 0
+        </md>,
+        
+        and so <m> -x </m> is negative. On the other hand, if <m> x </m> is negative, then <m> x \leq 0 </m>, and so
+        
+        <md>
+          0 = x + \of{ -x } \leq 0 + \of{ -x } = -x
+        </md>,
+        and so <m> -x </m> is positive.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        More generally, show that for all elements <m> x , y \in F </m>, if <m> x \leq y </m> then <m> -y \leq -x </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        We note that
+        
+        <md>
+          <mrow>
+            -y \amp = 0 + \of{ -y } = x + \of{ -x } + \of{ -y }
+          </mrow>
+          
+          <mrow>
+            \amp \leq y + \of{ -x } + \of{ -y } = y + \of{ -y } + \of{ -x } = 0 + \of{ -x } = -x
+          </mrow>
+        </md>.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Show that <m> \of{ -1 } \cdot x = -x </m> for all elements <m> x \in F </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        We observe that
+        
+        <md>
+          x + \of{ \of{ -1 } \cdot x } = \of{ 1 \cdot x } + \of{ \of{ -1 } \cdot x } = \of{ 1 + \of{ -1 } } \cdot x = 0 \cdot x = 0
+        </md>,
+        
+        and so <m> \of{ -1 } \cdot x </m> is an additive inverse for <m> x </m>. Thus (c) in <xref ref="problem-uniqueness-in-a-field"/> implies that <m> -1 \cdot x = -x </m>.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Show that the product of two negative elements is positive.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Let <m> x , y \in F </m> be negative elements. Then <m> x \neq 0 </m> and <m> y \neq 0 </m>; we first argue that <m> x \cdot y \neq 0 </m>. Indeed, if <m> x \cdot y = 0 </m>, then
+        
+        <md>
+          <mrow>
+            1 \amp = 1 \cdot 1 = x \cdot x^{ -1 } \cdot y \cdot y^{ -1 } = x \cdot x^{ -1 } \cdot y \cdot y^{ -1 }
+          </mrow>
+          
+          <mrow>
+            \amp = x \cdot y \cdot x^{ -1 } \cdot y^{ -1 } = 0 \cdot x^{ -1 } \cdot y^{ -1 } = 0
+          </mrow>
+        </md>.
+        
+        This contradiction implies that <m> x \cdot y \neq 0 </m>. We now observe that (a) implies that <m> -x </m> and <m> -y </m> are positive. Moreover, (c) implies that
+        
+        <md>
+          <mrow>
+            x \cdot y \amp = 1 \cdot x \cdot y = \of{ -1 } \cdot \of{ -1 } \cdot x \cdot y
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ -1 } \cdot x \cdot \of{ -1 } \cdot y = \of{ -x } \cdot \of{ -y } \geq 0
+          </mrow>
+        </md>
+        
+        is positive.
+      </p>
+    </solution>
+  </task>
+</exercise>

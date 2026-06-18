@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-infima-and-dedekind-completeness" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Infima and Dedekind completeness
+  </title>
+  
+  <introduction>
+    <p>
+      Let <m> \of{ F , + , \cdot , \leq } </m> be an ordered field, and consider the map <m> n \colon F \to F </m> defined by the formula <m> n \of{ x } = -x </m>; that is, <m> n </m> sends an input <m> x \in F </m> to its additive inverse <m> -x </m>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Show that for a subset <m> U \subseteq F </m>, <m> U </m> is bounded from above if and only if <m> n \of{ U } </m> is bounded from below, and <m> U </m> is bounded from below if and only if <m> n \of{ U } </m> is bounded from above.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        If <m> U </m> is bounded from above, then there is some element <m> x \in F </m> so that <m> u \leq x </m> for all <m> u \in U </m>. We observe that (b) in <xref ref="problem-sign-in-an-ordered-field"/> implies that
+        
+        <md>
+          n \of{ x } = -x \leq -u = n \of{ u }
+        </md>
+        
+        for all <m> u \in U </m>, and so <m> n \of{ x } </m> is a lower bound for <m> n \of{ U } </m>.
+      </p>
+      
+      <p>
+        Similarly, if <m> U </m> is bounded from below, then there is some element <m> x \in F </m> so that <m> x \leq u </m> for all <m> u \in U </m>. We observe that (b) in <xref ref="problem-sign-in-an-ordered-field"/> implies that
+        
+        <md>
+          n \of{ u } = -u \leq -x = n \of{ x }
+        </md>
+        
+        for all <m> u \in U </m>, and so <m> n \of{ x } </m> is an upper bound for <m> n \of{ U } </m>.
+      </p>
+      
+      <p>
+        The reverse implications follow from the observation that <m> n </m> is its own inverse and then applying the above arguments to <m> n \of{ U } </m>: if <m> n \of{ U } </m> is bounded from above (resp. below), then <m> U = n \of{ n \of{ U } } </m> is bounded from below (resp. above).
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Show that a subset <m> U \subseteq F </m> has a supremum if and only if <m> n \of{ U } </m> has an infimum, and in this case
+        
+        <md>
+          \inf \of{ n \of{ U } } = n \of{ \sup \of{ U } }
+        </md>.
+        
+        Similarly, show that <m> U </m> has an infimum if and only if <m> n \of{ U } </m> has a supremum, and in this case
+        
+        <md>
+          \sup \of{ n \of{ U } } = n \of{ \sup \of{ U } }
+        </md>
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Show that the ordered field <m> \of{ F , + , \cdot , \leq } </m> is Dedekind complete if and only if every non-empty subset of <m> F </m> which is bounded from below has an infimum.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+</exercise>

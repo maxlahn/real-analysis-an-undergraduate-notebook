@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-order-by-divisibility" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Order by divisibility
+  </title>
+  
+  <introduction>
+    <p>
+      Consider the binary relation <m> \divides </m> on the natural numbers <m> \N </m> defined so that for all natural numbers <m> m , n \in \N </m>, <m> m \divides n </m> if and only if <m> m k = n </m> for some natural number <m> k \in \N </m>; that is, <m> m \divides n </m> if and only if <m> n </m> is a multiple of <m> m </m>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that <m> \divides </m> is a partial order on the set <m> \N </m> of natural numbers.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        We must prove that the binary relation <m> \divides </m> is reflexive, anti-symmetric, and transitive. To that end, first let <m> n \in \N </m> be a natural number, and note that <m> n \cdot 1 = n </m>. Thus <m> n \divides n </m>, and so the binary relation <m> \divides </m> is reflexive.
+      </p>
+      
+      <p>
+        Now let <m> m , n \in \N </m> be natural numbers, and suppose that <m> m \divides n </m> and <m> n \divides m </m>. Then <m> m k = n </m> and <m> n l = m </m> for some natural numbers <m> k , l \in \N </m>. If <m> m = 0 </m>, then
+        
+        <md>
+          n = m k = 0 k = 0 = m
+        </md>.
+        
+        On the other hand, if <m> m \neq 0 </m>, then we observe that
+        
+        <md>
+          m \cdot 1 = m = n l = \of{ m k } l = m \of{ k l } ,
+        </md>,
+        
+        and so <xref ref="corollary-cancellation-of-multiplication"/> implies that <m> k l = 1 </m>. Since <m> k , l \in \N </m> are natural numbers, we must have <m> k = l = 1 </m>, so that
+        
+        <md>
+          m = n l = n \cdot 1 = n
+        </md>.
+        
+        In summary, we have shown that if <m> m \divides n </m> and <m> n \divides m </m>, then <m> m = n </m>. Thus the binary relation <m> \divides </m> is anti-symmetric
+      </p>
+      
+      <p>
+        Finally, let <m> m , n , p \in \N </m> be natural numbers, and suppose that <m> m \divides n </m> and <m> n \divides p </m>. Then <m> m k = n </m> and <m> n l = p </m> for some natural numbers <m> k , l \in \N </m>, and so
+        
+        <md>
+          m \of{ k l } = \of{ m k } l = n l = p
+        </md>.
+        
+        Thus the binary relation <m> \divides </m> is transitive.
+      </p>
+      
+      <p>
+        Since the binary relation <m> \divides </m> is reflexive, anti-symmetric, and transitive, it is a partial order on <m> \N </m>.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Is the binary relation <m> \divides </m> a total order on <m> \N </m>? Justify your answer.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        No, the binary relation <m> \divides </m> is not a total order on <m> \N </m>, since for example <m> 2 \not \divides 3 </m> and <m> 3 \not \divides 2 </m>.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        What are the extrema of the partially ordered set <m> \of{ \N , { \divides } } </m>?
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        For all natural numbers <m> n \in \N </m>, <m> 1 n = n </m> and <m> 0 n = 0 </m>, so that <m> 1 \divides n \divides 0 </m>. Thus <m> 1 </m> and <m> 0 </m> are the minimum and maximum of the partially ordered set <m> \of{ \N , { \divides } } </m>, respectively.  
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        We will abuse notation and denote the restriction of <m> \divides </m> to the set <m> \N \setminus \set{ 0 , 1 } </m> by <m> \divides </m> as well. What are the extremal elements of the partially ordered set <m> \of{ \N \setminus \set{ 0 , 1 } , { \divides } } </m>? Are these extremal elements extrema?
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Let <m> n \in \N \setminus \set{ 0 , 1 } </m>, and note that <m> n \divides 2 n </m> but <m> n \neq 2 n </m>. Thus there are no maximal elements of the partially ordered set <m> \of{ \N \setminus \set{ 0 , 1 } , { \divides } } </m>.
+      </p>
+      
+      <p>
+        Conversely, let <m> p \in \N </m> be a prime number. Since the only natural number divisors of <m> p </m> are <m> 1 </m> and <m> p </m>, <m> p </m> is a minimal element of the partially ordered set <m> \of{ \N \setminus \set{ 0 , 1 } , { \divides } } </m>. On the other hand, any composite natural number has proper divisors, and so is not minimal.
+      </p>
+    </solution>
+  </task>
+</exercise>
