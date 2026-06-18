@@ -57,7 +57,7 @@
         Similarly, show that <m> U </m> has an infimum if and only if <m> n \of{ U } </m> has a supremum, and in this case
         
         <md>
-          \sup \of{ n \of{ U } } = n \of{ \sup \of{ U } }
+          \sup \of{ n \of{ U } } = n \of{ \inf \of{ U } }
         </md>
       </p>
     </statement>

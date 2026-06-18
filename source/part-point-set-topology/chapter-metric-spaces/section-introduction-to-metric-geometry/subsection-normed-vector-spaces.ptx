@@ -359,7 +359,7 @@
         Let <m> n \in \N </m> be a natural number, and fix an extended real number <m> 1 \leq p \leq \infty </m>. The metrics <m> d_{ p } </m> on <m> n </m>-dimensional real and complex coordinate spaces <m> \R^{ n } </m> and <m> \C^{ n } </m> by the <m> p </m>-norms <m> \norm{ \oparg }_{ p } </m> are called <term> <m> p </m>-metrics </term>. These <m> p </m>-metrics are defined by the formula
         
         <md>
-          d_{ p } \of{ \vect{ w } , \vect{ z } } = \norm{ \vect{ z } - \vect{ w } }_{ p } = \of{ \sum_{ k = 1 }^{ n }{ \abs{ w_{ k } - z_{ k } }^{ p } } }^{ \frac{ 1 }{ p } }
+          d_{ p } \of{ \vect{ w } , \vect{ z } } = \norm{ \vect{ w } - \vect{ z } }_{ p } = \of{ \sum_{ k = 1 }^{ n }{ \abs{ w_{ k } - z_{ k } }^{ p } } }^{ \frac{ 1 }{ p } }
         </md>.
         
         In particular, we note that the metrics <m> d_{ 2 } = d </m> induced by the Euclidean norms <m> \norm{ \oparg }_{ 2 } = \norm{ \oparg } </m> are the Euclidean metrics.
