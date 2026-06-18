@@ -976,7 +976,7 @@ d \of{ \vect{ w } , \vect{ z } } = \sqrt{ \sum_{ k = 1 }^{ n }{ \abs{ w_{ k } - 
 <div class="para">Consider the real-valued function <span class="process-math">\(\rho \colon \opint{ 0 }{ \infty }^{ 2 } \to \R \)</span> defined by the formula</div>
 <div class="displaymath process-math" id="example-metric-spaces-2-1-1-2-1-2">
 \begin{equation*}
-\rho \of{ x , y } = \abs{ \ln{ \of{ \frac{ x_{ 1 } }{ x_{ 2 } } } } }
+\rho \of{ x , y } = \abs{ \ln{ \of{ \frac{ x }{ y } } } }
 \end{equation*}
 </div>
 <div class="para">As defined above, <span class="process-math">\(\rho \)</span> is a metric on the open interval <span class="process-math">\(\opint{ 0 }{ \infty } \text{,}\)</span> and so <span class="process-math">\(\of{ \opint{ 0 }{ \infty } , \rho } \)</span> is a metric space.</div>
@@ -991,8 +991,8 @@ d \of{ \vect{ w } , \vect{ z } } = \sqrt{ \sum_{ k = 1 }^{ n }{ \abs{ w_{ k } - 
 \begin{equation*}
 \delta_{ X } \of{ x_{ 1 } , x_{ 2 } } =
 \begin{cases}
-1 \amp x_{ 1 } = x_{ 2 } \\
-0 \amp x_{ 1 } \neq x_{ 2 }
+0 \amp x_{ 1 } = x_{ 2 } \\
+1 \amp x_{ 1 } \neq x_{ 2 }
 \text{.}\end{cases}
 \end{equation*}
 </div>
@@ -1219,13 +1219,13 @@ d \of{ \vect{ w } , \vect{ z } } = \sqrt{ \sum_{ k = 1 }^{ n }{ \abs{ w_{ k } - 
 <div class="para">Let <span class="process-math">\(n \in \N \)</span> be a natural number, and fix a positive real number <span class="process-math">\(p \gt 0 \text{.}\)</span> The <dfn class="terminology"><span class="process-math">\(p \)</span>-norm</dfn> <span class="process-math">\(\norm{ \oparg }_{ p } \colon \R^{ n } \to \R \)</span> on <span class="process-math">\(n \)</span>-dimensional real coordinate space <span class="process-math">\(\R^{ n } \)</span> is the real-valued function defined by the formula</div>
 <div class="displaymath process-math" id="example-normed-vector-spaces-2-1-1-1-4-7">
 \begin{equation*}
-\norm{ \vect{ x } }_{ p } = \sqrt{ \sum_{ k = 1 }^{ n }{ x_{ k }^{ 2 } } }\text{.}
+\norm{ \vect{ x } }_{ p } = \of{ \sum_{ k = 1 }^{ n }{ x_{ k }^{ p } } }^{ \frac{ 1 }{ p } }\text{.}
 \end{equation*}
 </div>
 <div class="para">Similarly, the <dfn class="terminology"><span class="process-math">\(p \)</span>-norm</dfn> <span class="process-math">\(\norm{ \oparg }_{ p } \colon \C^{ n } \to \R \)</span> on <span class="process-math">\(n \)</span>-dimensional complex coordinate space <span class="process-math">\(\C^{ n } \)</span> is the real-valued function defined by the formula</div>
 <div class="displaymath process-math" id="example-normed-vector-spaces-2-1-1-1-4-12">
 \begin{equation*}
-\norm{ \vect{ z } }_{ p } = \sqrt{ \sum_{ k = 1 }^{ n }{ \abs{ z_{ k } }^{ 2 } } }\text{.}
+\norm{ \vect{ z } }_{ p } = \of{ \sum_{ k = 1 }^{ n }{ z_{ k }^{ p } } }^{ \frac{ 1 }{ p } }\text{.}
 \end{equation*}
 </div>
 <div class="para">If <span class="process-math">\(p \geq 1 \text{,}\)</span> then the <span class="process-math">\(p \)</span>-norms are norms on <span class="process-math">\(\R^{ n } \)</span> and <span class="process-math">\(\C^{ n } \text{,}\)</span> and so <span class="process-math">\(\of{ \R^{ n } , \norm{ \oparg }_{ p } } \)</span> and <span class="process-math">\(\of{ \C^{ n } , \norm{ \oparg }_{ p } } \)</span> are normed vector spaces.</div>
