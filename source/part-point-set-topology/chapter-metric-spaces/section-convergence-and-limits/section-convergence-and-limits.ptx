@@ -7,11 +7,15 @@
 
   <introduction>
     <p>
-      Text before the first subsection.
+      In this section, we introduce the most fundamental notion of all of mathematical analysis: that of <term> convergence </term>. Convergence is a formalization of limiting behavior and closeness in metric spaces and, as we will see in the next chapter, other related analytical settings. In this section we will be concerned with convergence in the setting of abstract metric spaces, which can be interpreted as a rigorous formalization of the informal phrase <q> eventually close. </q> In the following section, we will gain a more detailed understanding of limiting behavior in less general example of the Euclidean spaces. Note also that in this chapter, we will be concerned only with the convergence of sequences in metric spaces and maps between metric spaces, but in the next chapter, we will make generalizations which in some ways subsume the discussion in this section.
     </p>
   </introduction>
 
-  <!-- <xi:include href="./subsection-TITLE.ptx"/> -->
+  <xi:include href="./subsection-sequential-convergence.ptx"/>
+  
+  <xi:include href="./subsection-pointwise-and-uniform-convergence.ptx"/>
+  
+  <xi:include href="./subsection-map-convergence.ptx"/>
 
   <conclusion>
     <p>
@@ -19,7 +23,7 @@
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-convergence-and-limits.ptx"/>
+  <xi:include href="./exercises-convergence-and-limits.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-convergence-and-limits.ptx"/>
+  <xi:include href="./problems-convergence-and-limits.ptx"/>
 </section>

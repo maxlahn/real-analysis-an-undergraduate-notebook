@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-map-convergence" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Map Convergence
+  </title>
+
+  <introduction>
+    <p>
+      Just as we can use a metric to define the convergence of a sequence of points or maps in a metric space, we can similarly consider the convergence of maps between metric spaces. In our definition of sequence convergence, we considered a sequence to converge to a limit if the points of the sequence could be made arbitrarily close to the limit point solely by choosing large enough indices. We will similarly consider a map between metric spaces to <term> converge </term> to a limit in the codomain at a point in the domain if we can make outputs close to the limit in the codomain solely by choosing inputs close to the point in the domain.
+    </p>
+    
+    <p>
+      In the case of sequential convergence, we used the standard ordering on the natural numbers to induce a notion of limiting behavior by considering arbitrarily large indices. For <term> map convergence </term>, however, we use the metric in the domain to consider arbitrarily close points to the point in question.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-map-convergence">
+    <title>
+      Map convergence
+    </title>
+    
+    <idx>
+      map convergence
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> be a map from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m>.
+        
+        <ul>
+          <li>
+            <title>
+              Map convergence
+            </title>
+            
+            <p>
+              <m> f </m> <term> converges </term> at a point <m> c \in X </m> to a point <m> l \in Y </m> if for all positive real numbers <m> \epsilon \gt 0 </m>, there exists a positive real number <m> \delta \gt 0 </m> so that
+              
+              <md>
+                \rho_{ Y } \of{ f \of{ x } , l } \lt \epsilon
+              </md>
+              
+              for all inputs <m> x \in X </m> so that <m> 0 \lt \rho_{ X } \of{ x , c } \lt \delta </m>.
+            </p>
+            
+            <p>
+              The map <m> f </m> is called <term> convergent </term> at a point <m> c \in X </m> if it converges at <m> c </m> to some point <m> l \in Y </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Map divergence
+            </title>
+            
+            <p>
+              The map <m> f </m> is called <term> divergent </term> at a point <m> c \in X </m> if it does not converge at <m> c </m> to any point <m> l \in Y </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+
+  <conclusion>
+    <p>
+      Text after the last subdivision.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->

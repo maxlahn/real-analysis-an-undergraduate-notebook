@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-pointwise-and-uniform-convergence" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Pointwise and Uniform Convergence
+  </title>
+
+  <introduction>
+    <p>
+      Later in this chapter, we will establish metrics on certain collections of maps with codomain a given metric space. However, without yet defining a metric on these sets, there are two related but distinct modes of convergence of a sequence of such maps. A sequence of maps to a metric space is said to <term> converge pointwise </term> to a limit map if the images of each input in the domain converge to their images under the limit map. Stronger than pointwise convergence is the notion of <term> uniform convergence </term>, which requires that the speed of pointwise convergence not depend on the given input.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-pointwise-convergence">
+    <title>
+      Pointwise convergence/divergence
+    </title>
+    
+    <idx>
+      pointwise convergence
+    </idx>
+    
+    <idx>
+      pointwise divergence
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of maps <m> f_{ n } \colon X \to Y </m> from a set <m> X </m> to a metric space <m> \of{ Y , \rho } </m>.
+        
+        <ul>
+          <li>
+            <title>
+              Pointwise convergence
+            </title>
+            
+            <p>
+              The sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> <term> converges pointwise </term> to a map <m> f \colon X \to Y </m> from <m> X </m> to <m> Y </m> if for all inputs <m> x \in X </m>, the sequence <m> \of{ f_{ n } \of{ x } }_{ n = 0 }^{ \infty } </m> of corresponding outputs <m> f_{ n } \of{ x } \in Y </m> converges to <m> f \of{ x } </m>.
+            </p>
+            
+            <p>
+              The sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> is called <term> pointwise convergent </term> if it converges pointwise to a map from <m> X </m> to <m> Y </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Pointwise divergence
+            </title>
+            
+            <p>
+              The sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> is called <term> pointwise divergent </term> if it does not converge pointwise to any map from <m> X </m> to <m> Y </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="example-pointwise-convergence">
+    <title>
+      Pointwise convergence
+    </title>
+    
+    <statement>
+      <p>
+        Consider the sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> of functions <m> f_{ n } \colon \clint{ 0 }{ 1 } \to \clint{ 0 }{ 1 } </m> defined by the formulae <m> f_{ n } \of{ x } = x^{ n } </m>. Since
+        
+        <md>
+          \lim_{ n \to \infty }{ f_{ n } \of{ x } } = \lim_{ n \to \infty }{ x^{ n } } =
+            \begin{cases}
+              0 \amp 0 \leq x \lt 1 \\
+              1 \amp x = 1
+            \end{cases}
+        </md>,
+        
+        the sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges pointwise to the function <m> f \colon \clint{ 0 }{ 1 } \to \clint{ 0 }{ 1 } </m> defined piecewise by the formula
+        
+        <md>
+          f \of{ x } =
+            \begin{cases}
+              0 \amp 0 \leq x \lt 1 \\
+              1 \amp x = 1
+            \end{cases}
+        </md>.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    Because of the uniqueness of limits of sequences in metric spaces, if a sequence of maps to a metric space converges pointwise to a map, then this map is unique with this property. In this case, the map is called the <term> pointwise limit </term> of the sequence.
+  </p>
+  
+  <definition xml:id="definition-pointwise-limit">
+    <title>
+      Pointwise limit
+    </title>
+    
+    <idx>
+      pointwise limit
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \lim_{ n \to \infty }{ f_{ n } } </m>
+      </usage>
+      
+      <description>
+        <p>
+          pointwise limit of the sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        For any pointwise convergent sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> of maps <m> f_{ n } \colon X \to Y </m> from a set <m> X </m> to a metric space <m> \of{ Y , \rho } </m>, the unique map <m> f \colon X \to Y </m> from <m> X </m> to <m> Y </m> to which <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges pointwise is called the <term> pointwise limit </term> of <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m>, and is denoted
+        
+        <md>
+          \lim_{ n \to \infty }{ f_{ n } } = f
+        </md>.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    While some properties of a pointwise convergent sequence of maps to a metric space are shared with its pointwise limit, pointwise convergence does not in general preserve all desirable properties of maps. In particular, <xref ref="example-pointwise-convergence"/> implies that a pointwise limit of a sequence of continuous maps need not itself be continuous. We will explore continuity in metric spaces and its relationship with convergence later in this chapter. In order to preserve these properties, we will need a stronger notion of convergence. Informally, a sequence of maps to a metric space is said to <term> converge uniformly </term> it converges pointwise at roughly the same rate at each point in the domain.
+  </p>
+  
+  <definition xml:id="definition-uniform-convergence">
+    <title>
+      Uniform convergence
+    </title>
+    
+    <idx>
+      uniform convergence
+    </idx>
+    
+    <idx>
+      uniform divergence
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of maps <m> f_{ n } \colon X \to Y </m> from a set <m> X </m> to a metric space <m> \of{ Y , \rho } </m>.
+        
+        <ul>
+          <li>
+            <title>
+              Uniform convergence
+            </title>
+            
+            <p>
+              The sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> <term> converges uniformly </term> to a map <m> f \colon X \to Y </m> from <m> X </m> to <m> Y </m> if for all positive real numbers <m> \epsilon \gt 0 </m>, there is a natural number <m> n_{ \epsilon } \in \N </m> so that
+              
+              <md>
+                \rho \of{ f_{ n } \of{ x } , f \of{ x } } \lt \epsilon
+              </md>
+              
+              for all inputs <m> x \in X </m> and indices <m> n \geq n_{ \epsilon } </m>.
+            </p>
+            
+            <p>
+              The sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> is called <term> uniformly convergent </term> if it converges uniformly to a map from <m> X </m> to <m> Y </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Uniform divergence
+            </title>
+            
+            <p>
+              The sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> is called <term> uniformly divergent </term> if it does not converge uniformly to any map from <m> X </m> to <m> Y </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-uniform-convergence-divergence">
+    <title>
+      Uniform convergence/divergence
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of uniformly convergent and divergent sequences of maps:
+        
+        <ul>
+          <li>
+            <p>
+              Consider the sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> of functions <m> f_{ n } \colon \clint{ 0 }{ 1 } \to \clint{ 0 }{ 1 } </m> defined by the formulae <m> f_{ n } \of{ x } = x^{ n } </m>, and let <m> f \colon \clint{ 0 }{ 1 } \to \clint{ 0 }{ 1 } </m> be the function defined piecewise by the formula
+              
+              <md>
+                f \of{ x } =
+                  \begin{cases}
+                    0 \amp 0 \leq x \lt 1 \\
+                    1 \amp x = 1
+                  \end{cases}
+              </md>.
+              
+              We observe that
+              
+              <md>
+                <mrow>
+                  d \of{ f_{ n } \of{ x } , f \of{ x } } \amp = \abs{ f_{ n } \of{ x } - f \of{ x } } = \abs{ x^{ n } - 0 } = \abs{ x^{ n } } = x^{ n }
+                </mrow>
+                
+                <mrow>
+                  \amp \gt \of{ \frac{ 1 }{ 2^{ \frac{ 1 }{ n } } } }^{ n } = \frac{ 1 }{ 2 }
+                </mrow>
+              </md>
+              
+              for all positive integers <m> n \geq 1 </m> and inputs <m> \frac{ 1 }{ \sqrt[ n ]{ 2 } } \leq x \lt 1 </m>. We conclude that <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> does not converge uniformly to <m> f </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Consider the sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> of functions <m> f_{ n } \colon \R \to \clint{ -1 }{ 1 } </m> defined by the formulae
+              
+              <md>
+                f_{ n } \of{ x } = \frac{ \sin \of{ n x } }{ n }
+              </md>,
+              
+              and let <m> f \colon \R \to \clint{ -1 }{ 1 } </m> be the function defined by the formula <m> f \of{ x } = 0 </m>. For all positive real numbers <m> \epsilon \gt 0 </m>, the Archimedean principle implies that <m> n_{ \epsilon } \cdot \epsilon \gt 1 </m> for some positive integer <m> n_{ \epsilon } \geq 1 </m>. We observe that
+              
+              <md>
+                <mrow>
+                  d \of{ f_{ n } \of{ x } , f \of{ x } } \amp = \abs{ f_{ n } \of{ x } - f \of{ x } } = \abs{ \frac{ \sin \of{ n x } }{ n } - 0 } = \abs{ \frac{ \sin \of{ n x } }{ n } }
+                </mrow>
+                
+                <mrow>
+                  \amp = \frac{ \abs{ \sin \of{ n x } } }{ n } \leq \frac{ 1 }{ n } \leq \frac{ 1 }{ n_{ \epsilon } } \lt \epsilon
+                </mrow>
+              </md>
+              
+              for all indices <m> n \geq n_{ \epsilon } </m> and inputs <m> x \in \R </m>. We conclude that <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges uniformly to <m> f </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    We remark that pointwise and uniform convergence are distinct concepts; that is, there are sequences of maps to a metric space which converge pointwise but not uniformly. However, the opposite relationship is not true: uniform convergence is a stronger condition on sequences of maps to a metric space than pointwise convergence; that is, a sequence of maps to a metric space converges uniformly only if it converges pointwise.
+  </p>
+  
+  <proposition xml:id="proposition-pointwise-and-uniform-convergence">
+    <title>
+      Pointwise and uniform convergence
+    </title>
+    
+    <statement>
+      <p>
+        If a sequence of maps from a set to a metric space converges uniformly, then it converges pointwise.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Suppose that a sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> of maps <m> f_{ n } \colon X \to Y </m> from a set <m> X </m> to a metric space <m> \of{ Y , \rho } </m> converges uniformly to a map <m> f \colon X \to Y </m> from <m> X </m> to <m> Y </m>. Then for all positive real numbers <m> \epsilon \gt 0 </m>, there is a natural number <m> n_{ \epsilon } \in \N </m> so that
+        
+        <md>
+          \rho \of{ f_{ n } \of{ x } , f \of{ x } } \lt \epsilon
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m> and inputs <m> x \in X </m>. In particular, for each input <m> x \in X </m>,
+        
+        <md>
+          \rho \of{ f_{ n } \of{ x } , f \of{ x } } \lt \epsilon
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>, and so the sequence <m> \of{ f_{ n } \of{ x } }_{ n = 0 }^{ \infty } </m> converges to <m> f \of{ x } </m>. We conclude that <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges pointwise to <m> f </m>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    Taken with the uniqueness of the pointwise limit of a sequence of maps to a metric space, <xref ref="proposition-pointwise-and-uniform-convergence"/> immediately implies that if a sequence of maps to a metric space converges uniformly to a map, then this map is unique with this property. In this case, the map is called the <term> uniform limit </term> of the sequence.
+  </p>
+  
+  <definition xml:id="definition-uniform-limit">
+    <title>
+      Uniform limit
+    </title>
+    
+    <idx>
+      uniform limit
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \uniflim_{ n \to \infty }{ f_{ n } } </m>
+      </usage>
+      
+      <description>
+        <p>
+          uniform limit of the sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        For any uniformly convergent sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> of maps <m> f_{ n } \colon X \to Y </m> from a set <m> X </m> to a metric space <m> \of{ Y , \rho } </m>, the unique map <m> f \colon X \to Y </m> from <m> X </m> to <m> Y </m> to which <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges uniformly is called the <term> uniform limit </term> of <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m>, and is denoted
+        
+        <md>
+          \uniflim_{ n \to \infty }{ f_{ n } } = f
+        </md>.
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-uniform-limit">
+    <title>
+      Uniform limit
+    </title>
+    
+    <statement>
+      <p>
+        Consider the sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> of functions <m> f_{ n } \colon \R \to \clint{ -1 }{ 1 } </m> defined by the formulae
+        
+        <md>
+          f_{ n } \of{ x } = \frac{ \sin \of{ n x } }{ n }
+        </md>,
+        
+        and let <m> f \colon \R \to \clint{ -1 }{ 1 } </m> be the function defined by the formula <m> f \of{ x } = 0 </m>. Since <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges uniformly to <m> f </m> as shown in <xref ref="example-uniform-convergence-divergence"/>, <m> f </m> is the uniform limit of <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m>; that is,
+        
+        <md>
+          \uniflim_{ n \to \infty }{ f_{ n } } = f
+        </md>.
+        
+        We might also write that
+        
+        <md>
+          \uniflim_{ n \to \infty }{ \frac{ \sin \of{ n x } }{ n } } = 0
+        </md>.
+      </p>
+    </statement>
+  </example>
+
+  <conclusion>
+    <p>
+      So a sequence of maps to a metric space converges uniformly only if it converges pointwise. The reverse implication, however, is not in general true. In the following sections, we will see that, unlike in the case of pointwise convergence, many of the desirable properties of maps between metric spaces are preserved under uniform convergence.
+    </p>
+  </conclusion>
+</subsection>

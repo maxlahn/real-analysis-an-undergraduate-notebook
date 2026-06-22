@@ -23,7 +23,7 @@
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-introduction-to-metric-geometry.ptx"/>
+  <xi:include href="./exercises-introduction-to-metric-geometry.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-introduction-to-metric-geometry.ptx"/>
+  <xi:include href="./problems-introduction-to-metric-geometry.ptx"/>
 </section>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-pointwise-and-uniform-convergence" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Pointwise and uniform convergence
+  </title>
+  
+  <introduction>
+    <p>
+      Determine whether the following sequences of real-valued functions converge or diverge both pointwise and uniformly in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If the given sequence converges pointwise, find the pointwise limit. If the given sequence converges uniformly, find the uniform limit.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <introduction>
+      <p>
+        Consider the sequence <m> \of{ a_{ n } }_{ n = 1 }^{ \infty } </m> of real-valued functions <m> a_{ n } \colon \R \to \R </m> defined by the formulae
+        
+        <md>
+          a_{ n } \of{ x } = \of{ x - \frac{ 1 }{ n } }^{ 2 }
+        </md>.
+      </p>
+    </introduction>
+    
+    <task>
+      <statement>
+        <p>
+          Determine whether the sequence <m> \of{ a_{ n } }_{ n = 1 }^{ \infty } </m> converges or diverges pointwise in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges pointwise, find the pointwise limit.
+        </p>
+      </statement>
+      
+      <answer>
+        <p>
+          asdf
+        </p>
+      </answer>
+      
+      <solution>
+        <p>
+          asdf
+        </p>
+      </solution>
+    </task>
+    
+    <task>
+      <statement>
+        <p>
+          Determine whether the sequence <m> \of{ a_{ n } }_{ n = 1 }^{ \infty } </m> converges or diverges uniformly in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges uniformly, find the uniform limit.
+        </p>
+      </statement>
+      
+      <answer>
+        <p>
+          asdf
+        </p>
+      </answer>
+      
+      <solution>
+        <p>
+          asdf
+        </p>
+      </solution>
+    </task>
+  </exercise>
+  
+  <exercise>
+    <introduction>
+      <p>
+        Consider the sequence <m> \of{ b_{ n } }_{ n = 1 }^{ \infty } </m> of real-valued functions <m> b_{ n } \colon \clint{ -10 }{ 10 } \to \R </m> defined by the formulae
+        
+        <md>
+          b_{ n } \of{ x } = \frac{ x^{ 2 } }{ n }
+        </md>.
+      </p>
+    </introduction>
+    
+    <task>
+      <statement>
+        <p>
+          Determine whether the sequence <m> \of{ b_{ n } }_{ n = 1 }^{ \infty } </m> converges or diverges pointwise in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges pointwise, find the pointwise limit.
+        </p>
+      </statement>
+      
+      <answer>
+        <p>
+          asdf
+        </p>
+      </answer>
+      
+      <solution>
+        <p>
+          asdf
+        </p>
+      </solution>
+    </task>
+    
+    <task>
+      <statement>
+        <p>
+          Determine whether the sequence <m> \of{ b_{ n } }_{ n = 1 }^{ \infty } </m> converges or diverges uniformly in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges uniformly, find the uniform limit.
+        </p>
+      </statement>
+      
+      <answer>
+        <p>
+          asdf
+        </p>
+      </answer>
+      
+      <solution>
+        <p>
+          asdf
+        </p>
+      </solution>
+    </task>
+  </exercise>
+  
+  <exercise>
+    <introduction>
+      <p>
+        Consider the sequence <m> \of{ c_{ n } }_{ n = 1 }^{ \infty } </m> of real-valued functions <m> c_{ n } \colon \R \to \R </m> defined by the formulae
+        
+        <md>
+          c_{ n } \of{ x } = \frac{ x^{ 2 } }{ n }
+        </md>.
+      </p>
+    </introduction>
+    
+    <task>
+      <statement>
+        <p>
+          Determine whether the sequence <m> \of{ c_{ n } }_{ n = 1 }^{ \infty } </m> converges or diverges pointwise in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges pointwise, find the pointwise limit.
+        </p>
+      </statement>
+      
+      <answer>
+        <p>
+          asdf
+        </p>
+      </answer>
+      
+      <solution>
+        <p>
+          asdf
+        </p>
+      </solution>
+    </task>
+    
+    <task>
+      <statement>
+        <p>
+          Determine whether the sequence <m> \of{ c_{ n } }_{ n = 1 }^{ \infty } </m> converges or diverges uniformly in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges uniformly, find the uniform limit.
+        </p>
+      </statement>
+      
+      <answer>
+        <p>
+          asdf
+        </p>
+      </answer>
+      
+      <solution>
+        <p>
+          asdf
+        </p>
+      </solution>
+    </task>
+  </exercise>
+  
+  <exercise>
+    <introduction>
+      <p>
+        Consider the sequence <m> \of{ d_{ n } }_{ n = 0 }^{ \infty } </m> of real-valued functions <m> d_{ n } \colon \clint{ -10 }{ 10 } \to \R </m> defined by the formulae
+        
+        <md>
+          d_{ n } \of{ x } = \frac{ 1 }{ 3^{ x + n } }
+        </md>.
+      </p>
+    </introduction>
+    
+    <task>
+      <statement>
+        <p>
+          Determine whether the sequence <m> \of{ d_{ n } }_{ n = 0 }^{ \infty } </m> converges or diverges pointwise in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges pointwise, find the pointwise limit.
+        </p>
+      </statement>
+      
+      <answer>
+        <p>
+          asdf
+        </p>
+      </answer>
+      
+      <solution>
+        <p>
+          asdf
+        </p>
+      </solution>
+    </task>
+    
+    <task>
+      <statement>
+        <p>
+          Determine whether the sequence <m> \of{ d_{ n } }_{ n = 0 }^{ \infty } </m> converges or diverges uniformly in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges uniformly, find the uniform limit.
+        </p>
+      </statement>
+      
+      <answer>
+        <p>
+          asdf
+        </p>
+      </answer>
+      
+      <solution>
+        <p>
+          asdf
+        </p>
+      </solution>
+    </task>
+  </exercise>
+  
+  <conclusion>
+    <p>
+      
+    </p>
+  </conclusion>
+</exercisegroup>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-GROUP" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    EXERCISE TITLE
+  </title>
+  
+  <introduction>
+    <p>
+      
+    </p>
+  </introduction>
+  
+  <exercise xml:id="exercise-GROUP-TITLE">
+    <statement>
+      <p>
+        asdf
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        asdf
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </exercise>
+  
+  <conclusion>
+    <p>
+      
+    </p>
+  </conclusion>
+</exercisegroup>

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-sequential-convergence" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Sequential Convergence
+  </title>
+
+  <introduction>
+    <p>
+      First, we will investigate the limiting behavior of a sequence in a metric space. Informally, a sequence in a metric space <term> converges </term> to a point if the values of the sequence eventually grows arbitrarily close to that point; that is, a sequence converges to a point if the values of the sequence are close to that point for large indices. Such a sequence is called <term> convergent </term>, and the point to which it converges (which we will see to be uniquely determined by this property) is called its <term> limit </term>.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-sequential-convergence-divergence">
+    <title>
+      Sequential convergence/divergence
+    </title>
+    
+    <idx>
+      converge
+    </idx>
+    
+    <idx>
+      diverge
+    </idx>
+    
+    <idx>
+      convergent
+    </idx>
+    
+    <idx>
+      divergent
+    </idx>
+    
+    <statement>
+      <p>
+        A sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> x_{ n } \in X </m> in a metric space <m> \of{ X , \rho } </m> <term> converges </term> to a point <m> x \in X </m> if for all positive real numbers <m> \epsilon \gt 0 </m>, there is a natural number <m> n_{ \epsilon } \in \N </m> so that
+        
+        <md>
+          \rho \of{ x_{ n } , x } \lt \epsilon
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>.
+      </p>
+      
+      <p>
+        A sequence of points in a metric space is called <term> convergent </term> if it converges to a point and <term> divergent </term> if it does not converge to any point.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    So a sequence converges to a point in a metric space if the values of the sequence can be made arbitrarily close to that point solely by choosing large enough indices, and the sequence diverges if this cannot be done.
+  </p>
+
+  <example xml:id="example-sequential-convergence-divergence">
+    <title>
+      Sequential convergence/divergence
+    </title>
+    
+    <statement>
+      <p>
+        Consider the sequence <m> \of{ x_{ n } }_{ n = 1 }^{ \infty } </m> of real numbers defined by the formula
+        
+        <md>
+          x_{ n } = \frac{ 1 }{ n }
+        </md>.
+        
+        We will show that <m> \of{ x_{ n } }_{ n = 1 }^{ \infty } </m> converges to <m> 0 </m> in the Euclidean metric <m> d </m> on <m> \R </m>.
+      </p>
+      
+      <p>
+        Indeed, let <m> \epsilon \gt 0 </m> be a positive real number. By the Archimedean principle, there is a natural number <m> n_{ \epsilon } \in \N </m> so that <m> \epsilon \cdot n_{ \epsilon } \gt 1 </m>. For all indices <m> n \geq n_{ \epsilon } </m>, we observe that
+        
+        <md>
+          d \of{ x_{ n } , 0 } = \abs{ \frac{ 1 }{ n } - 0 } = \frac{ 1 }{ \abs{ n } } = \frac{ 1 }{ n } \leq \frac{ 1 }{ n_{ \epsilon } } \lt \epsilon
+        </md>.
+      </p>
+      
+      <p>
+        In summary, we have shown that for all positive real numbers <m> \epsilon \gt 0 </m>, there is an index <m> n_{ \epsilon } \in \N </m> so that <m> d \of{ x_{ n } , 0 } \lt \epsilon </m> for all indices <m> n \geq n_{ \epsilon } </m>. Thus <m> \of{ x_{ n } }_{ n = 1 }^{ \infty } </m> converges to <m> 0 </m>.
+      </p>
+      
+      <p>
+        Note that, in this example, the data of the sequence, the limiting value, the ground set, and the metric are necessary for convergence. By altering any one of these, we may invalidate the convergence we just proved. For example, if we consider <m> \of{ x_{ n } }_{ n = 1 }^{ \infty } </m> as a sequence in the metric subspace <m> \opint{ 0 }{ \infty } </m> of the real line <m> \R </m> consisting of only positive real numbers, then the sequence diverges, since it does not converge in the Euclidean metric to a positive real number.
+      </p>
+      
+      <p>
+        Similarly, if we change the metric, then the sequence <m> \of{ x_{ n } }_{ n = 1 }^{ \infty } </m> may not converge. We have just proven that this sequence is convergent in the Euclidean metric <m> d </m> by finding a point <m> 0 \in \R </m> to which it converges, but it is divergent in the discrete metric <m> \delta_{ \R } </m>. All this is to say that all of the data of a sequence, a metric space, and a purported limiting value are all necessary for claims of convergence or divergence.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    Ideally, we would like <q> the <term> limit </term> </q> of a convergent sequence in a metric space, which is <q> the point </q> to which that sequence converges, to be unique with this property. That is, if a sequence in a metric space converges to a point, then we would like this point to be the only such point to which it converges, which a priori need not be the case. Thankfully, the limits of convergent sequences in metric spaces are indeed unique.
+  </p>
+  
+  <proposition xml:id="proposition-uniqueness-of-sequential-limits-in-a-metric-space">
+    <title>
+      Uniqueness of sequential limits in a metric space
+    </title>
+    
+    <statement>
+      <p>
+        Convergent sequences of points in metric spaces converge to unique points.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of points <m> x_{ n } \in X </m> in a metric space <m> \of{ X , \rho } </m>, and suppose that <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges to two points <m> x , y \in X </m>. We will show that <m> x = y </m>.
+      </p>
+      
+      <p>
+        To that end, let <m> \epsilon </m> be a positive real number, and note that <m> \frac{ \epsilon }{ 2 } </m> is a positive real number. There are thus natural numbers <m> m_{ \frac{ \epsilon }{ 2 } } , n_{ \frac{ \epsilon }{ 2 } } \in \N </m> so that <m> \rho \of{ x_{ n } , x } \lt \frac{ \epsilon }{ 2 } </m> for all indices <m> n \geq m_{ \frac{ \epsilon }{ 2 } } </m> and <m> \rho \of{ x_{ n } , y } \lt \frac{ \epsilon }{ 2 } </m> for all indices <m> n \geq n_{ \frac{ \epsilon }{ 2 } } </m>.
+      </p>
+      
+      <p>
+        Let <m> p_{ \epsilon } = \max \of{ m_{ \frac{ \epsilon }{ 2 } } , n_{ \frac{ \epsilon }{ 2 } } } </m>, and note that <m> p_{ \epsilon } \geq m_{ \frac{ \epsilon }{ 2 } } </m> and <m> p_{ \epsilon } \geq n_{ \frac{ \epsilon }{ 2 } } </m>. We conclude that
+        
+        <md>
+          \rho \of{ x , y } \leq \rho \of{ x , x_{ p_{ \epsilon } } } + \rho \of{ x_{ p_{ \epsilon } } , y } = \rho \of{ x_{ p_{ \epsilon } } , x } + \rho \of{ x_{ p_{ \epsilon } } , y } \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+        </md>.
+        
+        In summary, we have shown that <m> \rho \of{ x , y } \lt \epsilon </m> for all positive real numbers <m> \epsilon \gt 0 </m>. Since <m> \rho \of{ x , y } \geq 0 </m> by <xref ref="lemma-metrics-are-non-negative"/>, we conclude that <m> \rho \of{ x , y } = 0 </m> and hence <m> x = y </m>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    So if a sequence in a metric space converges to a point, then that point is unique with this property, and is called the limit of the sequence. Many texts in analysis place limits of both sequences and maps (we will define this shortly) in the spotlight; limits are certainly the most important analytical concept introduced in this text. However, we have tried to emphasize the more abstract notion of convergence over that of a limit. We have just proven that the two notions are equivalent in a metric space, but in the next chapter we will explore an analytical setting in which convergent sequences need not converge to a unique limit.
+  </p>
+  
+  <definition xml:id="definition-sequential-limit">
+    <title>
+      Sequential limit
+    </title>
+    
+    <idx>
+      limit
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \lim_{ n \to \infty }{ x_{ n } } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the limit of <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        The unique point <m> x \in X </m> to which a convergent sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> x_{ n } \in X </m> in a metric space <m> \of{ X , \rho } </m> converges is called the <term> limit </term> of said sequence, and it is denoted
+        
+        <md>
+          \lim_{ n \to \infty }{ x_{ n } } = x
+        </md>.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="example-sequential-limits">
+    <title>
+      Sequential limits
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> x \in X </m> be a point in a metric space <m> \of{ X , \rho } </m>, and consider the constant sequence <m> \of{ x_{ n } }_{ n = 1 }^{ \infty } </m> of points defined by the formula <m> x_{ n } = x </m>. For all positive real numbers <m> \epsilon \gt 0 </m> and all indices <m> n \geq 0 </m>, we observe that
+        
+        <md>
+          \rho \of{ x_{ n } , x } = \rho \of{ x , x } = 0 \lt \epsilon
+        </md>.
+        
+        Thus <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } = \of{ x }_{ n = 0 }^{ \infty } </m> converges to <m> x </m>; that is,
+        
+        <md>
+          \lim_{ n \to \infty }{ x_{ n } } = \lim_{ n \to \infty }{ x } = x
+        </md>.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    Note that the notation introduced in the above definition is somewhat ambiguous; nowhere does it specify with respect to which metric a sequence converges or in which ground set the values of the sequence are considered to lie. We will try to avoid these ambiguities, but (at least in this text) both the ground set and the metric should always be clear from context. If the expression to the right of the limit operator is a real or complex number, then it's a safe bet to assume that convergence is in the standard Euclidean metric <m> d </m> on the real numbers <m> \R </m> or complex numbers <m> \C </m>, respectively. Similarly, if the expression to the right of the limit operator is a real or complex coordinate vector, then you should assume that we are working in real or complex coordinate space, respectively, taken with the Euclidean metric. We will properly investigate Euclidean convergence in the section to come.
+  </p>
+  
+  <p>
+    We next establish a necessary and sufficient condition for sequence convergence in any metric space; that the distances between the points of the sequence and the limiting value converge to zero in the real line. The proof of the following proposition follows directly from the definitions of convergence and limit.
+  </p>
+  
+  <proposition xml:id="proposition-sequential-convergence">
+    <title>
+      Sequential convergence
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of points <m> x_{ n } \in X </m> in a metric space <m> \of{ X , \rho } </m>. Then for any point <m> x \in X </m>,
+        
+        <md>
+          \lim_{ n \to \infty }{ x_{ n } } = x
+        </md>
+        
+        if and only if
+        
+        <md>
+          \lim_{ n \to \infty }{ \rho \of{ x_{ n } , x } } = 0
+        </md>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        We observe that
+        
+        <md>
+          d \of{ \rho \of{ x_{ n } , x } , 0 } = \abs{ \rho \of{ x_{ n } , x } - 0 } = \abs{ \rho \of{ x_{ n } , x } } = \rho \of{ x_{ n } , x }
+        </md>
+        
+        for all indices <m> n \in \N </m>. First suppose that
+        
+        <md>
+          \lim_{ n \to \infty }{ x_{ n } } = x
+        </md>,
+        
+        and let <m> \epsilon \gt 0 </m> be a positive real number. Then there is a natural number <m> n_{ \epsilon } \in \N </m> so that <m> \rho \of{ x_{ n } , x } \lt \epsilon </m> for all indices <m> n \geq n_{ \epsilon } </m>. In particular,
+        
+        <md>
+          d \of{ \rho \of{ x_{ n } , x } , 0 } = \rho \of{ x_{ n } , x } \lt \epsilon
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>, and so
+        
+        <md>
+          \lim_{ n \to \infty }{ \rho \of{ x_{ n } , x } } = 0
+        </md>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that
+        
+        <md>
+          \lim_{ n \to \infty }{ \rho \of{ x_{ n } , x } } = 0
+        </md>,
+        
+        and let <m> \epsilon \gt 0 </m> be a positive real number. Then there is a natural number <m> n_{ \epsilon } \in \N </m> so that <m> d \of{ \rho \of{ x_{ n } , x } , 0 } \lt \epsilon </m> for all indices <m> n \geq n_{ \epsilon } </m>. In particular,
+        
+        <md>
+          \rho \of{ x_{ n } , x } = d \of{ \rho \of{ x_{ n } , x } , 0 } \lt \epsilon
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>, and so
+        
+        <md>
+          \lim_{ n \to \infty }{ x_{ n } } = x
+        </md>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    The implications of the above result are that <alert> in order to understand sequential convergence and divergence in any metric space, it suffices to understand the convergence and divergence of sequences of real numbers in the Euclidean metric </alert>. In the next section, we will examine the properties of convergence and divergence in the Euclidean metric, and use the standard ordering on the real numbers to enrich our understanding of limiting behavior in the real numbers.
+  </p>
+  
+  <p>
+    We have just seen that the question of convergence or divergence in an arbitrary metric space can be reduced to the question of convergence or divergence of a related sequence of real numbers in the Euclidean metric. We will begin our study of these Euclidean limits by generalizing to the metric induced on real coordinate space by an arbitrary <m> p </m>-norm. In real coordinate space, sequential convergence in the Euclidean metric is equivalent to sequential convergence in any of the metrics induced on real coordinate space by a <m> p </m>-norm. In fact, something much stronger and much more useful is true; we can reduce the question of convergence or divergence of any sequence of complex coordinate vectors in such a metric to the question of the convergence or divergence of the component sequences in the Euclidean metric on the real numbers.
+  </p>
+  
+  <theorem xml:id="theorem-sequential-convergence-in-the-p-norm">
+    <title>
+      Sequential convergence in the <m> p </m>-norm
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> m \in \N </m> be a natural number, and consider a sequence <m> \of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } </m> of vectors <m> \vect{ x }_{ n } = \of{ x_{ j , n } }_{ j = 1 }^{ m } \in \R^{ m } </m>.
+      </p>
+      
+      <p>
+        For any vector <m> \vect{ x } = \of{ x_{ j } }_{ j = 1 }^{ m } </m> and real number <m> 1 \leq p \lt \infty </m>, the sequence <m> \of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> \vect{ x } </m> in the <m> p </m>-metric <m> d_{ p } </m> on <m> \R^{ m } </m> if and only if for all indices <m> 1 \leq j \leq m </m>, the sequence <m> \of{ x_{ j , n } }_{ n = 0 }^{ \infty } </m> converges to <m> x_{ j } </m> in the Euclidean metric <m> d </m> on <m> \R </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        First suppose that <m> \of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> \vect{ x } </m> in the <m> p </m>-metric <m> d_{ p } </m> on <m> \R^{ m } </m>. Let <m> 1 \leq j \leq m </m>, and consider a positive real number <m> \epsilon \gt 0 </m>. Then there is a natural number <m> n_{ \epsilon } \in \N </m> so that
+        
+        <md>
+          d_{ p } \of{ \vect{ x }_{ n } , \vect{ x } } \lt \epsilon
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>. We observe that
+        
+        <md>
+          <mrow>
+            d \of{ x_{ j , n } , x_{ j } }^{ p } \amp = \abs{ x_{ j , n } - x_{ j } }^{ p } \leq \sum_{ k = 1 }^{ m }{ \abs{ x_{ k , n } - x_{ k } }^{ p } }
+          </mrow>
+          
+          <mrow>
+            \amp = \norm{ \vect{ x }_{ n } - \vect{ x } }_{ p }^{ p } = d_{ p } \of{ \vect{ x }_{ n } , \vect{ x } }^{ p } \lt \epsilon^{ p }
+          </mrow>
+        </md>,
+        
+        so that <m> d \of{ x_{ j , n } , x_{ j } } \lt \epsilon </m> for all indices <m> n \geq n_{ \epsilon } </m>. In particular, <m> \of{ x_{ j , n } }_{ n = 0 }^{ \infty } </m> converges to <m> x_{ j } </m> in the Euclidean metric <m> d </m> on <m> \R </m>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that for all indices <m> 1 \leq j \leq m </m>, <m> \of{ x_{ j , n } }_{ n = 0 }^{ \infty } </m> converges to <m> x_{ j } </m> in the Euclidean metric <m> d </m> on <m> \R </m>. Let <m> \epsilon \gt 0 </m> be a positive real number. Then <m> \frac{ \epsilon }{ m^{ \frac{ 1 }{ p } } } \gt 0 </m> is a positive real number, and so for each index <m> 1 \leq j \leq m </m> there is a natural number <m> n_{ j , \epsilon } </m> so that
+        
+        <md>
+          d \of{ x_{ j , n } , x_{ j } } \lt \frac{ \epsilon }{ m^{ \frac{ 1 }{ p } } }
+        </md>
+        
+        for all indices <m> n \geq n_{ j , \epsilon } </m>. Let <m> n_{ \epsilon } = \max_{ 1 \leq j \leq m }{ n_{ j , \epsilon } } </m>, and note that
+        
+        <md>
+          <mrow>
+            d_{ p } \of{ \vect{ x }_{ n } , \vect{ x } }^{ p } = \sum_{ j = 1 }^{ m }{ \abs{ x_{ j , n } - x_{ j } }^{ p } } = \sum_{ j = 1 }^{ m }{ d \of{ x_{ j , n } , x_{ j } }^{ p } }
+          </mrow>
+          
+          <mrow>
+            \lt \sum_{ j = 1 }^{ m }{ \of{ \frac{ \epsilon }{ m^{ \frac{ 1 }{ p } } } }^{ p } } = \sum_{ j = 1 }^{ m }{ \frac{ \epsilon^{ p } }{ m } } = \epsilon^{ p }
+          </mrow>
+        </md>
+        
+        and therefore <m> d_{ p } \of{ \vect{ x }_{ n } , \vect{ x } } \lt \epsilon </m> for all indices <m> n \geq n_{ \epsilon } </m>. We conclude that <m> \of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> \vect{ x } </m> in the <m> p </m>-metric <m> d_{ p } </m> on <m> \R^{ n } </m>.
+      </p>
+    </proof>
+  </theorem>
+  
+  <p>
+    <xref ref="theorem-sequential-convergence-in-the-p-norm"/> implies that, in order to know everything about sequential convergence and divergence in the metric induced on real coordinate space by a <m> p </m>-norm, it suffices to know about the convergence and divergence of sequences of real numbers in the Euclidean metric. Moreover, all of the <m> p </m>-metrics induced on real coordinate space by the <m> p </m>-norms are equivalent with respect to the question of sequential convergence and divergence; that is, the convergence of a sequence of real coordinate vectors converges in the metric induced on real coordinate space by a <m> p </m>-norm does not depend on <m> p </m>.
+  </p>
+
+  <conclusion>
+    <p>
+      The reduction of problems of sequential convergence in a metric space to that of convergence of one or more sequences of real numbers in the Euclidean metric will be a common theme in this chapter. In some respect, this reduction is possible because
+      
+      <ol>
+        <li>
+          <p>
+            given a point, a metric necessarily associates the other points of a space with the positive real numbers <m> \opint{ 0 }{ \infty } </m>; and
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            convergence in the Euclidean metric <m> d </m> can be defined solely in terms of the standard order <m> \leq </m> on the real line <m> \R </m>.
+          </p>
+        </li>
+      </ol>
+      
+      In the following section, we will discuss sequential convergence and divergence in the Euclidean metric on the real numbers in greater detail.
+    </p>
+  </conclusion>
+</subsection>

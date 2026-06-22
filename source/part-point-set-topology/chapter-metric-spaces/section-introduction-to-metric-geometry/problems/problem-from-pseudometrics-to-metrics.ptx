@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="exercise-from-pseudometrics-to-metrics" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    From pseudometrics to metrics
+  </title>
+  
+  <idx>
+    pseudometric
+  </idx>
+  
+  <idx>
+    pseudometric space
+  </idx>
+  
+  <introduction>
+    <p>
+      A real-valued function <m> \rho \colon X^{ 2 } \to \R </m> on the Cartesian square <m> X^{ 2 } </m> of a set <m> X </m>, which is called the <term> ground set </term> and whose elements are called <term> points </term>, is a <term> pseudometric </term> on <m> X </m> if it has the following properties:
+      
+      <ol>
+        <li>
+          <title>
+            Identity
+          </title>
+          
+          <p>
+            <m> \rho \of{ x , x } = 0 </m> for any point <m> x \in X </m>.
+          </p>
+        </li>
+        
+        <li>
+          <title>
+            Symmetry
+          </title>
+          
+          <p>
+            <m> \rho \of{ x_{ 1 } , x_{ 2 } } = \rho \of{ x_{ 2 } , x_{ 1 } } </m> for any points <m> x_{ 1 } , x_{ 2 } \in X </m>.
+          </p>
+        </li>
+        
+        <li>
+          <title>
+            Triangle inequality
+          </title>
+          
+          <p>
+            <m> \rho \of{ x_{ 1 } , x_{ 3 } } \leq \rho \of{ x_{ 1 } , x_{ 2 } } + \rho \of{ x_{ 2 } , x_{ 3 } } </m> for any points <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in X </m>.
+          </p>
+        </li>
+      </ol>
+      
+      In this case, the ordered pair <m> \of{ X , \rho } </m> is called a <term> pseudometric space </term>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Let <m> \rho </m> be a pseudometric on a set <m> X </m>, and consider the binary relation <m> \equiv_{ \rho } </m> on <m> X </m> defined so that <m> x_{ 1 } \equiv_{ \rho } x_{ 2 } </m> if and only if <m> \rho \of{ x_{ 1 } , x_{ 2 } } = 0 </m>. Prove that <m> \equiv_{ \rho } </m> is an equivalence relation on <m> X </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        asdf
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that a pseudometric <m> \rho </m> descends to a well-defined metric <m> \overline{ \rho } </m> on the quotient set <m> X / { \equiv_{ \rho } } </m> defined by the formula
+        
+        <md>
+          \overline{ \rho } \of{ \class{ x_{ 1 } }_{ \equiv_{ \rho } } , \class{ x_{ 2 } }_{ \equiv_{ \rho } } } = \rho \of{ x_{ 1 } , x_{ 2 } }
+        </md>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        asdf
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+</exercise>

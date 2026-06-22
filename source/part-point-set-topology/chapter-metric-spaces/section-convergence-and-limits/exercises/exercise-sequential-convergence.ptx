@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-sequential-convergence" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Sequential convergence
+  </title>
+  
+  <introduction>
+    <p>
+      Determine whether the following sequences of real numbers converge or diverge in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If the given sequence converges, find the limit.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Consider the sequence <m> \of{ a_{ n } }_{ n = 1 }^{ \infty } </m> of real numbers <m> a_{ n } \in \R </m> defined by the formula
+        
+        <md>
+          a_{ n } = \frac{ \cos \of{ n \pi } }{ n }
+        </md>.
+        
+        Determine whether the sequence <m> \of{ a_{ n } }_{ n = 1 }^{ \infty } </m> converges or diverges in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges, find the limit.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        asdf
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Consider the sequence <m> \of{ b_{ n } }_{ n = 0 }^{ \infty } </m> of real numbers <m> b_{ n } \in \R </m> defined by the formula
+        
+        <md>
+          b_{ n } = n \cos \of{ n \pi }
+        </md>.
+        
+        Determine whether the sequence <m> \of{ b_{ n } }_{ n = 0 }^{ \infty } </m> converges or diverges in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges, find the limit.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        asdf
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Consider the sequence <m> \of{ c_{ n } }_{ n = 0 }^{ \infty } </m> of real numbers <m> c_{ n } \in \R </m> defined by the formula
+        
+        <md>
+          c_{ n } = n \sin \of{ n \pi }
+        </md>.
+        
+        Determine whether the sequence <m> \of{ c_{ n } }_{ n = 0 }^{ \infty } </m> converges or diverges in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges, find the limit.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        asdf
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Consider the sequence <m> \of{ d_{ n } }_{ n = 0 }^{ \infty } </m> of real numbers <m> d_{ n } \in \R </m> defined by the formula
+        
+        <md>
+          d_{ n } = \frac{ 2 }{ n + 1 }
+        </md>.
+        
+        Determine whether the sequence <m> \of{ d_{ n } }_{ n = 0 }^{ \infty } </m> converges or diverges in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges, find the limit.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        asdf
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Consider the sequence <m> \of{ e_{ n } }_{ n = 0 }^{ \infty } </m> of real numbers <m> e_{ n } \in \R </m> defined by the formula
+        
+        <md>
+          e_{ n } = \frac{ 2 n }{ n + 1 }
+        </md>.
+        
+        Determine whether the sequence <m> \of{ e_{ n } }_{ n = 0 }^{ \infty } </m> converges or diverges in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges, find the limit.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        asdf
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Consider the sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> of real numbers <m> f_{ n } \in \R </m> defined by the formula
+        
+        <md>
+          f_{ n } = \sqrt{ \frac{ 2 n }{ n + 1 } }
+        </md>.
+        
+        Determine whether the sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges or diverges in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges, find the limit.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        asdf
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Consider the sequence <m> \of{ g_{ n } }_{ n = 0 }^{ \infty } </m> of real numbers <m> g_{ n } \in \R </m> defined by the formula
+        
+        <md>
+          g_{ n } = \frac{ 3^{ n } }{ n! }
+        </md>.
+        
+        Determine whether the sequence <m> \of{ g_{ n } }_{ n = 0 }^{ \infty } </m> converges or diverges in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges, find the limit.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        asdf
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </exercise>
+  
+  <conclusion>
+    <p>
+      
+    </p>
+  </conclusion>
+</exercisegroup>

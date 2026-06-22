@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-norm-equivalence" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Norm equivalence
+  </title>
+  
+  <idx>
+    norm equivalence
+  </idx>
+  
+  <statement>
+    <p>
+      Two norms <m> \norm{ \oparg }_{ 1 } , \norm{ \oparg }_{ 2 } \colon V \to \R </m> on a real or complex vector space <m> V </m> are called <term> equivalent </term> if there are positive real numbers <m> A , B \in \opint{ 0 }{ \infty } </m> so that
+      
+      <md>
+      A \norm{ \vect{ v } }_{ 2 } \leq \norm{ \vect{ v } }_{ 1 } \leq B \norm{ \vect{ v } }_{ 2 }
+      </md>
+      
+      for all vectors <m> \vect{ v } \in V </m>. Prove that norm equivalence is an equivalence relation on the set of norms on <m> V </m>.
+    </p>
+  </statement>
+  
+  <solution>
+    <p>
+      asdf
+    </p>
+  </solution>
+</exercise>
