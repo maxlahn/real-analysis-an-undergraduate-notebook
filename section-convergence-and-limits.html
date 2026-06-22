@@ -57,14 +57,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.2';
+eBookConfig.runestone_version = '8.1.4';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.d0616b3d72ab3b06.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.af9055d29ed602c4.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<script src="_static/prefix-runtime.d1480f934b51d4ec.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.fa61545fa3ffbf2f.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -692,14 +692,17 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#subsection-constructing-new-metrics" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Constructing New Metrics</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#subsection-normed-vector-spaces" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Normed Vector Spaces</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#exercises-introduction-to-metric-geometry" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#reading-questions-introduction-to-metric-geometry" class="internal"><span class="codenumber">3.1.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#problems-introduction-to-metric-geometry" class="internal"><span class="codenumber">3.1.5</span> <span class="title">Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="section-convergence-and-limits.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Convergence and Limits</span></a></div>
 <ul class="structural toc-item-list active">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-limits.html#exercises-convergence-and-limits" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-limits.html#reading-questions-convergence-and-limits" class="internal"><span class="codenumber">3.2</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-convergence-and-limits.html#subsection-sequential-convergence" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Sequential Convergence</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-convergence-and-limits.html#subsection-pointwise-and-uniform-convergence" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Pointwise and Uniform Convergence</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-convergence-and-limits.html#subsection-map-convergence" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Map Convergence</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-limits.html#exercises-convergence-and-limits" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-limits.html#problems-convergence-and-limits" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -894,32 +897,817 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Convergence and Limits</span>
 </h2>
 <section class="introduction" id="section-convergence-and-limits-2">
-<div class="para" id="section-convergence-and-limits-2-1">Text before the first subsection.<div class="autopermalink" data-description="Paragraph"><a href="#section-convergence-and-limits-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="section-convergence-and-limits-2-1">In this section, we introduce the most fundamental notion of all of mathematical analysis: that of <dfn class="terminology">convergence</dfn>. Convergence is a formalization of limiting behavior and closeness in metric spaces and, as we will see in the next chapter, other related analytical settings. In this section we will be concerned with convergence in the setting of abstract metric spaces, which can be interpreted as a rigorous formalization of the informal phrase “eventually close.” In the following section, we will gain a more detailed understanding of limiting behavior in less general example of the Euclidean spaces. Note also that in this chapter, we will be concerned only with the convergence of sequences in metric spaces and maps between metric spaces, but in the next chapter, we will make generalizations which in some ways subsume the discussion in this section.<div class="autopermalink" data-description="Paragraph"><a href="#section-convergence-and-limits-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="section-convergence-and-limits-3">
-<div class="para" id="section-convergence-and-limits-3-1">Text after the last subsection.<div class="autopermalink" data-description="Paragraph"><a href="#section-convergence-and-limits-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="subsection" id="subsection-sequential-convergence">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequential Convergence</span>
+</h3>
+<section class="introduction" id="subsection-sequential-convergence-2">
+<div class="para" id="subsection-sequential-convergence-2-1">First, we will investigate the limiting behavior of a sequence in a metric space. Informally, a sequence in a metric space <dfn class="terminology">converges</dfn> to a point if the values of the sequence eventually grows arbitrarily close to that point; that is, a sequence converges to a point if the values of the sequence are close to that point for large indices. Such a sequence is called <dfn class="terminology">convergent</dfn>, and the point to which it converges (which we will see to be uniquely determined by this property) is called its <dfn class="terminology">limit</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-sequential-convergence-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="definition definition-like" id="definition-sequential-convergence-divergence"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequential convergence/divergence.</span>
+</h4>
+<div class="para logical" id="definition-sequential-convergence-divergence-6-1">
+<div class="para">A sequence <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> of points <span class="process-math">\(x_{ n } \in X \)</span> in a metric space <span class="process-math">\(\of{ X , \rho } \)</span> <dfn class="terminology">converges</dfn> to a point <span class="process-math">\(x \in X \)</span> if for all positive real numbers <span class="process-math">\(\epsilon \gt 0 \text{,}\)</span> there is a natural number <span class="process-math">\(n_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math" id="definition-sequential-convergence-divergence-6-1-8">
+\begin{equation*}
+\rho \of{ x_{ n } , x } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-sequential-convergence-divergence-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="definition-sequential-convergence-divergence-6-2">A sequence of points in a metric space is called <dfn class="terminology">convergent</dfn> if it converges to a point and <dfn class="terminology">divergent</dfn> if it does not converge to any point.<div class="autopermalink" data-description="Paragraph"><a href="#definition-sequential-convergence-divergence-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.2.1: Sequential convergence/divergence"><a href="#definition-sequential-convergence-divergence" title="Copy heading and permalink for Definition 3.2.1: Sequential convergence/divergence" aria-label="Copy heading and permalink for Definition 3.2.1: Sequential convergence/divergence">🔗</a></div>
+</article>
+<div class="para" id="subsection-sequential-convergence-4">So a sequence converges to a point in a metric space if the values of the sequence can be made arbitrarily close to that point solely by choosing large enough indices, and the sequence diverges if this cannot be done.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-sequential-convergence-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-sequential-convergence-divergence" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequential convergence/divergence.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-sequential-convergence-divergence-2-1">
+<div class="para">Consider the sequence <span class="process-math">\(\of{ x_{ n } }_{ n = 1 }^{ \infty } \)</span> of real numbers defined by the formula</div>
+<div class="displaymath process-math" id="example-sequential-convergence-divergence-2-1-2">
+\begin{equation*}
+x_{ n } = \frac{ 1 }{ n }\text{.}
+\end{equation*}
+</div>
+<div class="para">We will show that <span class="process-math">\(\of{ x_{ n } }_{ n = 1 }^{ \infty } \)</span> converges to <span class="process-math">\(0 \)</span> in the Euclidean metric <span class="process-math">\(d \)</span> on <span class="process-math">\(\R \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sequential-convergence-divergence-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="example-sequential-convergence-divergence-2-2">
+<div class="para">Indeed, let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. By the Archimedean principle, there is a natural number <span class="process-math">\(n_{ \epsilon } \in \N \)</span> so that <span class="process-math">\(\epsilon \cdot n_{ \epsilon } \gt 1 \text{.}\)</span> For all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{,}\)</span> we observe that</div>
+<div class="displaymath process-math" id="example-sequential-convergence-divergence-2-2-5">
+\begin{equation*}
+d \of{ x_{ n } , 0 } = \abs{ \frac{ 1 }{ n } - 0 } = \frac{ 1 }{ \abs{ n } } = \frac{ 1 }{ n } \leq \frac{ 1 }{ n_{ \epsilon } } \lt \epsilon\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sequential-convergence-divergence-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="example-sequential-convergence-divergence-2-3">In summary, we have shown that for all positive real numbers <span class="process-math">\(\epsilon \gt 0 \text{,}\)</span> there is an index <span class="process-math">\(n_{ \epsilon } \in \N \)</span> so that <span class="process-math">\(d \of{ x_{ n } , 0 } \lt \epsilon \)</span> for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> Thus <span class="process-math">\(\of{ x_{ n } }_{ n = 1 }^{ \infty } \)</span> converges to <span class="process-math">\(0 \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-sequential-convergence-divergence-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="example-sequential-convergence-divergence-2-4">Note that, in this example, the data of the sequence, the limiting value, the ground set, and the metric are necessary for convergence. By altering any one of these, we may invalidate the convergence we just proved. For example, if we consider <span class="process-math">\(\of{ x_{ n } }_{ n = 1 }^{ \infty } \)</span> as a sequence in the metric subspace <span class="process-math">\(\opint{ 0 }{ \infty } \)</span> of the real line <span class="process-math">\(\R \)</span> consisting of only positive real numbers, then the sequence diverges, since it does not converge in the Euclidean metric to a positive real number.<div class="autopermalink" data-description="Paragraph"><a href="#example-sequential-convergence-divergence-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="example-sequential-convergence-divergence-2-5">Similarly, if we change the metric, then the sequence <span class="process-math">\(\of{ x_{ n } }_{ n = 1 }^{ \infty } \)</span> may not converge. We have just proven that this sequence is convergent in the Euclidean metric <span class="process-math">\(d \)</span> by finding a point <span class="process-math">\(0 \in \R \)</span> to which it converges, but it is divergent in the discrete metric <span class="process-math">\(\delta_{ \R } \text{.}\)</span> All this is to say that all of the data of a sequence, a metric space, and a purported limiting value are all necessary for claims of convergence or divergence.<div class="autopermalink" data-description="Paragraph"><a href="#example-sequential-convergence-divergence-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.2.2: Sequential convergence/divergence"><a href="#example-sequential-convergence-divergence" title="Copy heading and permalink for Example 3.2.2: Sequential convergence/divergence" aria-label="Copy heading and permalink for Example 3.2.2: Sequential convergence/divergence">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-sequential-convergence-6">Ideally, we would like “the <dfn class="terminology">limit</dfn>” of a convergent sequence in a metric space, which is “the point” to which that sequence converges, to be unique with this property. That is, if a sequence in a metric space converges to a point, then we would like this point to be the only such point to which it converges, which a priori need not be the case. Thankfully, the limits of convergent sequences in metric spaces are indeed unique.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-sequential-convergence-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-uniqueness-of-sequential-limits-in-a-metric-space"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uniqueness of sequential limits in a metric space.</span>
+</h4>
+<div class="para" id="proposition-uniqueness-of-sequential-limits-in-a-metric-space-2-1">Convergent sequences of points in metric spaces converge to unique points.<div class="autopermalink" data-description="Paragraph"><a href="#proposition-uniqueness-of-sequential-limits-in-a-metric-space-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 3.2.3: Uniqueness of sequential limits in a metric space"><a href="#proposition-uniqueness-of-sequential-limits-in-a-metric-space" title="Copy heading and permalink for Proposition 3.2.3: Uniqueness of sequential limits in a metric space" aria-label="Copy heading and permalink for Proposition 3.2.3: Uniqueness of sequential limits in a metric space">🔗</a></div>
+</article>
+<details id="proposition-uniqueness-of-sequential-limits-in-a-metric-space-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="proposition-uniqueness-of-sequential-limits-in-a-metric-space-3-1">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of points <span class="process-math">\(x_{ n } \in X \)</span> in a metric space <span class="process-math">\(\of{ X , \rho } \text{,}\)</span> and suppose that <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> converges to two points <span class="process-math">\(x , y \in X \text{.}\)</span> We will show that <span class="process-math">\(x = y \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#proposition-uniqueness-of-sequential-limits-in-a-metric-space-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="proposition-uniqueness-of-sequential-limits-in-a-metric-space-3-2">To that end, let <span class="process-math">\(\epsilon \)</span> be a positive real number, and note that <span class="process-math">\(\frac{ \epsilon }{ 2 } \)</span> is a positive real number. There are thus natural numbers <span class="process-math">\(m_{ \frac{ \epsilon }{ 2 } } , n_{ \frac{ \epsilon }{ 2 } } \in \N \)</span> so that <span class="process-math">\(\rho \of{ x_{ n } , x } \lt \frac{ \epsilon }{ 2 } \)</span> for all indices <span class="process-math">\(n \geq m_{ \frac{ \epsilon }{ 2 } } \)</span> and <span class="process-math">\(\rho \of{ x_{ n } , y } \lt \frac{ \epsilon }{ 2 } \)</span> for all indices <span class="process-math">\(n \geq n_{ \frac{ \epsilon }{ 2 } } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#proposition-uniqueness-of-sequential-limits-in-a-metric-space-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-uniqueness-of-sequential-limits-in-a-metric-space-3-3">
+<div class="para">Let <span class="process-math">\(p_{ \epsilon } = \max \of{ m_{ \frac{ \epsilon }{ 2 } } , n_{ \frac{ \epsilon }{ 2 } } } \text{,}\)</span> and note that <span class="process-math">\(p_{ \epsilon } \geq m_{ \frac{ \epsilon }{ 2 } } \)</span> and <span class="process-math">\(p_{ \epsilon } \geq n_{ \frac{ \epsilon }{ 2 } } \text{.}\)</span> We conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-metrics-are-non-negative.html" id="proposition-uniqueness-of-sequential-limits-in-a-metric-space-3-3-4">
+\begin{equation*}
+\rho \of{ x , y } \leq \rho \of{ x , x_{ p_{ \epsilon } } } + \rho \of{ x_{ p_{ \epsilon } } , y } = \rho \of{ x_{ p_{ \epsilon } } , x } + \rho \of{ x_{ p_{ \epsilon } } , y } \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon\text{.}
+\end{equation*}
+</div>
+<div class="para">In summary, we have shown that <span class="process-math">\(\rho \of{ x , y } \lt \epsilon \)</span> for all positive real numbers <span class="process-math">\(\epsilon \gt 0 \text{.}\)</span> Since <span class="process-math">\(\rho \of{ x , y } \geq 0 \)</span> by <a href="section-introduction-to-metric-geometry.html#lemma-metrics-are-non-negative" class="xref" data-knowl="./knowl/xref/lemma-metrics-are-non-negative.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 3.1.4: Metrics are non-negative">Lemma 3.1.4 Metrics are non-negative</a>, we conclude that <span class="process-math">\(\rho \of{ x , y } = 0 \)</span> and hence <span class="process-math">\(x = y \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-uniqueness-of-sequential-limits-in-a-metric-space-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.2.3.1"><a href="#proposition-uniqueness-of-sequential-limits-in-a-metric-space-3" title="Copy heading and permalink for Proof 3.2.3.1" aria-label="Copy heading and permalink for Proof 3.2.3.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-sequential-convergence-8">So if a sequence in a metric space converges to a point, then that point is unique with this property, and is called the limit of the sequence. Many texts in analysis place limits of both sequences and maps (we will define this shortly) in the spotlight; limits are certainly the most important analytical concept introduced in this text. However, we have tried to emphasize the more abstract notion of convergence over that of a limit. We have just proven that the two notions are equivalent in a metric space, but in the next chapter we will explore an analytical setting in which convergent sequences need not converge to a unique limit.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-sequential-convergence-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-sequential-limit"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequential limit.</span>
+</h4>
+<div class="para logical" id="definition-sequential-limit-4-1">
+<div class="para">The unique point <span class="process-math">\(x \in X \)</span> to which a convergent sequence <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> of points <span class="process-math">\(x_{ n } \in X \)</span> in a metric space <span class="process-math">\(\of{ X , \rho } \)</span> converges is called the <dfn class="terminology">limit</dfn> of said sequence, and it is denoted</div>
+<div class="displaymath process-math" id="definition-sequential-limit-4-1-6">
+\begin{equation*}
+\lim_{ n \to \infty }{ x_{ n } } = x\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-sequential-limit-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.2.4: Sequential limit"><a href="#definition-sequential-limit" title="Copy heading and permalink for Definition 3.2.4: Sequential limit" aria-label="Copy heading and permalink for Definition 3.2.4: Sequential limit">🔗</a></div>
+</article>
+<details id="example-sequential-limits" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequential limits.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-sequential-limits-2-1">
+<div class="para">Let <span class="process-math">\(x \in X \)</span> be a point in a metric space <span class="process-math">\(\of{ X , \rho } \text{,}\)</span> and consider the constant sequence <span class="process-math">\(\of{ x_{ n } }_{ n = 1 }^{ \infty } \)</span> of points defined by the formula <span class="process-math">\(x_{ n } = x \text{.}\)</span> For all positive real numbers <span class="process-math">\(\epsilon \gt 0 \)</span> and all indices <span class="process-math">\(n \geq 0 \text{,}\)</span> we observe that</div>
+<div class="displaymath process-math" id="example-sequential-limits-2-1-7">
+\begin{equation*}
+\rho \of{ x_{ n } , x } = \rho \of{ x , x } = 0 \lt \epsilon\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } = \of{ x }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(x \text{;}\)</span> that is,</div>
+<div class="displaymath process-math" id="example-sequential-limits-2-1-10">
+\begin{equation*}
+\lim_{ n \to \infty }{ x_{ n } } = \lim_{ n \to \infty }{ x } = x\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sequential-limits-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.2.5: Sequential limits"><a href="#example-sequential-limits" title="Copy heading and permalink for Example 3.2.5: Sequential limits" aria-label="Copy heading and permalink for Example 3.2.5: Sequential limits">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-sequential-convergence-11">Note that the notation introduced in the above definition is somewhat ambiguous; nowhere does it specify with respect to which metric a sequence converges or in which ground set the values of the sequence are considered to lie. We will try to avoid these ambiguities, but (at least in this text) both the ground set and the metric should always be clear from context. If the expression to the right of the limit operator is a real or complex number, then it’s a safe bet to assume that convergence is in the standard Euclidean metric <span class="process-math">\(d \)</span> on the real numbers <span class="process-math">\(\R \)</span> or complex numbers <span class="process-math">\(\C \text{,}\)</span> respectively. Similarly, if the expression to the right of the limit operator is a real or complex coordinate vector, then you should assume that we are working in real or complex coordinate space, respectively, taken with the Euclidean metric. We will properly investigate Euclidean convergence in the section to come.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-sequential-convergence-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsection-sequential-convergence-12">We next establish a necessary and sufficient condition for sequence convergence in any metric space; that the distances between the points of the sequence and the limiting value converge to zero in the real line. The proof of the following proposition follows directly from the definitions of convergence and limit.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-sequential-convergence-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-sequential-convergence"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequential convergence.</span>
+</h4>
+<div class="para logical" id="proposition-sequential-convergence-2-1">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of points <span class="process-math">\(x_{ n } \in X \)</span> in a metric space <span class="process-math">\(\of{ X , \rho } \text{.}\)</span> Then for any point <span class="process-math">\(x \in X \text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="proposition-sequential-convergence-2-1-5">
+\begin{equation*}
+\lim_{ n \to \infty }{ x_{ n } } = x
+\end{equation*}
+</div>
+<div class="para">if and only if</div>
+<div class="displaymath process-math" id="proposition-sequential-convergence-2-1-6">
+\begin{equation*}
+\lim_{ n \to \infty }{ \rho \of{ x_{ n } , x } } = 0\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-sequential-convergence-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 3.2.6: Sequential convergence"><a href="#proposition-sequential-convergence" title="Copy heading and permalink for Proposition 3.2.6: Sequential convergence" aria-label="Copy heading and permalink for Proposition 3.2.6: Sequential convergence">🔗</a></div>
+</article>
+<details id="proposition-sequential-convergence-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="proposition-sequential-convergence-3-1">
+<div class="para">We observe that</div>
+<div class="displaymath process-math" id="proposition-sequential-convergence-3-1-1">
+\begin{equation*}
+d \of{ \rho \of{ x_{ n } , x } , 0 } = \abs{ \rho \of{ x_{ n } , x } - 0 } = \abs{ \rho \of{ x_{ n } , x } } = \rho \of{ x_{ n } , x }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \in \N \text{.}\)</span> First suppose that</div>
+<div class="displaymath process-math" id="proposition-sequential-convergence-3-1-3">
+\begin{equation*}
+\lim_{ n \to \infty }{ x_{ n } } = x\text{,}
+\end{equation*}
+</div>
+<div class="para">and let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Then there is a natural number <span class="process-math">\(n_{ \epsilon } \in \N \)</span> so that <span class="process-math">\(\rho \of{ x_{ n } , x } \lt \epsilon \)</span> for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> In particular,</div>
+<div class="displaymath process-math" id="proposition-sequential-convergence-3-1-8">
+\begin{equation*}
+d \of{ \rho \of{ x_{ n } , x } , 0 } = \rho \of{ x_{ n } , x } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{,}\)</span> and so</div>
+<div class="displaymath process-math" id="proposition-sequential-convergence-3-1-10">
+\begin{equation*}
+\lim_{ n \to \infty }{ \rho \of{ x_{ n } , x } } = 0\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-sequential-convergence-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-sequential-convergence-3-2">
+<div class="para">Conversely, now suppose that</div>
+<div class="displaymath process-math" id="proposition-sequential-convergence-3-2-1">
+\begin{equation*}
+\lim_{ n \to \infty }{ \rho \of{ x_{ n } , x } } = 0\text{,}
+\end{equation*}
+</div>
+<div class="para">and let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Then there is a natural number <span class="process-math">\(n_{ \epsilon } \in \N \)</span> so that <span class="process-math">\(d \of{ \rho \of{ x_{ n } , x } , 0 } \lt \epsilon \)</span> for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> In particular,</div>
+<div class="displaymath process-math" id="proposition-sequential-convergence-3-2-6">
+\begin{equation*}
+\rho \of{ x_{ n } , x } = d \of{ \rho \of{ x_{ n } , x } , 0 } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{,}\)</span> and so</div>
+<div class="displaymath process-math" id="proposition-sequential-convergence-3-2-8">
+\begin{equation*}
+\lim_{ n \to \infty }{ x_{ n } } = x\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-sequential-convergence-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.2.6.1"><a href="#proposition-sequential-convergence-3" title="Copy heading and permalink for Proof 3.2.6.1" aria-label="Copy heading and permalink for Proof 3.2.6.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-sequential-convergence-14">The implications of the above result are that <em class="alert">in order to understand sequential convergence and divergence in any metric space, it suffices to understand the convergence and divergence of sequences of real numbers in the Euclidean metric</em>. In the next section, we will examine the properties of convergence and divergence in the Euclidean metric, and use the standard ordering on the real numbers to enrich our understanding of limiting behavior in the real numbers.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-sequential-convergence-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsection-sequential-convergence-15">We have just seen that the question of convergence or divergence in an arbitrary metric space can be reduced to the question of convergence or divergence of a related sequence of real numbers in the Euclidean metric. We will begin our study of these Euclidean limits by generalizing to the metric induced on real coordinate space by an arbitrary <span class="process-math">\(p \)</span>-norm. In real coordinate space, sequential convergence in the Euclidean metric is equivalent to sequential convergence in any of the metrics induced on real coordinate space by a <span class="process-math">\(p \)</span>-norm. In fact, something much stronger and much more useful is true; we can reduce the question of convergence or divergence of any sequence of complex coordinate vectors in such a metric to the question of the convergence or divergence of the component sequences in the Euclidean metric on the real numbers.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-sequential-convergence-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="theorem-sequential-convergence-in-the-p-norm"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequential convergence in the <span class="process-math">\(p \)</span>-norm.</span>
+</h4>
+<div class="para" id="theorem-sequential-convergence-in-the-p-norm-2-1">Let <span class="process-math">\(m \in \N \)</span> be a natural number, and consider a sequence <span class="process-math">\(\of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } \)</span> of vectors <span class="process-math">\(\vect{ x }_{ n } = \of{ x_{ j , n } }_{ j = 1 }^{ m } \in \R^{ m } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-sequential-convergence-in-the-p-norm-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="theorem-sequential-convergence-in-the-p-norm-2-2">For any vector <span class="process-math">\(\vect{ x } = \of{ x_{ j } }_{ j = 1 }^{ m } \)</span> and real number <span class="process-math">\(1 \leq p \lt \infty \text{,}\)</span> the sequence <span class="process-math">\(\of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(\vect{ x } \)</span> in the <span class="process-math">\(p \)</span>-metric <span class="process-math">\(d_{ p } \)</span> on <span class="process-math">\(\R^{ m } \)</span> if and only if for all indices <span class="process-math">\(1 \leq j \leq m \text{,}\)</span> the sequence <span class="process-math">\(\of{ x_{ j , n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(x_{ j } \)</span> in the Euclidean metric <span class="process-math">\(d \)</span> on <span class="process-math">\(\R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-sequential-convergence-in-the-p-norm-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.2.7: Sequential convergence in the  p -norm"><a href="#theorem-sequential-convergence-in-the-p-norm" title="Copy heading and permalink for Theorem 3.2.7: Sequential convergence in the  p -norm" aria-label="Copy heading and permalink for Theorem 3.2.7: Sequential convergence in the  p -norm">🔗</a></div>
+</article>
+<details id="theorem-sequential-convergence-in-the-p-norm-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="theorem-sequential-convergence-in-the-p-norm-3-1">
+<div class="para">First suppose that <span class="process-math">\(\of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(\vect{ x } \)</span> in the <span class="process-math">\(p \)</span>-metric <span class="process-math">\(d_{ p } \)</span> on <span class="process-math">\(\R^{ m } \text{.}\)</span> Let <span class="process-math">\(1 \leq j \leq m \text{,}\)</span> and consider a positive real number <span class="process-math">\(\epsilon \gt 0 \text{.}\)</span> Then there is a natural number <span class="process-math">\(n_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math" id="theorem-sequential-convergence-in-the-p-norm-3-1-9">
+\begin{equation*}
+d_{ p } \of{ \vect{ x }_{ n } , \vect{ x } } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="theorem-sequential-convergence-in-the-p-norm-3-1-11">
+\begin{align*}
+d \of{ x_{ j , n } , x_{ j } }^{ p } \amp = \abs{ x_{ j , n } - x_{ j } }^{ p } \leq \sum_{ k = 1 }^{ m }{ \abs{ x_{ k , n } - x_{ k } }^{ p } }\\
+\amp = \norm{ \vect{ x }_{ n } - \vect{ x } }_{ p }^{ p } = d_{ p } \of{ \vect{ x }_{ n } , \vect{ x } }^{ p } \lt \epsilon^{ p }\text{,}
+\end{align*}
+</div>
+<div class="para">so that <span class="process-math">\(d \of{ x_{ j , n } , x_{ j } } \lt \epsilon \)</span> for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> In particular, <span class="process-math">\(\of{ x_{ j , n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(x_{ j } \)</span> in the Euclidean metric <span class="process-math">\(d \)</span> on <span class="process-math">\(\R \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-sequential-convergence-in-the-p-norm-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="theorem-sequential-convergence-in-the-p-norm-3-2">
+<div class="para">Conversely, now suppose that for all indices <span class="process-math">\(1 \leq j \leq m \text{,}\)</span> <span class="process-math">\(\of{ x_{ j , n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(x_{ j } \)</span> in the Euclidean metric <span class="process-math">\(d \)</span> on <span class="process-math">\(\R \text{.}\)</span> Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Then <span class="process-math">\(\frac{ \epsilon }{ m^{ \frac{ 1 }{ p } } } \gt 0 \)</span> is a positive real number, and so for each index <span class="process-math">\(1 \leq j \leq m \)</span> there is a natural number <span class="process-math">\(n_{ j , \epsilon } \)</span> so that</div>
+<div class="displaymath process-math" id="theorem-sequential-convergence-in-the-p-norm-3-2-10">
+\begin{equation*}
+d \of{ x_{ j , n } , x_{ j } } \lt \frac{ \epsilon }{ m^{ \frac{ 1 }{ p } } }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ j , \epsilon } \text{.}\)</span> Let <span class="process-math">\(n_{ \epsilon } = \max_{ 1 \leq j \leq m }{ n_{ j , \epsilon } } \text{,}\)</span> and note that</div>
+<div class="displaymath process-math" id="theorem-sequential-convergence-in-the-p-norm-3-2-13">
+\begin{gather*}
+d_{ p } \of{ \vect{ x }_{ n } , \vect{ x } }^{ p } = \sum_{ j = 1 }^{ m }{ \abs{ x_{ j , n } - x_{ j } }^{ p } } = \sum_{ j = 1 }^{ m }{ d \of{ x_{ j , n } , x_{ j } }^{ p } }\\
+\lt \sum_{ j = 1 }^{ m }{ \of{ \frac{ \epsilon }{ m^{ \frac{ 1 }{ p } } } }^{ p } } = \sum_{ j = 1 }^{ m }{ \frac{ \epsilon^{ p } }{ m } } = \epsilon^{ p }
+\end{gather*}
+</div>
+<div class="para">and therefore <span class="process-math">\(d_{ p } \of{ \vect{ x }_{ n } , \vect{ x } } \lt \epsilon \)</span> for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> We conclude that <span class="process-math">\(\of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(\vect{ x } \)</span> in the <span class="process-math">\(p \)</span>-metric <span class="process-math">\(d_{ p } \)</span> on <span class="process-math">\(\R^{ n } \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-sequential-convergence-in-the-p-norm-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.2.7.1"><a href="#theorem-sequential-convergence-in-the-p-norm-3" title="Copy heading and permalink for Proof 3.2.7.1" aria-label="Copy heading and permalink for Proof 3.2.7.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-sequential-convergence-17">
+<a href="section-convergence-and-limits.html#theorem-sequential-convergence-in-the-p-norm" class="xref" data-knowl="./knowl/xref/theorem-sequential-convergence-in-the-p-norm.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.7: Sequential convergence in the  p -norm">Theorem 3.2.7 Sequential convergence in the <span class="process-math">\(p \)</span>-norm</a> implies that, in order to know everything about sequential convergence and divergence in the metric induced on real coordinate space by a <span class="process-math">\(p \)</span>-norm, it suffices to know about the convergence and divergence of sequences of real numbers in the Euclidean metric. Moreover, all of the <span class="process-math">\(p \)</span>-metrics induced on real coordinate space by the <span class="process-math">\(p \)</span>-norms are equivalent with respect to the question of sequential convergence and divergence; that is, the convergence of a sequence of real coordinate vectors converges in the metric induced on real coordinate space by a <span class="process-math">\(p \)</span>-norm does not depend on <span class="process-math">\(p \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsection-sequential-convergence-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="conclusion" id="subsection-sequential-convergence-18">
+<div class="para logical" id="subsection-sequential-convergence-18-1">
+<div class="para">The reduction of problems of sequential convergence in a metric space to that of convergence of one or more sequences of real numbers in the Euclidean metric will be a common theme in this chapter. In some respect, this reduction is possible because</div>
+<ol class="decimal" id="subsection-sequential-convergence-18-1-1">
+<li id="subsection-sequential-convergence-18-1-1-1">
+<div class="para" id="subsection-sequential-convergence-18-1-1-1-1">given a point, a metric necessarily associates the other points of a space with the positive real numbers <span class="process-math">\(\opint{ 0 }{ \infty } \text{;}\)</span> and<div class="autopermalink" data-description="Paragraph"><a href="#subsection-sequential-convergence-18-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#subsection-sequential-convergence-18-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="subsection-sequential-convergence-18-1-1-2">
+<div class="para" id="subsection-sequential-convergence-18-1-1-2-1">convergence in the Euclidean metric <span class="process-math">\(d \)</span> can be defined solely in terms of the standard order <span class="process-math">\(\leq \)</span> on the real line <span class="process-math">\(\R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsection-sequential-convergence-18-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#subsection-sequential-convergence-18-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="para">In the following section, we will discuss sequential convergence and divergence in the Euclidean metric on the real numbers in greater detail.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsection-sequential-convergence-18-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Subsection 3.2.1: Sequential Convergence"><a href="#subsection-sequential-convergence" title="Copy heading and permalink for Subsection 3.2.1: Sequential Convergence" aria-label="Copy heading and permalink for Subsection 3.2.1: Sequential Convergence">🔗</a></div>
+</section>
+<section class="subsection" id="subsection-pointwise-and-uniform-convergence">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Pointwise and Uniform Convergence</span>
+</h3>
+<section class="introduction" id="subsection-pointwise-and-uniform-convergence-2">
+<div class="para" id="subsection-pointwise-and-uniform-convergence-2-1">Later in this chapter, we will establish metrics on certain collections of maps with codomain a given metric space. However, without yet defining a metric on these sets, there are two related but distinct modes of convergence of a sequence of such maps. A sequence of maps to a metric space is said to <dfn class="terminology">converge pointwise</dfn> to a limit map if the images of each input in the domain converge to their images under the limit map. Stronger than pointwise convergence is the notion of <dfn class="terminology">uniform convergence</dfn>, which requires that the speed of pointwise convergence not depend on the given input.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-pointwise-and-uniform-convergence-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="definition definition-like" id="definition-pointwise-convergence"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Pointwise convergence/divergence.</span>
+</h4>
+<div class="para logical" id="definition-pointwise-convergence-4-1">
+<div class="para">Let <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of maps <span class="process-math">\(f_{ n } \colon X \to Y \)</span> from a set <span class="process-math">\(X \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho } \text{.}\)</span>
+</div>
+<ul class="disc" id="definition-pointwise-convergence-4-1-5">
+<li id="definition-pointwise-convergence-4-1-5-1">
+<span class="heading li--heading"><span class="title li--heading-title">Pointwise convergence.</span></span>
+<div class="para" id="definition-pointwise-convergence-4-1-5-1-2">The sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> <dfn class="terminology">converges pointwise</dfn> to a map <span class="process-math">\(f \colon X \to Y \)</span> from <span class="process-math">\(X \)</span> to <span class="process-math">\(Y \)</span> if for all inputs <span class="process-math">\(x \in X \text{,}\)</span> the sequence <span class="process-math">\(\of{ f_{ n } \of{ x } }_{ n = 0 }^{ \infty } \)</span> of corresponding outputs <span class="process-math">\(f_{ n } \of{ x } \in Y \)</span> converges to <span class="process-math">\(f \of{ x } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-pointwise-convergence-4-1-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="definition-pointwise-convergence-4-1-5-1-3">The sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> is called <dfn class="terminology">pointwise convergent</dfn> if it converges pointwise to a map from <span class="process-math">\(X \)</span> to <span class="process-math">\(Y \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-pointwise-convergence-4-1-5-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Pointwise convergence"><a href="#definition-pointwise-convergence-4-1-5-1" title="Copy heading and permalink for Item: Pointwise convergence" aria-label="Copy heading and permalink for Item: Pointwise convergence">🔗</a></div>
+</li>
+<li id="definition-pointwise-convergence-4-1-5-2">
+<span class="heading li--heading"><span class="title li--heading-title">Pointwise divergence.</span></span>
+<div class="para" id="definition-pointwise-convergence-4-1-5-2-2">The sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> is called <dfn class="terminology">pointwise divergent</dfn> if it does not converge pointwise to any map from <span class="process-math">\(X \)</span> to <span class="process-math">\(Y \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-pointwise-convergence-4-1-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Pointwise divergence"><a href="#definition-pointwise-convergence-4-1-5-2" title="Copy heading and permalink for Item: Pointwise divergence" aria-label="Copy heading and permalink for Item: Pointwise divergence">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-pointwise-convergence-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.2.8: Pointwise convergence/divergence"><a href="#definition-pointwise-convergence" title="Copy heading and permalink for Definition 3.2.8: Pointwise convergence/divergence" aria-label="Copy heading and permalink for Definition 3.2.8: Pointwise convergence/divergence">🔗</a></div>
+</article>
+<details id="example-pointwise-convergence" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Pointwise convergence.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-pointwise-convergence-2-1">
+<div class="para">Consider the sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> of functions <span class="process-math">\(f_{ n } \colon \clint{ 0 }{ 1 } \to \clint{ 0 }{ 1 } \)</span> defined by the formulae <span class="process-math">\(f_{ n } \of{ x } = x^{ n } \text{.}\)</span> Since</div>
+<div class="displaymath process-math" id="example-pointwise-convergence-2-1-4">
+\begin{equation*}
+\lim_{ n \to \infty }{ f_{ n } \of{ x } } = \lim_{ n \to \infty }{ x^{ n } } =
+\begin{cases}
+0 \amp 0 \leq x \lt 1 \\
+1 \amp x = 1
+\text{,}\end{cases}
+\end{equation*}
+</div>
+<div class="para">the sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> converges pointwise to the function <span class="process-math">\(f \colon \clint{ 0 }{ 1 } \to \clint{ 0 }{ 1 } \)</span> defined piecewise by the formula</div>
+<div class="displaymath process-math" id="example-pointwise-convergence-2-1-7">
+\begin{equation*}
+f \of{ x } =
+\begin{cases}
+0 \amp 0 \leq x \lt 1 \\
+1 \amp x = 1
+\text{.}\end{cases}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-pointwise-convergence-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.2.9: Pointwise convergence"><a href="#example-pointwise-convergence" title="Copy heading and permalink for Example 3.2.9: Pointwise convergence" aria-label="Copy heading and permalink for Example 3.2.9: Pointwise convergence">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-pointwise-and-uniform-convergence-5">Because of the uniqueness of limits of sequences in metric spaces, if a sequence of maps to a metric space converges pointwise to a map, then this map is unique with this property. In this case, the map is called the <dfn class="terminology">pointwise limit</dfn> of the sequence.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-pointwise-and-uniform-convergence-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-pointwise-limit"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Pointwise limit.</span>
+</h4>
+<div class="para logical" id="definition-pointwise-limit-4-1">
+<div class="para">For any pointwise convergent sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> of maps <span class="process-math">\(f_{ n } \colon X \to Y \)</span> from a set <span class="process-math">\(X \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho } \text{,}\)</span> the unique map <span class="process-math">\(f \colon X \to Y \)</span> from <span class="process-math">\(X \)</span> to <span class="process-math">\(Y \)</span> to which <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> converges pointwise is called the <dfn class="terminology">pointwise limit</dfn> of <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \text{,}\)</span> and is denoted</div>
+<div class="displaymath process-math" id="definition-pointwise-limit-4-1-11">
+\begin{equation*}
+\lim_{ n \to \infty }{ f_{ n } } = f\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-pointwise-limit-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.2.10: Pointwise limit"><a href="#definition-pointwise-limit" title="Copy heading and permalink for Definition 3.2.10: Pointwise limit" aria-label="Copy heading and permalink for Definition 3.2.10: Pointwise limit">🔗</a></div>
+</article>
+<div class="para" id="subsection-pointwise-and-uniform-convergence-7">While some properties of a pointwise convergent sequence of maps to a metric space are shared with its pointwise limit, pointwise convergence does not in general preserve all desirable properties of maps. In particular, <a href="section-convergence-and-limits.html#example-pointwise-convergence" class="xref" data-knowl="./knowl/xref/example-pointwise-convergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.2.9: Pointwise convergence">Example 3.2.9 Pointwise convergence</a> implies that a pointwise limit of a sequence of continuous maps need not itself be continuous. We will explore continuity in metric spaces and its relationship with convergence later in this chapter. In order to preserve these properties, we will need a stronger notion of convergence. Informally, a sequence of maps to a metric space is said to <dfn class="terminology">converge uniformly</dfn> it converges pointwise at roughly the same rate at each point in the domain.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-pointwise-and-uniform-convergence-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-uniform-convergence"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uniform convergence.</span>
+</h4>
+<div class="para logical" id="definition-uniform-convergence-4-1">
+<div class="para">Let <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of maps <span class="process-math">\(f_{ n } \colon X \to Y \)</span> from a set <span class="process-math">\(X \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho } \text{.}\)</span>
+</div>
+<ul class="disc" id="definition-uniform-convergence-4-1-5">
+<li id="definition-uniform-convergence-4-1-5-1">
+<span class="heading li--heading"><span class="title li--heading-title">Uniform convergence.</span></span>
+<div class="para logical" id="definition-uniform-convergence-4-1-5-1-2">
+<div class="para">The sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> <dfn class="terminology">converges uniformly</dfn> to a map <span class="process-math">\(f \colon X \to Y \)</span> from <span class="process-math">\(X \)</span> to <span class="process-math">\(Y \)</span> if for all positive real numbers <span class="process-math">\(\epsilon \gt 0 \text{,}\)</span> there is a natural number <span class="process-math">\(n_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math" id="definition-uniform-convergence-4-1-5-1-2-8">
+\begin{equation*}
+\rho \of{ f_{ n } \of{ x } , f \of{ x } } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all inputs <span class="process-math">\(x \in X \)</span> and indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-uniform-convergence-4-1-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="definition-uniform-convergence-4-1-5-1-3">The sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> is called <dfn class="terminology">uniformly convergent</dfn> if it converges uniformly to a map from <span class="process-math">\(X \)</span> to <span class="process-math">\(Y \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-uniform-convergence-4-1-5-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Uniform convergence"><a href="#definition-uniform-convergence-4-1-5-1" title="Copy heading and permalink for Item: Uniform convergence" aria-label="Copy heading and permalink for Item: Uniform convergence">🔗</a></div>
+</li>
+<li id="definition-uniform-convergence-4-1-5-2">
+<span class="heading li--heading"><span class="title li--heading-title">Uniform divergence.</span></span>
+<div class="para" id="definition-uniform-convergence-4-1-5-2-2">The sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> is called <dfn class="terminology">uniformly divergent</dfn> if it does not converge uniformly to any map from <span class="process-math">\(X \)</span> to <span class="process-math">\(Y \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-uniform-convergence-4-1-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Uniform divergence"><a href="#definition-uniform-convergence-4-1-5-2" title="Copy heading and permalink for Item: Uniform divergence" aria-label="Copy heading and permalink for Item: Uniform divergence">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-uniform-convergence-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.2.11: Uniform convergence"><a href="#definition-uniform-convergence" title="Copy heading and permalink for Definition 3.2.11: Uniform convergence" aria-label="Copy heading and permalink for Definition 3.2.11: Uniform convergence">🔗</a></div>
+</article>
+<details id="example-uniform-convergence-divergence" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uniform convergence/divergence.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-uniform-convergence-divergence-2-1">
+<div class="para">The following are examples of uniformly convergent and divergent sequences of maps:</div>
+<ul class="disc" id="example-uniform-convergence-divergence-2-1-1">
+<li id="example-uniform-convergence-divergence-2-1-1-1">
+<div class="para logical" id="example-uniform-convergence-divergence-2-1-1-1-1">
+<div class="para">Consider the sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> of functions <span class="process-math">\(f_{ n } \colon \clint{ 0 }{ 1 } \to \clint{ 0 }{ 1 } \)</span> defined by the formulae <span class="process-math">\(f_{ n } \of{ x } = x^{ n } \text{,}\)</span> and let <span class="process-math">\(f \colon \clint{ 0 }{ 1 } \to \clint{ 0 }{ 1 } \)</span> be the function defined piecewise by the formula</div>
+<div class="displaymath process-math" id="example-uniform-convergence-divergence-2-1-1-1-1-5">
+\begin{equation*}
+f \of{ x } =
+\begin{cases}
+0 \amp 0 \leq x \lt 1 \\
+1 \amp x = 1
+\text{.}\end{cases}
+\end{equation*}
+</div>
+<div class="para">We observe that</div>
+<div class="displaymath process-math" id="example-uniform-convergence-divergence-2-1-1-1-1-6">
+\begin{align*}
+d \of{ f_{ n } \of{ x } , f \of{ x } } \amp = \abs{ f_{ n } \of{ x } - f \of{ x } } = \abs{ x^{ n } - 0 } = \abs{ x^{ n } } = x^{ n }\\
+\amp \gt \of{ \frac{ 1 }{ 2^{ \frac{ 1 }{ n } } } }^{ n } = \frac{ 1 }{ 2 }
+\end{align*}
+</div>
+<div class="para">for all positive integers <span class="process-math">\(n \geq 1 \)</span> and inputs <span class="process-math">\(\frac{ 1 }{ \sqrt[ n ]{ 2 } } \leq x \lt 1 \text{.}\)</span> We conclude that <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> does not converge uniformly to <span class="process-math">\(f \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-convergence-divergence-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#example-uniform-convergence-divergence-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-uniform-convergence-divergence-2-1-1-2">
+<div class="para logical" id="example-uniform-convergence-divergence-2-1-1-2-1">
+<div class="para">Consider the sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> of functions <span class="process-math">\(f_{ n } \colon \R \to \clint{ -1 }{ 1 } \)</span> defined by the formulae</div>
+<div class="displaymath process-math" id="example-uniform-convergence-divergence-2-1-1-2-1-3">
+\begin{equation*}
+f_{ n } \of{ x } = \frac{ \sin \of{ n x } }{ n }\text{,}
+\end{equation*}
+</div>
+<div class="para">and let <span class="process-math">\(f \colon \R \to \clint{ -1 }{ 1 } \)</span> be the function defined by the formula <span class="process-math">\(f \of{ x } = 0 \text{.}\)</span> For all positive real numbers <span class="process-math">\(\epsilon \gt 0 \text{,}\)</span> the Archimedean principle implies that <span class="process-math">\(n_{ \epsilon } \cdot \epsilon \gt 1 \)</span> for some positive integer <span class="process-math">\(n_{ \epsilon } \geq 1 \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="example-uniform-convergence-divergence-2-1-1-2-1-9">
+\begin{align*}
+d \of{ f_{ n } \of{ x } , f \of{ x } } \amp = \abs{ f_{ n } \of{ x } - f \of{ x } } = \abs{ \frac{ \sin \of{ n x } }{ n } - 0 } = \abs{ \frac{ \sin \of{ n x } }{ n } }\\
+\amp = \frac{ \abs{ \sin \of{ n x } } }{ n } \leq \frac{ 1 }{ n } \leq \frac{ 1 }{ n_{ \epsilon } } \lt \epsilon
+\end{align*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \)</span> and inputs <span class="process-math">\(x \in \R \text{.}\)</span> We conclude that <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> converges uniformly to <span class="process-math">\(f \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-convergence-divergence-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#example-uniform-convergence-divergence-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-convergence-divergence-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.2.12: Uniform convergence/divergence"><a href="#example-uniform-convergence-divergence" title="Copy heading and permalink for Example 3.2.12: Uniform convergence/divergence" aria-label="Copy heading and permalink for Example 3.2.12: Uniform convergence/divergence">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-pointwise-and-uniform-convergence-10">We remark that pointwise and uniform convergence are distinct concepts; that is, there are sequences of maps to a metric space which converge pointwise but not uniformly. However, the opposite relationship is not true: uniform convergence is a stronger condition on sequences of maps to a metric space than pointwise convergence; that is, a sequence of maps to a metric space converges uniformly only if it converges pointwise.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-pointwise-and-uniform-convergence-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-pointwise-and-uniform-convergence"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Pointwise and uniform convergence.</span>
+</h4>
+<div class="para" id="proposition-pointwise-and-uniform-convergence-2-1">If a sequence of maps from a set to a metric space converges uniformly, then it converges pointwise.<div class="autopermalink" data-description="Paragraph"><a href="#proposition-pointwise-and-uniform-convergence-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 3.2.13: Pointwise and uniform convergence"><a href="#proposition-pointwise-and-uniform-convergence" title="Copy heading and permalink for Proposition 3.2.13: Pointwise and uniform convergence" aria-label="Copy heading and permalink for Proposition 3.2.13: Pointwise and uniform convergence">🔗</a></div>
+</article>
+<details id="proposition-pointwise-and-uniform-convergence-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="proposition-pointwise-and-uniform-convergence-3-1">
+<div class="para">Suppose that a sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> of maps <span class="process-math">\(f_{ n } \colon X \to Y \)</span> from a set <span class="process-math">\(X \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho } \)</span> converges uniformly to a map <span class="process-math">\(f \colon X \to Y \)</span> from <span class="process-math">\(X \)</span> to <span class="process-math">\(Y \text{.}\)</span> Then for all positive real numbers <span class="process-math">\(\epsilon \gt 0 \text{,}\)</span> there is a natural number <span class="process-math">\(n_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math" id="proposition-pointwise-and-uniform-convergence-3-1-10">
+\begin{equation*}
+\rho \of{ f_{ n } \of{ x } , f \of{ x } } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \)</span> and inputs <span class="process-math">\(x \in X \text{.}\)</span> In particular, for each input <span class="process-math">\(x \in X \text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="proposition-pointwise-and-uniform-convergence-3-1-14">
+\begin{equation*}
+\rho \of{ f_{ n } \of{ x } , f \of{ x } } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{,}\)</span> and so the sequence <span class="process-math">\(\of{ f_{ n } \of{ x } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(f \of{ x } \text{.}\)</span> We conclude that <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> converges pointwise to <span class="process-math">\(f \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-pointwise-and-uniform-convergence-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.2.13.1"><a href="#proposition-pointwise-and-uniform-convergence-3" title="Copy heading and permalink for Proof 3.2.13.1" aria-label="Copy heading and permalink for Proof 3.2.13.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-pointwise-and-uniform-convergence-12">Taken with the uniqueness of the pointwise limit of a sequence of maps to a metric space, <a href="section-convergence-and-limits.html#proposition-pointwise-and-uniform-convergence" class="xref" data-knowl="./knowl/xref/proposition-pointwise-and-uniform-convergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.2.13: Pointwise and uniform convergence">Proposition 3.2.13 Pointwise and uniform convergence</a> immediately implies that if a sequence of maps to a metric space converges uniformly to a map, then this map is unique with this property. In this case, the map is called the <dfn class="terminology">uniform limit</dfn> of the sequence.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-pointwise-and-uniform-convergence-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-uniform-limit"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uniform limit.</span>
+</h4>
+<div class="para logical" id="definition-uniform-limit-4-1">
+<div class="para">For any uniformly convergent sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> of maps <span class="process-math">\(f_{ n } \colon X \to Y \)</span> from a set <span class="process-math">\(X \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho } \text{,}\)</span> the unique map <span class="process-math">\(f \colon X \to Y \)</span> from <span class="process-math">\(X \)</span> to <span class="process-math">\(Y \)</span> to which <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> converges uniformly is called the <dfn class="terminology">uniform limit</dfn> of <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \text{,}\)</span> and is denoted</div>
+<div class="displaymath process-math" id="definition-uniform-limit-4-1-11">
+\begin{equation*}
+\uniflim_{ n \to \infty }{ f_{ n } } = f\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-uniform-limit-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.2.14: Uniform limit"><a href="#definition-uniform-limit" title="Copy heading and permalink for Definition 3.2.14: Uniform limit" aria-label="Copy heading and permalink for Definition 3.2.14: Uniform limit">🔗</a></div>
+</article>
+<details id="example-uniform-limit" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uniform limit.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-uniform-limit-2-1">
+<div class="para">Consider the sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> of functions <span class="process-math">\(f_{ n } \colon \R \to \clint{ -1 }{ 1 } \)</span> defined by the formulae</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-uniform-convergence-divergence.html" id="example-uniform-limit-2-1-3">
+\begin{equation*}
+f_{ n } \of{ x } = \frac{ \sin \of{ n x } }{ n }\text{,}
+\end{equation*}
+</div>
+<div class="para">and let <span class="process-math">\(f \colon \R \to \clint{ -1 }{ 1 } \)</span> be the function defined by the formula <span class="process-math">\(f \of{ x } = 0 \text{.}\)</span> Since <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> converges uniformly to <span class="process-math">\(f \)</span> as shown in <a href="section-convergence-and-limits.html#example-uniform-convergence-divergence" class="xref" data-knowl="./knowl/xref/example-uniform-convergence-divergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.2.12: Uniform convergence/divergence">Example 3.2.12 Uniform convergence/divergence</a>, <span class="process-math">\(f \)</span> is the uniform limit of <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \text{;}\)</span> that is,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-uniform-convergence-divergence.html" id="example-uniform-limit-2-1-11">
+\begin{equation*}
+\uniflim_{ n \to \infty }{ f_{ n } } = f\text{.}
+\end{equation*}
+</div>
+<div class="para">We might also write that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-uniform-convergence-divergence.html" id="example-uniform-limit-2-1-12">
+\begin{equation*}
+\uniflim_{ n \to \infty }{ \frac{ \sin \of{ n x } }{ n } } = 0\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-limit-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.2.15: Uniform limit"><a href="#example-uniform-limit" title="Copy heading and permalink for Example 3.2.15: Uniform limit" aria-label="Copy heading and permalink for Example 3.2.15: Uniform limit">🔗</a></div>
+</article></details>
+<section class="conclusion" id="subsection-pointwise-and-uniform-convergence-15">
+<div class="para" id="subsection-pointwise-and-uniform-convergence-15-1">So a sequence of maps to a metric space converges uniformly only if it converges pointwise. The reverse implication, however, is not in general true. In the following sections, we will see that, unlike in the case of pointwise convergence, many of the desirable properties of maps between metric spaces are preserved under uniform convergence.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-pointwise-and-uniform-convergence-15-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Subsection 3.2.2: Pointwise and Uniform Convergence"><a href="#subsection-pointwise-and-uniform-convergence" title="Copy heading and permalink for Subsection 3.2.2: Pointwise and Uniform Convergence" aria-label="Copy heading and permalink for Subsection 3.2.2: Pointwise and Uniform Convergence">🔗</a></div>
+</section>
+<section class="subsection" id="subsection-map-convergence">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Map Convergence</span>
+</h3>
+<section class="introduction" id="subsection-map-convergence-2">
+<div class="para" id="subsection-map-convergence-2-1">Just as we can use a metric to define the convergence of a sequence of points or maps in a metric space, we can similarly consider the convergence of maps between metric spaces. In our definition of sequence convergence, we considered a sequence to converge to a limit if the points of the sequence could be made arbitrarily close to the limit point solely by choosing large enough indices. We will similarly consider a map between metric spaces to <dfn class="terminology">converge</dfn> to a limit in the codomain at a point in the domain if we can make outputs close to the limit in the codomain solely by choosing inputs close to the point in the domain.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-map-convergence-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsection-map-convergence-2-2">In the case of sequential convergence, we used the standard ordering on the natural numbers to induce a notion of limiting behavior by considering arbitrarily large indices. For <dfn class="terminology">map convergence</dfn>, however, we use the metric in the domain to consider arbitrarily close points to the point in question.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-map-convergence-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="definition definition-like" id="definition-map-convergence"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Map convergence.</span>
+</h4>
+<div class="para logical" id="definition-map-convergence-3-1">
+<div class="para">Let <span class="process-math">\(f \colon X \to Y \)</span> be a map from a metric space <span class="process-math">\(\of{ X , \rho_{ X } } \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho_{ Y } } \text{.}\)</span>
+</div>
+<ul class="disc" id="definition-map-convergence-3-1-4">
+<li id="definition-map-convergence-3-1-4-1">
+<span class="heading li--heading"><span class="title li--heading-title">Map convergence.</span></span>
+<div class="para logical" id="definition-map-convergence-3-1-4-1-2">
+<div class="para">
+<span class="process-math">\(f \)</span> <dfn class="terminology">converges</dfn> at a point <span class="process-math">\(c \in X \)</span> to a point <span class="process-math">\(l \in Y \)</span> if for all positive real numbers <span class="process-math">\(\epsilon \gt 0 \text{,}\)</span> there exists a positive real number <span class="process-math">\(\delta \gt 0 \)</span> so that</div>
+<div class="displaymath process-math" id="definition-map-convergence-3-1-4-1-2-7">
+\begin{equation*}
+\rho_{ Y } \of{ f \of{ x } , l } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all inputs <span class="process-math">\(x \in X \)</span> so that <span class="process-math">\(0 \lt \rho_{ X } \of{ x , c } \lt \delta \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-map-convergence-3-1-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="definition-map-convergence-3-1-4-1-3">The map <span class="process-math">\(f \)</span> is called <dfn class="terminology">convergent</dfn> at a point <span class="process-math">\(c \in X \)</span> if it converges at <span class="process-math">\(c \)</span> to some point <span class="process-math">\(l \in Y \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-map-convergence-3-1-4-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Map convergence"><a href="#definition-map-convergence-3-1-4-1" title="Copy heading and permalink for Item: Map convergence" aria-label="Copy heading and permalink for Item: Map convergence">🔗</a></div>
+</li>
+<li id="definition-map-convergence-3-1-4-2">
+<span class="heading li--heading"><span class="title li--heading-title">Map divergence.</span></span>
+<div class="para" id="definition-map-convergence-3-1-4-2-2">The map <span class="process-math">\(f \)</span> is called <dfn class="terminology">divergent</dfn> at a point <span class="process-math">\(c \in X \)</span> if it does not converge at <span class="process-math">\(c \)</span> to any point <span class="process-math">\(l \in Y \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-map-convergence-3-1-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Map divergence"><a href="#definition-map-convergence-3-1-4-2" title="Copy heading and permalink for Item: Map divergence" aria-label="Copy heading and permalink for Item: Map divergence">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-map-convergence-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.2.16: Map convergence"><a href="#definition-map-convergence" title="Copy heading and permalink for Definition 3.2.16: Map convergence" aria-label="Copy heading and permalink for Definition 3.2.16: Map convergence">🔗</a></div>
+</article>
+<section class="conclusion" id="subsection-map-convergence-4">
+<div class="para" id="subsection-map-convergence-4-1">Text after the last subdivision.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-map-convergence-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Subsection 3.2.3: Map Convergence"><a href="#subsection-map-convergence" title="Copy heading and permalink for Subsection 3.2.3: Map Convergence" aria-label="Copy heading and permalink for Subsection 3.2.3: Map Convergence">🔗</a></div>
+</section>
+<section class="conclusion" id="section-convergence-and-limits-6">
+<div class="para" id="section-convergence-and-limits-6-1">Text after the last subsection.<div class="autopermalink" data-description="Paragraph"><a href="#section-convergence-and-limits-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="reading-questions" id="exercises-convergence-and-limits">
 <h3 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
 </h3>
 <section class="introduction" id="exercises-convergence-and-limits-2">
 <div class="para" id="exercises-convergence-and-limits-2-1">The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-convergence-and-limits-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="exercises-convergence-and-limits-3">
-<div class="para" id="exercises-convergence-and-limits-3-1">Short answers and/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-convergence-and-limits-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" data-description="Reading Questions 3.2: Exercises"><a href="#exercises-convergence-and-limits" title="Copy heading and permalink for Reading Questions 3.2: Exercises" aria-label="Copy heading and permalink for Reading Questions 3.2: Exercises">🔗</a></div>
+<div class="exercisegroup" id="exercise-sequential-convergence">
+<h4 class="heading"><span class="title">Sequential convergence.</span></h4>
+<div class="introduction" id="exercise-sequential-convergence-2">
+<div class="para" id="exercise-sequential-convergence-2-1">Determine whether the following sequences of real numbers converge or diverge in the Euclidean metric <span class="process-math">\(d \)</span> on the real numbers <span class="process-math">\(\R \text{.}\)</span> If the given sequence converges, find the limit.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-sequential-convergence-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-sequential-convergence-3"><h5 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercise-sequential-convergence-3-1-1">
+<div class="para">Consider the sequence <span class="process-math">\(\of{ a_{ n } }_{ n = 1 }^{ \infty } \)</span> of real numbers <span class="process-math">\(a_{ n } \in \R \)</span> defined by the formula</div>
+<div class="displaymath process-math" id="exercise-sequential-convergence-3-1-1-3">
+\begin{equation*}
+a_{ n } = \frac{ \cos \of{ n \pi } }{ n }\text{.}
+\end{equation*}
+</div>
+<div class="para">Determine whether the sequence <span class="process-math">\(\of{ a_{ n } }_{ n = 1 }^{ \infty } \)</span> converges or diverges in the Euclidean metric <span class="process-math">\(d \)</span> on the real numbers <span class="process-math">\(\R \text{.}\)</span> If it converges, find the limit.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-sequential-convergence-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.2.4.1"><a href="#exercise-sequential-convergence-3" title="Copy heading and permalink for Problem 3.2.4.1" aria-label="Copy heading and permalink for Problem 3.2.4.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-sequential-convergence-4"><h5 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercise-sequential-convergence-4-1-1">
+<div class="para">Consider the sequence <span class="process-math">\(\of{ b_{ n } }_{ n = 0 }^{ \infty } \)</span> of real numbers <span class="process-math">\(b_{ n } \in \R \)</span> defined by the formula</div>
+<div class="displaymath process-math" id="exercise-sequential-convergence-4-1-1-3">
+\begin{equation*}
+b_{ n } = n \cos \of{ n \pi }\text{.}
+\end{equation*}
+</div>
+<div class="para">Determine whether the sequence <span class="process-math">\(\of{ b_{ n } }_{ n = 0 }^{ \infty } \)</span> converges or diverges in the Euclidean metric <span class="process-math">\(d \)</span> on the real numbers <span class="process-math">\(\R \text{.}\)</span> If it converges, find the limit.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-sequential-convergence-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.2.4.2"><a href="#exercise-sequential-convergence-4" title="Copy heading and permalink for Problem 3.2.4.2" aria-label="Copy heading and permalink for Problem 3.2.4.2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-sequential-convergence-5"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercise-sequential-convergence-5-1-1">
+<div class="para">Consider the sequence <span class="process-math">\(\of{ c_{ n } }_{ n = 0 }^{ \infty } \)</span> of real numbers <span class="process-math">\(c_{ n } \in \R \)</span> defined by the formula</div>
+<div class="displaymath process-math" id="exercise-sequential-convergence-5-1-1-3">
+\begin{equation*}
+c_{ n } = n \sin \of{ n \pi }\text{.}
+\end{equation*}
+</div>
+<div class="para">Determine whether the sequence <span class="process-math">\(\of{ c_{ n } }_{ n = 0 }^{ \infty } \)</span> converges or diverges in the Euclidean metric <span class="process-math">\(d \)</span> on the real numbers <span class="process-math">\(\R \text{.}\)</span> If it converges, find the limit.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-sequential-convergence-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.2.4.3"><a href="#exercise-sequential-convergence-5" title="Copy heading and permalink for Problem 3.2.4.3" aria-label="Copy heading and permalink for Problem 3.2.4.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-sequential-convergence-6"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercise-sequential-convergence-6-1-1">
+<div class="para">Consider the sequence <span class="process-math">\(\of{ d_{ n } }_{ n = 0 }^{ \infty } \)</span> of real numbers <span class="process-math">\(d_{ n } \in \R \)</span> defined by the formula</div>
+<div class="displaymath process-math" id="exercise-sequential-convergence-6-1-1-3">
+\begin{equation*}
+d_{ n } = \frac{ 2 }{ n + 1 }\text{.}
+\end{equation*}
+</div>
+<div class="para">Determine whether the sequence <span class="process-math">\(\of{ d_{ n } }_{ n = 0 }^{ \infty } \)</span> converges or diverges in the Euclidean metric <span class="process-math">\(d \)</span> on the real numbers <span class="process-math">\(\R \text{.}\)</span> If it converges, find the limit.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-sequential-convergence-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.2.4.4"><a href="#exercise-sequential-convergence-6" title="Copy heading and permalink for Problem 3.2.4.4" aria-label="Copy heading and permalink for Problem 3.2.4.4">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-sequential-convergence-7"><h5 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercise-sequential-convergence-7-1-1">
+<div class="para">Consider the sequence <span class="process-math">\(\of{ e_{ n } }_{ n = 0 }^{ \infty } \)</span> of real numbers <span class="process-math">\(e_{ n } \in \R \)</span> defined by the formula</div>
+<div class="displaymath process-math" id="exercise-sequential-convergence-7-1-1-3">
+\begin{equation*}
+e_{ n } = \frac{ 2 n }{ n + 1 }\text{.}
+\end{equation*}
+</div>
+<div class="para">Determine whether the sequence <span class="process-math">\(\of{ e_{ n } }_{ n = 0 }^{ \infty } \)</span> converges or diverges in the Euclidean metric <span class="process-math">\(d \)</span> on the real numbers <span class="process-math">\(\R \text{.}\)</span> If it converges, find the limit.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-sequential-convergence-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.2.4.5"><a href="#exercise-sequential-convergence-7" title="Copy heading and permalink for Problem 3.2.4.5" aria-label="Copy heading and permalink for Problem 3.2.4.5">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-sequential-convergence-8"><h5 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercise-sequential-convergence-8-1-1">
+<div class="para">Consider the sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> of real numbers <span class="process-math">\(f_{ n } \in \R \)</span> defined by the formula</div>
+<div class="displaymath process-math" id="exercise-sequential-convergence-8-1-1-3">
+\begin{equation*}
+f_{ n } = \sqrt{ \frac{ 2 n }{ n + 1 } }\text{.}
+\end{equation*}
+</div>
+<div class="para">Determine whether the sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> converges or diverges in the Euclidean metric <span class="process-math">\(d \)</span> on the real numbers <span class="process-math">\(\R \text{.}\)</span> If it converges, find the limit.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-sequential-convergence-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.2.4.6"><a href="#exercise-sequential-convergence-8" title="Copy heading and permalink for Problem 3.2.4.6" aria-label="Copy heading and permalink for Problem 3.2.4.6">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-sequential-convergence-9"><h5 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercise-sequential-convergence-9-1-1">
+<div class="para">Consider the sequence <span class="process-math">\(\of{ g_{ n } }_{ n = 0 }^{ \infty } \)</span> of real numbers <span class="process-math">\(g_{ n } \in \R \)</span> defined by the formula</div>
+<div class="displaymath process-math" id="exercise-sequential-convergence-9-1-1-3">
+\begin{equation*}
+g_{ n } = \frac{ 3^{ n } }{ n! }\text{.}
+\end{equation*}
+</div>
+<div class="para">Determine whether the sequence <span class="process-math">\(\of{ g_{ n } }_{ n = 0 }^{ \infty } \)</span> converges or diverges in the Euclidean metric <span class="process-math">\(d \)</span> on the real numbers <span class="process-math">\(\R \text{.}\)</span> If it converges, find the limit.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-sequential-convergence-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.2.4.7"><a href="#exercise-sequential-convergence-9" title="Copy heading and permalink for Problem 3.2.4.7" aria-label="Copy heading and permalink for Problem 3.2.4.7">🔗</a></div>
+</article>
+</div>
+<div class="conclusion" id="exercise-sequential-convergence-10">
+<div class="para" id="exercise-sequential-convergence-10-1"><div class="autopermalink" data-description="Paragraph"><a href="#exercise-sequential-convergence-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+</div>
+<div class="autopermalink" data-description="Exercise Group 3.2.4.1–7: Sequential convergence"><a href="#exercise-sequential-convergence" title="Copy heading and permalink for Exercise Group 3.2.4.1–7: Sequential convergence" aria-label="Copy heading and permalink for Exercise Group 3.2.4.1–7: Sequential convergence">🔗</a></div>
+</div>
+<div class="exercisegroup" id="exercise-pointwise-and-uniform-convergence">
+<h4 class="heading"><span class="title">Pointwise and uniform convergence.</span></h4>
+<div class="introduction" id="exercise-pointwise-and-uniform-convergence-2">
+<div class="para" id="exercise-pointwise-and-uniform-convergence-2-1">Determine whether the following sequences of real-valued functions converge or diverge both pointwise and uniformly in the Euclidean metric <span class="process-math">\(d \)</span> on the real numbers <span class="process-math">\(\R \text{.}\)</span> If the given sequence converges pointwise, find the pointwise limit. If the given sequence converges uniformly, find the uniform limit.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-pointwise-and-uniform-convergence-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-pointwise-and-uniform-convergence-3"><h5 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="introduction" id="exercise-pointwise-and-uniform-convergence-3-1">
+<div class="para logical" id="exercise-pointwise-and-uniform-convergence-3-1-1">
+<div class="para">Consider the sequence <span class="process-math">\(\of{ a_{ n } }_{ n = 1 }^{ \infty } \)</span> of real-valued functions <span class="process-math">\(a_{ n } \colon \R \to \R \)</span> defined by the formulae</div>
+<div class="displaymath process-math" id="exercise-pointwise-and-uniform-convergence-3-1-1-3">
+\begin{equation*}
+a_{ n } \of{ x } = \of{ x - \frac{ 1 }{ n } }^{ 2 }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-pointwise-and-uniform-convergence-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="exercise-pointwise-and-uniform-convergence-3-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="exercise-pointwise-and-uniform-convergence-3-2-1-1">Determine whether the sequence <span class="process-math">\(\of{ a_{ n } }_{ n = 1 }^{ \infty } \)</span> converges or diverges pointwise in the Euclidean metric <span class="process-math">\(d \)</span> on the real numbers <span class="process-math">\(\R \text{.}\)</span> If it converges pointwise, find the pointwise limit.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-pointwise-and-uniform-convergence-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.2.4.8.a"><a href="#exercise-pointwise-and-uniform-convergence-3-2" title="Copy heading and permalink for Task 3.2.4.8.a" aria-label="Copy heading and permalink for Task 3.2.4.8.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="exercise-pointwise-and-uniform-convergence-3-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="exercise-pointwise-and-uniform-convergence-3-3-1-1">Determine whether the sequence <span class="process-math">\(\of{ a_{ n } }_{ n = 1 }^{ \infty } \)</span> converges or diverges uniformly in the Euclidean metric <span class="process-math">\(d \)</span> on the real numbers <span class="process-math">\(\R \text{.}\)</span> If it converges uniformly, find the uniform limit.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-pointwise-and-uniform-convergence-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.2.4.8.b"><a href="#exercise-pointwise-and-uniform-convergence-3-3" title="Copy heading and permalink for Task 3.2.4.8.b" aria-label="Copy heading and permalink for Task 3.2.4.8.b">🔗</a></div>
+</article><div class="autopermalink" data-description="Problem 3.2.4.8"><a href="#exercise-pointwise-and-uniform-convergence-3" title="Copy heading and permalink for Problem 3.2.4.8" aria-label="Copy heading and permalink for Problem 3.2.4.8">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-pointwise-and-uniform-convergence-4"><h5 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="introduction" id="exercise-pointwise-and-uniform-convergence-4-1">
+<div class="para logical" id="exercise-pointwise-and-uniform-convergence-4-1-1">
+<div class="para">Consider the sequence <span class="process-math">\(\of{ b_{ n } }_{ n = 1 }^{ \infty } \)</span> of real-valued functions <span class="process-math">\(b_{ n } \colon \clint{ -10 }{ 10 } \to \R \)</span> defined by the formulae</div>
+<div class="displaymath process-math" id="exercise-pointwise-and-uniform-convergence-4-1-1-3">
+\begin{equation*}
+b_{ n } \of{ x } = \frac{ x^{ 2 } }{ n }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-pointwise-and-uniform-convergence-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="exercise-pointwise-and-uniform-convergence-4-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="exercise-pointwise-and-uniform-convergence-4-2-1-1">Determine whether the sequence <span class="process-math">\(\of{ b_{ n } }_{ n = 1 }^{ \infty } \)</span> converges or diverges pointwise in the Euclidean metric <span class="process-math">\(d \)</span> on the real numbers <span class="process-math">\(\R \text{.}\)</span> If it converges pointwise, find the pointwise limit.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-pointwise-and-uniform-convergence-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.2.4.9.a"><a href="#exercise-pointwise-and-uniform-convergence-4-2" title="Copy heading and permalink for Task 3.2.4.9.a" aria-label="Copy heading and permalink for Task 3.2.4.9.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="exercise-pointwise-and-uniform-convergence-4-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="exercise-pointwise-and-uniform-convergence-4-3-1-1">Determine whether the sequence <span class="process-math">\(\of{ b_{ n } }_{ n = 1 }^{ \infty } \)</span> converges or diverges uniformly in the Euclidean metric <span class="process-math">\(d \)</span> on the real numbers <span class="process-math">\(\R \text{.}\)</span> If it converges uniformly, find the uniform limit.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-pointwise-and-uniform-convergence-4-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.2.4.9.b"><a href="#exercise-pointwise-and-uniform-convergence-4-3" title="Copy heading and permalink for Task 3.2.4.9.b" aria-label="Copy heading and permalink for Task 3.2.4.9.b">🔗</a></div>
+</article><div class="autopermalink" data-description="Problem 3.2.4.9"><a href="#exercise-pointwise-and-uniform-convergence-4" title="Copy heading and permalink for Problem 3.2.4.9" aria-label="Copy heading and permalink for Problem 3.2.4.9">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-pointwise-and-uniform-convergence-5"><h5 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="introduction" id="exercise-pointwise-and-uniform-convergence-5-1">
+<div class="para logical" id="exercise-pointwise-and-uniform-convergence-5-1-1">
+<div class="para">Consider the sequence <span class="process-math">\(\of{ c_{ n } }_{ n = 1 }^{ \infty } \)</span> of real-valued functions <span class="process-math">\(c_{ n } \colon \R \to \R \)</span> defined by the formulae</div>
+<div class="displaymath process-math" id="exercise-pointwise-and-uniform-convergence-5-1-1-3">
+\begin{equation*}
+c_{ n } \of{ x } = \frac{ x^{ 2 } }{ n }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-pointwise-and-uniform-convergence-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="exercise-pointwise-and-uniform-convergence-5-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="exercise-pointwise-and-uniform-convergence-5-2-1-1">Determine whether the sequence <span class="process-math">\(\of{ c_{ n } }_{ n = 1 }^{ \infty } \)</span> converges or diverges pointwise in the Euclidean metric <span class="process-math">\(d \)</span> on the real numbers <span class="process-math">\(\R \text{.}\)</span> If it converges pointwise, find the pointwise limit.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-pointwise-and-uniform-convergence-5-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.2.4.10.a"><a href="#exercise-pointwise-and-uniform-convergence-5-2" title="Copy heading and permalink for Task 3.2.4.10.a" aria-label="Copy heading and permalink for Task 3.2.4.10.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="exercise-pointwise-and-uniform-convergence-5-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="exercise-pointwise-and-uniform-convergence-5-3-1-1">Determine whether the sequence <span class="process-math">\(\of{ c_{ n } }_{ n = 1 }^{ \infty } \)</span> converges or diverges uniformly in the Euclidean metric <span class="process-math">\(d \)</span> on the real numbers <span class="process-math">\(\R \text{.}\)</span> If it converges uniformly, find the uniform limit.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-pointwise-and-uniform-convergence-5-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.2.4.10.b"><a href="#exercise-pointwise-and-uniform-convergence-5-3" title="Copy heading and permalink for Task 3.2.4.10.b" aria-label="Copy heading and permalink for Task 3.2.4.10.b">🔗</a></div>
+</article><div class="autopermalink" data-description="Problem 3.2.4.10"><a href="#exercise-pointwise-and-uniform-convergence-5" title="Copy heading and permalink for Problem 3.2.4.10" aria-label="Copy heading and permalink for Problem 3.2.4.10">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-pointwise-and-uniform-convergence-6"><h5 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="introduction" id="exercise-pointwise-and-uniform-convergence-6-1">
+<div class="para logical" id="exercise-pointwise-and-uniform-convergence-6-1-1">
+<div class="para">Consider the sequence <span class="process-math">\(\of{ d_{ n } }_{ n = 0 }^{ \infty } \)</span> of real-valued functions <span class="process-math">\(d_{ n } \colon \clint{ -10 }{ 10 } \to \R \)</span> defined by the formulae</div>
+<div class="displaymath process-math" id="exercise-pointwise-and-uniform-convergence-6-1-1-3">
+\begin{equation*}
+d_{ n } \of{ x } = \frac{ 1 }{ 3^{ x + n } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-pointwise-and-uniform-convergence-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="exercise-pointwise-and-uniform-convergence-6-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="exercise-pointwise-and-uniform-convergence-6-2-1-1">Determine whether the sequence <span class="process-math">\(\of{ d_{ n } }_{ n = 0 }^{ \infty } \)</span> converges or diverges pointwise in the Euclidean metric <span class="process-math">\(d \)</span> on the real numbers <span class="process-math">\(\R \text{.}\)</span> If it converges pointwise, find the pointwise limit.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-pointwise-and-uniform-convergence-6-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.2.4.11.a"><a href="#exercise-pointwise-and-uniform-convergence-6-2" title="Copy heading and permalink for Task 3.2.4.11.a" aria-label="Copy heading and permalink for Task 3.2.4.11.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="exercise-pointwise-and-uniform-convergence-6-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="exercise-pointwise-and-uniform-convergence-6-3-1-1">Determine whether the sequence <span class="process-math">\(\of{ d_{ n } }_{ n = 0 }^{ \infty } \)</span> converges or diverges uniformly in the Euclidean metric <span class="process-math">\(d \)</span> on the real numbers <span class="process-math">\(\R \text{.}\)</span> If it converges uniformly, find the uniform limit.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-pointwise-and-uniform-convergence-6-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.2.4.11.b"><a href="#exercise-pointwise-and-uniform-convergence-6-3" title="Copy heading and permalink for Task 3.2.4.11.b" aria-label="Copy heading and permalink for Task 3.2.4.11.b">🔗</a></div>
+</article><div class="autopermalink" data-description="Problem 3.2.4.11"><a href="#exercise-pointwise-and-uniform-convergence-6" title="Copy heading and permalink for Problem 3.2.4.11" aria-label="Copy heading and permalink for Problem 3.2.4.11">🔗</a></div>
+</article>
+</div>
+<div class="conclusion" id="exercise-pointwise-and-uniform-convergence-7">
+<div class="para" id="exercise-pointwise-and-uniform-convergence-7-1"><div class="autopermalink" data-description="Paragraph"><a href="#exercise-pointwise-and-uniform-convergence-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+</div>
+<div class="autopermalink" data-description="Exercise Group 3.2.4.8–11: Pointwise and uniform convergence"><a href="#exercise-pointwise-and-uniform-convergence" title="Copy heading and permalink for Exercise Group 3.2.4.8–11: Pointwise and uniform convergence" aria-label="Copy heading and permalink for Exercise Group 3.2.4.8–11: Pointwise and uniform convergence">🔗</a></div>
+</div>
+<section class="conclusion" id="exercises-convergence-and-limits-5">
+<div class="para" id="exercises-convergence-and-limits-5-1">Short answers and/or in-depth solutions to these exercises are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-convergence-and-limits-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Reading Questions 3.2.4: Exercises"><a href="#exercises-convergence-and-limits" title="Copy heading and permalink for Reading Questions 3.2.4: Exercises" aria-label="Copy heading and permalink for Reading Questions 3.2.4: Exercises">🔗</a></div>
 </section>
-<section class="reading-questions" id="reading-questions-convergence-and-limits">
+<section class="reading-questions" id="problems-convergence-and-limits">
 <h3 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reading Questions</span>
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
 </h3>
-<section class="introduction" id="reading-questions-convergence-and-limits-2">
-<div class="para" id="reading-questions-convergence-and-limits-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" data-description="Paragraph"><a href="#reading-questions-convergence-and-limits-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="problems-convergence-and-limits-2">
+<div class="para" id="problems-convergence-and-limits-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" data-description="Paragraph"><a href="#problems-convergence-and-limits-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="reading-questions-convergence-and-limits-3">
-<div class="para" id="reading-questions-convergence-and-limits-3-1">In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#reading-questions-convergence-and-limits-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" data-description="Reading Questions 3.2: Reading Questions"><a href="#reading-questions-convergence-and-limits" title="Copy heading and permalink for Reading Questions 3.2: Reading Questions" aria-label="Copy heading and permalink for Reading Questions 3.2: Reading Questions">🔗</a></div>
+<section class="conclusion" id="problems-convergence-and-limits-3">
+<div class="para" id="problems-convergence-and-limits-3-1">In-depth solutions to these problems are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#problems-convergence-and-limits-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Reading Questions 3.2.5: Problems"><a href="#problems-convergence-and-limits" title="Copy heading and permalink for Reading Questions 3.2.5: Problems" aria-label="Copy heading and permalink for Reading Questions 3.2.5: Problems">🔗</a></div>
 </section><div class="autopermalink" data-description="Section 3.2: Convergence and Limits"><a href="#section-convergence-and-limits" title="Copy heading and permalink for Section 3.2: Convergence and Limits" aria-label="Copy heading and permalink for Section 3.2: Convergence and Limits">🔗</a></div>
 </section>
 </div>

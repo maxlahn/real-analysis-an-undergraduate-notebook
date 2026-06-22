@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequential convergence in the <span class="process-math">\(p \)</span>-norm.</span>
+</h2>
+<div class="para">Let <span class="process-math">\(m \in \N \)</span> be a natural number, and consider a sequence <span class="process-math">\(\of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } \)</span> of vectors <span class="process-math">\(\vect{ x }_{ n } = \of{ x_{ j , n } }_{ j = 1 }^{ m } \in \R^{ m } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-sequential-convergence-in-the-p-norm-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para">For any vector <span class="process-math">\(\vect{ x } = \of{ x_{ j } }_{ j = 1 }^{ m } \)</span> and real number <span class="process-math">\(1 \leq p \lt \infty \text{,}\)</span> the sequence <span class="process-math">\(\of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(\vect{ x } \)</span> in the <span class="process-math">\(p \)</span>-metric <span class="process-math">\(d_{ p } \)</span> on <span class="process-math">\(\R^{ m } \)</span> if and only if for all indices <span class="process-math">\(1 \leq j \leq m \text{,}\)</span> the sequence <span class="process-math">\(\of{ x_{ j , n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(x_{ j } \)</span> in the Euclidean metric <span class="process-math">\(d \)</span> on <span class="process-math">\(\R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-sequential-convergence-in-the-p-norm-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.2.7: Sequential convergence in the  p -norm"><a href="#theorem-sequential-convergence-in-the-p-norm" title="Copy heading and permalink for Theorem 3.2.7: Sequential convergence in the  p -norm" aria-label="Copy heading and permalink for Theorem 3.2.7: Sequential convergence in the  p -norm">🔗</a></div>
+</article>
+<details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical">
+<div class="para">First suppose that <span class="process-math">\(\of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(\vect{ x } \)</span> in the <span class="process-math">\(p \)</span>-metric <span class="process-math">\(d_{ p } \)</span> on <span class="process-math">\(\R^{ m } \text{.}\)</span> Let <span class="process-math">\(1 \leq j \leq m \text{,}\)</span> and consider a positive real number <span class="process-math">\(\epsilon \gt 0 \text{.}\)</span> Then there is a natural number <span class="process-math">\(n_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d_{ p } \of{ \vect{ x }_{ n } , \vect{ x } } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math">
+\begin{align*}
+d \of{ x_{ j , n } , x_{ j } }^{ p } \amp = \abs{ x_{ j , n } - x_{ j } }^{ p } \leq \sum_{ k = 1 }^{ m }{ \abs{ x_{ k , n } - x_{ k } }^{ p } }\\
+\amp = \norm{ \vect{ x }_{ n } - \vect{ x } }_{ p }^{ p } = d_{ p } \of{ \vect{ x }_{ n } , \vect{ x } }^{ p } \lt \epsilon^{ p }\text{,}
+\end{align*}
+</div>
+<div class="para">so that <span class="process-math">\(d \of{ x_{ j , n } , x_{ j } } \lt \epsilon \)</span> for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> In particular, <span class="process-math">\(\of{ x_{ j , n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(x_{ j } \)</span> in the Euclidean metric <span class="process-math">\(d \)</span> on <span class="process-math">\(\R \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-sequential-convergence-in-the-p-norm-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Conversely, now suppose that for all indices <span class="process-math">\(1 \leq j \leq m \text{,}\)</span> <span class="process-math">\(\of{ x_{ j , n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(x_{ j } \)</span> in the Euclidean metric <span class="process-math">\(d \)</span> on <span class="process-math">\(\R \text{.}\)</span> Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Then <span class="process-math">\(\frac{ \epsilon }{ m^{ \frac{ 1 }{ p } } } \gt 0 \)</span> is a positive real number, and so for each index <span class="process-math">\(1 \leq j \leq m \)</span> there is a natural number <span class="process-math">\(n_{ j , \epsilon } \)</span> so that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d \of{ x_{ j , n } , x_{ j } } \lt \frac{ \epsilon }{ m^{ \frac{ 1 }{ p } } }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ j , \epsilon } \text{.}\)</span> Let <span class="process-math">\(n_{ \epsilon } = \max_{ 1 \leq j \leq m }{ n_{ j , \epsilon } } \text{,}\)</span> and note that</div>
+<div class="displaymath process-math">
+\begin{gather*}
+d_{ p } \of{ \vect{ x }_{ n } , \vect{ x } }^{ p } = \sum_{ j = 1 }^{ m }{ \abs{ x_{ j , n } - x_{ j } }^{ p } } = \sum_{ j = 1 }^{ m }{ d \of{ x_{ j , n } , x_{ j } }^{ p } }\\
+\lt \sum_{ j = 1 }^{ m }{ \of{ \frac{ \epsilon }{ m^{ \frac{ 1 }{ p } } } }^{ p } } = \sum_{ j = 1 }^{ m }{ \frac{ \epsilon^{ p } }{ m } } = \epsilon^{ p }
+\end{gather*}
+</div>
+<div class="para">and therefore <span class="process-math">\(d_{ p } \of{ \vect{ x }_{ n } , \vect{ x } } \lt \epsilon \)</span> for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> We conclude that <span class="process-math">\(\of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(\vect{ x } \)</span> in the <span class="process-math">\(p \)</span>-metric <span class="process-math">\(d_{ p } \)</span> on <span class="process-math">\(\R^{ n } \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-sequential-convergence-in-the-p-norm-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.2.7.1"><a href="#theorem-sequential-convergence-in-the-p-norm-3" title="Copy heading and permalink for Proof 3.2.7.1" aria-label="Copy heading and permalink for Proof 3.2.7.1">🔗</a></div>
+</article></details><span class="incontext"><a class="internal" href="section-convergence-and-limits.html#theorem-sequential-convergence-in-the-p-norm">In Context</a></span>
+</body>
+</html>

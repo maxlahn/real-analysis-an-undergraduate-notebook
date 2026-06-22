@@ -57,14 +57,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.2';
+eBookConfig.runestone_version = '8.1.4';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.d0616b3d72ab3b06.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.af9055d29ed602c4.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<script src="_static/prefix-runtime.d1480f934b51d4ec.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.fa61545fa3ffbf2f.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -692,14 +692,17 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#subsection-constructing-new-metrics" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Constructing New Metrics</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#subsection-normed-vector-spaces" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Normed Vector Spaces</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#exercises-introduction-to-metric-geometry" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#reading-questions-introduction-to-metric-geometry" class="internal"><span class="codenumber">3.1.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#problems-introduction-to-metric-geometry" class="internal"><span class="codenumber">3.1.5</span> <span class="title">Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-convergence-and-limits.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Convergence and Limits</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-limits.html#exercises-convergence-and-limits" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-limits.html#reading-questions-convergence-and-limits" class="internal"><span class="codenumber">3.2</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-convergence-and-limits.html#subsection-sequential-convergence" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Sequential Convergence</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-convergence-and-limits.html#subsection-pointwise-and-uniform-convergence" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Pointwise and Uniform Convergence</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-convergence-and-limits.html#subsection-map-convergence" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Map Convergence</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-limits.html#exercises-convergence-and-limits" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-limits.html#problems-convergence-and-limits" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -1410,19 +1413,86 @@ d_{ p } \of{ \vect{ w } , \vect{ z } } = \norm{ \vect{ w } - \vect{ z } }_{ p } 
 <div class="para" id="exercises-introduction-to-metric-geometry-2-1">The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-introduction-to-metric-geometry-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="conclusion" id="exercises-introduction-to-metric-geometry-3">
-<div class="para" id="exercises-introduction-to-metric-geometry-3-1">Short answers and/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-introduction-to-metric-geometry-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="exercises-introduction-to-metric-geometry-3-1">Short answers and/or in-depth solutions to these exercises are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-introduction-to-metric-geometry-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><div class="autopermalink" data-description="Reading Questions 3.1.4: Exercises"><a href="#exercises-introduction-to-metric-geometry" title="Copy heading and permalink for Reading Questions 3.1.4: Exercises" aria-label="Copy heading and permalink for Reading Questions 3.1.4: Exercises">🔗</a></div>
 </section>
-<section class="reading-questions" id="reading-questions-introduction-to-metric-geometry">
+<section class="reading-questions" id="problems-introduction-to-metric-geometry">
 <h3 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reading Questions</span>
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
 </h3>
-<section class="introduction" id="reading-questions-introduction-to-metric-geometry-2">
-<div class="para" id="reading-questions-introduction-to-metric-geometry-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" data-description="Paragraph"><a href="#reading-questions-introduction-to-metric-geometry-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="problems-introduction-to-metric-geometry-2">
+<div class="para" id="problems-introduction-to-metric-geometry-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" data-description="Paragraph"><a href="#problems-introduction-to-metric-geometry-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="reading-questions-introduction-to-metric-geometry-3">
-<div class="para" id="reading-questions-introduction-to-metric-geometry-3-1">In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#reading-questions-introduction-to-metric-geometry-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" data-description="Reading Questions 3.1.5: Reading Questions"><a href="#reading-questions-introduction-to-metric-geometry" title="Copy heading and permalink for Reading Questions 3.1.5: Reading Questions" aria-label="Copy heading and permalink for Reading Questions 3.1.5: Reading Questions">🔗</a></div>
+<article class="exercise exercise-like" id="exercise-from-pseudometrics-to-metrics"><h4 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">From pseudometrics to metrics.</span>
+</h4>
+<div class="introduction" id="exercise-from-pseudometrics-to-metrics-4">
+<div class="para logical" id="exercise-from-pseudometrics-to-metrics-4-1">
+<div class="para">A real-valued function <span class="process-math">\(\rho \colon X^{ 2 } \to \R \)</span> on the Cartesian square <span class="process-math">\(X^{ 2 } \)</span> of a set <span class="process-math">\(X \text{,}\)</span> which is called the <dfn class="terminology">ground set</dfn> and whose elements are called <dfn class="terminology">points</dfn>, is a <dfn class="terminology">pseudometric</dfn> on <span class="process-math">\(X \)</span> if it has the following properties:</div>
+<ol class="lower-alpha lower-alpha-level-1" id="exercise-from-pseudometrics-to-metrics-4-1-8">
+<li id="exercise-from-pseudometrics-to-metrics-4-1-8-1">
+<span class="heading li--heading"><span class="title li--heading-title">Identity.</span></span>
+<div class="para" id="exercise-from-pseudometrics-to-metrics-4-1-8-1-2">
+<span class="process-math">\(\rho \of{ x , x } = 0 \)</span> for any point <span class="process-math">\(x \in X \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-from-pseudometrics-to-metrics-4-1-8-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.1.5.1.a: Identity"><a href="#exercise-from-pseudometrics-to-metrics-4-1-8-1" title="Copy heading and permalink for Item 3.1.5.1.a: Identity" aria-label="Copy heading and permalink for Item 3.1.5.1.a: Identity">🔗</a></div>
+</li>
+<li id="exercise-from-pseudometrics-to-metrics-4-1-8-2">
+<span class="heading li--heading"><span class="title li--heading-title">Symmetry.</span></span>
+<div class="para" id="exercise-from-pseudometrics-to-metrics-4-1-8-2-2">
+<span class="process-math">\(\rho \of{ x_{ 1 } , x_{ 2 } } = \rho \of{ x_{ 2 } , x_{ 1 } } \)</span> for any points <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-from-pseudometrics-to-metrics-4-1-8-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.1.5.1.b: Symmetry"><a href="#exercise-from-pseudometrics-to-metrics-4-1-8-2" title="Copy heading and permalink for Item 3.1.5.1.b: Symmetry" aria-label="Copy heading and permalink for Item 3.1.5.1.b: Symmetry">🔗</a></div>
+</li>
+<li id="exercise-from-pseudometrics-to-metrics-4-1-8-3">
+<span class="heading li--heading"><span class="title li--heading-title">Triangle inequality.</span></span>
+<div class="para" id="exercise-from-pseudometrics-to-metrics-4-1-8-3-2">
+<span class="process-math">\(\rho \of{ x_{ 1 } , x_{ 3 } } \leq \rho \of{ x_{ 1 } , x_{ 2 } } + \rho \of{ x_{ 2 } , x_{ 3 } } \)</span> for any points <span class="process-math">\(x_{ 1 } , x_{ 2 } , x_{ 3 } \in X \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-from-pseudometrics-to-metrics-4-1-8-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.1.5.1.c: Triangle inequality"><a href="#exercise-from-pseudometrics-to-metrics-4-1-8-3" title="Copy heading and permalink for Item 3.1.5.1.c: Triangle inequality" aria-label="Copy heading and permalink for Item 3.1.5.1.c: Triangle inequality">🔗</a></div>
+</li>
+</ol>
+<div class="para">In this case, the ordered pair <span class="process-math">\(\of{ X , \rho } \)</span> is called a <dfn class="terminology">pseudometric space</dfn>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-from-pseudometrics-to-metrics-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="exercise-from-pseudometrics-to-metrics-5"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="exercise-from-pseudometrics-to-metrics-5-1-1">Let <span class="process-math">\(\rho \)</span> be a pseudometric on a set <span class="process-math">\(X \text{,}\)</span> and consider the binary relation <span class="process-math">\(\equiv_{ \rho } \)</span> on <span class="process-math">\(X \)</span> defined so that <span class="process-math">\(x_{ 1 } \equiv_{ \rho } x_{ 2 } \)</span> if and only if <span class="process-math">\(\rho \of{ x_{ 1 } , x_{ 2 } } = 0 \text{.}\)</span> Prove that <span class="process-math">\(\equiv_{ \rho } \)</span> is an equivalence relation on <span class="process-math">\(X \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-from-pseudometrics-to-metrics-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.1.5.1.a"><a href="#exercise-from-pseudometrics-to-metrics-5" title="Copy heading and permalink for Task 3.1.5.1.a" aria-label="Copy heading and permalink for Task 3.1.5.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="exercise-from-pseudometrics-to-metrics-6"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical" id="exercise-from-pseudometrics-to-metrics-6-1-1">
+<div class="para">Prove that a pseudometric <span class="process-math">\(\rho \)</span> descends to a well-defined metric <span class="process-math">\(\overline{ \rho } \)</span> on the quotient set <span class="process-math">\(X / { \equiv_{ \rho } } \)</span> defined by the formula</div>
+<div class="displaymath process-math" id="exercise-from-pseudometrics-to-metrics-6-1-1-4">
+\begin{equation*}
+\overline{ \rho } \of{ \class{ x_{ 1 } }_{ \equiv_{ \rho } } , \class{ x_{ 2 } }_{ \equiv_{ \rho } } } = \rho \of{ x_{ 1 } , x_{ 2 } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-from-pseudometrics-to-metrics-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.1.5.1.b"><a href="#exercise-from-pseudometrics-to-metrics-6" title="Copy heading and permalink for Task 3.1.5.1.b" aria-label="Copy heading and permalink for Task 3.1.5.1.b">🔗</a></div>
+</article><div class="autopermalink" data-description="Problem 3.1.5.1: From pseudometrics to metrics"><a href="#exercise-from-pseudometrics-to-metrics" title="Copy heading and permalink for Problem 3.1.5.1: From pseudometrics to metrics" aria-label="Copy heading and permalink for Problem 3.1.5.1: From pseudometrics to metrics">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="problem-norm-equivalence"><h4 class="heading">
+<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Norm equivalence.</span>
+</h4>
+<div class="para logical" id="problem-norm-equivalence-3-1">
+<div class="para">Two norms <span class="process-math">\(\norm{ \oparg }_{ 1 } , \norm{ \oparg }_{ 2 } \colon V \to \R \)</span> on a real or complex vector space <span class="process-math">\(V \)</span> are called <dfn class="terminology">equivalent</dfn> if there are positive real numbers <span class="process-math">\(A , B \in \opint{ 0 }{ \infty } \)</span> so that</div>
+<div class="displaymath process-math" id="problem-norm-equivalence-3-1-5">
+\begin{equation*}
+A \norm{ \vect{ v } }_{ 2 } \leq \norm{ \vect{ v } }_{ 1 } \leq B \norm{ \vect{ v } }_{ 2 }
+\end{equation*}
+</div>
+<div class="para">for all vectors <span class="process-math">\(\vect{ v } \in V \text{.}\)</span> Prove that norm equivalence is an equivalence relation on the set of norms on <span class="process-math">\(V \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#problem-norm-equivalence-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.1.5.2: Norm equivalence"><a href="#problem-norm-equivalence" title="Copy heading and permalink for Problem 3.1.5.2: Norm equivalence" aria-label="Copy heading and permalink for Problem 3.1.5.2: Norm equivalence">🔗</a></div>
+</article>
+<section class="conclusion" id="problems-introduction-to-metric-geometry-5">
+<div class="para" id="problems-introduction-to-metric-geometry-5-1">In-depth solutions to these problems are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#problems-introduction-to-metric-geometry-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Reading Questions 3.1.5: Problems"><a href="#problems-introduction-to-metric-geometry" title="Copy heading and permalink for Reading Questions 3.1.5: Problems" aria-label="Copy heading and permalink for Reading Questions 3.1.5: Problems">🔗</a></div>
 </section><div class="autopermalink" data-description="Section 3.1: Introduction to Metric Geometry"><a href="#section-introduction-to-metric-geometry" title="Copy heading and permalink for Section 3.1: Introduction to Metric Geometry" aria-label="Copy heading and permalink for Section 3.1: Introduction to Metric Geometry">🔗</a></div>
 </section>
 </div>
