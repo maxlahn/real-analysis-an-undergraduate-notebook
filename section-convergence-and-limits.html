@@ -57,15 +57,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.4';
+eBookConfig.runestone_version = '7.13.7';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.d1480f934b51d4ec.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.fa61545fa3ffbf2f.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/prefix-runtime.52176322e2c1dde5.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.2f713d2360adcee7.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -1471,12 +1471,424 @@ f_{ n } \of{ x } = \frac{ \sin \of{ n x } }{ n }\text{,}
 </div>
 <div class="autopermalink" data-description="Definition 3.2.16: Map convergence"><a href="#definition-map-convergence" title="Copy heading and permalink for Definition 3.2.16: Map convergence" aria-label="Copy heading and permalink for Definition 3.2.16: Map convergence">🔗</a></div>
 </article>
-<section class="conclusion" id="subsection-map-convergence-4">
-<div class="para" id="subsection-map-convergence-4-1">Text after the last subdivision.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-map-convergence-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" data-description="Subsection 3.2.3: Map Convergence"><a href="#subsection-map-convergence" title="Copy heading and permalink for Subsection 3.2.3: Map Convergence" aria-label="Copy heading and permalink for Subsection 3.2.3: Map Convergence">🔗</a></div>
+<details id="example-map-convergence" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Map convergence.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-map-convergence-2-1">
+<div class="para">Consider the real-valued function <span class="process-math">\(f \colon \R \to \R \)</span> defined piecewise by the formula</div>
+<div class="displaymath process-math" id="example-map-convergence-2-1-2">
+\begin{equation*}
+f \of{ x } =
+\begin{cases}
+x \sin \of{ \frac{ 1 }{ x } } \amp x \neq 0 \\
+0 \amp x = 0
+\text{.}\end{cases}
+\end{equation*}
+</div>
+<div class="para">As the graph of <span class="process-math">\(y = f \of{ x } \)</span> suggests, <span class="process-math">\(f \)</span> converges to <span class="process-math">\(0 \)</span> at <span class="process-math">\(0 \)</span> in the Euclidean metric <span class="process-math">\(d \)</span> on <span class="process-math">\(\R \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-map-convergence-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="example-map-convergence-2-2">
+<div class="para">Indeed, let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number, and let <span class="process-math">\(\delta = \epsilon \gt 0 \text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="example-map-convergence-2-2-3">
+\begin{align*}
+d \of{ f \of{ x } , 0 } \amp = \abs{ x \sin \of{ \frac{ 1 }{ x } } - 0 } = \abs{ x } \cdot \abs{ \sin \of{ \frac{ 1 }{ x } } }\\
+\amp \leq \abs{ x } = \abs{ x - 0 } = d \of{ x , 0 } \lt \delta = \epsilon
+\end{align*}
+</div>
+<div class="para">for all inputs <span class="process-math">\(x \in \R \)</span> so that <span class="process-math">\(0 \lt d \of{ x , 0 } \lt \delta \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-map-convergence-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.2.17: Map convergence"><a href="#example-map-convergence" title="Copy heading and permalink for Example 3.2.17: Map convergence" aria-label="Copy heading and permalink for Example 3.2.17: Map convergence">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-map-convergence-5">In analogy to the case of sequential convergence, in order to study map convergence between metric spaces, it suffices to study the convergence of real-valued functions on metric spaces.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-map-convergence-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-map-convergence"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Map convergence.</span>
+</h4>
+<div class="para logical" id="proposition-map-convergence-2-1">
+<div class="para">Let <span class="process-math">\(f \colon X \to Y \)</span> be a map from a metric space <span class="process-math">\(\of{ X , \rho_{ X } } \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho_{ Y } } \text{.}\)</span> For each point <span class="process-math">\(l \in Y \text{,}\)</span> let <span class="process-math">\(g_{ l } \colon X \to \R \)</span> be the real-valued function on <span class="process-math">\(X \)</span> defined by the formula</div>
+<div class="displaymath process-math" id="proposition-map-convergence-2-1-7">
+\begin{equation*}
+g_{ l } \of{ x } = \rho_{ Y } \of{ f \of{ x } , l }\text{.}
+\end{equation*}
+</div>
+<div class="para">Then <span class="process-math">\(f \)</span> converges to <span class="process-math">\(l \)</span> at <span class="process-math">\(c \)</span> if and only if <span class="process-math">\(g_{ c , l } \)</span> converges to <span class="process-math">\(0 \)</span> at <span class="process-math">\(c \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-map-convergence-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 3.2.18: Map convergence"><a href="#proposition-map-convergence" title="Copy heading and permalink for Proposition 3.2.18: Map convergence" aria-label="Copy heading and permalink for Proposition 3.2.18: Map convergence">🔗</a></div>
+</article>
+<details id="proposition-map-convergence-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="proposition-map-convergence-3-1">
+<div class="para">We first observe that</div>
+<div class="displaymath process-math" id="proposition-map-convergence-3-1-1">
+\begin{equation*}
+d \of{ g_{ l } \of{ x } , 0 } = \abs{ \rho_{ Y } \of{ f \of{ x } , l } - 0 } = \abs{ \rho_{ Y } \of{ f \of{ x } , l } } = \rho_{ Y } \of{ f \of{ x } , l }
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x \in X \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-map-convergence-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-map-convergence-3-2">
+<div class="para">Suppose first that <span class="process-math">\(f \)</span> converges to <span class="process-math">\(l \)</span> at <span class="process-math">\(c \text{,}\)</span> and let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Then there is some positive real number <span class="process-math">\(\delta \gt 0 \)</span> so that</div>
+<div class="displaymath process-math" id="proposition-map-convergence-3-2-6">
+\begin{equation*}
+\rho_{ Y } \of{ f \of{ x } , l } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all inputs <span class="process-math">\(x \in X \)</span> so that <span class="process-math">\(0 \lt \rho_{ X } \of{ x , c } \lt \delta \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="proposition-map-convergence-3-2-9">
+\begin{equation*}
+d \of{ g_{ l } \of{ x } , 0 } = \rho_{ Y } \of{ f \of{ x } , l } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all inputs <span class="process-math">\(x \in X \)</span> so that <span class="process-math">\(0 \lt \rho_{ X } \of{ x , c } \lt \delta \text{,}\)</span> and so <span class="process-math">\(g_{ l } \)</span> converges to <span class="process-math">\(0 \)</span> at <span class="process-math">\(c \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-map-convergence-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-map-convergence-3-3">
+<div class="para">Conversely, now suppose that <span class="process-math">\(g_{ l } \)</span> converges to <span class="process-math">\(0 \)</span> at <span class="process-math">\(c \text{,}\)</span> and let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Then there is some positive real number <span class="process-math">\(\delta \gt 0 \)</span> so that</div>
+<div class="displaymath process-math" id="proposition-map-convergence-3-3-6">
+\begin{equation*}
+d \of{ g_{ l } \of{ x } , 0 } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all inputs <span class="process-math">\(x \in X \)</span> so that <span class="process-math">\(0 \lt \rho_{ X } \of{ x , c } \lt \delta \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="proposition-map-convergence-3-3-9">
+\begin{equation*}
+\rho_{ Y } \of{ f \of{ x } , l } = d \of{ g_{ l } \of{ x } , 0 } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all inputs <span class="process-math">\(x \in X \)</span> so that <span class="process-math">\(0 \lt \rho_{ X } \of{ x , c } \lt \delta \text{,}\)</span> and so <span class="process-math">\(f \)</span> converges to <span class="process-math">\(l \)</span> at <span class="process-math">\(c \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-map-convergence-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.2.18.1"><a href="#proposition-map-convergence-3" title="Copy heading and permalink for Proof 3.2.18.1" aria-label="Copy heading and permalink for Proof 3.2.18.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-map-convergence-7">So we can reduce the question of convergence for maps between metric spaces to that of Euclidean convergence of real-valued functions on metric spaces. We will study the important topic of convergence of such real-valued functions under the Euclidean metric on the real numbers in detail in <a href="section-limits-in-the-euclidean-metric.html" class="internal" title="Section 3.3: Limits in the Euclidean Metric">Section 3.3 Limits in the Euclidean Metric</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-map-convergence-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsection-map-convergence-8">The following theorem establishes another necessary and sufficient condition for map convergence; a map between metric spaces converges if and only if all convergent sequences in the domain can be “pushed through” to convergent sequences in the codomain.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-map-convergence-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="theorem-sequential-characterization-of-map-convergence"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequential characterization of map convergence.</span>
+</h4>
+<div class="para logical" id="theorem-sequential-characterization-of-map-convergence-2-1">
+<div class="para">Let <span class="process-math">\(f \colon X \to Y \)</span> be a map from a metric space <span class="process-math">\(\of{ X , \rho_{ X } } \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho_{ Y } } \text{.}\)</span> For all points <span class="process-math">\(c \in X \)</span> and <span class="process-math">\(l \in Y \text{,}\)</span> <span class="process-math">\(f \)</span> converges to <span class="process-math">\(l \)</span> at <span class="process-math">\(c \)</span> if and only if for all sequences <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> of points <span class="process-math">\(x_{ n } \in X \setminus \set{ c } \text{,}\)</span> if</div>
+<div class="displaymath process-math" id="theorem-sequential-characterization-of-map-convergence-2-1-11">
+\begin{equation*}
+\lim_{ n \to \infty }{ x_{ n } } = c\text{,}
+\end{equation*}
+</div>
+<div class="para">then</div>
+<div class="displaymath process-math" id="theorem-sequential-characterization-of-map-convergence-2-1-12">
+\begin{equation*}
+\lim_{ n \to \infty }{ f \of{ x_{ n } } } = l\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-sequential-characterization-of-map-convergence-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.2.19: Sequential characterization of map convergence"><a href="#theorem-sequential-characterization-of-map-convergence" title="Copy heading and permalink for Theorem 3.2.19: Sequential characterization of map convergence" aria-label="Copy heading and permalink for Theorem 3.2.19: Sequential characterization of map convergence">🔗</a></div>
+</article>
+<details id="theorem-sequential-characterization-of-map-convergence-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="theorem-sequential-characterization-of-map-convergence-3-1">First suppose that <span class="process-math">\(f \)</span> converges to <span class="process-math">\(l \)</span> at <span class="process-math">\(c \text{,}\)</span> and consider a sequence <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> of points <span class="process-math">\(x_{ n } \in X \setminus \set{ c } \)</span> which converges to <span class="process-math">\(c \text{.}\)</span> We observe that <span class="process-math">\(\rho_{ X } \of{ x_{ n } , c } \gt 0 \)</span> for all indices <span class="process-math">\(n \in \N \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-sequential-characterization-of-map-convergence-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="theorem-sequential-characterization-of-map-convergence-3-2">
+<div class="para">Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Then there is a positive real number <span class="process-math">\(\delta \gt 0 \)</span> so that</div>
+<div class="displaymath process-math" id="theorem-sequential-characterization-of-map-convergence-3-2-3">
+\begin{equation*}
+\rho_{ Y } \of{ f \of{ x } , l } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all points <span class="process-math">\(x \in X \)</span> so that <span class="process-math">\(0 \lt \rho_{ X } \of{ x , c } \lt \delta \text{.}\)</span> Since <span class="process-math">\(\delta \gt 0 \text{,}\)</span> there is a natural number <span class="process-math">\(n_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math" id="theorem-sequential-characterization-of-map-convergence-3-2-8">
+\begin{equation*}
+0 \lt \rho_{ X } \of{ x_{ n } , c } \lt \delta
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> In particular, this implies that</div>
+<div class="displaymath process-math" id="theorem-sequential-characterization-of-map-convergence-3-2-10">
+\begin{equation*}
+\rho_{ Y } \of{ f \of{ x_{ n } } , l } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> We conclude that <span class="process-math">\(\of{ f \of{ x_{ n } } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(l \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-sequential-characterization-of-map-convergence-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="theorem-sequential-characterization-of-map-convergence-3-3">
+<div class="para">Conversely, now suppose that <span class="process-math">\(f \)</span> does not converge to <span class="process-math">\(l \)</span> at <span class="process-math">\(c \text{.}\)</span> Then there is a positive real number <span class="process-math">\(\epsilon \)</span> so that for all positive real numbers <span class="process-math">\(\delta \gt 0 \text{,}\)</span> there is a point <span class="process-math">\(x \in X \setminus \set{ c } \)</span> so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-sequential-convergence.html" id="theorem-sequential-characterization-of-map-convergence-3-3-7">
+\begin{equation*}
+0 \lt \rho_{ X } \of{ x , c } \lt \delta
+\end{equation*}
+</div>
+<div class="para">but</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-sequential-convergence.html" id="theorem-sequential-characterization-of-map-convergence-3-3-8">
+\begin{equation*}
+\rho_{ Y } \of{ f \of{ x } , l } \geq \epsilon\text{.}
+\end{equation*}
+</div>
+<div class="para">In particular, let <span class="process-math">\(\of{ \delta_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of positive real numbers <span class="process-math">\(\delta_{ n } \geq 0 \)</span> which converges in the Euclidean metric to <span class="process-math">\(0 \text{.}\)</span> For each index <span class="process-math">\(n \in \N \text{,}\)</span> there is a point <span class="process-math">\(x_{ n } \in X \setminus \set{ c } \)</span> so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-sequential-convergence.html" id="theorem-sequential-characterization-of-map-convergence-3-3-14">
+\begin{equation*}
+0 \lt \rho_{ X } \of{ x_{ n } , c } \lt \delta_{ n }
+\end{equation*}
+</div>
+<div class="para">but</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-sequential-convergence.html" id="theorem-sequential-characterization-of-map-convergence-3-3-15">
+\begin{equation*}
+\rho_{ Y } \of{ f \of{ x_{ n } } , l } \geq \epsilon\text{.}
+\end{equation*}
+</div>
+<div class="para">Since</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-sequential-convergence.html" id="theorem-sequential-characterization-of-map-convergence-3-3-16">
+\begin{equation*}
+d \of{ \rho_{ X } \of{ x_{ n } , c } , 0 } = \abs{ \rho_{ X } \of{ x_{ n } , c } - 0 } = \rho_{ X } \of{ x_{ n } , c } \lt \delta_{ n }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \in \N \text{,}\)</span> <a href="section-convergence-and-limits.html#proposition-sequential-convergence" class="xref" data-knowl="./knowl/xref/proposition-sequential-convergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.2.6: Sequential convergence">Proposition 3.2.6 Sequential convergence</a> implies that <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(c \)</span> but <span class="process-math">\(\of{ f \of{ x_{ n } } }_{ n = 0 }^{ \infty } \)</span> does not converge to <span class="process-math">\(l \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-sequential-characterization-of-map-convergence-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.2.19.1"><a href="#theorem-sequential-characterization-of-map-convergence-3" title="Copy heading and permalink for Proof 3.2.19.1" aria-label="Copy heading and permalink for Proof 3.2.19.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-map-convergence-10">The above result relates map convergence and sequential convergence. Note, however, that this theorem and the uniqueness of sequential limits in metric spaces do not necessarily imply the uniqueness of the limit of a convergent map between metric spaces. In fact, <em class="alert">map limits need not be uniquely determined in some metric spaces</em>.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-map-convergence-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-non-uniqueness-of-map-limits" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Non-uniqueness of map limits.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="example-non-uniqueness-of-map-limits-2-1">Consider the discrete metric <span class="process-math">\(\delta_{ B } \)</span> on the set <span class="process-math">\(B = \set{ 0 , 1 } \text{,}\)</span> and consider the function <span class="process-math">\(f \colon B \to B \)</span> defined by the formula <span class="process-math">\(f \of{ b } = b \text{.}\)</span> Then <span class="process-math">\(f \)</span> converges to <span class="process-math">\(0 \)</span> at <span class="process-math">\(0 \text{,}\)</span> and <span class="process-math">\(f \)</span> converges to <span class="process-math">\(1 \)</span> at <span class="process-math">\(0 \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-non-uniqueness-of-map-limits-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="example-non-uniqueness-of-map-limits-2-2">Indeed, let <span class="process-math">\(c = 0 \text{,}\)</span> and consider <span class="process-math">\(l \in B \text{.}\)</span> For all positive real numbers <span class="process-math">\(\epsilon \gt 0 \text{,}\)</span> let <span class="process-math">\(\delta = \frac{ 1 }{ 2 } \text{,}\)</span> and note that there are no points <span class="process-math">\(b \in B \)</span> so that <span class="process-math">\(0 \lt \delta_{ B } \of{ b , c } \lt \frac{ 1 }{ 2 } \text{.}\)</span> Thus <span class="process-math">\(f \)</span> converges to <span class="process-math">\(l \)</span> at <span class="process-math">\(c \)</span> vacuously.<div class="autopermalink" data-description="Paragraph"><a href="#example-non-uniqueness-of-map-limits-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.2.20: Non-uniqueness of map limits"><a href="#example-non-uniqueness-of-map-limits" title="Copy heading and permalink for Example 3.2.20: Non-uniqueness of map limits" aria-label="Copy heading and permalink for Example 3.2.20: Non-uniqueness of map limits">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-map-convergence-12">So the limit of a convergent map between metric spaces is not necessarily unique. However, this undesirable situation may be rectified by restricting our attention to certain points in the domain of such a map. Note that the uniqueness of the limit in <a href="section-convergence-and-limits.html#example-non-uniqueness-of-map-limits" class="xref" data-knowl="./knowl/xref/example-non-uniqueness-of-map-limits.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.2.20: Non-uniqueness of map limits">Example 3.2.20 Non-uniqueness of map limits</a> failed because the point <span class="process-math">\(c = 0 \)</span> is far away from the rest of the set <span class="process-math">\(B \text{;}\)</span> that is, there are no points close to but distinct from <span class="process-math">\(0 \text{;}\)</span> equivalently, any sequence in <span class="process-math">\(B \)</span> converging to <span class="process-math">\(0 \)</span> must eventually take only <span class="process-math">\(0 \)</span> as a value. Such points are called <dfn class="terminology">isolated points</dfn>, and other points are called <dfn class="terminology">limit points</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-map-convergence-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-accumulation-isolation"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Accumulation; isolation.</span>
+</h4>
+<div class="para logical" id="definition-accumulation-isolation-9-1">
+<div class="para">Consider a subset <span class="process-math">\(U \subseteq X \)</span> of a metric space <span class="process-math">\(\of{ X , \rho } \text{.}\)</span>
+</div>
+<ul class="disc" id="definition-accumulation-isolation-9-1-3">
+<li id="definition-accumulation-isolation-9-1-3-1">
+<span class="heading li--heading"><span class="title li--heading-title">Limit point.</span></span>
+<div class="para" id="definition-accumulation-isolation-9-1-3-1-2">We say that <span class="process-math">\(U \)</span> <dfn class="terminology">accumulates</dfn> at a point <span class="process-math">\(c \in X \)</span> if for all positive real numbers <span class="process-math">\(\epsilon \gt 0 \text{,}\)</span> there is a point <span class="process-math">\(u \in U \)</span> so that <span class="process-math">\(0 \lt \rho \of{ u , c } \lt \epsilon \text{.}\)</span> In this case, <span class="process-math">\(c \)</span> is called a <dfn class="terminology">limit point</dfn> (or <dfn class="terminology">accumulation point</dfn>) of <span class="process-math">\(U \)</span> in <span class="process-math">\(X \text{.}\)</span> The set of such limit points of <span class="process-math">\(U \)</span> is called the <dfn class="terminology">derived set</dfn> of <span class="process-math">\(U \text{,}\)</span> and is denoted <span class="process-math">\(U' \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-accumulation-isolation-9-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Limit point"><a href="#definition-accumulation-isolation-9-1-3-1" title="Copy heading and permalink for Item: Limit point" aria-label="Copy heading and permalink for Item: Limit point">🔗</a></div>
+</li>
+<li id="definition-accumulation-isolation-9-1-3-2">
+<span class="heading li--heading"><span class="title li--heading-title">Isolated point.</span></span>
+<div class="para" id="definition-accumulation-isolation-9-1-3-2-2">We say that a point <span class="process-math">\(c \in X \)</span> is <dfn class="terminology">isolated</dfn> from <span class="process-math">\(U \)</span> if <span class="process-math">\(c \)</span> is not a limit point of <span class="process-math">\(U \text{;}\)</span> that is, <span class="process-math">\(c \)</span> is isolated from <span class="process-math">\(U \)</span> if there is a positive real number <span class="process-math">\(\epsilon \gt 0 \)</span> so that <span class="process-math">\(\rho \of{ u , c } \geq \epsilon \)</span> for all points <span class="process-math">\(u \in U \)</span> so that <span class="process-math">\(u \neq c \text{.}\)</span> If <span class="process-math">\(c \in U \)</span> is isolated from <span class="process-math">\(U \text{,}\)</span> then <span class="process-math">\(c \)</span> is called an <dfn class="terminology">isolated point</dfn> of <span class="process-math">\(U \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-accumulation-isolation-9-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Isolated point"><a href="#definition-accumulation-isolation-9-1-3-2" title="Copy heading and permalink for Item: Isolated point" aria-label="Copy heading and permalink for Item: Isolated point">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-accumulation-isolation-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.2.21: Accumulation; isolation"><a href="#definition-accumulation-isolation" title="Copy heading and permalink for Definition 3.2.21: Accumulation; isolation" aria-label="Copy heading and permalink for Definition 3.2.21: Accumulation; isolation">🔗</a></div>
+</article>
+<details id="example-limit-points-and-isolated-points" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Limit points and isolated points.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-limit-points-and-isolated-points-2-1">
+<div class="para">The following are examples of limit points and isolated points in metric spaces:</div>
+<ul class="disc" id="example-limit-points-and-isolated-points-2-1-1">
+<li id="example-limit-points-and-isolated-points-2-1-1-1">
+<span class="heading li--heading"><span class="title li--heading-title">Euclidean space.</span></span>
+<div class="para logical" id="example-limit-points-and-isolated-points-2-1-1-1-2">
+<div class="para">Let <span class="process-math">\(n \geq 1 \)</span> be a positive integer, and consider a real number <span class="process-math">\(1 \leq p \lt \infty \text{.}\)</span> If <span class="process-math">\(\vect{ x } = \of{ x_{ 1 } , \dotsc , x_{ n } } \in \R^{ n } \text{,}\)</span> then consider for each positive real number <span class="process-math">\(\epsilon \gt 0 \)</span> the vector <span class="process-math">\(\vect{ x }_{ \epsilon } = \of{ x_{ 1 } + \frac{ \epsilon }{ 2 } , x_{ 2 } , \dotsc , x_{ n } } \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="example-limit-points-and-isolated-points-2-1-1-1-2-6">
+\begin{align*}
+d_{ p } \of{ \vect{ x } , \vect{ x }_{ \epsilon } } \amp = \of{ \abs{ x_{ 1 } - \of{ x_{ 1 } + \frac{ \epsilon }{ 2 } } }^{ p } + \abs{ x_{ 2 } - x_{ 2 } }^{ p } + \dotsb + \abs{ x_{ n } - x_{ n } }^{ p } }^{ \frac{ 1 }{ p } }\\
+\amp = \abs{ -\frac{ \epsilon }{ 2 } } = \frac{ \epsilon }{ 2 }\text{.}
+\end{align*}
+</div>
+<div class="para">In particular,</div>
+<div class="displaymath process-math" id="example-limit-points-and-isolated-points-2-1-1-1-2-7">
+\begin{equation*}
+0 \lt d_{ p } \of{ \vect{ x } , \vect{ x }_{ \epsilon } } \lt \epsilon\text{,}
+\end{equation*}
+</div>
+<div class="para">and so <span class="process-math">\(\vect{ x } \)</span> is a limit point of <span class="process-math">\(\R^{ n } \text{.}\)</span> Since <span class="process-math">\(\vect{ x } \)</span> was chosen arbitrarily, we conclude that every point of <span class="process-math">\(\R^{ n } \)</span> is a limit point.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-limit-points-and-isolated-points-2-1-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Euclidean space"><a href="#example-limit-points-and-isolated-points-2-1-1-1" title="Copy heading and permalink for Item: Euclidean space" aria-label="Copy heading and permalink for Item: Euclidean space">🔗</a></div>
+</li>
+<li id="example-limit-points-and-isolated-points-2-1-1-2">
+<span class="heading li--heading"><span class="title li--heading-title">Discrete space.</span></span>
+<div class="para" id="example-limit-points-and-isolated-points-2-1-1-2-2">Let <span class="process-math">\(\of{ X , \delta_{ X } } \)</span> be a discrete metric space, and consider a point <span class="process-math">\(x \in X \text{.}\)</span> Since the values of <span class="process-math">\(\delta_{ X } \)</span> are <span class="process-math">\(0 \)</span> and <span class="process-math">\(1 \text{,}\)</span> there is no point <span class="process-math">\(y \in X \)</span> so that <span class="process-math">\(0 \lt \delta_{ X } \of{ x , y } \lt 1 \text{.}\)</span> Thus <span class="process-math">\(x \)</span> is an isolated point of <span class="process-math">\(X \text{.}\)</span> Since <span class="process-math">\(x \)</span> was chosen arbitrarily, we conclude that every point of <span class="process-math">\(\of{ X , \delta_{ X } } \)</span> is an isolated point.<div class="autopermalink" data-description="Paragraph"><a href="#example-limit-points-and-isolated-points-2-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Discrete space"><a href="#example-limit-points-and-isolated-points-2-1-1-2" title="Copy heading and permalink for Item: Discrete space" aria-label="Copy heading and permalink for Item: Discrete space">🔗</a></div>
+</li>
+<li id="example-limit-points-and-isolated-points-2-1-1-3">
+<div class="para" id="example-limit-points-and-isolated-points-2-1-1-3-1">The only limit point of the set <span class="process-math">\(\set{ \frac{ 1 }{ n } }_{ n = 1 }^{ \infty } \)</span> in <span class="process-math">\(\R \)</span> is <span class="process-math">\(0 \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-limit-points-and-isolated-points-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#example-limit-points-and-isolated-points-2-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-limit-points-and-isolated-points-2-1-1-4">
+<div class="para" id="example-limit-points-and-isolated-points-2-1-1-4-1">The only limits point of the set <span class="process-math">\(\set{ \of{ -1 }^{ n } + \frac{ 1 }{ n } }_{ n = 0 }^{ \infty } \)</span> in <span class="process-math">\(\R \)</span> are <span class="process-math">\(1 \)</span> and <span class="process-math">\(-1 \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-limit-points-and-isolated-points-2-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#example-limit-points-and-isolated-points-2-1-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-limit-points-and-isolated-points-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.2.22: Limit points and isolated points"><a href="#example-limit-points-and-isolated-points" title="Copy heading and permalink for Example 3.2.22: Limit points and isolated points" aria-label="Copy heading and permalink for Example 3.2.22: Limit points and isolated points">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-map-convergence-15">A point in a metric space is a limit point of a subset if and only if it is the limit of a sequence of points in that subset which are distinct from that point.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-map-convergence-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-sequential-characterization-of-limit-points"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.23</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequential characterization of limit points.</span>
+</h4>
+<div class="para logical" id="proposition-sequential-characterization-of-limit-points-2-1">
+<div class="para">Let <span class="process-math">\(U \subseteq X \)</span> be a subset of a metric space <span class="process-math">\(\of{ X , \rho } \text{.}\)</span> A point <span class="process-math">\(c \in X \)</span> is a limit point of <span class="process-math">\(U \)</span> if and only if</div>
+<div class="displaymath process-math" id="proposition-sequential-characterization-of-limit-points-2-1-5">
+\begin{equation*}
+c = \lim_{ n \to \infty }{ u_{ n } }
+\end{equation*}
+</div>
+<div class="para">for some sequence <span class="process-math">\(\of{ u_{ n } }_{ n = 0 }^{ \infty } \)</span> of points <span class="process-math">\(u_{ n } \in U \setminus \set{ c } \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-sequential-characterization-of-limit-points-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 3.2.23: Sequential characterization of limit points"><a href="#proposition-sequential-characterization-of-limit-points" title="Copy heading and permalink for Proposition 3.2.23: Sequential characterization of limit points" aria-label="Copy heading and permalink for Proposition 3.2.23: Sequential characterization of limit points">🔗</a></div>
+</article>
+<details id="proposition-sequential-characterization-of-limit-points-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="proposition-sequential-characterization-of-limit-points-3-1">
+<div class="para">First suppose that <span class="process-math">\(c \)</span> is a limit point of <span class="process-math">\(U \text{.}\)</span> Then for each positive integer <span class="process-math">\(n \geq 1 \text{,}\)</span> <span class="process-math">\(\frac{ 1 }{ n } \gt 0 \text{,}\)</span> and so there is a point <span class="process-math">\(u_{ n } \in U \setminus \set{ c } \)</span> so that</div>
+<div class="displaymath process-math" id="proposition-sequential-characterization-of-limit-points-3-1-6">
+\begin{equation*}
+0 \lt \rho \of{ u_{ n } , c } \lt \frac{ 1 }{ n }\text{.}
+\end{equation*}
+</div>
+<div class="para">We claim that <span class="process-math">\(\of{ u_{ n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(c \text{.}\)</span> Indeed, for any positive real number <span class="process-math">\(\epsilon \gt 0 \text{,}\)</span> the Archimedean principle implies that there is a natural number <span class="process-math">\(n_{ \epsilon } \gt \frac{ 1 }{ \epsilon } \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="proposition-sequential-characterization-of-limit-points-3-1-11">
+\begin{equation*}
+\rho \of{ u_{ n } , c } \lt \frac{ 1 }{ n } \leq \frac{ 1 }{ n_{ \epsilon } } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> We conclude that</div>
+<div class="displaymath process-math" id="proposition-sequential-characterization-of-limit-points-3-1-13">
+\begin{equation*}
+\lim_{ n \to \infty }{ u_{ n } } = c\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-sequential-characterization-of-limit-points-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-sequential-characterization-of-limit-points-3-2">
+<div class="para">Conversely, now suppose that</div>
+<div class="displaymath process-math" id="proposition-sequential-characterization-of-limit-points-3-2-1">
+\begin{equation*}
+\lim_{ n \to \infty }{ u_{ n } } = c
+\end{equation*}
+</div>
+<div class="para">for some sequence <span class="process-math">\(\of{ u_{ n } }_{ n = 0 }^{ \infty } \)</span> of points <span class="process-math">\(u_{ n } \in U \setminus \set{ c } \text{.}\)</span> Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Then there is a natural number <span class="process-math">\(n_{ \epsilon } \gt 0 \)</span> so that <span class="process-math">\(\rho \of{ u_{ n } , c } \lt \epsilon \)</span> for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> In particular,</div>
+<div class="displaymath process-math" id="proposition-sequential-characterization-of-limit-points-3-2-8">
+\begin{equation*}
+0 \lt \rho \of{ u_{ n_{ \epsilon } } , c } \lt \epsilon\text{,}
+\end{equation*}
+</div>
+<div class="para">since <span class="process-math">\(u_{ n_{ \epsilon } } \neq c \text{.}\)</span> We conclude that <span class="process-math">\(c \)</span> is a limit point of <span class="process-math">\(U \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-sequential-characterization-of-limit-points-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.2.23.1"><a href="#proposition-sequential-characterization-of-limit-points-3" title="Copy heading and permalink for Proof 3.2.23.1" aria-label="Copy heading and permalink for Proof 3.2.23.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-map-convergence-17">As we have seen, the limit of a convergent map between metric spaces at an isolated point of the domain need not be unique. However, the limit of such a map at a limit point of the domain is unique. This follows immediately from the above results.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-map-convergence-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="corollary theorem-like" id="corollary-uniqueness-of-map-limits"><h4 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.24</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uniqueness of map limits.</span>
+</h4>
+<div class="para" id="corollary-uniqueness-of-map-limits-2-1">Let <span class="process-math">\(f \colon X \to Y \)</span> be a map from a metric space <span class="process-math">\(\of{ X , \rho_{ X } } \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho_{ Y } } \text{.}\)</span> If <span class="process-math">\(f \)</span> converges at a limit point <span class="process-math">\(c \in X \)</span> of <span class="process-math">\(X \text{,}\)</span> then it converges to a unique point <span class="process-math">\(l \in Y \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#corollary-uniqueness-of-map-limits-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 3.2.24: Uniqueness of map limits"><a href="#corollary-uniqueness-of-map-limits" title="Copy heading and permalink for Corollary 3.2.24: Uniqueness of map limits" aria-label="Copy heading and permalink for Corollary 3.2.24: Uniqueness of map limits">🔗</a></div>
+</article>
+<details id="corollary-uniqueness-of-map-limits-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="corollary-uniqueness-of-map-limits-3-1">
+<div class="para">Suppose that <span class="process-math">\(f \)</span> converges to two points <span class="process-math">\(l , m \in Y \)</span> at a limit point <span class="process-math">\(c \in X \)</span> of <span class="process-math">\(X \text{.}\)</span> Since <span class="process-math">\(c \)</span> is a limit point of <span class="process-math">\(X \text{,}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-sequential-characterization-of-limit-points.html ./knowl/xref/theorem-sequential-characterization-of-map-convergence.html" id="corollary-uniqueness-of-map-limits-3-1-7">
+\begin{equation*}
+c = \lim_{ n \to \infty }{ x_{ n } }
+\end{equation*}
+</div>
+<div class="para">for some sequence <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> of points <span class="process-math">\(x_{ n } \in X \setminus \set{ c } \)</span> by <a href="section-convergence-and-limits.html#proposition-sequential-characterization-of-limit-points" class="xref" data-knowl="./knowl/xref/proposition-sequential-characterization-of-limit-points.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.2.23: Sequential characterization of limit points">Proposition 3.2.23 Sequential characterization of limit points</a>. <a href="section-convergence-and-limits.html#theorem-sequential-characterization-of-map-convergence" class="xref" data-knowl="./knowl/xref/theorem-sequential-characterization-of-map-convergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.19: Sequential characterization of map convergence">Theorem 3.2.19 Sequential characterization of map convergence</a> now implies that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-sequential-characterization-of-limit-points.html ./knowl/xref/theorem-sequential-characterization-of-map-convergence.html" id="corollary-uniqueness-of-map-limits-3-1-12">
+\begin{equation*}
+l = \lim_{ n \to \infty }{ f \of{ x_{ n } } } = m\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#corollary-uniqueness-of-map-limits-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.2.24.1"><a href="#corollary-uniqueness-of-map-limits-3" title="Copy heading and permalink for Proof 3.2.24.1" aria-label="Copy heading and permalink for Proof 3.2.24.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-map-convergence-19">Analogously to the case of unique sequential limits, the above corollary leads naturally to the following definition, which is that of the unique <dfn class="terminology">limit</dfn> of a map between metric spaces at a limit point.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-map-convergence-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-map-limit"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.25</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Map limit.</span>
+</h4>
+<div class="para logical" id="definition-map-limit-4-1">
+<div class="para">Let <span class="process-math">\(f \colon X \to Y \)</span> be a map from a metric space <span class="process-math">\(\of{ X , \rho_{ X } } \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho_{ Y } } \text{.}\)</span> If <span class="process-math">\(f \)</span> converges at a limit point <span class="process-math">\(c \in X \)</span> of <span class="process-math">\(X \text{,}\)</span> the unique point <span class="process-math">\(l \in Y \)</span> to which <span class="process-math">\(f \)</span> converges at <span class="process-math">\(c \)</span> is called the <dfn class="terminology">limit</dfn> of <span class="process-math">\(f \)</span> at <span class="process-math">\(c \text{,}\)</span> and is denoted</div>
+<div class="displaymath process-math" id="definition-map-limit-4-1-13">
+\begin{equation*}
+\lim_{ x \to c }{ f \of{ x } } = l\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-map-limit-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.2.25: Map limit"><a href="#definition-map-limit" title="Copy heading and permalink for Definition 3.2.25: Map limit" aria-label="Copy heading and permalink for Definition 3.2.25: Map limit">🔗</a></div>
+</article>
+<div class="para" id="subsection-map-convergence-21">Again, note the ambiguity of the above notation; it is entirely unclear with respect to which metrics this convergence is satisfied. Indeed, as in the case of sequential limits, maps between sets may converge in one pair of metrics and diverge in another, or may converge to different limits in different metrics. We will try to avoid this ambiguity if at all possible. Analogously to the case of sequential limits, if the map inside the limit operator is a map between real coordinate spaces, it will usually be safe to assume that convergence is with respect to the relevant Euclidean metrics.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-map-convergence-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-map-limits" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.26</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Map limits.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-map-limits-2-1">
+<div class="para">Consider the real-valued function <span class="process-math">\(f \colon \R \to \R \)</span> defined by the formula <span class="process-math">\(f \of{ x } = 2 x + 1 \text{.}\)</span> We claim that</div>
+<div class="displaymath process-math" id="example-map-limits-2-1-3">
+\begin{equation*}
+\lim_{ x \to c }{ f \of{ x } } = 2 c + 1
+\end{equation*}
+</div>
+<div class="para">for all points <span class="process-math">\(c \in \R \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-map-limits-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="example-map-limits-2-2">
+<div class="para">Indeed, let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number, and consider the positive real number <span class="process-math">\(\delta = \frac{ \epsilon }{ 2 } \gt 0 \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="example-map-limits-2-2-3">
+\begin{align*}
+d \of{ f \of{ x } , 2 c + 1 } = \abs{ 2 x + 1 - \of{ 2 c + 1 } } = \abs{ 2 \of{ x - c } }\\
+\amp = 2 \abs{ x - c } = 2 d \of{ x , c } \lt 2 \delta = \epsilon
+\end{align*}
+</div>
+<div class="para">for all points <span class="process-math">\(x \in \R \)</span> so that <span class="process-math">\(0 \lt d \of{ x , c } \lt \delta \text{,}\)</span> and so <span class="process-math">\(f \)</span> converges to <span class="process-math">\(2 c + 1 \)</span> at <span class="process-math">\(c \text{.}\)</span> Since <span class="process-math">\(c \)</span> is a limit point of <span class="process-math">\(\R \text{,}\)</span> we conclude that</div>
+<div class="displaymath process-math" id="example-map-limits-2-2-11">
+\begin{equation*}
+\lim_{ x \to c }{ f \of{ x } } = 2 c + 1\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-map-limits-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.2.26: Map limits"><a href="#example-map-limits" title="Copy heading and permalink for Example 3.2.26: Map limits" aria-label="Copy heading and permalink for Example 3.2.26: Map limits">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 3.2.3: Map Convergence"><a href="#subsection-map-convergence" title="Copy heading and permalink for Subsection 3.2.3: Map Convergence" aria-label="Copy heading and permalink for Subsection 3.2.3: Map Convergence">🔗</a></div>
 </section>
 <section class="conclusion" id="section-convergence-and-limits-6">
-<div class="para" id="section-convergence-and-limits-6-1">Text after the last subsection.<div class="autopermalink" data-description="Paragraph"><a href="#section-convergence-and-limits-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="section-convergence-and-limits-6-1">In this section, we have seen several ways in which the convergence of objects in an arbitrary metric space can be reduced to convergence of related objects in the real line <span class="process-math">\(\R \)</span> taken with the Euclidean metric <span class="process-math">\(d \text{.}\)</span> In this way, the topic of convergence in the Euclidean metric <span class="process-math">\(d \)</span> on <span class="process-math">\(\R \)</span> plays a central role in the point-set topology of metric spaces. In the next section, we will investigate the limiting behavior of sequences of real numbers and of real-valued functions on metric spaces in greater depth.<div class="autopermalink" data-description="Paragraph"><a href="#section-convergence-and-limits-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="reading-questions" id="exercises-convergence-and-limits">
 <h3 class="heading hide-type">
