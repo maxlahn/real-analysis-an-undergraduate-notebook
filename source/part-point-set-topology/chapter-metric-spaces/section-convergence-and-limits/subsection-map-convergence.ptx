@@ -63,141 +63,527 @@
     </statement>
   </definition>
 
-  <conclusion>
-    <p>
-      Text after the last subdivision.
-    </p>
-  </conclusion>
-</subsection>
-
-<!--
-
-  <definition xml:id="definition-TITLE">
+  <example xml:id="example-map-convergence">
     <title>
-      TITLE
+      Map convergence
+    </title>
+    
+    <statement>
+      <p>
+        Consider the real-valued function <m> f \colon \R \to \R </m> defined piecewise by the formula
+        
+        <md>
+          f \of{ x } =
+            \begin{cases}
+              x \sin \of{ \frac{ 1 }{ x } } \amp x \neq 0 \\
+              0 \amp x = 0
+            \end{cases}
+        </md>.
+        
+        As the graph of <m> y = f \of{ x } </m> suggests, <m> f </m> converges to <m> 0 </m> at <m> 0 </m> in the Euclidean metric <m> d </m> on <m> \R </m>.
+      </p>
+      
+      <p>
+        Indeed, let <m> \epsilon \gt 0 </m> be a positive real number, and let <m> \delta = \epsilon \gt 0 </m>. Then
+        
+        <md>
+          <mrow>
+            d \of{ f \of{ x } , 0 } \amp = \abs{ x \sin \of{ \frac{ 1 }{ x } } - 0 } = \abs{ x } \cdot \abs{ \sin \of{ \frac{ 1 }{ x } } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \abs{ x } = \abs{ x - 0 } = d \of{ x , 0 } \lt \delta = \epsilon
+          </mrow>
+        </md>
+        
+        for all inputs <m> x \in \R </m> so that <m> 0 \lt d \of{ x , 0 } \lt \delta </m>.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    In analogy to the case of sequential convergence, in order to study map convergence between metric spaces, it suffices to study the convergence of real-valued functions on metric spaces.
+  </p>
+  
+  <proposition xml:id="proposition-map-convergence">
+    <title>
+      Map convergence
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> be a map from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m>. For each point <m> l \in Y </m>, let <m> g_{ l } \colon X \to \R </m> be the real-valued function on <m> X </m> defined by the formula
+        
+        <md>
+          g_{ l } \of{ x } = \rho_{ Y } \of{ f \of{ x } , l }
+        </md>.
+        
+        Then <m> f </m> converges to <m> l </m> at <m> c </m> if and only if <m> g_{ c , l } </m> converges to <m> 0 </m> at <m> c </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        We first observe that
+        
+        <md>
+          d \of{ g_{ l } \of{ x } , 0 } = \abs{ \rho_{ Y } \of{ f \of{ x } , l } - 0 } = \abs{ \rho_{ Y } \of{ f \of{ x } , l } } = \rho_{ Y } \of{ f \of{ x } , l }
+        </md>
+        
+        for all <m> x \in X </m>.
+      </p>
+      
+      <p>
+        Suppose first that <m> f </m> converges to <m> l </m> at <m> c </m>, and let <m> \epsilon \gt 0 </m> be a positive real number. Then there is some positive real number <m> \delta \gt 0 </m> so that
+        
+        <md>
+          \rho_{ Y } \of{ f \of{ x } , l } \lt \epsilon
+        </md>
+        
+        for all inputs <m> x \in X </m> so that <m> 0 \lt \rho_{ X } \of{ x , c } \lt \delta </m>. We observe that
+        
+        <md>
+          d \of{ g_{ l } \of{ x } , 0 } = \rho_{ Y } \of{ f \of{ x } , l } \lt \epsilon
+        </md>
+        
+        for all inputs <m> x \in X </m> so that <m> 0 \lt \rho_{ X } \of{ x , c } \lt \delta </m>, and so <m> g_{ l } </m> converges to <m> 0 </m> at <m> c </m>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> g_{ l } </m> converges to <m> 0 </m> at <m> c </m>, and let <m> \epsilon \gt 0 </m> be a positive real number. Then there is some positive real number <m> \delta \gt 0 </m> so that
+        
+        <md>
+         d \of{ g_{ l } \of{ x } , 0 } \lt \epsilon
+        </md>
+        
+        for all inputs <m> x \in X </m> so that <m> 0 \lt \rho_{ X } \of{ x , c } \lt \delta </m>. We observe that
+        
+        <md>
+          \rho_{ Y } \of{ f \of{ x } , l } = d \of{ g_{ l } \of{ x } , 0 } \lt \epsilon
+        </md>
+        
+        for all inputs <m> x \in X </m> so that <m> 0 \lt \rho_{ X } \of{ x , c } \lt \delta </m>, and so <m> f </m> converges to <m> l </m> at <m> c </m>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    So we can reduce the question of convergence for maps between metric spaces to that of Euclidean convergence of real-valued functions on metric spaces. We will study the important topic of convergence of such real-valued functions under the Euclidean metric on the real numbers in detail in <xref ref="section-limits-in-the-euclidean-metric"/>.
+  </p>
+  
+  <p>
+    The following theorem establishes another necessary and sufficient condition for map convergence; a map between metric spaces converges if and only if all convergent sequences in the domain can be <q> pushed through </q> to convergent sequences in the codomain.
+  </p>
+
+  <theorem xml:id="theorem-sequential-characterization-of-map-convergence">
+    <title>
+      Sequential characterization of map convergence
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> be a map from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m>. For all points <m> c \in X </m> and <m> l \in Y </m>, <m> f </m> converges to <m> l </m> at <m> c </m> if and only if for all sequences <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> x_{ n } \in X \setminus \set{ c } </m>, if
+        
+        <md>
+          \lim_{ n \to \infty }{ x_{ n } } = c
+        </md>,
+        
+        then
+        
+        <md>
+          \lim_{ n \to \infty }{ f \of{ x_{ n } } } = l
+        </md>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        First suppose that <m> f </m> converges to <m> l </m> at <m> c </m>, and consider a sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> x_{ n } \in X \setminus \set{ c } </m> which converges to <m> c </m>. We observe that <m> \rho_{ X } \of{ x_{ n } , c } \gt 0 </m> for all indices <m> n \in \N </m>.
+      </p>
+      
+      <p>
+        Let <m> \epsilon \gt 0 </m> be a positive real number. Then there is a positive real number <m> \delta \gt 0 </m> so that
+        
+        <md>
+          \rho_{ Y } \of{ f \of{ x } , l } \lt \epsilon
+        </md>
+        
+        for all points <m> x \in X </m> so that <m> 0 \lt \rho_{ X } \of{ x , c } \lt \delta </m>. Since <m> \delta \gt 0 </m>, there is a natural number <m> n_{ \epsilon } \in \N </m> so that
+        
+        <md>
+          0 \lt \rho_{ X } \of{ x_{ n } , c } \lt \delta
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>. In particular, this implies that
+        
+        <md>
+          \rho_{ Y } \of{ f \of{ x_{ n } } , l } \lt \epsilon
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>. We conclude that <m> \of{ f \of{ x_{ n } } }_{ n = 0 }^{ \infty } </m> converges to <m> l </m>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> f </m> does not converge to <m> l </m> at <m> c </m>. Then there is a positive real number <m> \epsilon </m> so that for all positive real numbers <m> \delta \gt 0 </m>, there is a point <m> x \in X \setminus \set{ c } </m> so that
+        
+        <md>
+          0 \lt \rho_{ X } \of{ x , c } \lt \delta
+        </md>
+        
+        but
+        
+        <md>
+          \rho_{ Y } \of{ f \of{ x } , l } \geq \epsilon
+        </md>.
+        
+        In particular, let <m> \of{ \delta_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of positive real numbers <m> \delta_{ n } \geq 0 </m> which converges in the Euclidean metric to <m> 0 </m>. For each index <m> n \in \N </m>, there is a point <m> x_{ n } \in X \setminus \set{ c } </m> so that 
+        
+        <md>
+          0 \lt \rho_{ X } \of{ x_{ n } , c } \lt \delta_{ n }
+        </md>
+        
+        but
+        
+        <md>
+          \rho_{ Y } \of{ f \of{ x_{ n } } , l } \geq \epsilon
+        </md>.
+        
+        Since
+        
+        <md>
+          d \of{ \rho_{ X } \of{ x_{ n } , c } , 0 } = \abs{ \rho_{ X } \of{ x_{ n } , c } - 0 } = \rho_{ X } \of{ x_{ n } , c } \lt \delta_{ n }
+        </md>
+        
+        for all indices <m> n \in \N </m>, <xref ref="proposition-sequential-convergence"/> implies that <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> c </m> but <m> \of{ f \of{ x_{ n } } }_{ n = 0 }^{ \infty } </m> does not converge to <m> l </m>.
+      </p>
+    </proof>
+  </theorem>
+  
+  <p>
+    The above result relates map convergence and sequential convergence. Note, however, that this theorem and the uniqueness of sequential limits in metric spaces do not necessarily imply the uniqueness of the limit of a convergent map between metric spaces. In fact, <alert> map limits need not be uniquely determined in some metric spaces </alert>.
+  </p>
+
+  <example xml:id="example-non-uniqueness-of-map-limits">
+    <title>
+      Non-uniqueness of map limits
+    </title>
+    
+    <statement>
+      <p>
+        Consider the discrete metric <m> \delta_{ B } </m> on the set <m> B = \set{ 0 , 1 } </m>, and consider the function <m> f \colon B \to B </m> defined by the formula <m> f \of{ b } = b </m>. Then <m> f </m> converges to <m> 0 </m> at <m> 0 </m>, and <m> f </m> converges to <m> 1 </m> at <m> 0 </m>.
+      </p>
+      
+      <p>
+        Indeed, let <m> c = 0 </m>, and consider <m> l \in B </m>. For all positive real numbers <m> \epsilon \gt 0 </m>, let <m> \delta = \frac{ 1 }{ 2 } </m>, and note that there are no points <m> b \in B </m> so that <m> 0 \lt \delta_{ B } \of{ b , c } \lt \frac{ 1 }{ 2 } </m>. Thus <m> f </m> converges to <m> l </m> at <m> c </m> vacuously.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    So the limit of a convergent map between metric spaces is not necessarily unique. However, this undesirable situation may be rectified by restricting our attention to certain points in the domain of such a map. Note that the uniqueness of the limit in <xref ref="example-non-uniqueness-of-map-limits"/> failed because the point <m> c = 0 </m> is far away from the rest of the set <m> B </m>; that is, there are no points close to but distinct from <m> 0 </m>; equivalently, any sequence in <m> B </m> converging to <m> 0 </m> must eventually take only <m> 0 </m> as a value. Such points are called <term> isolated points </term>, and other points are called <term> limit points </term>.
+  </p>
+  
+  <definition xml:id="definition-accumulation-isolation">
+    <title>
+      Accumulation; isolation
     </title>
     
     <idx>
-      TERM
+      accumulation
+    </idx>
+    
+    <idx>
+      limit point
+    </idx>
+    
+    <idx>
+      accumulation point
+    </idx>
+    
+    <idx>
+      derived set
+    </idx>
+    
+    <idx>
+      isolation
+    </idx>
+    
+    <idx>
+      isolated point
     </idx>
     
     <notation>
       <usage>
-        <m>  </m>
+        <m> U' </m>
       </usage>
       
       <description>
         <p>
-          
+          the derived set of <m> U </m>
         </p>
       </description>
     </notation>
     
     <statement>
       <p>
+        Consider a subset <m> U \subseteq X </m> of a metric space <m> \of{ X , \rho } </m>.
         
+        <ul>
+          <li>
+            <title>
+              Limit point
+            </title>
+            
+            <p>
+              We say that <m> U </m> <term> accumulates </term> at a point <m> c \in X </m> if for all positive real numbers <m> \epsilon \gt 0 </m>, there is a point <m> u \in U </m> so that <m> 0 \lt \rho \of{ u , c } \lt \epsilon </m>. In this case, <m> c </m> is called a <term> limit point </term> (or <term> accumulation point </term>) of <m> U </m> in <m> X </m>. The set of such limit points of <m> U </m> is called the <term> derived set </term> of <m> U </m>, and is denoted <m> U' </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Isolated point
+            </title>
+            
+            <p>
+              We say that a point <m> c \in X </m> is <term> isolated </term> from <m> U </m> if <m> c </m> is not a limit point of <m> U </m>; that is, <m> c </m> is isolated from <m> U </m> if there is a positive real number <m> \epsilon \gt 0 </m> so that <m> \rho \of{ u , c } \geq \epsilon </m> for all points <m> u \in U </m> so that <m> u \neq c </m>. If <m> c \in U </m> is isolated from <m> U </m>, then <m> c </m> is called an <term> isolated point </term> of <m> U </m>.
+            </p>
+          </li>
+        </ul>
       </p>
     </statement>
   </definition>
 
-  <lemma xml:id="lemma-TITLE">
+  <example xml:id="example-limit-points-and-isolated-points">
     <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </lemma>
-
-  <proposition xml:id="proposition-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </proposition>
-
-  <theorem xml:id="theorem-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </theorem>
-
-  <corollary xml:id="corollary-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </corollary>
-
-  <example xml:id="example-TITLE">
-    <title>
-      TITLE
+      Limit points and isolated points
     </title>
     
     <statement>
       <p>
+        The following are examples of limit points and isolated points in metric spaces:
         
+        <ul>
+          <li>
+            <title>
+              Euclidean space
+            </title>
+            
+            <p>
+              Let <m> n \geq 1 </m> be a positive integer, and consider a real number <m> 1 \leq p \lt \infty </m>. If <m> \vect{ x } = \of{ x_{ 1 } , \dotsc , x_{ n } } \in \R^{ n } </m>, then consider for each positive real number <m> \epsilon \gt 0 </m> the vector <m> \vect{ x }_{ \epsilon } = \of{ x_{ 1 } + \frac{ \epsilon }{ 2 } , x_{ 2 } , \dotsc , x_{ n } } </m>. We observe that
+              
+              <md>
+                <mrow>
+                  d_{ p } \of{ \vect{ x } , \vect{ x }_{ \epsilon } } \amp = \of{ \abs{ x_{ 1 } - \of{ x_{ 1 } + \frac{ \epsilon }{ 2 } } }^{ p } + \abs{ x_{ 2 } - x_{ 2 } }^{ p } + \dotsb + \abs{ x_{ n } - x_{ n } }^{ p } }^{ \frac{ 1 }{ p } }
+                </mrow>
+                
+                <mrow>
+                  \amp = \abs{ -\frac{ \epsilon }{ 2 } } = \frac{ \epsilon }{ 2 }
+                </mrow>
+              </md>.
+              
+              In particular,
+              
+              <md>
+                0 \lt d_{ p } \of{ \vect{ x } , \vect{ x }_{ \epsilon } } \lt \epsilon
+              </md>,
+              
+              and so <m> \vect{ x } </m> is a limit point of <m> \R^{ n } </m>. Since <m> \vect{ x } </m> was chosen arbitrarily, we conclude that every point of <m> \R^{ n } </m> is a limit point.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Discrete space
+            </title>
+            
+            <p>
+              Let <m> \of{ X , \delta_{ X } } </m> be a discrete metric space, and consider a point <m> x \in X </m>. Since the values of <m> \delta_{ X } </m> are <m> 0 </m> and <m> 1 </m>, there is no point <m> y \in X </m> so that <m> 0 \lt \delta_{ X } \of{ x , y } \lt 1 </m>. Thus <m> x </m> is an isolated point of <m> X </m>. Since <m> x </m> was chosen arbitrarily, we conclude that every point of <m> \of{ X , \delta_{ X } } </m> is an isolated point.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The only limit point of the set <m> \set{ \frac{ 1 }{ n } }_{ n = 1 }^{ \infty } </m> in <m> \R </m> is <m> 0 </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The only limits point of the set <m> \set{ \of{ -1 }^{ n } + \frac{ 1 }{ n } }_{ n = 0 }^{ \infty } </m> in <m> \R </m> are <m> 1 </m> and <m> -1 </m>.
+            </p>
+          </li>
+        </ul>
       </p>
     </statement>
   </example>
+  
+  <p>
+    A point in a metric space is a limit point of a subset if and only if it is the limit of a sequence of points in that subset which are distinct from that point.
+  </p>
+  
+  <proposition xml:id="proposition-sequential-characterization-of-limit-points">
+    <title>
+      Sequential characterization of limit points
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a metric space <m> \of{ X , \rho } </m>. A point <m> c \in X </m> is a limit point of <m> U </m> if and only if
+        
+        <md>
+          c = \lim_{ n \to \infty }{ u_{ n } }
+        </md>
+        
+        for some sequence <m> \of{ u_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> u_{ n } \in U \setminus \set{ c } </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        First suppose that <m> c </m> is a limit point of <m> U </m>. Then for each positive integer <m> n \geq 1 </m>, <m> \frac{ 1 }{ n } \gt 0 </m>, and so there is a point <m> u_{ n } \in U \setminus \set{ c } </m> so that
+        
+        <md>
+          0 \lt \rho \of{ u_{ n } , c } \lt \frac{ 1 }{ n }
+        </md>.
+        
+        We claim that <m> \of{ u_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> c </m>. Indeed, for any positive real number <m> \epsilon \gt 0 </m>, the Archimedean principle implies that there is a natural number <m> n_{ \epsilon } \gt \frac{ 1 }{ \epsilon } </m>. We observe that
+        
+        <md>
+          \rho \of{ u_{ n } , c } \lt \frac{ 1 }{ n } \leq \frac{ 1 }{ n_{ \epsilon } } \lt \epsilon
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>. We conclude that
+        
+        <md>
+          \lim_{ n \to \infty }{ u_{ n } } = c
+        </md>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that
+        
+        <md>
+          \lim_{ n \to \infty }{ u_{ n } } = c
+        </md>
+        
+        for some sequence <m> \of{ u_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> u_{ n } \in U \setminus \set{ c } </m>. Let <m> \epsilon \gt 0 </m> be a positive real number. Then there is a natural number <m> n_{ \epsilon } \gt 0 </m> so that <m> \rho \of{ u_{ n } , c } \lt \epsilon </m> for all indices <m> n \geq n_{ \epsilon } </m>. In particular,
+        
+        <md>
+          0 \lt \rho \of{ u_{ n_{ \epsilon } } , c } \lt \epsilon
+        </md>,
+        
+        since <m> u_{ n_{ \epsilon } } \neq c </m>. We conclude that <m> c </m> is a limit point of <m> U </m>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    As we have seen, the limit of a convergent map between metric spaces at an isolated point of the domain need not be unique. However, the limit of such a map at a limit point of the domain is unique. This follows immediately from the above results.
+  </p>
+  
+  <corollary xml:id="corollary-uniqueness-of-map-limits">
+    <title>
+      Uniqueness of map limits
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> be a map from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m>. If <m> f </m> converges at a limit point <m> c \in X </m> of <m> X </m>, then it converges to a unique point <m> l \in Y </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Suppose that <m> f </m> converges to two points <m> l , m \in Y </m> at a limit point <m> c \in X </m> of <m> X </m>. Since <m> c </m> is a limit point of <m> X </m>,
+        
+        <md>
+          c = \lim_{ n \to \infty }{ x_{ n } }
+        </md>
+        
+        for some sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> x_{ n } \in X \setminus \set{ c } </m> by <xref ref="proposition-sequential-characterization-of-limit-points"/>. <xref ref="theorem-sequential-characterization-of-map-convergence"/> now implies that
+        
+        <md>
+          l = \lim_{ n \to \infty }{ f \of{ x_{ n } } } = m
+        </md>.
+      </p>
+    </proof>
+  </corollary>
+  
+  <p>
+    Analogously to the case of unique sequential limits, the above corollary leads naturally to the following definition, which is that of the unique <term> limit </term> of a map between metric spaces at a limit point.
+  </p>
+  
+  <definition xml:id="definition-map-limit">
+    <title>
+      Map limit
+    </title>
+    
+    <idx>
+      limit
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \lim_{ x \to c }{ f \of{ x } } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the limit of a map <m> f </m> at a limit point <m> c </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> be a map from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m>. If <m> f </m> converges at a limit point <m> c \in X </m> of <m> X </m>, the unique point <m> l \in Y </m> to which <m> f </m> converges at <m> c </m> is called the <term> limit </term> of <m> f </m> at <m> c </m>, and is denoted
+        
+        <md>
+          \lim_{ x \to c }{ f \of{ x } } = l
+        </md>.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    Again, note the ambiguity of the above notation; it is entirely unclear with respect to which metrics this convergence is satisfied. Indeed, as in the case of sequential limits, maps between sets may converge in one pair of metrics and diverge in another, or may converge to different limits in different metrics. We will try to avoid this ambiguity if at all possible. Analogously to the case of sequential limits, if the map inside the limit operator is a map between real coordinate spaces, it will usually be safe to assume that convergence is with respect to the relevant Euclidean metrics.
+  </p>
 
--->
+  <example xml:id="example-map-limits">
+    <title>
+      Map limits
+    </title>
+    
+    <statement>
+      <p>
+        Consider the real-valued function <m> f \colon \R \to \R </m> defined by the formula <m> f \of{ x } = 2 x + 1 </m>. We claim that
+        
+        <md>
+          \lim_{ x \to c }{ f \of{ x } } = 2 c + 1
+        </md>
+        
+        for all points <m> c \in \R </m>.
+      </p>
+      
+      <p>
+        Indeed, let <m> \epsilon \gt 0 </m> be a positive real number, and consider the positive real number <m> \delta = \frac{ \epsilon }{ 2 } \gt 0 </m>. We observe that
+        
+        <md>
+          <mrow>
+            d \of{ f \of{ x } , 2 c + 1 } = \abs{ 2 x + 1 - \of{ 2 c + 1 } } = \abs{ 2 \of{ x - c } }
+          </mrow>
+          
+          <mrow>
+            \amp = 2 \abs{ x - c } = 2 d \of{ x , c } \lt 2 \delta = \epsilon
+          </mrow>
+        </md>
+        
+        for all points <m> x \in \R </m> so that <m> 0 \lt d \of{ x , c } \lt \delta </m>, and so <m> f </m> converges to <m> 2 c + 1 </m> at <m> c </m>. Since <m> c </m> is a limit point of <m> \R </m>, we conclude that
+        
+        <md>
+          \lim_{ x \to c }{ f \of{ x } } = 2 c + 1
+        </md>.
+      </p>
+    </statement>
+  </example>
+</subsection>

@@ -19,7 +19,7 @@
 
   <conclusion>
     <p>
-      Text after the last subsection.
+      In this section, we have seen several ways in which the convergence of objects in an arbitrary metric space can be reduced to convergence of related objects in the real line <m> \R </m> taken with the Euclidean metric <m> d </m>. In this way, the topic of convergence in the Euclidean metric <m> d </m> on <m> \R </m> plays a central role in the point-set topology of metric spaces. In the next section, we will investigate the limiting behavior of sequences of real numbers and of real-valued functions on metric spaces in greater depth.
     </p>
   </conclusion>
 
