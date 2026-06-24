@@ -271,9 +271,9 @@
     We have just seen that the question of convergence or divergence in an arbitrary metric space can be reduced to the question of convergence or divergence of a related sequence of real numbers in the Euclidean metric. We will begin our study of these Euclidean limits by generalizing to the metric induced on real coordinate space by an arbitrary <m> p </m>-norm. In real coordinate space, sequential convergence in the Euclidean metric is equivalent to sequential convergence in any of the metrics induced on real coordinate space by a <m> p </m>-norm. In fact, something much stronger and much more useful is true; we can reduce the question of convergence or divergence of any sequence of complex coordinate vectors in such a metric to the question of the convergence or divergence of the component sequences in the Euclidean metric on the real numbers.
   </p>
   
-  <theorem xml:id="theorem-sequential-convergence-in-the-p-norm">
+  <theorem xml:id="theorem-sequential-convergence-in-the-p-metric">
     <title>
-      Sequential convergence in the <m> p </m>-norm
+      Sequential convergence in the <m> p </m>-metric
     </title>
     
     <statement>
@@ -334,7 +334,7 @@
   </theorem>
   
   <p>
-    <xref ref="theorem-sequential-convergence-in-the-p-norm"/> implies that, in order to know everything about sequential convergence and divergence in the metric induced on real coordinate space by a <m> p </m>-norm, it suffices to know about the convergence and divergence of sequences of real numbers in the Euclidean metric. Moreover, all of the <m> p </m>-metrics induced on real coordinate space by the <m> p </m>-norms are equivalent with respect to the question of sequential convergence and divergence; that is, the convergence of a sequence of real coordinate vectors converges in the metric induced on real coordinate space by a <m> p </m>-norm does not depend on <m> p </m>.
+    <xref ref="theorem-sequential-convergence-in-the-p-metric"/> implies that, in order to know everything about sequential convergence and divergence in the metric induced on real coordinate space by a <m> p </m>-norm, it suffices to know about the convergence and divergence of sequences of real numbers in the Euclidean metric. Moreover, all of the <m> p </m>-metrics induced on real coordinate space by the <m> p </m>-norms are equivalent with respect to the question of sequential convergence and divergence; that is, the convergence of a sequence of real coordinate vectors converges in the metric induced on real coordinate space by a <m> p </m>-norm does not depend on <m> p </m>.
   </p>
 
   <conclusion>

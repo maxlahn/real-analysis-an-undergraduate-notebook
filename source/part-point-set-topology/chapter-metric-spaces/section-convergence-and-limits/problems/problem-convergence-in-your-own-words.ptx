@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="problem-convergence-in-your-own-words" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Convergence in your own words
+  </title>
+  
+  <introduction>
+    <p>
+      Describe <em> in your own words </em> the given mode of convergence. <alert> Do not </alert> just copy the definition.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Describe <em> in your own words </em> what it means for a sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> x_{ n } \in X </m> in a metric space <m> \of{ X , \rho } </m> to converge to a limit <m> x \in X </m>.
+      </p>
+    </statement>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Describe <em> in your own words </em> what it means for a sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> of maps <m> f \colon X \to Y </m> from a set <m> X </m> to a metric space <m> \of{ Y , \rho } </m> to converge pointwise to a limit <m> f \colon X \to Y </m>.
+      </p>
+    </statement>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Describe <em> in your own words </em> what it means for a sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> of maps <m> f \colon X \to Y </m> from a set <m> X </m> to a metric space <m> \of{ Y , \rho } </m> to converge uniformly to a limit <m> f \colon X \to Y </m>.
+      </p>
+    </statement>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Describe <em> in your own words </em> what it means for a map <m> f \colon X \to Y </m> from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m> to converge at a point <m> c \in X </m> to a limit <m> l \in Y </m>.
+      </p>
+    </statement>
+  </exercise>
+</exercisegroup>

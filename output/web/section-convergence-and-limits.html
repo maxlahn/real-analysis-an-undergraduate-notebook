@@ -708,8 +708,11 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Limits in the Euclidean Metric</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#exercises-limits-in-the-euclidean-metric" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#reading-questions-limits-in-the-euclidean-metric" class="internal"><span class="codenumber">3.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#subsection-limits-and-arithmetic" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Limits and Arithmetic</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#subsection-divergence-to-infinity" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Divergence to Infinity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#subsection-upper-and-lower-limits" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Upper and Lower Limits</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#exercises-limits-in-the-euclidean-metric" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#reading-questions-limits-in-the-euclidean-metric" class="internal"><span class="codenumber">3.3.5</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -1104,26 +1107,26 @@ d \of{ \rho \of{ x_{ n } , x } , 0 } = \rho \of{ x_{ n } , x } \lt \epsilon
 </div>
 <div class="para" id="subsection-sequential-convergence-15">We have just seen that the question of convergence or divergence in an arbitrary metric space can be reduced to the question of convergence or divergence of a related sequence of real numbers in the Euclidean metric. We will begin our study of these Euclidean limits by generalizing to the metric induced on real coordinate space by an arbitrary <span class="process-math">\(p \)</span>-norm. In real coordinate space, sequential convergence in the Euclidean metric is equivalent to sequential convergence in any of the metrics induced on real coordinate space by a <span class="process-math">\(p \)</span>-norm. In fact, something much stronger and much more useful is true; we can reduce the question of convergence or divergence of any sequence of complex coordinate vectors in such a metric to the question of the convergence or divergence of the component sequences in the Euclidean metric on the real numbers.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-sequential-convergence-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="theorem-sequential-convergence-in-the-p-norm"><h4 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequential convergence in the <span class="process-math">\(p \)</span>-norm.</span>
+<article class="theorem theorem-like" id="theorem-sequential-convergence-in-the-p-metric"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequential convergence in the <span class="process-math">\(p \)</span>-metric.</span>
 </h4>
-<div class="para" id="theorem-sequential-convergence-in-the-p-norm-2-1">Let <span class="process-math">\(m \in \N \)</span> be a natural number, and consider a sequence <span class="process-math">\(\of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } \)</span> of vectors <span class="process-math">\(\vect{ x }_{ n } = \of{ x_{ j , n } }_{ j = 1 }^{ m } \in \R^{ m } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-sequential-convergence-in-the-p-norm-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="theorem-sequential-convergence-in-the-p-metric-2-1">Let <span class="process-math">\(m \in \N \)</span> be a natural number, and consider a sequence <span class="process-math">\(\of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } \)</span> of vectors <span class="process-math">\(\vect{ x }_{ n } = \of{ x_{ j , n } }_{ j = 1 }^{ m } \in \R^{ m } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-sequential-convergence-in-the-p-metric-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="theorem-sequential-convergence-in-the-p-norm-2-2">For any vector <span class="process-math">\(\vect{ x } = \of{ x_{ j } }_{ j = 1 }^{ m } \)</span> and real number <span class="process-math">\(1 \leq p \lt \infty \text{,}\)</span> the sequence <span class="process-math">\(\of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(\vect{ x } \)</span> in the <span class="process-math">\(p \)</span>-metric <span class="process-math">\(d_{ p } \)</span> on <span class="process-math">\(\R^{ m } \)</span> if and only if for all indices <span class="process-math">\(1 \leq j \leq m \text{,}\)</span> the sequence <span class="process-math">\(\of{ x_{ j , n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(x_{ j } \)</span> in the Euclidean metric <span class="process-math">\(d \)</span> on <span class="process-math">\(\R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-sequential-convergence-in-the-p-norm-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="theorem-sequential-convergence-in-the-p-metric-2-2">For any vector <span class="process-math">\(\vect{ x } = \of{ x_{ j } }_{ j = 1 }^{ m } \)</span> and real number <span class="process-math">\(1 \leq p \lt \infty \text{,}\)</span> the sequence <span class="process-math">\(\of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(\vect{ x } \)</span> in the <span class="process-math">\(p \)</span>-metric <span class="process-math">\(d_{ p } \)</span> on <span class="process-math">\(\R^{ m } \)</span> if and only if for all indices <span class="process-math">\(1 \leq j \leq m \text{,}\)</span> the sequence <span class="process-math">\(\of{ x_{ j , n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(x_{ j } \)</span> in the Euclidean metric <span class="process-math">\(d \)</span> on <span class="process-math">\(\R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-sequential-convergence-in-the-p-metric-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 3.2.7: Sequential convergence in the  p -norm"><a href="#theorem-sequential-convergence-in-the-p-norm" title="Copy heading and permalink for Theorem 3.2.7: Sequential convergence in the  p -norm" aria-label="Copy heading and permalink for Theorem 3.2.7: Sequential convergence in the  p -norm">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 3.2.7: Sequential convergence in the  p -metric"><a href="#theorem-sequential-convergence-in-the-p-metric" title="Copy heading and permalink for Theorem 3.2.7: Sequential convergence in the  p -metric" aria-label="Copy heading and permalink for Theorem 3.2.7: Sequential convergence in the  p -metric">🔗</a></div>
 </article>
-<details id="theorem-sequential-convergence-in-the-p-norm-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<details id="theorem-sequential-convergence-in-the-p-metric-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
 <article class="hiddenproof knowl__content">
-<div class="para logical" id="theorem-sequential-convergence-in-the-p-norm-3-1">
+<div class="para logical" id="theorem-sequential-convergence-in-the-p-metric-3-1">
 <div class="para">First suppose that <span class="process-math">\(\of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(\vect{ x } \)</span> in the <span class="process-math">\(p \)</span>-metric <span class="process-math">\(d_{ p } \)</span> on <span class="process-math">\(\R^{ m } \text{.}\)</span> Let <span class="process-math">\(1 \leq j \leq m \text{,}\)</span> and consider a positive real number <span class="process-math">\(\epsilon \gt 0 \text{.}\)</span> Then there is a natural number <span class="process-math">\(n_{ \epsilon } \in \N \)</span> so that</div>
-<div class="displaymath process-math" id="theorem-sequential-convergence-in-the-p-norm-3-1-9">
+<div class="displaymath process-math" id="theorem-sequential-convergence-in-the-p-metric-3-1-9">
 \begin{equation*}
 d_{ p } \of{ \vect{ x }_{ n } , \vect{ x } } \lt \epsilon
 \end{equation*}
 </div>
 <div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> We observe that</div>
-<div class="displaymath process-math" id="theorem-sequential-convergence-in-the-p-norm-3-1-11">
+<div class="displaymath process-math" id="theorem-sequential-convergence-in-the-p-metric-3-1-11">
 \begin{align*}
 d \of{ x_{ j , n } , x_{ j } }^{ p } \amp = \abs{ x_{ j , n } - x_{ j } }^{ p } \leq \sum_{ k = 1 }^{ m }{ \abs{ x_{ k , n } - x_{ k } }^{ p } }\\
 \amp = \norm{ \vect{ x }_{ n } - \vect{ x } }_{ p }^{ p } = d_{ p } \of{ \vect{ x }_{ n } , \vect{ x } }^{ p } \lt \epsilon^{ p }\text{,}
@@ -1131,17 +1134,17 @@ d \of{ x_{ j , n } , x_{ j } }^{ p } \amp = \abs{ x_{ j , n } - x_{ j } }^{ p } 
 </div>
 <div class="para">so that <span class="process-math">\(d \of{ x_{ j , n } , x_{ j } } \lt \epsilon \)</span> for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> In particular, <span class="process-math">\(\of{ x_{ j , n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(x_{ j } \)</span> in the Euclidean metric <span class="process-math">\(d \)</span> on <span class="process-math">\(\R \text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#theorem-sequential-convergence-in-the-p-norm-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-sequential-convergence-in-the-p-metric-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="theorem-sequential-convergence-in-the-p-norm-3-2">
+<div class="para logical" id="theorem-sequential-convergence-in-the-p-metric-3-2">
 <div class="para">Conversely, now suppose that for all indices <span class="process-math">\(1 \leq j \leq m \text{,}\)</span> <span class="process-math">\(\of{ x_{ j , n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(x_{ j } \)</span> in the Euclidean metric <span class="process-math">\(d \)</span> on <span class="process-math">\(\R \text{.}\)</span> Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Then <span class="process-math">\(\frac{ \epsilon }{ m^{ \frac{ 1 }{ p } } } \gt 0 \)</span> is a positive real number, and so for each index <span class="process-math">\(1 \leq j \leq m \)</span> there is a natural number <span class="process-math">\(n_{ j , \epsilon } \)</span> so that</div>
-<div class="displaymath process-math" id="theorem-sequential-convergence-in-the-p-norm-3-2-10">
+<div class="displaymath process-math" id="theorem-sequential-convergence-in-the-p-metric-3-2-10">
 \begin{equation*}
 d \of{ x_{ j , n } , x_{ j } } \lt \frac{ \epsilon }{ m^{ \frac{ 1 }{ p } } }
 \end{equation*}
 </div>
 <div class="para">for all indices <span class="process-math">\(n \geq n_{ j , \epsilon } \text{.}\)</span> Let <span class="process-math">\(n_{ \epsilon } = \max_{ 1 \leq j \leq m }{ n_{ j , \epsilon } } \text{,}\)</span> and note that</div>
-<div class="displaymath process-math" id="theorem-sequential-convergence-in-the-p-norm-3-2-13">
+<div class="displaymath process-math" id="theorem-sequential-convergence-in-the-p-metric-3-2-13">
 \begin{gather*}
 d_{ p } \of{ \vect{ x }_{ n } , \vect{ x } }^{ p } = \sum_{ j = 1 }^{ m }{ \abs{ x_{ j , n } - x_{ j } }^{ p } } = \sum_{ j = 1 }^{ m }{ d \of{ x_{ j , n } , x_{ j } }^{ p } }\\
 \lt \sum_{ j = 1 }^{ m }{ \of{ \frac{ \epsilon }{ m^{ \frac{ 1 }{ p } } } }^{ p } } = \sum_{ j = 1 }^{ m }{ \frac{ \epsilon^{ p } }{ m } } = \epsilon^{ p }
@@ -1149,12 +1152,12 @@ d_{ p } \of{ \vect{ x }_{ n } , \vect{ x } }^{ p } = \sum_{ j = 1 }^{ m }{ \abs{
 </div>
 <div class="para">and therefore <span class="process-math">\(d_{ p } \of{ \vect{ x }_{ n } , \vect{ x } } \lt \epsilon \)</span> for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> We conclude that <span class="process-math">\(\of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(\vect{ x } \)</span> in the <span class="process-math">\(p \)</span>-metric <span class="process-math">\(d_{ p } \)</span> on <span class="process-math">\(\R^{ n } \text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#theorem-sequential-convergence-in-the-p-norm-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-sequential-convergence-in-the-p-metric-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 3.2.7.1"><a href="#theorem-sequential-convergence-in-the-p-norm-3" title="Copy heading and permalink for Proof 3.2.7.1" aria-label="Copy heading and permalink for Proof 3.2.7.1">🔗</a></div>
+<div class="autopermalink" data-description="Proof 3.2.7.1"><a href="#theorem-sequential-convergence-in-the-p-metric-3" title="Copy heading and permalink for Proof 3.2.7.1" aria-label="Copy heading and permalink for Proof 3.2.7.1">🔗</a></div>
 </article></details>
 <div class="para" id="subsection-sequential-convergence-17">
-<a href="section-convergence-and-limits.html#theorem-sequential-convergence-in-the-p-norm" class="xref" data-knowl="./knowl/xref/theorem-sequential-convergence-in-the-p-norm.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.7: Sequential convergence in the  p -norm">Theorem 3.2.7 Sequential convergence in the <span class="process-math">\(p \)</span>-norm</a> implies that, in order to know everything about sequential convergence and divergence in the metric induced on real coordinate space by a <span class="process-math">\(p \)</span>-norm, it suffices to know about the convergence and divergence of sequences of real numbers in the Euclidean metric. Moreover, all of the <span class="process-math">\(p \)</span>-metrics induced on real coordinate space by the <span class="process-math">\(p \)</span>-norms are equivalent with respect to the question of sequential convergence and divergence; that is, the convergence of a sequence of real coordinate vectors converges in the metric induced on real coordinate space by a <span class="process-math">\(p \)</span>-norm does not depend on <span class="process-math">\(p \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsection-sequential-convergence-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<a href="section-convergence-and-limits.html#theorem-sequential-convergence-in-the-p-metric" class="xref" data-knowl="./knowl/xref/theorem-sequential-convergence-in-the-p-metric.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.7: Sequential convergence in the  p -metric">Theorem 3.2.7 Sequential convergence in the <span class="process-math">\(p \)</span>-metric</a> implies that, in order to know everything about sequential convergence and divergence in the metric induced on real coordinate space by a <span class="process-math">\(p \)</span>-norm, it suffices to know about the convergence and divergence of sequences of real numbers in the Euclidean metric. Moreover, all of the <span class="process-math">\(p \)</span>-metrics induced on real coordinate space by the <span class="process-math">\(p \)</span>-norms are equivalent with respect to the question of sequential convergence and divergence; that is, the convergence of a sequence of real coordinate vectors converges in the metric induced on real coordinate space by a <span class="process-math">\(p \)</span>-norm does not depend on <span class="process-math">\(p \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsection-sequential-convergence-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <section class="conclusion" id="subsection-sequential-convergence-18">
 <div class="para logical" id="subsection-sequential-convergence-18-1">
@@ -2106,8 +2109,164 @@ d_{ n } \of{ x } = \frac{ 1 }{ 3^{ x + n } }\text{.}
 </div>
 <div class="autopermalink" data-description="Exercise Group 3.2.4.8–11: Pointwise and uniform convergence"><a href="#exercise-pointwise-and-uniform-convergence" title="Copy heading and permalink for Exercise Group 3.2.4.8–11: Pointwise and uniform convergence" aria-label="Copy heading and permalink for Exercise Group 3.2.4.8–11: Pointwise and uniform convergence">🔗</a></div>
 </div>
-<section class="conclusion" id="exercises-convergence-and-limits-5">
-<div class="para" id="exercises-convergence-and-limits-5-1">Short answers and/or in-depth solutions to these exercises are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-convergence-and-limits-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="exercisegroup" id="exercise-limit-points-and-isolated-points">
+<h4 class="heading"><span class="title">Limit points and isolated points.</span></h4>
+<div class="introduction" id="exercise-limit-points-and-isolated-points-2">
+<div class="para" id="exercise-limit-points-and-isolated-points-2-1">Find all limit points and isolated points of the given subset of the Euclidean plane <span class="process-math">\(\R^{ 2 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-limit-points-and-isolated-points-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-limit-points-and-isolated-points-3"><h5 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercise-limit-points-and-isolated-points-3-1-1">
+<div class="para">Let <span class="process-math">\(U \)</span> be the subset of the Euclidean plane <span class="process-math">\(\R^{ 2 } \)</span> defined by</div>
+<div class="displaymath process-math" id="exercise-limit-points-and-isolated-points-3-1-1-3">
+\begin{equation*}
+U = \setmid{ \vect{ x } \in \R^{ 2 } }{ 1 \leq \norm{ \vect{ x } } \lt 2 }\text{.}
+\end{equation*}
+</div>
+<div class="para">Find all limit points and isolated points of <span class="process-math">\(U \)</span> in <span class="process-math">\(\R^{ 2 } \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-limit-points-and-isolated-points-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.2.4.12"><a href="#exercise-limit-points-and-isolated-points-3" title="Copy heading and permalink for Problem 3.2.4.12" aria-label="Copy heading and permalink for Problem 3.2.4.12">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-limit-points-and-isolated-points-4"><h5 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercise-limit-points-and-isolated-points-4-1-1">
+<div class="para">Let <span class="process-math">\(V \)</span> be the subset of the Euclidean plane <span class="process-math">\(\R^{ 2 } \)</span> defined by</div>
+<div class="displaymath process-math" id="exercise-limit-points-and-isolated-points-4-1-1-3">
+\begin{equation*}
+V = \setmid{ \vect{ x } \in \R^{ 2 } }{ \norm{ \vect{ x } } \in \N }\text{.}
+\end{equation*}
+</div>
+<div class="para">Find all limit points and isolated points of <span class="process-math">\(V \)</span> in <span class="process-math">\(\R^{ 2 } \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-limit-points-and-isolated-points-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.2.4.13"><a href="#exercise-limit-points-and-isolated-points-4" title="Copy heading and permalink for Problem 3.2.4.13" aria-label="Copy heading and permalink for Problem 3.2.4.13">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-limit-points-and-isolated-points-5"><h5 class="heading"><span class="codenumber">14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercise-limit-points-and-isolated-points-5-1-1">
+<div class="para">Let <span class="process-math">\(W \)</span> be the subset of the Euclidean plane <span class="process-math">\(\R^{ 2 } \)</span> defined by</div>
+<div class="displaymath process-math" id="exercise-limit-points-and-isolated-points-5-1-1-3">
+\begin{equation*}
+W = \setmid{ \of{ x , y } \in \R^{ 2 } }{ x , y \in \Z }\text{.}
+\end{equation*}
+</div>
+<div class="para">Find all limit points and isolated points of <span class="process-math">\(W \)</span> in <span class="process-math">\(\R^{ 2 } \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-limit-points-and-isolated-points-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.2.4.14"><a href="#exercise-limit-points-and-isolated-points-5" title="Copy heading and permalink for Problem 3.2.4.14" aria-label="Copy heading and permalink for Problem 3.2.4.14">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-limit-points-and-isolated-points-6"><h5 class="heading"><span class="codenumber">15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercise-limit-points-and-isolated-points-6-1-1">
+<div class="para">Let <span class="process-math">\(X \)</span> be the subset of the Euclidean plane <span class="process-math">\(\R^{ 2 } \)</span> defined by</div>
+<div class="displaymath process-math" id="exercise-limit-points-and-isolated-points-6-1-1-3">
+\begin{equation*}
+X = \setmid{ \of{ x , y } \in \R^{ 2 } }{ x , y \in \Q }\text{.}
+\end{equation*}
+</div>
+<div class="para">Find all limit points and isolated points of <span class="process-math">\(X \)</span> in <span class="process-math">\(\R^{ 2 } \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-limit-points-and-isolated-points-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.2.4.15"><a href="#exercise-limit-points-and-isolated-points-6" title="Copy heading and permalink for Problem 3.2.4.15" aria-label="Copy heading and permalink for Problem 3.2.4.15">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-limit-points-and-isolated-points-7"><h5 class="heading"><span class="codenumber">16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercise-limit-points-and-isolated-points-7-1-1">
+<div class="para">Let <span class="process-math">\(Y \)</span> be the subset of the Euclidean plane <span class="process-math">\(\R^{ 2 } \)</span> defined by</div>
+<div class="displaymath process-math" id="exercise-limit-points-and-isolated-points-7-1-1-3">
+\begin{equation*}
+Y = \setmid{ \of{ x , y } \in \R^{ 2 } }{ x , y \notin \Q }\text{.}
+\end{equation*}
+</div>
+<div class="para">Find all limit points and isolated points of <span class="process-math">\(Y \)</span> in <span class="process-math">\(\R^{ 2 } \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-limit-points-and-isolated-points-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.2.4.16"><a href="#exercise-limit-points-and-isolated-points-7" title="Copy heading and permalink for Problem 3.2.4.16" aria-label="Copy heading and permalink for Problem 3.2.4.16">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-limit-points-and-isolated-points-8"><h5 class="heading"><span class="codenumber">17<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercise-limit-points-and-isolated-points-8-1-1">
+<div class="para">Let <span class="process-math">\(Z \)</span> be the subset of the Euclidean plane <span class="process-math">\(\R^{ 2 } \)</span> defined by</div>
+<div class="displaymath process-math" id="exercise-limit-points-and-isolated-points-8-1-1-3">
+\begin{equation*}
+Z = \setmid{ \of{ \frac{ 1 }{ m } , \frac{ 1 }{ n } } \in \R^{ 2 } }{ m , n \in \N \setminus \set{ 0 } }\text{.}
+\end{equation*}
+</div>
+<div class="para">Find all limit points and isolated points of <span class="process-math">\(Z \)</span> in <span class="process-math">\(\R^{ 2 } \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-limit-points-and-isolated-points-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.2.4.17"><a href="#exercise-limit-points-and-isolated-points-8" title="Copy heading and permalink for Problem 3.2.4.17" aria-label="Copy heading and permalink for Problem 3.2.4.17">🔗</a></div>
+</article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 3.2.4.12–17: Limit points and isolated points"><a href="#exercise-limit-points-and-isolated-points" title="Copy heading and permalink for Exercise Group 3.2.4.12–17: Limit points and isolated points" aria-label="Copy heading and permalink for Exercise Group 3.2.4.12–17: Limit points and isolated points">🔗</a></div>
+</div>
+<div class="exercisegroup" id="exercise-map-convergence">
+<h4 class="heading"><span class="title">Map convergence.</span></h4>
+<div class="introduction" id="exercise-map-convergence-2">
+<div class="para" id="exercise-map-convergence-2-1">Determine whether or not the given real-valued function converges at the given input. If the function converges, find the limit.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-map-convergence-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-map-convergence-3"><h5 class="heading"><span class="codenumber">18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercise-map-convergence-3-1-1">
+<div class="para">Consider the real-valued function <span class="process-math">\(f \colon \R \to \R \)</span> defined piecewise by the formula</div>
+<div class="displaymath process-math" id="exercise-map-convergence-3-1-1-2">
+\begin{equation*}
+f \of{ x } =
+\begin{cases}
+-1 \amp x \lt 0 \\
+0 \amp x = 0 \\
+1 \amp x \gt 0
+\text{.}\end{cases}
+\end{equation*}
+</div>
+<div class="para">Determine whether or not <span class="process-math">\(f \)</span> converges at <span class="process-math">\(0 \text{.}\)</span> If <span class="process-math">\(f \)</span> converges at <span class="process-math">\(0 \text{,}\)</span> find the limit.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-map-convergence-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.2.4.18"><a href="#exercise-map-convergence-3" title="Copy heading and permalink for Problem 3.2.4.18" aria-label="Copy heading and permalink for Problem 3.2.4.18">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-map-convergence-4"><h5 class="heading"><span class="codenumber">19<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercise-map-convergence-4-1-1">
+<div class="para">Consider the real-valued function <span class="process-math">\(g \colon \R \to \R \)</span> defined by the formula</div>
+<div class="displaymath process-math" id="exercise-map-convergence-4-1-1-2">
+\begin{equation*}
+g \of{ y } = y^{ 2 } - 2 y + 1\text{.}
+\end{equation*}
+</div>
+<div class="para">Determine whether or not <span class="process-math">\(g \)</span> converges at <span class="process-math">\(0 \text{.}\)</span> If <span class="process-math">\(g \)</span> converges at <span class="process-math">\(0 \text{,}\)</span> find the limit.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-map-convergence-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.2.4.19"><a href="#exercise-map-convergence-4" title="Copy heading and permalink for Problem 3.2.4.19" aria-label="Copy heading and permalink for Problem 3.2.4.19">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-map-convergence-5"><h5 class="heading"><span class="codenumber">20<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="exercise-map-convergence-5-1-1">
+<div class="para">Consider the real-valued function <span class="process-math">\(h \colon \clopint{ 0 }{ \infty } \to \R \)</span> defined by the formula</div>
+<div class="displaymath process-math" id="exercise-map-convergence-5-1-1-2">
+\begin{equation*}
+h \of{ z } = \sqrt{ z }\text{.}
+\end{equation*}
+</div>
+<div class="para">Determine whether or not <span class="process-math">\(h \)</span> converges at <span class="process-math">\(4 \text{.}\)</span> If <span class="process-math">\(h \)</span> converges at <span class="process-math">\(4 \text{,}\)</span> find the limit.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-map-convergence-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="exercise-map-convergence-5-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="exercise-map-convergence-5-2-1">Use the fact that <span class="process-math">\(\abs{ \sqrt{ x } - 2 } \cdot \abs{ \sqrt{ x } + 2 } = \abs{ x - 4 } \)</span> for all non-negative real numbers <span class="process-math">\(x \geq 0 \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-map-convergence-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.2.4.20.1"><a href="#exercise-map-convergence-5-2" title="Copy heading and permalink for Hint 3.2.4.20.1" aria-label="Copy heading and permalink for Hint 3.2.4.20.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Problem 3.2.4.20"><a href="#exercise-map-convergence-5" title="Copy heading and permalink for Problem 3.2.4.20" aria-label="Copy heading and permalink for Problem 3.2.4.20">🔗</a></div>
+</article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 3.2.4.18–20: Map convergence"><a href="#exercise-map-convergence" title="Copy heading and permalink for Exercise Group 3.2.4.18–20: Map convergence" aria-label="Copy heading and permalink for Exercise Group 3.2.4.18–20: Map convergence">🔗</a></div>
+</div>
+<section class="conclusion" id="exercises-convergence-and-limits-7">
+<div class="para" id="exercises-convergence-and-limits-7-1">Short answers and/or in-depth solutions to these exercises are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-convergence-and-limits-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><div class="autopermalink" data-description="Reading Questions 3.2.4: Exercises"><a href="#exercises-convergence-and-limits" title="Copy heading and permalink for Reading Questions 3.2.4: Exercises" aria-label="Copy heading and permalink for Reading Questions 3.2.4: Exercises">🔗</a></div>
 </section>
 <section class="reading-questions" id="problems-convergence-and-limits">
@@ -2117,8 +2276,90 @@ d_{ n } \of{ x } = \frac{ 1 }{ 3^{ x + n } }\text{.}
 <section class="introduction" id="problems-convergence-and-limits-2">
 <div class="para" id="problems-convergence-and-limits-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" data-description="Paragraph"><a href="#problems-convergence-and-limits-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="problems-convergence-and-limits-3">
-<div class="para" id="problems-convergence-and-limits-3-1">In-depth solutions to these problems are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#problems-convergence-and-limits-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="exercisegroup" id="problem-convergence-in-your-own-words">
+<h4 class="heading"><span class="title">Convergence in your own words.</span></h4>
+<div class="introduction" id="problem-convergence-in-your-own-words-2">
+<div class="para" id="problem-convergence-in-your-own-words-2-1">Describe <em class="emphasis">in your own words</em> the given mode of convergence. <em class="alert">Do not</em> just copy the definition.<div class="autopermalink" data-description="Paragraph"><a href="#problem-convergence-in-your-own-words-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="problem-convergence-in-your-own-words-3"><h5 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="problem-convergence-in-your-own-words-3-1-1">Describe <em class="emphasis">in your own words</em> what it means for a sequence <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> of points <span class="process-math">\(x_{ n } \in X \)</span> in a metric space <span class="process-math">\(\of{ X , \rho } \)</span> to converge to a limit <span class="process-math">\(x \in X \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#problem-convergence-in-your-own-words-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.2.5.1"><a href="#problem-convergence-in-your-own-words-3" title="Copy heading and permalink for Problem 3.2.5.1" aria-label="Copy heading and permalink for Problem 3.2.5.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="problem-convergence-in-your-own-words-4"><h5 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="problem-convergence-in-your-own-words-4-1-1">Describe <em class="emphasis">in your own words</em> what it means for a sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> of maps <span class="process-math">\(f \colon X \to Y \)</span> from a set <span class="process-math">\(X \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho } \)</span> to converge pointwise to a limit <span class="process-math">\(f \colon X \to Y \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#problem-convergence-in-your-own-words-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.2.5.2"><a href="#problem-convergence-in-your-own-words-4" title="Copy heading and permalink for Problem 3.2.5.2" aria-label="Copy heading and permalink for Problem 3.2.5.2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="problem-convergence-in-your-own-words-5"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="problem-convergence-in-your-own-words-5-1-1">Describe <em class="emphasis">in your own words</em> what it means for a sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> of maps <span class="process-math">\(f \colon X \to Y \)</span> from a set <span class="process-math">\(X \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho } \)</span> to converge uniformly to a limit <span class="process-math">\(f \colon X \to Y \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#problem-convergence-in-your-own-words-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.2.5.3"><a href="#problem-convergence-in-your-own-words-5" title="Copy heading and permalink for Problem 3.2.5.3" aria-label="Copy heading and permalink for Problem 3.2.5.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="problem-convergence-in-your-own-words-6"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="problem-convergence-in-your-own-words-6-1-1">Describe <em class="emphasis">in your own words</em> what it means for a map <span class="process-math">\(f \colon X \to Y \)</span> from a metric space <span class="process-math">\(\of{ X , \rho_{ X } } \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho_{ Y } } \)</span> to converge at a point <span class="process-math">\(c \in X \)</span> to a limit <span class="process-math">\(l \in Y \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#problem-convergence-in-your-own-words-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 3.2.5.4"><a href="#problem-convergence-in-your-own-words-6" title="Copy heading and permalink for Problem 3.2.5.4" aria-label="Copy heading and permalink for Problem 3.2.5.4">🔗</a></div>
+</article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 3.2.5.1–4: Convergence in your own words"><a href="#problem-convergence-in-your-own-words" title="Copy heading and permalink for Exercise Group 3.2.5.1–4: Convergence in your own words" aria-label="Copy heading and permalink for Exercise Group 3.2.5.1–4: Convergence in your own words">🔗</a></div>
+</div>
+<article class="exercise exercise-like" id="problem-eventually-constant-sequences"><h4 class="heading">
+<span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Eventually constant sequences.</span>
+</h4>
+<div class="introduction" id="problem-eventually-constant-sequences-2">
+<div class="para" id="problem-eventually-constant-sequences-2-1">A sequence <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> of elements <span class="process-math">\(x_{ n } \in X \)</span> of a set <span class="process-math">\(X \)</span> is called <dfn class="terminology">eventually constant</dfn> if there is an element <span class="process-math">\(x \in X \)</span> and a natural number <span class="process-math">\(n_{ 0 } \in \N \)</span> so that <span class="process-math">\(x_{ n } = x \)</span> for all indices <span class="process-math">\(n \geq n_{ 0 } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#problem-eventually-constant-sequences-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="problem-eventually-constant-sequences-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="problem-eventually-constant-sequences-3-1-1">Prove that any eventually constant sequence of points in a metric space is convergent.<div class="autopermalink" data-description="Paragraph"><a href="#problem-eventually-constant-sequences-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.2.5.5.a"><a href="#problem-eventually-constant-sequences-3" title="Copy heading and permalink for Task 3.2.5.5.a" aria-label="Copy heading and permalink for Task 3.2.5.5.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="problem-eventually-constant-sequences-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="problem-eventually-constant-sequences-4-1-1">Prove that any sequence of points in a discrete metric space is convergent if and only if it is eventually constant.<div class="autopermalink" data-description="Paragraph"><a href="#problem-eventually-constant-sequences-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.2.5.5.b"><a href="#problem-eventually-constant-sequences-4" title="Copy heading and permalink for Task 3.2.5.5.b" aria-label="Copy heading and permalink for Task 3.2.5.5.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="problem-eventually-constant-sequences-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="problem-eventually-constant-sequences-5-1-1">Give an example of a sequence of real numbers which converges in the Euclidean metric <span class="process-math">\(d \)</span> on <span class="process-math">\(\R \)</span> but diverges in the discrete metric <span class="process-math">\(\delta_{ \R } \)</span> on <span class="process-math">\(\R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#problem-eventually-constant-sequences-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.2.5.5.c"><a href="#problem-eventually-constant-sequences-5" title="Copy heading and permalink for Task 3.2.5.5.c" aria-label="Copy heading and permalink for Task 3.2.5.5.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Problem 3.2.5.5: Eventually constant sequences"><a href="#problem-eventually-constant-sequences" title="Copy heading and permalink for Problem 3.2.5.5: Eventually constant sequences" aria-label="Copy heading and permalink for Problem 3.2.5.5: Eventually constant sequences">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="problem-sequential-convergence-in-the-infinity-metric"><h4 class="heading">
+<span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequential convergence in the infinity metric.</span>
+</h4>
+<div class="para logical" id="problem-sequential-convergence-in-the-infinity-metric-2-1">
+<div class="para">Let <span class="process-math">\(m \in \N \)</span> be a natural number, and consider a sequence <span class="process-math">\(\of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } \)</span> of points <span class="process-math">\(\vect{ x }_{ n } = \of{ x_{ 1 , n } , \dotsc , x_{ m , n } } \in \R^{ m } \text{.}\)</span> Prove that for any vector <span class="process-math">\(\vect{ x } = \of{ x_{ 1 } , \dotsc , x_{ m } } \in \R \text{,}\)</span> the following are equivalent:</div>
+<ol class="lower-alpha lower-alpha-level-1" id="problem-sequential-convergence-in-the-infinity-metric-2-1-5">
+<li id="problem-sequential-convergence-in-the-infinity-metric-2-1-5-1">
+<div class="para" id="problem-sequential-convergence-in-the-infinity-metric-2-1-5-1-1">The sequence <span class="process-math">\(\of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(\vect{ x } \)</span> in the <span class="process-math">\(\infty \)</span>-metric <span class="process-math">\(d_{ \infty } \)</span> on <span class="process-math">\(\R^{ m } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#problem-sequential-convergence-in-the-infinity-metric-2-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.5.6.a"><a href="#problem-sequential-convergence-in-the-infinity-metric-2-1-5-1" title="Copy heading and permalink for Item 3.2.5.6.a" aria-label="Copy heading and permalink for Item 3.2.5.6.a">🔗</a></div>
+</li>
+<li id="problem-sequential-convergence-in-the-infinity-metric-2-1-5-2">
+<div class="para" id="problem-sequential-convergence-in-the-infinity-metric-2-1-5-2-1">For all indices <span class="process-math">\(1 \leq j \leq m \text{,}\)</span> the sequence <span class="process-math">\(\of{ x_{ j , n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(x_{ j } \)</span> in the Euclidean metric <span class="process-math">\(d \)</span> on <span class="process-math">\(\R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#problem-sequential-convergence-in-the-infinity-metric-2-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.5.6.b"><a href="#problem-sequential-convergence-in-the-infinity-metric-2-1-5-2" title="Copy heading and permalink for Item 3.2.5.6.b" aria-label="Copy heading and permalink for Item 3.2.5.6.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#problem-sequential-convergence-in-the-infinity-metric-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="problem-sequential-convergence-in-the-infinity-metric-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="problem-sequential-convergence-in-the-infinity-metric-3-1">You may want to revisit the proof of <a href="section-convergence-and-limits.html#theorem-sequential-convergence-in-the-p-metric" class="xref" data-knowl="./knowl/xref/theorem-sequential-convergence-in-the-p-metric.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.7: Sequential convergence in the  p -metric">Theorem 3.2.7 Sequential convergence in the <span class="process-math">\(p \)</span>-metric</a> for inspiration.<div class="autopermalink" data-description="Paragraph"><a href="#problem-sequential-convergence-in-the-infinity-metric-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.2.5.6.1"><a href="#problem-sequential-convergence-in-the-infinity-metric-3" title="Copy heading and permalink for Hint 3.2.5.6.1" aria-label="Copy heading and permalink for Hint 3.2.5.6.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Problem 3.2.5.6: Sequential convergence in the infinity metric"><a href="#problem-sequential-convergence-in-the-infinity-metric" title="Copy heading and permalink for Problem 3.2.5.6: Sequential convergence in the infinity metric" aria-label="Copy heading and permalink for Problem 3.2.5.6: Sequential convergence in the infinity metric">🔗</a></div>
+</article>
+<section class="conclusion" id="problems-convergence-and-limits-6">
+<div class="para" id="problems-convergence-and-limits-6-1">In-depth solutions to these problems are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#problems-convergence-and-limits-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><div class="autopermalink" data-description="Reading Questions 3.2.5: Problems"><a href="#problems-convergence-and-limits" title="Copy heading and permalink for Reading Questions 3.2.5: Problems" aria-label="Copy heading and permalink for Reading Questions 3.2.5: Problems">🔗</a></div>
 </section><div class="autopermalink" data-description="Section 3.2: Convergence and Limits"><a href="#section-convergence-and-limits" title="Copy heading and permalink for Section 3.2: Convergence and Limits" aria-label="Copy heading and permalink for Section 3.2: Convergence and Limits">🔗</a></div>
 </section>

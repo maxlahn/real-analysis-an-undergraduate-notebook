@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-limits-and-arithmetic" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Limits and Arithmetic
+  </title>
+
+  <introduction>
+    <p>
+      Much of our work in this text will rely on limits taken in Euclidean spaces, and the material introduced in this section is fundamental to the field of real analysis. Euclidean spaces are not just metric objects, however; as normed vector spaces, Euclidean spaces have a vector space structure as well as a norm and an inner product. We will see that Euclidean limits preserve this additional structure; for example, linear combinations of convergent sequences of real coordinate vectors converge in the Euclidean metric to the linear combination of the limits. In fact, this holds true in any normed vector space.
+    </p>
+  </introduction>
+  
+  <proposition xml:id="proposition-limits-and-vector-arithmetic">
+    <title>
+      Limits and vector arithmetic
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \norm{ \oparg } </m> be a norm on a real or complex vector space <m> V </m>, and consider the induced metric <m> \rho </m> on <m> V </m>.
+        
+        <ol>
+          <li>
+            <title>
+              Vector addition
+            </title>
+            
+            <p>
+              For all convergent sequences <m> \of{ \vect{ v }_{ n } }_{ n = 0 }^{ \infty } </m> and <m> \of{ \vect{ w }_{ n } }_{ n = 0 }^{ \infty } </m> of vectors <m> \vect{ v }_{ n } , \vect{ w }_{ n } \in V </m>,
+              
+              <md>
+                \lim_{ n \to \infty }{ \of{ \vect{ v }_{ n } + \vect{ w }_{ n } } } = \lim_{ n \to \infty }{ \vect{ v }_{ n } } + \lim_{ n \to \infty }{ \vect{ w }_{ n } }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Scalar multiplication
+            </title>
+            
+            <p>
+              For all scalars <m> \alpha </m> and convergent sequences <m> \of{ \vect{ v }_{ n } }_{ n = 0 }^{ \infty } </m> of vectors <m> \vect{ v }_{ n } \in V </m>,
+              
+              <md>
+                \lim_{ n \to \infty }{ \alpha \vect{ v }_{ n } } = \alpha \lim_{ n \to \infty }{ \vect{ v }_{ n } }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Norm
+            </title>
+            
+            <p>
+              For all convergent sequences <m> \of{ \vect{ v }_{ n } }_{ n = 0 }^{ \infty } </m> of vectors <m> \vect{ v }_{ n } \in V </m>,
+              
+              <md>
+                \lim_{ n \to \infty }{ \norm{ \vect{ v }_{ n } } } = \norm{ \lim_{ n \to \infty }{ \vect{ v }_{ n } } }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Inner product
+            </title>
+            
+            <p>
+              If the norm <m> \norm{ \oparg } </m> is induced by an inner product <m> \inner{ \oparg }{ \oparg } </m> on <m> V </m>, then for all convergent sequences <m> \of{ \vect{ v }_{ n } }_{ n = 0 }^{ \infty } </m> and <m> \of{ \vect{ w }_{ n } }_{ n = 0 }^{ \infty } </m> of vectors <m> \vect{ v }_{ n } , \vect{ w }_{ n } \in V </m>,
+              
+              <md>
+                \lim_{ n \to \infty }{ \inner{ \vect{ v }_{ n } }{ \vect{ w }_{ n } } } = \inner{ \lim_{ n \to \infty }{ \vect{ v }_{ n } } }{ \lim_{ n \to \infty }{ \vect{ w }_{ n } } }
+              </md>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            Let <m> \vect{ v } = \lim_{ n \to \infty }{ \vect{ v }_{ n } } </m> and <m> \vect{ w } = \lim_{ n \to \infty }{ \vect{ w }_{ n } } </m>. Let <m> \epsilon \gt 0 </m> be a positive real number. Since <m> \frac{ \epsilon }{ 2 } \gt 0 </m> is a positive real number, there are natural numbers <m> m_{ \epsilon } , n_{ \epsilon } \in \N </m> so that
+            
+            <md>
+              \rho \of{ \vect{ v }_{ n } , \vect{ v } } \lt \frac{ \epsilon }{ 2 }
+            </md>
+            
+            for all indices <m> n \geq m_{ \epsilon } </m> and
+            
+            <md>
+              \rho \of{ \vect{ w }_{ n } , \vect{ w } } \lt \frac{ \epsilon }{ 2 }
+            </md>
+            
+            for all indices <m> n \geq n_{ \epsilon } </m>. Let <m> p_{ \epsilon } = \max \of{ m_{ \epsilon } , n_{ \epsilon } } \in \N </m>, and note that
+            
+            <md>
+              <mrow>
+                \rho \of{ \vect{ v }_{ n } + \vect{ w }_{ n } , \vect{ v } + \vect{ w } } \amp = \norm{ \vect{ v }_{ n } + \vect{ w }_{ n } - \of{ \vect{ v } + \vect{ w } } } = \norm{ \vect{ v }_{ n } - \vect{ v } + \vect{ w }_{ n } - \vect{ w } }
+              </mrow>
+              
+              <mrow>
+                \amp \leq \norm{ \vect{ v }_{ n } - \vect{ v } } + \norm{ \vect{ w }_{ n } - \vect{ w } } = \rho \of{ \vect{ v }_{ n } , \vect{ v } } + \rho \of{ \vect{ w }_{ n } , \vect{ w } } \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+              </mrow>
+            </md>
+            
+            for all indices <m> n \geq p_{ \epsilon } </m>. We conclude that
+            
+            <md>
+              \lim_{ n \to \infty }{ \of{ \vect{ v }_{ n } + \vect{ w }_{ n } } } = \vect{ v } + \vect{ w }
+            </md>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Let <m> \vect{ v } = \lim_{ n \to \infty }{ \vect{ v }_{ n } } </m>. Let <m> \epsilon \gt 0 </m> be a positive real number. Note that
+            
+            <md>
+              <mrow>
+                \rho \of{ \alpha \vect{ v }_{ n } , \alpha \vect{ v } } \amp = \norm{ \alpha \vect{ v }_{ n } - \alpha \vect{ v } } = \abs{ \alpha } \norm{ \vect{ v }_{ n } - \vect{ v } }
+              </mrow>
+              
+              <mrow>
+                \amp = \abs{ \alpha } \rho \of{ \vect{ v }_{ n } , \vect{ v } }
+              </mrow>
+            </md>
+            
+            for all indices <m> n \in \N </m>. If <m> \alpha = 0 </m>, then
+            
+            <md>
+              \rho \of{ \alpha \vect{ v }_{ n } , \alpha \vect{ v } } = \abs{ \alpha } \rho \of{ \vect{ v }_{ n } , \vect{ v } } = 0 \cdot \rho \of{ \vect{ v }_{ n } , \vect{ v } } = 0 \lt \epsilon
+            </md>
+            
+            for all indices <m> n \in \N </m>. We conclude that in this case,
+            
+            <md>
+              \lim_{ n \to \infty }{ \alpha \vect{ v }_{ n } } = \alpha \vect{ v }
+            </md>.
+          </p>
+          
+          <p>
+            Now suppose that <m> \alpha \neq 0 </m>. Since <m> \frac{ \epsilon }{ \abs{ \alpha } } \gt 0 </m> is a positive real number, there is a natural number <m> n_{ \epsilon } \in \N </m> so that
+            
+            <md>
+              \rho \of{ \vect{ v }_{ n } , \vect{ v } } \lt \frac{ \epsilon }{ \abs{ \alpha } }
+            </md>
+            
+            for all indices <m> n \geq m_{ \epsilon } </m>. In particular,
+            
+            <md>
+              \rho \of{ \alpha \vect{ v }_{ n } , \alpha \vect{ v } } = \abs{ \alpha } \rho \of{ \vect{ v }_{ n } , \vect{ v } } \lt \abs{ \alpha } \of{ \frac{ \epsilon }{ \abs{ \alpha } } } = \epsilon
+            </md>.
+            
+            We conclude that in this case,
+            
+            <md>
+              \lim_{ n \to \infty }{ \alpha \vect{ v }_{ n } } = \alpha \vect{ v }
+            </md>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Let <m> \vect{ v } = \lim_{ n \to \infty }{ \vect{ v }_{ n } } </m>. Let <m> \epsilon \gt 0 </m> be a positive real number. Then there is a natural number <m> n_{ \epsilon } </m> so that
+            
+            <md>
+              \rho \of{ \vect{ v }_{ n } , \vect{ v } } \lt \epsilon
+            </md>
+            
+            for all indices <m> n \geq n_{ \epsilon } </m>. We observe that <xref ref="proposition-reverse-triangle-inequality"/> implies that
+            
+            <md>
+              <mrow>
+                d \of{ \norm{ \vect{ v }_{ n } } , \norm{ \vect{ v } } } \amp = \abs{ \norm{ \vect{ v }_{ n } } - \norm{ \vect{ v } } } = \abs{ \norm{ \vect{ v }_{ n } - \vect{ 0 } } - \norm{ \vect{ v } - \vect{ 0 } } }
+              </mrow>
+              
+              <mrow>
+                \amp = \abs{ \rho \of{ \vect{ v }_{ n } , \vect{ 0 } } - \rho \of{ \vect{ v } , \vect{ 0 } } } \leq \rho \of{ \vect{ v }_{ n } , \vect{ v } } \lt \epsilon
+              </mrow>
+            </md>
+            
+            for all indices <m> n \geq n_{ \epsilon } </m>, and so
+            
+            <md>
+              \lim_{ n \to \infty }{ \norm{ \vect{ v }_{ n } } } = \norm{ \vect{ v } }
+            </md>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Let <m> \vect{ v } = \lim_{ n \to \infty }{ \vect{ v }_{ n } } </m> and <m> \vect{ w } = \lim_{ n \to \infty }{ \vect{ w }_{ n } } </m>. Let <m> \epsilon \gt 0 </m> be a positive real number. We observe that
+            
+            <md>
+              <mrow>
+                d \of{ \inner{ \vect{ v }_{ n } }{ \vect{ w }_{ n } } , \inner{ \vect{ v } }{ \vect{ w } } } \amp = \abs{ \inner{ \vect{ v }_{ n } }{ \vect{ w }_{ n } } - \inner{ \vect{ v } }{ \vect{ w } } }
+              </mrow>
+              
+              <mrow>
+                \amp = \abs{ \inner{ \vect{ v }_{ n } }{ \vect{ w }_{ n } } - \inner{ \vect{ v } }{ \vect{ w }_{ n } } + \inner{ \vect{ v } }{ \vect{ w }_{ n } } - \inner{ \vect{ v } }{ \vect{ w } } }
+              </mrow>
+              
+              <mrow>
+                \amp = \abs{ \inner{ \vect{ v }_{ n } }{ \vect{ w }_{ n } } - \inner{ \vect{ v } }{ \vect{ w }_{ n } } } + \abs{ \inner{ \vect{ v } }{ \vect{ w }_{ n } } - \inner{ \vect{ v } }{ \vect{ w } } }
+              </mrow>
+              
+              <mrow>
+                \amp = \abs{ \inner{ \vect{ v }_{ n } - \vect{ v } }{ \vect{ w }_{ n } } } + \abs{ \inner{ \vect{ v } }{ \vect{ w }_{ n } - \vect{ w } } }
+              </mrow>
+              
+              <mrow>
+                \amp \leq \norm{ \vect{ v }_{ n } - \vect{ v } } \cdot \norm{ \vect{ w } } + \norm{ \vect{ v } } \cdot \norm{ \vect{ w }_{ n } - \vect{ w } }
+              </mrow>
+              
+              <mrow>
+                \amp = \rho \of{ \vect{ v }_{ n } , \vect{ v } } \cdot \norm{ \vect{ w } } + \norm{ \vect{ v } } \cdot \rho \of{ \vect{ w }_{ n } , \vect{ w } }
+              </mrow>
+            </md>
+            
+            for all indices <m> n \in \N </m> by the Cauchy--Schwarz inequality. There are four cases, depending on whether or not <m> \vect{ v } </m> and <m> \vect{ w } </m> are zero or non-zero vectors. If <m> \vect{ v } = \vect{ w } = \vect{ 0 } </m>, then
+            
+            <md>
+              d \of{ \inner{ \vect{ v }_{ n } }{ \vect{ w }_{ n } } , \inner{ \vect{ v } }{ \vect{ w } } } \leq \rho \of{ \vect{ v }_{ n } , \vect{ v } } \cdot \norm{ \vect{ w } } + \norm{ \vect{ v } } \cdot \rho \of{ \vect{ w }_{ n } , \vect{ w } } = 0 + 0 = 0 \lt \epsilon
+            </md>.
+          </p>
+          
+          <p>
+            If <m> \vect{ v } = \vect{ 0 } </m> and <m> \vect{ w } \neq \vect{ 0 } </m>, then there is a natural number <m> n_{ \epsilon } \in \N </m> so that
+            
+            <md>
+              \rho \of{ \vect{ v }_{ n } , \vect{ v } } \lt \frac{ \epsilon }{ \norm{ \vect{ w } } }
+            </md>
+            
+            for all indices <m> n \geq n_{ \epsilon } </m>. We observe that
+            
+            <md>
+              <mrow>
+                d \of{ \inner{ \vect{ v }_{ n } }{ \vect{ w }_{ n } } , \inner{ \vect{ v } }{ \vect{ w } } } \amp \leq \rho \of{ \vect{ v }_{ n } , \vect{ v } } \cdot \norm{ \vect{ w } } + \norm{ \vect{ v } } \cdot \rho \of{ \vect{ w }_{ n } , \vect{ w } }
+              </mrow>
+              
+              <mrow>
+                \amp \lt \of{ \frac{ \epsilon }{ \norm{ \vect{ w } } } } \norm{ \vect{ w } } + 0 = \epsilon + 0 = \epsilon
+              </mrow>
+            </md>
+            
+            for all indices <m> n \geq n_{ \epsilon } </m>.
+          </p>
+          
+          <p>
+            If <m> \vect{ v } \neq \vect{ 0 } </m> and <m> \vect{ w } = \vect{ 0 } </m>, then there is a natural number <m> n_{ \epsilon } \in \N </m> so that
+            
+            <md>
+              \rho \of{ \vect{ w }_{ n } , \vect{ w } } \lt \frac{ \epsilon }{ \norm{ \vect{ v } } }
+            </md>
+            
+            for all indices <m> n \geq n_{ \epsilon } </m>. We observe that
+            
+            <md>
+              <mrow>
+                d \of{ \inner{ \vect{ v }_{ n } }{ \vect{ w }_{ n } } , \inner{ \vect{ v } }{ \vect{ w } } } \amp \leq \rho \of{ \vect{ v }_{ n } , \vect{ v } } \cdot \norm{ \vect{ w } } + \norm{ \vect{ v } } \cdot \rho \of{ \vect{ w }_{ n } , \vect{ w } }
+              </mrow>
+              
+              <mrow>
+                \amp \lt 0 + \norm{ \vect{ v } } \of{ \frac{ \epsilon }{ \norm{ \vect{ w } } } } \norm{ \vect{ w } } = 0 + \epsilon = \epsilon
+              </mrow>
+            </md>
+            
+            for all indices <m> n \geq n_{ \epsilon } </m>.
+          </p>
+          
+          <p>
+            Finally, if <m> \vect{ v } \neq \vect{ 0 } </m> and <m> \vect{ w } \neq \vect{ 0 } </m>, then there are natural numbers <m> m_{ \epsilon } , n_{ \epsilon } \in \N </m> so that
+            
+            <md>
+              \rho \of{ \vect{ v }_{ n } , \vect{ v } } \lt \frac{ \epsilon }{ 2 \norm{ \vect{ w } } }
+            </md>
+            
+            for all indices <m> n \geq m_{ \epsilon } </m> and
+            
+            <md>
+              \rho \of{ \vect{ w }_{ n } , \vect{ w } } \lt \frac{ \epsilon }{ 2 \norm{ \vect{ v } } }
+            </md>
+            
+            for all indices <m> n \geq n_{ \epsilon } </m>. Let <m> p_{ \epsilon } = \max \of{ \set{ m_{ \epsilon } , n_{ \epsilon } } } </m>. We observe that
+            
+            <md>
+              <mrow>
+                d \of{ \inner{ \vect{ v }_{ n } }{ \vect{ w }_{ n } } , \inner{ \vect{ v } }{ \vect{ w } } } \amp \leq \rho \of{ \vect{ v }_{ n } , \vect{ v } } \cdot \norm{ \vect{ w } } + \norm{ \vect{ v } } \cdot \rho \of{ \vect{ w }_{ n } , \vect{ w } }
+              </mrow>
+              
+              <mrow>
+                \amp \lt \of{ \frac{ \epsilon }{ 2 \norm{ \vect{ w } } } } \norm{ \vect{ w } } + \norm{ \vect{ v } } \of{ \frac{ \epsilon }{ 2 \norm{ \vect{ v } } } } = \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+              </mrow>
+            </md>
+            
+            for all indices <m> n \geq p_{ \epsilon } </m>.
+          </p>
+          
+          <p>
+            In all cases, we conclude that
+            
+            <md>
+              \lim_{ n \to \infty }{ \inner{ \vect{ v }_{ n } }{ \vect{ w }_{ n } } } = \inner{ \vect{ v } }{ \vect{ w } }
+            </md>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </proposition>
+  
+  <p>
+    <xref ref="proposition-limits-and-vector-arithmetic"/> details the ways in which the metric structure induced on a vector space by a norm or inner product interacts nicely with the additional structure of the vector space. In the real numbers <m> \R </m>, there are similar interactions between the metric structure and the standard ordering <m> \leq </m>.
+  </p>
+  
+  <proposition xml:id="proposition-comparison-of-limits">
+    <title>
+      Comparison of limits
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> and <m> \of{ y_{ n } }_{ n = 0 }^{ \infty } </m> be convergent sequences of real numbers <m> x_{ n } , y_{ n } \in \R </m>. If <m> x_{ n } \leq y_{ n } </m> for all indices <m> n \in \N </m>, then
+        
+        <md>
+          \lim_{ n \to \infty }{ x_{ n } } \leq \lim_{ n \to \infty }{ y_{ n } }
+        </md>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        By contraposition. Let <m> x = \lim_{ n \to \infty }{ x_{ n } } </m> and <m> y = \lim_{ n \to \infty }{ y_{ n } } </m>, and suppose that <m> x \gt y </m>. Consider the positive real number
+        
+        <md>
+          \epsilon = \frac{ y - x }{ 2 }
+        </md>.
+        
+        Then there are natural numbers <m> m_{ \epsilon } , n_{ \epsilon } \in \N </m> so that
+        
+        <md>
+          d \of{ x_{ n } , x } \lt \epsilon
+        </md>
+        
+        for all indices <m> n \geq m_{ \epsilon } </m> and
+        
+        <md>
+          d \of{ y_{ n } , y } \lt \epsilon
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>. Let <m> p_{ \epsilon } = \max \of{ \set{ m_{ \epsilon } , n_{ \epsilon } } } \in \N </m>. We observe that
+        
+        <md>
+          x - x_{ p_{ \epsilon } } \leq \abs{ x_{ p_{ \epsilon } } - x } = d \of{ x_{ p_{ \epsilon } } , x } \lt \epsilon = \frac{ y - x }{ 2 }
+        </md>
+        
+        and
+        
+        <md>
+          y_{ p_{ \epsilon } } - y \leq \abs{ y_{ p_{ \epsilon } } - y } = d \of{ y_{ p_{ \epsilon } } , y } \lt \epsilon = \frac{ y - x }{ 2 }
+        </md>,
+        
+        so that
+        
+        <md>
+          y_{ p_{ \epsilon } } \lt \frac{ x + y }{ 2 } \lt x_{ p_{ \epsilon } }
+        </md>.
+      </p>
+      
+      <p>
+        In summary, we have shown that if <m> x \gt y </m>, then <m> x_{ n } \gt y_{ n } </m> for some index <m> n \in \N </m>. Taking the contrapositive, we arrive at the desired result.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    This is as good a place as any to introduce another useful result concerning the relationship between sequential convergence in the real line <m> \R </m> and the standard ordering <m> \leq </m>. Called the <xref ref="theorem-squeeze-theorem" text="title"/>, this result can be used cleverly to avoid lengthy convergence arguments.
+  </p>
+  
+  <theorem xml:id="theorem-squeeze-theorem">
+    <title>
+      Squeeze theorem
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m>, <m> \of{ y_{ n } }_{ n = 0 }^{ \infty } </m>, and <m> \of{ z_{ n } }_{ n = 0 }^{ \infty } </m> be sequences of real numbers <m> x_{ n } , y_{ n } , z_{ n } \in \R </m>. If
+        
+        <md>
+          x_{ n } \leq y_{ n } \leq z_{ n }
+        </md>
+        
+        for all indices <m> n \in \N </m> and <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> and <m> \of{ z_{ n } }_{ n = 0 }^{ \infty } </m> converge to the same real number <m> l \in \R </m>, then <m> \of{ y_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> l </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \epsilon \gt 0 </m> be a positive real number. Then there are natural numbers <m> m_{ \epsilon } , n_{ \epsilon } \in \N </m> so that
+        
+        <md>
+          d \of{ x_{ n } , l } \lt \epsilon
+        </md>
+        
+        for all indices <m> n \geq m_{ \epsilon } </m> and 
+        
+        <md>
+          d \of{ z_{ n } , l } \lt \epsilon
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>. Let <m> p_{ \epsilon } = \max \of{ \set{ m_{ \epsilon } , n_{ \epsilon } } } \in \N </m>, and note that
+        
+        <md>
+          y_{ n } - l \leq z_{ n } - l \leq \abs{ z_{ n } - l } = d \of{ z_{ n } , l } \lt \epsilon
+        </md>
+        
+        and
+        
+        <md>
+          l - y_{ n } \leq l - x_{ n } \leq \abs{ x_{ n } - l } = d \of{ x_{ n } , l } \lt \epsilon
+        </md>
+        
+        for all indices <m> n \geq p_{ \epsilon } </m>. In particular, we conclude that
+        
+        <md>
+          d \of{ y_{ n } , l } = \abs{ y_{ n } - l } = \max \of{ \set{ y_{ n } - l , l - y_{ n } } } \lt \epsilon
+        </md>
+        
+        for all indices <m> n \geq p_{ \epsilon } </m>, and so <m> \of{ y_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> l </m>.
+      </p>
+    </proof>
+  </theorem>
+
+  <example xml:id="example-squeeze-theorem">
+    <title>
+      Squeeze theorem
+    </title>
+    
+    <statement>
+      <p>
+        Since <m> 0 \leq \frac{ 1 }{ n^{ 2 } } \leq \frac{ 1 }{ n } </m> for all positive integers <m> n \geq 1 </m> and
+        
+        <md>
+          \lim_{ n \to \infty }{ 0 } = \lim_{ n \to \infty }{ \frac{ 1 }{ n } } = 0
+        </md>,
+        
+        we can conclude by the <xref ref="theorem-squeeze-theorem" text="title"/> that
+        
+        <md>
+          \lim_{ n \to \infty }{ \frac{ 1 }{ n^{ 2 } } } = 0
+        </md>
+        
+        without worrying about a lengthy convergence argument.
+      </p>
+    </statement>
+  </example>
+
+  
+
+  <conclusion>
+    <p>
+      <xref ref="proposition-limits-and-vector-arithmetic"/> and <xref ref="proposition-comparison-of-limits"/> further justify the choice to emphasize the limiting behavior of objects on the real line <m> \R </m> in the rest of this section; as we have already seen in <xref ref="section-convergence-and-limits"/>, these results further emphasize that knowledge of such limiting behavior can be used to make conclusions about the limiting behavior of a wide variety of metric objects.
+    </p>
+  </conclusion>
+</subsection>

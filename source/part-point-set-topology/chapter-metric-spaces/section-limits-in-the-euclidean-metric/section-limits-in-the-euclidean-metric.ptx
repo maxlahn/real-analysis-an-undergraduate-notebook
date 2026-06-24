@@ -7,12 +7,16 @@
 
   <introduction>
     <p>
-      Text before the first subsection.
+      In the previous section, we defined and explored the convergence and divergence of sequences and maps in the context of general metric spaces. In this section, however, we turn our attention to the limiting behavior in Euclidean spaces specifically. Euclidean spaces, being (at least in low dimensions) good models of the space in which we live, are the metric spaces in which our intuitions about distance are most accurate and useful.
     </p>
   </introduction>
 
-  <!-- <xi:include href="./subsection-TITLE.ptx"/> -->
+  <xi:include href="./subsection-limits-and-arithmetic.ptx"/>
 
+  <xi:include href="./subsection-divergence-to-infinity.ptx"/>
+
+  <xi:include href="./subsection-upper-and-lower-limits.ptx"/>
+  
   <conclusion>
     <p>
       Text after the last subsection.

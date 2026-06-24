@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-eventually-constant-sequences" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Eventually constant sequences
+  </title>
+  
+  <introduction>
+    <p>
+      A sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of elements <m> x_{ n } \in X </m> of a set <m> X </m> is called <term> eventually constant </term> if there is an element <m> x \in X </m> and a natural number <m> n_{ 0 } \in \N </m> so that <m> x_{ n } = x </m> for all indices <m> n \geq n_{ 0 } </m>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that any eventually constant sequence of points in a metric space is convergent.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that any sequence of points in a discrete metric space is convergent if and only if it is eventually constant.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of points <m> x_{ n } \in X </m> in a discrete metric space <m> \of{ X , \delta_{ X } } </m>. If <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is eventually constant, then it is convergent by (a) above. Thus we may suppose that <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges to some point <m> x \in X </m>.
+      </p>
+      
+      <p>
+        Let <m> \epsilon = \frac{ 1 }{ 2 } </m>. Since <m> \epsilon \gt 0 </m> is positive, there is a natural number <m> n_{ \epsilon } \in \N </m> so that
+        
+        <md>
+          \delta_{ X } \of{ x_{ n } , x } \lt \epsilon = \frac{ 1 }{ 2 }
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>. Since the values of <m> \delta_{ X } </m> are <m> 0 </m> and <m> 1 </m>, we conclude that
+        
+        <md>
+          \delta_{ X } \of{ x_{ n } , x } = 0
+        </md>
+        
+        and hence <m> x_{ n } = x </m> for all indices <m> n \geq n_{ \epsilon } </m>. Thus <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is eventually constant.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Give an example of a sequence of real numbers which converges in the Euclidean metric <m> d </m> on <m> \R </m> but diverges in the discrete metric <m> \delta_{ \R } </m> on <m> \R </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        <m> \of{ \frac{ 1 }{ n } }_{ n = 1 }^{ \infty } </m> converges to <m> 0 </m> in the Euclidean metric, but this sequence is not eventually constant and so does not converge in the discrete metric.
+      </p>
+    </solution>
+  </task>
+</exercise>

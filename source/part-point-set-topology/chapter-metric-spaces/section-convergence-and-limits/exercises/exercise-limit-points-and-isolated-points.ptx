@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-limit-points-and-isolated-points" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Limit points and isolated points
+  </title>
+  
+  <introduction>
+    <p>
+      Find all limit points and isolated points of the given subset of the Euclidean plane <m> \R^{ 2 } </m>.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> U </m> be the subset of the Euclidean plane <m> \R^{ 2 } </m> defined by
+        
+        <md>
+          U = \setmid{ \vect{ x } \in \R^{ 2 } }{ 1 \leq \norm{ \vect{ x } } \lt 2 }
+        </md>.
+        
+        Find all limit points and isolated points of <m> U </m> in <m> \R^{ 2 } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        Every point <m> \vect{ x } \in \R^{ 2 } </m> so that <m> 1 \leq \norm{ \vect{ x } } \leq 2 </m> is a limit point of <m> U </m> in <m> \R^{ 2 } </m>, and <m> U </m> has no isolated points.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> V </m> be the subset of the Euclidean plane <m> \R^{ 2 } </m> defined by
+        
+        <md>
+          V = \setmid{ \vect{ x } \in \R^{ 2 } }{ \norm{ \vect{ x } } \in \N }
+        </md>.
+        
+        Find all limit points and isolated points of <m> V </m> in <m> \R^{ 2 } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        Every point <m> \vect{ x } \in \R^{ 2 } </m> so that <m> \norm{ \vect{ x } } \in \N \setminus \set{ 0 } </m> is a positive integer is a limit point of <m> U </m> in <m> \R^{ 2 } </m>, and <m> \vect{ 0 } </m> is the only isolated point of <m> U </m>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> W </m> be the subset of the Euclidean plane <m> \R^{ 2 } </m> defined by
+        
+        <md>
+          W = \setmid{ \of{ x , y } \in \R^{ 2 } }{ x , y \in \Z }
+        </md>.
+        
+        Find all limit points and isolated points of <m> W </m> in <m> \R^{ 2 } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> W </m> has no limit points in <m> \R^{ 2 } </m>, and every point in <m> W </m> is an isolated point.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> X </m> be the subset of the Euclidean plane <m> \R^{ 2 } </m> defined by
+        
+        <md>
+          X = \setmid{ \of{ x , y } \in \R^{ 2 } }{ x , y \in \Q }
+        </md>.
+        
+        Find all limit points and isolated points of <m> X </m> in <m> \R^{ 2 } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        Every point in <m> \R^{ 2 } </m> is a limit point of <m> X </m> in <m> \R^{ 2 } </m>, and <m> X </m> has no isolated points.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> Y </m> be the subset of the Euclidean plane <m> \R^{ 2 } </m> defined by
+        
+        <md>
+          Y = \setmid{ \of{ x , y } \in \R^{ 2 } }{ x , y \notin \Q }
+        </md>.
+        
+        Find all limit points and isolated points of <m> Y </m> in <m> \R^{ 2 } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        Every point in <m> \R^{ 2 } </m> is a limit point of <m> Y </m> in <m> \R^{ 2 } </m>, and <m> Y </m> has no isolated points.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> Z </m> be the subset of the Euclidean plane <m> \R^{ 2 } </m> defined by
+        
+        <md>
+          Z = \setmid{ \of{ \frac{ 1 }{ m } , \frac{ 1 }{ n } } \in \R^{ 2 } }{ m , n \in \N \setminus \set{ 0 } }
+        </md>.
+        
+        Find all limit points and isolated points of <m> Z </m> in <m> \R^{ 2 } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The set of limit points of <m> Z </m> in <m> \R^{ 2 } </m> is
+        
+        <md>
+          Z' = \setmid{ \of{ \frac{ 1 }{ m } , 0 } \in \R^{ 2 } }{ m \in \N \setminus \set{ 0 } } \cup \setmid{ \of{ 0 , \frac{ 1 }{ n } } \in \R^{ 2 } }{ n \in \N \setminus \set{ 0 } }
+        </md>,
+        
+        and every point of <m> Z </m> is an isolated point.
+      </p>
+    </answer>
+  </exercise>
+</exercisegroup>

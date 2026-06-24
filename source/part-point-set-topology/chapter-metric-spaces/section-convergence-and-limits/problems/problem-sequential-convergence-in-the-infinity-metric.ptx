@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-sequential-convergence-in-the-infinity-metric" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Sequential convergence in the infinity metric
+  </title>
+  
+  <statement>
+    <p>
+      Let <m> m \in \N </m> be a natural number, and consider a sequence <m> \of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> \vect{ x }_{ n } = \of{ x_{ 1 , n } , \dotsc , x_{ m , n } } \in \R^{ m } </m>. Prove that for any vector <m> \vect{ x } = \of{ x_{ 1 } , \dotsc , x_{ m } } \in \R </m>, the following are equivalent:
+      
+      <ol>
+        <li>
+          <p>
+            The sequence <m> \of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> \vect{ x } </m> in the <m> \infty </m>-metric <m> d_{ \infty } </m> on <m> \R^{ m } </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            For all indices <m> 1 \leq j \leq m </m>, the sequence <m> \of{ x_{ j , n } }_{ n = 0 }^{ \infty } </m> converges to <m> x_{ j } </m> in the Euclidean metric <m> d </m> on <m> \R </m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </statement>
+  
+  <hint>
+    <p>
+      You may want to revisit the proof of <xref ref="theorem-sequential-convergence-in-the-p-metric"/> for inspiration.
+    </p>
+  </hint>
+  
+  <solution>
+    <p>
+      First suppose that the sequence <m> \of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> \vect{ x } </m> in the <m> \infty </m>-metric <m> d_{ \infty } </m> on <m> \R^{ m } </m>. Fix an index <m> 1 \leq j \leq m </m>, and let <m> \epsilon \gt 0 </m> be a positive real number. Then there is a natural number <m> n_{ \epsilon } \in \N </m> so that
+      
+      <md>
+        d_{ \infty } \of{ \vect{ x }_{ n } , \vect{ x } } \lt \epsilon
+      </md>
+      
+      for all indices <m> n \geq n_{ \epsilon } </m>. We observe that
+      
+      <md>
+        <mrow>
+          d \of{ x_{ j , n } , x_{ j } } \amp = \abs{ x_{ j , n } - x_{ j } } \leq \max_{ 1 \leq k \leq m }{ \abs{ x_{ k , n } - x_{ k } } }
+        </mrow>
+        
+        <mrow>
+          \amp = \norm{ \vect{ x }_{ n } - \vect{ x } }_{ \infty } = d_{ \infty } \of{ \vect{ x }_{ n } , \vect{ x } } \lt \epsilon
+        </mrow>
+      </md>
+      
+      for all indices <m> n \geq n_{ \epsilon } </m>, and so <m> \of{ x_{ j , n } }_{ n = 0 }^{ \infty } </m> converges to <m> x_{ j } </m>.
+    </p>
+    
+    <p>
+      Conversely, now suppose that for all indices <m> 1 \leq j \leq m </m>, the sequence <m> \of{ x_{ j , n } }_{ n = 0 }^{ \infty } </m> converges to <m> x_{ j } </m> in the Euclidean metric <m> d </m> on <m> \R </m>. Let <m> \epsilon \gt 0 </m> be a positive real number. Then for each index <m> 1 \leq j \leq m </m>, there is a natural number <m> n_{ j , \epsilon } \in \N </m> so that
+      
+      <md>
+        d \of{ x_{ j , n } , x_{ j } } \lt \epsilon
+      </md>
+      
+      for all indices <m> n \geq n_{ j , \epsilon } </m>. Let <m> n_{ \epsilon } = \max_{ 1 \leq j \leq m }{ n_{ j , \epsilon } } \in \N </m>, and note that
+      
+      <md>
+        <mrow>
+          d_{ \infty } \of{ \vect{ x }_{ n } , \vect{ x } } \amp = \norm{ \vect{ x }_{ n } - \vect{ x } }_{ \infty } = \max_{ 1 \leq j \leq m }{ \abs{ x_{ j , n } - x_{ j } } }
+        </mrow>
+        
+        <mrow>
+          \amp = \max_{ 1 \leq j \leq m }{ d \of{ x_{ j , n } , x_{ j } } } \lt \max_{ 1 \leq j \leq m }{ \epsilon } = \epsilon
+        </mrow>
+      </md>
+      
+      for all indices <m> n \geq n_{ \epsilon } </m>, and so the sequence <m> \of{ \vect{ x }_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> \vect{ x } </m> in the <m> \infty </m>-metric <m> d_{ \infty } </m> on <m> \R^{ m } </m>.
+    </p>
+  </solution>
+</exercise>
