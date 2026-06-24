@@ -708,8 +708,11 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Limits in the Euclidean Metric</span></a></div>
 <ul class="structural toc-item-list active">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#exercises-limits-in-the-euclidean-metric" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#reading-questions-limits-in-the-euclidean-metric" class="internal"><span class="codenumber">3.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#subsection-limits-and-arithmetic" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Limits and Arithmetic</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#subsection-divergence-to-infinity" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Divergence to Infinity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#subsection-upper-and-lower-limits" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Upper and Lower Limits</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#exercises-limits-in-the-euclidean-metric" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#reading-questions-limits-in-the-euclidean-metric" class="internal"><span class="codenumber">3.3.5</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -897,32 +900,831 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Limits in the Euclidean Metric</span>
 </h2>
 <section class="introduction" id="section-limits-in-the-euclidean-metric-2">
-<div class="para" id="section-limits-in-the-euclidean-metric-2-1">Text before the first subsection.<div class="autopermalink" data-description="Paragraph"><a href="#section-limits-in-the-euclidean-metric-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="section-limits-in-the-euclidean-metric-2-1">In the previous section, we defined and explored the convergence and divergence of sequences and maps in the context of general metric spaces. In this section, however, we turn our attention to the limiting behavior in Euclidean spaces specifically. Euclidean spaces, being (at least in low dimensions) good models of the space in which we live, are the metric spaces in which our intuitions about distance are most accurate and useful.<div class="autopermalink" data-description="Paragraph"><a href="#section-limits-in-the-euclidean-metric-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="section-limits-in-the-euclidean-metric-3">
-<div class="para" id="section-limits-in-the-euclidean-metric-3-1">Text after the last subsection.<div class="autopermalink" data-description="Paragraph"><a href="#section-limits-in-the-euclidean-metric-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="subsection" id="subsection-limits-and-arithmetic">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Limits and Arithmetic</span>
+</h3>
+<section class="introduction" id="subsection-limits-and-arithmetic-2">
+<div class="para" id="subsection-limits-and-arithmetic-2-1">Much of our work in this text will rely on limits taken in Euclidean spaces, and the material introduced in this section is fundamental to the field of real analysis. Euclidean spaces are not just metric objects, however; as normed vector spaces, Euclidean spaces have a vector space structure as well as a norm and an inner product. We will see that Euclidean limits preserve this additional structure; for example, linear combinations of convergent sequences of real coordinate vectors converge in the Euclidean metric to the linear combination of the limits. In fact, this holds true in any normed vector space.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-limits-and-arithmetic-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="proposition theorem-like" id="proposition-limits-and-vector-arithmetic"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Limits and vector arithmetic.</span>
+</h4>
+<div class="para logical" id="proposition-limits-and-vector-arithmetic-2-1">
+<div class="para">Let <span class="process-math">\(\norm{ \oparg } \)</span> be a norm on a real or complex vector space <span class="process-math">\(V \text{,}\)</span> and consider the induced metric <span class="process-math">\(\rho \)</span> on <span class="process-math">\(V \text{.}\)</span>
+</div>
+<ol class="decimal" id="proposition-limits-and-vector-arithmetic-2-1-5">
+<li id="proposition-limits-and-vector-arithmetic-2-1-5-1">
+<span class="heading li--heading"><span class="title li--heading-title">Vector addition.</span></span>
+<div class="para logical" id="proposition-limits-and-vector-arithmetic-2-1-5-1-2">
+<div class="para">For all convergent sequences <span class="process-math">\(\of{ \vect{ v }_{ n } }_{ n = 0 }^{ \infty } \)</span> and <span class="process-math">\(\of{ \vect{ w }_{ n } }_{ n = 0 }^{ \infty } \)</span> of vectors <span class="process-math">\(\vect{ v }_{ n } , \vect{ w }_{ n } \in V \text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-2-1-5-1-2-4">
+\begin{equation*}
+\lim_{ n \to \infty }{ \of{ \vect{ v }_{ n } + \vect{ w }_{ n } } } = \lim_{ n \to \infty }{ \vect{ v }_{ n } } + \lim_{ n \to \infty }{ \vect{ w }_{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-limits-and-vector-arithmetic-2-1-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1: Vector addition"><a href="#proposition-limits-and-vector-arithmetic-2-1-5-1" title="Copy heading and permalink for Item 1: Vector addition" aria-label="Copy heading and permalink for Item 1: Vector addition">🔗</a></div>
+</li>
+<li id="proposition-limits-and-vector-arithmetic-2-1-5-2">
+<span class="heading li--heading"><span class="title li--heading-title">Scalar multiplication.</span></span>
+<div class="para logical" id="proposition-limits-and-vector-arithmetic-2-1-5-2-2">
+<div class="para">For all scalars <span class="process-math">\(\alpha \)</span> and convergent sequences <span class="process-math">\(\of{ \vect{ v }_{ n } }_{ n = 0 }^{ \infty } \)</span> of vectors <span class="process-math">\(\vect{ v }_{ n } \in V \text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-2-1-5-2-2-4">
+\begin{equation*}
+\lim_{ n \to \infty }{ \alpha \vect{ v }_{ n } } = \alpha \lim_{ n \to \infty }{ \vect{ v }_{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-limits-and-vector-arithmetic-2-1-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2: Scalar multiplication"><a href="#proposition-limits-and-vector-arithmetic-2-1-5-2" title="Copy heading and permalink for Item 2: Scalar multiplication" aria-label="Copy heading and permalink for Item 2: Scalar multiplication">🔗</a></div>
+</li>
+<li id="proposition-limits-and-vector-arithmetic-2-1-5-3">
+<span class="heading li--heading"><span class="title li--heading-title">Norm.</span></span>
+<div class="para logical" id="proposition-limits-and-vector-arithmetic-2-1-5-3-2">
+<div class="para">For all convergent sequences <span class="process-math">\(\of{ \vect{ v }_{ n } }_{ n = 0 }^{ \infty } \)</span> of vectors <span class="process-math">\(\vect{ v }_{ n } \in V \text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-2-1-5-3-2-3">
+\begin{equation*}
+\lim_{ n \to \infty }{ \norm{ \vect{ v }_{ n } } } = \norm{ \lim_{ n \to \infty }{ \vect{ v }_{ n } } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-limits-and-vector-arithmetic-2-1-5-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3: Norm"><a href="#proposition-limits-and-vector-arithmetic-2-1-5-3" title="Copy heading and permalink for Item 3: Norm" aria-label="Copy heading and permalink for Item 3: Norm">🔗</a></div>
+</li>
+<li id="proposition-limits-and-vector-arithmetic-2-1-5-4">
+<span class="heading li--heading"><span class="title li--heading-title">Inner product.</span></span>
+<div class="para logical" id="proposition-limits-and-vector-arithmetic-2-1-5-4-2">
+<div class="para">If the norm <span class="process-math">\(\norm{ \oparg } \)</span> is induced by an inner product <span class="process-math">\(\inner{ \oparg }{ \oparg } \)</span> on <span class="process-math">\(V \text{,}\)</span> then for all convergent sequences <span class="process-math">\(\of{ \vect{ v }_{ n } }_{ n = 0 }^{ \infty } \)</span> and <span class="process-math">\(\of{ \vect{ w }_{ n } }_{ n = 0 }^{ \infty } \)</span> of vectors <span class="process-math">\(\vect{ v }_{ n } , \vect{ w }_{ n } \in V \text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-2-1-5-4-2-7">
+\begin{equation*}
+\lim_{ n \to \infty }{ \inner{ \vect{ v }_{ n } }{ \vect{ w }_{ n } } } = \inner{ \lim_{ n \to \infty }{ \vect{ v }_{ n } } }{ \lim_{ n \to \infty }{ \vect{ w }_{ n } } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-limits-and-vector-arithmetic-2-1-5-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4: Inner product"><a href="#proposition-limits-and-vector-arithmetic-2-1-5-4" title="Copy heading and permalink for Item 4: Inner product" aria-label="Copy heading and permalink for Item 4: Inner product">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-limits-and-vector-arithmetic-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 3.3.1: Limits and vector arithmetic"><a href="#proposition-limits-and-vector-arithmetic" title="Copy heading and permalink for Proposition 3.3.1: Limits and vector arithmetic" aria-label="Copy heading and permalink for Proposition 3.3.1: Limits and vector arithmetic">🔗</a></div>
+</article>
+<details id="proposition-limits-and-vector-arithmetic-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<ol class="decimal" id="proposition-limits-and-vector-arithmetic-3-1">
+<li id="proposition-limits-and-vector-arithmetic-3-1-1">
+<div class="para logical" id="proposition-limits-and-vector-arithmetic-3-1-1-1">
+<div class="para">Let <span class="process-math">\(\vect{ v } = \lim_{ n \to \infty }{ \vect{ v }_{ n } } \)</span> and <span class="process-math">\(\vect{ w } = \lim_{ n \to \infty }{ \vect{ w }_{ n } } \text{.}\)</span> Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Since <span class="process-math">\(\frac{ \epsilon }{ 2 } \gt 0 \)</span> is a positive real number, there are natural numbers <span class="process-math">\(m_{ \epsilon } , n_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-3-1-1-1-6">
+\begin{equation*}
+\rho \of{ \vect{ v }_{ n } , \vect{ v } } \lt \frac{ \epsilon }{ 2 }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq m_{ \epsilon } \)</span> and</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-3-1-1-1-8">
+\begin{equation*}
+\rho \of{ \vect{ w }_{ n } , \vect{ w } } \lt \frac{ \epsilon }{ 2 }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> Let <span class="process-math">\(p_{ \epsilon } = \max \of{ m_{ \epsilon } , n_{ \epsilon } } \in \N \text{,}\)</span> and note that</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-3-1-1-1-11">
+\begin{align*}
+\rho \of{ \vect{ v }_{ n } + \vect{ w }_{ n } , \vect{ v } + \vect{ w } } \amp = \norm{ \vect{ v }_{ n } + \vect{ w }_{ n } - \of{ \vect{ v } + \vect{ w } } } = \norm{ \vect{ v }_{ n } - \vect{ v } + \vect{ w }_{ n } - \vect{ w } }\\
+\amp \leq \norm{ \vect{ v }_{ n } - \vect{ v } } + \norm{ \vect{ w }_{ n } - \vect{ w } } = \rho \of{ \vect{ v }_{ n } , \vect{ v } } + \rho \of{ \vect{ w }_{ n } , \vect{ w } } \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+\end{align*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq p_{ \epsilon } \text{.}\)</span> We conclude that</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-3-1-1-1-13">
+\begin{equation*}
+\lim_{ n \to \infty }{ \of{ \vect{ v }_{ n } + \vect{ w }_{ n } } } = \vect{ v } + \vect{ w }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-limits-and-vector-arithmetic-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#proposition-limits-and-vector-arithmetic-3-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="proposition-limits-and-vector-arithmetic-3-1-2">
+<div class="para logical" id="proposition-limits-and-vector-arithmetic-3-1-2-1">
+<div class="para">Let <span class="process-math">\(\vect{ v } = \lim_{ n \to \infty }{ \vect{ v }_{ n } } \text{.}\)</span> Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Note that</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-3-1-2-1-3">
+\begin{align*}
+\rho \of{ \alpha \vect{ v }_{ n } , \alpha \vect{ v } } \amp = \norm{ \alpha \vect{ v }_{ n } - \alpha \vect{ v } } = \abs{ \alpha } \norm{ \vect{ v }_{ n } - \vect{ v } }\\
+\amp = \abs{ \alpha } \rho \of{ \vect{ v }_{ n } , \vect{ v } }
+\end{align*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \in \N \text{.}\)</span> If <span class="process-math">\(\alpha = 0 \text{,}\)</span> then</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-3-1-2-1-6">
+\begin{equation*}
+\rho \of{ \alpha \vect{ v }_{ n } , \alpha \vect{ v } } = \abs{ \alpha } \rho \of{ \vect{ v }_{ n } , \vect{ v } } = 0 \cdot \rho \of{ \vect{ v }_{ n } , \vect{ v } } = 0 \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \in \N \text{.}\)</span> We conclude that in this case,</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-3-1-2-1-8">
+\begin{equation*}
+\lim_{ n \to \infty }{ \alpha \vect{ v }_{ n } } = \alpha \vect{ v }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-limits-and-vector-arithmetic-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-limits-and-vector-arithmetic-3-1-2-2">
+<div class="para">Now suppose that <span class="process-math">\(\alpha \neq 0 \text{.}\)</span> Since <span class="process-math">\(\frac{ \epsilon }{ \abs{ \alpha } } \gt 0 \)</span> is a positive real number, there is a natural number <span class="process-math">\(n_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-3-1-2-2-4">
+\begin{equation*}
+\rho \of{ \vect{ v }_{ n } , \vect{ v } } \lt \frac{ \epsilon }{ \abs{ \alpha } }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq m_{ \epsilon } \text{.}\)</span> In particular,</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-3-1-2-2-6">
+\begin{equation*}
+\rho \of{ \alpha \vect{ v }_{ n } , \alpha \vect{ v } } = \abs{ \alpha } \rho \of{ \vect{ v }_{ n } , \vect{ v } } \lt \abs{ \alpha } \of{ \frac{ \epsilon }{ \abs{ \alpha } } } = \epsilon\text{.}
+\end{equation*}
+</div>
+<div class="para">We conclude that in this case,</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-3-1-2-2-7">
+\begin{equation*}
+\lim_{ n \to \infty }{ \alpha \vect{ v }_{ n } } = \alpha \vect{ v }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-limits-and-vector-arithmetic-3-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#proposition-limits-and-vector-arithmetic-3-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="proposition-limits-and-vector-arithmetic-3-1-3">
+<div class="para logical" id="proposition-limits-and-vector-arithmetic-3-1-3-1">
+<div class="para">Let <span class="process-math">\(\vect{ v } = \lim_{ n \to \infty }{ \vect{ v }_{ n } } \text{.}\)</span> Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Then there is a natural number <span class="process-math">\(n_{ \epsilon } \)</span> so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-reverse-triangle-inequality.html" id="proposition-limits-and-vector-arithmetic-3-1-3-1-4">
+\begin{equation*}
+\rho \of{ \vect{ v }_{ n } , \vect{ v } } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> We observe that <a href="section-introduction-to-metric-geometry.html#proposition-reverse-triangle-inequality" class="xref" data-knowl="./knowl/xref/proposition-reverse-triangle-inequality.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.1.5: Reverse triangle inequality">Proposition 3.1.5 Reverse triangle inequality</a> implies that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-reverse-triangle-inequality.html" id="proposition-limits-and-vector-arithmetic-3-1-3-1-7">
+\begin{align*}
+d \of{ \norm{ \vect{ v }_{ n } } , \norm{ \vect{ v } } } \amp = \abs{ \norm{ \vect{ v }_{ n } } - \norm{ \vect{ v } } } = \abs{ \norm{ \vect{ v }_{ n } - \vect{ 0 } } - \norm{ \vect{ v } - \vect{ 0 } } }\\
+\amp = \abs{ \rho \of{ \vect{ v }_{ n } , \vect{ 0 } } - \rho \of{ \vect{ v } , \vect{ 0 } } } \leq \rho \of{ \vect{ v }_{ n } , \vect{ v } } \lt \epsilon
+\end{align*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{,}\)</span> and so</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-reverse-triangle-inequality.html" id="proposition-limits-and-vector-arithmetic-3-1-3-1-9">
+\begin{equation*}
+\lim_{ n \to \infty }{ \norm{ \vect{ v }_{ n } } } = \norm{ \vect{ v } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-limits-and-vector-arithmetic-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#proposition-limits-and-vector-arithmetic-3-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="proposition-limits-and-vector-arithmetic-3-1-4">
+<div class="para logical" id="proposition-limits-and-vector-arithmetic-3-1-4-1">
+<div class="para">Let <span class="process-math">\(\vect{ v } = \lim_{ n \to \infty }{ \vect{ v }_{ n } } \)</span> and <span class="process-math">\(\vect{ w } = \lim_{ n \to \infty }{ \vect{ w }_{ n } } \text{.}\)</span> Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. We observe that</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-3-1-4-1-4">
+\begin{align*}
+d \of{ \inner{ \vect{ v }_{ n } }{ \vect{ w }_{ n } } , \inner{ \vect{ v } }{ \vect{ w } } } \amp = \abs{ \inner{ \vect{ v }_{ n } }{ \vect{ w }_{ n } } - \inner{ \vect{ v } }{ \vect{ w } } }\\
+\amp = \abs{ \inner{ \vect{ v }_{ n } }{ \vect{ w }_{ n } } - \inner{ \vect{ v } }{ \vect{ w }_{ n } } + \inner{ \vect{ v } }{ \vect{ w }_{ n } } - \inner{ \vect{ v } }{ \vect{ w } } }\\
+\amp = \abs{ \inner{ \vect{ v }_{ n } }{ \vect{ w }_{ n } } - \inner{ \vect{ v } }{ \vect{ w }_{ n } } } + \abs{ \inner{ \vect{ v } }{ \vect{ w }_{ n } } - \inner{ \vect{ v } }{ \vect{ w } } }\\
+\amp = \abs{ \inner{ \vect{ v }_{ n } - \vect{ v } }{ \vect{ w }_{ n } } } + \abs{ \inner{ \vect{ v } }{ \vect{ w }_{ n } - \vect{ w } } }\\
+\amp \leq \norm{ \vect{ v }_{ n } - \vect{ v } } \cdot \norm{ \vect{ w } } + \norm{ \vect{ v } } \cdot \norm{ \vect{ w }_{ n } - \vect{ w } }\\
+\amp = \rho \of{ \vect{ v }_{ n } , \vect{ v } } \cdot \norm{ \vect{ w } } + \norm{ \vect{ v } } \cdot \rho \of{ \vect{ w }_{ n } , \vect{ w } }
+\end{align*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \in \N \)</span> by the Cauchy--Schwarz inequality. There are four cases, depending on whether or not <span class="process-math">\(\vect{ v } \)</span> and <span class="process-math">\(\vect{ w } \)</span> are zero or non-zero vectors. If <span class="process-math">\(\vect{ v } = \vect{ w } = \vect{ 0 } \text{,}\)</span> then</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-3-1-4-1-9">
+\begin{equation*}
+d \of{ \inner{ \vect{ v }_{ n } }{ \vect{ w }_{ n } } , \inner{ \vect{ v } }{ \vect{ w } } } \leq \rho \of{ \vect{ v }_{ n } , \vect{ v } } \cdot \norm{ \vect{ w } } + \norm{ \vect{ v } } \cdot \rho \of{ \vect{ w }_{ n } , \vect{ w } } = 0 + 0 = 0 \lt \epsilon\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-limits-and-vector-arithmetic-3-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-limits-and-vector-arithmetic-3-1-4-2">
+<div class="para">If <span class="process-math">\(\vect{ v } = \vect{ 0 } \)</span> and <span class="process-math">\(\vect{ w } \neq \vect{ 0 } \text{,}\)</span> then there is a natural number <span class="process-math">\(n_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-3-1-4-2-4">
+\begin{equation*}
+\rho \of{ \vect{ v }_{ n } , \vect{ v } } \lt \frac{ \epsilon }{ \norm{ \vect{ w } } }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-3-1-4-2-6">
+\begin{align*}
+d \of{ \inner{ \vect{ v }_{ n } }{ \vect{ w }_{ n } } , \inner{ \vect{ v } }{ \vect{ w } } } \amp \leq \rho \of{ \vect{ v }_{ n } , \vect{ v } } \cdot \norm{ \vect{ w } } + \norm{ \vect{ v } } \cdot \rho \of{ \vect{ w }_{ n } , \vect{ w } }\\
+\amp \lt \of{ \frac{ \epsilon }{ \norm{ \vect{ w } } } } \norm{ \vect{ w } } + 0 = \epsilon + 0 = \epsilon
+\end{align*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-limits-and-vector-arithmetic-3-1-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-limits-and-vector-arithmetic-3-1-4-3">
+<div class="para">If <span class="process-math">\(\vect{ v } \neq \vect{ 0 } \)</span> and <span class="process-math">\(\vect{ w } = \vect{ 0 } \text{,}\)</span> then there is a natural number <span class="process-math">\(n_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-3-1-4-3-4">
+\begin{equation*}
+\rho \of{ \vect{ w }_{ n } , \vect{ w } } \lt \frac{ \epsilon }{ \norm{ \vect{ v } } }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-3-1-4-3-6">
+\begin{align*}
+d \of{ \inner{ \vect{ v }_{ n } }{ \vect{ w }_{ n } } , \inner{ \vect{ v } }{ \vect{ w } } } \amp \leq \rho \of{ \vect{ v }_{ n } , \vect{ v } } \cdot \norm{ \vect{ w } } + \norm{ \vect{ v } } \cdot \rho \of{ \vect{ w }_{ n } , \vect{ w } }\\
+\amp \lt 0 + \norm{ \vect{ v } } \of{ \frac{ \epsilon }{ \norm{ \vect{ w } } } } \norm{ \vect{ w } } = 0 + \epsilon = \epsilon
+\end{align*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-limits-and-vector-arithmetic-3-1-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-limits-and-vector-arithmetic-3-1-4-4">
+<div class="para">Finally, if <span class="process-math">\(\vect{ v } \neq \vect{ 0 } \)</span> and <span class="process-math">\(\vect{ w } \neq \vect{ 0 } \text{,}\)</span> then there are natural numbers <span class="process-math">\(m_{ \epsilon } , n_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-3-1-4-4-4">
+\begin{equation*}
+\rho \of{ \vect{ v }_{ n } , \vect{ v } } \lt \frac{ \epsilon }{ 2 \norm{ \vect{ w } } }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq m_{ \epsilon } \)</span> and</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-3-1-4-4-6">
+\begin{equation*}
+\rho \of{ \vect{ w }_{ n } , \vect{ w } } \lt \frac{ \epsilon }{ 2 \norm{ \vect{ v } } }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> Let <span class="process-math">\(p_{ \epsilon } = \max \of{ \set{ m_{ \epsilon } , n_{ \epsilon } } } \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-3-1-4-4-9">
+\begin{align*}
+d \of{ \inner{ \vect{ v }_{ n } }{ \vect{ w }_{ n } } , \inner{ \vect{ v } }{ \vect{ w } } } \amp \leq \rho \of{ \vect{ v }_{ n } , \vect{ v } } \cdot \norm{ \vect{ w } } + \norm{ \vect{ v } } \cdot \rho \of{ \vect{ w }_{ n } , \vect{ w } }\\
+\amp \lt \of{ \frac{ \epsilon }{ 2 \norm{ \vect{ w } } } } \norm{ \vect{ w } } + \norm{ \vect{ v } } \of{ \frac{ \epsilon }{ 2 \norm{ \vect{ v } } } } = \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+\end{align*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq p_{ \epsilon } \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-limits-and-vector-arithmetic-3-1-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-limits-and-vector-arithmetic-3-1-4-5">
+<div class="para">In all cases, we conclude that</div>
+<div class="displaymath process-math" id="proposition-limits-and-vector-arithmetic-3-1-4-5-1">
+\begin{equation*}
+\lim_{ n \to \infty }{ \inner{ \vect{ v }_{ n } }{ \vect{ w }_{ n } } } = \inner{ \vect{ v } }{ \vect{ w } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-limits-and-vector-arithmetic-3-1-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#proposition-limits-and-vector-arithmetic-3-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Proof 3.3.1.1"><a href="#proposition-limits-and-vector-arithmetic-3" title="Copy heading and permalink for Proof 3.3.1.1" aria-label="Copy heading and permalink for Proof 3.3.1.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-limits-and-arithmetic-4">
+<a href="section-limits-in-the-euclidean-metric.html#proposition-limits-and-vector-arithmetic" class="xref" data-knowl="./knowl/xref/proposition-limits-and-vector-arithmetic.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.3.1: Limits and vector arithmetic">Proposition 3.3.1 Limits and vector arithmetic</a> details the ways in which the metric structure induced on a vector space by a norm or inner product interacts nicely with the additional structure of the vector space. In the real numbers <span class="process-math">\(\R \text{,}\)</span> there are similar interactions between the metric structure and the standard ordering <span class="process-math">\(\leq \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsection-limits-and-arithmetic-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-comparison-of-limits"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comparison of limits.</span>
+</h4>
+<div class="para logical" id="proposition-comparison-of-limits-2-1">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> and <span class="process-math">\(\of{ y_{ n } }_{ n = 0 }^{ \infty } \)</span> be convergent sequences of real numbers <span class="process-math">\(x_{ n } , y_{ n } \in \R \text{.}\)</span> If <span class="process-math">\(x_{ n } \leq y_{ n } \)</span> for all indices <span class="process-math">\(n \in \N \text{,}\)</span> then</div>
+<div class="displaymath process-math" id="proposition-comparison-of-limits-2-1-6">
+\begin{equation*}
+\lim_{ n \to \infty }{ x_{ n } } \leq \lim_{ n \to \infty }{ y_{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-comparison-of-limits-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 3.3.2: Comparison of limits"><a href="#proposition-comparison-of-limits" title="Copy heading and permalink for Proposition 3.3.2: Comparison of limits" aria-label="Copy heading and permalink for Proposition 3.3.2: Comparison of limits">🔗</a></div>
+</article>
+<details id="proposition-comparison-of-limits-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="proposition-comparison-of-limits-3-1">
+<div class="para">By contraposition. Let <span class="process-math">\(x = \lim_{ n \to \infty }{ x_{ n } } \)</span> and <span class="process-math">\(y = \lim_{ n \to \infty }{ y_{ n } } \text{,}\)</span> and suppose that <span class="process-math">\(x \gt y \text{.}\)</span> Consider the positive real number</div>
+<div class="displaymath process-math" id="proposition-comparison-of-limits-3-1-4">
+\begin{equation*}
+\epsilon = \frac{ y - x }{ 2 }\text{.}
+\end{equation*}
+</div>
+<div class="para">Then there are natural numbers <span class="process-math">\(m_{ \epsilon } , n_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math" id="proposition-comparison-of-limits-3-1-6">
+\begin{equation*}
+d \of{ x_{ n } , x } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq m_{ \epsilon } \)</span> and</div>
+<div class="displaymath process-math" id="proposition-comparison-of-limits-3-1-8">
+\begin{equation*}
+d \of{ y_{ n } , y } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> Let <span class="process-math">\(p_{ \epsilon } = \max \of{ \set{ m_{ \epsilon } , n_{ \epsilon } } } \in \N \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="proposition-comparison-of-limits-3-1-11">
+\begin{equation*}
+x - x_{ p_{ \epsilon } } \leq \abs{ x_{ p_{ \epsilon } } - x } = d \of{ x_{ p_{ \epsilon } } , x } \lt \epsilon = \frac{ y - x }{ 2 }
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" id="proposition-comparison-of-limits-3-1-12">
+\begin{equation*}
+y_{ p_{ \epsilon } } - y \leq \abs{ y_{ p_{ \epsilon } } - y } = d \of{ y_{ p_{ \epsilon } } , y } \lt \epsilon = \frac{ y - x }{ 2 }\text{,}
+\end{equation*}
+</div>
+<div class="para">so that</div>
+<div class="displaymath process-math" id="proposition-comparison-of-limits-3-1-13">
+\begin{equation*}
+y_{ p_{ \epsilon } } \lt \frac{ x + y }{ 2 } \lt x_{ p_{ \epsilon } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-comparison-of-limits-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="proposition-comparison-of-limits-3-2">In summary, we have shown that if <span class="process-math">\(x \gt y \text{,}\)</span> then <span class="process-math">\(x_{ n } \gt y_{ n } \)</span> for some index <span class="process-math">\(n \in \N \text{.}\)</span> Taking the contrapositive, we arrive at the desired result.<div class="autopermalink" data-description="Paragraph"><a href="#proposition-comparison-of-limits-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.3.2.1"><a href="#proposition-comparison-of-limits-3" title="Copy heading and permalink for Proof 3.3.2.1" aria-label="Copy heading and permalink for Proof 3.3.2.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-limits-and-arithmetic-6">This is as good a place as any to introduce another useful result concerning the relationship between sequential convergence in the real line <span class="process-math">\(\R \)</span> and the standard ordering <span class="process-math">\(\leq \text{.}\)</span> Called the <a href="section-limits-in-the-euclidean-metric.html#theorem-squeeze-theorem" class="xref" data-knowl="./knowl/xref/theorem-squeeze-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.3: Squeeze theorem">Squeeze theorem</a>, this result can be used cleverly to avoid lengthy convergence arguments.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-limits-and-arithmetic-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="theorem-squeeze-theorem"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Squeeze theorem.</span>
+</h4>
+<div class="para logical" id="theorem-squeeze-theorem-2-1">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \text{,}\)</span> <span class="process-math">\(\of{ y_{ n } }_{ n = 0 }^{ \infty } \text{,}\)</span> and <span class="process-math">\(\of{ z_{ n } }_{ n = 0 }^{ \infty } \)</span> be sequences of real numbers <span class="process-math">\(x_{ n } , y_{ n } , z_{ n } \in \R \text{.}\)</span> If</div>
+<div class="displaymath process-math" id="theorem-squeeze-theorem-2-1-5">
+\begin{equation*}
+x_{ n } \leq y_{ n } \leq z_{ n }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \in \N \)</span> and <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> and <span class="process-math">\(\of{ z_{ n } }_{ n = 0 }^{ \infty } \)</span> converge to the same real number <span class="process-math">\(l \in \R \text{,}\)</span> then <span class="process-math">\(\of{ y_{ n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(l \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-squeeze-theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.3.3: Squeeze theorem"><a href="#theorem-squeeze-theorem" title="Copy heading and permalink for Theorem 3.3.3: Squeeze theorem" aria-label="Copy heading and permalink for Theorem 3.3.3: Squeeze theorem">🔗</a></div>
+</article>
+<details id="theorem-squeeze-theorem-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="theorem-squeeze-theorem-3-1">
+<div class="para">Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Then there are natural numbers <span class="process-math">\(m_{ \epsilon } , n_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math" id="theorem-squeeze-theorem-3-1-3">
+\begin{equation*}
+d \of{ x_{ n } , l } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq m_{ \epsilon } \)</span> and</div>
+<div class="displaymath process-math" id="theorem-squeeze-theorem-3-1-5">
+\begin{equation*}
+d \of{ z_{ n } , l } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> Let <span class="process-math">\(p_{ \epsilon } = \max \of{ \set{ m_{ \epsilon } , n_{ \epsilon } } } \in \N \text{,}\)</span> and note that</div>
+<div class="displaymath process-math" id="theorem-squeeze-theorem-3-1-8">
+\begin{equation*}
+y_{ n } - l \leq z_{ n } - l \leq \abs{ z_{ n } - l } = d \of{ z_{ n } , l } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" id="theorem-squeeze-theorem-3-1-9">
+\begin{equation*}
+l - y_{ n } \leq l - x_{ n } \leq \abs{ x_{ n } - l } = d \of{ x_{ n } , l } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq p_{ \epsilon } \text{.}\)</span> In particular, we conclude that</div>
+<div class="displaymath process-math" id="theorem-squeeze-theorem-3-1-11">
+\begin{equation*}
+d \of{ y_{ n } , l } = \abs{ y_{ n } - l } = \max \of{ \set{ y_{ n } - l , l - y_{ n } } } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq p_{ \epsilon } \text{,}\)</span> and so <span class="process-math">\(\of{ y_{ n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(l \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-squeeze-theorem-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.3.3.1"><a href="#theorem-squeeze-theorem-3" title="Copy heading and permalink for Proof 3.3.3.1" aria-label="Copy heading and permalink for Proof 3.3.3.1">🔗</a></div>
+</article></details>
+<details id="example-squeeze-theorem" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Squeeze theorem.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-squeeze-theorem-2-1">
+<div class="para">Since <span class="process-math">\(0 \leq \frac{ 1 }{ n^{ 2 } } \leq \frac{ 1 }{ n } \)</span> for all positive integers <span class="process-math">\(n \geq 1 \)</span> and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-squeeze-theorem.html" id="example-squeeze-theorem-2-1-3">
+\begin{equation*}
+\lim_{ n \to \infty }{ 0 } = \lim_{ n \to \infty }{ \frac{ 1 }{ n } } = 0\text{,}
+\end{equation*}
+</div>
+<div class="para">we can conclude by the <a href="section-limits-in-the-euclidean-metric.html#theorem-squeeze-theorem" class="xref" data-knowl="./knowl/xref/theorem-squeeze-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.3: Squeeze theorem">Squeeze theorem</a> that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-squeeze-theorem.html" id="example-squeeze-theorem-2-1-5">
+\begin{equation*}
+\lim_{ n \to \infty }{ \frac{ 1 }{ n^{ 2 } } } = 0
+\end{equation*}
+</div>
+<div class="para">without worrying about a lengthy convergence argument.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-squeeze-theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.3.4: Squeeze theorem"><a href="#example-squeeze-theorem" title="Copy heading and permalink for Example 3.3.4: Squeeze theorem" aria-label="Copy heading and permalink for Example 3.3.4: Squeeze theorem">🔗</a></div>
+</article></details>
+<section class="conclusion" id="subsection-limits-and-arithmetic-9">
+<div class="para" id="subsection-limits-and-arithmetic-9-1">
+<a href="section-limits-in-the-euclidean-metric.html#proposition-limits-and-vector-arithmetic" class="xref" data-knowl="./knowl/xref/proposition-limits-and-vector-arithmetic.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.3.1: Limits and vector arithmetic">Proposition 3.3.1 Limits and vector arithmetic</a> and <a href="section-limits-in-the-euclidean-metric.html#proposition-comparison-of-limits" class="xref" data-knowl="./knowl/xref/proposition-comparison-of-limits.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.3.2: Comparison of limits">Proposition 3.3.2 Comparison of limits</a> further justify the choice to emphasize the limiting behavior of objects on the real line <span class="process-math">\(\R \)</span> in the rest of this section; as we have already seen in <a href="section-convergence-and-limits.html" class="internal" title="Section 3.2: Convergence and Limits">Section 3.2 Convergence and Limits</a>, these results further emphasize that knowledge of such limiting behavior can be used to make conclusions about the limiting behavior of a wide variety of metric objects.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-limits-and-arithmetic-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Subsection 3.3.1: Limits and Arithmetic"><a href="#subsection-limits-and-arithmetic" title="Copy heading and permalink for Subsection 3.3.1: Limits and Arithmetic" aria-label="Copy heading and permalink for Subsection 3.3.1: Limits and Arithmetic">🔗</a></div>
+</section>
+<section class="subsection" id="subsection-divergence-to-infinity">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Divergence to Infinity</span>
+</h3>
+<section class="introduction" id="subsection-divergence-to-infinity-2">
+<div class="para" id="subsection-divergence-to-infinity-2-1">In some ways, the binary distinction between convergence and divergence may be viewed as more coarse than an analyst might like. On the real line <span class="process-math">\(\R \text{,}\)</span> we can make more qualitative statements about the limiting behavior of certain divergent sequences and maps to alleviate this issue somewhat. We now consider the special case of divergence of a sequence or map to infinity. Some sequences increase or decrease without bound. Such sequences can be said to have infinite limits, even though they don’t converge to any real number.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-divergence-to-infinity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="definition definition-like" id="definition-sequential-divergence-to-infinity"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequential divergence to infinity.</span>
+</h4>
+<div class="para logical" id="definition-sequential-divergence-to-infinity-2-1">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of real numbers <span class="process-math">\(x_{ n } \in \R \text{.}\)</span>
+</div>
+<ul class="disc" id="definition-sequential-divergence-to-infinity-2-1-3">
+<li id="definition-sequential-divergence-to-infinity-2-1-3-1">
+<span class="heading li--heading"><span class="title li--heading-title">Divergence to <span class="process-math">\(\infty \)</span>.</span></span>
+<div class="para logical" id="definition-sequential-divergence-to-infinity-2-1-3-1-2">
+<div class="para">The sequence <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> is said to <dfn class="terminology">diverge to <span class="process-math">\(\infty \)</span></dfn> if for each real number <span class="process-math">\(B \in \R \text{,}\)</span> there is a natural number <span class="process-math">\(n_{ B } \in \N \)</span> so that <span class="process-math">\(x_{ n } \gt B \)</span> for all indices <span class="process-math">\(n \geq n_{ B } \text{.}\)</span> In this case, we write</div>
+<div class="displaymath process-math" id="definition-sequential-divergence-to-infinity-2-1-3-1-2-7">
+\begin{equation*}
+\lim_{ n \to \infty }{ x_{ n } } = \infty\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-sequential-divergence-to-infinity-2-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Divergence to  \infty "><a href="#definition-sequential-divergence-to-infinity-2-1-3-1" title="Copy heading and permalink for Item: Divergence to  \infty " aria-label="Copy heading and permalink for Item: Divergence to  \infty ">🔗</a></div>
+</li>
+<li id="definition-sequential-divergence-to-infinity-2-1-3-2">
+<span class="heading li--heading"><span class="title li--heading-title">Divergence to <span class="process-math">\(-\infty \)</span>.</span></span>
+<div class="para logical" id="definition-sequential-divergence-to-infinity-2-1-3-2-2">
+<div class="para">The sequence <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> is said to <dfn class="terminology">diverge to <span class="process-math">\(-\infty \)</span></dfn> if for each real number <span class="process-math">\(B \in \R \text{,}\)</span> there is a natural number <span class="process-math">\(n_{ B } \in \N \)</span> so that <span class="process-math">\(x_{ n } \lt B \)</span> for all indices <span class="process-math">\(n \geq n_{ B } \text{.}\)</span> In this case, we write</div>
+<div class="displaymath process-math" id="definition-sequential-divergence-to-infinity-2-1-3-2-2-7">
+\begin{equation*}
+\lim_{ n \to \infty }{ x_{ n } } = -\infty\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-sequential-divergence-to-infinity-2-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Divergence to  -\infty "><a href="#definition-sequential-divergence-to-infinity-2-1-3-2" title="Copy heading and permalink for Item: Divergence to  -\infty " aria-label="Copy heading and permalink for Item: Divergence to  -\infty ">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-sequential-divergence-to-infinity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.3.5: Sequential divergence to infinity"><a href="#definition-sequential-divergence-to-infinity" title="Copy heading and permalink for Definition 3.3.5: Sequential divergence to infinity" aria-label="Copy heading and permalink for Definition 3.3.5: Sequential divergence to infinity">🔗</a></div>
+</article>
+<details id="example-sequential-divergence-to-infinity" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequential divergence to infinity.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-sequential-divergence-to-infinity-2-1">
+<div class="para">The following are examples and non-examples of sequences of real numbers which diverge to infinity.</div>
+<ul class="disc" id="example-sequential-divergence-to-infinity-2-1-1">
+<li id="example-sequential-divergence-to-infinity-2-1-1-1">
+<div class="para logical" id="example-sequential-divergence-to-infinity-2-1-1-1-1">
+<div class="para">The sequence <span class="process-math">\(\of{ n }_{ n = 0 }^{ \infty } = \of{ 0 , 1 , 2 , 3 , \dotsc } \)</span> diverges to <span class="process-math">\(\infty \text{;}\)</span> that is,</div>
+<div class="displaymath process-math" id="example-sequential-divergence-to-infinity-2-1-1-1-1-3">
+\begin{equation*}
+\lim_{ n \to \infty }{ n } = \infty\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sequential-divergence-to-infinity-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#example-sequential-divergence-to-infinity-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-sequential-divergence-to-infinity-2-1-1-2">
+<div class="para" id="example-sequential-divergence-to-infinity-2-1-1-2-1">The sequence <span class="process-math">\(\of{ \of{ -1 }^{ n } n }_{ n = 0 }^{ \infty } = \of{ 0 , -1 , 2 , -3 , \dotsc } \)</span> diverges, but it does not diverge to <span class="process-math">\(\infty \)</span> or <span class="process-math">\(-\infty \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-sequential-divergence-to-infinity-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#example-sequential-divergence-to-infinity-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sequential-divergence-to-infinity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.3.6: Sequential divergence to infinity"><a href="#example-sequential-divergence-to-infinity" title="Copy heading and permalink for Example 3.3.6: Sequential divergence to infinity" aria-label="Copy heading and permalink for Example 3.3.6: Sequential divergence to infinity">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-divergence-to-infinity-5">There are also versions of divergence to infinity for real-valued functions on metric spaces.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-divergence-to-infinity-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-function-divergence-to-infinity"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Function divergence to infinity.</span>
+</h4>
+<div class="para logical" id="definition-function-divergence-to-infinity-2-1">
+<div class="para">Let <span class="process-math">\(f \colon X \to \R \)</span> be a real-valued function on a metric space <span class="process-math">\(\of{ X , \rho } \text{.}\)</span>
+</div>
+<ul class="disc" id="definition-function-divergence-to-infinity-2-1-3">
+<li id="definition-function-divergence-to-infinity-2-1-3-1">
+<span class="heading li--heading"><span class="title li--heading-title">Divergence to <span class="process-math">\(\infty \)</span>.</span></span>
+<div class="para" id="definition-function-divergence-to-infinity-2-1-3-1-2">The function <span class="process-math">\(f \)</span> is said to <dfn class="terminology">diverge to <span class="process-math">\(\infty \)</span></dfn> at a point <span class="process-math">\(c \in X \)</span> if for each real number <span class="process-math">\(B \in \R \text{,}\)</span> there is a positive real number <span class="process-math">\(\delta \gt 0 \)</span> so that <span class="process-math">\(f \of{ x } \gt B \)</span> for all points <span class="process-math">\(x \in X \)</span> so that <span class="process-math">\(0 \lt \rho \of{ x , c } \lt \delta \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-function-divergence-to-infinity-2-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="definition-function-divergence-to-infinity-2-1-3-1-3">
+<div class="para">In this case, if <span class="process-math">\(c \)</span> is a limit point of <span class="process-math">\(X \text{,}\)</span> then we write</div>
+<div class="displaymath process-math" id="definition-function-divergence-to-infinity-2-1-3-1-3-3">
+\begin{equation*}
+\lim_{ x \to c }{ f \of{ x } } = \infty\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-function-divergence-to-infinity-2-1-3-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Divergence to  \infty "><a href="#definition-function-divergence-to-infinity-2-1-3-1" title="Copy heading and permalink for Item: Divergence to  \infty " aria-label="Copy heading and permalink for Item: Divergence to  \infty ">🔗</a></div>
+</li>
+<li id="definition-function-divergence-to-infinity-2-1-3-2">
+<span class="heading li--heading"><span class="title li--heading-title">Divergence to <span class="process-math">\(-\infty \)</span>.</span></span>
+<div class="para" id="definition-function-divergence-to-infinity-2-1-3-2-2">The function <span class="process-math">\(f \)</span> is said to <dfn class="terminology">diverge to <span class="process-math">\(-\infty \)</span></dfn> at a point <span class="process-math">\(c \in X \)</span> if for each real number <span class="process-math">\(B \in \R \text{,}\)</span> there is a positive real number <span class="process-math">\(\delta \gt 0 \)</span> so that <span class="process-math">\(f \of{ x } \lt B \)</span> for all points <span class="process-math">\(x \in X \)</span> so that <span class="process-math">\(0 \lt \rho \of{ x , c } \lt \delta \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-function-divergence-to-infinity-2-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="definition-function-divergence-to-infinity-2-1-3-2-3">
+<div class="para">In this case, if <span class="process-math">\(c \)</span> is a limit point of <span class="process-math">\(X \text{,}\)</span> then we write</div>
+<div class="displaymath process-math" id="definition-function-divergence-to-infinity-2-1-3-2-3-3">
+\begin{equation*}
+\lim_{ x \to c }{ f \of{ x } } = -\infty\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-function-divergence-to-infinity-2-1-3-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Divergence to  -\infty "><a href="#definition-function-divergence-to-infinity-2-1-3-2" title="Copy heading and permalink for Item: Divergence to  -\infty " aria-label="Copy heading and permalink for Item: Divergence to  -\infty ">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-function-divergence-to-infinity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.3.7: Function divergence to infinity"><a href="#definition-function-divergence-to-infinity" title="Copy heading and permalink for Definition 3.3.7: Function divergence to infinity" aria-label="Copy heading and permalink for Definition 3.3.7: Function divergence to infinity">🔗</a></div>
+</article>
+<details id="example-function-divergence-to-infinity" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Function divergence to infinity.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-function-divergence-to-infinity-2-1">
+<div class="para">The following are examples and non-examples of real-valued functions on metric spaces which diverge to infinity</div>
+<ul class="disc" id="example-function-divergence-to-infinity-2-1-1">
+<li id="example-function-divergence-to-infinity-2-1-1-1">
+<div class="para logical" id="example-function-divergence-to-infinity-2-1-1-1-1">
+<div class="para">Consider the real-valued function <span class="process-math">\(f \colon \R \setminus \set{ 1 } \to \R \)</span> defined by the formula</div>
+<div class="displaymath process-math" id="example-function-divergence-to-infinity-2-1-1-1-1-2">
+\begin{equation*}
+f \of{ x } = -\frac{ 1 }{ x^{ 2 } }\text{.}
+\end{equation*}
+</div>
+<div class="para">Then <span class="process-math">\(f \)</span> diverges to <span class="process-math">\(-\infty \)</span> at <span class="process-math">\(1 \text{;}\)</span> that is,</div>
+<div class="displaymath process-math" id="example-function-divergence-to-infinity-2-1-1-1-1-6">
+\begin{equation*}
+\lim_{ x \to 1 }{ -\frac{ 1 }{ x^{ 2 } } } = -\infty\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-function-divergence-to-infinity-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#example-function-divergence-to-infinity-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-function-divergence-to-infinity-2-1-1-2">
+<div class="para logical" id="example-function-divergence-to-infinity-2-1-1-2-1">
+<div class="para">Consider the real-valued function <span class="process-math">\(g \colon \R \setminus \set{ 0 } \to \R \)</span> defined by the formula</div>
+<div class="displaymath process-math" id="example-function-divergence-to-infinity-2-1-1-2-1-2">
+\begin{equation*}
+g \of{ y } = \frac{ 1 }{ y }\text{.}
+\end{equation*}
+</div>
+<div class="para">Then <span class="process-math">\(g \)</span> diverges at <span class="process-math">\(0 \text{,}\)</span> but it does not diverge to <span class="process-math">\(\infty \)</span> or <span class="process-math">\(-\infty \)</span> at <span class="process-math">\(0 \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-function-divergence-to-infinity-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#example-function-divergence-to-infinity-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-function-divergence-to-infinity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.3.8: Function divergence to infinity"><a href="#example-function-divergence-to-infinity" title="Copy heading and permalink for Example 3.3.8: Function divergence to infinity" aria-label="Copy heading and permalink for Example 3.3.8: Function divergence to infinity">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-divergence-to-infinity-8">Divergence of a sequence of real numbers or a real-valued function to infinity is a strong statement about the limiting behavior of such a sequence or function. However, since there is no metric on the extended real number system which agrees with the Euclidean metric on the real numbers, we cannot view divergence to infinity as convergence in a metric space of which the real line is a metric subspace. We will see in <a href="chapter-topological-spaces.html" class="internal" title="Chapter 4: Topological Spaces">Chapter 4 Topological Spaces</a> a way in which the situation of divergence to infinity can be said to be a form of convergence to an extended real number, namely the infinite quantities <span class="process-math">\(\infty \)</span> and <span class="process-math">\(-\infty \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsection-divergence-to-infinity-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsection-divergence-to-infinity-9">In many ways, the symbols <span class="process-math">\(\infty \)</span> and <span class="process-math">\(-\infty \)</span> can be viewed as one-sided “reciprocals” of <span class="process-math">\(0 \text{.}\)</span> While division by zero is left undefined for very important arithmetical reasons, it turns out that divergence of a sequence of nonzero real numbers to infinity implies the Euclidean convergence of the reciprocals to zero.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-divergence-to-infinity-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-reciprocals-of-infinite-limits"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reciprocals of infinite limits.</span>
+</h4>
+<div class="para logical" id="proposition-reciprocals-of-infinite-limits-2-1">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of positive real numbers <span class="process-math">\(x_{ n } \gt 0 \text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="proposition-reciprocals-of-infinite-limits-2-1-3">
+\begin{equation*}
+\lim_{ n \to \infty }{ x_{ n } } = \infty
+\end{equation*}
+</div>
+<div class="para">if and only if</div>
+<div class="displaymath process-math" id="proposition-reciprocals-of-infinite-limits-2-1-4">
+\begin{equation*}
+\lim_{ n \to \infty }{ \frac{ 1 }{ x_{ n } } } = 0\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-reciprocals-of-infinite-limits-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 3.3.9: Reciprocals of infinite limits"><a href="#proposition-reciprocals-of-infinite-limits" title="Copy heading and permalink for Proposition 3.3.9: Reciprocals of infinite limits" aria-label="Copy heading and permalink for Proposition 3.3.9: Reciprocals of infinite limits">🔗</a></div>
+</article>
+<details id="proposition-reciprocals-of-infinite-limits-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="proposition-reciprocals-of-infinite-limits-3-1">
+<div class="para">First suppose that <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> diverges to <span class="process-math">\(\infty \text{,}\)</span> and let <span class="process-math">\(\epsilon \gt 0 \text{.}\)</span> Then <span class="process-math">\(\frac{ 1 }{ \epsilon } \in \R \)</span> is a real number, and so there is a natural number <span class="process-math">\(n_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math" id="proposition-reciprocals-of-infinite-limits-3-1-6">
+\begin{equation*}
+x_{ n } \gt \frac{ 1 }{ \epsilon }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> In particular,</div>
+<div class="displaymath process-math" id="proposition-reciprocals-of-infinite-limits-3-1-8">
+\begin{equation*}
+d \of{ \frac{ 1 }{ x_{ n } } , 0 } = \abs{ \frac{ 1 }{ x_{ n } } - 0 } = \abs{ \frac{ 1 }{ x_{ n } } } = \frac{ 1 }{ x_{ n } } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{,}\)</span> and so <span class="process-math">\(\of{ \frac{ 1 }{ x_{ n } } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(0 \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-reciprocals-of-infinite-limits-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-reciprocals-of-infinite-limits-3-2">
+<div class="para">Conversely, now suppose that <span class="process-math">\(\of{ \frac{ 1 }{ x_{ n } } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(0 \text{,}\)</span> and let <span class="process-math">\(B \in \R \)</span> be a real number. If <span class="process-math">\(B \leq 0 \)</span> is non-positive, then</div>
+<div class="displaymath process-math" id="proposition-reciprocals-of-infinite-limits-3-2-5">
+\begin{equation*}
+x_{ n } \gt 0 \geq B
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \in \N \text{.}\)</span> On the other hand, if <span class="process-math">\(B \gt 0 \)</span> is positive, then <span class="process-math">\(\frac{ 1 }{ B } \gt 0 \)</span> is a positive real number, and so there is a natural number <span class="process-math">\(n_{ B } \)</span> so that</div>
+<div class="displaymath process-math" id="proposition-reciprocals-of-infinite-limits-3-2-10">
+\begin{equation*}
+d \of{ \frac{ 1 }{ x_{ n } } , 0 } \lt \frac{ 1 }{ B }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ B } \text{.}\)</span> In particular,</div>
+<div class="displaymath process-math" id="proposition-reciprocals-of-infinite-limits-3-2-12">
+\begin{equation*}
+x_{ n } = \abs{ x_{ n } } = \frac{ 1 }{ \abs{ \frac{ 1 }{ x_{ n } } - 0 } } = \frac{ 1 }{ d \of{ \frac{ 1 }{ x_{ n } } , 0 } } \gt B
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ B } \text{,}\)</span> and so <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> diverges to <span class="process-math">\(\infty \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-reciprocals-of-infinite-limits-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.3.9.1"><a href="#proposition-reciprocals-of-infinite-limits-3" title="Copy heading and permalink for Proof 3.3.9.1" aria-label="Copy heading and permalink for Proof 3.3.9.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-divergence-to-infinity-11">So, as far as limiting behavior of sequences of real numbers goes, the infinite quantities <span class="process-math">\(\infty \)</span> and <span class="process-math">\(-\infty \)</span> behave like one-sided reciprocals of zero. It’s incredibly important to avoid assuming anything stronger than what is explicitly stated in the proposition above. Specifically, the hypothesis that the sequence in question have positive real number values is crucial, and the statement is not necessarily true without this requirement.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-divergence-to-infinity-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsection-divergence-to-infinity-12">A sequence of real numbers diverges to <span class="process-math">\(\infty \)</span> or <span class="process-math">\(-\infty \)</span> if it increases or decreases, respectively, without bound. This notion of <dfn class="terminology">boundedness</dfn> is directly related to the one introduced in <a href="section-introduction-to-order-theory.html" class="internal" title="Section 1.5: Introduction to Order Theory">Section 1.5 Introduction to Order Theory</a> for subsets of partially ordered sets. Informally, a map with codomain a partially ordered set is considered to be bounded if its image is bounded.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-divergence-to-infinity-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-map-boundedness"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Map boundedness.</span>
+</h4>
+<div class="para logical" id="definition-map-boundedness-4-1">
+<div class="para">Let <span class="process-math">\(f \colon X \to Y \)</span> be a map from a set <span class="process-math">\(X \)</span> to a partially ordered set <span class="process-math">\(\of{ Y , \preceq } \text{.}\)</span>
+</div>
+<ul class="disc" id="definition-map-boundedness-4-1-4">
+<li id="definition-map-boundedness-4-1-4-1">
+<span class="heading li--heading"><span class="title li--heading-title">Upper bound.</span></span>
+<div class="para" id="definition-map-boundedness-4-1-4-1-2">An output <span class="process-math">\(y \in Y \)</span> is an <dfn class="terminology">upper bound</dfn> for the map <span class="process-math">\(f \)</span> if it is an upper bound for the image <span class="process-math">\(\im \of{ f } = f \of{ X } \text{;}\)</span> that is, <span class="process-math">\(y \)</span> is an upper bound for <span class="process-math">\(f \)</span> if <span class="process-math">\(f \of{ x } \preceq y \)</span> for all inputs <span class="process-math">\(x \in X \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-map-boundedness-4-1-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="definition-map-boundedness-4-1-4-1-3">The map <span class="process-math">\(f \)</span> is called <dfn class="terminology">bounded from above</dfn> if there is an upper bound for <span class="process-math">\(f \text{,}\)</span> and <dfn class="terminology">unbounded from above</dfn> if there is no such upper bound.<div class="autopermalink" data-description="Paragraph"><a href="#definition-map-boundedness-4-1-4-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Upper bound"><a href="#definition-map-boundedness-4-1-4-1" title="Copy heading and permalink for Item: Upper bound" aria-label="Copy heading and permalink for Item: Upper bound">🔗</a></div>
+</li>
+<li id="definition-map-boundedness-4-1-4-2">
+<span class="heading li--heading"><span class="title li--heading-title">Lower bound.</span></span>
+<div class="para" id="definition-map-boundedness-4-1-4-2-2">An output <span class="process-math">\(y \in Y \)</span> is a <dfn class="terminology">lower bound</dfn> for the map <span class="process-math">\(f \)</span> if it is a lower bound for the image <span class="process-math">\(\im \of{ f } = f \of{ X } \text{;}\)</span> that is, <span class="process-math">\(y \)</span> is a lower bound for <span class="process-math">\(f \)</span> if <span class="process-math">\(y \preceq \of{ x } \)</span> for all inputs <span class="process-math">\(x \in X \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-map-boundedness-4-1-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="definition-map-boundedness-4-1-4-2-3">The map <span class="process-math">\(f \)</span> is called <dfn class="terminology">bounded from below</dfn> if there is a lower bound for <span class="process-math">\(f \text{,}\)</span> and <dfn class="terminology">unbounded from below</dfn> if there is no such lower bound.<div class="autopermalink" data-description="Paragraph"><a href="#definition-map-boundedness-4-1-4-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Lower bound"><a href="#definition-map-boundedness-4-1-4-2" title="Copy heading and permalink for Item: Lower bound" aria-label="Copy heading and permalink for Item: Lower bound">🔗</a></div>
+</li>
+<li id="definition-map-boundedness-4-1-4-3">
+<span class="heading li--heading"><span class="title li--heading-title">Boundedness.</span></span>
+<div class="para" id="definition-map-boundedness-4-1-4-3-2">The map <span class="process-math">\(f \)</span> is called <dfn class="terminology">bounded</dfn> if it is both bounded from above and bounded from below, and <span class="process-math">\(f \)</span> is called <dfn class="terminology">unbounded</dfn> otherwise if it is either unbounded from above or unbounded from below (or both).<div class="autopermalink" data-description="Paragraph"><a href="#definition-map-boundedness-4-1-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Boundedness"><a href="#definition-map-boundedness-4-1-4-3" title="Copy heading and permalink for Item: Boundedness" aria-label="Copy heading and permalink for Item: Boundedness">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-map-boundedness-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.3.10: Map boundedness"><a href="#definition-map-boundedness" title="Copy heading and permalink for Definition 3.3.10: Map boundedness" aria-label="Copy heading and permalink for Definition 3.3.10: Map boundedness">🔗</a></div>
+</article>
+<details id="example-sequential-boundedness-in-the-real-line" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequential boundedness in the real line.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-sequential-boundedness-in-the-real-line-2-1">
+<div class="para">A sequence <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> of real numbers <span class="process-math">\(x_{ n } \in \R \)</span> is bounded if and only if there are real numbers <span class="process-math">\(a , b \in \R \)</span> such that <span class="process-math">\(a \leq x_{ n } \leq b \)</span> for all indices <span class="process-math">\(n \in \N \text{.}\)</span> For example, the sequence <span class="process-math">\(\of{ \frac{ 1 }{ n } }_{ n = 1 }^{ \infty } \)</span> is bounded, because</div>
+<div class="displaymath process-math" id="example-sequential-boundedness-in-the-real-line-2-1-7">
+\begin{equation*}
+0 \lt \frac{ 1 }{ n } \leq 1
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq 1 \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sequential-boundedness-in-the-real-line-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.3.11: Sequential boundedness in the real line"><a href="#example-sequential-boundedness-in-the-real-line" title="Copy heading and permalink for Example 3.3.11: Sequential boundedness in the real line" aria-label="Copy heading and permalink for Example 3.3.11: Sequential boundedness in the real line">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-divergence-to-infinity-15">Clearly, any sequence of real numbers or any real-valued function which diverges to infinity cannot be bounded. However, the converse is not true; unbounded sequences need not diverge to infinity. We have already seen one such example of this in <a href="section-limits-in-the-euclidean-metric.html#example-function-divergence-to-infinity" class="xref" data-knowl="./knowl/xref/example-function-divergence-to-infinity.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.8: Function divergence to infinity">Example 3.3.8 Function divergence to infinity</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-divergence-to-infinity-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsection-divergence-to-infinity-16">Considered as a real-valued function on the set <span class="process-math">\(\N \)</span> of natural numbers, a sequence of real numbers is a map whose codomain is a totally ordered set. However, the domain of such a sequence is also totally ordered. Because the metric structure on the real line <span class="process-math">\(\R \)</span> can be described in terms of the standard ordering <span class="process-math">\(\leq \text{,}\)</span> sequences which preserve these orders have special convergence properties. Such sequences are called <dfn class="terminology">monotone</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-divergence-to-infinity-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-monotonicity"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Monotonicity.</span>
+</h4>
+<div class="para logical" id="definition-monotonicity-16-1">
+<div class="para">Let <span class="process-math">\(f \colon X \to Y \)</span> be a map from a partially ordered set <span class="process-math">\(\of{ X , \preceq_{ X } } \)</span> to a partially ordered set <span class="process-math">\(\of{ Y , \preceq_{ Y } } \text{.}\)</span>
+</div>
+<ul class="disc" id="definition-monotonicity-16-1-4">
+<li id="definition-monotonicity-16-1-4-1">
+<span class="heading li--heading"><span class="title li--heading-title">Isotonicity.</span></span>
+<div class="para" id="definition-monotonicity-16-1-4-1-2">The map <span class="process-math">\(f \)</span> is called <dfn class="terminology">non-decreasing</dfn>, <dfn class="terminology">order-preserving</dfn>, or <dfn class="terminology">isotone</dfn> if for all inputs <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \text{,}\)</span> if <span class="process-math">\(x_{ 1 } \preceq_{ X } x_{ 2 } \text{,}\)</span> then <span class="process-math">\(f \of{ x_{ 1 } } \preceq_{ Y } f \of{ x_{ 2 } } \text{.}\)</span> The map <span class="process-math">\(f \)</span> is called <dfn class="terminology">increasing</dfn>, <dfn class="terminology">strictly order-preserving</dfn>, or <dfn class="terminology">strictly isotone</dfn> if it is non-decreasing and injective.<div class="autopermalink" data-description="Paragraph"><a href="#definition-monotonicity-16-1-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Isotonicity"><a href="#definition-monotonicity-16-1-4-1" title="Copy heading and permalink for Item: Isotonicity" aria-label="Copy heading and permalink for Item: Isotonicity">🔗</a></div>
+</li>
+<li id="definition-monotonicity-16-1-4-2">
+<span class="heading li--heading"><span class="title li--heading-title">Antitonicity.</span></span>
+<div class="para" id="definition-monotonicity-16-1-4-2-2">The map <span class="process-math">\(f \)</span> is called <dfn class="terminology">non-increasing</dfn>, <dfn class="terminology">order-reversing</dfn>, or <dfn class="terminology">antitone</dfn> if for all inputs <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \text{,}\)</span> if <span class="process-math">\(x_{ 1 } \preceq_{ X } x_{ 2 } \text{,}\)</span> then <span class="process-math">\(f \of{ x_{ 2 } } \preceq_{ Y } f \of{ x_{ 1 } } \text{.}\)</span> The map <span class="process-math">\(f \)</span> is called <dfn class="terminology">decreasing</dfn>, <dfn class="terminology">strictly order-reversing</dfn>, or <dfn class="terminology">strictly antitone</dfn> if it is non-increasing and injective.<div class="autopermalink" data-description="Paragraph"><a href="#definition-monotonicity-16-1-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Antitonicity"><a href="#definition-monotonicity-16-1-4-2" title="Copy heading and permalink for Item: Antitonicity" aria-label="Copy heading and permalink for Item: Antitonicity">🔗</a></div>
+</li>
+<li id="definition-monotonicity-16-1-4-3">
+<span class="heading li--heading"><span class="title li--heading-title">Monotonicity.</span></span>
+<div class="para" id="definition-monotonicity-16-1-4-3-2">The map <span class="process-math">\(f \)</span> is called <dfn class="terminology">monotone</dfn> if it is either non-decreasing or non-increasing, and <span class="process-math">\(f \)</span> is called <dfn class="terminology">strictly monotone</dfn> if it is either increasing or decreasing.<div class="autopermalink" data-description="Paragraph"><a href="#definition-monotonicity-16-1-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Monotonicity"><a href="#definition-monotonicity-16-1-4-3" title="Copy heading and permalink for Item: Monotonicity" aria-label="Copy heading and permalink for Item: Monotonicity">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-monotonicity-16-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.3.12: Monotonicity"><a href="#definition-monotonicity" title="Copy heading and permalink for Definition 3.3.12: Monotonicity" aria-label="Copy heading and permalink for Definition 3.3.12: Monotonicity">🔗</a></div>
+</article>
+<div class="para" id="subsection-divergence-to-infinity-18">It turns out that all monotone sequences of real numbers have limits, in the sense that a monotone sequence of real numbers either converges to a real number or diverges to infinity. In fact, something slightly stronger is true; the limit of a non-decreasing sequence exists and is its supremum, and the limit of a non-increasing sequence exists and is its infimum. This useful fact is a property of the extended real number system <span class="process-math">\(\R \text{.}\)</span> Other totally ordered number subsystems, such as the rational numbers <span class="process-math">\(\Q \text{,}\)</span> do not enjoy this property, since suprema and infima of sets need not exist in these number systems, which are Dedekind incomplete in the sense introduced in <a href="section-the-complete-ordered-field.html" class="internal" title="Section 2.3: The Complete Ordered Field">Section 2.3 The Complete Ordered Field</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-divergence-to-infinity-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="theorem-limits-of-monotone-sequences"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Monotone convergence theorem.</span>
+</h4>
+<div class="para logical" id="theorem-limits-of-monotone-sequences-2-1">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of real numbers <span class="process-math">\(x_{ n } \in \R \text{.}\)</span>
+</div>
+<ul class="disc" id="theorem-limits-of-monotone-sequences-2-1-3">
+<li id="theorem-limits-of-monotone-sequences-2-1-3-1">
+<div class="para logical" id="theorem-limits-of-monotone-sequences-2-1-3-1-1">
+<div class="para">If <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> is non-decreasing, then</div>
+<div class="displaymath process-math" id="theorem-limits-of-monotone-sequences-2-1-3-1-1-2">
+\begin{equation*}
+\lim_{ n \to \infty }{ x_{ n } } = \sup_{ n \in \N }{ x_{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-limits-of-monotone-sequences-2-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#theorem-limits-of-monotone-sequences-2-1-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="theorem-limits-of-monotone-sequences-2-1-3-2">
+<div class="para logical" id="theorem-limits-of-monotone-sequences-2-1-3-2-1">
+<div class="para">If <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> is non-increasing, then</div>
+<div class="displaymath process-math" id="theorem-limits-of-monotone-sequences-2-1-3-2-1-2">
+\begin{equation*}
+\lim_{ n \to \infty }{ x_{ n } } = \inf_{ n \in \N }{ x_{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-limits-of-monotone-sequences-2-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#theorem-limits-of-monotone-sequences-2-1-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">In particular, if <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> is bounded and monotone, then it is convergent.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-limits-of-monotone-sequences-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.3.13: Monotone convergence theorem"><a href="#theorem-limits-of-monotone-sequences" title="Copy heading and permalink for Theorem 3.3.13: Monotone convergence theorem" aria-label="Copy heading and permalink for Theorem 3.3.13: Monotone convergence theorem">🔗</a></div>
+</article>
+<details id="theorem-limits-of-monotone-sequences-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="theorem-limits-of-monotone-sequences-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#theorem-limits-of-monotone-sequences-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Proof 3.3.13.1"><a href="#theorem-limits-of-monotone-sequences-3" title="Copy heading and permalink for Proof 3.3.13.1" aria-label="Copy heading and permalink for Proof 3.3.13.1">🔗</a></div>
+</article></details>
+<section class="conclusion" id="subsection-divergence-to-infinity-20">
+<div class="para" id="subsection-divergence-to-infinity-20-1">What we have just shown will prove incredibly useful; in particular, we will use the fact that all bounded, monotone sequences of real numbers are convergent several times throughout this chapter. The converse is not true; while convergent sequences of real numbers are bounded, not all such sequences need be monotone.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-divergence-to-infinity-20-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Subsection 3.3.2: Divergence to Infinity"><a href="#subsection-divergence-to-infinity" title="Copy heading and permalink for Subsection 3.3.2: Divergence to Infinity" aria-label="Copy heading and permalink for Subsection 3.3.2: Divergence to Infinity">🔗</a></div>
+</section>
+<section class="subsection" id="subsection-upper-and-lower-limits">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Upper and Lower Limits</span>
+</h3>
+<section class="introduction" id="subsection-upper-and-lower-limits-2">
+<div class="para" id="subsection-upper-and-lower-limits-2-1">Text before the first subdivision.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-upper-and-lower-limits-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="conclusion" id="subsection-upper-and-lower-limits-3">
+<div class="para" id="subsection-upper-and-lower-limits-3-1">Text after the last subdivision.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-upper-and-lower-limits-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Subsection 3.3.3: Upper and Lower Limits"><a href="#subsection-upper-and-lower-limits" title="Copy heading and permalink for Subsection 3.3.3: Upper and Lower Limits" aria-label="Copy heading and permalink for Subsection 3.3.3: Upper and Lower Limits">🔗</a></div>
+</section>
+<section class="conclusion" id="section-limits-in-the-euclidean-metric-6">
+<div class="para" id="section-limits-in-the-euclidean-metric-6-1">Text after the last subsection.<div class="autopermalink" data-description="Paragraph"><a href="#section-limits-in-the-euclidean-metric-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="reading-questions" id="exercises-limits-in-the-euclidean-metric">
 <h3 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
 </h3>
 <section class="introduction" id="exercises-limits-in-the-euclidean-metric-2">
 <div class="para" id="exercises-limits-in-the-euclidean-metric-2-1">The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-limits-in-the-euclidean-metric-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="conclusion" id="exercises-limits-in-the-euclidean-metric-3">
 <div class="para" id="exercises-limits-in-the-euclidean-metric-3-1">Short answers and/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-limits-in-the-euclidean-metric-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" data-description="Reading Questions 3.3: Exercises"><a href="#exercises-limits-in-the-euclidean-metric" title="Copy heading and permalink for Reading Questions 3.3: Exercises" aria-label="Copy heading and permalink for Reading Questions 3.3: Exercises">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Reading Questions 3.3.4: Exercises"><a href="#exercises-limits-in-the-euclidean-metric" title="Copy heading and permalink for Reading Questions 3.3.4: Exercises" aria-label="Copy heading and permalink for Reading Questions 3.3.4: Exercises">🔗</a></div>
 </section>
 <section class="reading-questions" id="reading-questions-limits-in-the-euclidean-metric">
 <h3 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reading Questions</span>
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reading Questions</span>
 </h3>
 <section class="introduction" id="reading-questions-limits-in-the-euclidean-metric-2">
 <div class="para" id="reading-questions-limits-in-the-euclidean-metric-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" data-description="Paragraph"><a href="#reading-questions-limits-in-the-euclidean-metric-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="conclusion" id="reading-questions-limits-in-the-euclidean-metric-3">
 <div class="para" id="reading-questions-limits-in-the-euclidean-metric-3-1">In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#reading-questions-limits-in-the-euclidean-metric-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" data-description="Reading Questions 3.3: Reading Questions"><a href="#reading-questions-limits-in-the-euclidean-metric" title="Copy heading and permalink for Reading Questions 3.3: Reading Questions" aria-label="Copy heading and permalink for Reading Questions 3.3: Reading Questions">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Reading Questions 3.3.5: Reading Questions"><a href="#reading-questions-limits-in-the-euclidean-metric" title="Copy heading and permalink for Reading Questions 3.3.5: Reading Questions" aria-label="Copy heading and permalink for Reading Questions 3.3.5: Reading Questions">🔗</a></div>
 </section><div class="autopermalink" data-description="Section 3.3: Limits in the Euclidean Metric"><a href="#section-limits-in-the-euclidean-metric" title="Copy heading and permalink for Section 3.3: Limits in the Euclidean Metric" aria-label="Copy heading and permalink for Section 3.3: Limits in the Euclidean Metric">🔗</a></div>
 </section>
 </div>
