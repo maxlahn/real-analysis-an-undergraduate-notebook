@@ -23,7 +23,7 @@
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-limits-in-the-euclidean-metric.ptx"/>
+  <xi:include href="./exercises-limits-in-the-euclidean-metric.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-limits-in-the-euclidean-metric.ptx"/>
+  <xi:include href="./problems-limits-in-the-euclidean-metric.ptx"/>
 </section>

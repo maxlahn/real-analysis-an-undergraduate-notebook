@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-ultrametrics" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Ultrametrics
+  </title>
+  
+  <idx>
+    ultrametric
+  </idx>
+  
+  <idx>
+    ultrametric space
+  </idx>
+  
+  <introduction>
+    <p>
+      A real-valued function <m> \rho \colon X^{ 2 } \to \R </m> on the Cartesian square <m> X^{ 2 } </m> of a set <m> X </m> is called an <term> ultrametric </term> on <m> X </m>, which is called the <term> ground set </term> and whose elements are called <term> points </term> if it satisfies the following conditions:
+      
+      <ul>
+        <li>
+          <title>
+            Non-degeneracy
+          </title>
+          
+          <p>
+            For any points <m> x_{ 1 } , x_{ 2 } \in X </m>, <m> \rho \of{ x_{ 1 } , x_{ 2 } } = 0 </m> if and only if <m> x_{ 1 } = x_{ 2 } </m>.
+          </p>
+        </li>
+        
+        <li>
+          <title>
+            Symmetry
+          </title>
+          
+          <p>
+            <m> \rho \of{ x_{ 1 } , x_{ 2 } } = \rho \of{ x_{ 2 } , x_{ 1 } } </m> for any points <m> x_{ 1 } , x_{ 2 } \in X </m>.
+          </p>
+        </li>
+        
+        <li>
+          <title>
+            Strong triangle inequality
+          </title>
+          
+          <p>
+            <m> \rho \of{ x_{ 1 } , x_{ 3 } } \leq \max \of{ \set{ \rho \of{ x_{ 1 } , x_{ 2 } } , \rho \of{ x_{ 2 } , x_{ 3 } } } } </m> for any points <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in X </m>.
+          </p>
+        </li>
+      </ul>
+      
+      If a real-valued function <m> \rho \colon X^{ 2 } \to \R </m> is an ultrametric on <m> X </m>, then the ordered pair <m> \of{ X , \rho } </m> is called an ultrametric space.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that any ultrametric is a metric.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Fix a prime number <m> p \in \N </m>. The <term> <m> p </m>-adic valuation </term> <m> \abs{ \oparg }_{ p } \colon \Q \to \Q </m> is a rational-valued function defined by the formula
+        
+        <md>
+          \abs{ q } =
+            \begin{cases}
+              0 \amp q = 0 \\
+              p^{ -k_{ p } \of{ q } } \amp q \neq 0
+            \end{cases}
+        </md>,
+        
+        where <m> k_{ p } \of{ q } \in \Z </m> is the unique integer so that <m> q = p^{ k_{ p } \of{ q } } \of{ \frac{ a }{ b } } </m> for some integers <m> a , b \in \Z </m> which are not divisible by <m> p </m>.
+      </p>
+      
+      <p>
+        Prove that the <m> p </m>-adic valuation <m> \abs{ \oparg }_{ p } </m> induces an ultrametric <m> \rho_{ p } \colon \Q^{ 2 } \to \R </m> defined by the formula
+        
+        <md>
+          \rho_{ p } \of{ q_{ 1 } , q_{ 2 } } = \abs{ q_{ 1 } - q_{ 2 } }_{ p }
+        </md>.
+        
+        This ultrametric is called the <term> <m> p </m>-adic metric </term> on <m> \Q </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that for all points <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in X </m> in an ultrametric space <m> \of{ X , \rho } </m>, if <m> \rho_{ x_{ 1 } , x_{ 2 } } \leq \rho \of{ x_{ 2 } , x_{ 3 } } </m>, then <m> \rho \of{ x_{ 1 } , x_{ 3 } } = \rho \of{ x_{ 2 } , x_{ 3 } } </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+  
+  <conclusion>
+    <p>
+      The geometry of non-Archimedean metric spaces differs in several ways from our intuitions about Euclidean geometry informed by our experience of distance in the physical world. We will see several of these differences over the course of this chapter.
+    </p>
+  </conclusion>
+</exercise>

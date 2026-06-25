@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<reading-questions xml:id="problems-introduction-to-metric-geometry" xmlns:xi="http://www.w3.org/2001/XInclude">
+<reading-questions xml:id="problems-limits-in-the-euclidean-metric" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>
     Problems
   </title>
@@ -11,11 +11,15 @@
     </p>
   </introduction>
   
-  <xi:include href="./problems/problem-from-pseudometrics-to-metrics.ptx"/>
+  <xi:include href="./problems/problem-limits-and-scalar-multiplication.ptx"/>
   
-  <xi:include href="./problems/problem-norm-equivalence.ptx"/>
+  <xi:include href="./problems/problem-limits-and-division.ptx"/>
   
-  <xi:include href="./problems/problem-ultrametrics.ptx"/>
+  <xi:include href="./problems/problem-squeezing-to-infinity.ptx"/>
+  
+  <xi:include href="./problems/problem-reciprocals-of-infinite-limits.ptx"/>
+  
+  <xi:include href="./problems/problem-divergence-and-upper-lower-limits.ptx"/>
 
   <conclusion>
     <p>

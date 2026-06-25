@@ -11,11 +11,15 @@
     </p>
   </introduction>
   
-  <!-- <xi:include href="./exercise-TITLE.ptx"/> -->
+  <xi:include href="./exercises/exercise-limits-and-arithmetic.ptx"/>
+  
+  <xi:include href="./exercises/exercise-limits-and-strict-comparison.ptx"/>
+  
+  <xi:include href="./exercises/exercise-computing-upper-lower-limits.ptx"/>
 
   <conclusion>
     <p>
-      Short answers and/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.
+      Short answers and/or in-depth solutions to these exercises are available in <xref ref="solutions"/>. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.
     </p>
   </conclusion>
 </reading-questions>

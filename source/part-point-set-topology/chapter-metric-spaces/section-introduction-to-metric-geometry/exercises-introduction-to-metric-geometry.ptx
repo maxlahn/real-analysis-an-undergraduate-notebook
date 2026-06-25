@@ -11,7 +11,7 @@
     </p>
   </introduction>
   
-  <!-- <xi:include href="./exercises/exercise-TITLE.ptx"/> -->
+  <xi:include href="./exercises/exercise-computing-distances-in-metric-spaces.ptx"/>
 
   <conclusion>
     <p>
