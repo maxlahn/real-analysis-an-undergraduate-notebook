@@ -104,7 +104,11 @@
               </mrow>
               
               <mrow>
-                \amp \leq \norm{ \vect{ v }_{ n } - \vect{ v } } + \norm{ \vect{ w }_{ n } - \vect{ w } } = \rho \of{ \vect{ v }_{ n } , \vect{ v } } + \rho \of{ \vect{ w }_{ n } , \vect{ w } } \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+                \amp \leq \norm{ \vect{ v }_{ n } - \vect{ v } } + \norm{ \vect{ w }_{ n } - \vect{ w } } = \rho \of{ \vect{ v }_{ n } , \vect{ v } } + \rho \of{ \vect{ w }_{ n } , \vect{ w } }
+              </mrow>
+              
+              <mrow>
+                \amp \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
               </mrow>
             </md>
             
@@ -337,7 +341,7 @@
         By contraposition. Let <m> x = \lim_{ n \to \infty }{ x_{ n } } </m> and <m> y = \lim_{ n \to \infty }{ y_{ n } } </m>, and suppose that <m> x \gt y </m>. Consider the positive real number
         
         <md>
-          \epsilon = \frac{ y - x }{ 2 }
+          \epsilon = \frac{ x - y }{ 2 }
         </md>.
         
         Then there are natural numbers <m> m_{ \epsilon } , n_{ \epsilon } \in \N </m> so that
@@ -355,13 +359,13 @@
         for all indices <m> n \geq n_{ \epsilon } </m>. Let <m> p_{ \epsilon } = \max \of{ \set{ m_{ \epsilon } , n_{ \epsilon } } } \in \N </m>. We observe that
         
         <md>
-          x - x_{ p_{ \epsilon } } \leq \abs{ x_{ p_{ \epsilon } } - x } = d \of{ x_{ p_{ \epsilon } } , x } \lt \epsilon = \frac{ y - x }{ 2 }
+          x - x_{ p_{ \epsilon } } \leq \abs{ x_{ p_{ \epsilon } } - x } = d \of{ x_{ p_{ \epsilon } } , x } \lt \epsilon = \frac{ x - y }{ 2 }
         </md>
         
         and
         
         <md>
-          y_{ p_{ \epsilon } } - y \leq \abs{ y_{ p_{ \epsilon } } - y } = d \of{ y_{ p_{ \epsilon } } , y } \lt \epsilon = \frac{ y - x }{ 2 }
+          y_{ p_{ \epsilon } } - y \leq \abs{ y_{ p_{ \epsilon } } - y } = d \of{ y_{ p_{ \epsilon } } , y } \lt \epsilon = \frac{ x - y }{ 2 }
         </md>,
         
         so that
@@ -458,8 +462,6 @@
       </p>
     </statement>
   </example>
-
-  
 
   <conclusion>
     <p>

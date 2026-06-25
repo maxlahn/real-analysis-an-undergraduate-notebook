@@ -19,7 +19,7 @@
   
   <conclusion>
     <p>
-      Text after the last subsection.
+      In this section, we have seen that much of the metric structure of the real line <m> \R </m> can be phrased in terms of the standard ordering <m> \leq </m>. In particular, we have seen that convergence in the Euclidean metric is deeply related to the properties of small intervals of real numbers. In the next section, we will examine the analogs of these intervals in general metric spaces.
     </p>
   </conclusion>
 

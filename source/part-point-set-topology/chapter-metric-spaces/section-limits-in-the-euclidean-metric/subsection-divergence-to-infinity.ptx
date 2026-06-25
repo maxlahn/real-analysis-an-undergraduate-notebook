@@ -152,7 +152,7 @@
               Consider the real-valued function <m> f \colon \R \setminus \set{ 1 } \to \R </m> defined by the formula
               
               <md>
-                f \of{ x } = -\frac{ 1 }{ x^{ 2 } }
+                f \of{ x } = -\frac{ 1 }{ \of{ x - 1 }^{ 2 } }
               </md>.
               
               Then <m> f </m> diverges to <m> -\infty </m> at <m> 1 </m>; that is,
@@ -303,7 +303,7 @@
             </title>
             
             <p>
-              An output <m> y \in Y </m> is a <term> lower bound </term> for the map <m> f </m> if it is a lower bound for the image <m> \im \of{ f } = f \of{ X } </m>; that is, <m> y </m> is a lower bound for <m> f </m> if <m> y \preceq \of{ x } </m> for all inputs <m> x \in X </m>.
+              An output <m> y \in Y </m> is a <term> lower bound </term> for the map <m> f </m> if it is a lower bound for the image <m> \im \of{ f } = f \of{ X } </m>; that is, <m> y </m> is a lower bound for <m> f </m> if <m> y \preceq f \of{ x } </m> for all inputs <m> x \in X </m>.
             </p>
             
             <p>
@@ -455,7 +455,7 @@
     It turns out that all monotone sequences of real numbers have limits, in the sense that a monotone sequence of real numbers either converges to a real number or diverges to infinity. In fact, something slightly stronger is true; the limit of a non-decreasing sequence exists and is its supremum, and the limit of a non-increasing sequence exists and is its infimum. This useful fact is a property of the extended real number system <m> \R </m>. Other totally ordered number subsystems, such as the rational numbers <m> \Q </m>, do not enjoy this property, since suprema and infima of sets need not exist in these number systems, which are Dedekind incomplete in the sense introduced in <xref ref="section-the-complete-ordered-field"/>.
   </p>
   
-  <theorem xml:id="theorem-limits-of-monotone-sequences">
+  <theorem xml:id="theorem-monotone-convergence-theorem">
     <title>
       Monotone convergence theorem
     </title>
@@ -464,7 +464,7 @@
       <p>
         Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of real numbers <m> x_{ n } \in \R </m>.
         
-        <ul>
+        <ol>
           <li>
             <p>
               If <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is non-decreasing, then
@@ -484,16 +484,130 @@
               </md>.
             </p>
           </li>
-        </ul>
+        </ol>
         
         In particular, if <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is bounded and monotone, then it is convergent.
       </p>
     </statement>
     
     <proof>
-      <p>
+      <ol>
+        <li>
+          <p>
+            We observe that <m> \set{ x_{ n } }_{ n = 0 }^{ \infty } \neq \emptyset </m> is non-empty, and so <m> \sup_{ n \in \N }{ x_{ n } } = \sup \of{ \set{ x_{ n } }_{ n = 0 }^{ \infty } } \neq -\infty </m>. There are two cases; either <m> \sup_{ n \in \N }{ x_{ n } } = \infty </m> or <m> \sup_{ n \in \N }{ x_{ n } } \in \R </m> is a real number.
+          </p>
+          
+          <p>
+            First suppose that <m> \sup_{ n \in \N }{ x_{ n } } = \infty </m>, and let <m> B \in \R </m> be a real number. Since
+            
+            <md>
+              B \lt \infty = \sup_{ n \in \N }{ x_{ n } }
+            </md>,
+            
+            <m> B </m> is not an upper bound for <m> \set{ x_{ n } }_{ n = 0 }^{ \infty } </m>; that is, <m> x_{ n_{ B } } \gt B </m> for some natural number <m> n_{ B } \in \N </m>. We observe that since <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is non-decreasing,
+            
+            <md>
+              x_{ n } \geq x_{ n_{ B } } \gt B
+            </md>
+            
+            for all indices <m> n \geq n_{ B } </m>, and so
+            
+            <md>
+              \lim_{ n \to \infty }{ x_{ n } } = \infty = \sup_{ n \in \N }{ x_{ n } }
+            </md>.
+          </p>
+          
+          <p>
+            On the other hand, now suppose that <m> S = \sup_{ n \in \N }{ x_{ n } } \in \R </m> is a real number, and let <m> \epsilon \gt 0 </m> be a positive real number. Since
+            
+            <md>
+              S - \epsilon \lt S = \sup_{ n \in \N }{ x_{ n } }
+            </md>,
+            
+            <m> S - \epsilon </m> is not an upper bound for <m> \set{ x_{ n } }_{ n = 0 }^{ \infty } </m>; that is, <m> x_{ n_{ \epsilon } } \gt S - \epsilon </m> for some natural number <m> n_{ \epsilon } \in \N </m>. Since <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is non-decreasing,
+            
+            <md>
+              S - \epsilon \lt x_{ n_{ \epsilon } } \leq x_{ n } \leq S
+            </md>
+            
+            for all indices <m> n \geq n_{ \epsilon } </m>, and so
+            
+            <md>
+              <mrow>
+                d \of{ x_{ n } , S } \amp = \abs{ x_{ n } - S } = S - x_{ n }
+              </mrow>
+              
+              <mrow>
+                \amp \lt S - \of{ S - \epsilon } = \epsilon
+              </mrow>
+            </md>
+            
+            for all indices <m> n \geq n_{ \epsilon } </m>. We conclude that
+            
+            <md>
+              \lim_{ n \to \infty }{ x_{ n } } = S = \sup_{ n \in \N }{ x_{ n } }
+            </md>.
+          </p>
+        </li>
         
-      </p>
+        <li>
+          <p>
+            We observe that <m> \set{ x_{ n } }_{ n = 0 }^{ \infty } \neq \emptyset </m> is non-empty, and so <m> \inf_{ n \in \N }{ x_{ n } } = \inf \of{ \set{ x_{ n } }_{ n = 0 }^{ \infty } } \neq \infty </m>. There are two cases; either <m> \inf_{ n \in \N }{ x_{ n } } = -\infty </m> or <m> \inf_{ n \in \N }{ x_{ n } } \in \R </m> is a real number.
+          </p>
+          
+          <p>
+            First suppose that <m> \inf_{ n \in \N }{ x_{ n } } = -\infty </m>, and let <m> B \in \R </m> be a real number. Since
+            
+            <md>
+              B \gt -\infty = \inf_{ n \in \N }{ x_{ n } }
+            </md>,
+            
+            <m> B </m> is not a lower bound for <m> \set{ x_{ n } }_{ n = 0 }^{ \infty } </m>; that is, <m> x_{ n_{ B } } \lt B </m> for some natural number <m> n_{ B } \in \N </m>. We observe that since <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is non-increasing,
+            
+            <md>
+              x_{ n } \leq x_{ n_{ B } } \lt B
+            </md>
+            
+            for all indices <m> n \geq n_{ B } </m>, and so
+            
+            <md>
+              \lim_{ n \to \infty }{ x_{ n } } = -\infty = \inf_{ n \in \N }{ x_{ n } }
+            </md>.
+          </p>
+          
+          <p>
+            On the other hand, now suppose that <m> I = \inf_{ n \in \N }{ x_{ n } } \in \R </m> is a real number, and let <m> \epsilon \gt 0 </m> be a positive real number. Since
+            
+            <md>
+              I + \epsilon \gt S = \inf_{ n \in \N }{ x_{ n } }
+            </md>,
+            
+            <m> I + \epsilon </m> is not a lower bound for <m> \set{ x_{ n } }_{ n = 0 }^{ \infty } </m>; that is, <m> x_{ n_{ \epsilon } } \lt I + \epsilon </m> for some natural number <m> n_{ \epsilon } \in \N </m>. Since <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is non-increasing,
+            
+            <md>
+              I + \epsilon \gt x_{ n_{ \epsilon } } \geq x_{ n } \geq I
+            </md>
+            
+            for all indices <m> n \geq n_{ \epsilon } </m>, and so
+            
+            <md>
+              <mrow>
+                d \of{ x_{ n } , I } \amp = \abs{ x_{ n } - I } = x_{ n } - I
+              </mrow>
+              
+              <mrow>
+                \amp \lt I + \epsilon - I = \epsilon
+              </mrow>
+            </md>
+            
+            for all indices <m> n \geq n_{ \epsilon } </m>. We conclude that
+            
+            <md>
+              \lim_{ n \to \infty }{ x_{ n } } = I = \inf_{ n \in \N }{ x_{ n } }
+            </md>.
+          </p>
+        </li>
+      </ol>
     </proof>
   </theorem>
 
@@ -503,135 +617,3 @@
     </p>
   </conclusion>
 </subsection>
-
-<!--
-
-  <definition xml:id="definition-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <idx>
-      TERM
-    </idx>
-    
-    <notation>
-      <usage>
-        <m>  </m>
-      </usage>
-      
-      <description>
-        <p>
-          
-        </p>
-      </description>
-    </notation>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-  </definition>
-
-  <lemma xml:id="lemma-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </lemma>
-
-  <proposition xml:id="proposition-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </proposition>
-
-  <theorem xml:id="theorem-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </theorem>
-
-  <corollary xml:id="corollary-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </corollary>
-
-  <example xml:id="example-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-  </example>
-
--->

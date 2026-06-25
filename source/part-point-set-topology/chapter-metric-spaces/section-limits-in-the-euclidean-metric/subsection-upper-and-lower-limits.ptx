@@ -7,147 +7,585 @@
 
   <introduction>
     <p>
-      Text before the first subdivision.
+      If a sequence of points in a metric space is convergent, then its image has exactly one limit point. More generally, studying the limit points of the image of a sequence of points is a fruitful exercise regardless of whether or not the series converges. We will see that the Dedekind completeness of the real numbers <m> \R </m> allows us to characterize these limit points via the <term> upper </term> and <term> lower limits </term>.
     </p>
   </introduction>
-  
-  
 
-  <conclusion>
-    <p>
-      Text after the last subdivision.
-    </p>
-  </conclusion>
-</subsection>
-
-<!--
-
-  <definition xml:id="definition-TITLE">
+  <lemma xml:id="lemma-monotonicity-of-suprema-infima">
     <title>
-      TITLE
+      Monotonicity of suprema/infima
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> U , V \subseteq X </m> be subsets of a partially ordered set <m> \of{ X , \preceq } </m>, and suppose that <m> U \subseteq V </m>.
+        
+        <ol>
+          <li>
+            <p>
+              If <m> U </m> and <m> V </m> have suprema, then <m> \sup \of{ U } \leq \sup \of{ V } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              If <m> U </m> and <m> V </m> have infima, then <m> \inf \of{ U } \geq \inf \of{ V } </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            If <m> U \subseteq V </m>, then every upper bound for <m> V </m> is an upper bound for <m> U </m>, and so
+            
+            <md>
+              <mrow>
+                \sup \of{ U } \amp = \min \of{ \setmid{ x \in X }{ u \preceq x \textrm{ for all } u \in U } }
+              </mrow>
+              
+              <mrow>
+                \amp \leq \min \of{ \setmid{ x \in X }{ v \preceq x \textrm{ for all } v \in V } } = \sup \of{ V }
+              </mrow>
+            </md>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            If <m> U \subseteq V </m>, then every lower bound for <m> V </m> is a lower bound for <m> U </m>, and so
+            
+            <md>
+              <mrow>
+                \inf \of{ U } \amp = \max \of{ \setmid{ x \in X }{ x \preceq u \textrm{ for all } u \in U } }
+              </mrow>
+              
+              <mrow>
+                \amp \geq \min \of{ \setmid{ x \in X }{ x \preceq v \textrm{ for all } v \in V } } = \inf \of{ V }
+              </mrow>
+            </md>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </lemma>
+  
+  <definition xml:id="definition-upper-lower-limit">
+    <title>
+      Upper/lower limit
     </title>
     
     <idx>
-      TERM
+      upper limit
+    </idx>
+    
+    <idx>
+      limit supremum
+    </idx>
+    
+    <idx>
+      lower limit
+    </idx>
+    
+    <idx>
+      limit infimum
     </idx>
     
     <notation>
       <usage>
-        <m>  </m>
+        <m> \limsup_{ n \to \infty }{ x_{ n } } </m>
       </usage>
       
       <description>
         <p>
-          
+          the upper limit of <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \liminf_{ n \to \infty }{ x_{ n } } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the lower limit of <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m>
         </p>
       </description>
     </notation>
     
     <statement>
       <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of real numbers <m> x_{ n } \in \R </m>.
         
+        <ul>
+          <li>
+            <title>
+              Upper limit
+            </title>
+            
+            <p>
+              The sequence <m> \of{ \sup_{ n \geq m }{ x_{ n } } }_{ m = 0 }^{ \infty } </m> is non-increasing, and so by the <xref ref="theorem-monotone-convergence-theorem" text="title"/> has a well-defined limit in the extended real numbers <m> \R \cup \set{ \pm \infty } </m>. This limit is called the <term> upper limit </term> or <term> limit supremum </term> of the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m>, and is denoted
+              
+              <md>
+                \limsup_{ n \to \infty }{ x_{ n } } = \lim_{ m \to \infty }{ \sup_{ n \geq m }{ x_{ n } } } = \inf_{ m \in \N }{ \sup_{ n \geq m }{ x_{ n } } }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Lower limit
+            </title>
+            
+            <p>
+              The sequence <m> \of{ \inf_{ n \geq m }{ x_{ n } } }_{ m = 0 }^{ \infty } </m> is non-decreasing, and so by the <xref ref="theorem-monotone-convergence-theorem" text="title"/> has a well-defined limit in the extended real numbers <m> \R \cup \set{ \pm \infty } </m>. This limit is called the <term> lower limit </term> or <term> limit infimum </term> of the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m>, and is denoted
+              
+              <md>
+                \liminf_{ n \to \infty }{ x_{ n } } = \lim_{ m \to \infty }{ \inf_{ n \geq m }{ x_{ n } } } = \sup_{ m \in \N }{ \inf_{ n \geq m }{ x_{ n } } }
+              </md>.
+            </p>
+          </li>
+        </ul>
       </p>
     </statement>
   </definition>
 
-  <lemma xml:id="lemma-TITLE">
+  <example xml:id="example-upper-lower-limits">
     <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </lemma>
-
-  <proposition xml:id="proposition-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </proposition>
-
-  <theorem xml:id="theorem-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </theorem>
-
-  <corollary xml:id="corollary-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </corollary>
-
-  <example xml:id="example-TITLE">
-    <title>
-      TITLE
+      Upper/lower limits
     </title>
     
     <statement>
       <p>
+        Consider the sequence
         
+        <md>
+          x_{ n } = \of{ -1 }^{ n } \of{ 1 + \frac{ 1 }{ n } } = \of{ -1 }^{ n } \of{ \frac{ n + 1 }{ n } }
+        </md>.
+        
+        Then <m> \limsup_{ n \to \infty }{ x_{ n } } = 1 </m>, and <m> \liminf_{ n \to \infty }{ x_{ n } } = -1 </m>.
       </p>
     </statement>
   </example>
 
--->
+  <proposition xml:id="proposition-properties-of-upper-limits">
+    <title>
+      Properties of upper limits
+    </title>
+    
+    <statement>
+      <p>
+        Upper limits of sequences of real numbers have the following properties:
+        
+        <ol>
+          <li>
+            <p>
+              A sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of real numbers <m> x_{ n } \in \R </m> is bounded from above if and only if
+              
+              <md>
+                \limsup_{ n \to \infty }{ x_{ n } } \lt \infty
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              For any sequences <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> and <m> \of{ y_{ n } }_{ n = 0 }^{ \infty } </m> of real numbers <m> x_{ n } , y_{ n } \in \R </m>,
+              
+              <md>
+                \limsup_{ n \to \infty }{ \of{ x_{ n } + y_{ n } } } \leq \limsup_{ n \to \infty }{ x_{ n } } + \limsup_{ n \to \infty }{ y_{ n } }
+              </md>
+              
+              whenever the right-hand side of the above inequality is well-defined.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              For any non-negative real number <m> \alpha \in \clopint{ 0 }{ \infty } </m> and sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of real numbers <m> x_{ n } \in \R </m>,
+              
+              <md>
+                \limsup_{ n \to \infty }{ \alpha x_{ n } } = \alpha \limsup_{ n \to \infty }{ x_{ n } }
+              </md>
+              
+              whenever the right-hand side of the above equality is well-defined.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            Suppose that <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is bounded from above. Then there is a real number <m> B \in \R </m> so that <m> x_{ n } \leq B </m> for all indices <m> n \in \N </m>. In particular, for all natural numbers <m> m \in \N </m>, <m> x_{ n } \leq B </m> for all indices <m> n \geq m </m>, and so <m> \sup_{ n \geq m }{ x_{ n } } \leq B </m>. <xref ref="proposition-comparison-of-limits"/> implies that
+            
+            <md>
+              \limsup_{ n \to \infty }{ x_{ n } } = \lim_{ n \to \infty }{ \sup_{ n \geq m }{ x_{ n } } } \leq B \lt \infty
+            </md>.
+          </p>
+          
+          <p>
+            Conversely, now suppose that <m> \limsup_{ n \to \infty }{ x_{ n } } \lt \infty </m>. For each natural number <m> m \in \N </m>, let <m> S_{ m } = \sup_{ n \geq m }{ x_{ n } } </m>, and let
+            
+            <md>
+             S = \lim_{ m \to \infty }{ S_{ m } } = \lim_{ m \to \infty }{ \sup_{ n \geq m }{ x_{ n } } } = \limsup_{ n \to \infty }{ x_{ n } }
+            </md>.
+            
+            Since <m> 1 </m> is a positive real number, there is a natural number <m> m_{ 1 } \in \N </m> so that <m> d \of{ S_{ m } , S } \lt 1 </m> for all indices <m> m \geq m_{ 1 } </m>. In particular,
+            
+            <md>
+              S_{ m_{ 1 } } - S \leq \abs{ S_{ m_{ 1 } } - S } = d \of{ S_{ m_{ 1 } } , S } \lt 1
+            </md>,
+            
+            and so <m> \sup_{ n \geq m_{ 1 } }{ x_{ n } } = S_{ m_{ 1 } } \lt S + 1 </m>. Let
+            
+            <md>
+              B = \max \of{ \set{ x_{ 0 } , x_{ 1 } , \dotsc , x_{ m_{ 1 } - 1 } , S + 1 } }
+            </md>,
+            
+            and note that <m> x_{ n } \leq B </m> for all indices <m> n \in \N </m>. Since such an upper bound exists, we conclude that <m> \of{ x_{ n } }_{ n = 1 }^{ \infty } </m> is bounded from above.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            For each natural number <m> m \in \N </m>, let <m> S_{ m } = \sup_{ n \geq m }{ x_{ n } } </m> and <m> T_{ m } = \sup_{ n \geq m }{ y_{ n } } </m>. We observe that <m> x_{ n } + y_{ n } \leq S_{ m } + T_{ m } </m> for all natural numbers <m> m \in \N </m> and indices <m> n \geq m </m>. Thus
+            
+            <md>
+              \sup_{ n \geq m }{ \of{ x_{ n } + y_{ n } } } \leq S_{ m } + T_{ m }
+            </md>
+            
+            for all natural numbers <m> m \in \N </m>, and so <xref ref="proposition-comparison-of-limits"/> and (1) of <xref ref="proposition-limits-and-vector-arithmetic"/> together imply that
+            
+            <md>
+              <mrow>
+                \limsup_{ n \to \infty }{ \of{ x_{ n } + y_{ n } } } \amp = \lim_{ n \to \infty }{ \sup_{ n \geq m }{ \of{ x_{ n } + y_{ n } } } } \leq \lim_{ m \to \infty }{ \of{ S_{ m } + T_{ m } } }
+              </mrow>
+              
+              <mrow>
+                \amp = \lim_{ m \to \infty }{ S_{ m } } + \lim_{ m \to \infty }{ T_{ m } } = \limsup_{ n \to \infty }{ x_{ n } } + \limsup_{ n \to \infty }{ y_{ n } }
+              </mrow>
+            </md>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            If <m> \alpha = 0 </m>, then our hypotheses imply that <m> \limsup_{ n \to \infty }{ x_{ n } } \in \R </m> is a real number, and so
+            
+            <md>
+              \limsup_{ n \to \infty }{ \alpha x_{ n } } = \limsup_{ n \to \infty }{ 0 } = 0 = 0 \limsup_{ n \to \infty }{ x_{ n } }
+            </md>.
+            
+            Thus we may suppose that <m> \alpha \gt 0 </m> is positive. In this case, multiplication by <m> \alpha </m> is a strictly order-preserving bijection of <m> \R \cup \set{ \pm \infty } </m>, and so
+            
+            <md>
+              <mrow>
+                \sup_{ n \geq m }{ \alpha x_{ n } } = \sup \of{ \set{ \alpha x_{ n } }_{ n = m }^{ \infty } } = \alpha \sup \of{ \set{ x_{ n } }_{ n = m }^{ \infty } } = \alpha \sup_{ n \geq m }{ x_{ n } }
+              </mrow>
+            </md>
+            
+            for all natural numbers <m> m \in \N </m>. We conclude that
+            
+            <md>
+              <mrow>
+                \limsup_{ n \to \infty }{ \alpha x_{ n } } \amp = \lim_{ m \to \infty }{ \sup_{ n \geq m }{ \alpha x_{ n } } } = \lim_{ m \to \infty }{ \alpha \sup_{ n \geq m }{ x_{ n } } }
+              </mrow>
+              
+              <mrow>
+                \amp = \alpha \lim_{ m \to \infty }{ \sup_{ n \geq m }{ x_{ n } } } = \alpha \limsup_{ n \to \infty }{ x_{ n } }
+              </mrow>
+            </md>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </proposition>
+  
+  <p>
+    One natural follow-up from <xref ref="proposition-properties-of-upper-limits"/> is the question of negative scalings of sequences: If <m> \alpha \lt 0 </m> is a negative real number and <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is a sequence of real numbers <m> x_{ n } \in \R </m>, what is the upper limit <m> \limsup_{ n \to \infty }{ \alpha x_{ n } } </m>?
+  </p>
+  
+  <lemma xml:id="lemma-upper-and-lower-limits">
+    <title>
+      Upper and lower limits
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of real numbers. Then
+        
+        <md>
+          \limsup_{ n \to \infty }{ \of{ -x_{ n } } } = -\liminf_{ n \to \infty }{ x_{ n } }
+        </md>
+        
+        and
+        
+        <md>
+          \liminf_{ n \to \infty }{ \of{ -x_{ n } } } = -\limsup_{ n \to \infty }{ x_{ n } }
+        </md>.
+        
+        Here we define <m> -\of{ \infty } = -\infty </m> and <m> -\of{ -\infty } = \infty </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        We observe that
+        
+        <md>
+          <mrow>
+            \sup_{ n \geq m }{ \of{ -x_{ n } } } \amp = \min \of{ \setmid{ x \in \clint{ -\infty }{ \infty } }{ -x_{ n } \leq x \textrm{ for all } n \geq m } }
+          </mrow>
+          
+          <mrow>
+            \amp = \min \of{ \setmid{ x \in \clint{ -\infty }{ \infty } }{ -x \leq x_{ n } \textrm{ for all } n \geq m } }
+          </mrow>
+          
+          <mrow>
+            \amp = \min \of{ \setmid{ -x \in \clint{ -\infty }{ \infty } }{ x \leq x_{ n } \textrm{ for all } n \geq m } }
+          </mrow>
+          
+          <mrow>
+            \amp = -\max \of{ \setmid{ -x \in \clint{ -\infty }{ \infty } }{ x \leq x_{ n } \textrm{ for all } n \geq m } } = -\inf_{ n \geq m }{ x_{ n } }
+          </mrow>
+        </md>
+        
+        for all natural numbers <m> m \in \N </m>, and so
+        
+        <md>
+          <mrow>
+            \limsup_{ n \to \infty }{ \of{ -x_{ n } } } \amp = \lim_{ n \to \infty }{ \sup_{ n \geq m }{ \of{ -x_{ n } } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \lim_{ n \to \infty }{ -\inf_{ n \geq m }{ x_{ n } } }
+          </mrow>
+          
+          <mrow>
+            \amp = -\lim_{ n \to \infty }{ \inf_{ n \geq m }{ x_{ n } } } = -\liminf_{ n \to \infty }{ x_{ n } }
+          </mrow>
+        </md>.
+        
+        Applying this result to the sequence <m> \of{ -x_{ n } }_{ n = 0 }^{ \infty } </m>, we see that
+        
+        <md>
+          <mrow>
+            -\limsup_{ n \to \infty }{ x_{ n } } \amp = -\limsup_{ n \to \infty }{ \of{ -\of{ -x_{ n } } } }
+          </mrow>
+          
+          <mrow>
+            \amp = -\of{ -\liminf_{ n \to \infty }{ \of{ -x_{ n } } } } = \liminf_{ n \to \infty }{ \of{ -x_{ n } } }
+          </mrow>
+        </md>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <p>
+    In addition to answering our question about the behavior of upper limits under scaling by negative real numbers, we can use <xref ref="lemma-upper-and-lower-limits"/> to translate results about upper limits into results about lower limits. For example, each of the properties in <xref ref="proposition-properties-of-upper-limits"/> has an analogue for lower limits.
+  </p>
+
+  <corollary xml:id="corollary-properties-of-lower-limits">
+    <title>
+      Properties of lower limits
+    </title>
+    
+    <statement>
+      <p>
+        Lower limits of sequences of real numbers have the following properties:
+        
+        <ol>
+          <li>
+            <p>
+              A sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of real numbers <m> x_{ n } \in \R </m> is bounded from below if and only if
+              
+              <md>
+                \liminf_{ n \to \infty }{ x_{ n } } \gt -\infty
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              For any sequences <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> and <m> \of{ y_{ n } }_{ n = 0 }^{ \infty } </m> of real numbers <m> x_{ n } , y_{ n } \in \R </m>,
+              
+              <md>
+                \liminf_{ n \to \infty }{ \of{ x_{ n } + y_{ n } } } \geq \liminf_{ n \to \infty }{ x_{ n } } + \liminf_{ n \to \infty }{ y_{ n } }
+              </md>
+              
+              whenever the right-hand side of the above inequality is well-defined.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              For any non-negative real number <m> \alpha \in \clopint{ 0 }{ \infty } </m> and sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of real numbers <m> x_{ n } \in \R </m>,
+              
+              <md>
+                \liminf_{ n \to \infty }{ \alpha x_{ n } } = \alpha \liminf_{ n \to \infty }{ x_{ n } }
+              </md>
+              
+              whenever the right-hand side of the above equality is well-defined.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </corollary>
+  
+  <p>
+    Finally, we end with a characterization of convergence and divergence to infinity in terms of upper and lower limits.
+  </p>
+
+  <theorem xml:id="theorem-convergence-and-upper-and-lower-limits">
+    <title>
+      Convergence and upper and lower limits
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of real numbers <m> x_{ n } \in \R </m>.
+        
+        <ol>
+          <li>
+            <title>
+              Convergence
+            </title>
+            
+            <p>
+              For any real number <m> l \in \R </m>, the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> l </m> if and only if
+              
+              <md>
+                \limsup_{ n \to \infty }{ x_{ n } } = \liminf_{ n \to \infty }{ x_{ n } } = l
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Divergence to <m> \infty </m>
+            </title>
+            
+            <p>
+              The sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> diverges to <m> \infty </m> if and only if
+              
+              <md>
+                \liminf_{ n \to \infty }{ x_{ n } } = \infty
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Divergence to <m> -\infty </m>
+            </title>
+            
+            <p>
+              The sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> diverges to <m> -\infty </m> if and only if
+              
+              <md>
+                \limsup_{ n \to \infty }{ x_{ n } } = -\infty
+              </md>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            For each natural number <m> m \in \N </m>, let <m> S_{ m } = \sup_{ n \geq m }{ x_{ n } } </m> and <m> I_{ m } = \inf_{ n \geq m }{ x_{ n } } </m>. First suppose that <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> l </m>. Let <m> \epsilon \gt 0 </m> be a positive real number. Then there is a natural number <m> n_{ \epsilon } \in \N </m> so that
+            
+            <md>
+              l - \epsilon \lt x_{ n } \lt l + \epsilon
+            </md>
+            
+            for all indices <m> n \geq n_{ \epsilon } </m>. In particular,
+            
+            <md>
+              l - \epsilon \lt I_{ m } \leq S_{ m } \lt l + \epsilon
+            </md>
+            
+            for any natural number <m> m \geq n_{ \epsilon } </m>, and so
+            
+            <md>
+              l - \epsilon \leq \lim_{ m \to \infty }{ I_{ m } } \leq \lim_{ m \to \infty }{ S_{ m } } \leq l + \epsilon
+            </md>
+            
+            by <xref ref="proposition-comparison-of-limits"/>. Since this holds for all positive real numbers <m> \epsilon \gt 0 </m>,
+            
+            <md>
+              \limsup_{ m \to \infty }{ x_{ n } } = \liminf_{ n \to \infty }{ x_{ n } } = l
+            </md>.
+          </p>
+          
+          <p>
+            Conversely, now suppose that
+            
+            <md>
+              \limsup_{ m \to \infty }{ x_{ n } } = \liminf_{ n \to \infty }{ x_{ n } } = l
+            </md>.
+            
+            Let <m> \epsilon \gt 0 </m> be a positive real number. Then there are natural numbers <m> m_{ \epsilon } , n_{ \epsilon } \in \N </m> so that <m> d \of{ S_{ m } , l } \lt \epsilon </m> for all indices <m> m \geq m_{ \epsilon } </m> and <m> d \of{ I_{ m } , l } \lt \epsilon </m> for all indices <m> m \geq n_{ \epsilon } </m>. Let <m> p_{ \epsilon } = \max \of{ \set{ m_{ \epsilon } , n_{ \epsilon } } } \in \N </m>, and note that
+            
+            <md>
+              <mrow>
+                x_{ n } - l \amp \leq S_{ p_{ \epsilon } } - l \leq \abs{ S_{ p_{ \epsilon } } - l }
+              </mrow>
+              
+              <mrow>
+                \amp = d \of{ S_{ p_{ \epsilon } } , l } \lt \epsilon
+              </mrow>
+            </md>
+            
+            and
+            
+            <md>
+              <mrow>
+                l - x_{ n } \amp \leq l - I_{ p_{ \epsilon } } \leq \abs{ I_{ p_{ \epsilon } } - l }
+              </mrow>
+              
+              <mrow>
+                \amp = d \of{ I_{ p_{ \epsilon } } , l } \lt \epsilon
+              </mrow>
+            </md>
+            
+            for all indices <m> n \geq p_{ \epsilon } </m>. We conclude that
+            
+            <md>
+              <mrow>
+                d \of{ x_{ n } , l } = \abs{ x_{ n } - l }
+              </mrow>
+              
+              <mrow>
+                \amp = \max \of{ \set{ x_{ n } - l , l - x_{ n } } } \lt \epsilon
+              </mrow>
+            </md>
+            
+             for all indices <m> n \geq p_{ \epsilon } </m>, and so <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> l </m>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </theorem>
+  
+  <p>
+    You will be given the opportunity to prove (2) and (3) of <xref ref="theorem-convergence-and-upper-and-lower-limits"/> in the problems for this section.
+  </p>
+
+  <conclusion>
+    <p>
+      In <xref ref="chapter-topological-spaces"/>, we will reexamine limits, convergence, and divergence to infinity in the extended real number system as an example of the more general context of topological spaces. For now, however, we will return to our study of the point-set topology of metric spaces.
+    </p>
+  </conclusion>
+</subsection>
