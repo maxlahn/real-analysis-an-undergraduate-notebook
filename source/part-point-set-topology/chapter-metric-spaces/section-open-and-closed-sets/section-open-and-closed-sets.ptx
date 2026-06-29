@@ -33,7 +33,7 @@
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-open-and-closed-sets.ptx"/>
+  <xi:include href="./exercises-open-and-closed-sets.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-open-and-closed-sets.ptx"/>
+  <xi:include href="./problems-open-and-closed-sets.ptx"/>
 </section>

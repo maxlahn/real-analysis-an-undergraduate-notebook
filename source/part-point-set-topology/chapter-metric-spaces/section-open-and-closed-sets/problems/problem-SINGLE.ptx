@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<exercise xml:id="reading-question-SINGLE" xmlns:xi="http://www.w3.org/2001/XInclude">
+<exercise xml:id="problem-TITLE" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>
-    READING QUESTION TITLE
+    TITLE
   </title>
   
   <statement>

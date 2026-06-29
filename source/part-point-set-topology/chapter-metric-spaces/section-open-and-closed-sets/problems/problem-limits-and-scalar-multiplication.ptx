@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-limits-and-scalar-multiplication" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Limits and scalar multiplication
+  </title>
+  
+  <statement>
+    <p>
+      Let <m> \norm{ \oparg } </m> be a norm on a real or complex vector space <m> V </m>. Prove that
+      
+      <md>
+        \lim_{ n \to \infty }{ \alpha_{ n } \vect{ v }_{ n } } = \lim_{ n \to \infty }{ \alpha_{ n } } \lim_{ n \to \infty }{ \vect{ v }_{ n } }
+      </md>
+      
+      for any convergent sequences <m> \of{ \alpha_{ n } }_{ n = 0 }^{ \infty } </m> and <m> \of{ \vect{ v }_{ n } }_{ n = 0 }^{ \infty } </m> of scalars <m> \alpha_{ n } </m> and vectors <m> \vect{ v }_{ n } \in V </m>.
+    </p>
+  </statement>
+  
+  <solution>
+    <p>
+      asdf
+    </p>
+  </solution>
+</exercise>

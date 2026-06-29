@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-squeezing-to-infinity" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Squeezing to infinity
+  </title>
+  
+  <introduction>
+    <p>
+      Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> and <m> \of{ y_{ n } }_{ n = 0 }^{ \infty } </m> be sequences of real numbers <m> x_{ n } , y_{ n } \in \R </m>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that if <m> x_{ n } \leq y_{ n } </m> for all indices <m> n \in \N </m> and <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> diverges to <m> \infty </m>, then <m> \of{ y_{ n } }_{ n = 0 }^{ \infty } </m> diverges to <m> \infty </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that if <m> x_{ n } \leq y_{ n } </m> for all indices <m> n \in \N </m> and <m> \of{ y_{ n } }_{ n = 0 }^{ \infty } </m> diverges to <m> -\infty </m>, then <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> diverges to <m> -\infty </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+  
+  <conclusion>
+    <p>
+      We can interpret the above results as versions of the <xref ref="theorem-squeeze-theorem" text="title"/> for divergence to infinity.
+    </p>
+  </conclusion>
+</exercise>
