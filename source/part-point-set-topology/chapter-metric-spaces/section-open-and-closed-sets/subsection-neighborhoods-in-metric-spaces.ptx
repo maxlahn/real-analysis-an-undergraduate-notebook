@@ -818,6 +818,68 @@
       </ol>
     </proof>
   </theorem>
+
+  <corollary xml:id="corollary-idempotence-of-interior-closure">
+    <title>
+      Idempotence of interior/closure
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ X , \rho } </m> be a metric space.
+        
+        <ol>
+          <li>
+            <title>
+              Idempotence of interior
+            </title>
+            
+            <p>
+              <m> \Int \of{ \Int \of{ U } } = \Int \of{ U } </m> for all subsets <m> U \subseteq X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Idempotence of closure
+            </title>
+            
+            <p>
+              <m> \Cl \of{ \Cl \of{ U } } = \Cl \of{ U } </m> for all subsets <m> U \subseteq X </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            (1) of <xref ref="theorem-interior-closure"/> implies that <m> \Int \of{ U } </m> is a union of open sets in <m> X </m>, and so <m> \Int \of{ U } </m> is itself open in <m> X </m> by (2) of <xref ref="proposition-topology-of-a-metric-space"/>. Thus
+            
+            <md>
+              \Int \of{ \Int \of{ U } } = \Int \of{ U }
+            </md>
+            
+            by (1) of <xref ref="proposition-interior-closure"/>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            (2) of <xref ref="theorem-interior-closure"/> implies that <m> \Cl \of{ U } </m> is an intersection of closed sets in <m> X </m>, and so <m> \Cl \of{ U } </m> is itself closed in <m> X </m> by (3) of <xref ref="proposition-topology-of-a-metric-space"/>. Thus
+            
+            <md>
+              \Cl \of{ \Cl \of{ U } } = \Cl \of{ U }
+            </md>
+            
+            by (2) of <xref ref="proposition-interior-closure"/>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </corollary>
   
   <conclusion>
     <p>
