@@ -35,7 +35,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="A simple string (no markup is allowed) to describe your book.">
 <meta property="og:description" content="A simple string (no markup is allowed) to describe your book.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.42"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -57,15 +57,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.13.7';
+eBookConfig.runestone_version = '8.1.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.52176322e2c1dde5.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.2f713d2360adcee7.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/prefix-runtime.53a23d1b65c1dce2.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.4787412a251795e3.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -74,17 +74,35 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="book-real-analysis.html"><span class="title">Real Analysis</span> <span class="subtitle">An Undergraduate Notebook</span></a></h1>
 <p class="byline">Max Lahn</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
-<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search book" commandfor="ptx-search-dialog" command="show-modal"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
-<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog" closedby="closerequest"><div class="ptx-search-dialog-controls">
-<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close search" id="ptx-search-close" class="ptx-search-close" commandfor="ptx-search-dialog" command="close"><span class="material-symbols-outlined">close</span></button>
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
 <div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
-<h2 class="ptx-search-results-heading">Search Results: </h2>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
 <div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="section-the-complete-ordered-field.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-constructing-the-number-systems.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="part-point-set-topology.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="section-the-complete-ordered-field.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-constructing-the-number-systems.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="part-point-set-topology.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(  \newcommand{\of}[1]{ \left ( #1 \right ) } 
   
   \newcommand{\class}[1]{ \left \lbrack { #1 } \right \rbrack } 
@@ -566,17 +584,17 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts focused" data-preexpanded-levels="0" data-max-levels="3"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth3 parts focused" data-preexpanded-levels="0" data-max-levels="3"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-part contains-active">
 <div class="toc-title-box"><a href="part-foundations-of-analysis.html" class="internal"><span class="codenumber">I</span> <span class="title">Foundations of Analysis</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-part-foundations-of-analysis">
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter-introductory-set-theory.html" class="internal"><span class="codenumber">1</span> <span class="title">Introductory Set Theory</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-chapter-introductory-set-theory" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-what-is-a-set.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What Is a Set?</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-what-is-a-set" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-what-is-a-set.html#subsection-definitions-of-sets" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Definitions of Sets</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-what-is-a-set.html#subsection-set-containment" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Set Containment</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-what-is-a-set.html#subsection-set-operations" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Set Operations</span></a></div></li>
@@ -586,7 +604,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-maps-and-functions.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Maps and Functions</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-maps-and-functions" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-maps-and-functions.html#subsection-introduction-to-maps" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Introduction to Maps</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-maps-and-functions.html#subsection-composition-and-invertibility" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Composition and Invertibility</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-maps-and-functions.html#subsection-indexing" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Indexing</span></a></div></li>
@@ -596,7 +614,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Peano Arithmetic and the Natural Numbers [Skip]</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-peano-arithmetic-and-the-natural-numbers" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#subsection-axiomatizing-the-natural-numbers" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Axiomatizing the Natural Numbers</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#subsection-properties-of-arithmetic" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Properties of Arithmetic</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#subsection-properties-of-comparison" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Properties of Comparison</span></a></div></li>
@@ -606,7 +624,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-finitary-operations-and-relations.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Finitary Operations and Relations</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-finitary-operations-and-relations" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#subsection-products-and-choice" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Products and Choice</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#subsection-finitary-operations" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Finitary Operations</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#subsection-finitary-relations" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Finitary Relations</span></a></div></li>
@@ -616,7 +634,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-introduction-to-order-theory.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Introduction to Order Theory</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-introduction-to-order-theory" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#subsection-preorders-and-partial-orders" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Preorders and Partial Orders</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#subsection-boundedness-and-extrema" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Boundedness and Extrema</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#subsection-comparability-and-total-orders" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Comparability and Total Orders</span></a></div></li>
@@ -626,7 +644,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-cardinality-and-countability.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Cardinality and Countability [SKIP]</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-cardinality-and-countability" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#subsection-finiteness" class="internal"><span class="codenumber">1.6.1</span> <span class="title">Finiteness</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#subsection-cardinal-comparison" class="internal"><span class="codenumber">1.6.2</span> <span class="title">Cardinal Comparison</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#subsection-countability" class="internal"><span class="codenumber">1.6.3</span> <span class="title">Countability</span></a></div></li>
@@ -638,17 +656,17 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chapter-constructing-the-number-systems.html" class="internal"><span class="codenumber">2</span> <span class="title">Constructing the Number Systems</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-chapter-constructing-the-number-systems">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-the-integers-and-the-rational-numbers.html" class="internal"><span class="codenumber">2.1</span> <span class="title">The Integers and the Rational Numbers [SKIP]</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-the-integers-and-the-rational-numbers" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-integers-and-the-rational-numbers.html#exercises-the-integers-and-the-rational-numbers" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-integers-and-the-rational-numbers.html#problems-the-integers-and-the-rational-numbers" class="internal"><span class="codenumber">2.1</span> <span class="title">Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-constructing-the-real-numbers.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Constructing the Real Numbers</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-constructing-the-real-numbers" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#subsection-cutting-the-rational-numbers" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Cutting the Rational Numbers</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#subsection-comparison-of-dedekind-cuts" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Comparison of Dedekind Cuts</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#subsection-addition-of-dedekind-cuts" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Addition of Dedekind Cuts</span></a></div></li>
@@ -659,7 +677,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-the-complete-ordered-field.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Complete Ordered Field</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-the-complete-ordered-field" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#subsection-the-ordered-field-axioms" class="internal"><span class="codenumber">2.3.1</span> <span class="title">The Ordered Field Axioms</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#subsection-dedekind-completeness" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Dedekind completeness</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#exercises-the-complete-ordered-field" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Exercises</span></a></div></li>
@@ -668,7 +686,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="section-beyond-the-real-number-system.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Beyond the Real Number System</span></a></div>
-<ul class="structural toc-item-list active">
+<ul class="structural toc-item-list active" id="ptx-toc-group-section-beyond-the-real-number-system">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-beyond-the-real-number-system.html#subsection-the-complex-numbers" class="internal"><span class="codenumber">2.4.1</span> <span class="title">The Complex Numbers</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-beyond-the-real-number-system.html#subsection-infinity" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Infinity</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-beyond-the-real-number-system.html#exercises-beyond-the-real-number-system" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Exercises</span></a></div></li>
@@ -681,13 +699,13 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-part">
 <div class="toc-title-box"><a href="part-point-set-topology.html" class="internal"><span class="codenumber">II</span> <span class="title">Point-Set Topology</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-part-point-set-topology" class="structural toc-item-list">
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter-metric-spaces.html" class="internal"><span class="codenumber">3</span> <span class="title">Metric Spaces</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-chapter-metric-spaces" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction to Metric Geometry</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-introduction-to-metric-geometry" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#subsection-introduction-to-metrics" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Introduction to Metrics</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#subsection-constructing-new-metrics" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Constructing New Metrics</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#subsection-normed-vector-spaces" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Normed Vector Spaces</span></a></div></li>
@@ -697,7 +715,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-convergence-and-limits.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Convergence and Limits</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-convergence-and-limits" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-convergence-and-limits.html#subsection-sequential-convergence" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Sequential Convergence</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-convergence-and-limits.html#subsection-pointwise-and-uniform-convergence" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Pointwise and Uniform Convergence</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-convergence-and-limits.html#subsection-map-convergence" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Map Convergence</span></a></div></li>
@@ -707,7 +725,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Limits in the Euclidean Metric</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-limits-in-the-euclidean-metric" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#subsection-limits-and-arithmetic" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Limits and Arithmetic</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#subsection-divergence-to-infinity" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Divergence to Infinity</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#subsection-upper-and-lower-limits" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Upper and Lower Limits</span></a></div></li>
@@ -717,21 +735,23 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-open-and-closed-sets.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Open and Closed Sets</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#exercises-open-and-closed-sets" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#reading-questions-open-and-closed-sets" class="internal"><span class="codenumber">3.4</span> <span class="title">Reading Questions</span></a></div></li>
+<ul id="ptx-toc-group-section-open-and-closed-sets" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#subsection-neighborhoods-in-metric-spaces" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Neighborhoods in Metric Spaces</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#subsection-metrics-and-boundedness" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Metrics and Boundedness</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#exercises-open-and-closed-sets" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#reading-questions-open-and-closed-sets" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-notions-of-metric-continuity.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Notions of Metric Continuity</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-notions-of-metric-continuity" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#exercises-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#reading-questions-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-completeness-and-compactness.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Completeness and Compactness</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-completeness-and-compactness" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#exercises-completeness-and-compactness" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#reading-questions-completeness-and-compactness" class="internal"><span class="codenumber">3.6</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
@@ -740,38 +760,38 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter-topological-spaces.html" class="internal"><span class="codenumber">4</span> <span class="title">Topological Spaces</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-chapter-topological-spaces" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-introduction-to-topology.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Introduction to Topology</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-introduction-to-topology" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-topology.html#exercises-introduction-to-topology" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-topology.html#reading-questions-introduction-to-topology" class="internal"><span class="codenumber">4.1</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-comparison-of-topologies.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Comparison of Topologies [SKIP]</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-comparison-of-topologies" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-comparison-of-topologies.html#exercises-comparison-of-topologies" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-comparison-of-topologies.html#reading-questions-comparison-of-topologies" class="internal"><span class="codenumber">4.2</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-convergence-and-separation.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Convergence and Separation</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-convergence-and-separation" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-separation.html#exercises-convergence-and-separation" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-separation.html#reading-questions-convergence-and-separation" class="internal"><span class="codenumber">4.3</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-continuity-in-topological-spaces.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Continuity in Topological Spaces</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-continuity-in-topological-spaces" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-continuity-in-topological-spaces.html#exercises-continuity-in-topological-spaces" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-continuity-in-topological-spaces.html#reading-questions-continuity-in-topological-spaces" class="internal"><span class="codenumber">4.4</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-connectedness-and-compactness.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Connectedness and Compactness [SKIP]</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-connectedness-and-compactness" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-connectedness-and-compactness.html#exercises-connectedness-and-compactness" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-connectedness-and-compactness.html#reading-questions-connectedness-and-compactness" class="internal"><span class="codenumber">4.5</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
@@ -782,34 +802,34 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-part">
 <div class="toc-title-box"><a href="part-calculus.html" class="internal"><span class="codenumber">III</span> <span class="title">Calculus</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-part-calculus" class="structural toc-item-list">
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter-differentiation-and-smoothness.html" class="internal"><span class="codenumber">5</span> <span class="title">Differentiation and Smoothness</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-chapter-differentiation-and-smoothness" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-differentiability.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Differentiability</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-differentiability" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#exercises-differentiability" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#reading-questions-differentiability" class="internal"><span class="codenumber">5.1</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-the-mean-value-theorem.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Mean Value Theorem</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-the-mean-value-theorem" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-mean-value-theorem.html#exercises-the-mean-value-theorem" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-mean-value-theorem.html#reading-questions-the-mean-value-theorem" class="internal"><span class="codenumber">5.2</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-applications-of-the-mean-value-theorem.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Applications of the Mean Value Theorem</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-applications-of-the-mean-value-theorem" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-applications-of-the-mean-value-theorem.html#exercises-applications-of-the-mean-value-theorem" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-applications-of-the-mean-value-theorem.html#reading-questions-applications-of-the-mean-value-theorem" class="internal"><span class="codenumber">5.3</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-higher-order-derivatives.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Higher Order Derivatives</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-higher-order-derivatives" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-higher-order-derivatives.html#exercises-higher-order-derivatives" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-higher-order-derivatives.html#reading-questions-higher-order-derivatives" class="internal"><span class="codenumber">5.4</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
@@ -818,31 +838,31 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter-riemann-integration.html" class="internal"><span class="codenumber">6</span> <span class="title">Riemann Integration</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-chapter-riemann-integration" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-riemann-sums.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Riemann Sums</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-riemann-sums" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-riemann-sums.html#exercises-riemann-sums" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-riemann-sums.html#reading-questions-riemann-sums" class="internal"><span class="codenumber">6.1</span> <span class="title">Reading Question</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-properties-of-the-riemann-integral.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Properties of the Riemann Integral</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-properties-of-the-riemann-integral" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-properties-of-the-riemann-integral.html#exercises-properties-of-the-riemann-integral" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-properties-of-the-riemann-integral.html#reading-questions-properties-of-the-riemann-integral" class="internal"><span class="codenumber">6.2</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The Fundamental Theorems of Calculus</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-the-fundamental-theorems-of-calculus" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#exercises-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#reading-questions-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.3</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-improper-integration.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Improper Integration</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-improper-integration" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-improper-integration.html#exercises-improper-integration" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-improper-integration.html#reading-questions-improper-integration" class="internal"><span class="codenumber">6.4</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
@@ -851,31 +871,31 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter-infinite-series.html" class="internal"><span class="codenumber">7</span> <span class="title">Infinite Series</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-chapter-infinite-series" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Partial Sums and Infinite Series</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-partial-sums-and-infinite-series" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#exercises-partial-sums-and-infinite-series" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#reading-questions-partial-sums-and-infinite-series" class="internal"><span class="codenumber">7.1</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-tests-for-series-convergence.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Tests for Series Convergence</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-tests-for-series-convergence" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-tests-for-series-convergence.html#exercises-tests-for-series-convergence" class="internal"><span class="codenumber">7.2</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-tests-for-series-convergence.html#reading-questions-tests-for-series-convergence" class="internal"><span class="codenumber">7.2</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-power-series.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Power Series</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-power-series" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-power-series.html#exercises-power-series" class="internal"><span class="codenumber">7.3</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-power-series.html#reading-questions-power-series" class="internal"><span class="codenumber">7.3</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-analytic-functions.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Analytic Functions</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-analytic-functions" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-analytic-functions.html#exercises-analytic-functions" class="internal"><span class="codenumber">7.4</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-analytic-functions.html#reading-questions-analytic-functions" class="internal"><span class="codenumber">7.4</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
@@ -886,7 +906,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
 <li class="toc-item toc-solutions"><div class="toc-title-box"><a href="solutions.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Solutions</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">List of Symbols</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Index</span></a></div></li>
@@ -900,19 +920,19 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Beyond the Real Number System</span>
 </h2>
 <section class="introduction" id="section-beyond-the-real-number-system-2">
-<div class="para" id="section-beyond-the-real-number-system-2-1">In this section, we address several common extensions to the real number system <span class="process-math">\(\R \text{.}\)</span> Some of these, like the <dfn class="terminology">complex numbers</dfn> and the <dfn class="terminology">quaternions</dfn>, see extensions to arithmetic (at the cost of some of the ordered field axioms). Others, like the <dfn class="terminology">extended real numbers</dfn>, abandon arithmetic altogether in favor of certain order-theoretic properties.<div class="autopermalink" data-description="Paragraph"><a href="#section-beyond-the-real-number-system-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="section-beyond-the-real-number-system-2-1">In this section, we address several common extensions to the real number system <span class="process-math">\(\R \text{.}\)</span> Some of these, like the <dfn class="terminology">complex numbers</dfn> and the <dfn class="terminology">quaternions</dfn>, see extensions to arithmetic (at the cost of some of the ordered field axioms). Others, like the <dfn class="terminology">extended real numbers</dfn>, abandon arithmetic altogether in favor of certain order-theoretic properties.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-beyond-the-real-number-system-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="subsection" id="subsection-the-complex-numbers">
 <h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Complex Numbers</span>
 </h3>
 <section class="introduction" id="subsection-the-complex-numbers-2">
-<div class="para" id="subsection-the-complex-numbers-2-1">Despite not playing a large role in the field of real analysis, the <dfn class="terminology">complex number system</dfn> is ubiquitous throughout mathematics and merits at least a brief mention. The extension of the real numbers to the complex numbers ameliorates an algebraic insufficiency of <span class="process-math">\(\R \text{,}\)</span> namely that it does not contain the roots of all polynomials. For example, there is no real number <span class="process-math">\(x \in \R \)</span> so that <span class="process-math">\(x^{ 2 } + 1 = 0 \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsection-the-complex-numbers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsection-the-complex-numbers-2-1">Despite not playing a large role in the field of real analysis, the <dfn class="terminology">complex number system</dfn> is ubiquitous throughout mathematics and merits at least a brief mention. The extension of the real numbers to the complex numbers ameliorates an algebraic insufficiency of <span class="process-math">\(\R \text{,}\)</span> namely that it does not contain the roots of all polynomials. For example, there is no real number <span class="process-math">\(x \in \R \)</span> so that <span class="process-math">\(x^{ 2 } + 1 = 0 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-the-complex-numbers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <article class="definition definition-like" id="definition-complex-number"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Complex number.</span>
 </h4>
-<div class="para" id="definition-complex-number-4-1">A <dfn class="terminology">complex number</dfn> is an ordered pair <span class="process-math">\(z = \of{ x , y } \)</span> of real numbers <span class="process-math">\(x , y \in \R \text{,}\)</span> the first of which is called the <dfn class="terminology">real part</dfn> and is denoted <span class="process-math">\(\Re \of{ z } = x \)</span> and the second of which is called the <dfn class="terminology">imaginary part</dfn> and is denoted <span class="process-math">\(\Im \of{ z } = y \text{.}\)</span> The set of all complex numbers is denoted <span class="process-math">\(\C \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-complex-number-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="definition-complex-number-4-1">A <dfn class="terminology">complex number</dfn> is an ordered pair <span class="process-math">\(z = \of{ x , y } \)</span> of real numbers <span class="process-math">\(x , y \in \R \text{,}\)</span> the first of which is called the <dfn class="terminology">real part</dfn> and is denoted <span class="process-math">\(\Re \of{ z } = x \)</span> and the second of which is called the <dfn class="terminology">imaginary part</dfn> and is denoted <span class="process-math">\(\Im \of{ z } = y \text{.}\)</span> The set of all complex numbers is denoted <span class="process-math">\(\C \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-complex-number-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="definition-complex-number-4-2">
 <div class="para">The <dfn class="terminology">sum</dfn> <span class="process-math">\(z_{ 1 } + z_{ 2 } \)</span> and <dfn class="terminology">product</dfn> <span class="process-math">\(z_{ 1 } z_{ 2 } \)</span> of two complex numbers <span class="process-math">\(z_{ 1 } , z_{ 2 } \in \C \)</span> are the complex numbers defined by the formulae</div>
@@ -928,16 +948,16 @@ z_{ 1 } z_{ 2 } \amp = \of{ \Re \of{ z_{ 1 } } \cdot \Re \of{ z_{ 2 } } - \Im \o
 i \cdot i = \of{ 0 , 1 } \cdot \of{ 0 , 1 } = \of{ 0 \cdot 0 - 1 \cdot 1 , 0 \cdot 1 + 1 \cdot 0 } = \of{ -1 , 0 }\text{.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#definition-complex-number-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-complex-number-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.4.1: Complex number"><a href="#definition-complex-number" title="Copy heading and permalink for Definition 2.4.1: Complex number" aria-label="Copy heading and permalink for Definition 2.4.1: Complex number">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 2.4.1: Complex number"><a tabindex="-1" href="#definition-complex-number" title="Copy heading and permalink for Definition 2.4.1: Complex number" aria-label="Copy heading and permalink for Definition 2.4.1: Complex number">🔗</a></div>
 </article>
 <article class="lemma theorem-like" id="lemma-real-numbers-are-complex-numbers"><h4 class="heading">
 <span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Real numbers as complex numbers.</span>
 </h4>
-<div class="para" id="lemma-real-numbers-are-complex-numbers-2-1">There is an injective map <span class="process-math">\(\iota \colon \R \to \C \)</span> so that <span class="process-math">\(\iota \of{ x_{ 1 } + x_{ 2 } } = \iota \of{ x_{ 1 } } + \iota \of{ x_{ 2 } } \)</span> and <span class="process-math">\(\iota \of{ x_{ 1 } x_{ 2 } } = \iota \of{ x_{ 1 } } \cdot \iota \of{ x_{ 2 } } \)</span> for all real numbers <span class="process-math">\(x_{ 1 } , x_{ 2 } \in \R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lemma-real-numbers-are-complex-numbers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="lemma-real-numbers-are-complex-numbers-2-1">There is an injective map <span class="process-math">\(\iota \colon \R \to \C \)</span> so that <span class="process-math">\(\iota \of{ x_{ 1 } + x_{ 2 } } = \iota \of{ x_{ 1 } } + \iota \of{ x_{ 2 } } \)</span> and <span class="process-math">\(\iota \of{ x_{ 1 } x_{ 2 } } = \iota \of{ x_{ 1 } } \cdot \iota \of{ x_{ 2 } } \)</span> for all real numbers <span class="process-math">\(x_{ 1 } , x_{ 2 } \in \R \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-real-numbers-are-complex-numbers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Lemma 2.4.2: Real numbers as complex numbers"><a href="#lemma-real-numbers-are-complex-numbers" title="Copy heading and permalink for Lemma 2.4.2: Real numbers as complex numbers" aria-label="Copy heading and permalink for Lemma 2.4.2: Real numbers as complex numbers">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Lemma 2.4.2: Real numbers as complex numbers"><a tabindex="-1" href="#lemma-real-numbers-are-complex-numbers" title="Copy heading and permalink for Lemma 2.4.2: Real numbers as complex numbers" aria-label="Copy heading and permalink for Lemma 2.4.2: Real numbers as complex numbers">🔗</a></div>
 </article>
 <details id="lemma-real-numbers-are-complex-numbers-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
 <article class="hiddenproof knowl__content">
@@ -957,25 +977,25 @@ i \cdot i = \of{ 0 , 1 } \cdot \of{ 0 , 1 } = \of{ 0 \cdot 0 - 1 \cdot 1 , 0 \cd
 </div>
 <div class="para">for all real numbers <span class="process-math">\(x_{ 1 } , x_{ 2 } \in \R \text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#lemma-real-numbers-are-complex-numbers-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-real-numbers-are-complex-numbers-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 2.4.2.1"><a href="#lemma-real-numbers-are-complex-numbers-3" title="Copy heading and permalink for Proof 2.4.2.1" aria-label="Copy heading and permalink for Proof 2.4.2.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 2.4.2.1"><a tabindex="-1" href="#lemma-real-numbers-are-complex-numbers-3" title="Copy heading and permalink for Proof 2.4.2.1" aria-label="Copy heading and permalink for Proof 2.4.2.1">🔗</a></div>
 </article></details>
-<div class="para" id="subsection-the-complex-numbers-5">As in previous extensions of the usual number systems, we will use the injective map <span class="process-math">\(\iota \colon \R \to \C \)</span> defined in <a href="section-beyond-the-real-number-system.html#lemma-real-numbers-are-complex-numbers" class="xref" data-knowl="./knowl/xref/lemma-real-numbers-are-complex-numbers.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 2.4.2: Real numbers as complex numbers">Lemma 2.4.2 Real numbers as complex numbers</a> to view the real numbers <span class="process-math">\(\R \)</span> as a subset of the complex numbers <span class="process-math">\(\C \text{.}\)</span> As a first example of this, we will denote the complex number <span class="process-math">\(\of{ x , y } \)</span> as <span class="process-math">\(x + y i \)</span> going forward.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-the-complex-numbers-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsection-the-complex-numbers-5">As in previous extensions of the usual number systems, we will use the injective map <span class="process-math">\(\iota \colon \R \to \C \)</span> defined in <a href="section-beyond-the-real-number-system.html#lemma-real-numbers-are-complex-numbers" class="xref" data-knowl="./knowl/xref/lemma-real-numbers-are-complex-numbers.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 2.4.2: Real numbers as complex numbers">Lemma 2.4.2 Real numbers as complex numbers</a> to view the real numbers <span class="process-math">\(\R \)</span> as a subset of the complex numbers <span class="process-math">\(\C \text{.}\)</span> As a first example of this, we will denote the complex number <span class="process-math">\(\of{ x , y } \)</span> as <span class="process-math">\(x + y i \)</span> going forward.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-the-complex-numbers-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="definition-complex-conjugate"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Complex conjugate.</span>
 </h4>
-<div class="para" id="definition-complex-conjugate-4-1">The <dfn class="terminology">conjugate</dfn> <span class="process-math">\(\overline{ z } \)</span> of a complex number <span class="process-math">\(x + y i \in \C \)</span> is the complex number <span class="process-math">\(\overline{ z } = x - y i \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-complex-conjugate-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="definition-complex-conjugate-4-1">The <dfn class="terminology">conjugate</dfn> <span class="process-math">\(\overline{ z } \)</span> of a complex number <span class="process-math">\(x + y i \in \C \)</span> is the complex number <span class="process-math">\(\overline{ z } = x - y i \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-complex-conjugate-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.4.3: Complex conjugate"><a href="#definition-complex-conjugate" title="Copy heading and permalink for Definition 2.4.3: Complex conjugate" aria-label="Copy heading and permalink for Definition 2.4.3: Complex conjugate">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 2.4.3: Complex conjugate"><a tabindex="-1" href="#definition-complex-conjugate" title="Copy heading and permalink for Definition 2.4.3: Complex conjugate" aria-label="Copy heading and permalink for Definition 2.4.3: Complex conjugate">🔗</a></div>
 </article>
 <article class="lemma theorem-like" id="lemma-complex-conjugate"><h4 class="heading">
 <span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Complex conjugates.</span>
 </h4>
-<div class="para" id="lemma-complex-conjugate-2-1">For all complex numbers <span class="process-math">\(z \in \C \text{,}\)</span> <span class="process-math">\(z \overline{ z } \)</span> is a non-negative real number, and <span class="process-math">\(z \overline{ z } \)</span> is positive if and only if <span class="process-math">\(z \neq 0 \)</span> is non-zero<div class="autopermalink" data-description="Paragraph"><a href="#lemma-complex-conjugate-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="lemma-complex-conjugate-2-1">For all complex numbers <span class="process-math">\(z \in \C \text{,}\)</span> <span class="process-math">\(z \overline{ z } \)</span> is a non-negative real number, and <span class="process-math">\(z \overline{ z } \)</span> is positive if and only if <span class="process-math">\(z \neq 0 \)</span> is non-zero<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-complex-conjugate-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Lemma 2.4.4: Complex conjugates"><a href="#lemma-complex-conjugate" title="Copy heading and permalink for Lemma 2.4.4: Complex conjugates" aria-label="Copy heading and permalink for Lemma 2.4.4: Complex conjugates">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Lemma 2.4.4: Complex conjugates"><a tabindex="-1" href="#lemma-complex-conjugate" title="Copy heading and permalink for Lemma 2.4.4: Complex conjugates" aria-label="Copy heading and permalink for Lemma 2.4.4: Complex conjugates">🔗</a></div>
 </article>
 <details id="lemma-complex-conjugate-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
 <article class="hiddenproof knowl__content">
@@ -987,52 +1007,52 @@ z \overline{ z } = \of{ x + y i } \of{ x - y i } = \of{ x^{ 2 } + y^{ 2 } } + 0 
 \end{equation*}
 </div>
 <div class="para">is a sum of squares of real numbers, and hence is non-negative. Moreover, <span class="process-math">\(z \overline{ z } = x^{ 2 } + y^{ 2 } \)</span> is positive unless <span class="process-math">\(x = y = 0 \text{,}\)</span> in which case <span class="process-math">\(z = 0 \)</span> as well.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#lemma-complex-conjugate-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-complex-conjugate-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 2.4.4.1"><a href="#lemma-complex-conjugate-3" title="Copy heading and permalink for Proof 2.4.4.1" aria-label="Copy heading and permalink for Proof 2.4.4.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 2.4.4.1"><a tabindex="-1" href="#lemma-complex-conjugate-3" title="Copy heading and permalink for Proof 2.4.4.1" aria-label="Copy heading and permalink for Proof 2.4.4.1">🔗</a></div>
 </article></details>
 <article class="definition definition-like" id="definition-magnitude-of-a-complex-number"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Magnitude of a complex number.</span>
 </h4>
-<div class="para" id="definition-magnitude-of-a-complex-number-4-1">The <dfn class="terminology">magnitude</dfn> <span class="process-math">\(\abs{ z } \)</span> of a complex number <span class="process-math">\(z \in \C \)</span> is the non-negative real number defined by <span class="process-math">\(\abs{ z }^{ 2 } = z \overline{ z } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-magnitude-of-a-complex-number-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="definition-magnitude-of-a-complex-number-4-1">The <dfn class="terminology">magnitude</dfn> <span class="process-math">\(\abs{ z } \)</span> of a complex number <span class="process-math">\(z \in \C \)</span> is the non-negative real number defined by <span class="process-math">\(\abs{ z }^{ 2 } = z \overline{ z } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-magnitude-of-a-complex-number-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.4.5: Magnitude of a complex number"><a href="#definition-magnitude-of-a-complex-number" title="Copy heading and permalink for Definition 2.4.5: Magnitude of a complex number" aria-label="Copy heading and permalink for Definition 2.4.5: Magnitude of a complex number">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 2.4.5: Magnitude of a complex number"><a tabindex="-1" href="#definition-magnitude-of-a-complex-number" title="Copy heading and permalink for Definition 2.4.5: Magnitude of a complex number" aria-label="Copy heading and permalink for Definition 2.4.5: Magnitude of a complex number">🔗</a></div>
 </article>
 <article class="proposition theorem-like" id="proposition-the-field-of-complex-numbers"><h4 class="heading">
 <span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The field of complex numbers.</span>
 </h4>
 <div class="para" id="proposition-the-field-of-complex-numbers-2-1">
-<span class="process-math">\(\of{ \C , + , \oparg } \)</span> is a field.<div class="autopermalink" data-description="Paragraph"><a href="#proposition-the-field-of-complex-numbers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(\of{ \C , + , \oparg } \)</span> is a field.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-the-field-of-complex-numbers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposition 2.4.6: The field of complex numbers"><a href="#proposition-the-field-of-complex-numbers" title="Copy heading and permalink for Proposition 2.4.6: The field of complex numbers" aria-label="Copy heading and permalink for Proposition 2.4.6: The field of complex numbers">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 2.4.6: The field of complex numbers"><a tabindex="-1" href="#proposition-the-field-of-complex-numbers" title="Copy heading and permalink for Proposition 2.4.6: The field of complex numbers" aria-label="Copy heading and permalink for Proposition 2.4.6: The field of complex numbers">🔗</a></div>
 </article>
-<div class="para" id="subsection-the-complex-numbers-10">While the complex numbers <span class="process-math">\(\C \)</span> are a field, they are not an ordered field.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-the-complex-numbers-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsection-the-complex-numbers-10">While the complex numbers <span class="process-math">\(\C \)</span> are a field, they are not an ordered field.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-the-complex-numbers-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="proposition theorem-like" id="proposition-orders-on-the-complex-numbers"><h4 class="heading">
 <span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Orders on the complex numbers.</span>
 </h4>
-<div class="para" id="proposition-orders-on-the-complex-numbers-2-1">There is no total order <span class="process-math">\(\leq \)</span> on the complex numbers <span class="process-math">\(\C \)</span> so that <span class="process-math">\(\of{ \C , + , \cdot , \leq } \)</span> is an ordered field.<div class="autopermalink" data-description="Paragraph"><a href="#proposition-orders-on-the-complex-numbers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="proposition-orders-on-the-complex-numbers-2-1">There is no total order <span class="process-math">\(\leq \)</span> on the complex numbers <span class="process-math">\(\C \)</span> so that <span class="process-math">\(\of{ \C , + , \cdot , \leq } \)</span> is an ordered field.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-orders-on-the-complex-numbers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposition 2.4.7: Orders on the complex numbers"><a href="#proposition-orders-on-the-complex-numbers" title="Copy heading and permalink for Proposition 2.4.7: Orders on the complex numbers" aria-label="Copy heading and permalink for Proposition 2.4.7: Orders on the complex numbers">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 2.4.7: Orders on the complex numbers"><a tabindex="-1" href="#proposition-orders-on-the-complex-numbers" title="Copy heading and permalink for Proposition 2.4.7: Orders on the complex numbers" aria-label="Copy heading and permalink for Proposition 2.4.7: Orders on the complex numbers">🔗</a></div>
 </article>
 <section class="conclusion" id="subsection-the-complex-numbers-12">
-<div class="para" id="subsection-the-complex-numbers-12-1">So the addition of the non-real complex numbers to the real number system <span class="process-math">\(\R \)</span> comes at the expense of some of the ordered field axioms. We will see that this is also true of further extensions; for example, multiplication of <dfn class="terminology">quaternions</dfn> is not commutative.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-the-complex-numbers-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" data-description="Subsection 2.4.1: The Complex Numbers"><a href="#subsection-the-complex-numbers" title="Copy heading and permalink for Subsection 2.4.1: The Complex Numbers" aria-label="Copy heading and permalink for Subsection 2.4.1: The Complex Numbers">🔗</a></div>
+<div class="para" id="subsection-the-complex-numbers-12-1">So the addition of the non-real complex numbers to the real number system <span class="process-math">\(\R \)</span> comes at the expense of some of the ordered field axioms. We will see that this is also true of further extensions; for example, multiplication of <dfn class="terminology">quaternions</dfn> is not commutative.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-the-complex-numbers-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Subsection 2.4.1: The Complex Numbers"><a tabindex="-1" href="#subsection-the-complex-numbers" title="Copy heading and permalink for Subsection 2.4.1: The Complex Numbers" aria-label="Copy heading and permalink for Subsection 2.4.1: The Complex Numbers">🔗</a></div>
 </section>
 <section class="subsection" id="subsection-infinity">
 <h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Infinity</span>
 </h3>
 <section class="introduction" id="subsection-infinity-2">
-<div class="para" id="subsection-infinity-2-1"><div class="autopermalink" data-description="Paragraph"><a href="#subsection-infinity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div></section>
+<div class="para" id="subsection-infinity-2-1"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-infinity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div></section>
 <article class="definition definition-like" id="definition-extended-real-number"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Extended real number.</span>
 </h4>
-<div class="para" id="definition-extended-real-number-7-1">An <dfn class="terminology">extended real number</dfn> is either a real number or one of two <dfn class="terminology">infinite</dfn> elements <span class="process-math">\(\infty \)</span> or <span class="process-math">\(-\infty \text{.}\)</span> The set of extended real numbers is denoted <span class="process-math">\(\overline{ \R } = \R \cup \set{ \infty , -\infty } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-extended-real-number-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="definition-extended-real-number-7-1">An <dfn class="terminology">extended real number</dfn> is either a real number or one of two <dfn class="terminology">infinite</dfn> elements <span class="process-math">\(\infty \)</span> or <span class="process-math">\(-\infty \text{.}\)</span> The set of extended real numbers is denoted <span class="process-math">\(\overline{ \R } = \R \cup \set{ \infty , -\infty } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-extended-real-number-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="definition-extended-real-number-7-2">The standard ordering <span class="process-math">\(\leq \)</span> on the real numbers <span class="process-math">\(\R \)</span> is extended to a total order on <span class="process-math">\(\overline{ \R } \)</span> by requiring <span class="process-math">\(-\infty \leq x \leq \infty \)</span> for all real numbers <span class="process-math">\(x \in \R \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-extended-real-number-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="definition-extended-real-number-7-2">The standard ordering <span class="process-math">\(\leq \)</span> on the real numbers <span class="process-math">\(\R \)</span> is extended to a total order on <span class="process-math">\(\overline{ \R } \)</span> by requiring <span class="process-math">\(-\infty \leq x \leq \infty \)</span> for all real numbers <span class="process-math">\(x \in \R \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-extended-real-number-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.4.8: Extended real number"><a href="#definition-extended-real-number" title="Copy heading and permalink for Definition 2.4.8: Extended real number" aria-label="Copy heading and permalink for Definition 2.4.8: Extended real number">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 2.4.8: Extended real number"><a tabindex="-1" href="#definition-extended-real-number" title="Copy heading and permalink for Definition 2.4.8: Extended real number" aria-label="Copy heading and permalink for Definition 2.4.8: Extended real number">🔗</a></div>
 </article>
 <article class="definition definition-like" id="definition-interval"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Interval.</span>
@@ -1050,9 +1070,9 @@ z \overline{ z } = \of{ x + y i } \of{ x - y i } = \of{ x^{ 2 } + y^{ 2 } } + 0 
 \clint{ a }{ b } = \setmid{ x \in \overline{ \R } }{ a \leq x \leq b }\text{.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#definition-interval-4-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-interval-4-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1: Closed interval"><a href="#definition-interval-4-1-3-1" title="Copy heading and permalink for Item 1: Closed interval" aria-label="Copy heading and permalink for Item 1: Closed interval">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1: Closed interval"><a tabindex="-1" href="#definition-interval-4-1-3-1" title="Copy heading and permalink for Item 1: Closed interval" aria-label="Copy heading and permalink for Item 1: Closed interval">🔗</a></div>
 </li>
 <li id="definition-interval-4-1-3-2">
 <span class="heading li--heading"><span class="title li--heading-title">Open interval.</span></span>
@@ -1063,9 +1083,9 @@ z \overline{ z } = \of{ x + y i } \of{ x - y i } = \of{ x^{ 2 } + y^{ 2 } } + 0 
 \opint{ a }{ b } = \setmid{ x \in \overline{ \R } }{ a \lt x \lt b }\text{.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#definition-interval-4-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-interval-4-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2: Open interval"><a href="#definition-interval-4-1-3-2" title="Copy heading and permalink for Item 2: Open interval" aria-label="Copy heading and permalink for Item 2: Open interval">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2: Open interval"><a tabindex="-1" href="#definition-interval-4-1-3-2" title="Copy heading and permalink for Item 2: Open interval" aria-label="Copy heading and permalink for Item 2: Open interval">🔗</a></div>
 </li>
 <li id="definition-interval-4-1-3-3">
 <span class="heading li--heading"><span class="title li--heading-title">Half-closed, half-open interval.</span></span>
@@ -1076,9 +1096,9 @@ z \overline{ z } = \of{ x + y i } \of{ x - y i } = \of{ x^{ 2 } + y^{ 2 } } + 0 
 \clopint{ a }{ b } = \setmid{ x \in \overline{ \R } }{ a \leq x \lt b }\text{.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#definition-interval-4-1-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-interval-4-1-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 3: Half-closed, half-open interval"><a href="#definition-interval-4-1-3-3" title="Copy heading and permalink for Item 3: Half-closed, half-open interval" aria-label="Copy heading and permalink for Item 3: Half-closed, half-open interval">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3: Half-closed, half-open interval"><a tabindex="-1" href="#definition-interval-4-1-3-3" title="Copy heading and permalink for Item 3: Half-closed, half-open interval" aria-label="Copy heading and permalink for Item 3: Half-closed, half-open interval">🔗</a></div>
 </li>
 <li id="definition-interval-4-1-3-4">
 <span class="heading li--heading"><span class="title li--heading-title">Closed interval.</span></span>
@@ -1089,14 +1109,14 @@ z \overline{ z } = \of{ x + y i } \of{ x - y i } = \of{ x^{ 2 } + y^{ 2 } } + 0 
 \opclint{ a }{ b } = \setmid{ x \in \overline{ \R } }{ a \lt x \leq b }\text{.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#definition-interval-4-1-3-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-interval-4-1-3-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 4: Closed interval"><a href="#definition-interval-4-1-3-4" title="Copy heading and permalink for Item 4: Closed interval" aria-label="Copy heading and permalink for Item 4: Closed interval">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4: Closed interval"><a tabindex="-1" href="#definition-interval-4-1-3-4" title="Copy heading and permalink for Item 4: Closed interval" aria-label="Copy heading and permalink for Item 4: Closed interval">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#definition-interval-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-interval-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.4.9: Interval"><a href="#definition-interval" title="Copy heading and permalink for Definition 2.4.9: Interval" aria-label="Copy heading and permalink for Definition 2.4.9: Interval">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 2.4.9: Interval"><a tabindex="-1" href="#definition-interval" title="Copy heading and permalink for Definition 2.4.9: Interval" aria-label="Copy heading and permalink for Definition 2.4.9: Interval">🔗</a></div>
 </article>
 <details id="example-intervals" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Intervals.</span>
@@ -1107,27 +1127,27 @@ z \overline{ z } = \of{ x + y i } \of{ x - y i } = \of{ x^{ 2 } + y^{ 2 } } + 0 
 <ul class="disc" id="example-intervals-2-1-1">
 <li id="example-intervals-2-1-1-1">
 <span class="heading li--heading"><span class="title li--heading-title">(Extended) real numbers.</span></span>
-<div class="para" id="example-intervals-2-1-1-1-2">The real numbers <span class="process-math">\(\R \)</span> and the extended real numbers <span class="process-math">\(\overline{ \R } \)</span> are open and closed intervals, respectively; concretely, <span class="process-math">\(\R = \opint{ -\infty }{ \infty } \)</span> and <span class="process-math">\(\overline{ \R } = \clint{ -\infty }{ \infty } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-intervals-2-1-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="example-intervals-2-1-1-1-2">The real numbers <span class="process-math">\(\R \)</span> and the extended real numbers <span class="process-math">\(\overline{ \R } \)</span> are open and closed intervals, respectively; concretely, <span class="process-math">\(\R = \opint{ -\infty }{ \infty } \)</span> and <span class="process-math">\(\overline{ \R } = \clint{ -\infty }{ \infty } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-intervals-2-1-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item: (Extended) real numbers"><a href="#example-intervals-2-1-1-1" title="Copy heading and permalink for Item: (Extended) real numbers" aria-label="Copy heading and permalink for Item: (Extended) real numbers">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: (Extended) real numbers"><a tabindex="-1" href="#example-intervals-2-1-1-1" title="Copy heading and permalink for Item: (Extended) real numbers" aria-label="Copy heading and permalink for Item: (Extended) real numbers">🔗</a></div>
 </li>
 <li id="example-intervals-2-1-1-2">
 <span class="heading li--heading"><span class="title li--heading-title">Dedekind cuts.</span></span>
-<div class="para" id="example-intervals-2-1-1-2-2">Given a real number <span class="process-math">\(x \in \R \text{,}\)</span> the Dedekind cut <span class="process-math">\(X \)</span> corresponding to <span class="process-math">\(x \)</span> is <span class="process-math">\(X = \Q \cap \opint{ -\infty }{ x } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-intervals-2-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="example-intervals-2-1-1-2-2">Given a real number <span class="process-math">\(x \in \R \text{,}\)</span> the Dedekind cut <span class="process-math">\(X \)</span> corresponding to <span class="process-math">\(x \)</span> is <span class="process-math">\(X = \Q \cap \opint{ -\infty }{ x } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-intervals-2-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item: Dedekind cuts"><a href="#example-intervals-2-1-1-2" title="Copy heading and permalink for Item: Dedekind cuts" aria-label="Copy heading and permalink for Item: Dedekind cuts">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Dedekind cuts"><a tabindex="-1" href="#example-intervals-2-1-1-2" title="Copy heading and permalink for Item: Dedekind cuts" aria-label="Copy heading and permalink for Item: Dedekind cuts">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#example-intervals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-intervals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 2.4.10: Intervals"><a href="#example-intervals" title="Copy heading and permalink for Example 2.4.10: Intervals" aria-label="Copy heading and permalink for Example 2.4.10: Intervals">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 2.4.10: Intervals"><a tabindex="-1" href="#example-intervals" title="Copy heading and permalink for Example 2.4.10: Intervals" aria-label="Copy heading and permalink for Example 2.4.10: Intervals">🔗</a></div>
 </article></details>
 <article class="theorem theorem-like" id="theorem-suprema-and-infima"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Suprema and infima.</span>
 </h4>
-<div class="para" id="theorem-suprema-and-infima-2-1">Any subset of the extended real numbers <span class="process-math">\(\overline{ \R } \)</span> has a supremum in <span class="process-math">\(\overline{ \R } \text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-suprema-and-infima-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="theorem-suprema-and-infima-2-1">Any subset of the extended real numbers <span class="process-math">\(\overline{ \R } \)</span> has a supremum in <span class="process-math">\(\overline{ \R } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-suprema-and-infima-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 2.4.11: Suprema and infima"><a href="#theorem-suprema-and-infima" title="Copy heading and permalink for Theorem 2.4.11: Suprema and infima" aria-label="Copy heading and permalink for Theorem 2.4.11: Suprema and infima">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 2.4.11: Suprema and infima"><a tabindex="-1" href="#theorem-suprema-and-infima" title="Copy heading and permalink for Theorem 2.4.11: Suprema and infima" aria-label="Copy heading and permalink for Theorem 2.4.11: Suprema and infima">🔗</a></div>
 </article>
 <details id="theorem-suprema-and-infima-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
 <article class="hiddenproof knowl__content">
@@ -1146,39 +1166,39 @@ z \overline{ z } = \of{ x + y i } \of{ x - y i } = \of{ x^{ 2 } + y^{ 2 } } + 0 
 </div>
 <div class="para">Finally, if <span class="process-math">\(\infty \notin U \)</span> and <span class="process-math">\(U \cap \R = \emptyset \text{,}\)</span> then <span class="process-math">\(\sup \of{ U } = -\infty \text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#theorem-suprema-and-infima-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-suprema-and-infima-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 2.4.11.1"><a href="#theorem-suprema-and-infima-3" title="Copy heading and permalink for Proof 2.4.11.1" aria-label="Copy heading and permalink for Proof 2.4.11.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 2.4.11.1"><a tabindex="-1" href="#theorem-suprema-and-infima-3" title="Copy heading and permalink for Proof 2.4.11.1" aria-label="Copy heading and permalink for Proof 2.4.11.1">🔗</a></div>
 </article></details>
 <section class="conclusion" id="subsection-infinity-7">
-<div class="para" id="subsection-infinity-7-2">We note that the binary operations of addition and multiplication do not fully extend to the set <span class="process-math">\(\overline{ \R } \)</span> of extended real numbers. Indeed, there are several <dfn class="terminology">indeterminate forms</dfn> like <span class="process-math">\(\infty + \of{ -\infty } \)</span> and <span class="process-math">\(0 \cdot \infty \)</span> which cannot be consistently resolved.<div class="autopermalink" data-description="Paragraph"><a href="#subsection-infinity-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" data-description="Subsection 2.4.2: Infinity"><a href="#subsection-infinity" title="Copy heading and permalink for Subsection 2.4.2: Infinity" aria-label="Copy heading and permalink for Subsection 2.4.2: Infinity">🔗</a></div>
+<div class="para" id="subsection-infinity-7-2">We note that the binary operations of addition and multiplication do not fully extend to the set <span class="process-math">\(\overline{ \R } \)</span> of extended real numbers. Indeed, there are several <dfn class="terminology">indeterminate forms</dfn> like <span class="process-math">\(\infty + \of{ -\infty } \)</span> and <span class="process-math">\(0 \cdot \infty \)</span> which cannot be consistently resolved.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-infinity-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Subsection 2.4.2: Infinity"><a tabindex="-1" href="#subsection-infinity" title="Copy heading and permalink for Subsection 2.4.2: Infinity" aria-label="Copy heading and permalink for Subsection 2.4.2: Infinity">🔗</a></div>
 </section>
 <section class="conclusion" id="section-beyond-the-real-number-system-5">
-<div class="para" id="section-beyond-the-real-number-system-5-1">Text after the last subsection.<div class="autopermalink" data-description="Paragraph"><a href="#section-beyond-the-real-number-system-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="section-beyond-the-real-number-system-5-1">Text after the last subsection.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-beyond-the-real-number-system-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="reading-questions" id="exercises-beyond-the-real-number-system">
 <h3 class="heading hide-type">
 <span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
 </h3>
 <section class="introduction" id="exercises-beyond-the-real-number-system-2">
-<div class="para" id="exercises-beyond-the-real-number-system-2-1">The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-beyond-the-real-number-system-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="exercises-beyond-the-real-number-system-2-1">The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-beyond-the-real-number-system-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="conclusion" id="exercises-beyond-the-real-number-system-3">
-<div class="para" id="exercises-beyond-the-real-number-system-3-1">Short answers and/or in-depth solutions to these exercises are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-beyond-the-real-number-system-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" data-description="Reading Questions 2.4.3: Exercises"><a href="#exercises-beyond-the-real-number-system" title="Copy heading and permalink for Reading Questions 2.4.3: Exercises" aria-label="Copy heading and permalink for Reading Questions 2.4.3: Exercises">🔗</a></div>
+<div class="para" id="exercises-beyond-the-real-number-system-3-1">Short answers and/or in-depth solutions to these exercises are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-beyond-the-real-number-system-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 2.4.3: Exercises"><a tabindex="-1" href="#exercises-beyond-the-real-number-system" title="Copy heading and permalink for Reading Questions 2.4.3: Exercises" aria-label="Copy heading and permalink for Reading Questions 2.4.3: Exercises">🔗</a></div>
 </section>
 <section class="reading-questions" id="problems-beyond-the-real-number-system">
 <h3 class="heading hide-type">
 <span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
 </h3>
 <section class="introduction" id="problems-beyond-the-real-number-system-2">
-<div class="para" id="problems-beyond-the-real-number-system-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" data-description="Paragraph"><a href="#problems-beyond-the-real-number-system-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="problems-beyond-the-real-number-system-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-beyond-the-real-number-system-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="conclusion" id="problems-beyond-the-real-number-system-3">
-<div class="para" id="problems-beyond-the-real-number-system-3-1">In-depth solutions to these problems are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#problems-beyond-the-real-number-system-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" data-description="Reading Questions 2.4.4: Problems"><a href="#problems-beyond-the-real-number-system" title="Copy heading and permalink for Reading Questions 2.4.4: Problems" aria-label="Copy heading and permalink for Reading Questions 2.4.4: Problems">🔗</a></div>
-</section><div class="autopermalink" data-description="Section 2.4: Beyond the Real Number System"><a href="#section-beyond-the-real-number-system" title="Copy heading and permalink for Section 2.4: Beyond the Real Number System" aria-label="Copy heading and permalink for Section 2.4: Beyond the Real Number System">🔗</a></div>
+<div class="para" id="problems-beyond-the-real-number-system-3-1">In-depth solutions to these problems are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-beyond-the-real-number-system-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 2.4.4: Problems"><a tabindex="-1" href="#problems-beyond-the-real-number-system" title="Copy heading and permalink for Reading Questions 2.4.4: Problems" aria-label="Copy heading and permalink for Reading Questions 2.4.4: Problems">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 2.4: Beyond the Real Number System"><a tabindex="-1" href="#section-beyond-the-real-number-system" title="Copy heading and permalink for Section 2.4: Beyond the Real Number System" aria-label="Copy heading and permalink for Section 2.4: Beyond the Real Number System">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">

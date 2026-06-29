@@ -7,11 +7,25 @@
 
   <introduction>
     <p>
-      Text before the first subsection.
+      In this section, we generalize the notion of open and closed intervals to subsets of arbitrary metric spaces. Recall that the open interval <m> \opint{ a }{ b } </m> between two real numbers <m> a , b \in \R </m> is the subset of the real numbers <m> \R </m> defined as follows.
+      
+      <md>
+        \opint{ a }{ b } = \set{ x \in \R : a \lt x \lt b } \subsetneq \R
+      </md>.
+      
+      Similarly, the closed interval <m> \clint{ a }{ b } </m> between two real numbers <m> a , b \in \R </m> is the subset of the real numbers <m> \R </m> defined as follows.
+      
+      <md>
+        \clint{ a }{ b } = \set{ x \in \R : a \leq x \leq b } \subsetneq \R
+      </md>.
+      
+      Soon, we will develop the more general notion of the open and closed subsets of a metric space, which will play a crucial role in the remainder of this text.
     </p>
   </introduction>
 
-  <!-- <xi:include href="./subsection-TITLE.ptx"/> -->
+  <xi:include href="./subsection-neighborhoods-in-metric-spaces.ptx"/>
+
+  <xi:include href="./subsection-metrics-and-boundedness.ptx"/>
 
   <conclusion>
     <p>

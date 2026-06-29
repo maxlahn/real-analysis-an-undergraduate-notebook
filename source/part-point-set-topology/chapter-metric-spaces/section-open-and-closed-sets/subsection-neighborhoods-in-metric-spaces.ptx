@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-neighborhoods-in-metric-spaces" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Neighborhoods in Metric Spaces
+  </title>
+
+  <introduction>
+    <p>
+      Informally, a subset of a metric space is <term> open </term> if it contains all points which are close to its elements and <term> closed </term> if it contains all of its limit points. These are one of many provably equivalent definitions of openness and closedness. In order to formalize this, we make the following preliminary definitions.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-metric-open-ball-closed-disk-sphere">
+    <title>
+      Open ball; closed disk; sphere
+    </title>
+    
+    <idx>
+      open ball
+    </idx>
+    
+    <idx>
+      closed disk
+    </idx>
+    
+    <idx>
+      sphere
+    </idx>
+    
+    <idx>
+      radius
+    </idx>
+    
+    <idx>
+      center
+    </idx>
+    
+    <idx>
+      open metric ball
+    </idx>
+    
+    <idx>
+      closed metric disk
+    </idx>
+    
+    <idx>
+      metric sphere
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \mB_{ r } \of{ c } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the open metric ball of radius <m> r </m> and center <m> c </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \mD_{ r } \of{ c } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the closed metric disk of radius <m> r </m> and center <m> c </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \mS_{ r } \of{ c } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the metric sphere of radius <m> r </m> and center <m> c </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Fix a positive real number <m> r \gt 0 </m> and a point <m> c \in X </m> in a metric space <m> \of{ X , \rho } </m>.
+        
+        <ul>
+          <li>
+            <title>
+              Open metric ball
+            </title>
+            
+            <p>
+              The <term> open (metric) ball </term> <m> \mB_{ r } \of{ c } </m> in <m> X </m> of <term> radius </term> <m> r </m> and <term> center </term> <m> c </m> is the subset of <m> X </m> defined by
+              
+              <md>
+                \mB_{ r } \of{ c } = \setmid{ x \in X }{ \rho \of{ x , c } \lt r }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Closed metric disk
+            </title>
+            
+            <p>
+              The <term> closed (metric) disk </term> <m> \mD_{ r } \of{ c } </m> in <m> X </m> of <term> radius </term> <m> r </m> and <term> center </term> <m> c </m> is the subset of <m> X </m> defined by
+              
+              <md>
+                \mD_{ r } \of{ c } = \setmid{ x \in X }{ \rho \of{ x , c } \leq r }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Open metric ball
+            </title>
+            
+            <p>
+              The <term> (metric) sphere </term> <m> \mS_{ r } \of{ c } </m> in <m> X </m> of <term> radius </term> <m> r </m> and <term> center </term> <m> c </m> is the subset of <m> X </m> defined by
+              
+              <md>
+                \mS_{ r } \of{ c } = \setmid{ x \in X }{ \rho \of{ x , c } = r }
+              </md>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    So an open ball contains precisely the points of distance strictly less than its radius from its center; a closed disk contains precisely the points of distance at most its radius from its center; and a sphere contains precisely the points of distance precisely its radius from its center. Just as the difference between an open and a closed interval is the question of the inclusion of its endpoints, the distinction between open balls and closed disks is that a closed disk contains all points of distance precisely its radius from its center, while an open ball does not.
+  </p>
+  
+  <p>
+    We will see that in many ways, this section is an investigation of the properties of subsets of metric spaces which contain or are contained in certain open balls. The following definition, that of a <term> neighborhood </term>, will be a useful notion for both the rest of this chapter and the next chapter as well. Informally, a subset of a metric space is a neighborhood of a point if it contains all points which are very close to that point.
+  </p>
+  
+  <definition xml:id="definition-metric-neighborhood">
+    <title>
+      Neighborhood
+    </title>
+    
+    <idx>
+      neighborhood
+    </idx>
+    
+    <statement>
+      <p>
+        A subset <m> U \subseteq X </m> is a <term> neighborhood </term> of a point <m> x \in X </m> in a metric space <m> \of{ X , \rho } </m> if <m> U </m> contains an open ball centered at <m> x </m>; that is, <m> U </m> is a neighborhood of <m> x </m> if <m> \mB_{ r } \of{ x } \subseteq U </m> for some positive real number <m> r \gt 0 </m>.
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-metric-neighborhoods">
+    <title>
+      Neighborhoods
+    </title>
+    
+    <statement>
+      <p>
+        Every open ball and closed disk in a metric space is a neighborhood of its center.
+      </p>
+    </statement>
+  </example>
+  
+  <remark xml:id="remark-locality">
+    <title>
+      Locality
+    </title>
+    
+    <idx>
+      locality
+    </idx>
+    
+    <p>
+      The notion of a neighborhood is our latest exposure to the conceptual metaphor of <term> locality </term>. We conceive of metric spaces by spatial reasoning, saying for example that for points <m> x , y \in X </m> in a metric space <m> \of{ X , \rho } </m>, if <m> \rho \of{ x , y } </m> is a small positive number, then <m> x </m> and <m> y </m> are <q> close </q>.
+    </p>
+    
+    <p>
+      This idea is pervasive throughout point-set topology, and it implicitly informs much of the relevant terminology. Just as your neighborhood contains all of the people closest to where you live, a neighborhood in a metric space contains all nearby points.
+    </p>
+  </remark>
+  
+  <p>
+    We now have the terminology to make the crucial and titular definitions of this section; that of <term> open </term> and <term> closed subsets </term> of a metric space. A subset of a metric space is open if it is a neighborhood of all of its points, and is closed if its complement is open.
+  </p>
+  
+  <definition xml:id="definition-open-closed-subset">
+    <title>
+      Open/closed subset
+    </title>
+    
+    <idx>
+      open subset
+    </idx>
+    
+    <idx>
+      closed subset
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a metric space <m> \of{ X , \rho } </m>.
+        
+        <ul>
+          <li>
+            <title>
+              Open subset
+            </title>
+            
+            <p>
+              <m> U </m> is <term> open </term> in <m> X </m> if it is a neighborhood of each of its points; that is, <m> U </m> is open if for each point <m> u \in U </m>, there is a positive real number <m> r \gt 0 </m> so that <m> \mB_{ r } \of{ u } \subseteq U </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Closed subset
+            </title>
+            
+            <p>
+              <m> U </m> is <term> closed </term> in <m> X </m> if its complement <m> X \setminus U </m> is open in <m> X </m>; that is, <m> U </m> is closed if each point <m> x \in X \setminus U </m> has a neighborhood in <m> X </m> which is disjoint from <m> U </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+  
+  <lemma xml:id="lemma-openness-and-closedness">
+    <title>
+      Openness and closedness
+    </title>
+    
+    <statement>
+      <p>
+        Open balls in metric spaces are open, and closed disks are closed.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Fix a positive real number <m> r \gt 0 </m> and a point <m> c \in X </m> in a metric space <m> \of{ X , \rho } </m>. Let <m> U = \mB_{ r } \of{ c } </m> and <m> V = \mD_{ r } \of{ c } </m> be the open ball and closed disk of radius <m> r </m> and center <m> c </m>, respectively. We will show that <m> U </m> and <m> V </m> are open and closed in <m> X </m>, respectively.
+      </p>
+      
+      <p>
+        To that end, first let <m> u \in U </m>, so that <m> \rho \of{ u , c } \lt r </m>. Let
+        
+        <md>
+          s = r - \rho \of{ u , c }
+        </md>.
+        
+        We note that for a point <m> x \in X </m>, if <m> \rho \of{ x , u } \lt s </m>, then
+        
+        <md>
+          <mrow>
+            \rho \of{ x , c } \amp \leq \rho \of{ x , u } + \rho \of{ u , c } \lt s + r
+          </mrow>
+          
+          <mrow>
+            \amp = r - \rho \of{ u , c } + \rho \of{ u , c } = r
+          </mrow>
+        </md>,
+        
+        and so <m> x \in U </m>. Thus <m> \mB_{ s } \of{ u } \subseteq \mB_{ r } \of{ c } = U </m>. Since <m> U </m> contains an open ball centered at each of its points, it is a neighborhood of each of its points, and so <m> U </m> is open in <m> X </m>.
+      </p>
+      
+      <p>
+        On the other hand, now suppose that <m> x \in X \setminus V </m>, so that <m> \rho \of{ x , c } \gt r </m>. Let
+        
+        <md>
+          s = \rho \of{ x , c } - r
+        </md>.
+        
+        We note that for a point <m> y \in X </m>, if <m> \rho \of{ y , x } \lt s </m>, then
+        
+        <md>
+          <mrow>
+            r + s \amp = \rho \of{ x , c } \leq \rho \of{ x , y } + \rho \of{ y , c }
+          </mrow>
+          
+          <mrow>
+            \amp = \rho \of{ y , x } + \rho \of{ y , c } \lt s + \rho \of{ y , c }
+          </mrow>
+        </md>.
+        
+        We conclude that <m> \rho \of{ y , c } \gt r </m>, and so <m> y \notin \mD_{ r } \of{ c } = V </m>. Since <m> X \setminus V </m> contains an open ball centered at each of its points, it is a neighborhood of each of its points, and so <m> X \setminus V </m> is open in <m> X </m>; that is, <m> V </m> is closed in <m> X </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <p>
+    <xref ref="lemma-openness-and-closedness"/> illustrates that the names <q> open </q> and <q> closed </q> for balls and disks are well-deserved; open balls and closed disks in a metric space are open and closed, respectively. This immediately implies that open intervals and closed intervals of real numbers (with finite endpoints) are open and closed, respectively, in the Euclidean metric, since any such interval is either a open ball or a closed disk (depending on whether or not it includes its endpoints) around its center, which is the arithmetic mean of its endpoints.
+  </p>
+  
+  <p>
+    We next develop a series of point-set topological definitions based on the notion of neighborhoods which will play an important role in both this and the next chapter. Given a subset of a metric space, we may consider open or closed sets which approximate the set as well as possible from the inside or outside, respectively.
+  </p>
+  
+  <definition xml:id="definition-interior-closure-boundary">
+    <title>
+      Interior; closure; boundary
+    </title>
+    
+    <idx>
+      interior point
+    </idx>
+    
+    <idx>
+      interior
+    </idx>
+    
+    <idx>
+      point of closure
+    </idx>
+    
+    <idx>
+      closure
+    </idx>
+    
+    <idx>
+      boundary point
+    </idx>
+    
+    <idx>
+      boundary
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \Int \of{ U } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the interior of <m> U </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \Cl \of{ U } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the closure of <m> U </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \Bd \of{ U } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the boundary of <m> U </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Fix a subset <m> U \subseteq X </m> of a metric space <m> \of{ X , \rho } </m>.
+        
+        <ul>
+          <li>
+            <title>
+              Interior
+            </title>
+            
+            <p>
+              A point <m> x \in X </m> is an <term> interior point </term> of <m> U </m> if <m> U </m> is a neighborhood of <m> x </m>. The set of interior points of <m> U </m> is called the <term> interior </term> of <m> U </m> and is denoted <m> \Int \of{ U } </m> or <m> U^{ \circ } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Closure
+            </title>
+            
+            <p>
+              A point <m> x \in X </m> is called a <term> point of closure </term> of <m> U </m> in <m> X </m> if <m> N \cap U \neq \emptyset </m> for all neighborhoods <m> N </m> of <m> x </m> in <m> X </m>. The set of points of closure of <m> U </m> in <m> X </m> is called the <term> closure </term> of <m> U </m> in <m> X </m> and is denoted <m> \Cl \of{ U } </m> or <m> \overline{ U } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Boundary
+            </title>
+            
+            <p>
+              A point <m> x \in X </m> is called a <term> boundary point </term> of <m> U </m> in <m> X </m> if <m> N \cap U \neq \emptyset </m> and <m> N \setminus U \neq \emptyset </m> for all neighborhoods <m> N </m> of <m> x </m> in <m> X </m>. The set of all boundary points of <m> U </m> in <m> X </m> is called the <term> boundary </term> of <m> U </m> in <m> X </m> and is denoted <m> \Bd \of{ U } </m> or <m> \partial U </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    The above definitions are equivalent if we quantify over open balls centered at the point in question rather than over neighborhoods of said point. However, the notion of neighborhood will extend into our discussion in <xref ref="chapter-topological-spaces"/>, so we will continue in this spirit of generality, which we hope will ease our generalization of the above notions.
+  </p>
+
+  <example xml:id="example-interior-closure-and-boundary">
+    <title>
+      Interior, closure, and boundary
+    </title>
+    
+    <statement>
+      <p>
+        Consider the half-closed, half-open interval
+        
+        <md>
+          \clopint{ 0 }{ 1 } = \setmid{ x \in \R }{ 0 \leq x \lt 1 }
+        </md>
+        
+        of real numbers between <m> 0 </m> and <m> 1 </m>. <m> \clopint{ 0 }{ 1 } </m> has interior
+        
+        <md>
+          \Int \of{ \clopint{ 0 }{ 1 } } = \opint{ 0 }{ 1 } = \setmid{ x \in \R }{ 0 \lt x \lt 1 }
+        </md>,
+        
+        closure
+        
+        <md>
+          \Cl \of{ \clopint{ 0 }{ 1 } } = \clint{ 0 }{ 1 } = \setmid{ x \in \R }{ 0 \leq x \leq 1 }
+        </md>,
+        
+        and boundary
+        
+        <md>
+          \Bd \of{ \clopint{ 0 }{ 1 } } = \set{ 0 , 1 }
+        </md>
+        
+        in <m> \R </m>.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    Clearly, a subset of a metric space is open if and only if it is its own interior. Perhaps less obvious, however, is the second half of the following result; a subset of a metric space is closed if and only if it is its own closure.
+  </p>
+  
+  <proposition xml:id="proposition-interior-closure">
+    <title>
+      Interior/closure
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a metric space <m> \of{ X , \rho } </m>.
+        
+        <ol>
+          <li>
+            <title>
+              Interior
+            </title>
+            
+            <p>
+              <m> U </m> is open in <m> X </m> if and only if <m> U = \Int \of{ U } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Closure
+            </title>
+            
+            <p>
+              <m> U </m> is closed in <m> X </m> if and only if <m> U = \Cl \of{ U } </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            We first note that for any point <m> x \in \Int \of{ U } </m>, there is some neighborhood <m> N </m> of <m> x </m> so that <m> N \subseteq U </m>. Since <m> N </m> is a neighborhood of <m> x </m>, it contains some open ball <m> \mB_{ r } \of{ x } \subseteq N </m>. We conclude that
+            
+            <md>
+              x \in \mB_{ r } \of{ x } \subseteq N \subseteq U
+            </md>,
+            
+            and so <m> x \in U </m>. We conclude that <m> \Int \of{ U } \subseteq U </m>. Therefore, it suffices to show that <m> U </m> is open in <m> X </m> if and only if <m> U \subseteq \Int \of{ U } </m>.
+          </p>
+          
+          <p>
+            To that end, we first suppose that <m> U </m> is open, and let <m> u \in U </m>. Then <m> U </m> is a neighborhood of <m> u </m> in <m> X </m>, and of course <m> U \subseteq U </m>. Thus <m> u \in \Int \of{ U } </m> is an interior point of <m> U </m>. We conclude that <m> U \subseteq \Int \of{ U } </m>.
+          </p>
+          
+          <p>
+            Conversely, now suppose that <m> U \subseteq \Int \of{ U } </m>, and let <m> u \in U </m>. Then <m> u \in \Int \of{ U } </m>, and so <m> N \subseteq U </m> for some neighborhood <m> N </m> of <m> U </m> in <m> X </m>. Since <m> N </m> is a neighborhood of <m> u </m>, it contains some open ball <m> \mB_{ r } \of{ u } \subseteq N </m>. We conclude that
+            
+            <md>
+              \mB_{ r } \of{ u } \subseteq N \subseteq U
+            </md>,
+            
+            and so <m> U </m> is a neighborhood of <m> u </m> in <m> X </m>. Since this holds for all <m> u \in U </m>, <m> U </m> is open in <m> X </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Let <m> N </m> be a neighborhood of a point <m> u \in U </m> in <m> X </m>. Then <m> N </m> contains some open ball <m> \mB_{ r } \of{ u } </m>, and so
+            
+            <md>
+              u \in \mB_{ r } \of{ u } \subseteq N
+            </md>.
+            
+            In particular, <m> u \in N \cap U </m>, and so <m> N \cap U \neq \emptyset </m> is non-empty. Thus <m> u \in \Cl \of{ U } </m> is a point of closure of <m> U </m> in <m> X </m>. We conclude that <m> U \subseteq \Cl \of{ U } </m>. Therefore, it suffices to show that <m> U </m> is closed in <m> X </m> if and only if <m> \Cl \of{ U } \subseteq U </m>.
+          </p>
+          
+          <p>
+            To that end, we first suppose that <m> U </m> is closed, and let <m> x \in X </m>. If <m> x \in X \setminus U </m>, then our hypothesis that <m> U </m> is closed implies that <m> x </m> has a neighborhood <m> N </m> in <m> X </m> so that <m> N \cap U = \emptyset </m>. This implies that <m> x \in X \setminus \Cl \of{ U } </m>. In summary, we have shown that <m> X \setminus U \subseteq X \setminus \Cl \of{ U } </m>, and so <m> \Cl \of{ U } \subseteq U </m>.
+          </p>
+          
+          <p>
+            Conversely, now suppose that <m> \Cl \of{ U } \subseteq U </m>, and let <m> x \in X \setminus U </m>. Then <m> x \notin \Cl \of{ U } </m> is not a point of closure of <m> U </m> in <m> X </m>, and so <m> N \cap U = \emptyset </m> for some neighborhood <m> N </m> of <m> x </m> in <m> X </m>. This implies that <m> N \subseteq X \setminus U </m>, and so <m> X \setminus U </m> is a neighborhood of <m> x </m> in <m> X </m>. Since this holds for all points <m> x \in X \setminus U </m>, we conclude that <m> X \setminus U </m> is open in <m> X </m>; that is, <m> U </m> is closed in <m> X </m>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </proposition>
+  
+  <p>
+    So a subset of a metric space is open if and only if it is its own interior, and it is closed if and only if it is its own closure. This is because the interior of a set is the largest open set which is contained in it, the closure of a subset is the smallest closed set in which it is contained.
+  </p>
+  
+  <theorem xml:id="theorem-interior-closure">
+    <title>
+      Interior/closure
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a metric space <m> \of{ X , \rho } </m>.
+        
+        <ol>
+          <li>
+            <title>
+              Interior
+            </title>
+            
+            <p>
+              Let <m> O </m> be the collection of open subsets of <m> X </m> contained in <m> U </m>. Then
+              
+              <md>
+                \Int \of{ U } = \bigcup_{ V \in O }{ V }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Closure
+            </title>
+            
+            <p>
+              Let <m> C </m> be the collection of closed subsets of <m> X </m> which contain <m> U </m>. Then
+              
+              <md>
+                \Cl \of{ U } = \bigcap_{ V \in C }{ V }
+              </md>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            Let <m> u \in \Int \of{ U } </m> be an interior point to <m> U </m> in <m> X </m>. Then <m> \mB_{ r } \of{ u } \subseteq U </m> for some positive real number <m> r \gt 0 </m>. <xref ref="lemma-openness-and-closedness"/> implies that <m> \mB_{ r } \of{ u } </m> is open and so <m> \mB_{ r } \of{ u } \in O </m>. We conclude that
+            
+            <md>
+              u \in \mB_{ r } \of{ u } \subseteq \bigcup_{ V \in O }{ V }
+            </md>.
+          </p>
+          
+          <p>
+            Conversely, now suppose that <m> u \in \bigcup_{ V \in O }{ V } </m>. Then <m> u \in V </m> for some <m> V \in O </m>. Since <m> V </m> is open in <m> X </m>, it is a neighborhood of <m> u </m> in <m> X </m>, and so <m> u \in \Int \of{ U } </m> is an interior point to <m> U </m> in <m> X </m>. 
+          </p>
+          
+          <p>
+            In summary, we have shown that <m> u \in \Int \of{ U } </m> if and only if <m> u \in \bigcup_{ V \in O }{ V } </m>, and so
+            
+            <md>
+              \Int \of{ U } = \bigcup_{ V \in O }{ V }
+            </md>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Consider a closed set <m> V \in C </m>, and let <m> x \in X \setminus V </m>. Since <m> V </m> is closed in <m> X </m>, <m> X \setminus V </m> is open in <m> X </m>, and so <m> X \setminus V </m> is a neighborhood of each of its points. Moreover, since <m> U \subseteq V </m>, <m> \of{ X \setminus V } \cap U = \emptyset </m>, and so none of the points of <m> X \setminus V </m> are points of closure of <m> U </m> in <m> x </m>; that is, <m> X \setminus V \subseteq X \setminus \Cl \of{ U } </m>. We conclude that <m> \Cl \of{ U } \subseteq V </m>. Since this holds for all <m> V \in C </m>,
+            
+            <md>
+              \Cl \of{ U } \subseteq \bigcap_{ V \in C }{ V }
+            </md>.
+          </p>
+          
+          <p>
+            Conversely, now let <m> x \in X \setminus \Cl \of{ U } </m>. Then <m> N \cap U = \emptyset </m> for some neighborhood <m> N </m> of <m> x </m> in <m> X </m>. In particular, <m> \mB_{ r } \of{ x } \cap U = \emptyset </m> for some positive real number <m> r \gt 0 </m>. Note that <m> X \setminus \mB_{ r } \of{ x } \in C </m>. However, <m> x \notin X \setminus \mB_{ r } \of{ x } </m>, and so <m> x \notin \bigcap_{ V \in C }{ V } </m>. We conclude that
+            
+            <md>
+              \bigcap_{ V \in C }{ V } \subseteq \Cl \of{ U }
+            </md>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </theorem>
+</subsection>

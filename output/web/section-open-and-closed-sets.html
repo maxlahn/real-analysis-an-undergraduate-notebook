@@ -35,7 +35,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="A simple string (no markup is allowed) to describe your book.">
 <meta property="og:description" content="A simple string (no markup is allowed) to describe your book.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.42"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -57,15 +57,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.13.7';
+eBookConfig.runestone_version = '8.1.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.52176322e2c1dde5.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.2f713d2360adcee7.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/prefix-runtime.53a23d1b65c1dce2.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.4787412a251795e3.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -74,17 +74,35 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="book-real-analysis.html"><span class="title">Real Analysis</span> <span class="subtitle">An Undergraduate Notebook</span></a></h1>
 <p class="byline">Max Lahn</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
-<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search book" commandfor="ptx-search-dialog" command="show-modal"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
-<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog" closedby="closerequest"><div class="ptx-search-dialog-controls">
-<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close search" id="ptx-search-close" class="ptx-search-close" commandfor="ptx-search-dialog" command="close"><span class="material-symbols-outlined">close</span></button>
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
 <div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
-<h2 class="ptx-search-results-heading">Search Results: </h2>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
 <div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="section-limits-in-the-euclidean-metric.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-metric-spaces.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="section-notions-of-metric-continuity.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="section-limits-in-the-euclidean-metric.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-metric-spaces.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="section-notions-of-metric-continuity.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(  \newcommand{\of}[1]{ \left ( #1 \right ) } 
   
   \newcommand{\class}[1]{ \left \lbrack { #1 } \right \rbrack } 
@@ -566,17 +584,17 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts focused" data-preexpanded-levels="0" data-max-levels="3"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth3 parts focused" data-preexpanded-levels="0" data-max-levels="3"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-part">
 <div class="toc-title-box"><a href="part-foundations-of-analysis.html" class="internal"><span class="codenumber">I</span> <span class="title">Foundations of Analysis</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-part-foundations-of-analysis" class="structural toc-item-list">
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter-introductory-set-theory.html" class="internal"><span class="codenumber">1</span> <span class="title">Introductory Set Theory</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-chapter-introductory-set-theory" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-what-is-a-set.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What Is a Set?</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-what-is-a-set" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-what-is-a-set.html#subsection-definitions-of-sets" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Definitions of Sets</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-what-is-a-set.html#subsection-set-containment" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Set Containment</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-what-is-a-set.html#subsection-set-operations" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Set Operations</span></a></div></li>
@@ -586,7 +604,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-maps-and-functions.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Maps and Functions</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-maps-and-functions" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-maps-and-functions.html#subsection-introduction-to-maps" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Introduction to Maps</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-maps-and-functions.html#subsection-composition-and-invertibility" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Composition and Invertibility</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-maps-and-functions.html#subsection-indexing" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Indexing</span></a></div></li>
@@ -596,7 +614,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Peano Arithmetic and the Natural Numbers [Skip]</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-peano-arithmetic-and-the-natural-numbers" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#subsection-axiomatizing-the-natural-numbers" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Axiomatizing the Natural Numbers</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#subsection-properties-of-arithmetic" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Properties of Arithmetic</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#subsection-properties-of-comparison" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Properties of Comparison</span></a></div></li>
@@ -606,7 +624,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-finitary-operations-and-relations.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Finitary Operations and Relations</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-finitary-operations-and-relations" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#subsection-products-and-choice" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Products and Choice</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#subsection-finitary-operations" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Finitary Operations</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#subsection-finitary-relations" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Finitary Relations</span></a></div></li>
@@ -616,7 +634,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-introduction-to-order-theory.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Introduction to Order Theory</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-introduction-to-order-theory" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#subsection-preorders-and-partial-orders" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Preorders and Partial Orders</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#subsection-boundedness-and-extrema" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Boundedness and Extrema</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#subsection-comparability-and-total-orders" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Comparability and Total Orders</span></a></div></li>
@@ -626,7 +644,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-cardinality-and-countability.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Cardinality and Countability [SKIP]</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-cardinality-and-countability" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#subsection-finiteness" class="internal"><span class="codenumber">1.6.1</span> <span class="title">Finiteness</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#subsection-cardinal-comparison" class="internal"><span class="codenumber">1.6.2</span> <span class="title">Cardinal Comparison</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#subsection-countability" class="internal"><span class="codenumber">1.6.3</span> <span class="title">Countability</span></a></div></li>
@@ -638,17 +656,17 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter-constructing-the-number-systems.html" class="internal"><span class="codenumber">2</span> <span class="title">Constructing the Number Systems</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-chapter-constructing-the-number-systems" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-the-integers-and-the-rational-numbers.html" class="internal"><span class="codenumber">2.1</span> <span class="title">The Integers and the Rational Numbers [SKIP]</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-the-integers-and-the-rational-numbers" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-integers-and-the-rational-numbers.html#exercises-the-integers-and-the-rational-numbers" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-integers-and-the-rational-numbers.html#problems-the-integers-and-the-rational-numbers" class="internal"><span class="codenumber">2.1</span> <span class="title">Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-constructing-the-real-numbers.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Constructing the Real Numbers</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-constructing-the-real-numbers" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#subsection-cutting-the-rational-numbers" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Cutting the Rational Numbers</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#subsection-comparison-of-dedekind-cuts" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Comparison of Dedekind Cuts</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#subsection-addition-of-dedekind-cuts" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Addition of Dedekind Cuts</span></a></div></li>
@@ -659,7 +677,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-the-complete-ordered-field.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Complete Ordered Field</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-the-complete-ordered-field" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#subsection-the-ordered-field-axioms" class="internal"><span class="codenumber">2.3.1</span> <span class="title">The Ordered Field Axioms</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#subsection-dedekind-completeness" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Dedekind completeness</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#exercises-the-complete-ordered-field" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Exercises</span></a></div></li>
@@ -668,7 +686,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-beyond-the-real-number-system.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Beyond the Real Number System</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-beyond-the-real-number-system" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-beyond-the-real-number-system.html#subsection-the-complex-numbers" class="internal"><span class="codenumber">2.4.1</span> <span class="title">The Complex Numbers</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-beyond-the-real-number-system.html#subsection-infinity" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Infinity</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-beyond-the-real-number-system.html#exercises-beyond-the-real-number-system" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Exercises</span></a></div></li>
@@ -681,13 +699,13 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-part contains-active">
 <div class="toc-title-box"><a href="part-point-set-topology.html" class="internal"><span class="codenumber">II</span> <span class="title">Point-Set Topology</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-part-point-set-topology">
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chapter-metric-spaces.html" class="internal"><span class="codenumber">3</span> <span class="title">Metric Spaces</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-chapter-metric-spaces">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction to Metric Geometry</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-introduction-to-metric-geometry" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#subsection-introduction-to-metrics" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Introduction to Metrics</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#subsection-constructing-new-metrics" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Constructing New Metrics</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#subsection-normed-vector-spaces" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Normed Vector Spaces</span></a></div></li>
@@ -697,7 +715,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-convergence-and-limits.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Convergence and Limits</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-convergence-and-limits" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-convergence-and-limits.html#subsection-sequential-convergence" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Sequential Convergence</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-convergence-and-limits.html#subsection-pointwise-and-uniform-convergence" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Pointwise and Uniform Convergence</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-convergence-and-limits.html#subsection-map-convergence" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Map Convergence</span></a></div></li>
@@ -707,7 +725,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Limits in the Euclidean Metric</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-limits-in-the-euclidean-metric" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#subsection-limits-and-arithmetic" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Limits and Arithmetic</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#subsection-divergence-to-infinity" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Divergence to Infinity</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#subsection-upper-and-lower-limits" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Upper and Lower Limits</span></a></div></li>
@@ -717,21 +735,23 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="section-open-and-closed-sets.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Open and Closed Sets</span></a></div>
-<ul class="structural toc-item-list active">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#exercises-open-and-closed-sets" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#reading-questions-open-and-closed-sets" class="internal"><span class="codenumber">3.4</span> <span class="title">Reading Questions</span></a></div></li>
+<ul class="structural toc-item-list active" id="ptx-toc-group-section-open-and-closed-sets">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#subsection-neighborhoods-in-metric-spaces" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Neighborhoods in Metric Spaces</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#subsection-metrics-and-boundedness" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Metrics and Boundedness</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#exercises-open-and-closed-sets" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#reading-questions-open-and-closed-sets" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-notions-of-metric-continuity.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Notions of Metric Continuity</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-notions-of-metric-continuity" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#exercises-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#reading-questions-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-completeness-and-compactness.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Completeness and Compactness</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-completeness-and-compactness" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#exercises-completeness-and-compactness" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#reading-questions-completeness-and-compactness" class="internal"><span class="codenumber">3.6</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
@@ -740,38 +760,38 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter-topological-spaces.html" class="internal"><span class="codenumber">4</span> <span class="title">Topological Spaces</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-chapter-topological-spaces" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-introduction-to-topology.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Introduction to Topology</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-introduction-to-topology" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-topology.html#exercises-introduction-to-topology" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-topology.html#reading-questions-introduction-to-topology" class="internal"><span class="codenumber">4.1</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-comparison-of-topologies.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Comparison of Topologies [SKIP]</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-comparison-of-topologies" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-comparison-of-topologies.html#exercises-comparison-of-topologies" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-comparison-of-topologies.html#reading-questions-comparison-of-topologies" class="internal"><span class="codenumber">4.2</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-convergence-and-separation.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Convergence and Separation</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-convergence-and-separation" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-separation.html#exercises-convergence-and-separation" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-separation.html#reading-questions-convergence-and-separation" class="internal"><span class="codenumber">4.3</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-continuity-in-topological-spaces.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Continuity in Topological Spaces</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-continuity-in-topological-spaces" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-continuity-in-topological-spaces.html#exercises-continuity-in-topological-spaces" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-continuity-in-topological-spaces.html#reading-questions-continuity-in-topological-spaces" class="internal"><span class="codenumber">4.4</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-connectedness-and-compactness.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Connectedness and Compactness [SKIP]</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-connectedness-and-compactness" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-connectedness-and-compactness.html#exercises-connectedness-and-compactness" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-connectedness-and-compactness.html#reading-questions-connectedness-and-compactness" class="internal"><span class="codenumber">4.5</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
@@ -782,34 +802,34 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-part">
 <div class="toc-title-box"><a href="part-calculus.html" class="internal"><span class="codenumber">III</span> <span class="title">Calculus</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-part-calculus" class="structural toc-item-list">
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter-differentiation-and-smoothness.html" class="internal"><span class="codenumber">5</span> <span class="title">Differentiation and Smoothness</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-chapter-differentiation-and-smoothness" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-differentiability.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Differentiability</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-differentiability" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#exercises-differentiability" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#reading-questions-differentiability" class="internal"><span class="codenumber">5.1</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-the-mean-value-theorem.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Mean Value Theorem</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-the-mean-value-theorem" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-mean-value-theorem.html#exercises-the-mean-value-theorem" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-mean-value-theorem.html#reading-questions-the-mean-value-theorem" class="internal"><span class="codenumber">5.2</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-applications-of-the-mean-value-theorem.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Applications of the Mean Value Theorem</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-applications-of-the-mean-value-theorem" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-applications-of-the-mean-value-theorem.html#exercises-applications-of-the-mean-value-theorem" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-applications-of-the-mean-value-theorem.html#reading-questions-applications-of-the-mean-value-theorem" class="internal"><span class="codenumber">5.3</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-higher-order-derivatives.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Higher Order Derivatives</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-higher-order-derivatives" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-higher-order-derivatives.html#exercises-higher-order-derivatives" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-higher-order-derivatives.html#reading-questions-higher-order-derivatives" class="internal"><span class="codenumber">5.4</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
@@ -818,31 +838,31 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter-riemann-integration.html" class="internal"><span class="codenumber">6</span> <span class="title">Riemann Integration</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-chapter-riemann-integration" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-riemann-sums.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Riemann Sums</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-riemann-sums" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-riemann-sums.html#exercises-riemann-sums" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-riemann-sums.html#reading-questions-riemann-sums" class="internal"><span class="codenumber">6.1</span> <span class="title">Reading Question</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-properties-of-the-riemann-integral.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Properties of the Riemann Integral</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-properties-of-the-riemann-integral" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-properties-of-the-riemann-integral.html#exercises-properties-of-the-riemann-integral" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-properties-of-the-riemann-integral.html#reading-questions-properties-of-the-riemann-integral" class="internal"><span class="codenumber">6.2</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The Fundamental Theorems of Calculus</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-the-fundamental-theorems-of-calculus" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#exercises-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#reading-questions-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.3</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-improper-integration.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Improper Integration</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-improper-integration" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-improper-integration.html#exercises-improper-integration" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-improper-integration.html#reading-questions-improper-integration" class="internal"><span class="codenumber">6.4</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
@@ -851,31 +871,31 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter-infinite-series.html" class="internal"><span class="codenumber">7</span> <span class="title">Infinite Series</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-chapter-infinite-series" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Partial Sums and Infinite Series</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-partial-sums-and-infinite-series" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#exercises-partial-sums-and-infinite-series" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#reading-questions-partial-sums-and-infinite-series" class="internal"><span class="codenumber">7.1</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-tests-for-series-convergence.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Tests for Series Convergence</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-tests-for-series-convergence" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-tests-for-series-convergence.html#exercises-tests-for-series-convergence" class="internal"><span class="codenumber">7.2</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-tests-for-series-convergence.html#reading-questions-tests-for-series-convergence" class="internal"><span class="codenumber">7.2</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-power-series.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Power Series</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-power-series" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-power-series.html#exercises-power-series" class="internal"><span class="codenumber">7.3</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-power-series.html#reading-questions-power-series" class="internal"><span class="codenumber">7.3</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-analytic-functions.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Analytic Functions</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-analytic-functions" class="structural toc-item-list">
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-analytic-functions.html#exercises-analytic-functions" class="internal"><span class="codenumber">7.4</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-analytic-functions.html#reading-questions-analytic-functions" class="internal"><span class="codenumber">7.4</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
@@ -886,7 +906,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
 <li class="toc-item toc-solutions"><div class="toc-title-box"><a href="solutions.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Solutions</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">List of Symbols</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Index</span></a></div></li>
@@ -900,33 +920,464 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Open and Closed Sets</span>
 </h2>
 <section class="introduction" id="section-open-and-closed-sets-2">
-<div class="para" id="section-open-and-closed-sets-2-1">Text before the first subsection.<div class="autopermalink" data-description="Paragraph"><a href="#section-open-and-closed-sets-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="section-open-and-closed-sets-2-1">
+<div class="para">In this section, we generalize the notion of open and closed intervals to subsets of arbitrary metric spaces. Recall that the open interval <span class="process-math">\(\opint{ a }{ b } \)</span> between two real numbers <span class="process-math">\(a , b \in \R \)</span> is the subset of the real numbers <span class="process-math">\(\R \)</span> defined as follows.</div>
+<div class="displaymath process-math" id="section-open-and-closed-sets-2-1-4">
+\begin{equation*}
+\opint{ a }{ b } = \set{ x \in \R : a \lt x \lt b } \subsetneq \R\text{.}
+\end{equation*}
+</div>
+<div class="para">Similarly, the closed interval <span class="process-math">\(\clint{ a }{ b } \)</span> between two real numbers <span class="process-math">\(a , b \in \R \)</span> is the subset of the real numbers <span class="process-math">\(\R \)</span> defined as follows.</div>
+<div class="displaymath process-math" id="section-open-and-closed-sets-2-1-8">
+\begin{equation*}
+\clint{ a }{ b } = \set{ x \in \R : a \leq x \leq b } \subsetneq \R\text{.}
+\end{equation*}
+</div>
+<div class="para">Soon, we will develop the more general notion of the open and closed subsets of a metric space, which will play a crucial role in the remainder of this text.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-open-and-closed-sets-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="section-open-and-closed-sets-3">
-<div class="para" id="section-open-and-closed-sets-3-1">Text after the last subsection.<div class="autopermalink" data-description="Paragraph"><a href="#section-open-and-closed-sets-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="subsection" id="subsection-neighborhoods-in-metric-spaces">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Neighborhoods in Metric Spaces</span>
+</h3>
+<section class="introduction" id="subsection-neighborhoods-in-metric-spaces-2">
+<div class="para" id="subsection-neighborhoods-in-metric-spaces-2-1">Informally, a subset of a metric space is <dfn class="terminology">open</dfn> if it contains all points which are close to its elements and <dfn class="terminology">closed</dfn> if it contains all of its limit points. These are one of many provably equivalent definitions of openness and closedness. In order to formalize this, we make the following preliminary definitions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-neighborhoods-in-metric-spaces-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="definition definition-like" id="definition-metric-open-ball-closed-disk-sphere"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Open ball; closed disk; sphere.</span>
+</h4>
+<div class="para logical" id="definition-metric-open-ball-closed-disk-sphere-13-1">
+<div class="para">Fix a positive real number <span class="process-math">\(r \gt 0 \)</span> and a point <span class="process-math">\(c \in X \)</span> in a metric space <span class="process-math">\(\of{ X , \rho } \text{.}\)</span>
+</div>
+<ul class="disc" id="definition-metric-open-ball-closed-disk-sphere-13-1-4">
+<li id="definition-metric-open-ball-closed-disk-sphere-13-1-4-1">
+<span class="heading li--heading"><span class="title li--heading-title">Open metric ball.</span></span>
+<div class="para logical" id="definition-metric-open-ball-closed-disk-sphere-13-1-4-1-2">
+<div class="para">The <dfn class="terminology">open (metric) ball</dfn> <span class="process-math">\(\mB_{ r } \of{ c } \)</span> in <span class="process-math">\(X \)</span> of <dfn class="terminology">radius</dfn> <span class="process-math">\(r \)</span> and <dfn class="terminology">center</dfn> <span class="process-math">\(c \)</span> is the subset of <span class="process-math">\(X \)</span> defined by</div>
+<div class="displaymath process-math" id="definition-metric-open-ball-closed-disk-sphere-13-1-4-1-2-9">
+\begin{equation*}
+\mB_{ r } \of{ c } = \setmid{ x \in X }{ \rho \of{ x , c } \lt r }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-metric-open-ball-closed-disk-sphere-13-1-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Open metric ball"><a tabindex="-1" href="#definition-metric-open-ball-closed-disk-sphere-13-1-4-1" title="Copy heading and permalink for Item: Open metric ball" aria-label="Copy heading and permalink for Item: Open metric ball">🔗</a></div>
+</li>
+<li id="definition-metric-open-ball-closed-disk-sphere-13-1-4-2">
+<span class="heading li--heading"><span class="title li--heading-title">Closed metric disk.</span></span>
+<div class="para logical" id="definition-metric-open-ball-closed-disk-sphere-13-1-4-2-2">
+<div class="para">The <dfn class="terminology">closed (metric) disk</dfn> <span class="process-math">\(\mD_{ r } \of{ c } \)</span> in <span class="process-math">\(X \)</span> of <dfn class="terminology">radius</dfn> <span class="process-math">\(r \)</span> and <dfn class="terminology">center</dfn> <span class="process-math">\(c \)</span> is the subset of <span class="process-math">\(X \)</span> defined by</div>
+<div class="displaymath process-math" id="definition-metric-open-ball-closed-disk-sphere-13-1-4-2-2-9">
+\begin{equation*}
+\mD_{ r } \of{ c } = \setmid{ x \in X }{ \rho \of{ x , c } \leq r }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-metric-open-ball-closed-disk-sphere-13-1-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Closed metric disk"><a tabindex="-1" href="#definition-metric-open-ball-closed-disk-sphere-13-1-4-2" title="Copy heading and permalink for Item: Closed metric disk" aria-label="Copy heading and permalink for Item: Closed metric disk">🔗</a></div>
+</li>
+<li id="definition-metric-open-ball-closed-disk-sphere-13-1-4-3">
+<span class="heading li--heading"><span class="title li--heading-title">Open metric ball.</span></span>
+<div class="para logical" id="definition-metric-open-ball-closed-disk-sphere-13-1-4-3-2">
+<div class="para">The <dfn class="terminology">(metric) sphere</dfn> <span class="process-math">\(\mS_{ r } \of{ c } \)</span> in <span class="process-math">\(X \)</span> of <dfn class="terminology">radius</dfn> <span class="process-math">\(r \)</span> and <dfn class="terminology">center</dfn> <span class="process-math">\(c \)</span> is the subset of <span class="process-math">\(X \)</span> defined by</div>
+<div class="displaymath process-math" id="definition-metric-open-ball-closed-disk-sphere-13-1-4-3-2-9">
+\begin{equation*}
+\mS_{ r } \of{ c } = \setmid{ x \in X }{ \rho \of{ x , c } = r }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-metric-open-ball-closed-disk-sphere-13-1-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Open metric ball"><a tabindex="-1" href="#definition-metric-open-ball-closed-disk-sphere-13-1-4-3" title="Copy heading and permalink for Item: Open metric ball" aria-label="Copy heading and permalink for Item: Open metric ball">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-metric-open-ball-closed-disk-sphere-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.4.1: Open ball; closed disk; sphere"><a tabindex="-1" href="#definition-metric-open-ball-closed-disk-sphere" title="Copy heading and permalink for Definition 3.4.1: Open ball; closed disk; sphere" aria-label="Copy heading and permalink for Definition 3.4.1: Open ball; closed disk; sphere">🔗</a></div>
+</article>
+<div class="para" id="subsection-neighborhoods-in-metric-spaces-4">So an open ball contains precisely the points of distance strictly less than its radius from its center; a closed disk contains precisely the points of distance at most its radius from its center; and a sphere contains precisely the points of distance precisely its radius from its center. Just as the difference between an open and a closed interval is the question of the inclusion of its endpoints, the distinction between open balls and closed disks is that a closed disk contains all points of distance precisely its radius from its center, while an open ball does not.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-neighborhoods-in-metric-spaces-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsection-neighborhoods-in-metric-spaces-5">We will see that in many ways, this section is an investigation of the properties of subsets of metric spaces which contain or are contained in certain open balls. The following definition, that of a <dfn class="terminology">neighborhood</dfn>, will be a useful notion for both the rest of this chapter and the next chapter as well. Informally, a subset of a metric space is a neighborhood of a point if it contains all points which are very close to that point.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-neighborhoods-in-metric-spaces-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-metric-neighborhood"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Neighborhood.</span>
+</h4>
+<div class="para" id="definition-metric-neighborhood-3-1">A subset <span class="process-math">\(U \subseteq X \)</span> is a <dfn class="terminology">neighborhood</dfn> of a point <span class="process-math">\(x \in X \)</span> in a metric space <span class="process-math">\(\of{ X , \rho } \)</span> if <span class="process-math">\(U \)</span> contains an open ball centered at <span class="process-math">\(x \text{;}\)</span> that is, <span class="process-math">\(U \)</span> is a neighborhood of <span class="process-math">\(x \)</span> if <span class="process-math">\(\mB_{ r } \of{ x } \subseteq U \)</span> for some positive real number <span class="process-math">\(r \gt 0 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-metric-neighborhood-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.4.2: Neighborhood"><a tabindex="-1" href="#definition-metric-neighborhood" title="Copy heading and permalink for Definition 3.4.2: Neighborhood" aria-label="Copy heading and permalink for Definition 3.4.2: Neighborhood">🔗</a></div>
+</article>
+<details id="example-metric-neighborhoods" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Neighborhoods.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="example-metric-neighborhoods-2-1">Every open ball and closed disk in a metric space is a neighborhood of its center.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-metric-neighborhoods-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.4.3: Neighborhoods"><a tabindex="-1" href="#example-metric-neighborhoods" title="Copy heading and permalink for Example 3.4.3: Neighborhoods" aria-label="Copy heading and permalink for Example 3.4.3: Neighborhoods">🔗</a></div>
+</article></details>
+<article class="remark remark-like" id="remark-locality"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Locality.</span>
+</h4>
+<div class="para" id="remark-locality-3">The notion of a neighborhood is our latest exposure to the conceptual metaphor of <dfn class="terminology">locality</dfn>. We conceive of metric spaces by spatial reasoning, saying for example that for points <span class="process-math">\(x , y \in X \)</span> in a metric space <span class="process-math">\(\of{ X , \rho } \text{,}\)</span> if <span class="process-math">\(\rho \of{ x , y } \)</span> is a small positive number, then <span class="process-math">\(x \)</span> and <span class="process-math">\(y \)</span> are “close”.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#remark-locality-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="remark-locality-4">This idea is pervasive throughout point-set topology, and it implicitly informs much of the relevant terminology. Just as your neighborhood contains all of the people closest to where you live, a neighborhood in a metric space contains all nearby points.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#remark-locality-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Remark 3.4.4: Locality"><a tabindex="-1" href="#remark-locality" title="Copy heading and permalink for Remark 3.4.4: Locality" aria-label="Copy heading and permalink for Remark 3.4.4: Locality">🔗</a></div>
+</article>
+<div class="para" id="subsection-neighborhoods-in-metric-spaces-9">We now have the terminology to make the crucial and titular definitions of this section; that of <dfn class="terminology">open</dfn> and <dfn class="terminology">closed subsets</dfn> of a metric space. A subset of a metric space is open if it is a neighborhood of all of its points, and is closed if its complement is open.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-neighborhoods-in-metric-spaces-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-open-closed-subset"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Open/closed subset.</span>
+</h4>
+<div class="para logical" id="definition-open-closed-subset-4-1">
+<div class="para">Let <span class="process-math">\(U \subseteq X \)</span> be a subset of a metric space <span class="process-math">\(\of{ X , \rho } \text{.}\)</span>
+</div>
+<ul class="disc" id="definition-open-closed-subset-4-1-3">
+<li id="definition-open-closed-subset-4-1-3-1">
+<span class="heading li--heading"><span class="title li--heading-title">Open subset.</span></span>
+<div class="para" id="definition-open-closed-subset-4-1-3-1-2">
+<span class="process-math">\(U \)</span> is <dfn class="terminology">open</dfn> in <span class="process-math">\(X \)</span> if it is a neighborhood of each of its points; that is, <span class="process-math">\(U \)</span> is open if for each point <span class="process-math">\(u \in U \text{,}\)</span> there is a positive real number <span class="process-math">\(r \gt 0 \)</span> so that <span class="process-math">\(\mB_{ r } \of{ u } \subseteq U \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-open-closed-subset-4-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Open subset"><a tabindex="-1" href="#definition-open-closed-subset-4-1-3-1" title="Copy heading and permalink for Item: Open subset" aria-label="Copy heading and permalink for Item: Open subset">🔗</a></div>
+</li>
+<li id="definition-open-closed-subset-4-1-3-2">
+<span class="heading li--heading"><span class="title li--heading-title">Closed subset.</span></span>
+<div class="para" id="definition-open-closed-subset-4-1-3-2-2">
+<span class="process-math">\(U \)</span> is <dfn class="terminology">closed</dfn> in <span class="process-math">\(X \)</span> if its complement <span class="process-math">\(X \setminus U \)</span> is open in <span class="process-math">\(X \text{;}\)</span> that is, <span class="process-math">\(U \)</span> is closed if each point <span class="process-math">\(x \in X \setminus U \)</span> has a neighborhood in <span class="process-math">\(X \)</span> which is disjoint from <span class="process-math">\(U \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-open-closed-subset-4-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Closed subset"><a tabindex="-1" href="#definition-open-closed-subset-4-1-3-2" title="Copy heading and permalink for Item: Closed subset" aria-label="Copy heading and permalink for Item: Closed subset">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-open-closed-subset-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.4.5: Open/closed subset"><a tabindex="-1" href="#definition-open-closed-subset" title="Copy heading and permalink for Definition 3.4.5: Open/closed subset" aria-label="Copy heading and permalink for Definition 3.4.5: Open/closed subset">🔗</a></div>
+</article>
+<article class="lemma theorem-like" id="lemma-openness-and-closedness"><h4 class="heading">
+<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Openness and closedness.</span>
+</h4>
+<div class="para" id="lemma-openness-and-closedness-2-1">Open balls in metric spaces are open, and closed disks are closed.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-openness-and-closedness-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Lemma 3.4.6: Openness and closedness"><a tabindex="-1" href="#lemma-openness-and-closedness" title="Copy heading and permalink for Lemma 3.4.6: Openness and closedness" aria-label="Copy heading and permalink for Lemma 3.4.6: Openness and closedness">🔗</a></div>
+</article>
+<details id="lemma-openness-and-closedness-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="lemma-openness-and-closedness-3-1">Fix a positive real number <span class="process-math">\(r \gt 0 \)</span> and a point <span class="process-math">\(c \in X \)</span> in a metric space <span class="process-math">\(\of{ X , \rho } \text{.}\)</span> Let <span class="process-math">\(U = \mB_{ r } \of{ c } \)</span> and <span class="process-math">\(V = \mD_{ r } \of{ c } \)</span> be the open ball and closed disk of radius <span class="process-math">\(r \)</span> and center <span class="process-math">\(c \text{,}\)</span> respectively. We will show that <span class="process-math">\(U \)</span> and <span class="process-math">\(V \)</span> are open and closed in <span class="process-math">\(X \text{,}\)</span> respectively.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-openness-and-closedness-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="lemma-openness-and-closedness-3-2">
+<div class="para">To that end, first let <span class="process-math">\(u \in U \text{,}\)</span> so that <span class="process-math">\(\rho \of{ u , c } \lt r \text{.}\)</span> Let</div>
+<div class="displaymath process-math" id="lemma-openness-and-closedness-3-2-3">
+\begin{equation*}
+s = r - \rho \of{ u , c }\text{.}
+\end{equation*}
+</div>
+<div class="para">We note that for a point <span class="process-math">\(x \in X \text{,}\)</span> if <span class="process-math">\(\rho \of{ x , u } \lt s \text{,}\)</span> then</div>
+<div class="displaymath process-math" id="lemma-openness-and-closedness-3-2-6">
+\begin{align*}
+\rho \of{ x , c } \amp \leq \rho \of{ x , u } + \rho \of{ u , c } \lt s + r\\
+\amp = r - \rho \of{ u , c } + \rho \of{ u , c } = r\text{,}
+\end{align*}
+</div>
+<div class="para">and so <span class="process-math">\(x \in U \text{.}\)</span> Thus <span class="process-math">\(\mB_{ s } \of{ u } \subseteq \mB_{ r } \of{ c } = U \text{.}\)</span> Since <span class="process-math">\(U \)</span> contains an open ball centered at each of its points, it is a neighborhood of each of its points, and so <span class="process-math">\(U \)</span> is open in <span class="process-math">\(X \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-openness-and-closedness-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="lemma-openness-and-closedness-3-3">
+<div class="para">On the other hand, now suppose that <span class="process-math">\(x \in X \setminus V \text{,}\)</span> so that <span class="process-math">\(\rho \of{ x , c } \gt r \text{.}\)</span> Let</div>
+<div class="displaymath process-math" id="lemma-openness-and-closedness-3-3-3">
+\begin{equation*}
+s = \rho \of{ x , c } - r\text{.}
+\end{equation*}
+</div>
+<div class="para">We note that for a point <span class="process-math">\(y \in X \text{,}\)</span> if <span class="process-math">\(\rho \of{ y , x } \lt s \text{,}\)</span> then</div>
+<div class="displaymath process-math" id="lemma-openness-and-closedness-3-3-6">
+\begin{align*}
+r + s \amp = \rho \of{ x , c } \leq \rho \of{ x , y } + \rho \of{ y , c }\\
+\amp = \rho \of{ y , x } + \rho \of{ y , c } \lt s + \rho \of{ y , c }\text{.}
+\end{align*}
+</div>
+<div class="para">We conclude that <span class="process-math">\(\rho \of{ y , c } \gt r \text{,}\)</span> and so <span class="process-math">\(y \notin \mD_{ r } \of{ c } = V \text{.}\)</span> Since <span class="process-math">\(X \setminus V \)</span> contains an open ball centered at each of its points, it is a neighborhood of each of its points, and so <span class="process-math">\(X \setminus V \)</span> is open in <span class="process-math">\(X \text{;}\)</span> that is, <span class="process-math">\(V \)</span> is closed in <span class="process-math">\(X \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-openness-and-closedness-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.4.6.1"><a tabindex="-1" href="#lemma-openness-and-closedness-3" title="Copy heading and permalink for Proof 3.4.6.1" aria-label="Copy heading and permalink for Proof 3.4.6.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-neighborhoods-in-metric-spaces-12">
+<a href="section-open-and-closed-sets.html#lemma-openness-and-closedness" class="xref" data-knowl="./knowl/xref/lemma-openness-and-closedness.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 3.4.6: Openness and closedness">Lemma 3.4.6 Openness and closedness</a> illustrates that the names “open” and “closed” for balls and disks are well-deserved; open balls and closed disks in a metric space are open and closed, respectively. This immediately implies that open intervals and closed intervals of real numbers (with finite endpoints) are open and closed, respectively, in the Euclidean metric, since any such interval is either a open ball or a closed disk (depending on whether or not it includes its endpoints) around its center, which is the arithmetic mean of its endpoints.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-neighborhoods-in-metric-spaces-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsection-neighborhoods-in-metric-spaces-13">We next develop a series of point-set topological definitions based on the notion of neighborhoods which will play an important role in both this and the next chapter. Given a subset of a metric space, we may consider open or closed sets which approximate the set as well as possible from the inside or outside, respectively.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-neighborhoods-in-metric-spaces-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-interior-closure-boundary"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Interior; closure; boundary.</span>
+</h4>
+<div class="para logical" id="definition-interior-closure-boundary-11-1">
+<div class="para">Fix a subset <span class="process-math">\(U \subseteq X \)</span> of a metric space <span class="process-math">\(\of{ X , \rho } \text{.}\)</span>
+</div>
+<ul class="disc" id="definition-interior-closure-boundary-11-1-3">
+<li id="definition-interior-closure-boundary-11-1-3-1">
+<span class="heading li--heading"><span class="title li--heading-title">Interior.</span></span>
+<div class="para" id="definition-interior-closure-boundary-11-1-3-1-2">A point <span class="process-math">\(x \in X \)</span> is an <dfn class="terminology">interior point</dfn> of <span class="process-math">\(U \)</span> if <span class="process-math">\(U \)</span> is a neighborhood of <span class="process-math">\(x \text{.}\)</span> The set of interior points of <span class="process-math">\(U \)</span> is called the <dfn class="terminology">interior</dfn> of <span class="process-math">\(U \)</span> and is denoted <span class="process-math">\(\Int \of{ U } \)</span> or <span class="process-math">\(U^{ \circ } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-interior-closure-boundary-11-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Interior"><a tabindex="-1" href="#definition-interior-closure-boundary-11-1-3-1" title="Copy heading and permalink for Item: Interior" aria-label="Copy heading and permalink for Item: Interior">🔗</a></div>
+</li>
+<li id="definition-interior-closure-boundary-11-1-3-2">
+<span class="heading li--heading"><span class="title li--heading-title">Closure.</span></span>
+<div class="para" id="definition-interior-closure-boundary-11-1-3-2-2">A point <span class="process-math">\(x \in X \)</span> is called a <dfn class="terminology">point of closure</dfn> of <span class="process-math">\(U \)</span> in <span class="process-math">\(X \)</span> if <span class="process-math">\(N \cap U \neq \emptyset \)</span> for all neighborhoods <span class="process-math">\(N \)</span> of <span class="process-math">\(x \)</span> in <span class="process-math">\(X \text{.}\)</span> The set of points of closure of <span class="process-math">\(U \)</span> in <span class="process-math">\(X \)</span> is called the <dfn class="terminology">closure</dfn> of <span class="process-math">\(U \)</span> in <span class="process-math">\(X \)</span> and is denoted <span class="process-math">\(\Cl \of{ U } \)</span> or <span class="process-math">\(\overline{ U } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-interior-closure-boundary-11-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Closure"><a tabindex="-1" href="#definition-interior-closure-boundary-11-1-3-2" title="Copy heading and permalink for Item: Closure" aria-label="Copy heading and permalink for Item: Closure">🔗</a></div>
+</li>
+<li id="definition-interior-closure-boundary-11-1-3-3">
+<span class="heading li--heading"><span class="title li--heading-title">Boundary.</span></span>
+<div class="para" id="definition-interior-closure-boundary-11-1-3-3-2">A point <span class="process-math">\(x \in X \)</span> is called a <dfn class="terminology">boundary point</dfn> of <span class="process-math">\(U \)</span> in <span class="process-math">\(X \)</span> if <span class="process-math">\(N \cap U \neq \emptyset \)</span> and <span class="process-math">\(N \setminus U \neq \emptyset \)</span> for all neighborhoods <span class="process-math">\(N \)</span> of <span class="process-math">\(x \)</span> in <span class="process-math">\(X \text{.}\)</span> The set of all boundary points of <span class="process-math">\(U \)</span> in <span class="process-math">\(X \)</span> is called the <dfn class="terminology">boundary</dfn> of <span class="process-math">\(U \)</span> in <span class="process-math">\(X \)</span> and is denoted <span class="process-math">\(\Bd \of{ U } \)</span> or <span class="process-math">\(\partial U \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-interior-closure-boundary-11-1-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Boundary"><a tabindex="-1" href="#definition-interior-closure-boundary-11-1-3-3" title="Copy heading and permalink for Item: Boundary" aria-label="Copy heading and permalink for Item: Boundary">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-interior-closure-boundary-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.4.7: Interior; closure; boundary"><a tabindex="-1" href="#definition-interior-closure-boundary" title="Copy heading and permalink for Definition 3.4.7: Interior; closure; boundary" aria-label="Copy heading and permalink for Definition 3.4.7: Interior; closure; boundary">🔗</a></div>
+</article>
+<div class="para" id="subsection-neighborhoods-in-metric-spaces-15">The above definitions are equivalent if we quantify over open balls centered at the point in question rather than over neighborhoods of said point. However, the notion of neighborhood will extend into our discussion in <a href="chapter-topological-spaces.html" class="internal" title="Chapter 4: Topological Spaces">Chapter 4 Topological Spaces</a>, so we will continue in this spirit of generality, which we hope will ease our generalization of the above notions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-neighborhoods-in-metric-spaces-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-interior-closure-and-boundary" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Interior, closure, and boundary.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-interior-closure-and-boundary-2-1">
+<div class="para">Consider the half-closed, half-open interval</div>
+<div class="displaymath process-math" id="example-interior-closure-and-boundary-2-1-1">
+\begin{equation*}
+\clopint{ 0 }{ 1 } = \setmid{ x \in \R }{ 0 \leq x \lt 1 }
+\end{equation*}
+</div>
+<div class="para">of real numbers between <span class="process-math">\(0 \)</span> and <span class="process-math">\(1 \text{.}\)</span> <span class="process-math">\(\clopint{ 0 }{ 1 } \)</span> has interior</div>
+<div class="displaymath process-math" id="example-interior-closure-and-boundary-2-1-5">
+\begin{equation*}
+\Int \of{ \clopint{ 0 }{ 1 } } = \opint{ 0 }{ 1 } = \setmid{ x \in \R }{ 0 \lt x \lt 1 }\text{,}
+\end{equation*}
+</div>
+<div class="para">closure</div>
+<div class="displaymath process-math" id="example-interior-closure-and-boundary-2-1-6">
+\begin{equation*}
+\Cl \of{ \clopint{ 0 }{ 1 } } = \clint{ 0 }{ 1 } = \setmid{ x \in \R }{ 0 \leq x \leq 1 }\text{,}
+\end{equation*}
+</div>
+<div class="para">and boundary</div>
+<div class="displaymath process-math" id="example-interior-closure-and-boundary-2-1-7">
+\begin{equation*}
+\Bd \of{ \clopint{ 0 }{ 1 } } = \set{ 0 , 1 }
+\end{equation*}
+</div>
+<div class="para">in <span class="process-math">\(\R \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-interior-closure-and-boundary-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.4.8: Interior, closure, and boundary"><a tabindex="-1" href="#example-interior-closure-and-boundary" title="Copy heading and permalink for Example 3.4.8: Interior, closure, and boundary" aria-label="Copy heading and permalink for Example 3.4.8: Interior, closure, and boundary">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-neighborhoods-in-metric-spaces-17">Clearly, a subset of a metric space is open if and only if it is its own interior. Perhaps less obvious, however, is the second half of the following result; a subset of a metric space is closed if and only if it is its own closure.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-neighborhoods-in-metric-spaces-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-interior-closure"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Interior/closure.</span>
+</h4>
+<div class="para logical" id="proposition-interior-closure-2-1">
+<div class="para">Let <span class="process-math">\(U \subseteq X \)</span> be a subset of a metric space <span class="process-math">\(\of{ X , \rho } \text{.}\)</span>
+</div>
+<ol class="decimal" id="proposition-interior-closure-2-1-3">
+<li id="proposition-interior-closure-2-1-3-1">
+<span class="heading li--heading"><span class="title li--heading-title">Interior.</span></span>
+<div class="para" id="proposition-interior-closure-2-1-3-1-2">
+<span class="process-math">\(U \)</span> is open in <span class="process-math">\(X \)</span> if and only if <span class="process-math">\(U = \Int \of{ U } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-interior-closure-2-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1: Interior"><a tabindex="-1" href="#proposition-interior-closure-2-1-3-1" title="Copy heading and permalink for Item 1: Interior" aria-label="Copy heading and permalink for Item 1: Interior">🔗</a></div>
+</li>
+<li id="proposition-interior-closure-2-1-3-2">
+<span class="heading li--heading"><span class="title li--heading-title">Closure.</span></span>
+<div class="para" id="proposition-interior-closure-2-1-3-2-2">
+<span class="process-math">\(U \)</span> is closed in <span class="process-math">\(X \)</span> if and only if <span class="process-math">\(U = \Cl \of{ U } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-interior-closure-2-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2: Closure"><a tabindex="-1" href="#proposition-interior-closure-2-1-3-2" title="Copy heading and permalink for Item 2: Closure" aria-label="Copy heading and permalink for Item 2: Closure">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-interior-closure-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 3.4.9: Interior/closure"><a tabindex="-1" href="#proposition-interior-closure" title="Copy heading and permalink for Proposition 3.4.9: Interior/closure" aria-label="Copy heading and permalink for Proposition 3.4.9: Interior/closure">🔗</a></div>
+</article>
+<details id="proposition-interior-closure-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<ol class="decimal" id="proposition-interior-closure-3-1">
+<li id="proposition-interior-closure-3-1-1">
+<div class="para logical" id="proposition-interior-closure-3-1-1-1">
+<div class="para">We first note that for any point <span class="process-math">\(x \in \Int \of{ U } \text{,}\)</span> there is some neighborhood <span class="process-math">\(N \)</span> of <span class="process-math">\(x \)</span> so that <span class="process-math">\(N \subseteq U \text{.}\)</span> Since <span class="process-math">\(N \)</span> is a neighborhood of <span class="process-math">\(x \text{,}\)</span> it contains some open ball <span class="process-math">\(\mB_{ r } \of{ x } \subseteq N \text{.}\)</span> We conclude that</div>
+<div class="displaymath process-math" id="proposition-interior-closure-3-1-1-1-8">
+\begin{equation*}
+x \in \mB_{ r } \of{ x } \subseteq N \subseteq U\text{,}
+\end{equation*}
+</div>
+<div class="para">and so <span class="process-math">\(x \in U \text{.}\)</span> We conclude that <span class="process-math">\(\Int \of{ U } \subseteq U \text{.}\)</span> Therefore, it suffices to show that <span class="process-math">\(U \)</span> is open in <span class="process-math">\(X \)</span> if and only if <span class="process-math">\(U \subseteq \Int \of{ U } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-interior-closure-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="proposition-interior-closure-3-1-1-2">To that end, we first suppose that <span class="process-math">\(U \)</span> is open, and let <span class="process-math">\(u \in U \text{.}\)</span> Then <span class="process-math">\(U \)</span> is a neighborhood of <span class="process-math">\(u \)</span> in <span class="process-math">\(X \text{,}\)</span> and of course <span class="process-math">\(U \subseteq U \text{.}\)</span> Thus <span class="process-math">\(u \in \Int \of{ U } \)</span> is an interior point of <span class="process-math">\(U \text{.}\)</span> We conclude that <span class="process-math">\(U \subseteq \Int \of{ U } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-interior-closure-3-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-interior-closure-3-1-1-3">
+<div class="para">Conversely, now suppose that <span class="process-math">\(U \subseteq \Int \of{ U } \text{,}\)</span> and let <span class="process-math">\(u \in U \text{.}\)</span> Then <span class="process-math">\(u \in \Int \of{ U } \text{,}\)</span> and so <span class="process-math">\(N \subseteq U \)</span> for some neighborhood <span class="process-math">\(N \)</span> of <span class="process-math">\(U \)</span> in <span class="process-math">\(X \text{.}\)</span> Since <span class="process-math">\(N \)</span> is a neighborhood of <span class="process-math">\(u \text{,}\)</span> it contains some open ball <span class="process-math">\(\mB_{ r } \of{ u } \subseteq N \text{.}\)</span> We conclude that</div>
+<div class="displaymath process-math" id="proposition-interior-closure-3-1-1-3-11">
+\begin{equation*}
+\mB_{ r } \of{ u } \subseteq N \subseteq U\text{,}
+\end{equation*}
+</div>
+<div class="para">and so <span class="process-math">\(U \)</span> is a neighborhood of <span class="process-math">\(u \)</span> in <span class="process-math">\(X \text{.}\)</span> Since this holds for all <span class="process-math">\(u \in U \text{,}\)</span> <span class="process-math">\(U \)</span> is open in <span class="process-math">\(X \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-interior-closure-3-1-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#proposition-interior-closure-3-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="proposition-interior-closure-3-1-2">
+<div class="para logical" id="proposition-interior-closure-3-1-2-1">
+<div class="para">Let <span class="process-math">\(N \)</span> be a neighborhood of a point <span class="process-math">\(u \in U \)</span> in <span class="process-math">\(X \text{.}\)</span> Then <span class="process-math">\(N \)</span> contains some open ball <span class="process-math">\(\mB_{ r } \of{ u } \text{,}\)</span> and so</div>
+<div class="displaymath process-math" id="proposition-interior-closure-3-1-2-1-6">
+\begin{equation*}
+u \in \mB_{ r } \of{ u } \subseteq N\text{.}
+\end{equation*}
+</div>
+<div class="para">In particular, <span class="process-math">\(u \in N \cap U \text{,}\)</span> and so <span class="process-math">\(N \cap U \neq \emptyset \)</span> is non-empty. Thus <span class="process-math">\(u \in \Cl \of{ U } \)</span> is a point of closure of <span class="process-math">\(U \)</span> in <span class="process-math">\(X \text{.}\)</span> We conclude that <span class="process-math">\(U \subseteq \Cl \of{ U } \text{.}\)</span> Therefore, it suffices to show that <span class="process-math">\(U \)</span> is closed in <span class="process-math">\(X \)</span> if and only if <span class="process-math">\(\Cl \of{ U } \subseteq U \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-interior-closure-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="proposition-interior-closure-3-1-2-2">To that end, we first suppose that <span class="process-math">\(U \)</span> is closed, and let <span class="process-math">\(x \in X \text{.}\)</span> If <span class="process-math">\(x \in X \setminus U \text{,}\)</span> then our hypothesis that <span class="process-math">\(U \)</span> is closed implies that <span class="process-math">\(x \)</span> has a neighborhood <span class="process-math">\(N \)</span> in <span class="process-math">\(X \)</span> so that <span class="process-math">\(N \cap U = \emptyset \text{.}\)</span> This implies that <span class="process-math">\(x \in X \setminus \Cl \of{ U } \text{.}\)</span> In summary, we have shown that <span class="process-math">\(X \setminus U \subseteq X \setminus \Cl \of{ U } \text{,}\)</span> and so <span class="process-math">\(\Cl \of{ U } \subseteq U \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-interior-closure-3-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="proposition-interior-closure-3-1-2-3">Conversely, now suppose that <span class="process-math">\(\Cl \of{ U } \subseteq U \text{,}\)</span> and let <span class="process-math">\(x \in X \setminus U \text{.}\)</span> Then <span class="process-math">\(x \notin \Cl \of{ U } \)</span> is not a point of closure of <span class="process-math">\(U \)</span> in <span class="process-math">\(X \text{,}\)</span> and so <span class="process-math">\(N \cap U = \emptyset \)</span> for some neighborhood <span class="process-math">\(N \)</span> of <span class="process-math">\(x \)</span> in <span class="process-math">\(X \text{.}\)</span> This implies that <span class="process-math">\(N \subseteq X \setminus U \text{,}\)</span> and so <span class="process-math">\(X \setminus U \)</span> is a neighborhood of <span class="process-math">\(x \)</span> in <span class="process-math">\(X \text{.}\)</span> Since this holds for all points <span class="process-math">\(x \in X \setminus U \text{,}\)</span> we conclude that <span class="process-math">\(X \setminus U \)</span> is open in <span class="process-math">\(X \text{;}\)</span> that is, <span class="process-math">\(U \)</span> is closed in <span class="process-math">\(X \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-interior-closure-3-1-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#proposition-interior-closure-3-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.4.9.1"><a tabindex="-1" href="#proposition-interior-closure-3" title="Copy heading and permalink for Proof 3.4.9.1" aria-label="Copy heading and permalink for Proof 3.4.9.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-neighborhoods-in-metric-spaces-19">So a subset of a metric space is open if and only if it is its own interior, and it is closed if and only if it is its own closure. This is because the interior of a set is the largest open set which is contained in it, the closure of a subset is the smallest closed set in which it is contained.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-neighborhoods-in-metric-spaces-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="theorem-interior-closure"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Interior/closure.</span>
+</h4>
+<div class="para logical" id="theorem-interior-closure-2-1">
+<div class="para">Let <span class="process-math">\(U \subseteq X \)</span> be a subset of a metric space <span class="process-math">\(\of{ X , \rho } \text{.}\)</span>
+</div>
+<ol class="decimal" id="theorem-interior-closure-2-1-3">
+<li id="theorem-interior-closure-2-1-3-1">
+<span class="heading li--heading"><span class="title li--heading-title">Interior.</span></span>
+<div class="para logical" id="theorem-interior-closure-2-1-3-1-2">
+<div class="para">Let <span class="process-math">\(O \)</span> be the collection of open subsets of <span class="process-math">\(X \)</span> contained in <span class="process-math">\(U \text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="theorem-interior-closure-2-1-3-1-2-4">
+\begin{equation*}
+\Int \of{ U } = \bigcup_{ V \in O }{ V }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-interior-closure-2-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1: Interior"><a tabindex="-1" href="#theorem-interior-closure-2-1-3-1" title="Copy heading and permalink for Item 1: Interior" aria-label="Copy heading and permalink for Item 1: Interior">🔗</a></div>
+</li>
+<li id="theorem-interior-closure-2-1-3-2">
+<span class="heading li--heading"><span class="title li--heading-title">Closure.</span></span>
+<div class="para logical" id="theorem-interior-closure-2-1-3-2-2">
+<div class="para">Let <span class="process-math">\(C \)</span> be the collection of closed subsets of <span class="process-math">\(X \)</span> which contain <span class="process-math">\(U \text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="theorem-interior-closure-2-1-3-2-2-4">
+\begin{equation*}
+\Cl \of{ U } = \bigcap_{ V \in C }{ V }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-interior-closure-2-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2: Closure"><a tabindex="-1" href="#theorem-interior-closure-2-1-3-2" title="Copy heading and permalink for Item 2: Closure" aria-label="Copy heading and permalink for Item 2: Closure">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-interior-closure-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.4.10: Interior/closure"><a tabindex="-1" href="#theorem-interior-closure" title="Copy heading and permalink for Theorem 3.4.10: Interior/closure" aria-label="Copy heading and permalink for Theorem 3.4.10: Interior/closure">🔗</a></div>
+</article>
+<details id="theorem-interior-closure-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<ol class="decimal" id="theorem-interior-closure-3-1">
+<li id="theorem-interior-closure-3-1-1">
+<div class="para logical" id="theorem-interior-closure-3-1-1-1">
+<div class="para">Let <span class="process-math">\(u \in \Int \of{ U } \)</span> be an interior point to <span class="process-math">\(U \)</span> in <span class="process-math">\(X \text{.}\)</span> Then <span class="process-math">\(\mB_{ r } \of{ u } \subseteq U \)</span> for some positive real number <span class="process-math">\(r \gt 0 \text{.}\)</span> <a href="section-open-and-closed-sets.html#lemma-openness-and-closedness" class="xref" data-knowl="./knowl/xref/lemma-openness-and-closedness.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 3.4.6: Openness and closedness">Lemma 3.4.6 Openness and closedness</a> implies that <span class="process-math">\(\mB_{ r } \of{ u } \)</span> is open and so <span class="process-math">\(\mB_{ r } \of{ u } \in O \text{.}\)</span> We conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-openness-and-closedness.html" id="theorem-interior-closure-3-1-1-1-9">
+\begin{equation*}
+u \in \mB_{ r } \of{ u } \subseteq \bigcup_{ V \in O }{ V }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-interior-closure-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="theorem-interior-closure-3-1-1-2">Conversely, now suppose that <span class="process-math">\(u \in \bigcup_{ V \in O }{ V } \text{.}\)</span> Then <span class="process-math">\(u \in V \)</span> for some <span class="process-math">\(V \in O \text{.}\)</span> Since <span class="process-math">\(V \)</span> is open in <span class="process-math">\(X \text{,}\)</span> it is a neighborhood of <span class="process-math">\(u \)</span> in <span class="process-math">\(X \text{,}\)</span> and so <span class="process-math">\(u \in \Int \of{ U } \)</span> is an interior point to <span class="process-math">\(U \)</span> in <span class="process-math">\(X \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-interior-closure-3-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="theorem-interior-closure-3-1-1-3">
+<div class="para">In summary, we have shown that <span class="process-math">\(u \in \Int \of{ U } \)</span> if and only if <span class="process-math">\(u \in \bigcup_{ V \in O }{ V } \text{,}\)</span> and so</div>
+<div class="displaymath process-math" id="theorem-interior-closure-3-1-1-3-3">
+\begin{equation*}
+\Int \of{ U } = \bigcup_{ V \in O }{ V }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-interior-closure-3-1-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#theorem-interior-closure-3-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="theorem-interior-closure-3-1-2">
+<div class="para logical" id="theorem-interior-closure-3-1-2-1">
+<div class="para">Consider a closed set <span class="process-math">\(V \in C \text{,}\)</span> and let <span class="process-math">\(x \in X \setminus V \text{.}\)</span> Since <span class="process-math">\(V \)</span> is closed in <span class="process-math">\(X \text{,}\)</span> <span class="process-math">\(X \setminus V \)</span> is open in <span class="process-math">\(X \text{,}\)</span> and so <span class="process-math">\(X \setminus V \)</span> is a neighborhood of each of its points. Moreover, since <span class="process-math">\(U \subseteq V \text{,}\)</span> <span class="process-math">\(\of{ X \setminus V } \cap U = \emptyset \text{,}\)</span> and so none of the points of <span class="process-math">\(X \setminus V \)</span> are points of closure of <span class="process-math">\(U \)</span> in <span class="process-math">\(x \text{;}\)</span> that is, <span class="process-math">\(X \setminus V \subseteq X \setminus \Cl \of{ U } \text{.}\)</span> We conclude that <span class="process-math">\(\Cl \of{ U } \subseteq V \text{.}\)</span> Since this holds for all <span class="process-math">\(V \in C \text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="theorem-interior-closure-3-1-2-1-16">
+\begin{equation*}
+\Cl \of{ U } \subseteq \bigcap_{ V \in C }{ V }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-interior-closure-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="theorem-interior-closure-3-1-2-2">
+<div class="para">Conversely, now let <span class="process-math">\(x \in X \setminus \Cl \of{ U } \text{.}\)</span> Then <span class="process-math">\(N \cap U = \emptyset \)</span> for some neighborhood <span class="process-math">\(N \)</span> of <span class="process-math">\(x \)</span> in <span class="process-math">\(X \text{.}\)</span> In particular, <span class="process-math">\(\mB_{ r } \of{ x } \cap U = \emptyset \)</span> for some positive real number <span class="process-math">\(r \gt 0 \text{.}\)</span> Note that <span class="process-math">\(X \setminus \mB_{ r } \of{ x } \in C \text{.}\)</span> However, <span class="process-math">\(x \notin X \setminus \mB_{ r } \of{ x } \text{,}\)</span> and so <span class="process-math">\(x \notin \bigcap_{ V \in C }{ V } \text{.}\)</span> We conclude that</div>
+<div class="displaymath process-math" id="theorem-interior-closure-3-1-2-2-11">
+\begin{equation*}
+\bigcap_{ V \in C }{ V } \subseteq \Cl \of{ U }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-interior-closure-3-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#theorem-interior-closure-3-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.4.10.1"><a tabindex="-1" href="#theorem-interior-closure-3" title="Copy heading and permalink for Proof 3.4.10.1" aria-label="Copy heading and permalink for Proof 3.4.10.1">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.4.1: Neighborhoods in Metric Spaces"><a tabindex="-1" href="#subsection-neighborhoods-in-metric-spaces" title="Copy heading and permalink for Subsection 3.4.1: Neighborhoods in Metric Spaces" aria-label="Copy heading and permalink for Subsection 3.4.1: Neighborhoods in Metric Spaces">🔗</a></div>
+</section>
+<section class="subsection" id="subsection-metrics-and-boundedness">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Metrics and Boundedness</span>
+</h3>
+<section class="introduction" id="subsection-metrics-and-boundedness-2">
+<div class="para" id="subsection-metrics-and-boundedness-2-1">Text before the first subdivision.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-metrics-and-boundedness-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="conclusion" id="subsection-metrics-and-boundedness-3">
+<div class="para" id="subsection-metrics-and-boundedness-3-1">Text after the last subdivision.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-metrics-and-boundedness-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.4.2: Metrics and Boundedness"><a tabindex="-1" href="#subsection-metrics-and-boundedness" title="Copy heading and permalink for Subsection 3.4.2: Metrics and Boundedness" aria-label="Copy heading and permalink for Subsection 3.4.2: Metrics and Boundedness">🔗</a></div>
+</section>
+<section class="conclusion" id="section-open-and-closed-sets-5">
+<div class="para" id="section-open-and-closed-sets-5-1">Text after the last subsection.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-open-and-closed-sets-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="reading-questions" id="exercises-open-and-closed-sets">
 <h3 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
 </h3>
 <section class="introduction" id="exercises-open-and-closed-sets-2">
-<div class="para" id="exercises-open-and-closed-sets-2-1">The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-open-and-closed-sets-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="exercises-open-and-closed-sets-2-1">The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-open-and-closed-sets-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="conclusion" id="exercises-open-and-closed-sets-3">
-<div class="para" id="exercises-open-and-closed-sets-3-1">Short answers and/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-open-and-closed-sets-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" data-description="Reading Questions 3.4: Exercises"><a href="#exercises-open-and-closed-sets" title="Copy heading and permalink for Reading Questions 3.4: Exercises" aria-label="Copy heading and permalink for Reading Questions 3.4: Exercises">🔗</a></div>
+<div class="para" id="exercises-open-and-closed-sets-3-1">Short answers and/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-open-and-closed-sets-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 3.4.3: Exercises"><a tabindex="-1" href="#exercises-open-and-closed-sets" title="Copy heading and permalink for Reading Questions 3.4.3: Exercises" aria-label="Copy heading and permalink for Reading Questions 3.4.3: Exercises">🔗</a></div>
 </section>
 <section class="reading-questions" id="reading-questions-open-and-closed-sets">
 <h3 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reading Questions</span>
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reading Questions</span>
 </h3>
 <section class="introduction" id="reading-questions-open-and-closed-sets-2">
-<div class="para" id="reading-questions-open-and-closed-sets-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" data-description="Paragraph"><a href="#reading-questions-open-and-closed-sets-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="reading-questions-open-and-closed-sets-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#reading-questions-open-and-closed-sets-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="conclusion" id="reading-questions-open-and-closed-sets-3">
-<div class="para" id="reading-questions-open-and-closed-sets-3-1">In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" data-description="Paragraph"><a href="#reading-questions-open-and-closed-sets-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" data-description="Reading Questions 3.4: Reading Questions"><a href="#reading-questions-open-and-closed-sets" title="Copy heading and permalink for Reading Questions 3.4: Reading Questions" aria-label="Copy heading and permalink for Reading Questions 3.4: Reading Questions">🔗</a></div>
-</section><div class="autopermalink" data-description="Section 3.4: Open and Closed Sets"><a href="#section-open-and-closed-sets" title="Copy heading and permalink for Section 3.4: Open and Closed Sets" aria-label="Copy heading and permalink for Section 3.4: Open and Closed Sets">🔗</a></div>
+<div class="para" id="reading-questions-open-and-closed-sets-3-1">In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#reading-questions-open-and-closed-sets-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 3.4.4: Reading Questions"><a tabindex="-1" href="#reading-questions-open-and-closed-sets" title="Copy heading and permalink for Reading Questions 3.4.4: Reading Questions" aria-label="Copy heading and permalink for Reading Questions 3.4.4: Reading Questions">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 3.4: Open and Closed Sets"><a tabindex="-1" href="#section-open-and-closed-sets" title="Copy heading and permalink for Section 3.4: Open and Closed Sets" aria-label="Copy heading and permalink for Section 3.4: Open and Closed Sets">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
