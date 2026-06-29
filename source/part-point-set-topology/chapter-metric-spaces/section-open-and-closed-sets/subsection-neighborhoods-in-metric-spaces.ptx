@@ -626,4 +626,10 @@
       </ol>
     </proof>
   </theorem>
+  
+  <conclusion>
+    <p>
+      For a subset <m> U \subseteq X </m> of a metric space <m> \of{ X , \rho } </m>, the property of being a neighborhood of a point <m> x \in X </m> is the existence of a certain kind lower bound on <m> U </m> in the power set <m> \ps \of{ X } </m> of <m> X </m>. We now examine the dual condition, that of <term> metric boundedness </term>.
+    </p>
+  </conclusion>
 </subsection>
