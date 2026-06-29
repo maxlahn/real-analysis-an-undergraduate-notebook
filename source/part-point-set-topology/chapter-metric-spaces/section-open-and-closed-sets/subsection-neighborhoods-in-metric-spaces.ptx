@@ -235,9 +235,9 @@
     </statement>
   </definition>
   
-  <lemma xml:id="lemma-openness-and-closedness">
+  <lemma xml:id="lemma-open-balls-and-closed-disks">
     <title>
-      Openness and closedness
+      Open balls and closed disks
     </title>
     
     <statement>
@@ -298,7 +298,7 @@
   </lemma>
   
   <p>
-    <xref ref="lemma-openness-and-closedness"/> illustrates that the names <q> open </q> and <q> closed </q> for balls and disks are well-deserved; open balls and closed disks in a metric space are open and closed, respectively. This immediately implies that open intervals and closed intervals of real numbers (with finite endpoints) are open and closed, respectively, in the Euclidean metric, since any such interval is either a open ball or a closed disk (depending on whether or not it includes its endpoints) around its center, which is the arithmetic mean of its endpoints.
+    <xref ref="lemma-open-balls-and-closed-disks"/> illustrates that the names <q> open </q> and <q> closed </q> for balls and disks are well-deserved; open balls and closed disks in a metric space are open and closed, respectively. This immediately implies that open intervals and closed intervals of real numbers (with finite endpoints) are open and closed, respectively, in the Euclidean metric, since any such interval is either a open ball or a closed disk (depending on whether or not it includes its endpoints) around its center, which is the arithmetic mean of its endpoints.
   </p>
   
   <p>
@@ -426,25 +426,47 @@
           \clopint{ 0 }{ 1 } = \setmid{ x \in \R }{ 0 \leq x \lt 1 }
         </md>
         
-        of real numbers between <m> 0 </m> and <m> 1 </m>. <m> \clopint{ 0 }{ 1 } </m> has interior
+        of real numbers between <m> 0 </m> and <m> 1 </m>.
         
-        <md>
-          \Int \of{ \clopint{ 0 }{ 1 } } = \opint{ 0 }{ 1 } = \setmid{ x \in \R }{ 0 \lt x \lt 1 }
-        </md>,
-        
-        closure
-        
-        <md>
-          \Cl \of{ \clopint{ 0 }{ 1 } } = \clint{ 0 }{ 1 } = \setmid{ x \in \R }{ 0 \leq x \leq 1 }
-        </md>,
-        
-        and boundary
-        
-        <md>
-          \Bd \of{ \clopint{ 0 }{ 1 } } = \set{ 0 , 1 }
-        </md>
-        
-        in <m> \R </m>.
+        <ul>
+          <li>
+            <title>
+              Interior
+            </title>
+            
+            <p>
+              <m> \clopint{ 0 }{ 1 } </m> has interior the open interval
+              
+              <md>
+                \Int \of{ \clopint{ 0 }{ 1 } } = \opint{ 0 }{ 1 } = \setmid{ x \in \R }{ 0 \lt x \lt 1 }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Closure
+            </title>
+            
+            <p>
+              <m> \clopint{ 0 }{ 1 } </m> has closure the closed interval
+              
+              <md>
+                \Cl \of{ \clopint{ 0 }{ 1 } } = \clint{ 0 }{ 1 } = \setmid{ x \in \R }{ 0 \leq x \leq 1 }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Boundary
+            </title>
+            
+            <p>
+              <m> \clopint{ 0 }{ 1 } </m> has boundary the set <m> \Bd \of{ \clopint{ 0 }{ 1 } } = \set{ 0 , 1 } </m>.
+            </p>
+          </li>
+        </ul>
       </p>
     </statement>
   </example>
@@ -538,7 +560,161 @@
   </proposition>
   
   <p>
-    So a subset of a metric space is open if and only if it is its own interior, and it is closed if and only if it is its own closure. This is because the interior of a set is the largest open set which is contained in it, the closure of a subset is the smallest closed set in which it is contained.
+    So a subset of a metric space is open if and only if it is its own interior, and it is closed if and only if it is its own closure. One consequence of this is that the interior of a subset is open, and the closure of a set is closed. In order to show this, we make the following observation about the behavior of the openness and closedness conditions under the set operations.
+  </p>
+  
+  <proposition xml:id="proposition-topology-of-a-metric-space">
+    <title>
+      Topology of a metric space
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ X , \rho } </m> be a metric space.
+        
+        <ol>
+          <li>
+            <p>
+              The empty set <m> \emptyset </m> and the ground set <m> X </m> are both open and closed in <m> X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The union of any collection of open subsets of <m> X </m> is itself open in <m> X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The intersection of any collection of closed subsets of <m> X </m> is itself closed in <m> X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The intersection of finitely many open subsets of <m> X </m> is itself open in <m> X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The union of finitely many closed subsets of <m> X </m> is itself closed in <m> X </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            The empty set <m> \emptyset </m> is vacuously a neighborhood of each of its points, and so <m> \emptyset </m> is open in <m> X </m>. On the other hand, let <m> x \in X </m>. Then
+            
+            <md>
+              \mB_{ 1 } \of{ x } = \setmid{ y \in X }{ \rho \of{ y , x } \lt 1 } \subseteq X
+            </md>,
+            
+            and so <m> X </m> is a neighborhood of <m> x </m> in <m> X </m>. We conclude that <m> X </m> is open in <m> X </m>.
+          </p>
+          
+          <p>
+            Since the empty set <m> \emptyset </m> and the ground set <m> X </m> are both open in <m> X </m>, their complements <m> X \setminus \emptyset = X </m> and <m> X \setminus X = \emptyset </m> are closed in <m> X </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Let <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> be an indexed family of open sets <m> U_{ j } \subseteq X </m> in <m> X </m>, and consider the union
+            
+            <md>
+              U = \bigcup_{ j \in \mathcal{ J } }{ U_{ j } }
+            </md>.
+            
+            Let <m> u \in U </m>. Then <m> u \in U_{ k } </m> for some index <m> k \in \mathcal{ J } </m>. Since <m> U_{ k } </m> is open in <m> X </m>, it is a neighborhood of <m> x </m> in <m> X </m>, and so <m> \mB_{ r } \of{ x } \subseteq U_{ k } </m> for some positive real number <m> r \gt 0 </m>.
+          </p>
+          
+          <p>
+            We observe that
+            
+            <md>
+              \mB_{ r } \of{ x } \subseteq U_{ k } \subseteq \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } = U
+            </md>,
+            
+            and so <m> U </m> is a neighborhood of <m> u </m> in <m> X </m>. Since this holds for all points <m> u \in U </m>, <m> U </m> is open in <m> X </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Let <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> be an indexed family of closed sets <m> U_{ j } \subseteq X </m> in <m> X </m>, and consider the intersection
+            
+            <md>
+              U = \bigcap_{ j \in \mathcal{ J } }{ U_{ j } }
+            </md>.
+            
+            Since for each index <m> j \in \mathcal{ J } </m>, <m> X \setminus U_{ j } </m> is open in <m> X </m>, (b) above implies that
+            
+            <md>
+              X \setminus U = X \setminus \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcup_{ j \in \mathcal{ J } }{ \of{ X \setminus U_{ j } } }
+            </md>
+            
+            is open in <m> X </m>. We conclude that <m> U = X \setminus \of{ X \setminus U } </m> is closed in <m> X </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Let <m> \of{ U_{ j } }_{ j = 1 }^{ m } </m> be a finite sequence of open sets <m> U_{ j } \subseteq X </m> in <m> X </m>, and consider the intersection
+            
+            <md>
+              U = \bigcap_{ j = 1 }^{ m }{ U_{ j } }
+            </md>.
+            
+            Let <m> u \in U </m>, so that <m> u \in U_{ j } </m> for all indices <m> 1 \leq j \leq m </m>. For each index <m> 1 \leq j \leq m </m>, <m> U_{ j } </m> is open in <m> X </m>, and so <m> U_{ j } </m> is a neighborhood of <m> u </m> in <m> X </m>; that is, <m> \mB_{ r_{ j } } \of{ u } \subseteq U_{ j } </m>.
+          </p>
+          
+          <p>
+            Let <m> r = \min_{ 1 \leq j \leq m }{ r_{ j } } \gt 0 </m>, and note that
+            
+            <md>
+              \mB_{ r } \of{ u } \subseteq \mB_{ r_{ j } } \of{ u } \subseteq U_{ j }
+            </md>
+            
+            for all indices <m> 1 \leq j \leq m </m>. We conclude that
+            
+            <md>
+              \mB_{ r } \of{ u } \subseteq \bigcap_{ j = 1 }^{ m }{ U_{ j } } = U
+            </md>,
+            
+            so that <m> U </m> is a neighborhood of <m> u </m> in <m> X </m>. Since this holds for all points <m> u \in U </m>, <m> U </m> is open in <m> X </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Let <m> \of{ U_{ j } }_{ j = 1 }^{ m } </m> be a finite sequence of closed sets <m> U_{ j } \subseteq X </m> in <m> X </m>, and consider the union
+            
+            <md>
+              U = \bigcup_{ j = 1 }^{ m }{ U_{ j } }
+            </md>.
+            
+            Since for each index <m> 1 \leq j \leq m </m>, <m> X \setminus U_{ j } </m> is open in <m> X </m>, (d) above implies that
+            
+            <md>
+              X \setminus U = X \setminus \bigcup_{ j = 1 }^{ m }{ U_{ j } } = \bigcap_{ j = 1 }^{ m }{ \of{ X \setminus U_{ j } } }
+            </md>
+            
+            is open in <m> X </m>. We conclude that <m> U = X \setminus \of{ X \setminus U } </m> is closed in <m> X </m>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </proposition>
+  
+  <p>
+    Along with <xref ref="proposition-topology-of-a-metric-space"/>, the following result implies that the interior of a subset of a metric space is the largest open set which is contained in it, the closure of such a subset is the smallest closed set in which it is contained.
   </p>
   
   <theorem xml:id="theorem-interior-closure">
@@ -557,11 +733,13 @@
             </title>
             
             <p>
-              Let <m> O </m> be the collection of open subsets of <m> X </m> contained in <m> U </m>. Then
+              <m> U </m> has interior
               
               <md>
-                \Int \of{ U } = \bigcup_{ V \in O }{ V }
-              </md>.
+                \Int \of{ U } = \bigcup_{ V \in \mathcal{ O }_{ U } }{ V }
+              </md>,
+              
+              where <m> \mathcal{ O }_{ U } </m> is the collection of open subsets of <m> X </m> contained in <m> U </m>.
             </p>
           </li>
           
@@ -571,11 +749,13 @@
             </title>
             
             <p>
-              Let <m> C </m> be the collection of closed subsets of <m> X </m> which contain <m> U </m>. Then
+              <m> U </m> has closure
               
               <md>
-                \Cl \of{ U } = \bigcap_{ V \in C }{ V }
-              </md>.
+                \Cl \of{ U } = \bigcap_{ V \in \mathcal{ C }_{ U } }{ V }
+              </md>,
+              
+              where <m> \mathcal{ C }_{ U } </m> is the collection of closed subsets of <m> X </m> which contain <m> U </m>.
             </p>
           </li>
         </ol>
@@ -586,40 +766,52 @@
       <ol>
         <li>
           <p>
-            Let <m> u \in \Int \of{ U } </m> be an interior point to <m> U </m> in <m> X </m>. Then <m> \mB_{ r } \of{ u } \subseteq U </m> for some positive real number <m> r \gt 0 </m>. <xref ref="lemma-openness-and-closedness"/> implies that <m> \mB_{ r } \of{ u } </m> is open and so <m> \mB_{ r } \of{ u } \in O </m>. We conclude that
+            Let <m> x \in X </m>, and first suppose that <m> x \in \Int \of{ U } </m> is an interior point to <m> U </m> in <m> X </m>. Then <m> U </m> is a neighborhood of <m> x </m> in <m> X </m>, and so <m> \mB_{ r } \of{ x } \subseteq U </m> for some positive real number <m> r \gt 0 </m>. <xref ref="lemma-open-balls-and-closed-disks"/> implies that <m> \mB_{ r } \of{ x } </m> is open in <m> X </m>, and so <m> \mB_{ r } \of{ x } \in \mathcal{ O }_{ U } </m>. We conclude that
             
             <md>
-              u \in \mB_{ r } \of{ u } \subseteq \bigcup_{ V \in O }{ V }
+              x \in \mB_{ r } \of{ x } \subseteq \bigcup_{ V \in \mathcal{ O }_{ U } }{ V }
             </md>.
           </p>
           
           <p>
-            Conversely, now suppose that <m> u \in \bigcup_{ V \in O }{ V } </m>. Then <m> u \in V </m> for some <m> V \in O </m>. Since <m> V </m> is open in <m> X </m>, it is a neighborhood of <m> u </m> in <m> X </m>, and so <m> u \in \Int \of{ U } </m> is an interior point to <m> U </m> in <m> X </m>. 
+            Conversely, now suppose that <m> x \in \bigcup_{ V \in \mathcal{ O }_{ U } }{ V } </m>. Then <m> u \in V </m> for some <m> V \in \mathcal{ O }_{ U } </m>. Since <m> V </m> is open in <m> X </m>, it is a neighborhood of <m> x </m> in <m> X </m>, and so <m> \mB_{ r } \of{ x } \subseteq V </m> for some positive real number <m> r \gt 0 </m>. Since
+            
+            <md>
+              \mB_{ r } \of{ x } \subseteq V \subseteq U
+            </md>,
+            
+            <m> U </m> is a neighborhood of <m> x </m> in <m> X </m>; that is, <m> x \in \Int \of{ U } </m> is an interior point of <m> U </m> in <m> X </m>.
           </p>
           
           <p>
-            In summary, we have shown that <m> u \in \Int \of{ U } </m> if and only if <m> u \in \bigcup_{ V \in O }{ V } </m>, and so
+            In summary, we have shown that <m> x \in \Int \of{ U } </m> if and only if <m> x \in \bigcup_{ V \in \mathcal{ O }_{ U } }{ V } </m>, and so
             
             <md>
-              \Int \of{ U } = \bigcup_{ V \in O }{ V }
+              \Int \of{ U } = \bigcup_{ V \in \mathcal{ O }_{ U } }{ V }
             </md>.
           </p>
         </li>
         
         <li>
           <p>
-            Consider a closed set <m> V \in C </m>, and let <m> x \in X \setminus V </m>. Since <m> V </m> is closed in <m> X </m>, <m> X \setminus V </m> is open in <m> X </m>, and so <m> X \setminus V </m> is a neighborhood of each of its points. Moreover, since <m> U \subseteq V </m>, <m> \of{ X \setminus V } \cap U = \emptyset </m>, and so none of the points of <m> X \setminus V </m> are points of closure of <m> U </m> in <m> x </m>; that is, <m> X \setminus V \subseteq X \setminus \Cl \of{ U } </m>. We conclude that <m> \Cl \of{ U } \subseteq V </m>. Since this holds for all <m> V \in C </m>,
+            Consider an element <m> V \in \mathcal{ C }_{ U } </m>, and let <m> x \in X \setminus V </m>. Since <m> V </m> is closed in <m> X </m>, <m> X \setminus V </m> is open in <m> X </m>, and so <m> X \setminus V </m> is a neighborhood of each of its points. Moreover, since <m> U \subseteq V </m>, <m> \of{ X \setminus V } \cap U = \emptyset </m>, and so none of the points of <m> X \setminus V </m> are points of closure of <m> U </m> in <m> X </m>; that is, <m> X \setminus V \subseteq X \setminus \Cl \of{ U } </m>. We conclude that <m> \Cl \of{ U } \subseteq V </m>. Since this holds for all <m> V \in C </m>,
             
             <md>
-              \Cl \of{ U } \subseteq \bigcap_{ V \in C }{ V }
+              \Cl \of{ U } \subseteq \bigcap_{ V \in \mathcal{ C }_{ U } }{ V }
             </md>.
           </p>
           
           <p>
-            Conversely, now let <m> x \in X \setminus \Cl \of{ U } </m>. Then <m> N \cap U = \emptyset </m> for some neighborhood <m> N </m> of <m> x </m> in <m> X </m>. In particular, <m> \mB_{ r } \of{ x } \cap U = \emptyset </m> for some positive real number <m> r \gt 0 </m>. Note that <m> X \setminus \mB_{ r } \of{ x } \in C </m>. However, <m> x \notin X \setminus \mB_{ r } \of{ x } </m>, and so <m> x \notin \bigcap_{ V \in C }{ V } </m>. We conclude that
+            Conversely, now let <m> x \in X \setminus \Cl \of{ U } </m>. Then <m> N \cap U = \emptyset </m> for some neighborhood <m> N </m> of <m> x </m> in <m> X </m>. In particular, <m> \mB_{ r } \of{ x } \cap U = \emptyset </m> for some positive real number <m> r \gt 0 </m>. Note that <m> X \setminus \mB_{ r } \of{ x } \in \mathcal{ C }_{ U } </m>. However, <m> x \notin X \setminus \mB_{ r } \of{ x } </m>, and so <m> x \notin \bigcap_{ V \in \mathcal{ C }_{ U } }{ V } </m>. We conclude that
             
             <md>
-              \bigcap_{ V \in C }{ V } \subseteq \Cl \of{ U }
+              \bigcap_{ V \in \mathcal{ C }_{ U } }{ V } \subseteq \Cl \of{ U }
+            </md>,
+            
+            and so
+            
+            <md>
+              \Cl \of{ U } = \bigcap_{ V \in \mathcal{ C }_{ U } }{ V } .
             </md>.
           </p>
         </li>
