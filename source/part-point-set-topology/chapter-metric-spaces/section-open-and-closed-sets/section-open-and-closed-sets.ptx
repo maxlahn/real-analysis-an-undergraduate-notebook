@@ -27,9 +27,11 @@
 
   <xi:include href="./subsection-metrics-and-boundedness.ptx"/>
 
+  <xi:include href="./subsection-bounded-maps-between-metric-spaces.ptx"/>
+
   <conclusion>
     <p>
-      Text after the last subsection.
+      In the next section, we reintroduce one of the fundamental ideas in analysis and topology: that of <term> continuity </term>.
     </p>
   </conclusion>
 

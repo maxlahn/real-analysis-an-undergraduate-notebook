@@ -7,147 +7,453 @@
 
   <introduction>
     <p>
-      Text before the first subdivision.
+      In this section, we have introduced open balls and closed disks of positive radius. While the notion of radius does not easily generalize to arbitrary subsets of metric spaces (even for just open balls and closed disks), the related concept of <term> diameter </term> is easily generalized from its meaning for Euclidean circles and spheres of higher dimension. Informally, the diameter of a subset of a metric space is the largest possible value taken by the metric when considering only points in that subset.
     </p>
   </introduction>
   
-  
-
-  <conclusion>
-    <p>
-      Text after the last subdivision.
-    </p>
-  </conclusion>
-</subsection>
-
-<!--
-
-  <definition xml:id="definition-TITLE">
+  <definition xml:id="definition-diameter">
     <title>
-      TITLE
+      Diameter
     </title>
     
     <idx>
-      TERM
+      diameter
     </idx>
     
     <notation>
       <usage>
-        <m>  </m>
+        <m> \diam \of{ U } </m>
       </usage>
       
       <description>
         <p>
-          
+          the diameter of <m> U </m>
         </p>
       </description>
     </notation>
     
     <statement>
       <p>
+        The diameter <m> \diam \of{ U } </m> of a subset <m> U \subseteq X </m> of a metric space <m> \of{ X , \rho } </m> is the extended real number defined by
         
+        <md>
+          \diam \of{ U } =
+            \begin{cases}
+              0 \amp U = \emptyset \\
+              \sup_{ u , v \in U }{ \rho \of{ u , v } } \amp U \neq \emptyset
+            \end{cases}
+        </md>.
+      </p>
+    </statement>
+  </definition>
+  
+  <lemma xml:id="lemma-diameter-and-radius">
+    <title>
+      Diameter and radius
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> r \gt 0 </m> be a positive real number and <m> c \in X </m> be a point in a metric space <m> \of{ X , \rho } </m>. The open ball <m> \mB_{ r } \of{ c } </m>, closed disk <m> \mD_{ r } \of{ c } </m>, and sphere <m> \mS_{ r } \of{ c } </m> of radius <m> r </m> and center <m> c </m> have diameter at most <m> 2 r </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Since <m> c \in \mB_{ r } \of{ c } </m> the open ball <m> \mB_{ r } \of{ c } \neq \emptyset </m> is non-empty. Since
+        
+        <md>
+          \rho \of{ u , v } \leq \rho \of{ u , c } + \rho \of{ c , v } = \rho \of{ u , c } + \rho \of{ v , c } \lt r + r = 2 r
+        </md>
+        
+        for all points <m> u , v \in \mB_{ r } \of{ c } </m>,
+        
+        <md>
+          \diam \of{ \mB_{ r } \of{ c } } = \sup_{ u , v \in \mB_{ r } \of{ c } }{ \rho \of{ u , v } } \leq 2 r
+        </md>.
+      </p>
+      
+      <p>
+        Similarly, since <m> c \in \mD_{ r } \of{ c } </m> the closed disk <m> \mD_{ r } \of{ c } \neq \emptyset </m> is non-empty. Since
+        
+        <md>
+          \rho \of{ u , v } \leq \rho \of{ u , c } + \rho \of{ c , v } = \rho \of{ u , c } + \rho \of{ v , c } \leq r + r = 2 r
+        </md>
+        
+        for all points <m> u , v \in \mD_{ r } \of{ c } </m>,
+        
+        <md>
+          \diam \of{ \mD_{ r } \of{ c } } = \sup_{ u , v \in \mD_{ r } \of{ c } }{ \rho \of{ u , v } } \leq 2 r
+        </md>.
+      </p>
+      
+      <p>
+        If the sphere <m> \mS_{ r } \of{ c } = \emptyset </m> is empty, then <m> \diam \of{ \mS_{ r } \of{ c } } = \diam \of{ \emptyset } = 0 \lt 2 r </m>. On the other hand, if the sphere <m> \mS_{ r } \of{ c } \neq \emptyset </m> is non-empty, then we observe that
+        
+        <md>
+          \rho \of{ u , v } \leq \rho \of{ u , c } + \rho \of{ c , v } = \rho \of{ u , c } + \rho \of{ v , c } \leq r + r = 2 r
+        </md>
+        
+        for all points <m> u , v \in \mS_{ r } \of{ c } </m>,
+        
+        <md>
+          \diam \of{ \mS_{ r } \of{ c } } = \sup_{ u , v \in \mD_{ r } \of{ c } }{ \rho \of{ u , v } } \leq 2 r
+        </md>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <p>
+    So the diameter of an open ball, closed disk, or sphere in a metric space is bounded above by twice its radius. Note that, unlike in Euclidean spaces, the diameter of an open ball, closed disk, or sphere in arbitrary metric space need not actually reach this upper bound. This is because, unlike in Euclidean space, in which a given open ball or closed disk has a unique center and radius, balls and disks of different centers and radii may be equal. In particular, the geometry of open balls, closed disks, and spheres may be quite different in a given metric space than our intuition from Euclidean space might suggest.
+  </p>
+  
+  <lemma xml:id="lemma-monotonicity-of-the-diameter">
+    <title>
+      Monotonicity of the diameter
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> U , V \subseteq X </m> be subsets of a metric space <m> \of{ X , \rho } </m>. If <m> S \subseteq T </m>, then <m> \diam \of{ S } \subseteq \diam \of{ T } </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        If <m> T = \emptyset </m>, then <m> S = \emptyset </m> as well, and so
+        
+        <md>
+          \diam \of{ S } = \diam \of{ \emptyset } = \diam \of{ T }
+        </md>.
+        
+        So we may suppose that <m> T \neq \emptyset </m> is non-empty. We observe that <m> \rho \of{ x , y } \geq 0 </m> for all points <m> x , y \in T </m>, and so
+        
+        <md>
+          \diam \of{ S } = 0 \leq \sup_{ x , y \in T }{ \rho \of{ x , y } } = \diam \of{ T }
+        </md>.
+        
+        Thus we may additionally suppose that <m> S \neq \emptyset </m> is non-empty. In this case,
+        
+        <md>
+          <mrow>
+            \diam \of{ S } \amp = \sup \of{ \setmid{ \rho \of{ x , y } \in \R }{ x , y \in S } }
+          </mrow>
+          
+          <mrow>
+            \amp = \sup \of{ \setmid{ \rho \of{ x , y } \in \R }{ x , y \in T } } = \diam \of{ T }
+          </mrow>.
+        </md>
+      </p>
+    </proof>
+  </lemma>
+  
+  <p>
+    Much of this section thus far has been almost entirely concerned with the properties of subsets of metric spaces which contain certain open balls. We now consider the opposite case; what can we say about subsets which are themselves contained in open balls of finite radius? Such subsets of metric spaces are called <term> bounded </term>.
+  </p>
+  
+  <definition xml:id="definition-metric-boundedness">
+    <title>
+      Boundedness
+    </title>
+    
+    <idx>
+      bounded
+    </idx>
+    
+    <idx>
+      unbounded
+    </idx>
+    
+    <statement>
+      <p>
+        A subset <m> U \subseteq X </m> of a metric space <m> \of{ X , \rho } </m> is called <term> bounded </term> (resp. <term> unbounded </term>) if <m> \diam \of{ U } \lt \infty </m> (resp. <m> \diam \of{ U } = \infty </m>). A metric space <m> \of{ X , \rho } </m> is called <term> bounded </term> (resp. <term> unbounded </term>) if its ground set <m> X </m> is bounded (resp. unbounded).
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    A priori, the above definition of boundedness does not appear to be related to the definition introduced in <xref ref="section-introduction-to-order-theory"/>. Namely, that kind of boundedness requires a partial order, and this one requires a metric. However, there is a way to reconcile these perspectives, and the two notions coincide in the real numbers, taken with their standard ordering <m> \leq </m> and the Euclidean metric <m> d </m>.
+  </p>
+
+  <example xml:id="example-boundedness">
+    <title>
+      Boundedness
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of bounded and unbounded subsets of metric spaces:
+        
+        <ul>
+          <li>
+            <p>
+              The empty set <m> \emptyset </m> is a bounded subset of every metric space.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Any discrete metric space is bounded, since its diameter is either <m> 0 </m> or <m> 1 </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The <m> n </m>-dimensional Euclidean space <m> \R^{ n } </m> is bounded when <m> n = 0 </m> and unbounded when <m> n \geq 1 </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    Any subset of a bounded subset of a metric space is itself bounded, and any set which contains an unbounded set is itself unbounded. Moreover, any subset of a nonempty metric space is bounded if and only if it is contained in an open ball or closed disk of finite radius.
+  </p>
+  
+  <proposition xml:id="proposition-metric-characterization-of-boundedness">
+    <title>
+      Metric characterization of boundedness
+    </title>
+    
+    <statement>
+      <p>
+        A subset of a nonempty metric space is bounded if and only if it is contained in an open ball of finite radius.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a non-empty metric space <m> \of{ X , \rho } </m>. First suppose that <m> U </m> is bounded, so that <m> \diam \of{ U } \lt \infty </m>. Since <m> X \neq \emptyset </m> is non-empty, it contains a point <m> x \in X </m>. If <m> U = \emptyset </m> is empty, then <m> U = \emptyset \subseteq \mB_{ r } \of{ x } </m> for any positive real number <m> r \gt 0 </m>.
+      </p>
+      
+      <p>
+        On the other hand, if <m> U \neq \emptyset </m> is non-empty, then it contains a point <m> u \in U </m>. Let <m> r = \diam \of{ U } + 1 </m>, and note that
+        
+        <md>
+          \rho \of{ u , v } \leq \sup_{ s , t \in U }{ \rho \of{ s , t } } = \diam \of{ U } \lt r
+        </md>
+        
+        for all points <m> v \in U </m>, and so <m> U \subseteq \mB_{ r } \of{ u } </m>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> U \subseteq \mB_{ r } \of{ x } </m> for some point <m> x \in X </m>. Then <xref ref="lemma-monotonicity-of-the-diameter"/> and <xref ref="lemma-diameter-and-radius"/> imply that
+        
+        <md>
+          \diam \of{ U } \leq \diam \of{ \mB_{ r } \of{ x } } \leq 2 r \lt \infty
+        </md>,
+        
+        so that <m> U </m> is bounded.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    In fact, something stronger is true for normed vector spaces; a subset of a normed vector space is bounded if and only if it is contained in some open ball of finite radius centered at the origin. This kind of result is typical of analysis done on normed vector spaces; the interplay between the norm and the vector space structure implies that most point-set topological concerns can be reduced to questions which are answerable in a neighborhood of the origin.
+  </p>
+  
+  <corollary xml:id="corollary-norm-characterization-of-boundedness">
+    <title>
+      Norm characterization of boundedness
+    </title>
+    
+    <statement>
+      <p>
+        A subset of a normed vector space is bounded if and only if it is contained in an open ball of finite radius centered at the origin.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \of{ V , \norm{ \oparg } } </m> be a normed vector space. By <xref ref="proposition-metric-characterization-of-boundedness"/>, it suffices to show that any bounded subset of <m> V </m> is contained in an open ball centered at <m> \vect{ 0 } </m>. To that end, let <m> U \subseteq V </m> be a bounded subset of <m> V </m>. <xref ref="proposition-metric-characterization-of-boundedness"/> implies that <m> U \subseteq \mB_{ r } \of{ \vect{ v } } </m> for some positive real number <m> r \gt 0 </m> and some vector <m> \vect{ v } </m>.
+      </p>
+      
+      <p>
+        Let <m> s = r + \norm{ \vect{ v } } </m>, and observe that
+        
+        <md>
+          <mrow>
+            \norm{ \vect{ u } - \vect{ 0 } } \amp = \norm{ \vect{ u } - \vect{ v } + \vect{ v } } \leq \norm{ \vect{ u } - \vect{ v } } + \norm{ \vect{ v } }
+          </mrow>
+          
+          <mrow>
+            \amp \lt r + \norm{ \vect{ v } } = s
+          </mrow>
+        </md>
+        
+        for all <m> \vect{ u } \in U </m>. Thus <m> U \subseteq \mB_{ s } \of{ \vect{ 0 } } </m>.
+      </p>
+    </proof>
+  </corollary>
+  
+  <p>
+    Any finite subset of a metric space is bounded. In fact, any finite union of bounded subsets of a metric space is itself bounded. In order to see this, it suffices to show that the binary union of two bounded subsets of a metric space is itself bounded.
+  </p>
+  
+  <proposition xml:id="proposition-unions-of-bounded-sets">
+    <title>
+      Unions of bounded sets
+    </title>
+    
+    <statement>
+      <p>
+        The union of two bounded sets in a metric space is itself bounded.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> U , V \subseteq X </m> be bounded subsets of a metric space <m> \of{ X , \rho } </m>, and consider the union <m> U \cup V </m>. If <m> X = \emptyset </m> is empty, then <m> U = V = \emptyset </m>, and so
+        
+        <md>
+          \diam \of{ U \cup V } = \diam \of{ \emptyset \cup \emptyset } \diam \of{ \emptyset } = 0 \lt \infty
+        </md>,
+        
+        so that <m> U </m> and <m> V </m> are bounded. On the other hand, if <m> X \neq \emptyset </m> is non-empty, then <xref ref="proposition-metric-characterization-of-boundedness"/> implies that <m> U \subseteq \mB_{ r } \of{ x } </m> and <m> V \subseteq \mB_{ s } \of{ y } </m> for some positive real numbers <m> r , s \gt 0 </m> and points <m> x , y \in X </m>. Let
+        
+        <md>
+          t = \max \of{ \set{ r , s + \rho \of{ y , x } } } \gt 0
+        </md>,
+        
+        and consider a point <m> z \in U \cup V </m>. If <m> z \in U </m>, then
+        
+        <md>
+          \rho \of{ z , x } \lt r \leq t
+        </md>,
+        
+        and if <m> z \in V </m>, then
+        
+        <md>
+          \rho \of{ z , x } \leq \rho \of{ z , y } + \rho \of{ y , x } \lt s + \rho \of{ y , x } \leq t
+        </md>.
+        
+        In either case, we conclude that <m> z \in \mB_{ t } \of{ x } </m>, and so <m> U \cup V \subseteq \mB_{ t } \of{ x } </m>. <xref ref="proposition-metric-characterization-of-boundedness"/> now implies that <m> U \cup V </m> is bounded.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    The following corollary follows immediately from the above result by induction. Essentially, it asserts that the property of boundedness is stable under finite unions.
+  </p>
+
+  <corollary xml:id="corollary-unions-of-bounded-sets">
+    <title>
+      Unions of bounded sets
+    </title>
+    
+    <statement>
+      <p>
+        The union of any finite collection of bounded subsets of a metric space is itself bounded.
+      </p>
+    </statement>
+  </corollary>
+  
+  <p>
+    Before we move on to discuss the boundedness of maps between metric spaces, we will briefly mention one stronger kind of boundedness for subsets of metric spaces. A subset of a metric space is called <term> totally bounded </term> if it can be covered by finitely many open balls of arbitrarily small radius.
+  </p>
+  
+  <definition xml:id="definition-total-boundedness">
+    <title>
+      Total boundedness
+    </title>
+    
+    <idx>
+      totally bounded
+    </idx>
+    
+    <statement>
+      <p>
+        A subset <m> U \subseteq X </m> of a metric space <m> \of{ X , \rho } </m> is called <term> totally bounded </term> if for all positive real numbers <m> r \gt 0 </m>, there is a finite list of points <m> x_{ 1 } , \dotsc , x_{ n } \in X </m> so that
+        
+        <md>
+          U \subseteq \bigcup_{ k = 1 }^{ n }{ \mB_{ r } \of{ x_{ k } } }
+        </md>.
+        
+        A metric space <m> \of{ X , \rho } </m> is called <term> totally bounded </term> if its ground set <m> X </m> is totally bounded.
       </p>
     </statement>
   </definition>
 
-  <lemma xml:id="lemma-TITLE">
+  <example xml:id="example-total-boundedness">
     <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </lemma>
-
-  <proposition xml:id="proposition-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </proposition>
-
-  <theorem xml:id="theorem-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </theorem>
-
-  <corollary xml:id="corollary-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </corollary>
-
-  <example xml:id="example-TITLE">
-    <title>
-      TITLE
+      Total boundedness
     </title>
     
     <statement>
       <p>
+        The following are examples of totally bounded and not totally bounded subsets of metric spaces:
         
+        <ul>
+          <li>
+            <p>
+              The empty set <m> \emptyset </m> is a totally bounded subset of any metric space. More generally, any finite set of a metric space is totally bounded.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Any infinite subset of a discrete metric space is bounded but not totally bounded.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              A subset of <m> n </m>-dimensional Euclidean space <m> \R^{ n } </m> is totally bounded if and only if it is bounded.
+            </p>
+          </li>
+        </ul>
       </p>
     </statement>
   </example>
+  
+  <p>
+    The above examples illustrate that while boundedness and total boundedness are not in general equivalent for subsets of metric spaces, the two notions are also not necessarily entirely unrelated. In fact, total boundedness is a stronger condition than boundedness for subsets of a metric space.
+  </p>
+  
+  <proposition xml:id="proposition-total-boundedness-implies-boundedness">
+    <title>
+      Total boundedness implies boundedness
+    </title>
+    
+    <statement>
+      <p>
+        If a subset of a metric space is totally bounded, then it is bounded.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> U \subseteq X </m> be a totally bounded subset of a metric space <m> \of{ X , \rho } </m>. Since <m> 1 \gt 0 </m> is a positive real number,
+        
+        <md>
+          U \subseteq \bigcup_{ k = 1 }^{ n }{ \mB_{ 1 } \of{ x_{ k } } }
+        </md>
+        
+        for some finite list of points <m> x_{ 1 } , \dotsc , x_{ n } \in X </m>. <xref ref="lemma-diameter-and-radius"/> and <xref ref="corollary-unions-of-bounded-sets"/> together imply that <m> U </m> is bounded.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    We have seen that infinite discrete metric spaces provide a counterexample to the converse of <xref ref="proposition-total-boundedness-implies-boundedness"/>. However, in Euclidean space, total boundedness and boundedness are equivalent. We offer this result without proof.
+  </p>
+  
+  <proposition xml:id="proposition-total-boundedness-in-euclidean-space">
+    <title>
+      Total boundedness in Euclidean space
+    </title>
+    
+    <statement>
+      <p>
+        A subset of Euclidean space is totally bounded if and only if it is bounded.
+      </p>
+    </statement>
+  </proposition>
 
--->
+  <conclusion>
+    <p>
+      One way to see why <xref ref="proposition-total-boundedness-in-euclidean-space"/> is true is that any open ball or closed disk of finite radius in Euclidean space is a subset of a cube, which may be subdivided into finitely many appropriately small cubes. While boundedness and total boundedness are equivalent in Euclidean spaces, they are not the same for metric spaces in general. In some of the generalizations of theorems about Euclidean space to results about metric spaces in general, total boundedness is a more natural notion to discuss. We will further discuss totally bounded sets in the <xref ref="section-completeness-and-compactness"/>, in which we investigate <term> completeness </term> and <term> compactness </term> for metric spaces. For now, however, we move on in favor of exploring boundedness for maps between metric spaces.
+    </p>
+  </conclusion>
+</subsection>

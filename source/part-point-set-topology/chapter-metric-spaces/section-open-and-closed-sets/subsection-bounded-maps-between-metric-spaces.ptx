@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-bounded-maps-between-metric-spaces" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Bounded maps between metric spaces
+  </title>
+
+  <introduction>
+    <p>
+      In <xref ref="section-introduction-to-order-theory"/>, we defined boundedness for subsets of partially ordered sets, and then we defined a map from a set to a partially ordered set to be bounded if and only if its image was a bounded subset of the codomain. In this section, we have introduced a different notion of boundedness for subsets of a metric space, but an there is an analogous way to extend this notion to maps to metric spaces. A map to a metric space is <term> bounded </term> if its image is bounded in the codomain, and unbounded otherwise.
+    </p>
+    
+    <p>
+      We note that this is a different notion than a bounded linear transformation between normed vector spaces, which is not bounded in this sense. The homogeneity of a norm on a vector space implies that no nonzero linear transformation to a normed vector space can be bounded in the above sense.}
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-metric-map-boundedness">
+    <title>
+      Map boundedness
+    </title>
+    
+    <idx>
+      bounded
+    </idx>
+    
+    <idx>
+      unbounded
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> be a map from a set <m> X </m> to a metric space <m> \of{ Y , \rho } </m>.
+        
+        <ul>
+          <li>
+            <title>
+              Boundedness
+            </title>
+            
+            <p>
+              The map <m> f </m> is called <term> bounded </term> if its image <m> \im \of{ f } = f \of{ X } </m> is a bounded subset of <m> Y </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Unboundedness
+            </title>
+            
+            <p>
+              The map <m> f </m> is called <term> unbounded </term> if its image <m> \im \of{ f } = f \of{ X } </m> is an unbounded subset of <m> Y </m>.
+            </p>
+          </li>
+        </ul>
+        
+        The set of bounded maps from a set <m> X </m> to a metric space <m> \of{ Y , \rho } </m> is denoted <m> \Bdd \of{ X , Y } </m>. In the special case <m> \of{ Y , \rho } = \of{ \R , d } </m>, the set of bounded real-valued functions on <m> X </m> is denoted <m> \Bdd \of{ X } = \Bdd \of{ X , \R } </m>.
+      </p>
+    </statement>
+  </definition>
+  
+  <remark xml:id="remark-boundedness-for-linear-transformations">
+    <title>
+      Boundedness for linear transformations
+    </title>
+    
+    <p>
+      We remark that the above definition of boundedness is different than the usual definition of boundedness for linear maps between normed vector spaces. Indeed, in the setting of normed vector spaces, the absolute homogeneity of the norm implies that no non-zero linear transformation to a normed vector space can be bounded in the above sense. Instead, a linear transformation is called <term> bounded </term> if its restriction to the unit sphere around the origin is bounded in the above sense.
+    </p>
+  </remark>
+  
+  <example xml:id="example-bounded-functions">
+    <title>
+      Bounded functions
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon \R \to \R </m> be the real-valued function defined by the formula
+        
+        <md>
+          f \of{ x } = e^{ -x^{ 2 } }
+        </md>.
+        
+        Then <m> f </m> is a bounded function on the real line <m> \R </m>.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    Just as in the cases of sequential and map convergence, in attempting to understand boundedness in arbitrary metric spaces, it suffices to investigate boundedness in the real line <m> \R </m>. These links between arbitrary metric spaces and the metric space of the real numbers taken with the Euclidean metric stem from the definition of a metric; the structure of a real-valued function such as a metric can be seen to pull back some of the properties of its codomain <m> \R </m> to its domain. In order to check that a metric space is bounded, it is both necessary and sufficient for the metric itself to be a bounded function.
+  </p>
+  
+  <lemma xml:id="lemma-map-boundedness">
+    <title>
+      Map boundedness
+    </title>
+    
+    <statement>
+      <p>
+        A metric space <m> \of{ X , \rho } </m> is bounded if and only if the metric <m> \rho \colon X \times X \to \R </m> is a bounded function.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        First suppose that <m> \of{ X , \rho } </m> is bounded, so that <m> \diam \of{ X } \lt \infty </m>. If <m> X = \emptyset </m>, then
+        
+        <md>
+          <mrow>
+            \diam \of{ \im \of{ \rho } } \amp = \diam \of{ \rho \of{ \emptyset \times \emptyset } } = \diam \of{ \rho \of{ \emptyset } }
+          </mrow>
+          
+          <mrow>
+            \amp = \diam \of{ \emptyset } = 0 \lt \infty
+          </mrow>
+        </md>,
+        
+        and so <m> \rho </m> is bounded. Thus we may suppose that <m> X \neq \emptyset </m> is non-empty. In particular,
+        
+        <md>
+          0 \leq \rho \of{ x , y } \leq \diam \of{ X }
+        </md>
+        
+        for all points <m> x , y \in X </m>, which implies that
+        
+        <md>
+          d \of{ \rho \of{ x , y } , 0 } = \abs{ \rho \of{ x , y } - 0 } = \abs{ \rho \of{ x , y } } = \rho \of{ x , y } \leq \diam \of{ X }
+        </md>
+        
+        for all points <m> x , y \in X </m>. In particular, this implies that <m> \im \of{ \rho } \subseteq \mD_{ \diam \of{ X } } \of{ 0 } </m>. Now <xref ref="lemma-monotonicity-of-the-diameter"/> and <xref ref="lemma-diameter-and-radius"/> imply that
+        
+        <md>
+          \diam \of{ \im \of{ \rho } } \leq \diam \of{ \mD_{ \diam \of{ X } } \of{ 0 } } \leq 2 \diam \of{ X } \lt \infty
+        </md>,
+        
+        so that <m> \im \of{ \rho } </m> is bounded.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> \rho </m> is bounded. Then <xref ref="corollary-norm-characterization-of-boundedness"/> implies that <m> \im \of{ \rho } \subseteq \mB_{ r } \of{ 0 } </m> for some positive real number <m> r \gt 0 </m>. This implies that
+        
+        <md>
+          \rho \of{ x , y } = \abs{ \rho \of{ x , y } - 0 } = d \of{ \rho \of{ x , y } , 0 } \lt r
+        </md>
+        
+        for all <m> x , y \in X </m>, so that <m> \diam \of{ X } \leq r \lt \infty </m>; that is, <m> \of{ X , \rho } </m> is bounded.
+      </p>
+    </proof>
+  </lemma>
+  
+  <p>
+    The set of bounded maps to a metric space may inherit some of the structure of the codomain. We will see some examples of this shortly. First, however, a useful observation about the relationship between the boundedness of maps and the boundedness of their codomains.
+  </p>
+  
+  <remark xml:id="remark-maps-to-bounded-metric-spaces">
+    <title>
+      Maps to bounded metric spaces
+    </title>
+    
+    <p>
+      Let <m> \of{ Y , \rho } </m> be a metric space. If <m> Y </m> is bounded, then <xref ref="lemma-monotonicity-of-the-diameter"/> implies that for any set <m> X </m>, any map <m> f \colon X \to Y </m> is bounded; that is, <m> \Bdd \of{ X , Y } = Y^{ X } </m>.
+    </p>
+  </remark>
+  
+  <p>
+    There is a canonical way of constructing a metric on the set of bounded maps to a metric space.
+  </p>
+  
+  <definition xml:id="definition-uniform-metric">
+    <title>
+      Uniform metric
+    </title>
+    
+    <idx>
+      uniform metric
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \rho_{ \infty } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the uniform metric
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> X </m> be a set and <m> \of{ Y , \rho } </m> be a metric space. The <term> uniform metric </term> <m> \rho_{ \infty } </m> on the set <m> \Bdd \of{ X , Y } </m> of bounded maps from <m> X </m> to <m> Y </m> is the map <m> \rho_{ \infty } \colon \Bdd \of{ X , Y } \times \Bdd \of{ X , Y } \to \R </m> defined by the formula
+        
+        <md>
+          \rho_{ \infty } \of{ f , g } =
+            \begin{cases}
+              0 \amp X = \emptyset \\
+              \sup_{ x \in X }{ \rho \of{ f \of{ x } , g \of{ x } } } \amp X \neq \emptyset
+            \end{cases}
+        </md>.
+      </p>
+    </statement>
+  </definition>
+  
+  <proposition xml:id="proposition-uniform-metric">
+    <title>
+      Uniform metric
+    </title>
+    
+    <statement>
+      <p>
+        The uniform metric is a metric.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> X </m> be a set and <m> \of{ Y , \rho } </m> be a metric space. If <m> X = \emptyset </m>, then there is exactly one map from <m> X </m> to <m> Y </m>, and this map is bounded. The uniform metric <m> \rho_{ \infty } </m> is identically zero in this case, and so is a metric on <m> \Bdd \of{ X , Y } </m>.
+      </p>
+      
+      <p>
+        Thus we may suppose that <m> X \neq \emptyset </m> is non-empty. Let <m> f , g \in \Bdd \of{ X , Y } </m> be a bounded map from <m> X </m> to <m> Y </m>, and note that if <m> f = g </m>, then
+        
+        <md>
+          <mrow>
+            \rho_{ \infty } \of{ f , g } \amp = \sup_{ x \in X }{ \rho \of{ f \of{ x } , g \of{ x } } } = \sup_{ x \in X }{ \rho \of{ f \of{ x } , f \of{ x } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \sup_{ x \in X }{ 0 } = 0
+          </mrow>
+        </md>.
+        
+        Conversely, if <m> \rho_{ \infty } \of{ f , g } = 0 </m>, then
+        
+        <md>
+          0 \leq \rho \of{ f \of{ x } , g \of{ x } } \leq \rho_{ \infty } \of{ f , g } = 0
+        </md>
+        
+        for all inputs <m> x \in X </m>, so that <m> \rho \of{ f \of{ x } , g \of{ x } } = 0 </m>. The non-degeneracy of the metric <m> \rho </m> implies that <m> f \of{ x } = g \of{ x } </m> for all inputs <m> x \in X </m>, and so <m> f = g </m>. We conclude that <m> \rho_{ \infty } </m> is non-degenerate.
+      </p>
+      
+      <p>
+        We observe that the symmetry of the metric <m> \rho </m> implies that
+        
+        <md>
+          \rho_{ \infty } \of{ f , g } \amp = \sup_{ x \in X }{ \rho \of{ f \of{ x } , g \of{ x } } } = \sup_{ x \in X }{ \rho \of{ g \of{ x } , f \of{ x } } } = \rho_{ \infty } \of{ g , f }
+        </md>
+        
+        for all bounded maps <m> f , g \in \Bdd \of{ X , Y } </m>, and so <m> \rho_{ \infty } </m> is symmetric.
+      </p>
+      
+      <p>
+        Finally, we observe that the triangle inequality for the metric <m> \rho </m> implies that
+        
+        <md>
+          <mrow>
+            \rho_{ \infty } \of{ f , h } \amp = \sup_{ x \in X }{ \rho \of{ f \of{ x } , h \of{ x } } } \leq \sup_{ x \in X }{ \of{ \rho \of{ f \of{ x } , g \of{ x } } + \rho \of{ g \of{ x } , h \of{ x } } } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \sup_{ x \in X }{ \rho \of{ f \of{ x } , g \of{ x } } } + \sup_{ x \in X }{ \rho \of{ g \of{ x } , h \of{ x } } } = \rho_{ \infty } \of{ f , g } + \rho_{ \infty } \of{ g , h }
+          </mrow>
+        </md>
+        
+        for all bounded maps <m> f , g , h \in \Bdd \of{ X , Y } </m>, and so <m> \rho_{ \infty } </m> is satisfies the triangle inequality.
+      </p>
+      
+      <p>
+        Since <m> \rho_{ \infty } </m> is reflexive, symmetric, and satisfies the triangle inequality, it is a metric on <m> \Bdd \of{ X , Y } </m>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    You will have an opportunity to explore the uniform metric in the setting of normed vector spaces in the problems for this section. In particular, you will see that in this setting, the uniform metric is induced by a norm.
+  </p>
+  
+  <p>
+    The similarity in the names of the uniform norm and uniformly convergent sequences of functions is no coincidence. In fact, it turns out that for bounded maps to a metric space, these two notions coincide.
+  </p>
+  
+  <theorem xml:id="theorem-convergence-in-the-uniform-metric">
+    <title>
+      Convergence in the uniform metric
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of bounded maps <m> f_{ n } \in \Bdd \of{ X , Y } </m> from a set <m> X </m> to a metric space <m> \of{ Y , \rho } </m>. For a bounded map <m> f \in \Bdd \of{ X , Y } </m>, <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges uniformly to <m> f </m> if and only if it converges to <m> f </m> in the uniform metric.
+      </p>
+    </statement>
+  </theorem>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->

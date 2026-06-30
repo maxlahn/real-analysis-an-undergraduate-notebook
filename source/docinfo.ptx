@@ -373,7 +373,7 @@
       
       \DeclareMathOperator{\LC}{ LC } <!-- Lipschitz continuous maps -->
       
-      \DeclareMathOperator{\Bdd}{ Bdd } <!-- Bounded maps -->
+      \DeclareMathOperator{\Bdd}{ B } <!-- Bounded maps -->
       
       \DeclareMathOperator{\BC}{ BC } <!-- Bounded continuous/continuously differentiable maps -->
       
