@@ -7,11 +7,13 @@
 
   <introduction>
     <p>
-      Text before the first subsection.
+      In this section, we present three distinct but related notions of continuity on a metric space. Informally, these forms of continuity are conditions related to the nature of the convergence of a function to its value at a point. We will in this section make this precise, and investigate the structure of continuous maps between metric spaces.
     </p>
   </introduction>
 
-  <!-- <xi:include href="./subsection-TITLE.ptx"/> -->
+  <xi:include href="./subsection-continuous-maps-and-functions.ptx"/>
+
+  <xi:include href="./subsection-stronger-forms-of-metric-continuity.ptx"/>
 
   <conclusion>
     <p>
@@ -19,7 +21,7 @@
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-notions-of-metric-continuity.ptx"/>
+  <xi:include href="./exercises-notions-of-metric-continuity.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-notions-of-metric-continuity.ptx"/>
+  <xi:include href="./problems-notions-of-metric-continuity.ptx"/>
 </section>

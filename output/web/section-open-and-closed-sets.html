@@ -57,14 +57,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.6';
+eBookConfig.runestone_version = '8.1.7';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.53a23d1b65c1dce2.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.4787412a251795e3.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<script src="_static/prefix-runtime.917dfc3cfe0bb764.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.39f982db166f319d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -746,8 +746,10 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-notions-of-metric-continuity.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Notions of Metric Continuity</span></a></div>
 <ul id="ptx-toc-group-section-notions-of-metric-continuity" class="structural toc-item-list">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#exercises-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#reading-questions-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#subsection-continuous-maps-and-functions" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Continuous Maps and Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#subsection-stronger-forms-of-metric-continuity" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Stronger Forms of Metric Continuity</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#exercises-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#problems-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5.4</span> <span class="title">Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -1689,7 +1691,7 @@ x \in \mB_{ r } \of{ x } \subseteq \bigcup_{ V \in \mathcal{ O }_{ U } }{ V }\te
 <article class="lemma theorem-like" id="lemma-monotonicity-of-the-diameter"><h4 class="heading">
 <span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Monotonicity of the diameter.</span>
 </h4>
-<div class="para" id="lemma-monotonicity-of-the-diameter-2-1">Let <span class="process-math">\(U , V \subseteq X \)</span> be subsets of a metric space <span class="process-math">\(\of{ X , \rho } \text{.}\)</span> If <span class="process-math">\(S \subseteq T \text{,}\)</span> then <span class="process-math">\(\diam \of{ S } \subseteq \diam \of{ T } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-monotonicity-of-the-diameter-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="lemma-monotonicity-of-the-diameter-2-1">Let <span class="process-math">\(S , T \subseteq X \)</span> be subsets of a metric space <span class="process-math">\(\of{ X , \rho } \text{.}\)</span> If <span class="process-math">\(S \subseteq T \text{,}\)</span> then <span class="process-math">\(\diam \of{ S } \leq \diam \of{ T } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-monotonicity-of-the-diameter-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Lemma 3.4.15: Monotonicity of the diameter"><a tabindex="-1" href="#lemma-monotonicity-of-the-diameter" title="Copy heading and permalink for Lemma 3.4.15: Monotonicity of the diameter" aria-label="Copy heading and permalink for Lemma 3.4.15: Monotonicity of the diameter">🔗</a></div>
 </article>
@@ -1712,7 +1714,7 @@ x \in \mB_{ r } \of{ x } \subseteq \bigcup_{ V \in \mathcal{ O }_{ U } }{ V }\te
 <div class="displaymath process-math" id="lemma-monotonicity-of-the-diameter-3-1-9">
 \begin{align*}
 \diam \of{ S } \amp = \sup \of{ \setmid{ \rho \of{ x , y } \in \R }{ x , y \in S } }\\
-\amp = \sup \of{ \setmid{ \rho \of{ x , y } \in \R }{ x , y \in T } } = \diam \of{ T }
+\amp \leq \sup \of{ \setmid{ \rho \of{ x , y } \in \R }{ x , y \in T } } = \diam \of{ T }
 \end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-monotonicity-of-the-diameter-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -2122,7 +2124,7 @@ d \of{ \rho \of{ x , y } , 0 } = \abs{ \rho \of{ x , y } - 0 } = \abs{ \rho \of{
 <div class="para">We observe that the symmetry of the metric <span class="process-math">\(\rho \)</span> implies that</div>
 <div class="displaymath process-math" id="proposition-uniform-metric-3-3-2">
 \begin{equation*}
-\rho_{ \infty } \of{ f , g } \amp = \sup_{ x \in X }{ \rho \of{ f \of{ x } , g \of{ x } } } = \sup_{ x \in X }{ \rho \of{ g \of{ x } , f \of{ x } } } = \rho_{ \infty } \of{ g , f }
+\rho_{ \infty } \of{ f , g } = \sup_{ x \in X }{ \rho \of{ f \of{ x } , g \of{ x } } } = \sup_{ x \in X }{ \rho \of{ g \of{ x } , f \of{ x } } } = \rho_{ \infty } \of{ g , f }
 \end{equation*}
 </div>
 <div class="para">for all bounded maps <span class="process-math">\(f , g \in \Bdd \of{ X , Y } \text{,}\)</span> and so <span class="process-math">\(\rho_{ \infty } \)</span> is symmetric.</div>

@@ -114,7 +114,7 @@
     
     <statement>
       <p>
-        Let <m> U , V \subseteq X </m> be subsets of a metric space <m> \of{ X , \rho } </m>. If <m> S \subseteq T </m>, then <m> \diam \of{ S } \subseteq \diam \of{ T } </m>.
+        Let <m> S , T \subseteq X </m> be subsets of a metric space <m> \of{ X , \rho } </m>. If <m> S \subseteq T </m>, then <m> \diam \of{ S } \leq \diam \of{ T } </m>.
       </p>
     </statement>
     
@@ -140,7 +140,7 @@
           </mrow>
           
           <mrow>
-            \amp = \sup \of{ \setmid{ \rho \of{ x , y } \in \R }{ x , y \in T } } = \diam \of{ T }
+            \amp \leq \sup \of{ \setmid{ \rho \of{ x , y } \in \R }{ x , y \in T } } = \diam \of{ T }
           </mrow>.
         </md>
       </p>

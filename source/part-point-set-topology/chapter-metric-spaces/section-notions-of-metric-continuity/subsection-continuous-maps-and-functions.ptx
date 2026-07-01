@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-continuous-maps-and-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Continuous Maps and Functions
+  </title>
+
+  <introduction>
+    <p>
+      In calculus, you may have learned that a function of the real numbers is continuous if the function commutes with limits, if limits of the function agree with the values of the function. We will see that this is also the case for maps of metric spaces. More precisely, map of metric spaces is <term> continuous </term> at a point in its domain if its values can be made arbitrarily close to the image of that point just by choosing points close to that point.
+    </p>
+  </introduction>
+  
+  <proposition xml:id="proposition-characterizations-of-metric-continuity">
+    <title>
+      Characterizations of metric continuity
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> be a map from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m>. For a point <m> c \in X </m>, the following are equivalent:
+        
+        <ol>
+          <li>
+            <title>
+              Convergence characterization of continuity
+            </title>
+            
+            <p>
+              The map <m> f </m> converges at <m> c </m> to <m> f \of{ c } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              <m> \epsilon </m>-<m> \delta </m> characterization of continuity
+            </title>
+            
+            <p>
+              For all positive real numbers <m> \epsilon \gt 0 </m>, there is a positive real number <m> \delta \gt 0 </m> so that for all points <m> x \in X </m>, if <m> \rho_{ X } \of{ x , c } \lt \delta </m>, then <m> \rho_{ Y } \of{ f \of{ x } , f \of{ c } } \lt \epsilon </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Neighborhood characterization of continuity
+            </title>
+            
+            <p>
+              The pre-image <m> f^{ -1 } \of{ N } </m> of any neighborhood <m> N </m> of <m> f \of{ c } </m> in <m> Y </m> is a neighborhood of <m> c </m> in <m> X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Sequential characterization of continuity
+            </title>
+            
+            <p>
+              For every sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> x_{ n } \in X </m>, if
+              
+              <md>
+                \lim_{ n \to \infty }{ x_{ n } } = c
+              </md>,
+              
+              then
+              
+              <md>
+                \lim_{ n \to \infty }{ f \of{ x_{ n } } } = f \of{ c }
+              </md>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        First suppose that <m> f </m> converges at <m> c </m> to <m> f \of{ c } </m>, and let <m> \epsilon \gt 0 </m>. Then there exists a positive real number <m> \delta \gt 0 </m> so that for all points <m> x \in X </m>, if <m> 0 \lt \rho_{ X } \of{ x , c } \lt \delta </m>, then <m> \rho_{ Y } \of{ f \of{ x } , f \of{ c } } \lt \epsilon </m>. We note that if <m> \rho_{ X } \of{ x , c } = 0 </m>, then the non-degeneracy of <m> \rho_{ X } </m> implies that <m> x = c </m>. In this case, <m> f \of{ x } = f \of{ c } </m>, and so <m> \rho_{ Y } \of{ f \of{ x } , f \of{ c } } = 0 </m>.
+      </p>
+      
+      <p>
+        Now suppose that for all positive real numbers <m> \epsilon \gt 0 </m>, there is a positive real number <m> \delta \gt 0 </m> so that for all points <m> x \in X </m>, if <m> \rho_{ X } \of{ x , c } \lt \delta </m>, then <m> \rho_{ Y } \of{ f \of{ x } , f \of{ c } } \lt \epsilon </m>, and let <m> N \subseteq Y </m> be a neighborhood of <m> f \of{ c } </m> in <m> Y </m>. Then <m> \mB_{ \epsilon } \of{ f \of{ c } } \subseteq N </m> for some positive real number <m> \epsilon \gt 0 </m>.
+      </p>
+      
+      <p>
+        Since <m> \epsilon \gt 0 </m> is positive, there is a positive real number <m> \delta \gt 0 </m> so that for all points <m> x \in X </m>, if <m> \rho_{ X } \of{ x , c } \lt \delta </m>, then <m> \rho_{ Y } \of{ f \of{ x } , f \of{ c } } \lt \epsilon </m>. In particular,
+        
+        <md>
+          f \of{ \mB_{ \delta } \of{ c } } \subseteq \mB_{ \epsilon } \of{ f \of{ c } } \subseteq N
+        </md>,
+        
+        and so <m> \mB_{ \delta } \of{ c } \subseteq f^{ -1 } \of{ N } </m>; that is, <m> f^{ -1 } \of{ N } </m> is a neighborhood of <m> c </m> in <m> X </m>.
+      </p>
+      
+      <p>
+        Now suppose that the pre-image <m> f^{ -1 } \of{ N } </m> of any neighborhood <m> N </m> of <m> f \of{ c } </m> in <m> Y </m> is a neighborhood of <m> c </m> in <m> X </m>, and let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of points <m> x_{ n } \in X </m> so that
+        
+        <md>
+          \lim_{ n \to \infty }{ x_{ n } } = c
+        </md>.
+        
+        Let <m> \epsilon \gt 0 </m> be a positive real number. Then <m> \mB_{ \epsilon } \of{ f \of{ c } } </m> is a neighborhood of <m> f \of{ c } </m> in <m> Y </m>, and so <m> f^{ -1 } \of{ \mB_{ \epsilon } \of{ f \of{ c } } } </m> is a neighborhood of <m> c </m> in <m> X </m>. Thus
+        
+        <md>
+          \mB_{ \delta } \of{ c } \subseteq f^{ -1 } \of{ \mB_{ \epsilon } \of{ f \of{ c } } }
+        </md>
+        
+        for some positive real number <m> \delta \gt 0 </m>. Since <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> c </m>, there is some natural number <m> n_{ \epsilon } \in \N </m> so that <m> \rho_{ X } \of{ x_{ n } , c } \lt \delta </m> for all indices <m> n \geq n_{ \epsilon } </m>. This implies that
+        
+        <md>
+          f \of{ x_{ n } } \in f \of{ \mB_{ \delta } \of{ c } } \subseteq \mB_{ \epsilon } \of{ f \of{ c } }
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>, and so <m> \rho_{ Y } \of{ f \of{ x_{ n } } , f \of{ c } } \lt \epsilon </m> for all such indices. We conclude that
+        
+        <md>
+          \lim_{ n \to \infty }{ f \of{ x_{ n } } } = f \of{ c }
+        </md>.
+      </p>
+      
+      <p>
+        Finally, suppose that for every sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> x_{ n } \in X </m>, if
+        
+        <md>
+          \lim_{ n \to \infty }{ x_{ n } } = c
+        </md>,
+        
+        then
+        
+        <md>
+          \lim_{ n \to \infty }{ f \of{ x_{ n } } } = f \of{ c }
+        </md>.
+        
+        Then <xref ref="theorem-sequential-characterization-of-map-convergence"/> implies that <m> f </m> converges at <m> c </m> to <m> f \of{ c } </m>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <definition xml:id="definition-continuity">
+    <title>
+      Continuity
+    </title>
+    
+    <idx>
+      continuity
+    </idx>
+    
+    <idx>
+      discontinuity
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \CDiff \of{ X , Y } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the space of continuous maps from <m> X </m> to <m> Y </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \CDiff \of{ X } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the space of continuous real-valued functions on <m> X </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> be a map from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m>.
+        
+        <ul>
+          <li>
+            <title>
+              Continuity
+            </title>
+            
+            <p>
+              <m> f </m> is <term> continuous </term> at a point <m> c \in X </m> if it satisfies any (and therefore all) of the conditions in <xref ref="proposition-characterizations-of-metric-continuity"/>. <m> f </m> is <term> continuous </term> if it is continuous at every point <m> c \in X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Discontinuity
+            </title>
+            
+            <p>
+              <m> f </m> is <term> discontinuous </term> at a point <m> c \in X </m> if it does not satisfies any of the conditions in <xref ref="proposition-characterizations-of-metric-continuity"/>. <m> f </m> is <term> discontinuous </term> if it is discontinuous at some point <m> c \in X </m>.
+            </p>
+          </li>
+        </ul>
+        
+        The set of continuous maps from <m> X </m> to <m> Y </m> is denoted <m> \CDiff \of{ X , Y } </m>. In the special case <m> \of{ Y , \rho_{ Y } } = \of{ \R , d } </m>, the set of continuous, real-valued functions on a metric space <m> \of{ X , \rho_{ X } } </m> is denoted <m> \CDiff \of{ X } = \CDiff \of{ X , \R } </m>.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="example-continuity">
+    <title>
+      Continuity
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of continuous and discontinuous maps.
+        
+        <ul>
+          <li>
+            <p>
+              Any constant map between metric spaces is continuous.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The identity map <m> \id_{ X } \colon X \to X </m> on a metric space <m> \of{ X , \rho } </m> is continuous. More generally, the inclusion map <m> \iota \colon U \to X </m> of a metric subspace <m> U \subseteq X </m> is continuous.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Any map <m> f \colon X \to Y </m> from a discrete metric space <m> \of{ X , \delta_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m> is continuous.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Let <m> f \colon \R \setminus \set{ 0 } \to \R </m> be the real-valued function defined by the formula
+              
+              <md>
+                f \of{ x } = \frac{ 1 }{ x }
+              </md>.
+              
+              Then <m> f </m> is continuous. In particular, we note that <m> f </m> is neither continuous nor discontinuous at <m> 0 </m>, since <m> 0 </m> is not in the domain of <m> f </m>.
+            </p>
+            
+            <p>
+              You may have been taught that <m> f </m> has a discontinuity at the point <m> 0 </m>, but we will require more specific language. We can describe the behavior of <m> f </m> near <m> 0 </m> by saying that <m> f </m> does not have a continuous extension to <m> \R </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    A map of metric spaces is continuous at a point if and only if the outputs of the map can be made close to the image of that point solely by choosing inputs close to the point. Perhaps unsurprising in light of <xref ref="theorem-sequential-characterization-of-map-convergence"/> is the fact that continuity is totally determined by the behavior of the map on convergent sequences.In fact, unlike the more general spaces we will investigate in <xref ref="chapter-topological-spaces"/>, the answers to all point-set topological questions about metric spaces are captured by the behavior of sequences. Perhaps more surprising is the following characterization of continuity in terms of open sets.
+  </p>
+
+  <corollary xml:id="corollary-open-set-characterization-of-metric-continuity">
+    <title>
+      Open set characterization of metric continuity
+    </title>
+    
+    <statement>
+      <p>
+        A map <m> f \colon X \to Y </m> from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m> is continuous if and only if the pre-image of any open subset of <m> Y </m> is an open subset of <m> X </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Suppose first that <m> f </m> is continuous, and let <m> V \subseteq Y </m> be an open subset of <m> Y </m>. Let <m> c \in f^{ -1 } \of{ V } </m>. Since <m> V </m> is open, it is a neighborhood of <m> f \of{ c } </m>, and so the neighborhood characterization of continuity in <xref ref="proposition-characterizations-of-metric-continuity"/> implies that <m> f^{ -1 } \of{ V } </m> is a neighborhood of <m> c </m>. Since this is true of every point <m> c \in f^{ -1 } \of{ V } </m>, <m> f^{ -1 } \of{ V } </m> is open in <m> X </m>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that the pre-image of every open subset of <m> Y </m> is an open subset of <m> X </m>, and consider a point <m> c \in X </m> and a neighborhood <m> N \subseteq Y </m> of <m> f \of{ c } </m> in <m> Y </m>. Then <m> \mB_{ r } \of{ f \of{ c } } \subseteq N </m> for some positive real number <m> r \gt 0 </m>. Since <m> \mB_{ r } \of{ c } </m> is open in <m> Y </m>, <m> f^{ -1 } \of{ \mB_{ r } \of{ f \of{ c } } } </m> is open in <m> X </m> and is therefore a neighborhood of each of its points.
+      </p>
+      
+      <p>
+        In particular, <m> f \of{ c } \in \mB_{ r } \of{ f \of{ c } } </m>, and so <m> c \in f^{ -1 } \of{ \mB_{ r } \of{ f \of{ c } } } </m>. We conclude that <m> f^{ -1 } \of{ \mB_{ r } \of{ f \of{ c } } } </m> is a neighborhood of <m> c </m>. The neighborhood characterization of continuity in <xref ref="proposition-characterizations-of-metric-continuity"/> now implies that <m> f </m> is continuous at <m> c </m>. Since this holds for all points <m> c \in X </m>, <m> f </m> is continuous.
+      </p>
+    </proof>
+  </corollary>
+  
+  <p>
+    In general, proving that a given map between metric spaces is continuous can be annoyingly difficult. For example, if you want to use the <m> \epsilon </m>-<m> \delta </m> characterization of continuity, then finding a correct positive real number <m> \delta > 0 </m> for each positive real number <m> \epsilon > 0 </m> is not necessarily an easy task. The following results allow us to decompose such a problem into smaller parts, which may be much easier to solve than taking on the entire problem at once.
+  </p>
+  
+  <proposition xml:id="proposition-composition-of-continuous-maps">
+    <title>
+      Composition of continuous maps
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> and <m> g \colon Y \to Z </m> be maps between metric spaces <m> \of{ X , \rho_{ X } } </m>, <m> \of{ Y , \rho_{ Y } } </m>, and <m> \of{ Z , \rho_{ Z } } </m>. If <m> f </m> is continuous at a point <m> c \in X </m> and <m> g </m> is continuous at <m> f \of{ c } </m>, then the composition <m> g \circ f \colon X \to Z </m> is continuous at <m> c </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of points <m> x_{ n } \in X </m>, and suppose that
+        
+        <md>
+          \lim_{ n \to \infty }{ x_{ n } } = c
+        </md>.
+        
+        Since <m> f </m> is continuous at <m> c </m>,
+        
+        <md>
+          \lim_{ n \to \infty }{ f \of{ x_{ n } } } = f \of{ c }
+        </md>.
+        
+        Since <m> g </m> is continuous at <m> f \of{ c } </m>,
+        
+        <md>
+          \lim_{ n \to \infty }{ \of{ g \circ f } \of{ x_{ n } } } = \lim_{ n \to \infty }{ g \of{ f \of{ x_{ n } } } } = g \of{ f \of{ c } } = \of{ g \circ f } \of{ c }
+        </md>.
+        
+        Thus <m> g \circ f </m> is continuous at <m> c </m>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <proposition xml:id="proposition-vector-arithmetic-of-continuous-maps">
+    <title>
+      Vector arithmetic of continuous maps
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ X , \rho } </m> be a metric space and <m> \of{ V , \norm{ \oparg } } </m> be a normed vector space.
+        
+        <ol>
+          <li>
+            <title>
+              Vector addition
+            </title>
+            
+            <p>
+              Let <m> f , g \colon X \to V </m> be maps from <m> X </m> to <m> V </m>. If <m> f </m> and <m> g </m> are continuous at a point <m> c \in X </m>, then their pointwise sum <m> f + g </m> is continuous at <m> c </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Scalar multiplication
+            </title>
+            
+            <p>
+              Let <m> \alpha </m> be a scalar and <m> f \colon X \to V </m> be a map from <m> X </m> to <m> V </m>. If <m> f </m> is continuous at a point <m> c \in X </m>, then the scalar multiplication <m> \alpha f </m> is continuous at <m> c </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Norm
+            </title>
+            
+            <p>
+              Let <m> f \colon X \to V </m> be a map from <m> X </m> to <m> V </m>. If <m> f </m> is continuous at a point <m> c \in X </m>, then the norm <m> \norm{ f } = \norm{ \oparg } \circ f </m> is continuous at <m> c </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Inner product
+            </title>
+            
+            <p>
+              Let <m> f , g \colon X \to V </m> be maps from <m> X </m> to <m> V </m>. If the norm <m> \norm{ \oparg } </m> on <m> V </m> is induced by an inner product <m> \inner{ \oparg }{ \oparg } </m> and <m> f </m> and <m> g </m> are continuous at a point <m> c </m>, then the pointwise inner product <m> \inner{ f }{ g } </m> is continuous at <m> c </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            Let <m> \epsilon \gt 0 </m> be a positive real number. Since <m> f </m> is continuous at <m> c </m>, there is a positive real number <m> \delta_{ f } \gt 0 </m> so that for all points <m> x \in X </m>, if <m> \rho_{ X } \of{ x , c } \lt \delta_{ f } </m>, then <m> \norm{ f \of{ x } - f \of{ c } } \lt \frac{ \epsilon }{ 2 } </m>. Similarly, since <m> g </m> is continuous at <m> c </m>, there is a positive real number <m> \delta_{ g } \gt 0 </m> so that for all points <m> x \in X </m>, if <m> \rho_{ X } \of{ x , c } \lt \delta_{ g } </m>, then <m> \norm{ g \of{ x } - g \of{ c } } \lt \frac{ \epsilon }{ 2 } </m>.
+          </p>
+          
+          <p>
+            Let <m> \delta = \min \of{ \set{ \delta_{ f } , \delta_{ g } } } \gt 0 </m>, and note that for all points <m> x \in X </m>, if <m> \rho_{ X } \of{ x , c } \lt \delta </m>, then
+            
+            <md>
+              <mrow>
+                \norm{ \of{ f + g } \of{ x } - \of{ f + g } \of{ c } } \amp = \norm{ f \of{ x } + g \of{ x } - f \of{ c } - g \of{ c } }
+              </mrow>
+              
+              <mrow>
+                \amp \leq \norm{ f \of{ x } - f \of{ c } } + \norm{ g \of{ x } - g \of{ c } }
+              </mrow>
+              
+              <mrow>
+                \amp \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+              </mrow>
+            </md>.
+            
+            We conclude that <m> f + g </m> is continuous at <m> c </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of points <m> x_{ n } \in X </m>, and suppose that
+            
+            <md>
+              \lim_{ n \to \infty }{ x_{ n } } = c
+            </md>.
+            
+            Since <m> f </m> is continuous at <m> c </m>, we observe that
+            
+            <md>
+              <mrow>
+                \lim_{ n \to \infty }{ \of{ \alpha f } \of{ x_{ n } } } \amp = \lim_{ n \to \infty }{ \alpha f \of{ x_{ n } } } = \alpha \lim_{ n \to \infty }{ f \of{ x_{ n } } }
+              </mrow>
+              
+              <mrow>
+                \amp = \alpha f \of{ c } = \of{ \alpha f } \of{ c }
+              </mrow>
+            </md>,
+            
+            and so <m> \alpha f </m> is continuous at <m> c </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            By <xref ref="proposition-composition-of-continuous-maps"/>, it suffices to show that <m> \norm{ \oparg } \colon V \to \R </m> is a continuous real-valued function on <m> V </m>. This follows directly from (3) of <xref ref="proposition-limits-and-vector-arithmetic"/>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of points <m> x_{ n } \in X </m>, and suppose that
+            
+            <md>
+              \lim_{ n \to \infty }{ x_{ n } } = c
+            </md>.
+            
+            Since <m> f </m> and <m> g </m> are continuous at <m> c </m>, we observe that
+            
+            <md>
+              <mrow>
+                \lim_{ n \to \infty }{ \inner{ f }{ g } \of{ x_{ n } } } \amp = \lim_{ n \to \infty }{ \inner{ f \of{ x_{ n } } }{ g \of{ x_{ n } } } } = \inner{ \lim_{ n \to \infty }{ f \of{ x_{ n } } } }{ \lim_{ n \to \infty }{ g \of{ x_{ n } } } }
+              </mrow>
+              
+              <mrow>
+                \amp = \inner{ f \of{ c } }{ g \of{ c } } = \inner{ f }{ g } \of{ c }
+              </mrow>
+            </md>,
+            
+            and so <m> \inner{ f }{ g } </m> is continuous at <m> c </m>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </proposition>
+  
+  <corollary xml:id="corollary-arithmetic-of-continuous-functions">
+    <title>
+      Arithmetic of continuous functions
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f , g \colon X \to \R </m> be real-valued functions on a metric space <m> \of{ X , \rho } </m>. If <m> f </m> and <m> g </m> are continuous at a point <m> c \in X </m>, then <m> f + g </m>, <m> f - g </m>, and <m> f g </m> are continuous at <m> c </m>.
+      </p>
+      
+      <p>
+        Moreover, if <m> f </m> and <m> g </m> are continuous at at point <m> c \in X </m> and <m> g \of{ x } \neq 0 </m> for all points <m> x \in X </m>, then <m> \frac{ f }{ g } </m> is continuous at <m> c </m>.
+      </p>
+    </statement>
+  </corollary>
+  
+  <p>
+    Having introduced the notion of continuity for maps between metric spaces, one natural question is to describe the relationship between continuity and the limiting behavior of sequences of maps. At first glance, it may seem plausible that the limit of a sequence of continuous functions which converges pointwise must also be continuous. This, however, is not the case.
+  </p>
+
+  <example xml:id="example-discontinuous-limits-of-sequences-of-continuous-functions">
+    <title>
+      Discontinuous limits of sequences of continuous functions
+    </title>
+    
+    <statement>
+      <p>
+        Consider the sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> of continuous real-valued functions <m> f_{ n } \colon \clint{ 0 }{ 1 } \to \R </m> defined by the formulae
+        
+        <md>
+          f_{ n } \of{ x } = x^{ n }
+        </md>.
+        
+        We recall that <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges pointwise to the function <m> f \colon \clint{ 0 }{ 1 } \to \R </m> defined piecewise by the formula
+        
+        <md>
+          f \of{ x } =1
+            \begin{cases}
+              0 \amp 0 \leq x \lt 1 \\
+              1 \amp x = 1
+            \end{cases}
+        </md>.
+        
+        Even though each function <m> f_{ n } </m> is continuous, the pointwise limit <m> f </m> is not continuous at <m> 1 </m>.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    So the pointwise limit of a sequence of continuous maps between metric spaces need not be continuous. However, if such a sequence of continuous maps converges uniformly, then the limit is a continuous map.
+  </p>
+  
+  <theorem xml:id="theorem-uniform-limits-of-continuous-maps">
+    <title>
+      Uniform limits of continuous maps
+    </title>
+    
+    <statement>
+      <p>
+        The limit of a uniformly convergent sequence of continuous maps between metric spaces is continuous.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of continuous maps <m> f_{ n } \colon X \to Y </m> from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m>, and suppose that <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges uniformly to a map <m> f \colon X \to Y </m>.
+      </p>
+      
+      <p>
+        Fix a point <m> c \in X </m>, and let <m> \epsilon \gt 0 </m>. Since <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges uniformly to <m> f </m>, there is a natural number <m> n_{ \epsilon } \in \N </m> so that
+        
+        <md>
+          \rho_{ Y } \of{ f_{ n } \of{ x } , f \of{ x } } \lt \frac{ \epsilon }{ 3 }
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m> and points <m> x \in X </m>. Fix one such index <m> n \geq n_{ \epsilon } </m>. Since <m> f_{ n } </m> is continuous, there is a positive real number <m> \delta \gt 0 </m> so that
+        
+        <md>
+          \rho_{ Y } \of{ f_{ n } \of{ x } , f_{ n } \of{ c } } \lt \frac{ \epsilon }{ 3 }
+        </md>
+        
+        for all points <m> x \in X </m> so that <m> \rho_{ X } \of{ x , c } \lt \delta </m>. We observe that
+        
+        <md>
+          <mrow>
+            \rho_{ Y } \of{ f \of{ x } , f \of{ c } } \amp \leq \rho_{ Y } \of{ f \of{ x } , f_{ n } \of{ x } } + \rho_{ Y } \of{ f_{ n } \of{ c } , f_{ n } \of{ c } } + \rho_{ Y } \of{ f_{ n } \of{ c } , f \of{ c } }
+          </mrow>
+          
+          <mrow>
+            \amp \lt \frac{ \epsilon }{ 3 } + \frac{ \epsilon }{ 3 } + \frac{ \epsilon }{ 3 } = \epsilon
+          </mrow>
+        </md>
+        
+        for all points <m> x \in X </m> so that <m> \rho_{ X } \of{ x , c } \lt \delta </m>, and so <m> f </m> is continuous at <m> c </m>. Since this holds for all points <m> c \in X </m>, we conclude that <m> f </m> is continuous.
+      </p>
+    </proof>
+  </theorem>
+
+  <conclusion>
+    <p>
+      So, while the pointwise limit of a sequence of continuous maps between metric spaces need not in general be continuous, any such sequence which converges uniformly must converge to a continuous limit. Uniformity, or the relative independence of the <q> size </q> of neighborhoods of points in a space from position, is a useful property which will allow us to reconcile complex limiting behavior where several limits interact. We now turn to a strengthening of the notion of continuity based on this idea of uniformity.
+    </p>
+  </conclusion>
+</subsection>

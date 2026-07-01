@@ -257,7 +257,7 @@
         We observe that the symmetry of the metric <m> \rho </m> implies that
         
         <md>
-          \rho_{ \infty } \of{ f , g } \amp = \sup_{ x \in X }{ \rho \of{ f \of{ x } , g \of{ x } } } = \sup_{ x \in X }{ \rho \of{ g \of{ x } , f \of{ x } } } = \rho_{ \infty } \of{ g , f }
+          \rho_{ \infty } \of{ f , g } = \sup_{ x \in X }{ \rho \of{ f \of{ x } , g \of{ x } } } = \sup_{ x \in X }{ \rho \of{ g \of{ x } , f \of{ x } } } = \rho_{ \infty } \of{ g , f }
         </md>
         
         for all bounded maps <m> f , g \in \Bdd \of{ X , Y } </m>, and so <m> \rho_{ \infty } </m> is symmetric.

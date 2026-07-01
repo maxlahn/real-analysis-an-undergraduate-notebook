@@ -57,14 +57,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.6';
+eBookConfig.runestone_version = '8.1.7';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.53a23d1b65c1dce2.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.4787412a251795e3.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<script src="_static/prefix-runtime.917dfc3cfe0bb764.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.39f982db166f319d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -746,8 +746,10 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="section-notions-of-metric-continuity.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Notions of Metric Continuity</span></a></div>
 <ul class="structural toc-item-list active" id="ptx-toc-group-section-notions-of-metric-continuity">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#exercises-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#reading-questions-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#subsection-continuous-maps-and-functions" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Continuous Maps and Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#subsection-stronger-forms-of-metric-continuity" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Stronger Forms of Metric Continuity</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#exercises-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#problems-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5.4</span> <span class="title">Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -921,32 +923,475 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Notions of Metric Continuity</span>
 </h2>
 <section class="introduction" id="section-notions-of-metric-continuity-2">
-<div class="para" id="section-notions-of-metric-continuity-2-1">Text before the first subsection.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-notions-of-metric-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="section-notions-of-metric-continuity-2-1">In this section, we present three distinct but related notions of continuity on a metric space. Informally, these forms of continuity are conditions related to the nature of the convergence of a function to its value at a point. We will in this section make this precise, and investigate the structure of continuous maps between metric spaces.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-notions-of-metric-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="section-notions-of-metric-continuity-3">
-<div class="para" id="section-notions-of-metric-continuity-3-1">Text after the last subsection.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-notions-of-metric-continuity-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="subsection" id="subsection-continuous-maps-and-functions">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Continuous Maps and Functions</span>
+</h3>
+<section class="introduction" id="subsection-continuous-maps-and-functions-2">
+<div class="para" id="subsection-continuous-maps-and-functions-2-1">In calculus, you may have learned that a function of the real numbers is continuous if the function commutes with limits, if limits of the function agree with the values of the function. We will see that this is also the case for maps of metric spaces. More precisely, map of metric spaces is <dfn class="terminology">continuous</dfn> at a point in its domain if its values can be made arbitrarily close to the image of that point just by choosing points close to that point.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-continuous-maps-and-functions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="proposition theorem-like" id="proposition-characterizations-of-metric-continuity"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Characterizations of metric continuity.</span>
+</h4>
+<div class="para logical" id="proposition-characterizations-of-metric-continuity-2-1">
+<div class="para">Let <span class="process-math">\(f \colon X \to Y \)</span> be a map from a metric space <span class="process-math">\(\of{ X , \rho_{ X } } \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho_{ Y } } \text{.}\)</span> For a point <span class="process-math">\(c \in X \text{,}\)</span> the following are equivalent:</div>
+<ol class="decimal" id="proposition-characterizations-of-metric-continuity-2-1-5">
+<li id="proposition-characterizations-of-metric-continuity-2-1-5-1">
+<span class="heading li--heading"><span class="title li--heading-title">Convergence characterization of continuity.</span></span>
+<div class="para" id="proposition-characterizations-of-metric-continuity-2-1-5-1-2">The map <span class="process-math">\(f \)</span> converges at <span class="process-math">\(c \)</span> to <span class="process-math">\(f \of{ c } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-characterizations-of-metric-continuity-2-1-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1: Convergence characterization of continuity"><a tabindex="-1" href="#proposition-characterizations-of-metric-continuity-2-1-5-1" title="Copy heading and permalink for Item 1: Convergence characterization of continuity" aria-label="Copy heading and permalink for Item 1: Convergence characterization of continuity">🔗</a></div>
+</li>
+<li id="proposition-characterizations-of-metric-continuity-2-1-5-2">
+<span class="heading li--heading"><span class="title li--heading-title"><span class="process-math">\(\epsilon \)</span>-<span class="process-math">\(\delta \)</span> characterization of continuity.</span></span>
+<div class="para" id="proposition-characterizations-of-metric-continuity-2-1-5-2-2">For all positive real numbers <span class="process-math">\(\epsilon \gt 0 \text{,}\)</span> there is a positive real number <span class="process-math">\(\delta \gt 0 \)</span> so that for all points <span class="process-math">\(x \in X \text{,}\)</span> if <span class="process-math">\(\rho_{ X } \of{ x , c } \lt \delta \text{,}\)</span> then <span class="process-math">\(\rho_{ Y } \of{ f \of{ x } , f \of{ c } } \lt \epsilon \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-characterizations-of-metric-continuity-2-1-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2:  \epsilon - \delta  characterization of continuity"><a tabindex="-1" href="#proposition-characterizations-of-metric-continuity-2-1-5-2" title="Copy heading and permalink for Item 2:  \epsilon - \delta  characterization of continuity" aria-label="Copy heading and permalink for Item 2:  \epsilon - \delta  characterization of continuity">🔗</a></div>
+</li>
+<li id="proposition-characterizations-of-metric-continuity-2-1-5-3">
+<span class="heading li--heading"><span class="title li--heading-title">Neighborhood characterization of continuity.</span></span>
+<div class="para" id="proposition-characterizations-of-metric-continuity-2-1-5-3-2">The pre-image <span class="process-math">\(f^{ -1 } \of{ N } \)</span> of any neighborhood <span class="process-math">\(N \)</span> of <span class="process-math">\(f \of{ c } \)</span> in <span class="process-math">\(Y \)</span> is a neighborhood of <span class="process-math">\(c \)</span> in <span class="process-math">\(X \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-characterizations-of-metric-continuity-2-1-5-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3: Neighborhood characterization of continuity"><a tabindex="-1" href="#proposition-characterizations-of-metric-continuity-2-1-5-3" title="Copy heading and permalink for Item 3: Neighborhood characterization of continuity" aria-label="Copy heading and permalink for Item 3: Neighborhood characterization of continuity">🔗</a></div>
+</li>
+<li id="proposition-characterizations-of-metric-continuity-2-1-5-4">
+<span class="heading li--heading"><span class="title li--heading-title">Sequential characterization of continuity.</span></span>
+<div class="para logical" id="proposition-characterizations-of-metric-continuity-2-1-5-4-2">
+<div class="para">For every sequence <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> of points <span class="process-math">\(x_{ n } \in X \text{,}\)</span> if</div>
+<div class="displaymath process-math" id="proposition-characterizations-of-metric-continuity-2-1-5-4-2-3">
+\begin{equation*}
+\lim_{ n \to \infty }{ x_{ n } } = c\text{,}
+\end{equation*}
+</div>
+<div class="para">then</div>
+<div class="displaymath process-math" id="proposition-characterizations-of-metric-continuity-2-1-5-4-2-4">
+\begin{equation*}
+\lim_{ n \to \infty }{ f \of{ x_{ n } } } = f \of{ c }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-characterizations-of-metric-continuity-2-1-5-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4: Sequential characterization of continuity"><a tabindex="-1" href="#proposition-characterizations-of-metric-continuity-2-1-5-4" title="Copy heading and permalink for Item 4: Sequential characterization of continuity" aria-label="Copy heading and permalink for Item 4: Sequential characterization of continuity">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-characterizations-of-metric-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 3.5.1: Characterizations of metric continuity"><a tabindex="-1" href="#proposition-characterizations-of-metric-continuity" title="Copy heading and permalink for Proposition 3.5.1: Characterizations of metric continuity" aria-label="Copy heading and permalink for Proposition 3.5.1: Characterizations of metric continuity">🔗</a></div>
+</article>
+<details id="proposition-characterizations-of-metric-continuity-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="proposition-characterizations-of-metric-continuity-3-1">First suppose that <span class="process-math">\(f \)</span> converges at <span class="process-math">\(c \)</span> to <span class="process-math">\(f \of{ c } \text{,}\)</span> and let <span class="process-math">\(\epsilon \gt 0 \text{.}\)</span> Then there exists a positive real number <span class="process-math">\(\delta \gt 0 \)</span> so that for all points <span class="process-math">\(x \in X \text{,}\)</span> if <span class="process-math">\(0 \lt \rho_{ X } \of{ x , c } \lt \delta \text{,}\)</span> then <span class="process-math">\(\rho_{ Y } \of{ f \of{ x } , f \of{ c } } \lt \epsilon \text{.}\)</span> We note that if <span class="process-math">\(\rho_{ X } \of{ x , c } = 0 \text{,}\)</span> then the non-degeneracy of <span class="process-math">\(\rho_{ X } \)</span> implies that <span class="process-math">\(x = c \text{.}\)</span> In this case, <span class="process-math">\(f \of{ x } = f \of{ c } \text{,}\)</span> and so <span class="process-math">\(\rho_{ Y } \of{ f \of{ x } , f \of{ c } } = 0 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-characterizations-of-metric-continuity-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="proposition-characterizations-of-metric-continuity-3-2">Now suppose that for all positive real numbers <span class="process-math">\(\epsilon \gt 0 \text{,}\)</span> there is a positive real number <span class="process-math">\(\delta \gt 0 \)</span> so that for all points <span class="process-math">\(x \in X \text{,}\)</span> if <span class="process-math">\(\rho_{ X } \of{ x , c } \lt \delta \text{,}\)</span> then <span class="process-math">\(\rho_{ Y } \of{ f \of{ x } , f \of{ c } } \lt \epsilon \text{,}\)</span> and let <span class="process-math">\(N \subseteq Y \)</span> be a neighborhood of <span class="process-math">\(f \of{ c } \)</span> in <span class="process-math">\(Y \text{.}\)</span> Then <span class="process-math">\(\mB_{ \epsilon } \of{ f \of{ c } } \subseteq N \)</span> for some positive real number <span class="process-math">\(\epsilon \gt 0 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-characterizations-of-metric-continuity-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-characterizations-of-metric-continuity-3-3">
+<div class="para">Since <span class="process-math">\(\epsilon \gt 0 \)</span> is positive, there is a positive real number <span class="process-math">\(\delta \gt 0 \)</span> so that for all points <span class="process-math">\(x \in X \text{,}\)</span> if <span class="process-math">\(\rho_{ X } \of{ x , c } \lt \delta \text{,}\)</span> then <span class="process-math">\(\rho_{ Y } \of{ f \of{ x } , f \of{ c } } \lt \epsilon \text{.}\)</span> In particular,</div>
+<div class="displaymath process-math" id="proposition-characterizations-of-metric-continuity-3-3-6">
+\begin{equation*}
+f \of{ \mB_{ \delta } \of{ c } } \subseteq \mB_{ \epsilon } \of{ f \of{ c } } \subseteq N\text{,}
+\end{equation*}
+</div>
+<div class="para">and so <span class="process-math">\(\mB_{ \delta } \of{ c } \subseteq f^{ -1 } \of{ N } \text{;}\)</span> that is, <span class="process-math">\(f^{ -1 } \of{ N } \)</span> is a neighborhood of <span class="process-math">\(c \)</span> in <span class="process-math">\(X \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-characterizations-of-metric-continuity-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-characterizations-of-metric-continuity-3-4">
+<div class="para">Now suppose that the pre-image <span class="process-math">\(f^{ -1 } \of{ N } \)</span> of any neighborhood <span class="process-math">\(N \)</span> of <span class="process-math">\(f \of{ c } \)</span> in <span class="process-math">\(Y \)</span> is a neighborhood of <span class="process-math">\(c \)</span> in <span class="process-math">\(X \text{,}\)</span> and let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of points <span class="process-math">\(x_{ n } \in X \)</span> so that</div>
+<div class="displaymath process-math" id="proposition-characterizations-of-metric-continuity-3-4-9">
+\begin{equation*}
+\lim_{ n \to \infty }{ x_{ n } } = c\text{.}
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Then <span class="process-math">\(\mB_{ \epsilon } \of{ f \of{ c } } \)</span> is a neighborhood of <span class="process-math">\(f \of{ c } \)</span> in <span class="process-math">\(Y \text{,}\)</span> and so <span class="process-math">\(f^{ -1 } \of{ \mB_{ \epsilon } \of{ f \of{ c } } } \)</span> is a neighborhood of <span class="process-math">\(c \)</span> in <span class="process-math">\(X \text{.}\)</span> Thus</div>
+<div class="displaymath process-math" id="proposition-characterizations-of-metric-continuity-3-4-17">
+\begin{equation*}
+\mB_{ \delta } \of{ c } \subseteq f^{ -1 } \of{ \mB_{ \epsilon } \of{ f \of{ c } } }
+\end{equation*}
+</div>
+<div class="para">for some positive real number <span class="process-math">\(\delta \gt 0 \text{.}\)</span> Since <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(c \text{,}\)</span> there is some natural number <span class="process-math">\(n_{ \epsilon } \in \N \)</span> so that <span class="process-math">\(\rho_{ X } \of{ x_{ n } , c } \lt \delta \)</span> for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> This implies that</div>
+<div class="displaymath process-math" id="proposition-characterizations-of-metric-continuity-3-4-24">
+\begin{equation*}
+f \of{ x_{ n } } \in f \of{ \mB_{ \delta } \of{ c } } \subseteq \mB_{ \epsilon } \of{ f \of{ c } }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{,}\)</span> and so <span class="process-math">\(\rho_{ Y } \of{ f \of{ x_{ n } } , f \of{ c } } \lt \epsilon \)</span> for all such indices. We conclude that</div>
+<div class="displaymath process-math" id="proposition-characterizations-of-metric-continuity-3-4-27">
+\begin{equation*}
+\lim_{ n \to \infty }{ f \of{ x_{ n } } } = f \of{ c }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-characterizations-of-metric-continuity-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-characterizations-of-metric-continuity-3-5">
+<div class="para">Finally, suppose that for every sequence <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> of points <span class="process-math">\(x_{ n } \in X \text{,}\)</span> if</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-sequential-characterization-of-map-convergence.html" id="proposition-characterizations-of-metric-continuity-3-5-3">
+\begin{equation*}
+\lim_{ n \to \infty }{ x_{ n } } = c\text{,}
+\end{equation*}
+</div>
+<div class="para">then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-sequential-characterization-of-map-convergence.html" id="proposition-characterizations-of-metric-continuity-3-5-4">
+\begin{equation*}
+\lim_{ n \to \infty }{ f \of{ x_{ n } } } = f \of{ c }\text{.}
+\end{equation*}
+</div>
+<div class="para">Then <a href="section-convergence-and-limits.html#theorem-sequential-characterization-of-map-convergence" class="xref" data-knowl="./knowl/xref/theorem-sequential-characterization-of-map-convergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.19: Sequential characterization of map convergence">Theorem 3.2.19 Sequential characterization of map convergence</a> implies that <span class="process-math">\(f \)</span> converges at <span class="process-math">\(c \)</span> to <span class="process-math">\(f \of{ c } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-characterizations-of-metric-continuity-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.5.1.1"><a tabindex="-1" href="#proposition-characterizations-of-metric-continuity-3" title="Copy heading and permalink for Proof 3.5.1.1" aria-label="Copy heading and permalink for Proof 3.5.1.1">🔗</a></div>
+</article></details>
+<article class="definition definition-like" id="definition-continuity"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Continuity.</span>
+</h4>
+<div class="para logical" id="definition-continuity-6-1">
+<div class="para">Let <span class="process-math">\(f \colon X \to Y \)</span> be a map from a metric space <span class="process-math">\(\of{ X , \rho_{ X } } \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho_{ Y } } \text{.}\)</span>
+</div>
+<ul class="disc" id="definition-continuity-6-1-4">
+<li id="definition-continuity-6-1-4-1">
+<span class="heading li--heading"><span class="title li--heading-title">Continuity.</span></span>
+<div class="para" id="definition-continuity-6-1-4-1-2">
+<span class="process-math">\(f \)</span> is <dfn class="terminology">continuous</dfn> at a point <span class="process-math">\(c \in X \)</span> if it satisfies any (and therefore all) of the conditions in <a href="section-notions-of-metric-continuity.html#proposition-characterizations-of-metric-continuity" class="xref" data-knowl="./knowl/xref/proposition-characterizations-of-metric-continuity.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.5.1: Characterizations of metric continuity">Proposition 3.5.1 Characterizations of metric continuity</a>. <span class="process-math">\(f \)</span> is <dfn class="terminology">continuous</dfn> if it is continuous at every point <span class="process-math">\(c \in X \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-continuity-6-1-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Continuity"><a tabindex="-1" href="#definition-continuity-6-1-4-1" title="Copy heading and permalink for Item: Continuity" aria-label="Copy heading and permalink for Item: Continuity">🔗</a></div>
+</li>
+<li id="definition-continuity-6-1-4-2">
+<span class="heading li--heading"><span class="title li--heading-title">Discontinuity.</span></span>
+<div class="para" id="definition-continuity-6-1-4-2-2">
+<span class="process-math">\(f \)</span> is <dfn class="terminology">discontinuous</dfn> at a point <span class="process-math">\(c \in X \)</span> if it does not satisfies any of the conditions in <a href="section-notions-of-metric-continuity.html#proposition-characterizations-of-metric-continuity" class="xref" data-knowl="./knowl/xref/proposition-characterizations-of-metric-continuity.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.5.1: Characterizations of metric continuity">Proposition 3.5.1 Characterizations of metric continuity</a>. <span class="process-math">\(f \)</span> is <dfn class="terminology">discontinuous</dfn> if it is discontinuous at some point <span class="process-math">\(c \in X \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-continuity-6-1-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Discontinuity"><a tabindex="-1" href="#definition-continuity-6-1-4-2" title="Copy heading and permalink for Item: Discontinuity" aria-label="Copy heading and permalink for Item: Discontinuity">🔗</a></div>
+</li>
+</ul>
+<div class="para">The set of continuous maps from <span class="process-math">\(X \)</span> to <span class="process-math">\(Y \)</span> is denoted <span class="process-math">\(\CDiff \of{ X , Y } \text{.}\)</span> In the special case <span class="process-math">\(\of{ Y , \rho_{ Y } } = \of{ \R , d } \text{,}\)</span> the set of continuous, real-valued functions on a metric space <span class="process-math">\(\of{ X , \rho_{ X } } \)</span> is denoted <span class="process-math">\(\CDiff \of{ X } = \CDiff \of{ X , \R } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-continuity-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.5.2: Continuity"><a tabindex="-1" href="#definition-continuity" title="Copy heading and permalink for Definition 3.5.2: Continuity" aria-label="Copy heading and permalink for Definition 3.5.2: Continuity">🔗</a></div>
+</article>
+<details id="example-continuity" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Continuity.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-continuity-2-1">
+<div class="para">The following are examples of continuous and discontinuous maps.</div>
+<ul class="disc" id="example-continuity-2-1-1">
+<li id="example-continuity-2-1-1-1">
+<div class="para" id="example-continuity-2-1-1-1-1">Any constant map between metric spaces is continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-continuity-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-continuity-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-continuity-2-1-1-2">
+<div class="para" id="example-continuity-2-1-1-2-1">The identity map <span class="process-math">\(\id_{ X } \colon X \to X \)</span> on a metric space <span class="process-math">\(\of{ X , \rho } \)</span> is continuous. More generally, the inclusion map <span class="process-math">\(\iota \colon U \to X \)</span> of a metric subspace <span class="process-math">\(U \subseteq X \)</span> is continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-continuity-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-continuity-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-continuity-2-1-1-3">
+<div class="para" id="example-continuity-2-1-1-3-1">Any map <span class="process-math">\(f \colon X \to Y \)</span> from a discrete metric space <span class="process-math">\(\of{ X , \delta_{ X } } \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho_{ Y } } \)</span> is continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-continuity-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-continuity-2-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-continuity-2-1-1-4">
+<div class="para logical" id="example-continuity-2-1-1-4-1">
+<div class="para">Let <span class="process-math">\(f \colon \R \setminus \set{ 0 } \to \R \)</span> be the real-valued function defined by the formula</div>
+<div class="displaymath process-math" id="example-continuity-2-1-1-4-1-2">
+\begin{equation*}
+f \of{ x } = \frac{ 1 }{ x }\text{.}
+\end{equation*}
+</div>
+<div class="para">Then <span class="process-math">\(f \)</span> is continuous. In particular, we note that <span class="process-math">\(f \)</span> is neither continuous nor discontinuous at <span class="process-math">\(0 \text{,}\)</span> since <span class="process-math">\(0 \)</span> is not in the domain of <span class="process-math">\(f \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-continuity-2-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-continuity-2-1-1-4-2">You may have been taught that <span class="process-math">\(f \)</span> has a discontinuity at the point <span class="process-math">\(0 \text{,}\)</span> but we will require more specific language. We can describe the behavior of <span class="process-math">\(f \)</span> near <span class="process-math">\(0 \)</span> by saying that <span class="process-math">\(f \)</span> does not have a continuous extension to <span class="process-math">\(\R \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-continuity-2-1-1-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-continuity-2-1-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.5.3: Continuity"><a tabindex="-1" href="#example-continuity" title="Copy heading and permalink for Example 3.5.3: Continuity" aria-label="Copy heading and permalink for Example 3.5.3: Continuity">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-continuous-maps-and-functions-6">A map of metric spaces is continuous at a point if and only if the outputs of the map can be made close to the image of that point solely by choosing inputs close to the point. Perhaps unsurprising in light of <a href="section-convergence-and-limits.html#theorem-sequential-characterization-of-map-convergence" class="xref" data-knowl="./knowl/xref/theorem-sequential-characterization-of-map-convergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.19: Sequential characterization of map convergence">Theorem 3.2.19 Sequential characterization of map convergence</a> is the fact that continuity is totally determined by the behavior of the map on convergent sequences.In fact, unlike the more general spaces we will investigate in <a href="chapter-topological-spaces.html" class="internal" title="Chapter 4: Topological Spaces">Chapter 4 Topological Spaces</a>, the answers to all point-set topological questions about metric spaces are captured by the behavior of sequences. Perhaps more surprising is the following characterization of continuity in terms of open sets.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-continuous-maps-and-functions-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="corollary theorem-like" id="corollary-open-set-characterization-of-metric-continuity"><h4 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Open set characterization of metric continuity.</span>
+</h4>
+<div class="para" id="corollary-open-set-characterization-of-metric-continuity-2-1">A map <span class="process-math">\(f \colon X \to Y \)</span> from a metric space <span class="process-math">\(\of{ X , \rho_{ X } } \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho_{ Y } } \)</span> is continuous if and only if the pre-image of any open subset of <span class="process-math">\(Y \)</span> is an open subset of <span class="process-math">\(X \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-open-set-characterization-of-metric-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Corollary 3.5.4: Open set characterization of metric continuity"><a tabindex="-1" href="#corollary-open-set-characterization-of-metric-continuity" title="Copy heading and permalink for Corollary 3.5.4: Open set characterization of metric continuity" aria-label="Copy heading and permalink for Corollary 3.5.4: Open set characterization of metric continuity">🔗</a></div>
+</article>
+<details id="corollary-open-set-characterization-of-metric-continuity-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="corollary-open-set-characterization-of-metric-continuity-3-1">Suppose first that <span class="process-math">\(f \)</span> is continuous, and let <span class="process-math">\(V \subseteq Y \)</span> be an open subset of <span class="process-math">\(Y \text{.}\)</span> Let <span class="process-math">\(c \in f^{ -1 } \of{ V } \text{.}\)</span> Since <span class="process-math">\(V \)</span> is open, it is a neighborhood of <span class="process-math">\(f \of{ c } \text{,}\)</span> and so the neighborhood characterization of continuity in <a href="section-notions-of-metric-continuity.html#proposition-characterizations-of-metric-continuity" class="xref" data-knowl="./knowl/xref/proposition-characterizations-of-metric-continuity.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.5.1: Characterizations of metric continuity">Proposition 3.5.1 Characterizations of metric continuity</a> implies that <span class="process-math">\(f^{ -1 } \of{ V } \)</span> is a neighborhood of <span class="process-math">\(c \text{.}\)</span> Since this is true of every point <span class="process-math">\(c \in f^{ -1 } \of{ V } \text{,}\)</span> <span class="process-math">\(f^{ -1 } \of{ V } \)</span> is open in <span class="process-math">\(X \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-open-set-characterization-of-metric-continuity-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="corollary-open-set-characterization-of-metric-continuity-3-2">Conversely, now suppose that the pre-image of every open subset of <span class="process-math">\(Y \)</span> is an open subset of <span class="process-math">\(X \text{,}\)</span> and consider a point <span class="process-math">\(c \in X \)</span> and a neighborhood <span class="process-math">\(N \subseteq Y \)</span> of <span class="process-math">\(f \of{ c } \)</span> in <span class="process-math">\(Y \text{.}\)</span> Then <span class="process-math">\(\mB_{ r } \of{ f \of{ c } } \subseteq N \)</span> for some positive real number <span class="process-math">\(r \gt 0 \text{.}\)</span> Since <span class="process-math">\(\mB_{ r } \of{ c } \)</span> is open in <span class="process-math">\(Y \text{,}\)</span> <span class="process-math">\(f^{ -1 } \of{ \mB_{ r } \of{ f \of{ c } } } \)</span> is open in <span class="process-math">\(X \)</span> and is therefore a neighborhood of each of its points.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-open-set-characterization-of-metric-continuity-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="corollary-open-set-characterization-of-metric-continuity-3-3">In particular, <span class="process-math">\(f \of{ c } \in \mB_{ r } \of{ f \of{ c } } \text{,}\)</span> and so <span class="process-math">\(c \in f^{ -1 } \of{ \mB_{ r } \of{ f \of{ c } } } \text{.}\)</span> We conclude that <span class="process-math">\(f^{ -1 } \of{ \mB_{ r } \of{ f \of{ c } } } \)</span> is a neighborhood of <span class="process-math">\(c \text{.}\)</span> The neighborhood characterization of continuity in <a href="section-notions-of-metric-continuity.html#proposition-characterizations-of-metric-continuity" class="xref" data-knowl="./knowl/xref/proposition-characterizations-of-metric-continuity.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.5.1: Characterizations of metric continuity">Proposition 3.5.1 Characterizations of metric continuity</a> now implies that <span class="process-math">\(f \)</span> is continuous at <span class="process-math">\(c \text{.}\)</span> Since this holds for all points <span class="process-math">\(c \in X \text{,}\)</span> <span class="process-math">\(f \)</span> is continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-open-set-characterization-of-metric-continuity-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.5.4.1"><a tabindex="-1" href="#corollary-open-set-characterization-of-metric-continuity-3" title="Copy heading and permalink for Proof 3.5.4.1" aria-label="Copy heading and permalink for Proof 3.5.4.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-continuous-maps-and-functions-8">In general, proving that a given map between metric spaces is continuous can be annoyingly difficult. For example, if you want to use the <span class="process-math">\(\epsilon \)</span>-<span class="process-math">\(\delta \)</span> characterization of continuity, then finding a correct positive real number <span class="process-math">\(\delta &gt; 0 \)</span> for each positive real number <span class="process-math">\(\epsilon &gt; 0 \)</span> is not necessarily an easy task. The following results allow us to decompose such a problem into smaller parts, which may be much easier to solve than taking on the entire problem at once.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-continuous-maps-and-functions-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-composition-of-continuous-maps"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Composition of continuous maps.</span>
+</h4>
+<div class="para" id="proposition-composition-of-continuous-maps-2-1">Let <span class="process-math">\(f \colon X \to Y \)</span> and <span class="process-math">\(g \colon Y \to Z \)</span> be maps between metric spaces <span class="process-math">\(\of{ X , \rho_{ X } } \text{,}\)</span> <span class="process-math">\(\of{ Y , \rho_{ Y } } \text{,}\)</span> and <span class="process-math">\(\of{ Z , \rho_{ Z } } \text{.}\)</span> If <span class="process-math">\(f \)</span> is continuous at a point <span class="process-math">\(c \in X \)</span> and <span class="process-math">\(g \)</span> is continuous at <span class="process-math">\(f \of{ c } \text{,}\)</span> then the composition <span class="process-math">\(g \circ f \colon X \to Z \)</span> is continuous at <span class="process-math">\(c \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-composition-of-continuous-maps-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 3.5.5: Composition of continuous maps"><a tabindex="-1" href="#proposition-composition-of-continuous-maps" title="Copy heading and permalink for Proposition 3.5.5: Composition of continuous maps" aria-label="Copy heading and permalink for Proposition 3.5.5: Composition of continuous maps">🔗</a></div>
+</article>
+<details id="proposition-composition-of-continuous-maps-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="proposition-composition-of-continuous-maps-3-1">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of points <span class="process-math">\(x_{ n } \in X \text{,}\)</span> and suppose that</div>
+<div class="displaymath process-math" id="proposition-composition-of-continuous-maps-3-1-3">
+\begin{equation*}
+\lim_{ n \to \infty }{ x_{ n } } = c\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(f \)</span> is continuous at <span class="process-math">\(c \text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="proposition-composition-of-continuous-maps-3-1-6">
+\begin{equation*}
+\lim_{ n \to \infty }{ f \of{ x_{ n } } } = f \of{ c }\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(g \)</span> is continuous at <span class="process-math">\(f \of{ c } \text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="proposition-composition-of-continuous-maps-3-1-9">
+\begin{equation*}
+\lim_{ n \to \infty }{ \of{ g \circ f } \of{ x_{ n } } } = \lim_{ n \to \infty }{ g \of{ f \of{ x_{ n } } } } = g \of{ f \of{ c } } = \of{ g \circ f } \of{ c }\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus <span class="process-math">\(g \circ f \)</span> is continuous at <span class="process-math">\(c \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-composition-of-continuous-maps-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.5.5.1"><a tabindex="-1" href="#proposition-composition-of-continuous-maps-3" title="Copy heading and permalink for Proof 3.5.5.1" aria-label="Copy heading and permalink for Proof 3.5.5.1">🔗</a></div>
+</article></details>
+<article class="proposition theorem-like" id="proposition-vector-arithmetic-of-continuous-maps"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Vector arithmetic of continuous maps.</span>
+</h4>
+<div class="para logical" id="proposition-vector-arithmetic-of-continuous-maps-2-1">
+<div class="para">Let <span class="process-math">\(\of{ X , \rho } \)</span> be a metric space and <span class="process-math">\(\of{ V , \norm{ \oparg } } \)</span> be a normed vector space.</div>
+<ol class="decimal" id="proposition-vector-arithmetic-of-continuous-maps-2-1-3">
+<li id="proposition-vector-arithmetic-of-continuous-maps-2-1-3-1">
+<span class="heading li--heading"><span class="title li--heading-title">Vector addition.</span></span>
+<div class="para" id="proposition-vector-arithmetic-of-continuous-maps-2-1-3-1-2">Let <span class="process-math">\(f , g \colon X \to V \)</span> be maps from <span class="process-math">\(X \)</span> to <span class="process-math">\(V \text{.}\)</span> If <span class="process-math">\(f \)</span> and <span class="process-math">\(g \)</span> are continuous at a point <span class="process-math">\(c \in X \text{,}\)</span> then their pointwise sum <span class="process-math">\(f + g \)</span> is continuous at <span class="process-math">\(c \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-vector-arithmetic-of-continuous-maps-2-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1: Vector addition"><a tabindex="-1" href="#proposition-vector-arithmetic-of-continuous-maps-2-1-3-1" title="Copy heading and permalink for Item 1: Vector addition" aria-label="Copy heading and permalink for Item 1: Vector addition">🔗</a></div>
+</li>
+<li id="proposition-vector-arithmetic-of-continuous-maps-2-1-3-2">
+<span class="heading li--heading"><span class="title li--heading-title">Scalar multiplication.</span></span>
+<div class="para" id="proposition-vector-arithmetic-of-continuous-maps-2-1-3-2-2">Let <span class="process-math">\(\alpha \)</span> be a scalar and <span class="process-math">\(f \colon X \to V \)</span> be a map from <span class="process-math">\(X \)</span> to <span class="process-math">\(V \text{.}\)</span> If <span class="process-math">\(f \)</span> is continuous at a point <span class="process-math">\(c \in X \text{,}\)</span> then the scalar multiplication <span class="process-math">\(\alpha f \)</span> is continuous at <span class="process-math">\(c \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-vector-arithmetic-of-continuous-maps-2-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2: Scalar multiplication"><a tabindex="-1" href="#proposition-vector-arithmetic-of-continuous-maps-2-1-3-2" title="Copy heading and permalink for Item 2: Scalar multiplication" aria-label="Copy heading and permalink for Item 2: Scalar multiplication">🔗</a></div>
+</li>
+<li id="proposition-vector-arithmetic-of-continuous-maps-2-1-3-3">
+<span class="heading li--heading"><span class="title li--heading-title">Norm.</span></span>
+<div class="para" id="proposition-vector-arithmetic-of-continuous-maps-2-1-3-3-2">Let <span class="process-math">\(f \colon X \to V \)</span> be a map from <span class="process-math">\(X \)</span> to <span class="process-math">\(V \text{.}\)</span> If <span class="process-math">\(f \)</span> is continuous at a point <span class="process-math">\(c \in X \text{,}\)</span> then the norm <span class="process-math">\(\norm{ f } = \norm{ \oparg } \circ f \)</span> is continuous at <span class="process-math">\(c \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-vector-arithmetic-of-continuous-maps-2-1-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3: Norm"><a tabindex="-1" href="#proposition-vector-arithmetic-of-continuous-maps-2-1-3-3" title="Copy heading and permalink for Item 3: Norm" aria-label="Copy heading and permalink for Item 3: Norm">🔗</a></div>
+</li>
+<li id="proposition-vector-arithmetic-of-continuous-maps-2-1-3-4">
+<span class="heading li--heading"><span class="title li--heading-title">Inner product.</span></span>
+<div class="para" id="proposition-vector-arithmetic-of-continuous-maps-2-1-3-4-2">Let <span class="process-math">\(f , g \colon X \to V \)</span> be maps from <span class="process-math">\(X \)</span> to <span class="process-math">\(V \text{.}\)</span> If the norm <span class="process-math">\(\norm{ \oparg } \)</span> on <span class="process-math">\(V \)</span> is induced by an inner product <span class="process-math">\(\inner{ \oparg }{ \oparg } \)</span> and <span class="process-math">\(f \)</span> and <span class="process-math">\(g \)</span> are continuous at a point <span class="process-math">\(c \text{,}\)</span> then the pointwise inner product <span class="process-math">\(\inner{ f }{ g } \)</span> is continuous at <span class="process-math">\(c \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-vector-arithmetic-of-continuous-maps-2-1-3-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4: Inner product"><a tabindex="-1" href="#proposition-vector-arithmetic-of-continuous-maps-2-1-3-4" title="Copy heading and permalink for Item 4: Inner product" aria-label="Copy heading and permalink for Item 4: Inner product">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-vector-arithmetic-of-continuous-maps-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 3.5.6: Vector arithmetic of continuous maps"><a tabindex="-1" href="#proposition-vector-arithmetic-of-continuous-maps" title="Copy heading and permalink for Proposition 3.5.6: Vector arithmetic of continuous maps" aria-label="Copy heading and permalink for Proposition 3.5.6: Vector arithmetic of continuous maps">🔗</a></div>
+</article>
+<details id="proposition-vector-arithmetic-of-continuous-maps-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<ol class="decimal" id="proposition-vector-arithmetic-of-continuous-maps-3-1">
+<li id="proposition-vector-arithmetic-of-continuous-maps-3-1-1">
+<div class="para" id="proposition-vector-arithmetic-of-continuous-maps-3-1-1-1">Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Since <span class="process-math">\(f \)</span> is continuous at <span class="process-math">\(c \text{,}\)</span> there is a positive real number <span class="process-math">\(\delta_{ f } \gt 0 \)</span> so that for all points <span class="process-math">\(x \in X \text{,}\)</span> if <span class="process-math">\(\rho_{ X } \of{ x , c } \lt \delta_{ f } \text{,}\)</span> then <span class="process-math">\(\norm{ f \of{ x } - f \of{ c } } \lt \frac{ \epsilon }{ 2 } \text{.}\)</span> Similarly, since <span class="process-math">\(g \)</span> is continuous at <span class="process-math">\(c \text{,}\)</span> there is a positive real number <span class="process-math">\(\delta_{ g } \gt 0 \)</span> so that for all points <span class="process-math">\(x \in X \text{,}\)</span> if <span class="process-math">\(\rho_{ X } \of{ x , c } \lt \delta_{ g } \text{,}\)</span> then <span class="process-math">\(\norm{ g \of{ x } - g \of{ c } } \lt \frac{ \epsilon }{ 2 } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-vector-arithmetic-of-continuous-maps-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-vector-arithmetic-of-continuous-maps-3-1-1-2">
+<div class="para">Let <span class="process-math">\(\delta = \min \of{ \set{ \delta_{ f } , \delta_{ g } } } \gt 0 \text{,}\)</span> and note that for all points <span class="process-math">\(x \in X \text{,}\)</span> if <span class="process-math">\(\rho_{ X } \of{ x , c } \lt \delta \text{,}\)</span> then</div>
+<div class="displaymath process-math" id="proposition-vector-arithmetic-of-continuous-maps-3-1-1-2-4">
+\begin{align*}
+\norm{ \of{ f + g } \of{ x } - \of{ f + g } \of{ c } } \amp = \norm{ f \of{ x } + g \of{ x } - f \of{ c } - g \of{ c } }\\
+\amp \leq \norm{ f \of{ x } - f \of{ c } } + \norm{ g \of{ x } - g \of{ c } }\\
+\amp \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon\text{.}
+\end{align*}
+</div>
+<div class="para">We conclude that <span class="process-math">\(f + g \)</span> is continuous at <span class="process-math">\(c \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-vector-arithmetic-of-continuous-maps-3-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#proposition-vector-arithmetic-of-continuous-maps-3-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="proposition-vector-arithmetic-of-continuous-maps-3-1-2">
+<div class="para logical" id="proposition-vector-arithmetic-of-continuous-maps-3-1-2-1">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of points <span class="process-math">\(x_{ n } \in X \text{,}\)</span> and suppose that</div>
+<div class="displaymath process-math" id="proposition-vector-arithmetic-of-continuous-maps-3-1-2-1-3">
+\begin{equation*}
+\lim_{ n \to \infty }{ x_{ n } } = c\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(f \)</span> is continuous at <span class="process-math">\(c \text{,}\)</span> we observe that</div>
+<div class="displaymath process-math" id="proposition-vector-arithmetic-of-continuous-maps-3-1-2-1-6">
+\begin{align*}
+\lim_{ n \to \infty }{ \of{ \alpha f } \of{ x_{ n } } } \amp = \lim_{ n \to \infty }{ \alpha f \of{ x_{ n } } } = \alpha \lim_{ n \to \infty }{ f \of{ x_{ n } } }\\
+\amp = \alpha f \of{ c } = \of{ \alpha f } \of{ c }\text{,}
+\end{align*}
+</div>
+<div class="para">and so <span class="process-math">\(\alpha f \)</span> is continuous at <span class="process-math">\(c \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-vector-arithmetic-of-continuous-maps-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#proposition-vector-arithmetic-of-continuous-maps-3-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="proposition-vector-arithmetic-of-continuous-maps-3-1-3">
+<div class="para" id="proposition-vector-arithmetic-of-continuous-maps-3-1-3-1">By <a href="section-notions-of-metric-continuity.html#proposition-composition-of-continuous-maps" class="xref" data-knowl="./knowl/xref/proposition-composition-of-continuous-maps.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.5.5: Composition of continuous maps">Proposition 3.5.5 Composition of continuous maps</a>, it suffices to show that <span class="process-math">\(\norm{ \oparg } \colon V \to \R \)</span> is a continuous real-valued function on <span class="process-math">\(V \text{.}\)</span> This follows directly from (3) of <a href="section-limits-in-the-euclidean-metric.html#proposition-limits-and-vector-arithmetic" class="xref" data-knowl="./knowl/xref/proposition-limits-and-vector-arithmetic.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.3.1: Limits and vector arithmetic">Proposition 3.3.1 Limits and vector arithmetic</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-vector-arithmetic-of-continuous-maps-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#proposition-vector-arithmetic-of-continuous-maps-3-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="proposition-vector-arithmetic-of-continuous-maps-3-1-4">
+<div class="para logical" id="proposition-vector-arithmetic-of-continuous-maps-3-1-4-1">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of points <span class="process-math">\(x_{ n } \in X \text{,}\)</span> and suppose that</div>
+<div class="displaymath process-math" id="proposition-vector-arithmetic-of-continuous-maps-3-1-4-1-3">
+\begin{equation*}
+\lim_{ n \to \infty }{ x_{ n } } = c\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(f \)</span> and <span class="process-math">\(g \)</span> are continuous at <span class="process-math">\(c \text{,}\)</span> we observe that</div>
+<div class="displaymath process-math" id="proposition-vector-arithmetic-of-continuous-maps-3-1-4-1-7">
+\begin{align*}
+\lim_{ n \to \infty }{ \inner{ f }{ g } \of{ x_{ n } } } \amp = \lim_{ n \to \infty }{ \inner{ f \of{ x_{ n } } }{ g \of{ x_{ n } } } } = \inner{ \lim_{ n \to \infty }{ f \of{ x_{ n } } } }{ \lim_{ n \to \infty }{ g \of{ x_{ n } } } }\\
+\amp = \inner{ f \of{ c } }{ g \of{ c } } = \inner{ f }{ g } \of{ c }\text{,}
+\end{align*}
+</div>
+<div class="para">and so <span class="process-math">\(\inner{ f }{ g } \)</span> is continuous at <span class="process-math">\(c \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-vector-arithmetic-of-continuous-maps-3-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4"><a tabindex="-1" href="#proposition-vector-arithmetic-of-continuous-maps-3-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.5.6.1"><a tabindex="-1" href="#proposition-vector-arithmetic-of-continuous-maps-3" title="Copy heading and permalink for Proof 3.5.6.1" aria-label="Copy heading and permalink for Proof 3.5.6.1">🔗</a></div>
+</article></details>
+<article class="corollary theorem-like" id="corollary-arithmetic-of-continuous-functions"><h4 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Arithmetic of continuous functions.</span>
+</h4>
+<div class="para" id="corollary-arithmetic-of-continuous-functions-2-1">Let <span class="process-math">\(f , g \colon X \to \R \)</span> be real-valued functions on a metric space <span class="process-math">\(\of{ X , \rho } \text{.}\)</span> If <span class="process-math">\(f \)</span> and <span class="process-math">\(g \)</span> are continuous at a point <span class="process-math">\(c \in X \text{,}\)</span> then <span class="process-math">\(f + g \text{,}\)</span> <span class="process-math">\(f - g \text{,}\)</span> and <span class="process-math">\(f g \)</span> are continuous at <span class="process-math">\(c \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-arithmetic-of-continuous-functions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="corollary-arithmetic-of-continuous-functions-2-2">Moreover, if <span class="process-math">\(f \)</span> and <span class="process-math">\(g \)</span> are continuous at at point <span class="process-math">\(c \in X \)</span> and <span class="process-math">\(g \of{ x } \neq 0 \)</span> for all points <span class="process-math">\(x \in X \text{,}\)</span> then <span class="process-math">\(\frac{ f }{ g } \)</span> is continuous at <span class="process-math">\(c \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-arithmetic-of-continuous-functions-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Corollary 3.5.7: Arithmetic of continuous functions"><a tabindex="-1" href="#corollary-arithmetic-of-continuous-functions" title="Copy heading and permalink for Corollary 3.5.7: Arithmetic of continuous functions" aria-label="Copy heading and permalink for Corollary 3.5.7: Arithmetic of continuous functions">🔗</a></div>
+</article>
+<div class="para" id="subsection-continuous-maps-and-functions-12">Having introduced the notion of continuity for maps between metric spaces, one natural question is to describe the relationship between continuity and the limiting behavior of sequences of maps. At first glance, it may seem plausible that the limit of a sequence of continuous functions which converges pointwise must also be continuous. This, however, is not the case.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-continuous-maps-and-functions-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-discontinuous-limits-of-sequences-of-continuous-functions" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Discontinuous limits of sequences of continuous functions.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-discontinuous-limits-of-sequences-of-continuous-functions-2-1">
+<div class="para">Consider the sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> of continuous real-valued functions <span class="process-math">\(f_{ n } \colon \clint{ 0 }{ 1 } \to \R \)</span> defined by the formulae</div>
+<div class="displaymath process-math" id="example-discontinuous-limits-of-sequences-of-continuous-functions-2-1-3">
+\begin{equation*}
+f_{ n } \of{ x } = x^{ n }\text{.}
+\end{equation*}
+</div>
+<div class="para">We recall that <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> converges pointwise to the function <span class="process-math">\(f \colon \clint{ 0 }{ 1 } \to \R \)</span> defined piecewise by the formula</div>
+<div class="displaymath process-math" id="example-discontinuous-limits-of-sequences-of-continuous-functions-2-1-6">
+\begin{equation*}
+f \of{ x } =1
+\begin{cases}
+0 \amp 0 \leq x \lt 1 \\
+1 \amp x = 1
+\text{.}\end{cases}
+\end{equation*}
+</div>
+<div class="para">Even though each function <span class="process-math">\(f_{ n } \)</span> is continuous, the pointwise limit <span class="process-math">\(f \)</span> is not continuous at <span class="process-math">\(1 \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-discontinuous-limits-of-sequences-of-continuous-functions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.5.8: Discontinuous limits of sequences of continuous functions"><a tabindex="-1" href="#example-discontinuous-limits-of-sequences-of-continuous-functions" title="Copy heading and permalink for Example 3.5.8: Discontinuous limits of sequences of continuous functions" aria-label="Copy heading and permalink for Example 3.5.8: Discontinuous limits of sequences of continuous functions">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-continuous-maps-and-functions-14">So the pointwise limit of a sequence of continuous maps between metric spaces need not be continuous. However, if such a sequence of continuous maps converges uniformly, then the limit is a continuous map.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-continuous-maps-and-functions-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="theorem-uniform-limits-of-continuous-maps"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uniform limits of continuous maps.</span>
+</h4>
+<div class="para" id="theorem-uniform-limits-of-continuous-maps-2-1">The limit of a uniformly convergent sequence of continuous maps between metric spaces is continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-uniform-limits-of-continuous-maps-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.5.9: Uniform limits of continuous maps"><a tabindex="-1" href="#theorem-uniform-limits-of-continuous-maps" title="Copy heading and permalink for Theorem 3.5.9: Uniform limits of continuous maps" aria-label="Copy heading and permalink for Theorem 3.5.9: Uniform limits of continuous maps">🔗</a></div>
+</article>
+<details id="theorem-uniform-limits-of-continuous-maps-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="theorem-uniform-limits-of-continuous-maps-3-1">Let <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of continuous maps <span class="process-math">\(f_{ n } \colon X \to Y \)</span> from a metric space <span class="process-math">\(\of{ X , \rho_{ X } } \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho_{ Y } } \text{,}\)</span> and suppose that <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> converges uniformly to a map <span class="process-math">\(f \colon X \to Y \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-uniform-limits-of-continuous-maps-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="theorem-uniform-limits-of-continuous-maps-3-2">
+<div class="para">Fix a point <span class="process-math">\(c \in X \text{,}\)</span> and let <span class="process-math">\(\epsilon \gt 0 \text{.}\)</span> Since <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> converges uniformly to <span class="process-math">\(f \text{,}\)</span> there is a natural number <span class="process-math">\(n_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math" id="theorem-uniform-limits-of-continuous-maps-3-2-6">
+\begin{equation*}
+\rho_{ Y } \of{ f_{ n } \of{ x } , f \of{ x } } \lt \frac{ \epsilon }{ 3 }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \)</span> and points <span class="process-math">\(x \in X \text{.}\)</span> Fix one such index <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> Since <span class="process-math">\(f_{ n } \)</span> is continuous, there is a positive real number <span class="process-math">\(\delta \gt 0 \)</span> so that</div>
+<div class="displaymath process-math" id="theorem-uniform-limits-of-continuous-maps-3-2-12">
+\begin{equation*}
+\rho_{ Y } \of{ f_{ n } \of{ x } , f_{ n } \of{ c } } \lt \frac{ \epsilon }{ 3 }
+\end{equation*}
+</div>
+<div class="para">for all points <span class="process-math">\(x \in X \)</span> so that <span class="process-math">\(\rho_{ X } \of{ x , c } \lt \delta \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="theorem-uniform-limits-of-continuous-maps-3-2-15">
+\begin{align*}
+\rho_{ Y } \of{ f \of{ x } , f \of{ c } } \amp \leq \rho_{ Y } \of{ f \of{ x } , f_{ n } \of{ x } } + \rho_{ Y } \of{ f_{ n } \of{ c } , f_{ n } \of{ c } } + \rho_{ Y } \of{ f_{ n } \of{ c } , f \of{ c } }\\
+\amp \lt \frac{ \epsilon }{ 3 } + \frac{ \epsilon }{ 3 } + \frac{ \epsilon }{ 3 } = \epsilon
+\end{align*}
+</div>
+<div class="para">for all points <span class="process-math">\(x \in X \)</span> so that <span class="process-math">\(\rho_{ X } \of{ x , c } \lt \delta \text{,}\)</span> and so <span class="process-math">\(f \)</span> is continuous at <span class="process-math">\(c \text{.}\)</span> Since this holds for all points <span class="process-math">\(c \in X \text{,}\)</span> we conclude that <span class="process-math">\(f \)</span> is continuous.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-uniform-limits-of-continuous-maps-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.5.9.1"><a tabindex="-1" href="#theorem-uniform-limits-of-continuous-maps-3" title="Copy heading and permalink for Proof 3.5.9.1" aria-label="Copy heading and permalink for Proof 3.5.9.1">🔗</a></div>
+</article></details>
+<section class="conclusion" id="subsection-continuous-maps-and-functions-16">
+<div class="para" id="subsection-continuous-maps-and-functions-16-1">So, while the pointwise limit of a sequence of continuous maps between metric spaces need not in general be continuous, any such sequence which converges uniformly must converge to a continuous limit. Uniformity, or the relative independence of the “size” of neighborhoods of points in a space from position, is a useful property which will allow us to reconcile complex limiting behavior where several limits interact. We now turn to a strengthening of the notion of continuity based on this idea of uniformity.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-continuous-maps-and-functions-16-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.5.1: Continuous Maps and Functions"><a tabindex="-1" href="#subsection-continuous-maps-and-functions" title="Copy heading and permalink for Subsection 3.5.1: Continuous Maps and Functions" aria-label="Copy heading and permalink for Subsection 3.5.1: Continuous Maps and Functions">🔗</a></div>
+</section>
+<section class="subsection" id="subsection-stronger-forms-of-metric-continuity">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Stronger Forms of Metric Continuity</span>
+</h3>
+<section class="introduction" id="subsection-stronger-forms-of-metric-continuity-2">
+<div class="para" id="subsection-stronger-forms-of-metric-continuity-2-1">Text before the first subdivision.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-stronger-forms-of-metric-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="conclusion" id="subsection-stronger-forms-of-metric-continuity-3">
+<div class="para" id="subsection-stronger-forms-of-metric-continuity-3-1">Text after the last subdivision.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-stronger-forms-of-metric-continuity-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.5.2: Stronger Forms of Metric Continuity"><a tabindex="-1" href="#subsection-stronger-forms-of-metric-continuity" title="Copy heading and permalink for Subsection 3.5.2: Stronger Forms of Metric Continuity" aria-label="Copy heading and permalink for Subsection 3.5.2: Stronger Forms of Metric Continuity">🔗</a></div>
+</section>
+<section class="conclusion" id="section-notions-of-metric-continuity-5">
+<div class="para" id="section-notions-of-metric-continuity-5-1">Text after the last subsection.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-notions-of-metric-continuity-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="reading-questions" id="exercises-notions-of-metric-continuity">
 <h3 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
 </h3>
 <section class="introduction" id="exercises-notions-of-metric-continuity-2">
 <div class="para" id="exercises-notions-of-metric-continuity-2-1">The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-notions-of-metric-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="conclusion" id="exercises-notions-of-metric-continuity-3">
-<div class="para" id="exercises-notions-of-metric-continuity-3-1">Short answers and/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-notions-of-metric-continuity-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 3.5: Exercises"><a tabindex="-1" href="#exercises-notions-of-metric-continuity" title="Copy heading and permalink for Reading Questions 3.5: Exercises" aria-label="Copy heading and permalink for Reading Questions 3.5: Exercises">🔗</a></div>
+<div class="para" id="exercises-notions-of-metric-continuity-3-1">Short answers and/or in-depth solutions to these exercises are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-notions-of-metric-continuity-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 3.5.3: Exercises"><a tabindex="-1" href="#exercises-notions-of-metric-continuity" title="Copy heading and permalink for Reading Questions 3.5.3: Exercises" aria-label="Copy heading and permalink for Reading Questions 3.5.3: Exercises">🔗</a></div>
 </section>
-<section class="reading-questions" id="reading-questions-notions-of-metric-continuity">
+<section class="reading-questions" id="problems-notions-of-metric-continuity">
 <h3 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reading Questions</span>
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
 </h3>
-<section class="introduction" id="reading-questions-notions-of-metric-continuity-2">
-<div class="para" id="reading-questions-notions-of-metric-continuity-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#reading-questions-notions-of-metric-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="problems-notions-of-metric-continuity-2">
+<div class="para" id="problems-notions-of-metric-continuity-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-notions-of-metric-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="reading-questions-notions-of-metric-continuity-3">
-<div class="para" id="reading-questions-notions-of-metric-continuity-3-1">In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#reading-questions-notions-of-metric-continuity-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 3.5: Reading Questions"><a tabindex="-1" href="#reading-questions-notions-of-metric-continuity" title="Copy heading and permalink for Reading Questions 3.5: Reading Questions" aria-label="Copy heading and permalink for Reading Questions 3.5: Reading Questions">🔗</a></div>
+<section class="conclusion" id="problems-notions-of-metric-continuity-3">
+<div class="para" id="problems-notions-of-metric-continuity-3-1">In-depth solutions to these problems are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-notions-of-metric-continuity-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 3.5.4: Problems"><a tabindex="-1" href="#problems-notions-of-metric-continuity" title="Copy heading and permalink for Reading Questions 3.5.4: Problems" aria-label="Copy heading and permalink for Reading Questions 3.5.4: Problems">🔗</a></div>
 </section><div class="autopermalink" aria-hidden="true" data-description="Section 3.5: Notions of Metric Continuity"><a tabindex="-1" href="#section-notions-of-metric-continuity" title="Copy heading and permalink for Section 3.5: Notions of Metric Continuity" aria-label="Copy heading and permalink for Section 3.5: Notions of Metric Continuity">🔗</a></div>
 </section>
 </div>
