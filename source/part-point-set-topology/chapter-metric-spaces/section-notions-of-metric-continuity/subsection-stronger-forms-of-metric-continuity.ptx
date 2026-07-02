@@ -7,147 +7,429 @@
 
   <introduction>
     <p>
-      Text before the first subdivision.
+      Continuity is a fundamental and useful tool for mathematical analysis of maps between metric spaces. However, there are many pathological examples of maps which are continuous and yet do not behave as well as we might like. Therefore, we now turn our attention to a stronger notion of continuity, that of uniform continuity. At the beginning of this section, we saw a definition for metric continuity which posited the existence of a positive real number <m> \delta </m> for each point in the domain and each positive real number <m> \epsilon </m>. Informally, a map between metric spaces is <term> uniformly continuous </term> if the <m> \delta </m> associated to a given <m> \epsilon </m> may be chosen independent of position in the domain.
     </p>
   </introduction>
   
-  
-
-  <conclusion>
-    <p>
-      Text after the last subdivision.
-    </p>
-  </conclusion>
-</subsection>
-
-<!--
-
-  <definition xml:id="definition-TITLE">
+  <definition xml:id="definition-uniform-continuity">
     <title>
-      TITLE
+      Uniform continuity
     </title>
     
     <idx>
-      TERM
+      uniform continuity
     </idx>
     
     <notation>
       <usage>
-        <m>  </m>
+        <m> \UC \of{ X , Y } </m>
       </usage>
       
       <description>
         <p>
-          
+          the set of uniformly continuous maps from <m> X </m> to <m> Y </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \UC \of{ X } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the set of uniformly continuous real-valued functions on <m> X </m>
         </p>
       </description>
     </notation>
     
     <statement>
       <p>
+        A map <m> f \colon X \to Y </m> from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m> is called <term> uniformly continuous </term> if for all positive real numbers <m> \epsilon \gt 0 </m>, there is a positive real number <m> \delta \gt 0 </m> so that
         
+        <md>
+          \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \lt \epsilon
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } \in X </m> so that <m> \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } \lt \delta </m>.
+      </p>
+      
+      <p>
+        The set of uniformly continuous maps from <m> X </m> to <m> Y </m> is denoted <m> \UC \of{ X , Y } </m>. In the special case <m> \of{ Y , \rho_{ Y } } = \of{ \R , d } </m>, the set of uniformly continuous real-valued functions on <m> X </m> is denoted <m> \UC \of{ X } = \UC \of{ X , \R } </m>.
       </p>
     </statement>
   </definition>
-
-  <lemma xml:id="lemma-TITLE">
+  
+  <p>
+    Note that uniform continuity does not apply at a specific point, but rather over the entire domain of a map. <alert> It does not make sense to say that a map between metric spaces is uniformly continuous at a point. </alert>
+  </p>
+  
+  <example xml:id="example-uniform-continuity">
     <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </lemma>
-
-  <proposition xml:id="proposition-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </proposition>
-
-  <theorem xml:id="theorem-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </theorem>
-
-  <corollary xml:id="corollary-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </corollary>
-
-  <example xml:id="example-TITLE">
-    <title>
-      TITLE
+      Uniform continuity
     </title>
     
     <statement>
       <p>
+        The following are examples of uniformly continuous and not uniformly continuous maps between metric spaces:
         
+        <ul>
+          <li>
+            <p>
+              Any constant map between metric spaces is uniformly continuous. Indeed, fix metric spaces <m> \of{ X , \rho_{ X } } </m> and <m> \of{ Y , \rho_{ Y } } </m>, and consider a point <m> y \in Y </m>. The constant map <m> f \colon X \to Y </m> from <m> X </m> to <m> Y </m> defined by the formula <m> f \of{ x } = y </m> satisfies the condition
+              
+              <md>
+                \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } = \rho_{ Y } \of{ y , y } = 0
+              </md>
+              
+              for all points <m> x_{ 1 } , x_{ 2 } \in X </m>. Thus for a given positive real number <m> \epsilon \gt 0 </m>, we may choose any positive real number <m> \delta \gt 0 </m> and check that this choice verifies the uniform continuity condition.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The inclusion map of a metric subspace is uniformly continuous. Indeed, fix a subset <m> U \subseteq X </m> of a metric space <m> \of{ X , \rho } </m>, and note that the inclusion map <m> \iota \colon U \to X </m> satisfies the condition
+              
+              <md>
+                \rho \of{ \iota \of{ u_{ 1 } } , \iota \of{ u_{ 2 } } } = \rho \of{ u_{ 1 } , u_{ 2 } }
+              </md>
+              
+              for all points <m> u_{ 1 } , u_{ 2 } \in U </m>. Thus for a given positive real number <m> \epsilon \gt 0 </m>, we may choose <m> \delta = \epsilon \gt 0 </m> and check that this choice verifies the uniform continuity condition.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The real-valued function <m> f \colon \R \to \R </m> defined by the formula <m> f \of{ x } = x^{ 2 } </m> is continuous but not uniformly continuous. Indeed, for any positive real number <m> \delta \gt 0 </m>, let
+              
+              <md>
+                <mrow>
+                  x_{ 1 } \amp = \frac{ 1 }{ 2 \delta } \amp x_{ 2 } \amp = \frac{ 1 + \delta^{ 2 } }{ 2 \delta }
+                </mrow>
+              </md>.
+              
+              We observe that
+              
+              <md>
+                <mrow>
+                  \abs{ x_{ 1 } - x_{ 2 } } = \abs{ \frac{ 1 }{ 2 \delta } - \frac{ 1 + \delta^{ 2 } }{ 2 \delta } } = \abs{ \frac{ \delta^{ 2 } }{ 2 \delta } } = \frac{ \delta }{ 2 } \lt \delta
+                </mrow>
+              </md>,
+              
+              but
+              
+              <md>
+                \abs{ x_{ 1 } + x_{ 2 } } = \abs{ \frac{ 1 }{ 2 \delta } + \frac{ 1 + \delta^{ 2 } }{ 2 \delta } } = \abs{ \frac{ 2 + \delta^{ 2 } }{ 2 \delta } } = \frac{ 2 + \delta^{ 2 } }{ 2 \delta } = \frac{ 1 }{ \delta } + \frac{ \delta }{ 2 }
+              </md>,
+              
+              which implies that
+              
+              <md>
+                <mrow>
+                  \abs{ f \of{ x_{ 1 } } - f \of{ x_{ 2 } } } \amp = \abs{ x_{ 1 }^{ 2 } - x_{ 2 }^{ 2 } } = \abs{ \of{ x_{ 1 } - x_{ 2 } } \of{ x_{ 1 } + x_{ 2 } } } = \abs{ x_{ 1 } - x_{ 2 } } \cdot \abs{ x_{ 1 } + x_{ 2 } }
+                </mrow>
+                
+                <mrow>
+                  \amp = \of{ \frac{ \delta }{ 2 } } \of{ \frac{ 1 }{ \delta } + \frac{ \delta }{ 2 } } = \frac{ 1 }{ 2 } + \frac{ \delta^{ 2 } }{ 4 } \gt \frac{ 1 }{ 2 }
+                </mrow>
+              </md>.
+              
+              In particular, for the positive real number <m> \epsilon = \frac{ 1 }{ 2 } </m>, there is no positive real number <m> \delta \gt 0 </m> for which the uniform continuity criterion is satisfied.
+            </p>
+          </li>
+        </ul>
       </p>
     </statement>
   </example>
-
--->
+  
+  <p>
+    The definitions of continuity and uniform continuity are very similar at first glance. In fact, despite the above example of a continuous but not uniformly continuous function, it's not difficult to see that uniform continuity implies continuity.
+  </p>
+  
+  <proposition xml:id="proposition-uniform-continuity-implies-continuity">
+    <title>
+      Uniform continuity implies continuity
+    </title>
+    
+    <statement>
+      <p>
+        Any uniformly continuous map between metric spaces is continuous.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> f \colon X \to Y </m> be a uniformly continuous map from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m>. Consider a point <m> x \in X </m>, and let <m> \epsilon \gt 0 </m> be a positive real number. Since <m> f </m> is uniformly continuous, there is a positive real number <m> \delta \gt 0 </m> so that
+        
+        <md>
+          \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \lt \epsilon
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } \in X </m> so that <m> \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } \lt \delta </m>. In particular, we observe that
+        
+        <md>
+          \rho_{ Y } \of{ f \of{ x } , f \of{ x } } \lt \epsilon
+        </md>
+        
+        for all points <m> x \in X </m> so that <m> \rho_{ X } \of{ x , c } \lt \delta </m>, and so <m> f </m> is continuous at <m> c </m>. Since <m> c </m> was chosen to be an arbitrary point in <m> X </m>, <m> f </m> is continuous.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    Continuous maps between metric spaces (or other more general spaces) are fundamental objects in point-set topology. This is because lots of topological properties of spaces, which we will examine in the following section and chapter, are preserved under continuous maps. However, some of the more geometric properties, which start to approach notions of size, are not preserved under all continuous maps in general, but only under uniformly continuous maps. In the previous section, we introduced a notion of boundedness for subsets. While the image of a bounded subset of a metric space under a continuous map is not necessarily bounded, the image of a totally bounded subset of a metric space under a uniformly continuous map is totally bounded.
+  </p>
+  
+  <proposition xml:id="proposition-uniform-continuity-and-total-boundedness">
+    <title>
+      Uniform continuity and total boundedness
+    </title>
+    
+    <statement>
+      <p>
+        The image of a totally bounded subset of a metric space under a uniformly continuous map between metric spaces is totally bounded.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> f \colon X \to Y </m> be a uniformly continuous map from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m>, and consider a totally bounded subset <m> U \subseteq X </m>. We wish to show that <m> f \of{ U } </m> is totally bounded in <m> Y </m>.
+      </p>
+      
+      <p>
+        To that end, let <m> \epsilon \gt 0 </m> be a positive real number. Since <m> f </m> is uniformly continuous, there is a positive real number <m> \delta \gt 0 </m> so that
+        
+        <md>
+          \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \lt \epsilon
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } \in X </m> so that <m> \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } \lt \delta </m>. In particular, this implies that
+        
+        <md>
+          f \of{ \mB_{ \delta } \of{ x } } \subseteq \mB_{ \epsilon } \of{ f \of{ x } }
+        </md>
+        
+        for all points <m> x \in X </m>.
+      </p>
+      
+      <p>
+        Since <m> U </m> is totally bounded in <m> X </m>, there is a finite list <m> x_{ 1 } , \dotsc , x_{ n } \in X </m> so that
+        
+        <md>
+          U \subseteq \bigcup_{ k = 1 }^{ n }{ \mB_{ \delta } \of{ x_{ k } } }
+        </md>.
+        
+        We observe that
+        
+        <md>
+          <mrow>
+            f \of{ U } \amp \subseteq f \of{ \bigcup_{ k = 1 }^{ n }{ \mB_{ \delta } \of{ x_{ k } } } } = \bigcup_{ k = 1 }^{ n }{ f \of{ \mB_{ \delta } \of{ x_{ k } } } }
+          </mrow>
+          
+          <mrow>
+            \amp \subseteq \bigcup_{ k = 1 }^{ n }{ \mB_{ \epsilon } \of{ f \of{ x_{ k } } } }
+          </mrow>
+        </md>,
+        
+        and so <m> f \of{ U } </m> is totally bounded in <m> Y </m>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    So the uniformly continuous image of a totally bounded subset of a metric space is totally bounded. Just as in the case of plain continuity, the set of uniformly continuous maps from a metric space to a normed vector space itself forms a vector space under pointwise addition and scalar multiplication.
+  </p>
+  
+  <proposition xml:id="proposition-vector-arithmetic-and-uniform-continuity">
+    <title>
+      Vector arithmetic and uniform continuity
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ X , \rho } </m> be a metric space and <m> \of{ V , \norm{ \oparg } } </m> be a normed vector space.
+        
+        <ol>
+          <li>
+            <title>
+              Vector addition
+            </title>
+            
+            <p>
+              If two maps <m> f , g \colon X \to V </m> from <m> X </m> to <m> Y </m> are uniformly continuous, then their pointwise sum <m> f + g \colon X \to V </m> is also uniformly continuous.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Scalar multiplication
+            </title>
+            
+            <p>
+              If a map <m> f \colon X \to V </m> is uniformly continuous, then any pointwise scalar multiple <m> \alpha f </m> is also uniformly continuous.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Norm
+            </title>
+            
+            <p>
+              If a map <m> f \colon X \to V </m> is uniformly continuous, then its pointwise norm <m> \norm{ f } = \norm{ \oparg } \circ f </m> is also uniformly continuous.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            Let <m> \epsilon \gt 0 </m> be a positive real number. Since <m> f </m> and <m> g </m> are continuous, there are positive real numbers <m> \delta_{ f } , \delta_{ g } \gt 0 </m> so that
+            
+            <md>
+              \norm{ f \of{ x_{ 1 } } - f \of{ x_{ 2 } } } \lt \frac{ \epsilon }{ 2 }
+            </md>
+            
+            for all points <m> x_{ 1 } , x_{ 2 } \in X </m> so that <m> \rho \of{ x_{ 1 } , x_{ 2 } } \lt \delta_{ f } </m> and
+            
+            <md>
+              \norm{ g \of{ x_{ 1 } } - g \of{ x_{ 2 } } } \lt \frac{ \epsilon }{ 2 }
+            </md>
+            
+            for all points <m> x_{ 1 } , x_{ 2 } \in X </m> so that <m> \rho \of{ x_{ 1 } , x_{ 2 } } \lt \delta_{ g } </m>. Let <m> \delta = \min \of{ \set{ \delta_{ f } , \delta_{ g } } } \gt 0 </m>. We observe that
+            
+            <md>
+              <mrow>
+                \norm{ \of{ f + g } \of{ x_{ 1 } } - \of{ f + g } \of{ x_{ 2 } } } \amp = \norm{ f \of{ x_{ 1 } } + g \of{ x_{ 1 } } - f \of{ x_{ 2 } } - g \of{ x_{ 2 } } }
+              </mrow>
+              
+              <mrow>
+                \amp \leq \norm{ f \of{ x_{ 1 } } - f \of{ x_{ 2 } } } + \norm{ g \of{ x_{ 1 } } - g \of{ x_{ 2 } } }
+              </mrow>
+              
+              <mrow>
+                \amp \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+              </mrow>
+            </md>
+            
+            for all points <m> x_{ 1 } , x_{ 2 } \in X </m> so that <m> \rho \of{ x_{ 1 } , x_{ 2 } } \lt \delta </m>, and so <m> f + g </m> is uniformly continuous.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Let <m> \epsilon \gt 0 </m> be a positive real number. If <m> \alpha = 0 </m>, then <m> \alpha f = 0 f = \vect{ 0 } </m> is a constant map and therefore is uniformly continuous. We may therefore suppose that <m> \alpha \neq 0 </m> is non-zero.
+          </p>
+          
+          <p>
+            Let <m> \epsilon \gt 0 </m> be a positive real number. Since <m> f </m> is uniformly continuous, there is a positive real number <m> \delta \gt 0 </m> so that
+            
+            <md>
+              \norm{ f \of{ x_{ 1 } } - f \of{ x_{ 2 } } } \lt \frac{ \epsilon }{ \abs{ \alpha } }
+            </md>
+            
+            for all points <m> x_{ 1 } , x_{ 2 } \in X </m> so that <m> \rho \of{ x_{ 1 } , x_{ 2 } } \lt \delta </m>. We observe that
+            
+            <md>
+              <mrow>
+                \norm{ \of{ \alpha f } \of{ x_{ 1 } } - \of{ \alpha f } \of{ x_{ 2 } } } \amp = \norm{ \alpha f \of{ x_{ 1 } } - \alpha f \of{ x_{ 2 } } } = \norm{ \alpha \of{ f \of{ x_{ 1 } } - f \of{ x_{ 2 } } } }
+              </mrow>
+              
+              <mrow>
+                \amp = \abs{ \alpha } \norm{ f \of{ x_{ 1 } } - f \of{ x_{ 2 } } } \lt \abs{ \alpha } \of{ \frac{ \epsilon }{ \abs{ \alpha } } } = \epsilon
+              </mrow>
+            </md>
+            
+            for all points <m> x_{ 1 } , x_{ 2 } \in X </m> so that <m> \rho \of{ x_{ 1 } , x_{ 2 } } \lt \delta </m>, and so <m> \alpha f </m> is uniformly continuous.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Let <m> \epsilon \gt 0 </m> be a positive real number. Since <m> f </m> is uniformly continuous, there is a positive real number <m> \delta \gt 0 </m> so that
+            
+            <md>
+              \norm{ f \of{ x_{ 1 } } - f \of{ x_{ 2 } } } \lt \epsilon
+            </md>
+            
+            for all points <m> x_{ 1 } , x_{ 2 } \in X </m> so that <m> \rho \of{ x_{ 1 } , x_{ 2 } } \lt \delta </m>. We observe that <xref ref="proposition-reverse-triangle-inequality"/> implies that
+            
+            <md>
+              <mrow>
+                \abs{ \norm{ f } \of{ x_{ 1 } } - \norm{ f } \of{ x_{ 2 } } } \amp = \abs{ \norm{ f \of{ x_{ 1 } } } - \norm{ f \of{ x_{ 2 } } } } = \abs{ \norm{ f \of{ x_{ 1 } } } - \norm{ f \of{ x_{ 2 } } } }
+              </mrow>
+              
+              <mrow>
+                \amp = \abs{ \norm{ f \of{ x_{ 1 } } - \vect{ 0 } } - \norm{ f \of{ x_{ 2 } } - \vect{ 0 } } }
+              </mrow>
+              
+              <mrow>
+                \amp \leq \norm{ f \of{ x_{ 1 } } - f \of{ x_{ 2 } } } \lt \epsilon
+              </mrow>
+            </md>
+            
+            for all points <m> x_{ 1 } , x_{ 2 } \in X </m> so that <m> \rho \of{ x_{ 1 } , x_{ 2 } } \lt \delta </m>, so that <m> \norm{ f } </m> is uniformly continuous.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </proposition>
+  
+  <p>
+    A natural question to ask is whether the same holds for the pointwise product of uniformly continuous real-valued functions on a metric space. In fact, we have seen that this is not necessarily the case: the real-valued function <m> f \colon \R \to \R </m> defined by the formula <m> f \of{ x } = x </m> is uniformly continuous, but the pointwise product <m> \of{ f \cdot f } \of{ x } = f \of{ x } \cdot f \of{ x } = x^{ 2 } </m> is not uniformly continuous. However, since uniformly continuous maps are continuous and because the product of two continuous, real-valued functions is continuous, the pointwise product of two uniformly continuous, real-valued functions on a metric space is continuous.
+  </p>
+  
+  <p>
+    Just as in the case of continuous maps, the composition of uniformly continuous maps is uniformly continuous. This allows us to simplify the proofs of uniform continuity for a vast class of maps.
+  </p>
+  
+  <proposition xml:id="proposition-composition-of-uniformly-continuous-maps">
+    <title>
+      Composition of uniformly continuous maps
+    </title>
+    
+    <statement>
+      <p>
+        The composition of uniformly continuous maps between metric spaces is uniformly continuous.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> f \colon X \to Y </m> and <m> g \colon Y \to Z </m> be uniformly continuous maps between metric spaces <m> \of{ X , \rho_{ X } } </m>, <m> \of{ Y , \rho_{ Y } } </m>, and <m> \of{ Z , \rho_{ Z } } </m>. Let <m> \epsilon \gt 0 </m> be a positive real number. Since <m> g </m> is uniformly continuous, there is a positive real number <m> \eta \gt 0 </m> so that
+        
+        <md>
+          \rho_{ Z } \of{ g \of{ y_{ 1 } } , g \of{ y_{ 2 } } } \lt \epsilon
+        </md>
+        
+        for all points <m> y_{ 1 } , y_{ 2 } \in Y </m> so that <m> \rho_{ Y } \of{ y_{ 1 } , y_{ 2 } } \lt \eta </m>. Moreover, since <m> f </m> is uniformly continuous, there is a positive real number <m> \delta \gt 0 </m> so that
+        
+        <md>
+          \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \lt \eta
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } \in X </m> so that <m> \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } \lt \delta </m>.
+      </p>
+      
+      <p>
+        We observe that for all points <m> x_{ 1 } , x_{ 2 } \in X </m> if <m> \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } \lt \delta </m>, then <m> \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \lt \eta </m>, and so
+        
+        <md>
+          \rho_{ Z } \of{ \of{ g \circ f } \of{ x_{ 1 } } , \of{ g \circ f } \of{ x_{ 2 } } } = \rho_{ Z } \of{ g \of{ f \of{ x_{ 1 } } } , g \of{ f \of{ x_{ 2 } } } } \lt \epsilon
+        </md>.
+        
+        We conclude that <m> g \circ f </m> is uniformly continuous.
+      </p>
+    </proof>
+  </proposition>
+  
+  <conclusion>
+    <p>
+      Uniform continuity of a map has strong implications for its properties. However, there are even stronger notions of continuity.
+    </p>
+  </conclusion>
+</subsection>
