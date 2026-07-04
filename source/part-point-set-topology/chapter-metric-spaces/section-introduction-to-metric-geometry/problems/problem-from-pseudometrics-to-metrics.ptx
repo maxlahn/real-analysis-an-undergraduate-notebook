@@ -60,15 +60,39 @@
       </p>
     </statement>
     
-    <answer>
-      <p>
-        asdf
-      </p>
-    </answer>
-    
     <solution>
       <p>
-        asdf
+        Let <m> x \in X </m>, and note that <m> \rho \of{ x , x } = 0 </m>, so that <m> x \equiv_{ \rho } x </m>. Since this holds for all points <m> x \in X </m>, <m> \equiv_{ \rho } </m> is reflexive.
+      </p>
+      
+      <p>
+        Now let <m> x_{ 1 } , x_{ 2 } \in X </m>, and suppose that <m> x_{ 1 } \equiv_{ \rho } x_{ 2 } </m>. Then <m> \rho \of{ x_{ 1 } , x_{ 2 } } = 0 </m>, and so
+        
+        <md>
+          \rho \of{ x_{ 2 } , x_{ 1 } } = \rho \of{ x_{ 1 } , x_{ 2 } } = 0 
+        </md>;
+        
+        that is, <m> x_{ 2 } \equiv_{ \rho } x_{ 1 } </m>. Since this holds for all points <m> x_{ 1 } , x_{ 2 } \in X </m>, <m> \equiv_{ \rho } </m> is symmetric.
+      </p>
+      
+      <p>
+        Finally, let <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in X </m>, and suppose that <m> x_{ 1 } \equiv_{ \rho } x_{ 2 } </m> and <m> x_{ 2 } \equiv_{ \rho } x_{ 3 } </m>. Then
+        
+        <md>
+          \rho \of{ x_{ 1 } , x_{ 2 } } = \rho \of{ x_{ 2 } , x_{ 3 } } = 0
+        </md>.
+        
+        <xref ref="lemma-metrics-are-non-negative"/> and the triangle inequality together imply that
+        
+        <md>
+          0 \leq \rho \of{ x_{ 1 } , x_{ 3 } } \leq \rho \of{ x_{ 1 } , x_{ 2 } } + \rho \of{ x_{ 2 } , x_{ 3 } } = 0 + 0 = 0
+        </md>,
+        
+        so that <m> \rho \of{ x_{ 1 } , x_{ 3 } } = 0 </m>; that is, <m> x_{ 1 } \equiv_{ \rho } x_{ 3 } </m>. Since this holds for all points <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in X </m>, <m> \equiv_{ \rho } </m> is transitive.
+      </p>
+      
+      <p>
+        Since the binary relation <m> \equiv_{ \rho } </m> is reflexive, symmetric, and transitive, it is an equivalence relation on <m> X </m>.
       </p>
     </solution>
   </task>
@@ -84,15 +108,93 @@
       </p>
     </statement>
     
-    <answer>
-      <p>
-        asdf
-      </p>
-    </answer>
-    
     <solution>
       <p>
-        asdf
+        Let <m> x_{ 1 } , x_{ 2 } , x_{ 3 } , x_{ 4 } \in X </m>, and suppose that <m> x_{ 1 } \equiv_{ \rho } x_{ 3 } </m> and <m> x_{ 2 } \equiv_{ \rho } x_{ 4 } </m>. Then
+        
+        <md>
+          \rho \of{ x_{ 1 } , x_{ 3 } } = \rho \of{ x_{ 2 } , x_{ 4 } } = 0
+        </md>,
+        
+        and so
+        
+        <md>
+          <mrow>
+            \rho \of{ x_{ 1 } , x_{ 2 } } \amp \leq \rho \of{ x_{ 1 } , x_{ 3 } } + \rho \of{ x_{ 3 } , x_{ 4 } } + \rho \of{ x_{ 4 } , x_{ 2 } }
+          </mrow>
+          
+          <mrow>
+            \amp = \rho \of{ x_{ 1 } , x_{ 3 } } + \rho \of{ x_{ 3 } , x_{ 4 } } + \rho \of{ x_{ 2 } , x_{ 4 } }
+          </mrow>
+          
+          <mrow>
+            \amp = 0 + \rho \of{ x_{ 3 } , x_{ 4 } } + 0 = \rho \of{ x_{ 3 } , x_{ 4 } }
+          </mrow>
+        </md>,
+        
+        and similarly
+        
+        <md>
+          <mrow>
+            \rho \of{ x_{ 3 } , x_{ 4 } } \amp \leq \rho \of{ x_{ 3 } , x_{ 1 } } + \rho \of{ x_{ 1 } , x_{ 2 } } + \rho \of{ x_{ 2 } , x_{ 4 } }
+          </mrow>
+          
+          <mrow>
+            \amp = \rho \of{ x_{ 1 } , x_{ 3 } } + \rho \of{ x_{ 1 } , x_{ 2 } } + \rho \of{ x_{ 2 } , x_{ 4 } }
+          </mrow>
+          
+          <mrow>
+            \amp = 0 + \rho \of{ x_{ 1 } , x_{ 2 } } + 0 = \rho \of{ x_{ 1 } , x_{ 2 } }
+          </mrow>
+        </md>.
+        
+        We conclude that <m> \rho \of{ x_{ 1 } , x_{ 2 } } = \rho \of{ x_{ 3 } , x_{ 4 } } </m>, and so <m> \overline{ \rho } </m> is well-defined. It remains to show that <m> \overline{ \rho } </m> is a metric on <m> X / { \equiv_{ \rho } } </m>.
+      </p>
+      
+      <p>
+        To that end, first let <m> x_{ 1 } , x_{ 2 } \in X </m>, and note that
+        
+        <md>
+          \overline{ \rho } \of{ \class{ x_{ 1 } }_{ \equiv_{ \rho } } , \class{ x_{ 2 } }_{ \equiv_{ \rho } } } = 0
+        </md>
+        
+        if and only if <m> \rho \of{ x_{ 1 } , x_{ 2 } } = 0 </m>, which occurs precisely when <m> x_{ 1 } \equiv_{ \rho } x_{ 2 } </m>; that is, <m> \overline{ \rho } \of{ \class{ x_{ 1 } }_{ \equiv_{ \rho } } , \class{ x_{ 2 } }_{ \equiv_{ \rho } } } = 0 </m> if and only if <m> \class{ x_{ 1 } }_{ \equiv_{ \rho } } = \class{ x_{ 2 } }_{ \equiv_{ \rho } } </m>, and so <m> \overline{ \rho } </m> is non-degenerate.
+      </p>
+      
+      <p>
+        Now let <m> x_{ 1 } , x_{ 2 } \in X </m>, and note that
+        
+        <md>
+          <mrow>
+            \overline{ \rho } \of{ \class{ x_{ 1 } }_{ \equiv_{ \rho } } , \class{ x_{ 2 } }_{ \equiv_{ \rho } } } \amp = \rho \of{ x_{ 1 } , x_{ 2 } } = \rho \of{ x_{ 2 } , x_{ 1 } }
+          </mrow>
+          
+          <mrow>
+            \amp = \overline{ \rho } \of{ \class{ x_{ 2 } }_{ \equiv_{ \rho } } , \class{ x_{ 1 } }_{ \equiv_{ \rho } } }
+          </mrow>
+        </md>,
+        
+        so that <m> \overline{ \rho } </m> is symmetric.
+      </p>
+      
+      <p>
+        Finally, let <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in X </m>, and note that
+        
+        <md>
+          <mrow>
+            \overline{ \rho } \of{ \class{ x_{ 1 } }_{ \equiv_{ \rho } } , \class{ x_{ 3 } }_{ \equiv_{ \rho } } } \amp = \rho \of{ x_{ 1 } , x_{ 3 } } \leq \rho \of{ x_{ 1 } , x_{ 2 } } + \rho \of{ x_{ 2 } , x_{ 3 } }
+          </mrow>
+          
+          <mrow>
+            \amp = \overline{ \rho } \of{ \class{ x_{ 1 } }_{ \equiv_{ \rho } } , \class{ x_{ 2 } }_{ \equiv_{ \rho } } } + \overline{ \rho } \of{ \class{ x_{ 2 } }_{ \equiv_{ \rho } } , \class{ x_{ 3 } }_{ \equiv_{ \rho } } }
+          </mrow>
+        </md>,
+        
+        so that <m> \overline{ \rho } </m> satisfies the triangle inequality.
+      </p>
+      
+      <p>
+        Since <m> \overline{ \rho } </m> is non-degenerate, symmetric, and satisfies the triangle inequality, it is a metric on <m> X / { \equiv_{ \rho } } </m>.
       </p>
     </solution>
   </task>

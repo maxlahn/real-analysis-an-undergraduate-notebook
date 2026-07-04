@@ -23,7 +23,41 @@
   
   <solution>
     <p>
-      asdf
+      Let <m> x = \lim_{ n \to \infty }{ x_{ n } } </m>. Since <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> x </m> and <m> x \neq 0 </m>, there is a natural number <m> n_{ \epsilon } \in \N </m> so that
+      
+      <md>
+        \abs{ x_{ n } - x } \lt \min \of{ \set{ \frac{ \abs{ x } }{ 2 } , \frac{ \epsilon \abs{ x }^{ 2 } }{ 2 } } }
+      </md>
+      
+      for all indices <m> n \geq n_{ \epsilon } </m>. We observe that if <m> \abs{ x_{ n } - x } \lt \frac{ \abs{ x } }{ 2 } </m>, then
+      
+      <md>
+        <mrow>
+          \frac{ \abs{ x } }{ 2 } \amp = \abs{ x } - \frac{ \abs{ x } }{ 2 } \leq \abs{ x - x_{ n } } + \abs{ x_{ n } } - \frac{ \abs{ x } }{ 2 } \\
+        </mrow>
+        
+        <mrow>
+          \amp \lt \frac{ \abs{ x } }{ 2 } + \abs{ x_{ n } } - \frac{ \abs{ x } }{ 2 } = \abs{ x_{ n } }
+        </mrow>
+      </md>.
+      
+      In particular,
+      
+      <md>
+        <mrow>
+          \abs{ \frac{ 1 }{ x_{ n } } - \frac{ 1 }{ x } } \amp = \abs{ \frac{ x - x_{ n } }{ x_{ n } x } } = \frac{ \abs{ x_{ n } - x } }{ \abs{ x_{ n } } \cdot \abs{ x } }
+        </mrow>
+        
+        <mrow>
+          \amp \leq \frac{ \of{ \frac{ \epsilon \abs{ x }^{ 2 } }{ 2 } } }{ \of{ \frac{ \abs{ x } }{ 2 } } \abs{ x } } = \frac{ 2 \epsilon \abs{ x }^{ 2 } }{ 2 \abs{ x }^{ 2 } } = \epsilon
+        </mrow>
+      </md>
+      
+      for all indices <m> n \geq n_{ \epsilon } </m>. Thus
+      
+      <md>
+        \lim_{ n \to \infty }{ \frac{ 1 }{ x_{ n } } } = \frac{ 1 }{ x } = \frac{ 1 }{ \lim_{ n \to \infty }{ x_{ n } } }
+      </md>.
     </p>
   </solution>
 </exercise>

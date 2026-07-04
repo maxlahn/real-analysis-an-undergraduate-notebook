@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-alternative-characterization-of-uniform-convergence" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Alternative characterization of uniform convergence
+  </title>
+  
+  <statement>
+    <p>
+      Let <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of maps <m> f_{ n } \colon X \to Y </m> from a non-empty set <m> X \neq \emptyset </m> to a metric space <m> \of{ Y , \rho } </m>. Prove that <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges to a map <m> f \colon X \to Y </m> from <m> X </m> to <m> Y </m> if and only if for all positive real numbers <m> \epsilon \gt 0 </m>, there is a natural number <m> n_{ \epsilon } \in \N </m> so that
+      
+      <md>
+        0 \leq \sup_{ x \in X }{ \rho \of{ f_{ n } \of{ x } , f \of{ x } } } \lt \epsilon
+      </md>
+      
+      for all indices <m> n \geq n_{ \epsilon } </m>.
+    </p>
+  </statement>
+  
+  <solution>
+    <p>
+      We observe that for a given index <m> n \in \N </m>,
+      
+      <md>
+        0 \leq \sup_{ x \in X }{ \rho \of{ f_{ n } \of{ x } , f \of{ x } } } \lt \epsilon
+      </md>
+      
+      if and only if
+      
+      <md>
+        \rho \of{ f_{ n } \of{ x } , f \of{ x } } \lt \epsilon
+      </md>
+      
+      for all inputs <m> x \in X </m>. Thus the sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges uniformly to <m> f </m> if and only if there is a natural number <m> n_{ \epsilon } \in \N </m> so that either (and therefore both) of the above conditions holds for all indices <m> n \geq n_{ \epsilon } </m>.
+    </p>
+  </solution>
+</exercise>

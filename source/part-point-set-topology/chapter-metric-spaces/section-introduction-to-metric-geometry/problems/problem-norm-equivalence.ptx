@@ -14,7 +14,7 @@
       Two norms <m> \norm{ \oparg }_{ 1 } , \norm{ \oparg }_{ 2 } \colon V \to \R </m> on a real or complex vector space <m> V </m> are called <term> equivalent </term> if there are positive real numbers <m> A , B \in \opint{ 0 }{ \infty } </m> so that
       
       <md>
-      A \norm{ \vect{ v } }_{ 2 } \leq \norm{ \vect{ v } }_{ 1 } \leq B \norm{ \vect{ v } }_{ 2 }
+        A \norm{ \vect{ v } }_{ 2 } \leq \norm{ \vect{ v } }_{ 1 } \leq B \norm{ \vect{ v } }_{ 2 }
       </md>
       
       for all vectors <m> \vect{ v } \in V </m>.
@@ -30,7 +30,61 @@
     
     <solution>
       <p>
-        asdf
+        First let <m> \norm{ \oparg } \colon V \to \R </m> be a norm on <m> V </m>, and note that
+        
+        <md>
+          1 \norm{ \vect{ v } } \leq \norm{ \vect{ v } } \leq 1 \norm{ \vect{ v } }
+        </md>
+        
+        for all vectors <m> \vect{ v } \in V </m>. Thus <m> \norm{ \oparg } </m> and <m> \norm{ \oparg } </m> are equivalent, and so norm equivalence is reflexive.
+      </p>
+      
+      <p>
+        Now let <m> \norm{ \oparg }_{ 1 } , \norm{ \oparg }_{ 2 } \colon V \to \R </m> be norms on <m> V </m>, and suppose that <m> \norm{ \oparg }_{ 1 } </m> and <m> \norm{ \oparg }_{ 2 } </m> are equivalent. Then there are positive real numbers <m> A , B \in \opint{ 0 }{ \infty } </m> so that
+        
+        <md>
+          A \norm{ \vect{ v } }_{ 2 } \leq \norm{ \vect{ v } }_{ 1 } \leq B \norm{ \vect{ v } }_{ 2 }
+        </md>
+      
+        for all vectors <m> \vect{ v } \in V </m>, and so
+        
+        <md>
+          \frac{ 1 }{ B } \norm{ \vect{ v } }_{ 1 } \leq \norm{ \vect{ v } }_{ 2 } \leq \frac{ 1 }{ A } \norm{ \vect{ v } }_{ 1 }
+        </md>
+        
+        for all vectors <m> \vect{ v } \in V </m>. Thus <m> \norm{ \oparg }_{ 2 } </m> and <m> \norm{ \oparg }_{ 1 } </m> are equivalent, and so norm equivalence is symmetric.
+      </p>
+      
+      <p>
+        Finally, let <m> \norm{ \oparg }_{ 1 } , \norm{ \oparg }_{ 2 } , \norm{ \oparg }_{ 3 } \colon V \to \R </m> be norms on <m> V </m>, and suppose that <m> \norm{ \oparg }_{ 1 } </m> and <m> \norm{ \oparg }_{ 2 } </m> are equivalent and that <m> \norm{ \oparg }_{ 2 } </m> and <m> \norm{ \oparg }_{ 3 } </m> are equivalent. Then there are positive real numbers <m> A , B , C , D \in \opint{ 0 }{ \infty } </m> so that
+        
+        <md>
+          A \norm{ \vect{ v } }_{ 2 } \leq \norm{ \vect{ v } }_{ 1 } \leq B \norm{ \vect{ v } }_{ 2 }
+        </md>
+        
+        and
+        
+        <md>
+          C \norm{ \vect{ v } }_{ 3 } \leq \norm{ \vect{ v } }_{ 2 } \leq D \norm{ \vect{ v } }_{ 3 }
+        </md>
+      
+        for all vectors <m> \vect{ v } \in V </m>, and so
+        
+        <md>
+          <mrow>
+            A C \norm{ \vect{ v } }_{ 3 } \amp \leq A \norm{ \vect{ v } }_{ 2 } \leq \norm{ \vect{ v } }_{ 1 }
+          </mrow>
+          
+          <mrow>
+            \amp \leq B \norm{ \vect{ v } }_{ 2 } \leq B D \norm{ \vect{ v } }_{ 3 }
+          </mrow>
+        </md>
+        
+        for all vectors <m> \vect{ v } \in V </m>. Thus <m> \norm{ \oparg }_{ 1 } </m> and <m> \norm{ \oparg }_{ 3 } </m> are equivalent, and so norm equivalence is transitive.
+      </p>
+      
+      <p>
+        Since norm equivalence is reflexive, symmetric, and transitive, it is an equivalence relation on the set of norms on <m> V </m>.
       </p>
     </solution>
   </task>
@@ -44,7 +98,39 @@
     
     <solution>
       <p>
-        asdf
+        We will show that any <m> p </m>-norm on <m> \R^{ n } </m> with <m> 1 \leq p \lt \infty </m> is equivalent to the <m> \infty </m>-norm; (a) above implies that this suffices. To that end, let <m> \vect{ v } = \of{ v_{ k } }_{ k = 1 }^{ n } \in \R^{ n } </m>, and first note that
+        
+        <md>
+          \abs{ v_{ j } } = \of{ \abs{ v_{ j } }^{ p } }^{ \frac{ 1 }{ p } } \leq \of{ \sum_{ k = 1 }^{ m }{ \abs{ v_{ k } }^{ p } } }^{ \frac{ 1 }{ p } } = \norm{ \vect{ v } }_{ p }
+        </md>
+        
+        for all indices <m> 1 \leq j \leq m </m>, and so
+        
+        <md>
+          \norm{ \vect{ v } }_{ \infty } = \max_{ 1 \leq j \leq m }{ \abs{ v_{ j } } } \leq \norm{ \vect{ v } }_{ p }
+        </md>.
+      </p>
+      
+      <p>
+        On the other hand, we note that
+        
+        <md>
+          <mrow>
+            \norm{ \vect{ v } }_{ p } \amp = \of{ \sum_{ j = 1 }^{ m }{ \abs{ v_{ j } }^{ p } } }^{ \frac{ 1 }{ p } } \leq \of{ \sum_{ j = 1 }^{ m }{ \max_{ 1 \leq k \leq m }{ \abs{ v_{ k } }^{ p } } } }^{ \frac{ 1 }{ p } }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ m \norm{ \vect{ v } }_{ \infty }^{ p } }^{ \frac{ 1 }{ p } } = m^{ \frac{ 1 }{ p } } \norm{ \vect{ v } }_{ \infty }
+          </mrow>
+        </md>.
+        
+        Since
+        
+        <md>
+          1 \norm{ \vect{ v } }_{ \infty } \norm{ \vect{ v } }_{ p } \leq m^{ \frac{ 1 }{ p } } \norm{ \vect{ v } }_{ \infty }
+        </md>
+        
+        for all vectors <m> \vect{ v } \in V </m>, <m> \norm{ \oparg }_{ p } </m> and <m> \norm{ \oparg }_{ \infty } </m> are equivalent.
       </p>
     </solution>
   </task>

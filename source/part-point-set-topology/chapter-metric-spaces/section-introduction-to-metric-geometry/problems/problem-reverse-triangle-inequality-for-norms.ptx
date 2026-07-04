@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-reverse-triangle-inequality-for-norms" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Reverse triangle inequality for norms
+  </title>
+  
+  <statement>
+    <p>
+      Prove that
+      
+      <md>
+        \abs{ \norm{ \vect{ v }_{ 1 } } - \norm{ \vect{ v }_{ 2 } } } \leq \norm{ \vect{ v }_{ 1 } - \vect{ v }_{ 2 } }
+      </md>
+      
+      for all vectors <m> \vect{ v }_{ 1 } , \vect{ v }_{ 2 } \in V </m> in a normed vector space <m> \of{ V , \norm{ \oparg } } </m>.
+    </p>
+  </statement>
+  
+  <solution>
+    <p>
+      The absolute homogeneity and subadditivity of the norm <m> \norm{ \oparg } </m> on <m> V </m> implies that
+      
+      <md>
+        <mrow>
+          \norm{ \vect{ v }_{ 1 } } - \norm{ \vect{ v }_{ 2 } } \amp \leq \norm{ \vect{ v }_{ 1 } - \vect{ v }_{ 2 } + \vect{ v }_{ 2 } } - \norm{ \vect{ v }_{ 2 } }
+        </mrow>
+        
+        <mrow>
+          \amp = \norm{ \vect{ v }_{ 1 } - \vect{ v }_{ 2 } } + \norm{ \vect{ v }_{ 2 } } - \norm{ \vect{ v }_{ 2 } } = \norm{ \vect{ v }_{ 1 } - \vect{ v }_{ 2 } }
+        </mrow>
+      </md>
+      
+      and
+      
+      <md>
+        <mrow>
+          \norm{ \vect{ v }_{ 2 } } - \norm{ \vect{ v }_{ 1 } } \amp \leq \norm{ \vect{ v }_{ 2 } - \vect{ v }_{ 1 } + \vect{ v }_{ 1 } } - \norm{ \vect{ v }_{ 1 } }
+        </mrow>
+        
+        <mrow>
+          \amp = \norm{ \vect{ v }_{ 2 } - \vect{ v }_{ 1 } } + \norm{ \vect{ v }_{ 1 } } - \norm{ \vect{ v }_{ 1 } } = \norm{ \vect{ v }_{ 2 } - \vect{ v }_{ 1 } }
+        </mrow>
+        
+        <mrow>
+          \amp = \abs{ -1 } \norm{ \vect{ v }_{ 2 } - \vect{ v }_{ 1 } } = \norm{ \vect{ v }_{ 1 } - \vect{ v }_{ 2 } }
+        </mrow>
+      </md>.
+      
+      Thus
+      
+      <md>
+        \abs{ \norm{ \vect{ v }_{ 1 } } - \norm{ \vect{ v }_{ 2 } } } = \max \of{ \set{ \norm{ \vect{ v }_{ 1 } } - \norm{ \vect{ v }_{ 2 } } , \norm{ \vect{ v }_{ 2 } } - \norm{ \vect{ v }_{ 1 } } } } \leq \norm{ \vect{ v }_{ 1 } - \vect{ v }_{ 2 } }
+      </md>.
+    </p>
+  </solution>
+</exercise>

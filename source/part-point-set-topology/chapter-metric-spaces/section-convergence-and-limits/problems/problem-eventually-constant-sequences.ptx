@@ -7,7 +7,7 @@
   
   <introduction>
     <p>
-      A sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of elements <m> x_{ n } \in X </m> of a set <m> X </m> is called <term> eventually constant </term> if there is an element <m> x \in X </m> and a natural number <m> n_{ 0 } \in \N </m> so that <m> x_{ n } = x </m> for all indices <m> n \geq n_{ 0 } </m>.
+      A sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of elements <m> x_{ n } \in X </m> of a set <m> X </m> is called <term> eventually constant </term> if there is a point <m> x \in X </m> and a natural number <m> n_{ 0 } \in \N </m> so that <m> x_{ n } = x </m> for all indices <m> n \geq n_{ 0 } </m>.
     </p>
   </introduction>
   
@@ -20,7 +20,13 @@
     
     <solution>
       <p>
-        asdf
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be an eventually constant sequence of points <m> x_{ n } \in X </m> in a metric space <m> \of{ X , \rho } </m>. Then there is a point <m> x \in X </m> and a natural number <m> n_{ 0 } \in \N </m> so that <m> x_{ n } = x </m> for all indices <m> n \geq n_{ 0 } </m>. Let <m> \epsilon \gt 0 </m> be a positive real number, and observe that
+        
+        <md>
+          \rho \of{ x_{ n } , x } = \rho \of{ x , x } = 0 \lt \epsilon
+        </md>
+        
+        for all indices <m> n \geq n_{ 0 } </m>. We conclude that the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> x </m>.
       </p>
     </solution>
   </task>

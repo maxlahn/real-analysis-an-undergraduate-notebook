@@ -88,7 +88,7 @@
           S = \bigcap_{ T \in \mathcal{ T } }{ T }
         </md>.
         
-        By (a) above, <m> S </m> is an equivalence relation on <m> X </m>. Since <m> R \subseteq T </m> for all <m> T \in \mathcal{ T } </m>, (a) of <xref ref="reading-question-indexed-intersections-and-unions"/> implies that <m> R \subseteq S </m>; that is, <m> S </m> satisfies condition (1). On the other hand, <m> S \subseteq T </m> for all <m> T \in \mathcal{ T } </m>, and so <m> S </m> satisfies condition (2).
+        By (a) above, <m> S </m> is an equivalence relation on <m> X </m>. Since <m> R \subseteq T </m> for all <m> T \in \mathcal{ T } </m>, (a) of <xref ref="problem-indexed-intersections-and-unions"/> implies that <m> R \subseteq S </m>; that is, <m> S </m> satisfies condition (1). On the other hand, <m> S \subseteq T </m> for all <m> T \in \mathcal{ T } </m>, and so <m> S </m> satisfies condition (2).
       </p>
       
       <p>

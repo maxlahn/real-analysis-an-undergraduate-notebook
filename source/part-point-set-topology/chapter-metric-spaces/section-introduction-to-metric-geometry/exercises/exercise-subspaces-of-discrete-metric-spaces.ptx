@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="exercise-subspaces-of-discrete-metric-spaces" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Subspaces of discrete metric spaces
+  </title>
+  
+  <statement>
+    <p>
+      Let <m> U \subseteq X </m> be a subset of a discrete metric space <m> \of{ X , \delta_{ X } } </m>. Verify that the metric <m> \rest{ \delta_{ X } }_{ U } </m> induced on <m> U </m> by <m> \delta_{ X } </m> is the discrete metric <m> \delta_{ U } </m> on <m> U </m>.
+    </p>
+  </statement>
+  
+  <solution>
+    <p>
+      Let <m> \iota \colon U \to X </m> be the inclusion map of <m> U </m> into <m> X </m>, and consider points <m> u_{ 1 } , u_{ 2 } \in U </m>. If <m> u_{ 1 } = u_{ 2 } </m>, then <m> \iota \of{ u_{ 1 } } = \iota \of{ u_{ 2 } } </m>, and so
+      
+      <md>
+        \rest{ \delta_{ X } }_{ U } \of{ u_{ 1 } , u_{ 2 } } = \delta_{ X } \of{ \iota \of{ u_{ 1 } } , \iota \of{ u_{ 2 } } } = 0 = \delta_{ U } \of{ u_{ 1 } , u_{ 2 } }
+      </md>.
+      
+      On the other hand, since <m> \iota </m> is injective, if <m> u_{ 1 } \neq u_{ 2 } </m>, then <m> \iota \of{ u_{ 1 } } \neq \iota \of{ u_{ 2 } } </m>, and so
+      
+      <md>
+        \rest{ \delta_{ X } }_{ U } \of{ u_{ 1 } , u_{ 2 } } = \delta_{ X } \of{ \iota \of{ u_{ 1 } } , \iota \of{ u_{ 2 } } } = 1 = \delta_{ U } \of{ u_{ 1 } , u_{ 2 } }
+      </md>.
+      
+      In either case, <m> \rest{ \delta_{ X } }_{ U } \of{ u_{ 1 } , u_{ 2 } } = \delta_{ U } \of{ u_{ 1 } , u_{ 2 } } </m>, and so <m> \rest{ \delta_{ X } }_{ U } = \delta_{ U } </m>.
+    </p>
+  </solution>
+</exercise>

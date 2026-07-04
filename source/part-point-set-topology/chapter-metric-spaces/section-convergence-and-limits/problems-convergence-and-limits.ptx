@@ -11,11 +11,13 @@
     </p>
   </introduction>
   
-  <xi:include href="./problems/problem-convergence-in-your-own-words.ptx"/>
-  
   <xi:include href="./problems/problem-eventually-constant-sequences.ptx"/>
   
   <xi:include href="./problems/problem-sequential-convergence-in-the-infinity-metric.ptx"/>
+  
+  <xi:include href="./problems/problem-alternative-characterization-of-uniform-convergence.ptx"/>
+  
+  <xi:include href="./problems/problem-uniqueness-of-map-limits.ptx"/>
 
   <conclusion>
     <p>

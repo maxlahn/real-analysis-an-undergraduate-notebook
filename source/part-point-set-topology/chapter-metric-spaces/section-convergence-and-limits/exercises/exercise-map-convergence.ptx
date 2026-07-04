@@ -7,7 +7,7 @@
   
   <introduction>
     <p>
-      Determine whether or not the given real-valued function converges at the given input. If the function converges, find the limit.
+      Determine whether or not the given real-valued function converges at the given input. If the function converges, find the limit and express your answer using limit notation.
     </p>
   </introduction>
   
@@ -25,7 +25,7 @@
             \end{cases}
         </md>.
         
-        Determine whether or not <m> f </m> converges at <m> 0 </m>. If <m> f </m> converges at <m> 0 </m>, find the limit.
+        Determine whether or not <m> f </m> converges at <m> 0 </m>. If <m> f </m> converges at <m> 0 </m>, find the limit and express your answer using limit notation.
       </p>
     </statement>
     
@@ -34,6 +34,24 @@
         <m> f </m> does not converge at <m> 0 </m>.
       </p>
     </answer>
+    
+    <solution>
+      <p>
+        We observe that
+        
+        <md>
+          \lim_{ n \to \infty }{ f \of{ \frac{ 1 }{ n } } } = \lim_{ n \to \infty }{ 1 } = 1
+        </md>
+        
+        and
+        
+        <md>
+          \lim_{ n \to \infty }{ f \of{ -\frac{ 1 }{ n } } } = \lim_{ n \to \infty }{ -1 } = -1
+        </md>.
+        
+        If <m> f </m> converged at <m> 0 </m>, then the above limits to have the same value. Since they do not have the same value, <m> f </m> does not converge at <m> 0 </m>.
+      </p>
+    </solution>
   </exercise>
   
   <exercise>
@@ -45,13 +63,17 @@
           g \of{ y } = y^{ 2 } - 2 y + 1
         </md>.
         
-        Determine whether or not <m> g </m> converges at <m> 0 </m>. If <m> g </m> converges at <m> 0 </m>, find the limit.
+        Determine whether or not <m> g </m> converges at <m> 0 </m>. If <m> g </m> converges at <m> 0 </m>, find the limit and express your answer using limit notation.
       </p>
     </statement>
     
     <answer>
       <p>
-        <m> \lim_{ y \to 0 }{ g \of{ y } } = 1 </m>.
+        <m> g </m> converges at <m> 0 </m> to <m> 1 </m>; that is,
+        
+        <md>
+          \lim_{ y \to 0 }{ g \of{ y } } = 1
+        </md>.
       </p>
     </answer>
     
@@ -87,7 +109,7 @@
           h \of{ z } = \sqrt{ z }
         </md>.
         
-        Determine whether or not <m> h </m> converges at <m> 4 </m>. If <m> h </m> converges at <m> 4 </m>, find the limit.
+        Determine whether or not <m> h </m> converges at <m> 4 </m>. If <m> h </m> converges at <m> 4 </m>, find the limit and express your answer using limit notation.
       </p>
     </statement>
     

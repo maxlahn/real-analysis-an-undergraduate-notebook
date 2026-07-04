@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="exercise-scalar-multiples-of-metrics" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Scalar multiples of metrics
+  </title>
+  
+  <statement>
+    <p>
+      Give an example of a real number <m> \alpha \in \R </m> and a metric <m> \rho \colon X \times X \to \R </m> so that <m> \alpha \rho </m> is not a metric.
+    </p>
+  </statement>
+  
+  <answer>
+    <p>
+      Any non-positive real number <m> \alpha \leq 0 </m> and any metric <m> \rho \colon X \times X \to \R </m> on a set <m> X </m> with at least two distinct points are correct answers.
+    </p>
+  </answer>
+  
+  <solution>
+    <p>
+      Since <xref ref="lemma-metrics-are-non-negative"/> implies that metrics take only non-negative values, any non-positive real number <m> \alpha \leq 0 </m> and any metric <m> \rho \colon X \times X \to \R </m> on a set <m> X </m> with at least two distinct points are correct answers.
+    </p>
+  </solution>
+</exercise>

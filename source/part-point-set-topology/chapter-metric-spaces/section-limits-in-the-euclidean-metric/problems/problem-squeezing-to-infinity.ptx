@@ -20,7 +20,13 @@
     
     <solution>
       <p>
-        asdf
+        Let <m> B \in \R </m> be a real number. Since <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> diverges to <m> \infty </m>, there is a natural number <m> n_{ B } \in \N </m> so that <m> x_{ n } \gt B </m> for all indices <m> n \geq n_{ B } </m>. We observe that
+        
+        <md>
+          y_{ n } \geq x_{ n } \gt B
+        </md>
+        
+        for all indices <m> n \geq n_{ B } </m>. Thus the sequence <m> \of{ y_{ n } }_{ n = 0 }^{ \infty } </m> diverges to <m> \infty </m>.
       </p>
     </solution>
   </task>
@@ -34,7 +40,13 @@
     
     <solution>
       <p>
-        asdf
+        Let <m> B \in \R </m> be a real number. Since <m> \of{ y_{ n } }_{ n = 0 }^{ \infty } </m> diverges to <m> -\infty </m>, there is a natural number <m> n_{ B } \in \N </m> so that <m> y_{ n } \lt B </m> for all indices <m> n \geq n_{ B } </m>. We observe that
+        
+        <md>
+          x_{ n } \leq y_{ n } \lt B
+        </md>
+        
+        for all indices <m> n \geq n_{ B } </m>. Thus the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> diverges to <m> -\infty </m>.
       </p>
     </solution>
   </task>

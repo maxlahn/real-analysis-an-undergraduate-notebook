@@ -62,7 +62,19 @@
     
     <solution>
       <p>
-        asdf
+        An ultrametric is non-degenerate and symmetric, and so it remains only to show that it satisfies the triangle inequality. We first observe that given points <m> x_{ 1 } , x_{ 2 } \in X </m> in an ultrametric space <m> \of{ X , \rho } </m>,
+        
+        <md>
+          \rho \of{ x_{ 1 } , x_{ 2 } } = \max \of{ \set{ \rho \of{ x_{ 1 } , x_{ 2 } } , \rho \of{ x_{ 2 } , x_{ 1 } } } } \geq \rho \of{ x_{ 1 } , x_{ 1 } } = 0
+        </md>;
+        
+        that is, ultrametrics take only positive values. This implies that
+        
+        <md>
+          \rho \of{ x_{ 1 } , x_{ 3 } } \leq \max \of{ \set{ \rho \of{ x_{ 1 } , x_{ 2 } } , \rho \of{ x_{ 2 } , x_{ 3 } } } } \leq \rho \of{ x_{ 1 } , x_{ 2 } } + \rho \of{ x_{ 2 } , x_{ 3 } }
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in X </m>, so that <m> \rho </m> satisfies the triangle inequality and is therefore a metric on <m> X </m>.
       </p>
     </solution>
   </task>
@@ -96,7 +108,113 @@
     
     <solution>
       <p>
-        asdf
+        First let <m> q_{ 1 } , q_{ 2 } \in \Q </m> be rational numbers, and suppose that <m> q_{ 1 } = q_{ 2 } </m>. Then
+        
+        <md>
+          \rho_{ p } \of{ q_{ 1 } , q_{ 2 } } = \abs{ q_{ 1 } - q_{ 2 } }_{ p } = \abs{ 0 }_{ p } = 0
+        </md>.
+        
+        Conversely, now suppose that <m> q_{ 1 } \neq q_{ 2 } </m>. Then <m> q_{ 1 } - q_{ 2 } \neq 0 </m>, and so
+        
+        <md>
+          \rho_{ p } \of{ q_{ 1 } , q_{ 2 } } = \abs{ q_{ 1 } - q_{ 2 } }_{ p } = p^{ -k_{ p } \of{ q_{ 1 } - q_{ 2 } } } \neq 0
+        </md>.
+        
+        Since <m> \rho_{ p } \of{ q_{ 1 } , q_{ 2 } } = 0 </m> if and only if <m> q_{ 1 } = q_{ 2 } </m>, <m> \rho_{ p } </m> is non-degenerate.
+      </p>
+      
+      <p>
+        Now let <m> q_{ 1 } , q_{ 2 } \in \Q </m>, and observe that if
+        
+        <md>
+          q_{ 1 } - q_{ 2 } = p^{ k } \of{ \frac{ a }{ b } }
+        </md>
+        
+        for some integers <m> a , b \in \Z </m> which are not divisible by <m> p </m>, then
+        
+        <md>
+          q_{ 2 } - q_{ 1 } = p^{ k } \of{ \frac{ -a }{ b } }
+        </md>,
+        
+        and <m> p </m> does not divide <m> -a </m> or <m> b </m>. Thus <m> k_{ p } \of{ q_{ 1 } - q_{ 2 } } = k_{ p } \of{ q_{ 2 } - q_{ 1 } } </m>, and so
+        
+        <md>
+          <mrow>
+            \rho_{ p } \of{ q_{ 1 } , q_{ 2 } } \amp = \abs{ q_{ 1 } - q_{ 2 } }_{ p } = p^{ -k_{ p } \of{ q_{ 1 } - q_{ 2 } } }
+          </mrow>
+          
+          <mrow>
+            \amp = p^{ -k_{ p } \of{ q_{ 2 } - q_{ 1 } } } = \abs{ q_{ 2 } - q_{ 1 } }_{ p } = \rho_{ p } \of{ q_{ 2 } , q_{ 1 } }
+          </mrow>
+        </md>.
+        
+        We conclude that <m> \rho_{ p } </m> is symmetric.
+      </p>
+      
+      <p>
+        Finally, let <m> q_{ 1 } , q_{ 2 } , q_{ 3 } \in \Q </m>, and write
+        
+        <md>
+          <mrow>
+            q_{ 1 } - q_{ 2 } \amp = p^{ j } \of{ \frac{ a }{ b } } \amp q_{ 2 } - q_{ 3 } \amp = p^{ k } \of{ \frac{ c }{ d } }
+          </mrow>
+        </md>
+        
+        for some integers <m> j , k \in \Z </m> and some integers <m> a , b , c , d \in \Z </m> which are not divisible by <m> p </m>. We observe that if <m> j \leq k </m>, then
+        
+        <md>
+          <mrow>
+            q_{ 1 } - q_{ 3 } \amp = q_{ 1 } - q_{ 2 } + q_{ 2 } - q_{ 3 } = p^{ j } \of{ \frac{ a }{ b } } + p^{ k } \of{ \frac{ c }{ d } }
+          </mrow>
+          
+          <mrow>
+            \amp = p^{ j } \of{ \frac{ a }{ b } + p^{ k - j } \of{ \frac{ c }{ d } } } = p^{ j } \of{ \frac{ a d + p^{ k - j } b c }{ b d } }
+          </mrow>
+        </md>,
+        
+        where <m> p </m> does not divide <m> a d + p^{ k - j } b c </m> or <m> b d </m>. On the other hand, if <m> k \leq j </m>, then
+        
+        <md>
+          <mrow>
+            q_{ 1 } - q_{ 3 } \amp = q_{ 1 } - q_{ 2 } + q_{ 2 } - q_{ 3 } = p^{ j } \of{ \frac{ a }{ b } } + p^{ k } \of{ \frac{ c }{ d } }
+          </mrow>
+          
+          <mrow>
+            \amp = p^{ k } \of{ p^{ j - k } \of{ \frac{ a }{ b } } + \frac{ c }{ d } } = p^{ j } \of{ \frac{ p^{ j - k } a d + b c }{ b d } }
+          </mrow>
+        </md>,
+        
+        where <m> p </m> does not divide <m> p^{ j - k } a d + b c </m> or <m> b d </m>.
+      </p>
+      
+      <p>
+        In summary, we have shown that
+        
+        <md>
+          k_{ p } \of{ q_{ 1 } - q_{ 3 } } = \min \of{ \set{ k_{ p } \of{ q_{ 1 } - q_{ 2 } } , k_{ p } \of{ q_{ 2 } - q_{ 3 } } } }
+        </md>,
+        
+        so that
+        
+        <md>
+          <mrow>
+            \rho_{ p } \of{ q_{ 1 } , q_{ 3 } } \amp = \abs{ q_{ 1 } - q_{ 3 } }_{ p } = p^{ -k_{ p } \of{ q_{ 1 } - q_{ 3 } } } = p^{ -\min \of{ \set{ k_{ p } \of{ q_{ 1 } - q_{ 2 } } , k_{ p } \of{ q_{ 2 } - q_{ 3 } } } } }
+          </mrow>
+          
+          <mrow>
+            \amp = p^{ \max \of{ \set{ -k_{ p } \of{ q_{ 1 } - q_{ 2 } } , -k_{ p } \of{ q_{ 2 } - q_{ 3 } } } } } = \max \of{ \set{ p^{ -k_{ p } \of{ q_{ 1 } - q_{ 2 } } } , p^{ -k_{ p } \of{ q_{ 2 } - q_{ 3 } } } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \max \of{ \set{ \abs{ q_{ 1 } - q_{ 2 } }_{ p } , \abs{ q_{ 2 } - q_{ 3 } }_{ p } } } = \max \of{ \set{ \rho_{ p } \of{ q_{ 1 } , q_{ 2 } } , \rho_{ p } \of{ q_{ 2 } , q_{ 3 } } } }
+          </mrow>
+        </md>;
+        
+        that is, <m> \rho_{ p } </m> satisfies the strong triangle inequality.
+      </p>
+      
+      <p>
+        Since the <m> p </m>-adic metric <m> \rho_{ p } \colon \Q \times \Q \to \R </m> is non-degenerate, symmetric, and satisfies the strong triangle inequality, it is an ultrametric on <m> \Q </m>.
       </p>
     </solution>
   </task>
@@ -104,13 +222,31 @@
   <task>
     <statement>
       <p>
-        Prove that for all points <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in X </m> in an ultrametric space <m> \of{ X , \rho } </m>, if <m> \rho_{ x_{ 1 } , x_{ 2 } } \leq \rho \of{ x_{ 2 } , x_{ 3 } } </m>, then <m> \rho \of{ x_{ 1 } , x_{ 3 } } = \rho \of{ x_{ 2 } , x_{ 3 } } </m>.
+        Prove that for all points <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in X </m> in an ultrametric space <m> \of{ X , \rho } </m>, at least two of the distances <m> \rho \of{ x_{ 1 } , x_{ 2 } } </m>, <m> \rho \of{ x_{ 2 } , x_{ 3 } } </m>, and <m> \rho \of{ x_{ 1 } , x_{ 3 } } </m> are equal.
       </p>
     </statement>
     
     <solution>
       <p>
-        asdf
+        This follows from applications of the strong triangle inequality. In particular, suppose that <m> \rho \of{ x_{ 1 } , x_{ 2 } } \neq \rho \of{ x_{ 2 } , x_{ 3 } } </m>. Up to renaming <m> x_{ 1 } </m>, <m> x_{ 2 } </m>, and <m> x_{ 3 } </m>, we may suppose that <m> \rho \of{ x_{ 1 } , x_{ 2 } } \lt \rho \of{ x_{ 2 } , x_{ 3 } } </m>. Then
+        
+        <md>
+          \rho \of{ x_{ 1 } , x_{ 3 } } \leq \max \of{ \set{ \rho \of{ x_{ 1 } , x_{ 2 } } , \rho \of{ x_{ 2 } , x_{ 3 } } } } = \rho \of{ x_{ 2 } , x_{ 3 } }
+        </md>.
+        
+        Both <m> \rho \of{ x_{ 1 } , x_{ 2 } } \lt \rho \of{ x_{ 2 } , x_{ 3 } } </m> and <m> \rho \of{ x_{ 1 } , x_{ 3 } } \leq \rho \of{ x_{ 2 } , x_{ 3 } } </m>, and so
+        
+        <md>
+          \max \of{ \set{ \rho \of{ x_{ 1 } , x_{ 2 } } , \rho \of{ x_{ 1 } , x_{ 3 } } } } \leq \rho \of{ x_{ 2 } , x_{ 3 } }
+        </md>.
+        
+        On the other hand,
+        
+        <md>
+          \rho \of{ x_{ 2 } , x_{ 3 } } \leq \max \of{ \set{ \rho \of{ x_{ 2 } , x_{ 1 } } , \rho \of{ x_{ 1 } , x_{ 3 } } } } = \max \of{ \set{ \rho \of{ x_{ 1 } , x_{ 2 } } , \rho \of{ x_{ 1 } , x_{ 3 } } } }
+        </md>,
+        
+        and so <m> \rho \of{ x_{ 2 } , x_{ 3 } } = \max \of{ \set{ \rho \of{ x_{ 1 } , x_{ 2 } } , \rho \of{ x_{ 1 } , x_{ 3 } } } } </m>. But we assumed that <m> \rho \of{ x_{ 1 } , x_{ 2 } } \neq \rho \of{ x_{ 2 } , x_{ 3 } } </m>, and so <m> \rho \of{ x_{ 2 } , x_{ 3 } } = \rho \of{ x_{ 1 } , x_{ 3 } } </m>.
       </p>
     </solution>
   </task>

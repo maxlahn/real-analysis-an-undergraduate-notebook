@@ -7,7 +7,7 @@
   
   <introduction>
     <p>
-      Determine whether the following sequences of real-valued functions converge or diverge both pointwise and uniformly in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If the given sequence converges pointwise, find the pointwise limit. If the given sequence converges uniformly, find the uniform limit.
+      Determine whether the following sequences of real-valued functions converge or diverge both pointwise and uniformly in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If the given sequence converges pointwise, find the pointwise limit. Express your answer using limit notation. If the given sequence converges uniformly, find the uniform limit.
     </p>
   </introduction>
   
@@ -25,19 +25,57 @@
     <task>
       <statement>
         <p>
-          Determine whether the sequence <m> \of{ a_{ n } }_{ n = 1 }^{ \infty } </m> converges or diverges pointwise in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges pointwise, find the pointwise limit.
+          Determine whether the sequence <m> \of{ a_{ n } }_{ n = 1 }^{ \infty } </m> converges or diverges pointwise in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges pointwise, find the pointwise limit. Express your answer using limit notation.
         </p>
       </statement>
       
       <answer>
         <p>
-          asdf
+          Let <m> a \colon \R \to \R </m> be the function defined by the formula <m> a \of{ x } = x^{ 2 } </m>. Then the sequence <m> \of{ a_{ n } }_{ n = 1 }^{ \infty } </m> converges pointwise to <m> a </m>; that is,
+          
+          <md>
+            \lim_{ n \to \infty }{ a_{ n } } = a
+          </md>.
         </p>
       </answer>
       
       <solution>
         <p>
-          asdf
+          Let <m> a \colon \R \to \R </m> be the function defined by the formula <m> a \of{ x } = x^{ 2 } </m>. Fix a point <m> x \in \R </m>, and let <m> \epsilon \gt 0 </m> be a positive real number. We observe that if <m> n \gt \frac{ 4 \abs{ x } }{ \epsilon } </m>, then
+          
+          <md>
+            \frac{ 2 \abs{ x } }{ n } \lt \frac{ 2 \abs{ x } }{ \of{ \frac{ 4 \abs{ x } }{ \epsilon } } } = \frac{ \epsilon }{ 2 }
+          </md>.
+          
+          Similarly, we observe that if <m> n \gt \sqrt{ \frac{ 2 }{ \epsilon } } </m>, then
+          
+          <md>
+            \frac{ 1 }{ n^{ 2 } } \lt \frac{ 1 }{ \of{ \sqrt{ \frac{ 2 }{ \epsilon } } }^{ 2 } } = \frac{ \epsilon }{ 2 }
+          </md>.
+          
+          The Archimedean principle implies that
+          
+          <md>
+            n_{ \epsilon } \gt \max \of{ \set{ \frac{ 4 \abs{ x } }{ \epsilon } , \sqrt{ \frac{ 2 }{ \epsilon } } } }
+          </md>
+          
+          for some natural number <m> n_{ \epsilon } \in \N </m>. We observe that
+          
+          <md>
+            <mrow>
+              d \of{ a_{ n } \of{ x } , a \of{ x } } \amp = \abs{ \of{ x - \frac{ 1 }{ n } }^{ 2 } - x^{ 2 } } = \abs{ x^{ 2 } - \of{ \frac{ 2 }{ n } } x + \frac{ 1 }{ n^{ 2 } } - x^{ 2 } }
+            </mrow>
+            
+            <mrow>
+              \amp = \abs{ -\frac{ 2 }{ n } x + \frac{ 1 }{ n^{ 2 } } } \leq \frac{ 2 \abs{ x } }{ n } + \frac{ 1 }{ n^{ 2 } } \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+            </mrow>
+          </md>
+          
+          for all indices <m> n \geq n_{ \epsilon } </m>. Thus the sequence <m> \of{ a_{ n } \of{ x } }_{ n = 1 }^{ \infty } </m> converges to <m> a \of{ x } </m>. Since this holds for all points <m> x \in \R </m>, the sequence <m> \of{ a_{ n } }_{ n = 1 }^{ \infty } </m> converges pointwise to <m> a </m>; that is,
+          
+          <md>
+            \lim_{ n \to \infty }{ a_{ n } } = a
+          </md>.
         </p>
       </solution>
     </task>
@@ -51,13 +89,25 @@
       
       <answer>
         <p>
-          asdf
+          The sequence <m> \of{ a_{ n } }_{ n = 1 }^{ \infty } </m> does not converge uniformly.
         </p>
       </answer>
       
       <solution>
         <p>
-          asdf
+          The dependence of <m> n_{ \epsilon } </m> on <m> x </m> in the above solution for (a) is a good sign that the sequence <m> \of{ a_{ n } }_{ n = 1 }^{ \infty } </m> does not converge uniformly. Indeed, we observe that
+          
+          <md>
+            <mrow>
+              d \of{ a_{ n } \of{ n } , a \of{ n } } \amp = \abs{ \of{ n - \frac{ 1 }{ n } }^{ 2 } - n^{ 2 } } = \abs{ n^{ 2 } - \of{ \frac{ 2 }{ n } } n + \frac{ 1 }{ n^{ 2 } } - n^{ 2 } }
+            </mrow>
+            
+            <mrow>
+              \amp = \abs{ -2 + \frac{ 1 }{ n^{ 2 } } } \geq 2 - \frac{ 1 }{ n } \geq 1
+            </mrow>
+          </md>
+          
+          for all positive integers <m> n \geq 1 </m>. Thus the sequence <m> \of{ a_{ n } }_{ n = 1 }^{ \infty } </m> does not converge uniformly to <m> a </m>. Since <m> \of{ a_{ n } }_{ n = 1 }^{ \infty } </m> converges pointwise to <m> a </m>, this implies that the sequence <m> \of{ a_{ n } }_{ n = 1 }^{ \infty } </m> does not converge uniformly.
         </p>
       </solution>
     </task>
@@ -77,19 +127,45 @@
     <task>
       <statement>
         <p>
-          Determine whether the sequence <m> \of{ b_{ n } }_{ n = 1 }^{ \infty } </m> converges or diverges pointwise in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges pointwise, find the pointwise limit.
+          Determine whether the sequence <m> \of{ b_{ n } }_{ n = 1 }^{ \infty } </m> converges or diverges pointwise in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges pointwise, find the pointwise limit. Express your answer using limit notation.
         </p>
       </statement>
       
       <answer>
         <p>
-          asdf
+          Let <m> b \colon \clint{ -10 }{ 10 } \to \R </m> be the constant function defined by the formula <m> b \of{ x } = 0 </m>. Then the sequence <m> \of{ b_{ n } }_{ n = 1 }^{ \infty } </m> converges pointwise to <m> b </m>; that is,
+          
+          <md>
+            \lim_{ n \to \infty }{ b_{ n } } = b
+          </md>.
         </p>
       </answer>
       
       <solution>
         <p>
-          asdf
+          Let <m> b \colon \clint{ -10 }{ 10 } \to \R </m> be the constant function defined by the formula <m> b \of{ x } = 0 </m>. Fix a point <m> x \in \clint{ -10 }{ 10 } </m>, and let <m> \epsilon \gt 0 </m> be a positive real number. The Archimedean principle implies that
+          
+          <md>
+            n_{ \epsilon } \gt \frac{ \abs{ x }^{ 2 } }{ \epsilon }
+          </md>
+          
+          for some natural number <m> n_{ \epsilon } \in \N </m>. We observe that
+          
+          <md>
+            <mrow>
+              d \of{ b_{ n } \of{ x } , b \of{ x } } \amp = \abs{ \frac{ x^{ 2 } }{ n } - 0 } = \abs{ \frac{ x^{ 2 } }{ n } }
+            </mrow>
+            
+            <mrow>
+              \amp = \frac{ \abs{ x }^{ 2 } }{ n } \leq \frac{ \abs{ x }^{ 2 } }{ n_{ \epsilon } } \lt \frac{ \abs{ x }^{ 2 } }{ \of{ \frac{ \abs{ x }^{ 2 } }{ \epsilon } } } = \epsilon
+            </mrow>
+          </md>
+          
+          for all indices <m> n \geq n_{ \epsilon } </m>. Thus the sequence <m> \of{ b_{ n } \of{ x } }_{ n = 1 }^{ \infty } </m> converges to <m> b \of{ x } </m>. Since this holds for all points <m> x \in \clint{ -10 }{ 10 } </m>, the sequence <m> \of{ b_{ n } }_{ n = 1 }^{ \infty } </m> converges pointwise to <m> b </m>; that is,
+          
+          <md>
+            \lim_{ n \to \infty }{ b_{ n } } = b
+          </md>.
         </p>
       </solution>
     </task>
@@ -103,13 +179,43 @@
       
       <answer>
         <p>
-          asdf
+          Let <m> b \colon \clint{ -10 }{ 10 } \to \R </m> be the constant function defined by the formula <m> b \of{ x } = 0 </m>. Then the sequence <m> \of{ b_{ n } }_{ n = 1 }^{ \infty } </m> converges uniformly to <m> b </m>; that is,
+          
+          <md>
+            \uniflim_{ n \to \infty }{ b_{ n } } = b
+          </md>.
         </p>
       </answer>
       
       <solution>
         <p>
-          asdf
+          The dependence of <m> n_{ \epsilon } </m> on <m> x </m> in the above solution for (a) is a good sign that the sequence <m> \of{ b_{ n } }_{ n = 1 }^{ \infty } </m> does not converge uniformly. However, the bounds on the input <m> -10 \leq x \leq 10 </m> allow us to obtain uniform convergence.
+        </p>
+        
+        <p>
+          Let <m> \epsilon \gt 0 </m> be a positive real number. The Archimedean principle implies that
+          
+          <md>
+            n_{ \epsilon } \gt \frac{ 100 }{ \epsilon }
+          </md>
+          
+          for some natural number <m> n_{ \epsilon } \in \N </m>. We observe that
+          
+          <md>
+            <mrow>
+              d \of{ b_{ n } \of{ x } , b \of{ x } } \amp = \abs{ \frac{ x^{ 2 } }{ n } - 0 } = \abs{ \frac{ x^{ 2 } }{ n } }
+            </mrow>
+            
+            <mrow>
+              \amp = \frac{ \abs{ x }^{ 2 } }{ n } \leq \frac{ 10^{ 2 } }{ n_{ \epsilon } } \lt \frac{ 100 }{ \of{ \frac{ 100 }{ \epsilon } } } = \epsilon
+            </mrow>
+          </md>
+          
+          for all indices <m> n \geq n_{ \epsilon } </m> and points <m> x \in \clint{ -10 }{ 10 } </m>. Thus the sequence <m> \of{ b_{ n } }_{ n = 1 }^{ \infty } </m> converges uniformly to <m> b </m>; that is,
+          
+          <md>
+            \uniflim_{ n \to \infty }{ b_{ n } } = b
+          </md>.
         </p>
       </solution>
     </task>
@@ -129,19 +235,45 @@
     <task>
       <statement>
         <p>
-          Determine whether the sequence <m> \of{ c_{ n } }_{ n = 1 }^{ \infty } </m> converges or diverges pointwise in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges pointwise, find the pointwise limit.
+          Determine whether the sequence <m> \of{ c_{ n } }_{ n = 1 }^{ \infty } </m> converges or diverges pointwise in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges pointwise, find the pointwise limit. Express your answer using limit notation.
         </p>
       </statement>
       
       <answer>
         <p>
-          asdf
+          Let <m> c \colon \R \to \R </m> be the constant function defined by the formula <m> c \of{ x } = 0 </m>. Then the sequence <m> \of{ c_{ n } }_{ n = 1 }^{ \infty } </m> converges pointwise to <m> c </m>; that is,
+          
+          <md>
+            \lim_{ n \to \infty }{ c_{ n } } = c
+          </md>.
         </p>
       </answer>
       
       <solution>
         <p>
-          asdf
+          Let <m> c \colon \R \to \R </m> be the constant function defined by the formula <m> c \of{ x } = 0 </m>. Fix a point <m> x \in \R </m>, and let <m> \epsilon \gt 0 </m> be a positive real number. The Archimedean principle implies that
+          
+          <md>
+            n_{ \epsilon } \gt \frac{ \abs{ x }^{ 2 } }{ \epsilon }
+          </md>
+          
+          for some natural number <m> n_{ \epsilon } \in \N </m>. We observe that
+          
+          <md>
+            <mrow>
+              d \of{ c_{ n } \of{ x } , c \of{ x } } \amp = \abs{ \frac{ x^{ 2 } }{ n } - 0 } = \abs{ \frac{ x^{ 2 } }{ n } }
+            </mrow>
+            
+            <mrow>
+              \amp = \frac{ \abs{ x }^{ 2 } }{ n } \leq \frac{ \abs{ x }^{ 2 } }{ n_{ \epsilon } } \lt \frac{ \abs{ x }^{ 2 } }{ \of{ \frac{ \abs{ x }^{ 2 } }{ \epsilon } } } = \epsilon
+            </mrow>
+          </md>
+          
+          for all indices <m> n \geq n_{ \epsilon } </m>. Thus the sequence <m> \of{ c_{ n } \of{ x } }_{ n = 1 }^{ \infty } </m> converges to <m> c \of{ x } </m>. Since this holds for all points <m> x \in \R </m>, the sequence <m> \of{ c_{ n } }_{ n = 1 }^{ \infty } </m> converges pointwise to <m> c </m>; that is,
+          
+          <md>
+            \lim_{ n \to \infty }{ c_{ n } } = c
+          </md>.
         </p>
       </solution>
     </task>
@@ -155,13 +287,25 @@
       
       <answer>
         <p>
-          asdf
+          The sequence <m> \of{ c_{ n } }_{ n = 1 }^{ \infty } </m> does not converge uniformly.
         </p>
       </answer>
       
       <solution>
         <p>
-          asdf
+          The dependence of <m> n_{ \epsilon } </m> on <m> x </m> in the above solution for (a) is a good sign that the sequence <m> \of{ c_{ n } }_{ n = 1 }^{ \infty } </m> does not converge uniformly. Indeed, we observe that
+          
+          <md>
+            <mrow>
+              d \of{ c_{ n } \of{ \sqrt{ n } } , c \of{ \sqrt{ n } } } \amp = \abs{ \frac{ \of{ \sqrt{ n } }^{ 2 } }{ n } - 0 } = \abs{ \frac{ n }{ n } }
+            </mrow>
+            
+            <mrow>
+              \amp = \abs{ 1 } = 1
+            </mrow>
+          </md>
+          
+          for all positive integers <m> n \geq 1 </m>. Thus the sequence <m> \of{ c_{ n } }_{ n = 1 }^{ \infty } </m> does not converge uniformly to <m> c </m>. Since <m> \of{ c_{ n } }_{ n = 1 }^{ \infty } </m> converges pointwise to <m> c </m>, this implies that the sequence <m> \of{ c_{ n } }_{ n = 1 }^{ \infty } </m> does not converge uniformly.
         </p>
       </solution>
     </task>
@@ -181,19 +325,49 @@
     <task>
       <statement>
         <p>
-          Determine whether the sequence <m> \of{ d_{ n } }_{ n = 0 }^{ \infty } </m> converges or diverges pointwise in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges pointwise, find the pointwise limit.
+          Determine whether the sequence <m> \of{ d_{ n } }_{ n = 0 }^{ \infty } </m> converges or diverges pointwise in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges pointwise, find the pointwise limit. Express your answer using limit notation.
         </p>
       </statement>
       
       <answer>
         <p>
-          asdf
+          Let <m> d \colon \clint{ -10 }{ 10 } \to \R </m> be the constant function defined by the formula <m> d \of{ x } = 0 </m>. Then the sequence <m> \of{ d_{ n } }_{ n = 0 }^{ \infty } </m> converges pointwise to <m> d </m>; that is,
+          
+          <md>
+            \lim_{ n \to \infty }{ d_{ n } } = d
+          </md>.
         </p>
       </answer>
       
       <solution>
         <p>
-          asdf
+          Let <m> d \colon \clint{ -10 }{ 10 } \to \R </m> be the constant function defined by the formula <m> d \of{ x } = 0 </m>. Fix a point <m> x \in \clint{ -10 }{ 10 } </m>, and let <m> \epsilon \gt 0 </m> be a positive real number. The Archimedean principle implies that
+          
+          <md>
+            n_{ \epsilon } \gt \log_{ 3 } \of{ \frac{ 1 }{ \epsilon } } - x
+          </md>
+          
+          for some natural number <m> n_{ \epsilon } \in \N </m>. We observe that
+          
+          <md>
+            <mrow>
+              d \of{ d_{ n } \of{ x } , d \of{ x } } \amp = \abs{ \frac{ 1 }{ 3^{ x + n } } - 0 } = \abs{ \frac{ 1 }{ 3^{ x + n } } } = \frac{ 1 }{ 3^{ x + n } }
+            </mrow>
+            
+            <mrow>
+              \amp \leq \frac{ 1 }{ 3^{ x + n_{ \epsilon } } } \lt \frac{ 1 }{ 3^{ x + \log_{ 3 } \of{ \frac{ 1 }{ \epsilon } } - x } } = \frac{ 1 }{ 3^{ \log_{ 3 } \of{ \frac{ 1 }{ \epsilon } } } }
+            </mrow>
+            
+            <mrow>
+              \amp = \frac{ 1 }{ \of{ \frac{ 1 }{ \epsilon } } } = \epsilon
+            </mrow>
+          </md>
+          
+          for all indices <m> n \geq n_{ \epsilon } </m>. Thus the sequence <m> \of{ d_{ n } \of{ x } }_{ n = 0 }^{ \infty } </m> converges to <m> d \of{ x } </m>. Since this holds for all points <m> x \in \clint{ -10 }{ 10 } </m>, the sequence <m> \of{ d_{ n } }_{ n = 1 }^{ \infty } </m> converges pointwise to <m> d </m>; that is,
+          
+          <md>
+            \lim_{ n \to \infty }{ d_{ n } } = d
+          </md>.
         </p>
       </solution>
     </task>
@@ -207,21 +381,49 @@
       
       <answer>
         <p>
-          asdf
+          Let <m> d \colon \clint{ -10 }{ 10 } \to \R </m> be the constant function defined by the formula <m> d \of{ x } = 0 </m>. Then the sequence <m> \of{ d_{ n } }_{ n = 0 }^{ \infty } </m> converges uniformly to <m> b </m>; that is,
+          
+          <md>
+            \uniflim_{ n \to \infty }{ d_{ n } } = d
+          </md>.
         </p>
       </answer>
       
       <solution>
         <p>
-          asdf
+          The dependence of <m> n_{ \epsilon } </m> on <m> x </m> in the above solution for (a) is a good sign that the sequence <m> \of{ d_{ n } }_{ n = 0 }^{ \infty } </m> does not converge uniformly. However, the bounds on the input <m> -10 \leq x \leq 10 </m> allow us to obtain uniform convergence.
+        </p>
+        
+        <p>
+          Let <m> \epsilon \gt 0 </m> be a positive real number. The Archimedean principle implies that
+          
+          <md>
+            n_{ \epsilon } \gt \ln \of{ \frac{ 1 }{ \epsilon } } + 10
+          </md>
+          
+          for some natural number <m> n_{ \epsilon } \in \N </m>. We observe that
+          
+          <md>
+            <mrow>
+              d \of{ d_{ n } \of{ x } , d \of{ x } } \amp = \abs{ \frac{ 1 }{ 3^{ x + n } } - 0 } = \abs{ \frac{ 1 }{ 3^{ x + n } } } = \frac{ 1 }{ 3^{ x + n } }
+            </mrow>
+            
+            <mrow>
+              \amp \leq \frac{ 1 }{ 3^{ -10 + n_{ \epsilon } } } \lt \frac{ 1 }{ 3^{ -10 + \log_{ 3 } \of{ \frac{ 1 }{ \epsilon } } + 10 } } = \frac{ 1 }{ 3^{ \log_{ 3 } \of{ \frac{ 1 }{ \epsilon } } } }
+            </mrow>
+            
+            <mrow>
+              \amp = \frac{ 1 }{ \of{ \frac{ 1 }{ \epsilon } } } = \epsilon
+            </mrow>
+          </md>
+          
+          for all indices <m> n \geq n_{ \epsilon } </m> and points <m> x \in \clint{ -10 }{ 10 } </m>. Thus the sequence <m> \of{ d_{ n } }_{ n = 0 }^{ \infty } </m> converges uniformly to <m> d </m>; that is,
+          
+          <md>
+            \uniflim_{ n \to \infty }{ d_{ n } } = d
+          </md>.
         </p>
       </solution>
     </task>
   </exercise>
-  
-  <conclusion>
-    <p>
-      
-    </p>
-  </conclusion>
 </exercisegroup>

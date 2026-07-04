@@ -20,19 +20,39 @@
           a_{ n } = \frac{ \cos \of{ n \pi } }{ n }
         </md>.
         
-        Determine whether the sequence <m> \of{ a_{ n } }_{ n = 1 }^{ \infty } </m> converges or diverges in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges, find the limit.
+        Determine whether the sequence <m> \of{ a_{ n } }_{ n = 1 }^{ \infty } </m> converges or diverges in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges, find the limit, and express your answer in limit notation.
       </p>
     </statement>
     
     <answer>
       <p>
-        asdf
+        The sequence <m> \of{ a_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> 0 </m>; that is,
+        
+        <md>
+          \lim_{ n \to \infty }{ a_{ n } } = \lim_{ n \to \infty }{ \frac{ \cos \of{ n \pi } }{ n } } = 0
+        </md>.
       </p>
     </answer>
     
     <solution>
       <p>
-        asdf
+        Let <m> \epsilon \gt 0 </m> be a positive real number. The Archimedean principle implies that <m> n_{ \epsilon } \gt \frac{ 1 }{ \epsilon } </m> for some natural number <m> n_{ \epsilon } \in \N </m>. We observe that
+        
+        <md>
+          <mrow>
+            d \of{ a_{ n } , 0 } \amp = \abs{ \frac{ \cos \of{ n \pi } }{ n } - 0 } = \abs{ \frac{ \of{ -1 }^{ n } }{ n } }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ 1 }{ n } \leq \frac{ 1 }{ n_{ \epsilon } } \lt \epsilon
+          </mrow>
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>. Thus the sequence <m> \of{ a_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> 0 </m>; that is,
+        
+        <md>
+          \lim_{ n \to \infty }{ a_{ n } } = \lim_{ n \to \infty }{ \frac{ \cos \of{ n \pi } }{ n } } = 0
+        </md>.
       </p>
     </solution>
   </exercise>
@@ -46,19 +66,31 @@
           b_{ n } = n \cos \of{ n \pi }
         </md>.
         
-        Determine whether the sequence <m> \of{ b_{ n } }_{ n = 0 }^{ \infty } </m> converges or diverges in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges, find the limit.
+        Determine whether the sequence <m> \of{ b_{ n } }_{ n = 0 }^{ \infty } </m> converges or diverges in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges, find the limit, and express your answer in limit notation.
       </p>
     </statement>
     
     <answer>
       <p>
-        asdf
+        The sequence <m> \of{ b_{ n } }_{ n = 0 }^{ \infty } </m> diverges.
       </p>
     </answer>
     
     <solution>
       <p>
-        asdf
+        Let <m> l \in \R </m> be a real number. Then
+        
+        <md>
+          <mrow>
+            d \of{ b_{ n } , l } \amp = \abs{ n \cos \of{ n \pi } - l } = \abs{ \of{ -1 }^{ n } n - l }
+          </mrow>
+          
+          <mrow>
+            \amp = \abs{ n - l } = n - l \geq 1
+          </mrow>
+        </md>
+        
+        for all even indices <m> n \geq \ceil{ l } + 1 </m>, and so <m> \of{ b_{ n } }_{ n = 0 }^{ \infty } </m> does not converge to <m> l </m>. Since <m> l </m> was chosen to be an arbitrary real number, the sequence <m> \of{ b_{ n } }_{ n = 0 }^{ \infty } </m> diverges.
       </p>
     </solution>
   </exercise>
@@ -72,19 +104,39 @@
           c_{ n } = n \sin \of{ n \pi }
         </md>.
         
-        Determine whether the sequence <m> \of{ c_{ n } }_{ n = 0 }^{ \infty } </m> converges or diverges in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges, find the limit.
+        Determine whether the sequence <m> \of{ c_{ n } }_{ n = 0 }^{ \infty } </m> converges or diverges in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges, find the limit, and express your answer in limit notation.
       </p>
     </statement>
     
     <answer>
       <p>
-        asdf
+        The sequence <m> \of{ c_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> 0 </m>; that is,
+        
+        <md>
+          \lim_{ n \to \infty }{ c_{ n } } = \lim_{ n \to \infty }{ n \sin \of{ n \pi } } = 0
+        </md>.
       </p>
     </answer>
     
     <solution>
       <p>
-        asdf
+        Let <m> \epsilon \gt 0 </m> be a positive real number, and observe that
+        
+        <md>
+          <mrow>
+            d \of{ c_{ n } , 0 } = \abs{ n \sin \of{ n \pi } - 0 } = \abs{ 0 - 0 }
+          </mrow>
+          
+          <mrow>
+            \amp = \abs{ 0 } = 0 \lt \epsilon
+          </mrow>
+        </md>
+        
+        for all indices <m> n \in \N </m>. Thus the sequence <m> \of{ c_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> 0 </m>; that is,
+        
+        <md>
+          \lim_{ n \to \infty }{ c_{ n } } = \lim_{ n \to \infty }{ n \sin \of{ n \pi } } = 0
+        </md>. 
       </p>
     </solution>
   </exercise>
@@ -98,19 +150,45 @@
           d_{ n } = \frac{ 2 }{ n + 1 }
         </md>.
         
-        Determine whether the sequence <m> \of{ d_{ n } }_{ n = 0 }^{ \infty } </m> converges or diverges in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges, find the limit.
+        Determine whether the sequence <m> \of{ d_{ n } }_{ n = 0 }^{ \infty } </m> converges or diverges in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges, find the limit, and express your answer in limit notation.
       </p>
     </statement>
     
     <answer>
       <p>
-        asdf
+        The sequence <m> \of{ d_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> 0 </m>; that is,
+        
+        <md>
+          \lim_{ n \to \infty }{ d_{ n } } = \lim_{ n \to \infty }{ \frac{ 2 }{ n + 1 } } = 0
+        </md>.
       </p>
     </answer>
     
     <solution>
       <p>
-        asdf
+        Let <m> \epsilon \gt 0 </m> be a positive real number. The Archimedean principle implies that
+        
+        <md>
+          n_{ \epsilon } \gt \frac{ 2 - \epsilon }{ \epsilon }
+        </md>
+        
+        for some natural number <m> n_{ \epsilon } \in \N </m>. We observe that
+        
+        <md>
+          <mrow>
+            d \of{ d_{ n } , 0 } \amp = \abs{ \frac{ 2 }{ n + 1 } - 0 } = \abs{ \frac{ 2 }{ n + 1 } } = \frac{ 2 }{ n + 1 }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \frac{ 2 }{ n_{ \epsilon } + 1 } \leq \frac{ 2 }{ \frac{ 2 - \epsilon }{ \epsilon } + 1 } = \frac{ 2 }{ \of{ \frac{ 2 }{ \epsilon } } = \epsilon
+          </mrow>
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>. Thus the sequence <m> \of{ d_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> 0 </m>; that is,
+        
+        <md>
+          \lim_{ n \to \infty }{ d_{ n } } = \lim_{ n \to \infty }{ \frac{ 2 }{ n + 1 } } = 0
+        </md>.
       </p>
     </solution>
   </exercise>
@@ -124,7 +202,7 @@
           e_{ n } = \frac{ 2 n }{ n + 1 }
         </md>.
         
-        Determine whether the sequence <m> \of{ e_{ n } }_{ n = 0 }^{ \infty } </m> converges or diverges in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges, find the limit.
+        Determine whether the sequence <m> \of{ e_{ n } }_{ n = 0 }^{ \infty } </m> converges or diverges in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges, find the limit, and express your answer in limit notation.
       </p>
     </statement>
     
@@ -136,7 +214,29 @@
     
     <solution>
       <p>
-        asdf
+        Let <m> \epsilon \gt 0 </m> be a positive real number. The Archimedean principle implies that
+        
+        <md>
+          n_{ \epsilon } \gt \frac{ 2 - \epsilon }{ \epsilon }
+        </md>
+        
+        for some natural number <m> n_{ \epsilon } \in \N </m>. We observe that
+        
+        <md>
+          <mrow>
+            d \of{ e_{ n } , 2 } \amp = \abs{ \frac{ 2 n }{ n + 1 } - 2 } = \abs{ -\frac{ 2 }{ n + 1 } } = \frac{ 2 }{ n + 1 }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \frac{ 2 }{ n_{ \epsilon } + 1 } \leq \frac{ 2 }{ \frac{ 2 - \epsilon }{ \epsilon } + 1 } = \frac{ 2 }{ \of{ \frac{ 2 }{ \epsilon } } = \epsilon
+          </mrow>
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>. Thus the sequence <m> \of{ e_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> 2 </m>; that is,
+        
+        <md>
+          \lim_{ n \to \infty }{ e_{ n } } = \lim_{ n \to \infty }{ \frac{ 2 n }{ n + 1 } } = 2
+        </md>.
       </p>
     </solution>
   </exercise>
@@ -150,19 +250,53 @@
           f_{ n } = \sqrt{ \frac{ 2 n }{ n + 1 } }
         </md>.
         
-        Determine whether the sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges or diverges in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges, find the limit.
+        Determine whether the sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges or diverges in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges, find the limit, and express your answer in limit notation.
       </p>
     </statement>
     
     <answer>
       <p>
-        asdf
+        The sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> \sqrt{ 2 } </m>; that is,
+        
+        <md>
+          \lim_{ n \to \infty }{ f_{ n } } = \lim_{ n \to \infty }{ \sqrt{ \frac{ 2 n }{ n + 1 } } } = \sqrt{ 2 }
+        </md>.
       </p>
     </answer>
     
     <solution>
       <p>
-        asdf
+        Let <m> \epsilon \gt 0 </m> be a positive real number. The argument above in (5) implies that there is a natural number <m> n_{ \epsilon } \in \N </m> so that
+        
+        <md>
+          d \of{ \frac{ 2 n }{ n + 1 } , 2 } \lt 2 \epsilon \sqrt{ 2 }
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>. We observe that
+        
+        <md>
+          <mrow>
+            \abs{ \sqrt{ \frac{ 2 n }{ n + 1 } } + \sqrt{ 2 } } \geq \sqrt{ \frac{ 2 n }{ n + 1 } } + \sqrt{ 2 } \geq \sqrt{ 2 - 2 \epsilon \sqrt{ 2 } } + \sqrt{ 2 } \geq 2 \sqrt{ 2 }
+          </mrow>
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>, and so
+        
+        <md>
+          <mrow>
+            d \of{ f_{ n } , 2 } \amp = \abs{ \sqrt{ \frac{ 2 n }{ n + 1 } } - \sqrt{ 2 } } = \frac{ \abs{ \frac{ 2 n }{ n + 1 } - 2 } }{ \abs{ \sqrt{ \frac{ 2 n }{ n + 1 } } + \sqrt{ 2 } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ d \of{ \frac{ 2 n }{ n + 1 } , 2 } }{ \abs{ \sqrt{ \frac{ 2 n }{ n + 1 } } + \sqrt{ 2 } } } \lt \frac{ 2 \epsilon \sqrt{ 2 } }{ 2 \sqrt{ 2 } } = \epsilon
+          </mrow>
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>. Thus the sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> \sqrt{ 2 } </m>; that is,
+        
+        <md>
+          \lim_{ n \to \infty }{ f_{ n } } = \lim_{ n \to \infty }{ \sqrt{ \frac{ 2 n }{ n + 1 } } } = \sqrt{ 2 }
+        </md>.
       </p>
     </solution>
   </exercise>
@@ -176,26 +310,52 @@
           g_{ n } = \frac{ 3^{ n } }{ n! }
         </md>.
         
-        Determine whether the sequence <m> \of{ g_{ n } }_{ n = 0 }^{ \infty } </m> converges or diverges in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges, find the limit.
+        Determine whether the sequence <m> \of{ g_{ n } }_{ n = 0 }^{ \infty } </m> converges or diverges in the Euclidean metric <m> d </m> on the real numbers <m> \R </m>. If it converges, find the limit, and express your answer in limit notation.
       </p>
     </statement>
     
     <answer>
       <p>
-        asdf
+        The sequence <m> \of{ g_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> 0 </m>; that is,
+        
+        <md>
+          \lim_{ n \to \infty }{ g_{ n } } = \lim_{ n \to \infty }{ \frac{ 3^{ n } }{ n! } } = 0
+        </md>.
       </p>
     </answer>
     
     <solution>
       <p>
-        asdf
+        We observe that an inductive argument shows that
+        
+        <md>
+          \frac{ 3^{ n - 1 } }{ \of{ n - 1 }! } \lt 1
+        </md>
+        
+        whenever <m> n \geq 8 </m>. Let <m> \epsilon \gt 0 </m> be a positive real number. The Archimedean principle implies that
+        
+        <md>
+          n_{ \epsilon } \geq \max \of{ \set{ 8 , \frac{ 3 }{ \epsilon } } }
+        </md>
+        
+        for some natural number <m> n_{ \epsilon } \in \N </m>. We observe that
+        
+        <md>
+          <mrow>
+            d \of{ g_{ n } , 0 } \amp = \abs{ \frac{ 3^{ n } }{ n! } } - 0 } = \abs{ \frac{ 3^{ n } }{ n! } } = \frac{ 3^{ n } }{ n! }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ \frac{ 3 }{ n } } \of{ \frac{ 3^{ n - 1 } }{ \of{ n - 1 }! } } \lt \frac{ 3 }{ n_{ \epsilon } } \lt \epsilon
+          </mrow>
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>. Thus the sequence <m> \of{ g_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> 0 </m>; that is,
+        
+        <md>
+          \lim_{ n \to \infty }{ g_{ n } } = \lim_{ n \to \infty }{ \frac{ 3^{ n } }{ n! } } = 0
+        </md>.
       </p>
     </solution>
   </exercise>
-  
-  <conclusion>
-    <p>
-      
-    </p>
-  </conclusion>
 </exercisegroup>

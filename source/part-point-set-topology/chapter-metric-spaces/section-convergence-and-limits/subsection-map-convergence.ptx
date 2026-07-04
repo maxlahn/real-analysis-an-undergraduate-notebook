@@ -118,7 +118,7 @@
           g_{ l } \of{ x } = \rho_{ Y } \of{ f \of{ x } , l }
         </md>.
         
-        Then <m> f </m> converges to <m> l </m> at <m> c </m> if and only if <m> g_{ c , l } </m> converges to <m> 0 </m> at <m> c </m>.
+        Then <m> f </m> converges to <m> l </m> at <m> c </m> if and only if <m> g_{ l } </m> converges to <m> 0 </m> at <m> c </m>.
       </p>
     </statement>
     

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-uniqueness-of-map-limits" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Uniqueness of map limits
+  </title>
+  
+  <statement>
+    <p>
+      Let <m> f \colon X \to Y </m> be a map from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m> which has at least two distinct points. Prove the following partial converse to <xref ref="corollary-uniqueness-of-map-limits"/>: If <m> f </m> converges at a point <m> c \in X </m> to a unique point <m> l \in Y </m>, then <m> c </m> is a limit point of <m> X </m>.
+    </p>
+  </statement>
+  
+  <solution>
+    <p>
+      By contraposition. Suppose that <m> c </m> is an isolated point of <m> Y </m>. Then there are no sequences <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> x_{ n } \in X \setminus \set{ c } </m> which converge to <m> c </m>, and so for each point <m> y \in Y </m>, <xref ref="theorem-sequential-characterization-of-map-convergence"/> implies that <m> f </m> converges at <m> x </m> to <m> y </m>. Since <m> Y </m> has at least two distinct points, then <m> f </m> does not converge to a unique limit at <m> c </m>.
+    </p>
+    
+    <p>
+      In summary, we have shown that if <m> c </m> is an isolated point, then <m> f </m> does not converge to a unique limit at <m> c </m>. Equivalently, if <m> f </m> converges at <m> c </m> to a unique limit, then <m> c </m> is a limit point of <m> X </m>.
+    </p>
+  </solution>
+</exercise>

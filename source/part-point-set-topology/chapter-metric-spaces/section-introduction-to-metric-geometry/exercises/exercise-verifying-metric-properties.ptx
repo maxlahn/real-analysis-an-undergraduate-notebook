@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-verifying-metric-properties" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Verifying metric properties
+  </title>
+  
+  <introduction>
+    <p>
+      Determine whether or not the given function is a metric.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> d \colon \R \times \R \to \R </m> be the Euclidean metric on the real numbers <m> \R </m>; that is,
+        
+        <md>
+          d \of{ x_{ 1 } , x_{ 2 } } = \abs{ x_{ 1 } - x_{ 2 } }
+        </md>
+        
+        for all real numbers <m> x_{ 1 } , x_{ 2 } \in \R </m>. Verify that <m> d </m> is a metric on <m> \R </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        For all real numbers <m> x_{ 1 } , x_{ 2 } \in \R </m>, if <m> x_{ 1 } = x_{ 2 } </m>, then
+        
+        <md>
+          \abs{ x_{ 1 } - x_{ 2 } } = \abs{ 0 } = 0
+        </md>.
+        
+        Conversely, if <m> x_{ 1 } \neq x_{ 2 } </m>, then
+        
+        <md>
+          d \of{ x_{ 1 } , x_{ 2 } } = \abs{ x_{ 1 } - x_{ 2 } } = \max \of{ \set{ x_{ 1 } , x_{ 2 } } } - \min \of{ \set{ x_{ 1 } , x_{ 2 } } } \gt 0
+        </md>.
+        
+        Since <m> d \of{ x_{ 1 } , x_{ 2 } } = 0 </m> if and only if <m> x_{ 1 } = x_{ 2 } </m>, <m> d </m> is non-degenerate.
+      </p>
+      
+      <p>
+        Since
+        
+        <md>
+          d \of{ x_{ 1 } , x_{ 2 } } = \abs{ x_{ 1 } - x_{ 2 } } = \abs{ x_{ 2 } - x_{ 1 } } = d \of{ x_{ 2 } , x_{ 1 } }
+        </md>
+        
+        for all real numbers <m> x_{ 1 } , x_{ 2 } \in X </m>, <m> d </m> is symmetric.
+      </p>
+      
+      <p>
+        Finally, consider three points <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in \R </m>. If <m> x_{ 1 } \geq x_{ 2 } \geq x_{ 3 } </m>, then
+        
+        <md>
+          <mrow>
+            \abs{ x_{ 1 } - x_{ 3 } } \amp = x_{ 1 } - x_{ 3 } = x_{ 1 } - x_{ 2 } + x_{ 2 } - x_{ 3 }
+          </mrow>
+          
+          <mrow>
+            \amp = \abs{ x_{ 1 } - x_{ 2 } } + \abs{ x_{ 2 } - x_{ 3 } } = d \of{ x_{ 1 } , x_{ 2 } } + d \of{ x_{ 2 } , x_{ 3 } }
+          </mrow>
+        </md>.
+        
+        If <m> x_{ 1 } \geq x_{ 2 } \geq x_{ 3 } </m>, then
+        
+        <md>
+          <mrow>
+            \abs{ x_{ 1 } - x_{ 3 } } \amp = x_{ 1 } - x_{ 3 } = x_{ 1 } - x_{ 2 } + x_{ 2 } - x_{ 3 }
+          </mrow>
+          
+          <mrow>
+            \amp = \abs{ x_{ 1 } - x_{ 2 } } - \abs{ x_{ 2 } - x_{ 3 } } \leq d \of{ x_{ 1 } , x_{ 2 } } + d \of{ x_{ 2 } , x_{ 3 } }
+          </mrow>
+        </md>.
+        
+        If <m> x_{ 2 } \geq x_{ 1 } \geq x_{ 3 } </m>, then
+        
+        <md>
+          <mrow>
+            \abs{ x_{ 1 } - x_{ 3 } } \amp = x_{ 1 } - x_{ 3 } = x_{ 1 } - x_{ 2 } + x_{ 2 } - x_{ 3 }
+          </mrow>
+          
+          <mrow>
+            \amp = -\abs{ x_{ 1 } - x_{ 2 } } + \abs{ x_{ 2 } - x_{ 3 } } \leq d \of{ x_{ 1 } , x_{ 2 } } + d \of{ x_{ 2 } , x_{ 3 } }
+          </mrow>
+        </md>.
+        
+        If <m> x_{ 2 } \geq x_{ 3 } \geq x_{ 1 } </m>, then
+        
+        <md>
+          <mrow>
+            \abs{ x_{ 1 } - x_{ 3 } } \amp = x_{ 3 } - x_{ 1 } = x_{ 3 } - x_{ 2 } + x_{ 2 } - x_{ 1 }
+          </mrow>
+          
+          <mrow>
+            \amp = \abs{ x_{ 1 } - x_{ 2 } } - \abs{ x_{ 2 } - x_{ 3 } } \leq d \of{ x_{ 1 } , x_{ 2 } } + d \of{ x_{ 2 } , x_{ 3 } }
+          </mrow>
+        </md>.
+        
+        If <m> x_{ 3 } \geq x_{ 1 } \geq x_{ 2 } </m>, then
+        
+        <md>
+          <mrow>
+            \abs{ x_{ 1 } - x_{ 3 } } \amp = x_{ 3 } - x_{ 1 } = x_{ 3 } - x_{ 2 } + x_{ 2 } - x_{ 1 }
+          </mrow>
+          
+          <mrow>
+            \amp = -\abs{ x_{ 1 } - x_{ 2 } } + \abs{ x_{ 2 } - x_{ 3 } } \leq d \of{ x_{ 1 } , x_{ 2 } } + d \of{ x_{ 2 } , x_{ 3 } }
+          </mrow>
+        </md>.
+        
+        Finally, if <m> x_{ 3 } \geq x_{ 2 } \geq x_{ 1 } </m>, then
+        
+        <md>
+          <mrow>
+            \abs{ x_{ 1 } - x_{ 3 } } \amp = x_{ 3 } - x_{ 1 } = x_{ 3 } - x_{ 2 } + x_{ 2 } - x_{ 1 }
+          </mrow>
+          
+          <mrow>
+            \amp = \abs{ x_{ 1 } - x_{ 2 } } + \abs{ x_{ 2 } - x_{ 3 } } = d \of{ x_{ 1 } , x_{ 2 } } + d \of{ x_{ 2 } , x_{ 3 } }
+          </mrow>
+        </md>.
+        
+        In any case, since <m> d \of{ x_{ 1 } , x_{ 3 } } \leq d \of{ x_{ 1 } , x_{ 2 } } + d \of{ x_{ 2 } , x_{ 3 } } </m>, <m> d </m> satisfies the triangle inequality.
+      </p>
+      
+      <p>
+        Since <m> d </m> is non-degenerate, symmetric, and satisfies the triangle inequality, it is a metric on the real numbers <m> \R </m>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> \delta_{ X } \colon X \times X \to \R </m> be the discrete metric on a set <m> X </m>; that is,
+        
+        <md>
+          \delta_{ X } \of{ x_{ 1 } , x_{ 2 } } =
+            \begin{cases}
+              0 \amp x_{ 1 } = x_{ 2 } \\
+              1 \amp x_{ 1 } \neq x_{ 2 }
+            \end{cases}
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } \in X </m>. Verify that <m> \delta_{ X } </m> is a metric on <m> X </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        For all points <m> x_{ 1 } , x_{ 2 } \in X </m>, if <m> x_{ 1 } = x_{ 2 } </m>, then
+        
+        <md>
+          \delta_{ X } \of{ x_{ 1 } , x_{ 2 } } = 0
+        </md>.
+        
+        Conversely, if <m> x_{ 1 } \neq x_{ 2 } </m>, then
+        
+        <md>
+          \delta_{ X } \of{ x_{ 1 } , x_{ 2 } } = 1 \neq 0
+        </md>.
+        
+        Since <m> \delta_{ X } \of{ x_{ 1 } , x_{ 2 } } = 0 </m> if and only if <m> x_{ 1 } = x_{ 2 } </m>, <m> \delta_{ X } </m> is non-degenerate.
+      </p>
+      
+      <p>
+        Consider two points <m> x_{ 1 } , x_{ 2 } \in X </m>. If <m> x_{ 1 } = x_{ 2 } </m>, then <m> x_{ 2 } = x_{ 1 } </m>, and so
+        
+        <md>
+          \delta_{ X } \of{ x_{ 1 } , x_{ 2 } } = 0 = \delta_{ X } \of{ x_{ 2 } , x_{ 1 } }
+        </md>.
+        
+        Conversely, if <m> x_{ 1 } \neq x_{ 2 } </m>, then <m> x_{ 2 } \neq x_{ 1 } </m>, and so
+        
+        <md>
+          \delta_{ X } \of{ x_{ 1 } , x_{ 2 } } = 1 = \delta_{ X } \of{ x_{ 2 } , x_{ 1 } }
+        </md>.
+        
+        In either case, since <m> \delta_{ X } \of{ x_{ 1 } , x_{ 2 } } = \delta_{ X } \of{ x_{ 2 } , x_{ 1 } } </m>, <m> \delta_{ X } </m> is symmetric.
+      </p>
+      
+      <p>
+        Finally, consider three points <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in X </m>. If <m> x_{ 1 } = x_{ 3 } </m>, then
+        
+        <md>
+          \delta_{ X } \of{ x_{ 1 } , x_{ 3 } } = 0 \leq \delta_{ X } \of{ x_{ 1 } , x_{ 2 } } + \delta_{ X } \of{ x_{ 2 } , x_{ 3 } } 
+        </md>,
+        
+        since <m> \delta_{ X } </m> takes only non-negative values. On the other hand, suppose that <m> x_{ 1 } \neq x_{ 3 } </m>. Then it is not the case that <m> x_{ 1 } = x_{ 2 } </m> and <m> x_{ 2 } = x_{ 3 } </m>, and so at least one of <m> \delta_{ X } \of{ x_{ 1 } , x_{ 2 } } </m> and <m> \delta_{ X } \of{ x_{ 2 } , x_{ 3 } } </m> is <m> 1 </m>. We conclude that
+        
+        <md>
+          \delta_{ X } \of{ x_{ 1 } , x_{ 3 } } = 1 \leq \delta_{ X } \of{ x_{ 1 } , x_{ 2 } } + \delta_{ X } \of{ x_{ 2 } , x_{ 3 } } 
+        </md>.
+        
+        In either case, since <m> \delta_{ X } \of{ x_{ 1 } , x_{ 3 } } \leq \delta_{ X } \of{ x_{ 1 } , x_{ 2 } } + \delta_{ X } \of{ x_{ 2 } , x_{ 3 } } </m>, <m> \delta_{ X } </m> satisfies the triangle inequality.
+      </p>
+      
+      <p>
+        Since <m> \delta_{ X } </m> is non-degenerate, symmetric, and satisfies the triangle inequality, it is a metric on <m> X </m>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> \rho \colon \R \times \R \to \R </m> be the real-valued function defined by the formula
+        
+        <md>
+          \rho \of{ x_{ 1 } , x_{ 2 } } = x_{ 1 } - x_{ 2 }
+        </md>.
+        
+        Determine whether or not <m> \rho </m> is a metric on the real numbers <m> \R </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        We note that
+        
+        <md>
+          \rho \of{ 0 , 1 } = 0 - 1 = -1 \neq 1 = 1 - 0 = \rho \of{ 1 , 0 }
+        </md>,
+        
+        and so <m> \rho </m> is not symmetric. Since <m> \rho </m> is not symmetric, it is not a metric on the real numbers <m> \R </m>.
+      </p>
+    </solution>
+  </exercise>
+</exercisegroup>

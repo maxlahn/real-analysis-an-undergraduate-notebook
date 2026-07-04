@@ -24,7 +24,39 @@
     
     <solution>
       <p>
-        asdf
+        We note that for a natural number <m> m \in \N </m> and a real number <m> B \in \R </m>, <m> x_{ n } \geq B </m> for all indices <m> n \geq m </m> if and only if
+        
+        <md>
+          \inf_{ n \geq m }{ x_{ n } } \geq B
+        </md>.
+        
+        First suppose that the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> diverges to <m> \infty </m>. Then for all real numbers <m> B \in \R </m>, there is a natural number <m> m_{ B } \in \N </m> so that <m> x_{ n } \gt B + 1 </m> for all indices <m> n \geq m_{ B } </m>. We observe that
+        
+        <md>
+          \inf_{ n \geq m }{ x_{ n } } \geq \inf_{ n \geq m_{ B } }{ x_{ n } } \geq B + 1 \gt B
+        </md>
+        
+        for all indices <m> m \geq m_{ B } </m>, and so the sequence <m> \of{ \inf_{ n \geq m }{ x_{ n } } }_{ m = 0 }^{ \infty } </m> diverges to <m> \infty </m>; that is,
+        
+        <md>
+          \liminf_{ n \to \infty }{ x_{ n } } = \lim_{ m \to \infty }{ \inf_{ n \geq m }{ x_{ n } } } = \infty
+        </md>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> \liminf_{ n \to \infty }{ x_{ n } } = \infty </m>, and let <m> B \in \R </m> be a real number. Then there is a natural number <m> n_{ B } \in \N </m> so that
+        
+        <md>
+          \inf_{ n \geq m }{ x_{ n } } \gt B
+        </md>
+        
+        for all indices <m> m \geq n_{ B } </m>. In particular,
+        
+        <md>
+          x_{ n } \geq \inf_{ k \geq n_{ B } }{ x_{ k } } \gt B
+        </md>
+        
+        for all indices <m> n \geq n_{ B } </m>. Thus the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> diverges to <m> \infty </m>.
       </p>
     </solution>
   </task>
@@ -42,7 +74,39 @@
     
     <solution>
       <p>
-        asdf
+        We note that for a natural number <m> m \in \N </m> and a real number <m> B \in \R </m>, <m> x_{ n } \leq B </m> for all indices <m> n \geq m </m> if and only if
+        
+        <md>
+          \sup_{ n \geq m }{ x_{ n } } \leq B
+        </md>.
+        
+        First suppose that the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> diverges to <m> -\infty </m>. Then for all real numbers <m> B \in \R </m>, there is a natural number <m> m_{ B } \in \N </m> so that <m> x_{ n } \lt B - 1 </m> for all indices <m> n \geq m_{ B } </m>. We observe that
+        
+        <md>
+          \sup_{ n \geq m }{ x_{ n } } \leq \sup_{ n \geq m_{ B } }{ x_{ n } } \leq B - 1 \lt B
+        </md>
+        
+        for all indices <m> m \geq m_{ B } </m>, and so the sequence <m> \of{ \sup_{ n \geq m }{ x_{ n } } }_{ m = 0 }^{ \infty } </m> diverges to <m> -\infty </m>; that is,
+        
+        <md>
+          \limsup_{ n \to \infty }{ x_{ n } } = \lim_{ m \to \infty }{ \sup_{ n \geq m }{ x_{ n } } } = -\infty
+        </md>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> \limsup_{ n \to \infty }{ x_{ n } } = -\infty </m>, and let <m> B \in \R </m> be a real number. Then there is a natural number <m> n_{ B } \in \N </m> so that
+        
+        <md>
+          \sup_{ n \geq m }{ x_{ n } } \lt B
+        </md>
+        
+        for all indices <m> m \geq n_{ B } </m>. In particular,
+        
+        <md>
+          x_{ n } \leq \sup_{ k \geq n_{ B } }{ x_{ k } } \lt B
+        </md>
+        
+        for all indices <m> n \geq n_{ B } </m>. Thus the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> diverges to <m> -\infty </m>.
       </p>
     </solution>
   </task>

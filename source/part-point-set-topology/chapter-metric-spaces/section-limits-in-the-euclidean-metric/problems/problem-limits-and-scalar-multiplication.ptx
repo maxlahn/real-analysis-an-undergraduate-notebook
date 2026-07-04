@@ -19,7 +19,51 @@
   
   <solution>
     <p>
-      asdf
+      Let <m> \alpha = \lim_{ n \to \infty }{ \alpha_{ n } } </m> and <m> \vect{ v } = \lim_{ n \to \infty }{ \vect{ v }_{ n } } </m>. Let <m> \epsilon \gt 0 </m> be a positive real number.
+      
+      <md>
+        <mrow>
+          0 \leq \norm{ \alpha_{ n } \vect{ v }_{ n } - \alpha \vect{ v } } \amp = \norm{ \alpha_{ n } \vect{ v }_{ n } - \alpha \vect{ v }_{ n } + \alpha \vect{ v }_{ n } - \alpha \vect{ v } } \leq \norm{ \alpha_{ n } \vect{ v }_{ n } - \alpha \vect{ v }_{ n } } + \norm{ \alpha \vect{ v }_{ n } - \alpha \vect{ v } }
+        </mrow>
+        
+        <mrow>
+          \amp = \norm{ \of{ \alpha_{ n } - \alpha } \vect{ v }_{ n } } + \norm{ \alpha \of{ \vect{ v }_{ n } - \vect{ v } } } = \abs{ \alpha_{ n } - \alpha } \norm{ \vect{ v }_{ n } } + \abs{ \alpha } \norm{ \vect{ v }_{ n } - \vect{ v } }
+        </mrow>
+      </md>.
+      
+      <xref ref="proposition-sequential-convergence"/> and <xref ref="proposition-limits-and-vector-arithmetic"/> together imply that
+      
+      <md>
+        <mrow>
+          \lim_{ n \to \infty }{ \of{ \abs{ \alpha_{ n } - \alpha } \norm{ \vect{ v }_{ n } } + \abs{ \alpha } \norm{ \vect{ v }_{ n } - \vect{ v } } } } \amp = \of{ \lim_{ n \to \infty }{ \abs{ \alpha_{ n } - \alpha } } } \of{ \lim_{ n \to \infty }{ \norm{ \vect{ v }_{ n } } } } + \abs{ \alpha } \lim_{ n \to \infty }{ \norm{ \vect{ v }_{ n } - \vect{ v } } } 
+        </mrow>
+        
+        <mrow>
+          \amp = 0 \cdot \norm{ \vect{ v } } + \abs{ \alpha } \cdot 0 = 0 + 0 = 0
+        </mrow>
+      </md>.
+    </p>
+    
+    <p>
+      In summary, we have shown that
+      
+      <md>
+        0 \leq \norm{ \alpha_{ n } \vect{ v }_{ n } - \alpha \vect{ v } } \leq \abs{ \alpha_{ n } - \alpha } \norm{ \vect{ v }_{ n } } + \abs{ \alpha } \norm{ \vect{ v }_{ n } - \vect{ v } }
+      </md>
+      
+      and that
+      
+      <md>
+        \lim_{ n \to \infty }{ \of{ \abs{ \alpha_{ n } - \alpha } \norm{ \vect{ v }_{ n } } + \abs{ \alpha } \norm{ \vect{ v }_{ n } - \vect{ v } } } } = \lim_{ n \to \infty }{ 0 } = 0
+      </md>.
+      
+      <xref ref="theorem-squeeze-theorem"/> implies that
+      
+      <md>
+        \lim_{ n \to \infty }{ \norm{ \alpha_{ n } \vect{ v }_{ n } - \alpha \vect{ v } } } = 0
+      </md>,
+      
+      and so <m> \lim_{ n \to \infty }{ \alpha_{ n } \vect{ v }_{ n } } = \alpha \vect{ v } </m> by <xref ref="proposition-sequential-convergence"/>.
     </p>
   </solution>
 </exercise>

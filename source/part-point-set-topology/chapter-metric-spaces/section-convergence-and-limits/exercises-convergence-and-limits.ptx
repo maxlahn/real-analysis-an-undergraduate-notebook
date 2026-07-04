@@ -11,6 +11,8 @@
     </p>
   </introduction>
   
+  <xi:include href="./exercises/exercise-convergence-in-your-own-words.ptx"/>
+  
   <xi:include href="./exercises/exercise-sequential-convergence.ptx"/>
   
   <xi:include href="./exercises/exercise-pointwise-and-uniform-convergence.ptx"/>

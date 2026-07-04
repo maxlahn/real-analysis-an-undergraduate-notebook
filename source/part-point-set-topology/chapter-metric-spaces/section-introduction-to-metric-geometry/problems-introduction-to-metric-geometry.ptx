@@ -16,6 +16,8 @@
   <xi:include href="./problems/problem-norm-equivalence.ptx"/>
   
   <xi:include href="./problems/problem-ultrametrics.ptx"/>
+  
+  <xi:include href="./problems/problem-reverse-triangle-inequality-for-norms.ptx"/>
 
   <conclusion>
     <p>

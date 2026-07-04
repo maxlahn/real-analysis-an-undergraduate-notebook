@@ -12,6 +12,12 @@
   </introduction>
   
   <xi:include href="./exercises/exercise-computing-distances-in-metric-spaces.ptx"/>
+  
+  <xi:include href="./exercises/exercise-verifying-metric-properties.ptx"/>
+  
+  <xi:include href="./exercises/exercise-subspaces-of-discrete-metric-spaces.ptx"/>
+  
+  <xi:include href="./exercises/exercise-scalar-multiples-of-metrics.ptx"/>
 
   <conclusion>
     <p>

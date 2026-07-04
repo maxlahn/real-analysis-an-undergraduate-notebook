@@ -17,7 +17,41 @@
   
   <solution>
     <p>
-      asdf
+      First suppose that <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> diverges to <m> -\infty </m>, and let <m> \epsilon \gt 0 </m>. Then <m> -\frac{ 1 }{ \epsilon } \in \R </m> is a real number, and so there is a natural number <m> n_{ \epsilon } \in \N </m> so that
+      
+      <md>
+        x_{ n } \lt -\frac{ 1 }{ \epsilon }
+      </md>
+      
+      for all indices <m> n \geq n_{ \epsilon } </m>. In particular,
+      
+      <md>
+        d \of{ \frac{ 1 }{ x_{ n } } , 0 } = \abs{ \frac{ 1 }{ x_{ n } } - 0 } = \abs{ \frac{ 1 }{ x_{ n } } } = -\frac{ 1 }{ x_{ n } } \lt \epsilon
+      </md>
+      
+      for all indices <m> n \geq n_{ \epsilon } </m>, and so <m> \of{ \frac{ 1 }{ x_{ n } } }_{ n = 0 }^{ \infty } </m> converges to <m> 0 </m>.
+    </p>
+    
+    <p>
+      Conversely, now suppose that <m> \of{ \frac{ 1 }{ x_{ n } } }_{ n = 0 }^{ \infty } </m> converges to <m> 0 </m>, and let <m> B \in \R </m> be a real number. If <m> B \leq 0 </m> is non-negative, then
+      
+      <md>
+        x_{ n } \lt 0 \leq B
+      </md>
+      
+      for all indices <m> n \in \N </m>. On the other hand, if <m> B \lt 0 </m> is negative, then <m> -\frac{ 1 }{ B } \gt 0 </m> is a positive real number, and so there is a natural number <m> n_{ B } </m> so that
+      
+      <md>
+        d \of{ \frac{ 1 }{ x_{ n } } , 0 } \lt -\frac{ 1 }{ B }
+      </md>
+      
+      for all indices <m> n \geq n_{ B } </m>. In particular,
+      
+      <md>
+        x_{ n } = -\abs{ x_{ n } } = -\frac{ 1 }{ \abs{ \frac{ 1 }{ x_{ n } } - 0 } } = -\frac{ 1 }{ d \of{ \frac{ 1 }{ x_{ n } } , 0 } } \lt B
+      </md>
+      
+      for all indices <m> n \geq n_{ B } </m>, and so <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> diverges to <m> -\infty </m>.
     </p>
   </solution>
 </exercise>
