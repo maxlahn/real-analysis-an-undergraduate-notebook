@@ -65,7 +65,13 @@
         Suppose that <m> x + y = x + z = 0 </m> for some elements <m> x , y , z \in F </m>, and note that
         
         <md>
-          y = y + 0 = y + x + z = x + y + z = 0 + z = z
+          <mrow>
+            y \amp = y + 0 = y + x + z
+          </mrow>
+          
+          <mrow>
+            \amp = x + y + z = 0 + z = z
+          </mrow>
         </md>.
       </p>
     </solution>
@@ -89,7 +95,13 @@
         Suppose that <m> x \cdot y = x \cdot z = 1 </m> for some elements <m> x , y , z \in F </m>, and note that
         
         <md>
-          y = y \cdot 1 = y \cdot x \cdot z = x \cdot y \cdot z = 1 \cdot z = z
+          <mrow>
+            y \amp = y \cdot 1 = y \cdot x \cdot z
+          </mrow>
+          
+          <mrow>
+            \amp = x \cdot y \cdot z = 1 \cdot z = z
+          </mrow>
         </md>.
       </p>
     </solution>

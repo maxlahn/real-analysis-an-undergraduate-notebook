@@ -64,7 +64,7 @@
     
     <solution>
       <p>
-        asdf
+        The argument in the above proof of (a) shows that <m> n </m> interchanges upper and lower bounds. Specifically, <m> n </m> sends the set of upper bounds (resp. lower bounds) of a set <m> U </m> to the set of lower bounds (resp. upper bounds) of <m> n \of{ U } </m>. Moreover, by (b) of <xref ref="problem-sign-in-an-ordered-field"/>, if <m> x \leq y </m>, then <m> n \of{ y } \leq n \of{ x } </m>. As such, <m> n </m> sends a least upper bound (resp. greatest lower bound) for <m> U </m> to a greatest lower bound (resp. least upper bound) for <m> n \of{ U } </m>. In particular, if <m> U </m> has a supremum (resp. infimum), then <m> n \of{ U } </m> has an infimum (resp. supremum). The converse holds by applying the same result to <m> n \of{ U } </m> and observing that <m> n </m> is an involution; that is, that <m> n \circ n = \id_{ F } </m>.
       </p>
     </solution>
   </task>
@@ -78,7 +78,11 @@
     
     <solution>
       <p>
-        asdf
+        If <m> F </m> is Dedekind complete, then every non-empty subset of <m> F </m> which is bounded from above has a supremum. Let <m> U </m> be a non-empty subset of <m> F </m> which is bounded from below. By (a) above, <m> n \of{ U } </m> is a non-empty subset of <m> F </m> which is bounded from above and hence has a supremum. Now (b) implies that <m> U </m> has an infimum.
+      </p>
+      
+      <p>
+        Conversely, now suppose that every non-empty subset of <m> F </m> which is bounded from below has an infimum, and let <m> U </m> be a non-empty subset of <m> F </m> which is bounded from above. By (a) above, <m> n \of{ U } </m> is a non-empty subset of <m> F </m> which is bounded from below and hence has a supremum. Now (b) implies that <m> U </m> has a supremum. Thus <m> F </m> is Dedekind complete.
       </p>
     </solution>
   </task>

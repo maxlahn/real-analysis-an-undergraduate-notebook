@@ -26,7 +26,7 @@
     
     <answer>
       <p>
-        The sequence <m> \of{ a_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> 0 </m>; that is,
+        The sequence <m> \of{ a_{ n } }_{ n = 1 }^{ \infty } </m> converges to <m> 0 </m>; that is,
         
         <md>
           \lim_{ n \to \infty }{ a_{ n } } = \lim_{ n \to \infty }{ \frac{ \cos \of{ n \pi } }{ n } } = 0
@@ -48,7 +48,7 @@
           </mrow>
         </md>
         
-        for all indices <m> n \geq n_{ \epsilon } </m>. Thus the sequence <m> \of{ a_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> 0 </m>; that is,
+        for all indices <m> n \geq n_{ \epsilon } </m>. Thus the sequence <m> \of{ a_{ n } }_{ n = 1 }^{ \infty } </m> converges to <m> 0 </m>; that is,
         
         <md>
           \lim_{ n \to \infty }{ a_{ n } } = \lim_{ n \to \infty }{ \frac{ \cos \of{ n \pi } }{ n } } = 0
@@ -180,7 +180,7 @@
           </mrow>
           
           <mrow>
-            \amp \leq \frac{ 2 }{ n_{ \epsilon } + 1 } \leq \frac{ 2 }{ \frac{ 2 - \epsilon }{ \epsilon } + 1 } = \frac{ 2 }{ \of{ \frac{ 2 }{ \epsilon } } = \epsilon
+            \amp \leq \frac{ 2 }{ n_{ \epsilon } + 1 } \leq \frac{ 2 }{ \of{ \frac{ 2 - \epsilon }{ \epsilon } } + 1 } = \frac{ 2 }{ \of{ \frac{ 2 }{ \epsilon } } } = \epsilon
           </mrow>
         </md>
         
@@ -208,7 +208,11 @@
     
     <answer>
       <p>
-        asdf
+        The sequence <m> \of{ e_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> 2 </m>; that is,
+        
+        <md>
+          \lim_{ n \to \infty }{ e_{ n } } = \lim_{ n \to \infty }{ \frac{ 2 n }{ n + 1 } } = 2
+        </md>.
       </p>
     </answer>
     
@@ -228,7 +232,7 @@
           </mrow>
           
           <mrow>
-            \amp \leq \frac{ 2 }{ n_{ \epsilon } + 1 } \leq \frac{ 2 }{ \frac{ 2 - \epsilon }{ \epsilon } + 1 } = \frac{ 2 }{ \of{ \frac{ 2 }{ \epsilon } } = \epsilon
+            \amp \leq \frac{ 2 }{ n_{ \epsilon } + 1 } \leq \frac{ 2 }{ \frac{ 2 - \epsilon }{ \epsilon } + 1 } = \frac{ 2 }{ \of{ \frac{ 2 }{ \epsilon } } } = \epsilon
           </mrow>
         </md>
         
@@ -284,7 +288,7 @@
         
         <md>
           <mrow>
-            d \of{ f_{ n } , 2 } \amp = \abs{ \sqrt{ \frac{ 2 n }{ n + 1 } } - \sqrt{ 2 } } = \frac{ \abs{ \frac{ 2 n }{ n + 1 } - 2 } }{ \abs{ \sqrt{ \frac{ 2 n }{ n + 1 } } + \sqrt{ 2 } } }
+            d \of{ f_{ n } , \sqrt{ 2 } } \amp = \abs{ \sqrt{ \frac{ 2 n }{ n + 1 } } - \sqrt{ 2 } } = \frac{ \abs{ \frac{ 2 n }{ n + 1 } - 2 } }{ \abs{ \sqrt{ \frac{ 2 n }{ n + 1 } } + \sqrt{ 2 } } }
           </mrow>
           
           <mrow>
@@ -342,7 +346,7 @@
         
         <md>
           <mrow>
-            d \of{ g_{ n } , 0 } \amp = \abs{ \frac{ 3^{ n } }{ n! } } - 0 } = \abs{ \frac{ 3^{ n } }{ n! } } = \frac{ 3^{ n } }{ n! }
+            d \of{ g_{ n } , 0 } \amp = \abs{ \frac{ 3^{ n } }{ n! } - 0 } = \abs{ \frac{ 3^{ n } }{ n! } } = \frac{ 3^{ n } }{ n! }
           </mrow>
           
           <mrow>

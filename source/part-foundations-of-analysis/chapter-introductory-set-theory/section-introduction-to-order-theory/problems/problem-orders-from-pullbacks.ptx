@@ -14,13 +14,21 @@
     
     <hint>
       <p>
-        You may find it useful to review the proof of <xref ref="lemma-preorders-from-pullbacks"/>.
+        You may find it useful to review the proof of <xref ref="lemma-preorders-from-pullbacks"/>
       </p>
     </hint>
     
     <solution>
       <p>
-        asdf
+        Consider the pullback <m> \precsim_{ f } </m> of a preorder <m> \precsim </m> on a set <m> Y </m> along a map <m> f </m> from a set <m> X </m> to <m> Y </m>. For all elements <m> x \in X </m>, the reflexivity of <m> \precsim </m> implies that <m> f \of{ x } \precsim f \of{ x } </m>, and so <m> x \precsim_{ f } x </m>; that is, <m> \precsim_{ f } </m> is reflexive.
+      </p>
+      
+      <p>
+        For all elements <m> x_{ 1 } , x_{ 2 } , x_{ 3 } \in X </m>, suppose that <m> x_{ 1 } \precsim_{ f } x_{ 2 } </m> and <m> x_{ 2 } \precsim_{ f } x_{ 3 } </m>. Then <m> f \of{ x_{ 1 } } \precsim f \of{ x_{ 2 } } </m> and <m> f \of{ x_{ 2 } } \precsim f \of{ x_{ 3 } } </m>, and so the transitivity of <m> \precsim </m> implies that <m> f \of{ x_{ 1 } } \precsim f \of{ x_{ 3 } } </m>; that is, <m> x_{ 1 } \precsim_{ f } x_{ 3 } </m>, and so <m> \precsim_{ f } </m> is transitive.
+      </p>
+      
+      <p>
+        Since the binary relation <m> \precsim_{ f } </m> is reflexive and transitive, it is a preorder on <m> X </m>.
       </p>
     </solution>
   </task>
@@ -34,7 +42,11 @@
     
     <solution>
       <p>
-        asdf
+        Since <m> \preceq </m> is a partial order on <m> Y </m>, it is a preorder on <m> Y </m>, and thus <m> \preceq_{ f } </m> is a preorder on <m> X </m> by (a) above. Thus it suffices to show that <m> \preceq_{ f } </m> is anti-symmetric if and only if <m> f </m> is injective. To that end, suppose first that <m> \preceq_{ f } </m> is not anti-symmetric. Then <m> x_{ 1 } \preceq_{ f } x_{ 2 } </m> and <m> x_{ 2 } \preceq_{ f } x_{ 1 } </m> for some elements <m> x_{ 1 } , x_{ 2 } \in X </m> so that <m> x_{ 1 } \neq x_{ 2 } </m>. We observe that <m> f \of{ x_{ 1 } } \preceq f \of{ x_{ 2 } } </m> and <m> f \of{ x_{ 2 } } \preceq f \of{ x_{ 1 } } </m>, and so the anti-symmetry of <m> \preceq </m> implies that <m> f \of{ x_{ 1 } } = f \of{ x_{ 2 } } </m>. Since <m> x_{ 1 } \neq x_{ 2 } </m> but <m> f \of{ x_{ 1 } } = f \of{ x_{ 2 } } </m>, <m> f </m> is not injective.
+      </p>
+      
+      <p>
+        Conversely, suppose that <m> f </m> is not injective. Then <m> f \of{ x_{ 1 } } = f \of{ x_{ 2 } } </m> for some elements <m> x_{ 1 } , x_{ 2 } \in X </m> so that <m> x_{ 1 } \neq x_{ 2 } </m>. We see that <m> f \of{ x_{ 1 } } \preceq f \of{ x_{ 2 } } </m> and <m> f \of{ x_{ 2 } } \preceq f \of{ x_{ 1 } } </m>, so that <m> x_{ 1 } \preceq_{ f } x_{ 2 } </m> and <m> x_{ 2 } \preceq_{ f } x_{ 1 } </m>. That <m> x_{ 1 } \neq x_{ 2 } </m> now implies that <m> \preceq_{ f } </m> is not anti-symmetric.
       </p>
     </solution>
   </task>
@@ -48,7 +60,11 @@
     
     <solution>
       <p>
-        asdf
+        Yes, the pullback of a total order along an injective map is necessarily a total order. Indeed, consider the pullback <m> \leq_{ f } </m> of a total order <m> \leq </m> on a set <m> Y </m> along an injective map <m> f \colon X \to Y </m> from a set <m> X </m> to <m> Y </m>. Since <m> \leq </m> is a total order, <xref ref="lemma-total-orders-are-partial-orders"/> implies that it is a partial order, and so <m> \leq_{ f } </m> is a partial order by (b) above. Thus it suffices to show that <m> \leq_{ f } </m> must be total.
+      </p>
+      
+      <p>
+        To that end, let <m> x_{ 1 } , x_{ 2 } \in X </m>, and note that the totality of <m> \leq </m> implies that either <m> f \of{ x_{ 1 } } \leq f \of{ x_{ 2 } } </m> or <m> f \of{ x_{ 2 } } \leq f \of{ x_{ 1 } } </m> (or both); that is, either <m> x_{ 1 } \leq_{ f } x_{ 2 } </m> or <m> x_{ 2 } \leq_{ f } x_{ 1 } </m> (or both). Thus <m> \leq_{ f } </m> is total, and hence a total order on <m> X </m>.
       </p>
     </solution>
   </task>
