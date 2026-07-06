@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proposition theorem-like"><h2 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lipschitz constants and Lipschitz continuity.</span>
+</h2>
+<div class="para logical">
+<div class="para">A map <span class="process-math">\(f \colon X \to Y \)</span> from a metric space <span class="process-math">\(\of{ X , \rho_{ X } } \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho_{ Y } } \)</span> is Lipschitz continuous if and only if <span class="process-math">\(L_{ f } \lt \infty \text{,}\)</span> in which case</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \leq L_{ f } \rho_{ X } \of{ x_{ 1 } , x_{ 2 } }
+\end{equation*}
+</div>
+<div class="para">for all points <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-lipschitz-constants-and-lipschitz-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 3.5.19: Lipschitz constants and Lipschitz continuity"><a tabindex="-1" href="#proposition-lipschitz-constants-and-lipschitz-continuity" title="Copy heading and permalink for Proposition 3.5.19: Lipschitz constants and Lipschitz continuity" aria-label="Copy heading and permalink for Proposition 3.5.19: Lipschitz constants and Lipschitz continuity">🔗</a></div>
+</article>
+<details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical">
+<div class="para">We observe that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C = \setmid{ L \in \clopint{ 0 }{ \infty } }{ \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \leq L \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } \textrm{ for all } x_{ 1 } , x_{ 2 } \in X }
+\end{equation*}
+</div>
+<div class="para">is a subset of the real numbers, and so <span class="process-math">\(L_{ f } = \inf \of{ C } \lt \infty \)</span> if and only if <span class="process-math">\(C \neq \emptyset \)</span> is non-empty. That <span class="process-math">\(C \neq \emptyset \)</span> is non-empty is precisely the Lipschitz continuity condition for <span class="process-math">\(f \text{,}\)</span> and so <span class="process-math">\(f \)</span> is Lipschitz continuous if and only if <span class="process-math">\(L_{ f } \lt \infty \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-lipschitz-constants-and-lipschitz-continuity-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">If <span class="process-math">\(C \neq \emptyset \)</span> is non-empty, let <span class="process-math">\(\of{ l_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of elements <span class="process-math">\(l_{ n } \in L \)</span> which converge to <span class="process-math">\(L_{ f } = \inf \of{ C } \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math">
+\begin{align*}
+\rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \amp = \lim_{ n \to \infty }{ \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } }\\
+\amp \leq \lim_{ n \to \infty }{ l_{ n } \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } } = L_{ f } \rho \of{ x_{ 1 } , x_{ 2 } }
+\end{align*}
+</div>
+<div class="para">for all points <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-lipschitz-constants-and-lipschitz-continuity-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.5.19.1"><a tabindex="-1" href="#proposition-lipschitz-constants-and-lipschitz-continuity-3" title="Copy heading and permalink for Proof 3.5.19.1" aria-label="Copy heading and permalink for Proof 3.5.19.1">🔗</a></div>
+</article></details><span class="incontext"><a class="internal" href="section-notions-of-metric-continuity.html#proposition-lipschitz-constants-and-lipschitz-continuity">In Context</a></span>
+</body>
+</html>
