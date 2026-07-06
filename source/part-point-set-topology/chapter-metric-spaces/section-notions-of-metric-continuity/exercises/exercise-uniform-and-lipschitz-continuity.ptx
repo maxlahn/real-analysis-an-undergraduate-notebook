@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="exercise-uniform-and-lipschitz-continuity" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Uniform and Lipschitz continuity
+  </title>
+  
+  <introduction>
+    <p>
+      Let <m> -\infty \lt a \lt b \lt \infty </m> be real numbers, and consider the real-valued function <m> f \colon \clint{ a }{ b } \to \R </m> defined by the formula
+      
+      <md>
+        f \of{ x } = x^{ 3 }
+      </md>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Verify that <m> f </m> is not uniformly continuous.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        We observe that for any positive real number <m> \delta \gt 0 </m>, 
+        
+        <md>
+          <mrow>
+            d \of{ f \of{ x + \frac{ \delta }{ 2 } } , f \of{ x } } \amp = \abs{ \of{ x + \frac{ \delta }{ 2 } }^{ 3 } - x^{ 3 } }
+          </mrow>
+          
+          <mrow>
+            \amp = \abs{ \frac{ \delta }{ 2 } x^{ 2 } + \frac{ \delta^{ 2 } }{ 4 } x + \frac{ \delta^{ 3 } }{ 8 } }
+          </mrow>
+        </md>
+        
+        is the absolute value of a quadratic function of <m> x </m> and is therefore unbounded from above. This implies that for any positive real number <m> \delta \gt 0 </m>, there is some real number <m> x \in \R </m> so that <m> d \of{ f \of{ x + \frac{ \delta }{ 2 } } , f \of{ x } } \geq 1 </m>, and so <m> f </m> is not uniformly continuous.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Without appealing to <xref ref="proposition-lipschitz-continuity-implies-uniform-continuity"/>, verify that <m> f </m> is not Lipschitz continuous.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        We observe that 
+        
+        <md>
+          <mrow>
+            d \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \amp = \abs{ x_{ 1 }^{ 3 } - x_{ 2 }^{ 3 } } \amp = \abs{ x_{ 1 } - x_{ 2 } } \cdot \abs{ x_{ 1 }^{ 2 } + x_{ 1 } x_{ 2 } + x_{ 2 }^{ 2 } }
+          </mrow>
+          
+          <mrow>
+            \amp = \abs{ x_{ 1 }^{ 2 } + x_{ 1 } x_{ 2 } + x_{ 2 }^{ 2 } } \cdot d \of{ x_{ 1 } , x_{ 2 } }
+          </mrow>
+        </md>
+        
+        for any points <m> x_{ 1 } , x_{ 2 } \in \R </m>. Since <m> x_{ 1 }^{ 2 } + x_{ 1 } x_{ 2 } + x_{ 2 }^{ 2 } </m> is a quadratic polynomial in <m> x_{ 1 } </m> and <m> x_{ 2 } </m>, it is not bounded in absolute value, and so <m> f </m> cannot be Lipschitz continuous.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Verify that the restriction of <m> f </m> to a closed interval <m> \clint{ a }{ b } \subsetneq \R </m> is uniformly continuous.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Let <m> \epsilon \gt 0 </m> be a positive real number, and consider the positive real number
+        
+        <md>
+          \delta = \frac{ \epsilon }{ 3 \max \of{ \set{ \abs{ a }^{ 2 } , \abs{ b }^{ 2 } } } }
+        </md>.
+        
+        We observe that
+        
+        <md>
+          <mrow>
+            \abs{ x_{ 1 }^{ 3 } - x_{ 2 }^{ 3 } } \amp = \abs{ x_{ 1 } - x_{ 2 } } \cdot \abs{ x_{ 1 }^{ 2 } + x_{ 1 } x_{ 2 } + x_{ 2 }^{ 2 } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq d \of{ x_{ 1 } , x_{ 2 } } \cdot 3 \max \of{ \set{ \abs{ a }^{ 2 } , \abs{ b }^{ 2 } } } \lt 3 \delta \max \of{ \set{ \abs{ a }^{ 2 } , \abs{ b }^{ 2 } } } = \epsilon
+          </mrow>
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } \in \clint{ a }{ b } </m> so that <m> d \of{ x_{ 1 } , x_{ 2 } } \lt \delta </m>. Thus the restriction of <m> f </m> to <m> \clint{ a }{ b } </m> is uniformly continuous.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Verify that the restriction of <m> f </m> to a closed interval <m> \clint{ a }{ b } \subsetneq \R </m> is Lipschitz continuous.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        We observe that
+        
+        <md>
+          <mrow>
+            \abs{ x_{ 1 }^{ 3 } - x_{ 2 }^{ 3 } } \amp = \abs{ x_{ 1 } - x_{ 2 } } \cdot \abs{ x_{ 1 }^{ 2 } + x_{ 1 } x_{ 2 } + x_{ 2 }^{ 2 } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq d \of{ x_{ 1 } , x_{ 2 } } \cdot 3 \max \of{ \set{ \abs{ a }^{ 2 } , \abs{ b }^{ 2 } } }
+          </mrow>
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } \in \clint{ a }{ b } </m>. Thus the restriction of <m> f </m> to <m> \clint{ a }{ b } </m> is Lipschitz continuous, with Lipschitz constant
+        
+        <md>
+          L_{ f } \leq 3 \max \of{ \set{ \abs{ a }^{ 2 } , \abs{ b }^{ 2 } } }
+        </md>.
+      </p>
+    </solution>
+  </task>
+</exercise>

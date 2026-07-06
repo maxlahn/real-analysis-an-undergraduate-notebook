@@ -748,7 +748,7 @@ eBookConfig.enable_chatcodes =  false;
 <ul id="ptx-toc-group-section-notions-of-metric-continuity" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#subsection-continuous-maps-and-functions" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Continuous Maps and Functions</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#subsection-stronger-forms-of-metric-continuity" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Stronger Forms of Metric Continuity</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#subsection-even-stronger-forms-of-metric-continuity" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Even Stronger Forms of Metric Continuity [SKIP]</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#subsection-even-stronger-forms-of-metric-continuity" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Even Stronger Forms of Metric Continuity</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#exercises-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5.4</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#problems-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5.5</span> <span class="title">Problems</span></a></div></li>
 </ul>
@@ -5846,7 +5846,7 @@ d_{ \infty } \of{ \vect{ x }_{ n } , \vect{ x } } \amp = \norm{ \vect{ x }_{ n }
 <div class="para">We compute</div>
 <div class="displaymath process-math">
 \begin{align*}
-\lim_{ n \to \infty }{ \frac{ 2 n + 1 }{ 3 n } } = \lim_{ n \to \infty }{ \frac{ 2 n }{ 3 n } } + \lim_{ n \to \infty }{ \frac{ 1 }{ 3 n } }\\
+\lim_{ n \to \infty }{ \frac{ 2 n + 1 }{ 3 n } } \amp = \lim_{ n \to \infty }{ \frac{ 2 n }{ 3 n } } + \lim_{ n \to \infty }{ \frac{ 1 }{ 3 n } }\\
 \amp = \lim_{ n \to \infty }{ \frac{ 2 }{ 3 } } + \frac{ 1 }{ 3 } \lim_{ n \to \infty }{ \frac{ 1 }{ n } }\\
 \amp = \frac{ 2 }{ 3 } + 0 = \frac{ 2 }{ 3 }\text{.}
 \end{align*}
@@ -5873,7 +5873,7 @@ d_{ \infty } \of{ \vect{ x }_{ n } , \vect{ x } } \amp = \norm{ \vect{ x }_{ n }
 <div class="para">We compute</div>
 <div class="displaymath process-math">
 \begin{align*}
-\lim_{ n \to \infty }{ \frac{ 1 - n^{ 2 } }{ n } } = \lim_{ n \to \infty }{ \of{ \frac{ 1 }{ n } - n } } = \lim_{ n \to \infty }{ \frac{ 1 }{ n } } - \lim_{ n \to \infty }{ n }\\
+\lim_{ n \to \infty }{ \frac{ 1 - n^{ 2 } }{ n } } \amp = \lim_{ n \to \infty }{ \of{ \frac{ 1 }{ n } - n } } = \lim_{ n \to \infty }{ \frac{ 1 }{ n } } - \lim_{ n \to \infty }{ n }\\
 \amp = 0 - \infty = -\infty\text{.}
 \end{align*}
 </div>
@@ -6292,6 +6292,876 @@ x_{ n } \leq \sup_{ k \geq n_{ B } }{ x_{ k } } \lt B
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Solution 3.3.5.5.b.1"><a tabindex="-1" href="#problem-divergence-and-upper-lower-limits-4-2" title="Copy heading and permalink for Solution 3.3.5.5.b.1" aria-label="Copy heading and permalink for Solution 3.3.5.5.b.1">🔗</a></div>
 </div></details>
+</div></article></article><h3 class="heading hide-type" title="Exercises 3.4.4: Exercises">
+<span class="codenumber">3.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Open and Closed Sets</span><br><span class="codenumber">3.4.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h3>
+<div class="exercisegroup">
+<div class="introduction">
+<div class="para">Determine whether or not the given set is a neighborhood of the given point.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-neighborhoods-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-neighborhoods-3" aria-label="Back to 3.4.4.1."><span class="codenumber">3.4.4.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para logical">
+<div class="para">Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = \opint{ 0 }{ 2 } = \setmid{ x \in \R }{ 0 \lt x \lt 2 }
+\end{equation*}
+</div>
+<div class="para">be the open interval between <span class="process-math">\(0 \)</span> and <span class="process-math">\(2 \text{.}\)</span> Determine whether or not <span class="process-math">\(A \)</span> is a neighborhood of the point <span class="process-math">\(1 \)</span> in the metric space <span class="process-math">\(\of{ \R , d } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-neighborhoods-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(A \)</span> is a neighborhood of <span class="process-math">\(1 \)</span> in <span class="process-math">\(\R \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-neighborhoods-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.1.1"><a tabindex="-1" href="#exercise-neighborhoods-3-2" title="Copy heading and permalink for Answer 3.4.4.1.1" aria-label="Copy heading and permalink for Answer 3.4.4.1.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Since <span class="process-math">\(A \)</span> contains the open ball</div>
+<div class="displaymath process-math">
+\begin{align*}
+\mB_{ 1 } \of{ 1 } \amp = \setmid{ x \in \R }{ \abs{ x - 1 } \lt 1 } = \setmid{ x \in \R }{ 0 \lt x \lt 2 }\\
+\amp = \opint{ 0 }{ 2 } = A
+\end{align*}
+</div>
+<div class="para">of radius <span class="process-math">\(1 \)</span> and center <span class="process-math">\(1 \text{,}\)</span> <span class="process-math">\(A \)</span> is a neighborhood of <span class="process-math">\(1 \)</span> in <span class="process-math">\(\R \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-neighborhoods-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.4.4.1.1"><a tabindex="-1" href="#exercise-neighborhoods-3-3" title="Copy heading and permalink for Solution 3.4.4.1.1" aria-label="Copy heading and permalink for Solution 3.4.4.1.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-neighborhoods-4" aria-label="Back to 3.4.4.2."><span class="codenumber">3.4.4.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para logical">
+<div class="para">Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B = \clint{ 0 }{ 2 } = \setmid{ x \in \R }{ 0 \leq x \leq 2 }
+\end{equation*}
+</div>
+<div class="para">be the closed interval between <span class="process-math">\(0 \)</span> and <span class="process-math">\(2 \text{.}\)</span> Determine whether or not <span class="process-math">\(B \)</span> is a neighborhood of the point <span class="process-math">\(1 \)</span> in the metric space <span class="process-math">\(\of{ \R , d } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-neighborhoods-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(B \)</span> is a neighborhood of <span class="process-math">\(1 \)</span> in <span class="process-math">\(\R \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-neighborhoods-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.2.1"><a tabindex="-1" href="#exercise-neighborhoods-4-2" title="Copy heading and permalink for Answer 3.4.4.2.1" aria-label="Copy heading and permalink for Answer 3.4.4.2.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Since <span class="process-math">\(B \)</span> contains the open ball</div>
+<div class="displaymath process-math">
+\begin{align*}
+\mB_{ 1 } \of{ 1 } \amp = \setmid{ x \in \R }{ \abs{ x - 1 } \lt 1 } = \setmid{ x \in \R }{ 0 \lt x \lt 2 }\\
+\amp = \opint{ 0 }{ 2 } \subsetneq \clint{ 0 }{ 2 } = B
+\end{align*}
+</div>
+<div class="para">of radius <span class="process-math">\(1 \)</span> and center <span class="process-math">\(1 \text{,}\)</span> <span class="process-math">\(B \)</span> is a neighborhood of <span class="process-math">\(1 \)</span> in <span class="process-math">\(\R \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-neighborhoods-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.4.4.2.1"><a tabindex="-1" href="#exercise-neighborhoods-4-3" title="Copy heading and permalink for Solution 3.4.4.2.1" aria-label="Copy heading and permalink for Solution 3.4.4.2.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-neighborhoods-5" aria-label="Back to 3.4.4.3."><span class="codenumber">3.4.4.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para logical">
+<div class="para">Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C = \clopint{ 0 }{ 2 } = \setmid{ x \in \R }{ 0 \leq x \lt 2 }
+\end{equation*}
+</div>
+<div class="para">be the half-closed, half-open interval between <span class="process-math">\(0 \)</span> and <span class="process-math">\(2 \text{.}\)</span> Determine whether or not <span class="process-math">\(C \)</span> is a neighborhood of the point <span class="process-math">\(0 \)</span> in the metric space <span class="process-math">\(\of{ \R , d } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-neighborhoods-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(C \)</span> is not a neighborhood of <span class="process-math">\(0 \)</span> in <span class="process-math">\(\R \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-neighborhoods-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.3.1"><a tabindex="-1" href="#exercise-neighborhoods-5-2" title="Copy heading and permalink for Answer 3.4.4.3.1" aria-label="Copy heading and permalink for Answer 3.4.4.3.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We note that for any positive real number <span class="process-math">\(r \gt 0 \text{,}\)</span> the open ball</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mB_{ r } \of{ 0 } = \setmid{ x \in \R }{ \abs{ x - 0 } \lt r } = \setmid{ x \in \R }{ -r \lt x \lt r } = \opint{ -r }{ r }
+\end{equation*}
+</div>
+<div class="para">contains negative numbers. Thus any neighborhood of <span class="process-math">\(0 \)</span> in <span class="process-math">\(\R \)</span> contains negative numbers. Since every element of <span class="process-math">\(C \)</span> is non-negative, <span class="process-math">\(C \)</span> is not a neighborhood of <span class="process-math">\(1 \)</span> in <span class="process-math">\(\R \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-neighborhoods-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.4.4.3.1"><a tabindex="-1" href="#exercise-neighborhoods-5-3" title="Copy heading and permalink for Solution 3.4.4.3.1" aria-label="Copy heading and permalink for Solution 3.4.4.3.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-neighborhoods-6" aria-label="Back to 3.4.4.4."><span class="codenumber">3.4.4.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para logical">
+<div class="para">Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+D = 2 \Z = \setmid{ 2 k \in \Z }{ k \in \Z } = \set{ \dotsc , -6 , -4 , -2 , 0 , 2 , 4 , 6 , \dotsc }
+\end{equation*}
+</div>
+<div class="para">be the set of even integers. Determine whether or not <span class="process-math">\(D \)</span> is a neighborhood of the point <span class="process-math">\(0 \)</span> in the discrete metric space <span class="process-math">\(\of{ \R , \delta_{ \R } } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-neighborhoods-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(D \)</span> is a neighborhood of <span class="process-math">\(0 \)</span> in <span class="process-math">\(\of{ \R , \delta_{ \R } } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-neighborhoods-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.4.1"><a tabindex="-1" href="#exercise-neighborhoods-6-2" title="Copy heading and permalink for Answer 3.4.4.4.1" aria-label="Copy heading and permalink for Answer 3.4.4.4.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We note that since the discrete metric <span class="process-math">\(\delta_{ \R } \)</span> takes only the values <span class="process-math">\(0 \)</span> and <span class="process-math">\(1 \text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mB_{ \frac{ 1 }{ 2 } } \of{ 0 } = \setmid{ x \in \R }{ \delta_{ \R } \of{ x , 0 } \lt \frac{ 1 }{ 2 } } = \setmid{ x \in \R }{ \delta_{ \R } \of{ x , 0 } = 0 } = \set{ 0 }\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(0 \in D \text{,}\)</span> <span class="process-math">\(\mB_{ \frac{ 1 }{ 2 } } \of{ 0 } \subseteq D \text{,}\)</span> and so <span class="process-math">\(D \)</span> is a neighborhood of <span class="process-math">\(0 \)</span> in <span class="process-math">\(\of{ \R , \delta_{ \R } } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-neighborhoods-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.4.4.4.1"><a tabindex="-1" href="#exercise-neighborhoods-6-3" title="Copy heading and permalink for Solution 3.4.4.4.1" aria-label="Copy heading and permalink for Solution 3.4.4.4.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-neighborhoods-7" aria-label="Back to 3.4.4.5."><span class="codenumber">3.4.4.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para logical">
+<div class="para">Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+E = \clint{ 0 }{ 1 } = \setmid{ x \in \R }{ 0 \leq x \leq 1 }
+\end{equation*}
+</div>
+<div class="para">be the closed interval between <span class="process-math">\(0 \)</span> and <span class="process-math">\(1 \text{.}\)</span> Determine whether or not <span class="process-math">\(E \)</span> is a neighborhood of the point <span class="process-math">\(0 \)</span> in the metric subspace <span class="process-math">\(\of{ \clint{ 0 }{ 2 } , d } \)</span> of the real line <span class="process-math">\(\of{ \R , d } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-neighborhoods-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(E \)</span> is a neighborhood of <span class="process-math">\(0 \)</span> in <span class="process-math">\(\clint{ 0 }{ 2 } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-neighborhoods-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.5.1"><a tabindex="-1" href="#exercise-neighborhoods-7-2" title="Copy heading and permalink for Answer 3.4.4.5.1" aria-label="Copy heading and permalink for Answer 3.4.4.5.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Since <span class="process-math">\(E \)</span> contains the open ball</div>
+<div class="displaymath process-math">
+\begin{align*}
+\mB_{ 1 } \of{ 0 } \amp = \setmid{ x \in \clint{ 0 }{ 2 } }{ \abs{ x - 0 } \lt 1 } = \setmid{ x \in \R }{ 0 \leq x \leq 2 \textrm{ and } -1 \lt x \lt 1 }\\
+\amp = \setmid{ x \in \R }{ 0 \leq x \lt 1 } = \clopint{ 0 }{ 1 } \subseteq \clint{ 0 }{ 1 } = E
+\end{align*}
+</div>
+<div class="para">of radius <span class="process-math">\(1 \)</span> and center <span class="process-math">\(1 \text{,}\)</span> <span class="process-math">\(E \)</span> is a neighborhood of <span class="process-math">\(1 \)</span> in <span class="process-math">\(\clint{ 0 }{ 2 } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-neighborhoods-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.4.4.5.1"><a tabindex="-1" href="#exercise-neighborhoods-7-3" title="Copy heading and permalink for Solution 3.4.4.5.1" aria-label="Copy heading and permalink for Solution 3.4.4.5.1">🔗</a></div>
+</div></details>
+</div></article>
+</div>
+</div>
+<div class="exercisegroup">
+<div class="introduction">
+<div class="para">Determine whether the given subset of a metric space is open, closed, both open and closed, or neither open nor closed.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-open-and-closed-sets-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-open-and-closed-sets-3" aria-label="Back to 3.4.4.6."><span class="codenumber">3.4.4.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para logical">
+<div class="para">Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = \opint{ 0 }{ 2 } = \setmid{ x \in \R }{ 0 \lt x \lt 2 }
+\end{equation*}
+</div>
+<div class="para">be the open interval between <span class="process-math">\(0 \)</span> and <span class="process-math">\(2 \text{.}\)</span> Determine whether or not <span class="process-math">\(A \)</span> is open or closed in the metric space <span class="process-math">\(\of{ \R , d } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-open-and-closed-sets-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(A \)</span> is open in <span class="process-math">\(\R \)</span> but not closed.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-open-and-closed-sets-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.6.1"><a tabindex="-1" href="#exercise-open-and-closed-sets-3-2" title="Copy heading and permalink for Answer 3.4.4.6.1" aria-label="Copy heading and permalink for Answer 3.4.4.6.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-open-and-closed-sets-4" aria-label="Back to 3.4.4.7."><span class="codenumber">3.4.4.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para logical">
+<div class="para">Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B = \clint{ 0 }{ 2 } = \setmid{ x \in \R }{ 0 \leq x \leq 2 }
+\end{equation*}
+</div>
+<div class="para">be the closed interval between <span class="process-math">\(0 \)</span> and <span class="process-math">\(2 \text{.}\)</span> Determine whether or not <span class="process-math">\(B \)</span> is open or closed in the metric space <span class="process-math">\(\of{ \R , d } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-open-and-closed-sets-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(B \)</span> is closed in <span class="process-math">\(\R \)</span> but not open.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-open-and-closed-sets-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.7.1"><a tabindex="-1" href="#exercise-open-and-closed-sets-4-2" title="Copy heading and permalink for Answer 3.4.4.7.1" aria-label="Copy heading and permalink for Answer 3.4.4.7.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-open-and-closed-sets-5" aria-label="Back to 3.4.4.8."><span class="codenumber">3.4.4.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para logical">
+<div class="para">Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C = \clopint{ 0 }{ 2 } = \setmid{ x \in \R }{ 0 \leq x \lt 2 }
+\end{equation*}
+</div>
+<div class="para">be the half-closed, half-open interval between <span class="process-math">\(0 \)</span> and <span class="process-math">\(2 \text{.}\)</span> Determine whether or not <span class="process-math">\(C \)</span> is open or closed in the metric space <span class="process-math">\(\of{ \R , d } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-open-and-closed-sets-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(C \)</span> is neither open nor closed in <span class="process-math">\(\R \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-open-and-closed-sets-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.8.1"><a tabindex="-1" href="#exercise-open-and-closed-sets-5-2" title="Copy heading and permalink for Answer 3.4.4.8.1" aria-label="Copy heading and permalink for Answer 3.4.4.8.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-open-and-closed-sets-6" aria-label="Back to 3.4.4.9."><span class="codenumber">3.4.4.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para logical">
+<div class="para">Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+D = 2 \Z = \setmid{ 2 k \in \Z }{ k \in \Z } = \set{ \dotsc , -6 , -4 , -2 , 0 , 2 , 4 , 6 , \dotsc }
+\end{equation*}
+</div>
+<div class="para">be the set of even integers. Determine whether or not <span class="process-math">\(D \)</span> is open or closed in the discrete metric space <span class="process-math">\(\of{ \R , \delta_{ \R } } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-open-and-closed-sets-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(D \)</span> both open and closed in <span class="process-math">\(\of{ \R , \delta_{ \R } } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-open-and-closed-sets-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.9.1"><a tabindex="-1" href="#exercise-open-and-closed-sets-6-2" title="Copy heading and permalink for Answer 3.4.4.9.1" aria-label="Copy heading and permalink for Answer 3.4.4.9.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-open-and-closed-sets-7" aria-label="Back to 3.4.4.10."><span class="codenumber">3.4.4.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para logical">
+<div class="para">Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+E = \clint{ 0 }{ 1 } = \setmid{ x \in \R }{ 0 \leq x \leq 1 }
+\end{equation*}
+</div>
+<div class="para">be the closed interval between <span class="process-math">\(0 \)</span> and <span class="process-math">\(1 \text{.}\)</span> Determine whether or not <span class="process-math">\(E \)</span> is open or closed in the metric subspace <span class="process-math">\(\of{ \clint{ 0 }{ 2 } , d } \)</span> of the real line <span class="process-math">\(\of{ \R , d } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-open-and-closed-sets-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(E \)</span> is closed in <span class="process-math">\(\clint{ 0 }{ 2 } \)</span> but not open.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-open-and-closed-sets-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.10.1"><a tabindex="-1" href="#exercise-open-and-closed-sets-7-2" title="Copy heading and permalink for Answer 3.4.4.10.1" aria-label="Copy heading and permalink for Answer 3.4.4.10.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-open-and-closed-sets-8" aria-label="Back to 3.4.4.11."><span class="codenumber">3.4.4.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para logical">
+<div class="para">Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F = \clint{ 0 }{ 1 } = \setmid{ x \in \R }{ 0 \leq x \leq 1 }
+\end{equation*}
+</div>
+<div class="para">be the closed interval between <span class="process-math">\(0 \)</span> and <span class="process-math">\(1 \text{.}\)</span> Determine whether or not <span class="process-math">\(F \)</span> is open or closed in the metric subspace <span class="process-math">\(\of{ \clint{ 0 }{ 1 } \cup \clint{ 2 }{ 3 } , d } \)</span> of the real line <span class="process-math">\(\of{ \R , d } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-open-and-closed-sets-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(F \)</span> is both open and closed in <span class="process-math">\(\clint{ 0 }{ 1 } \cup \clint{ 2 }{ 3 } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-open-and-closed-sets-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.11.1"><a tabindex="-1" href="#exercise-open-and-closed-sets-8-2" title="Copy heading and permalink for Answer 3.4.4.11.1" aria-label="Copy heading and permalink for Answer 3.4.4.11.1">🔗</a></div>
+</div></details>
+</div></article>
+</div>
+</div>
+<div class="exercisegroup">
+<div class="introduction">
+<div class="para">Compute the diameter of the given subsets of metric spaces.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-diameter-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-diameter-3" aria-label="Back to 3.4.4.12."><span class="codenumber">3.4.4.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para">Let <span class="process-math">\(A = \set{ 0 , 1 , 2 } \text{.}\)</span> Compute the diameter of <span class="process-math">\(A \)</span> as a subset of the metric space <span class="process-math">\(\of{ \R , d } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-diameter-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\diam \of{ A } = 2 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-diameter-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.12.1"><a tabindex="-1" href="#exercise-diameter-3-2" title="Copy heading and permalink for Answer 3.4.4.12.1" aria-label="Copy heading and permalink for Answer 3.4.4.12.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-diameter-4" aria-label="Back to 3.4.4.13."><span class="codenumber">3.4.4.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para">Let <span class="process-math">\(B = \set{ 0 , 1 , 2 , 5 } \text{.}\)</span> Compute the diameter of <span class="process-math">\(B \)</span> as a subset of the discrete metric space <span class="process-math">\(\of{ \R , \delta_{ \R } } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-diameter-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\diam \of{ B } = 1 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-diameter-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.13.1"><a tabindex="-1" href="#exercise-diameter-4-2" title="Copy heading and permalink for Answer 3.4.4.13.1" aria-label="Copy heading and permalink for Answer 3.4.4.13.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-diameter-5" aria-label="Back to 3.4.4.14."><span class="codenumber">3.4.4.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para logical">
+<div class="para">Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C = \set{ 0 , 1 , 2 } \cup \set{ 3 - \frac{ 1 }{ n } }_{ n = 1 }^{ \infty }\text{.}
+\end{equation*}
+</div>
+<div class="para">Compute the diameter of <span class="process-math">\(C \)</span> as a subset of the metric space <span class="process-math">\(\of{ \R , d } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-diameter-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\diam \of{ C } = 4 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-diameter-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.14.1"><a tabindex="-1" href="#exercise-diameter-5-2" title="Copy heading and permalink for Answer 3.4.4.14.1" aria-label="Copy heading and permalink for Answer 3.4.4.14.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-diameter-6" aria-label="Back to 3.4.4.15."><span class="codenumber">3.4.4.15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para logical">
+<div class="para">Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+D = 3 \Z = \set{ 3 k \in \Z }{ k \in \Z }
+\end{equation*}
+</div>
+<div class="para">be the set of integers which are divisible by <span class="process-math">\(3 \text{.}\)</span> Compute the diameter of <span class="process-math">\(D \)</span> as a subset of the metric space <span class="process-math">\(\of{ \R , d } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-diameter-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\diam \of{ D } = \infty \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-diameter-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.15.1"><a tabindex="-1" href="#exercise-diameter-6-2" title="Copy heading and permalink for Answer 3.4.4.15.1" aria-label="Copy heading and permalink for Answer 3.4.4.15.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-diameter-7" aria-label="Back to 3.4.4.16."><span class="codenumber">3.4.4.16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para">Let <span class="process-math">\(E = \set{ \pi } \text{.}\)</span> Compute the diameter of <span class="process-math">\(E \)</span> as a subset of the metric space <span class="process-math">\(\of{ \R , d } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-diameter-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\diam \of{ E } = 0 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-diameter-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.16.1"><a tabindex="-1" href="#exercise-diameter-7-2" title="Copy heading and permalink for Answer 3.4.4.16.1" aria-label="Copy heading and permalink for Answer 3.4.4.16.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-diameter-8" aria-label="Back to 3.4.4.17."><span class="codenumber">3.4.4.17<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para">Let <span class="process-math">\(F = \set{ \pi } \text{.}\)</span> Compute the diameter of <span class="process-math">\(F \)</span> as a subset of the discrete metric space <span class="process-math">\(\of{ \R , \delta_{ X } } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-diameter-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\diam \of{ F } = 0 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-diameter-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.17.1"><a tabindex="-1" href="#exercise-diameter-8-2" title="Copy heading and permalink for Answer 3.4.4.17.1" aria-label="Copy heading and permalink for Answer 3.4.4.17.1">🔗</a></div>
+</div></details>
+</div></article>
+</div>
+</div>
+<div class="exercisegroup">
+<div class="introduction">
+<div class="para logical">
+<div class="para">Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+U = \opint{ 0 }{ 1 } = \setmid{ x \in \R }{ 0 \lt x \lt 1 }
+\end{equation*}
+</div>
+<div class="para">be the open interval between <span class="process-math">\(0 \)</span> and <span class="process-math">\(1 \text{.}\)</span> Determine whether <span class="process-math">\(U \)</span> is a bounded or unbounded subset of the given metric space.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-bounded-and-unbounded-subsets-of-metric-spaces-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-bounded-and-unbounded-subsets-of-metric-spaces-3" aria-label="Back to 3.4.4.18."><span class="codenumber">3.4.4.18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para">Determine whether <span class="process-math">\(U \)</span> is bounded or unbounded in the metric space <span class="process-math">\(\of{ \R , d } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-bounded-and-unbounded-subsets-of-metric-spaces-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(U \)</span> is bounded in <span class="process-math">\(\R \)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-bounded-and-unbounded-subsets-of-metric-spaces-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.18.1"><a tabindex="-1" href="#exercise-bounded-and-unbounded-subsets-of-metric-spaces-3-2" title="Copy heading and permalink for Answer 3.4.4.18.1" aria-label="Copy heading and permalink for Answer 3.4.4.18.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-bounded-and-unbounded-subsets-of-metric-spaces-4" aria-label="Back to 3.4.4.19."><span class="codenumber">3.4.4.19<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para">Determine whether <span class="process-math">\(U \)</span> is bounded or unbounded in the subspace <span class="process-math">\(\of{ \opint{ 0 }{ \infty } , d } \)</span> of the metric space <span class="process-math">\(\of{ \R , d } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-bounded-and-unbounded-subsets-of-metric-spaces-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(U \)</span> is bounded in <span class="process-math">\(\opint{ 0 }{ \infty } \)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-bounded-and-unbounded-subsets-of-metric-spaces-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.19.1"><a tabindex="-1" href="#exercise-bounded-and-unbounded-subsets-of-metric-spaces-4-2" title="Copy heading and permalink for Answer 3.4.4.19.1" aria-label="Copy heading and permalink for Answer 3.4.4.19.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-bounded-and-unbounded-subsets-of-metric-spaces-5" aria-label="Back to 3.4.4.20."><span class="codenumber">3.4.4.20<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para logical">
+<div class="para">Determine whether <span class="process-math">\(U \)</span> is bounded or unbounded in the metric space <span class="process-math">\(\of{ \opint{ 0 }{ \infty } , \rho } \text{,}\)</span> where <span class="process-math">\(\rho \)</span> is the metric on <span class="process-math">\(\opint{ 0 }{ \infty } \)</span> defined by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho \of{ x , y } = \abs{ \ln \of{ \frac{ x }{ y } } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-bounded-and-unbounded-subsets-of-metric-spaces-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(U \)</span> is unbounded in <span class="process-math">\(\of{ \opint{ 0 }{ \infty } , \rho } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-bounded-and-unbounded-subsets-of-metric-spaces-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.20.1"><a tabindex="-1" href="#exercise-bounded-and-unbounded-subsets-of-metric-spaces-5-2" title="Copy heading and permalink for Answer 3.4.4.20.1" aria-label="Copy heading and permalink for Answer 3.4.4.20.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-bounded-and-unbounded-subsets-of-metric-spaces-6" aria-label="Back to 3.4.4.21."><span class="codenumber">3.4.4.21<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para">Determine whether <span class="process-math">\(U \)</span> is bounded or unbounded in the discrete metric space <span class="process-math">\(\of{ \opint{ 0 }{ \infty } , \delta_{ \opint{ 0 }{ \infty } } } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-bounded-and-unbounded-subsets-of-metric-spaces-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(U \)</span> is bounded in <span class="process-math">\(\of{ \opint{ 0 }{ \infty } , \delta_{ \opint{ 0 }{ \infty } } } \)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-bounded-and-unbounded-subsets-of-metric-spaces-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.21.1"><a tabindex="-1" href="#exercise-bounded-and-unbounded-subsets-of-metric-spaces-6-2" title="Copy heading and permalink for Answer 3.4.4.21.1" aria-label="Copy heading and permalink for Answer 3.4.4.21.1">🔗</a></div>
+</div></details>
+</div></article>
+</div>
+</div>
+<div class="exercisegroup">
+<div class="introduction">
+<div class="para">Compute the distance between the given bounded maps in the uniform metric.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-the-uniform-metric-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-the-uniform-metric-3" aria-label="Back to 3.4.4.22."><span class="codenumber">3.4.4.22<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para">Let <span class="process-math">\(f , g \colon \R \to \R \)</span> be the constant real-valued functions defined by the formulae <span class="process-math">\(f \of{ x } = 2 \)</span> and <span class="process-math">\(g \of{ x } = \pi \text{.}\)</span> Compute the uniform distance <span class="process-math">\(d_{ \infty } \of{ f , g } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-the-uniform-metric-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(d_{ \infty } \of{ f , g } = \pi - 2 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-the-uniform-metric-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.22.1"><a tabindex="-1" href="#exercise-the-uniform-metric-3-2" title="Copy heading and permalink for Answer 3.4.4.22.1" aria-label="Copy heading and permalink for Answer 3.4.4.22.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We compute</div>
+<div class="displaymath process-math">
+\begin{align*}
+d_{ \infty } \of{ f , g } \amp = \sup_{ x \in \R }{ d \of{ f \of{ x } , g \of{ x } } } = \sup_{ x \in \R }{ \abs{ 2 - \pi } }\\
+\amp = \sup_{ x \in \R }{ \of{ \pi - 2 } } = \pi - 2\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-the-uniform-metric-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.4.4.22.1"><a tabindex="-1" href="#exercise-the-uniform-metric-3-3" title="Copy heading and permalink for Solution 3.4.4.22.1" aria-label="Copy heading and permalink for Solution 3.4.4.22.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-the-uniform-metric-4" aria-label="Back to 3.4.4.23."><span class="codenumber">3.4.4.23<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para">Let <span class="process-math">\(f , g \colon \clint{ -1 }{ 1 } \to \R \)</span> be the real-valued functions defined by the formulae <span class="process-math">\(f \of{ x } = 2 \)</span> and <span class="process-math">\(g \of{ x } = x^{ 2 } \text{.}\)</span> Compute the uniform distance <span class="process-math">\(d_{ \infty } \of{ f , g } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-the-uniform-metric-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(d_{ \infty } \of{ f , g } = 2 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-the-uniform-metric-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.23.1"><a tabindex="-1" href="#exercise-the-uniform-metric-4-2" title="Copy heading and permalink for Answer 3.4.4.23.1" aria-label="Copy heading and permalink for Answer 3.4.4.23.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We compute</div>
+<div class="displaymath process-math">
+\begin{align*}
+d_{ \infty } \of{ f , g } \amp = \sup_{ -1 \leq x \leq 1 }{ d \of{ f \of{ x } , g \of{ x } } } = \sup_{ -1 \leq x \leq 1 }{ \abs{ 2 - x^{ 2 } } }\\
+\amp = \sup_{ -1 \leq x \leq 1 }{ 2 - x^{ 2 } } = 2 - 0 = 2\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-the-uniform-metric-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.4.4.23.1"><a tabindex="-1" href="#exercise-the-uniform-metric-4-3" title="Copy heading and permalink for Solution 3.4.4.23.1" aria-label="Copy heading and permalink for Solution 3.4.4.23.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#exercise-the-uniform-metric-5" aria-label="Back to 3.4.4.24."><span class="codenumber">3.4.4.24<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para">Let <span class="process-math">\(f , g \colon \opint{ 0 }{ 2 } \to \R \)</span> be the real-valued functions defined by the formulae <span class="process-math">\(f \of{ x } = 2 - x \)</span> and <span class="process-math">\(g \of{ x } = 1 + 3 x \text{.}\)</span> Compute the uniform distance <span class="process-math">\(d_{ \infty } \of{ f , g } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-the-uniform-metric-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(d_{ \infty } \of{ f , g } = 2 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-the-uniform-metric-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.4.4.24.1"><a tabindex="-1" href="#exercise-the-uniform-metric-5-2" title="Copy heading and permalink for Answer 3.4.4.24.1" aria-label="Copy heading and permalink for Answer 3.4.4.24.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We compute</div>
+<div class="displaymath process-math">
+\begin{align*}
+d_{ \infty } \of{ f , g } \amp = \sup_{ 0 \lt x \lt 2 }{ d \of{ f \of{ x } , g \of{ x } } } = \sup_{ 0 \lt x \lt 2 }{ \abs{ 2 - x - \of{ 1 + 3 x } } }\\
+\amp = \sup_{ 0 \lt x \lt 2 }{ \abs{ 1 - 4 x } } = 7\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-the-uniform-metric-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.4.4.24.1"><a tabindex="-1" href="#exercise-the-uniform-metric-5-3" title="Copy heading and permalink for Solution 3.4.4.24.1" aria-label="Copy heading and permalink for Solution 3.4.4.24.1">🔗</a></div>
+</div></details>
+</div></article>
+</div>
+</div>
+<h3 class="heading hide-type" title="Reading Questions 3.4.5: Problems">
+<span class="codenumber">3.4.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#problem-open-and-closed-sets-in-metric-subspaces" aria-label="Back to 3.4.5.1. Open and closed sets in metric subspaces."><span class="codenumber">3.4.5.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Open and closed sets in metric subspaces.</span></a></h4>
+<div class="introduction">
+<div class="para">Let <span class="process-math">\(U \subseteq X \)</span> be a subset of a metric space <span class="process-math">\(\of{ X , \rho } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-open-and-closed-sets-in-metric-subspaces-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="exercise-like"><h5 class="heading hide-type" title="Task 3.4.5.1.a"><a href="section-open-and-closed-sets.html#problem-open-and-closed-sets-in-metric-subspaces-3" aria-label="Back to 3.4.5.1.a"><span class="codenumber">3.4.5.1.a</span></a></h5>
+<div class="para">Prove that a subset <span class="process-math">\(V \subseteq U \)</span> is open in the metric subspace <span class="process-math">\(\of{ U , \rho } \)</span> if and only if <span class="process-math">\(V = U \cap W \)</span> for some open set <span class="process-math">\(W \subseteq X \)</span> in <span class="process-math">\(X \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-open-and-closed-sets-in-metric-subspaces-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 3.4.5.1.b"><a href="section-open-and-closed-sets.html#problem-open-and-closed-sets-in-metric-subspaces-4" aria-label="Back to 3.4.5.1.b"><span class="codenumber">3.4.5.1.b</span></a></h5>
+<div class="para">Prove that if a subset <span class="process-math">\(V \subseteq U \)</span> is open in <span class="process-math">\(X \text{,}\)</span> then it is open in <span class="process-math">\(U \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-open-and-closed-sets-in-metric-subspaces-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 3.4.5.1.c"><a href="section-open-and-closed-sets.html#problem-open-and-closed-sets-in-metric-subspaces-5" aria-label="Back to 3.4.5.1.c"><span class="codenumber">3.4.5.1.c</span></a></h5>
+<div class="para">Construct an explicit counterexample to the converse of (b) above.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-open-and-closed-sets-in-metric-subspaces-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#problem-interior-closure-and-boundary-of-complements" aria-label="Back to 3.4.5.2. Interior, closure, and boundary of complements."><span class="codenumber">3.4.5.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Interior, closure, and boundary of complements.</span></a></h4>
+<div class="introduction">
+<div class="para">Let <span class="process-math">\(U \subseteq X \)</span> be a subset of a metric space <span class="process-math">\(\of{ X , \rho } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-interior-closure-and-boundary-of-complements-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="exercise-like"><h5 class="heading hide-type" title="Task 3.4.5.2.a"><a href="section-open-and-closed-sets.html#problem-interior-closure-and-boundary-of-complements-3" aria-label="Back to 3.4.5.2.a"><span class="codenumber">3.4.5.2.a</span></a></h5>
+<div class="para">Prove that <span class="process-math">\(\Int \of{ X \setminus U } = X \setminus \Cl \of{ U } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-interior-closure-and-boundary-of-complements-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 3.4.5.2.b"><a href="section-open-and-closed-sets.html#problem-interior-closure-and-boundary-of-complements-4" aria-label="Back to 3.4.5.2.b"><span class="codenumber">3.4.5.2.b</span></a></h5>
+<div class="para">Prove that <span class="process-math">\(\Cl \of{ X \setminus U } = X \setminus \Int \of{ U } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-interior-closure-and-boundary-of-complements-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 3.4.5.2.c"><a href="section-open-and-closed-sets.html#problem-interior-closure-and-boundary-of-complements-5" aria-label="Back to 3.4.5.2.c"><span class="codenumber">3.4.5.2.c</span></a></h5>
+<div class="para">Prove that <span class="process-math">\(\Bd \of{ X \setminus U } = \Bd \of{ U } = \Cl \of{ U } \cap \Cl \of{ X \setminus U } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-interior-closure-and-boundary-of-complements-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 3.4.5.2.d"><a href="section-open-and-closed-sets.html#problem-interior-closure-and-boundary-of-complements-6" aria-label="Back to 3.4.5.2.d"><span class="codenumber">3.4.5.2.d</span></a></h5>
+<div class="para">Prove that <span class="process-math">\(\Bd \of{ U } = \Cl \of{ U } \setminus \Int \of{ U } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-interior-closure-and-boundary-of-complements-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#problem-closure-and-limit-points" aria-label="Back to 3.4.5.3. Closure and limit points."><span class="codenumber">3.4.5.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Closure and limit points.</span></a></h4>
+<div class="para">Let <span class="process-math">\(U \subseteq X \)</span> be a subset of a metric space <span class="process-math">\(\of{ X , \rho } \text{.}\)</span> Prove that <span class="process-math">\(\Cl \of{ U } = U \cap U' \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-closure-and-limit-points-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#problem-open-balls-in-ultrametric-spaces" aria-label="Back to 3.4.5.4. Open balls in ultrametric spaces."><span class="codenumber">3.4.5.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Open balls in ultrametric spaces.</span></a></h4>
+<div class="para">Prove that any point in an open ball in an ultrametric space is its center.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-open-balls-in-ultrametric-spaces-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-open-and-closed-sets.html#problem-diameter-in-the-real-line" aria-label="Back to 3.4.5.5. Diameter in the real line."><span class="codenumber">3.4.5.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Diameter in the real line.</span></a></h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\emptyset \subsetneq U \subseteq \R \)</span> be a non-empty subset of the real line <span class="process-math">\(\of{ \R , d } \text{.}\)</span> Prove that <span class="process-math">\(U \)</span> has diameter</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\diam \of{ U } = \sup \of{ U } - \inf \of{ U }
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-diameter-in-the-real-line-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><h3 class="heading hide-type" title="Exercises 3.5.4: Exercises">
+<span class="codenumber">3.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Notions of Metric Continuity</span><br><span class="codenumber">3.5.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h3>
+<div class="exercisegroup">
+<div class="introduction">
+<div class="para">Determine whether or not the given map between metric spaces is continuous at the given point.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-continuity-at-a-point-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like"><h4 class="heading"><a href="section-notions-of-metric-continuity.html#exercise-continuity-at-a-point-3" aria-label="Back to 3.5.4.1."><span class="codenumber">3.5.4.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para">Let <span class="process-math">\(f \colon \R \to \R \)</span> be the linear function defined by the formula <span class="process-math">\(f \of{ x } = 3 x - 1 \text{.}\)</span> Determine whether or not <span class="process-math">\(f \)</span> is continuous at <span class="process-math">\(2 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-continuity-at-a-point-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(f \)</span> is continuous at <span class="process-math">\(2 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-continuity-at-a-point-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.5.4.1.1"><a tabindex="-1" href="#exercise-continuity-at-a-point-3-2" title="Copy heading and permalink for Answer 3.5.4.1.1" aria-label="Copy heading and permalink for Answer 3.5.4.1.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number, and let <span class="process-math">\(\delta = \frac{ \epsilon }{ 3 } \gt 0 \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math">
+\begin{align*}
+d \of{ f \of{ x } , f \of{ 2 } } \amp = \abs{ \of{ 3 x - 1 } - \of{ 3 \of{ 2 } - 1 } }\\
+\amp = \abs{ 3 x - 6 } = 3 \abs{ x - 2 } = 3 d \of{ x , 2 } \lt 3 \delta = \epsilon
+\end{align*}
+</div>
+<div class="para">for all points <span class="process-math">\(x \in \R \)</span> so that <span class="process-math">\(d \of{ x , 2 } \lt \delta \text{.}\)</span> Thus <span class="process-math">\(f \)</span> is continuous at <span class="process-math">\(2 \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-continuity-at-a-point-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.5.4.1.1"><a tabindex="-1" href="#exercise-continuity-at-a-point-3-3" title="Copy heading and permalink for Solution 3.5.4.1.1" aria-label="Copy heading and permalink for Solution 3.5.4.1.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-notions-of-metric-continuity.html#exercise-continuity-at-a-point-4" aria-label="Back to 3.5.4.2."><span class="codenumber">3.5.4.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para">Let <span class="process-math">\(g \colon \R \to \R \)</span> be the linear function defined by the formula <span class="process-math">\(f \of{ y } = 2 y^{ 2 } - 1 \text{.}\)</span> Determine whether or not <span class="process-math">\(g \)</span> is continuous at <span class="process-math">\(4 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-continuity-at-a-point-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(g \)</span> is continuous at <span class="process-math">\(4 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-continuity-at-a-point-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.5.4.2.1"><a tabindex="-1" href="#exercise-continuity-at-a-point-4-2" title="Copy heading and permalink for Answer 3.5.4.2.1" aria-label="Copy heading and permalink for Answer 3.5.4.2.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number, and let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\delta = \max \of{ \set{ 1 , \frac{ \epsilon }{ 18 } } } \gt 0\text{.}
+\end{equation*}
+</div>
+<div class="para">We observe that</div>
+<div class="displaymath process-math">
+\begin{align*}
+d \of{ g \of{ y } , g \of{ 4 } } \amp = \abs{ \of{ 2 y^{ 2 } - 1 } - \of{ 2 \of{ 4 }^{ 2 } - 1 } } = \abs{ 2 y^{ 2 } - 32 } = 2 \abs{ y + 4 } \cdot \abs{ y - 4 }\\
+\amp = 2 \abs{ y + 4 } d \of{ y , 4 } \lt 2 \cdot 9 \delta \lt \epsilon
+\end{align*}
+</div>
+<div class="para">for all points <span class="process-math">\(y \in \R \)</span> so that <span class="process-math">\(d \of{ y , 4 } \lt \delta \text{.}\)</span> Thus <span class="process-math">\(g \)</span> is continuous at <span class="process-math">\(4 \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-continuity-at-a-point-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.5.4.2.1"><a tabindex="-1" href="#exercise-continuity-at-a-point-4-3" title="Copy heading and permalink for Solution 3.5.4.2.1" aria-label="Copy heading and permalink for Solution 3.5.4.2.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-notions-of-metric-continuity.html#exercise-continuity-at-a-point-5" aria-label="Back to 3.5.4.3."><span class="codenumber">3.5.4.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="para">Let <span class="process-math">\(h \colon \clopint{ 0 }{ \infty } \to \R \)</span> be the linear function defined by the formula <span class="process-math">\(h \of{ z } = \sqrt{ z } \text{.}\)</span> Determine whether or not <span class="process-math">\(h \)</span> is continuous at <span class="process-math">\(1 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-continuity-at-a-point-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(h \)</span> is continuous at <span class="process-math">\(4 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-continuity-at-a-point-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.5.4.3.1"><a tabindex="-1" href="#exercise-continuity-at-a-point-5-2" title="Copy heading and permalink for Answer 3.5.4.3.1" aria-label="Copy heading and permalink for Answer 3.5.4.3.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number, and let <span class="process-math">\(\delta = \epsilon \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d \of{ h \of{ z } , h \of{ 1 } } = \abs{ \sqrt{ z } - \sqrt{ 1 } } = \abs{ \frac{ z - 1 }{ \sqrt{ z } + 1 } } \lt \frac{ \delta }{ 1 } = \epsilon
+\end{equation*}
+</div>
+<div class="para">for all points <span class="process-math">\(z \in \R \)</span> so that <span class="process-math">\(d \of{ z , 1 } \lt \delta \text{.}\)</span> Thus <span class="process-math">\(h \)</span> is continuous at <span class="process-math">\(1 \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-continuity-at-a-point-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.5.4.3.1"><a tabindex="-1" href="#exercise-continuity-at-a-point-5-3" title="Copy heading and permalink for Solution 3.5.4.3.1" aria-label="Copy heading and permalink for Solution 3.5.4.3.1">🔗</a></div>
+</div></details>
+</div></article>
+</div>
+</div>
+<article class="exercise-like"><h4 class="heading"><a href="section-notions-of-metric-continuity.html#exercise-uniform-and-lipschitz-continuity" aria-label="Back to 3.5.4.4. Uniform and Lipschitz continuity."><span class="codenumber">3.5.4.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uniform and Lipschitz continuity.</span></a></h4>
+<div class="introduction">
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(-\infty \lt a \lt b \lt \infty \)</span> be real numbers, and consider the real-valued function <span class="process-math">\(f \colon \clint{ a }{ b } \to \R \)</span> defined by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f \of{ x } = x^{ 3 }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="exercise-like"><h5 class="heading hide-type" title="Task 3.5.4.4.a"><a href="section-notions-of-metric-continuity.html#exercise-uniform-and-lipschitz-continuity-3" aria-label="Back to 3.5.4.4.a"><span class="codenumber">3.5.4.4.a</span></a></h5>
+<div class="para">Verify that <span class="process-math">\(f \)</span> is not uniformly continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We observe that for any positive real number <span class="process-math">\(\delta \gt 0 \text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{align*}
+d \of{ f \of{ x + \frac{ \delta }{ 2 } } , f \of{ x } } \amp = \abs{ \of{ x + \frac{ \delta }{ 2 } }^{ 3 } - x^{ 3 } }\\
+\amp = \abs{ \frac{ \delta }{ 2 } x^{ 2 } + \frac{ \delta^{ 2 } }{ 4 } x + \frac{ \delta^{ 3 } }{ 8 } }
+\end{align*}
+</div>
+<div class="para">is the absolute value of a quadratic function of <span class="process-math">\(x \)</span> and is therefore unbounded from above. This implies that for any positive real number <span class="process-math">\(\delta \gt 0 \text{,}\)</span> there is some real number <span class="process-math">\(x \in \R \)</span> so that <span class="process-math">\(d \of{ f \of{ x + \frac{ \delta }{ 2 } } , f \of{ x } } \geq 1 \text{,}\)</span> and so <span class="process-math">\(f \)</span> is not uniformly continuous.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.5.4.4.a.1"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity-3-2" title="Copy heading and permalink for Solution 3.5.4.4.a.1" aria-label="Copy heading and permalink for Solution 3.5.4.4.a.1">🔗</a></div>
+</div></details>
+</div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 3.5.4.4.b"><a href="section-notions-of-metric-continuity.html#exercise-uniform-and-lipschitz-continuity-4" aria-label="Back to 3.5.4.4.b"><span class="codenumber">3.5.4.4.b</span></a></h5>
+<div class="para">Without appealing to <a href="section-notions-of-metric-continuity.html#proposition-lipschitz-continuity-implies-uniform-continuity" class="xref" data-knowl="./knowl/xref/proposition-lipschitz-continuity-implies-uniform-continuity.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.5.20: Lipschitz continuity implies uniform continuity">Proposition 3.5.20 Lipschitz continuity implies uniform continuity</a>, verify that <span class="process-math">\(f \)</span> is not Lipschitz continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We observe that</div>
+<div class="displaymath process-math">
+\begin{align*}
+d \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \amp = \abs{ x_{ 1 }^{ 3 } - x_{ 2 }^{ 3 } } \amp = \abs{ x_{ 1 } - x_{ 2 } } \cdot \abs{ x_{ 1 }^{ 2 } + x_{ 1 } x_{ 2 } + x_{ 2 }^{ 2 } }\\
+\amp = \abs{ x_{ 1 }^{ 2 } + x_{ 1 } x_{ 2 } + x_{ 2 }^{ 2 } } \cdot d \of{ x_{ 1 } , x_{ 2 } }
+\end{align*}
+</div>
+<div class="para">for any points <span class="process-math">\(x_{ 1 } , x_{ 2 } \in \R \text{.}\)</span> Since <span class="process-math">\(x_{ 1 }^{ 2 } + x_{ 1 } x_{ 2 } + x_{ 2 }^{ 2 } \)</span> is a quadratic polynomial in <span class="process-math">\(x_{ 1 } \)</span> and <span class="process-math">\(x_{ 2 } \text{,}\)</span> it is not bounded in absolute value, and so <span class="process-math">\(f \)</span> cannot be Lipschitz continuous.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.5.4.4.b.1"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity-4-2" title="Copy heading and permalink for Solution 3.5.4.4.b.1" aria-label="Copy heading and permalink for Solution 3.5.4.4.b.1">🔗</a></div>
+</div></details>
+</div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 3.5.4.4.c"><a href="section-notions-of-metric-continuity.html#exercise-uniform-and-lipschitz-continuity-5" aria-label="Back to 3.5.4.4.c"><span class="codenumber">3.5.4.4.c</span></a></h5>
+<div class="para">Verify that the restriction of <span class="process-math">\(f \)</span> to a closed interval <span class="process-math">\(\clint{ a }{ b } \subsetneq \R \)</span> is uniformly continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number, and consider the positive real number</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\delta = \frac{ \epsilon }{ 3 \max \of{ \set{ \abs{ a }^{ 2 } , \abs{ b }^{ 2 } } } }\text{.}
+\end{equation*}
+</div>
+<div class="para">We observe that</div>
+<div class="displaymath process-math">
+\begin{align*}
+\abs{ x_{ 1 }^{ 3 } - x_{ 2 }^{ 3 } } \amp = \abs{ x_{ 1 } - x_{ 2 } } \cdot \abs{ x_{ 1 }^{ 2 } + x_{ 1 } x_{ 2 } + x_{ 2 }^{ 2 } }\\
+\amp \leq d \of{ x_{ 1 } , x_{ 2 } } \cdot 3 \max \of{ \set{ \abs{ a }^{ 2 } , \abs{ b }^{ 2 } } } \lt 3 \delta \max \of{ \set{ \abs{ a }^{ 2 } , \abs{ b }^{ 2 } } } = \epsilon
+\end{align*}
+</div>
+<div class="para">for all points <span class="process-math">\(x_{ 1 } , x_{ 2 } \in \clint{ a }{ b } \)</span> so that <span class="process-math">\(d \of{ x_{ 1 } , x_{ 2 } } \lt \delta \text{.}\)</span> Thus the restriction of <span class="process-math">\(f \)</span> to <span class="process-math">\(\clint{ a }{ b } \)</span> is uniformly continuous.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.5.4.4.c.1"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity-5-2" title="Copy heading and permalink for Solution 3.5.4.4.c.1" aria-label="Copy heading and permalink for Solution 3.5.4.4.c.1">🔗</a></div>
+</div></details>
+</div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 3.5.4.4.d"><a href="section-notions-of-metric-continuity.html#exercise-uniform-and-lipschitz-continuity-6" aria-label="Back to 3.5.4.4.d"><span class="codenumber">3.5.4.4.d</span></a></h5>
+<div class="para">Verify that the restriction of <span class="process-math">\(f \)</span> to a closed interval <span class="process-math">\(\clint{ a }{ b } \subsetneq \R \)</span> is Lipschitz continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We observe that</div>
+<div class="displaymath process-math">
+\begin{align*}
+\abs{ x_{ 1 }^{ 3 } - x_{ 2 }^{ 3 } } \amp = \abs{ x_{ 1 } - x_{ 2 } } \cdot \abs{ x_{ 1 }^{ 2 } + x_{ 1 } x_{ 2 } + x_{ 2 }^{ 2 } }\\
+\amp \leq d \of{ x_{ 1 } , x_{ 2 } } \cdot 3 \max \of{ \set{ \abs{ a }^{ 2 } , \abs{ b }^{ 2 } } }
+\end{align*}
+</div>
+<div class="para">for all points <span class="process-math">\(x_{ 1 } , x_{ 2 } \in \clint{ a }{ b } \text{.}\)</span> Thus the restriction of <span class="process-math">\(f \)</span> to <span class="process-math">\(\clint{ a }{ b } \)</span> is Lipschitz continuous, with Lipschitz constant</div>
+<div class="displaymath process-math">
+\begin{equation*}
+L_{ f } \leq 3 \max \of{ \set{ \abs{ a }^{ 2 } , \abs{ b }^{ 2 } } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.5.4.4.d.1"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity-6-2" title="Copy heading and permalink for Solution 3.5.4.4.d.1" aria-label="Copy heading and permalink for Solution 3.5.4.4.d.1">🔗</a></div>
+</div></details>
+</div></article></article><h3 class="heading hide-type" title="Reading Questions 3.5.5: Problems">
+<span class="codenumber">3.5.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><a href="section-notions-of-metric-continuity.html#problem-continuity-of-rational-functions" aria-label="Back to 3.5.5.1. Continuity of rational functions."><span class="codenumber">3.5.5.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Continuity of rational functions.</span></a></h4>
+<article class="exercise-like"><h5 class="heading hide-type" title="Task 3.5.5.1.a"><a href="section-notions-of-metric-continuity.html#problem-continuity-of-rational-functions-2" aria-label="Back to 3.5.5.1.a"><span class="codenumber">3.5.5.1.a</span></a></h5>
+<div class="para">Prove using one or more characterizations of continuity that the real-valued function <span class="process-math">\(f \colon \R \to \R \)</span> defined by the formula <span class="process-math">\(f \of{ x } = x \)</span> is continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-continuity-of-rational-functions-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 3.5.5.1.b"><a href="section-notions-of-metric-continuity.html#problem-continuity-of-rational-functions-3" aria-label="Back to 3.5.5.1.b"><span class="codenumber">3.5.5.1.b</span></a></h5>
+<div class="para">Argue that any polynomial function is continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-continuity-of-rational-functions-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 3.5.5.1.c"><a href="section-notions-of-metric-continuity.html#problem-continuity-of-rational-functions-4" aria-label="Back to 3.5.5.1.c"><span class="codenumber">3.5.5.1.c</span></a></h5>
+<div class="para">Argue that any rational function is continuous on its implicit domain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-continuity-of-rational-functions-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-notions-of-metric-continuity.html#problem-uniform-limits-of-uniformly-continuous-maps" aria-label="Back to 3.5.5.2. Uniform limits of uniformly continuous maps."><span class="codenumber">3.5.5.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uniform limits of uniformly continuous maps.</span></a></h4>
+<div class="para">Let <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of uniformly continuous maps <span class="process-math">\(f_{ n } \colon X \to Y \)</span> from a metric space <span class="process-math">\(\of{ X , \rho_{ X } } \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho_{ Y } } \text{.}\)</span> Prove that if <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> converges uniformly, the uniform limit is also uniformly continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-uniform-limits-of-uniformly-continuous-maps-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-notions-of-metric-continuity.html#problem-continuous-pointwise-limits-of-discontinuous-maps" aria-label="Back to 3.5.5.3. Continuous pointwise limits of discontinuous maps."><span class="codenumber">3.5.5.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Continuous pointwise limits of discontinuous maps.</span></a></h4>
+<div class="introduction">
+<div class="para">We have seen in <a href="section-notions-of-metric-continuity.html#theorem-uniform-limits-of-continuous-maps" class="xref" data-knowl="./knowl/xref/theorem-uniform-limits-of-continuous-maps.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.5.9: Uniform limits of continuous maps">Theorem 3.5.9 Uniform limits of continuous maps</a> and <a href="section-notions-of-metric-continuity.html#problem-uniform-limits-of-uniformly-continuous-maps" class="xref" data-knowl="./knowl/xref/problem-uniform-limits-of-uniformly-continuous-maps.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 3.5.5.2: Uniform limits of uniformly continuous maps">Problem 3.5.5.2 Uniform limits of uniformly continuous maps</a> that uniform limits preserve continuity and uniform continuity. In this problem, we will construct counterexamples to the converses of these results.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-continuous-pointwise-limits-of-discontinuous-maps-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="exercise-like"><h5 class="heading hide-type" title="Task 3.5.5.3.a"><a href="section-notions-of-metric-continuity.html#problem-continuous-pointwise-limits-of-discontinuous-maps-3" aria-label="Back to 3.5.5.3.a"><span class="codenumber">3.5.5.3.a</span></a></h5>
+<div class="para">Give an example of a sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> of continuous maps <span class="process-math">\(f_{ n } \colon X \to Y \)</span> from a metric space <span class="process-math">\(X \)</span> to a metric space <span class="process-math">\(Y \)</span> which converges pointwise but not uniformly to a continuous map <span class="process-math">\(f \colon X \to Y \)</span> from <span class="process-math">\(X \)</span> to <span class="process-math">\(Y \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-continuous-pointwise-limits-of-discontinuous-maps-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 3.5.5.3.b"><a href="section-notions-of-metric-continuity.html#problem-continuous-pointwise-limits-of-discontinuous-maps-4" aria-label="Back to 3.5.5.3.b"><span class="codenumber">3.5.5.3.b</span></a></h5>
+<div class="para">Give an example of a sequence <span class="process-math">\(\of{ g_{ n } }_{ n = 0 }^{ \infty } \)</span> of discontinuous maps <span class="process-math">\(g_{ n } \colon X \to Y \)</span> from a metric space <span class="process-math">\(X \)</span> to a metric space <span class="process-math">\(Y \)</span> which converges uniformly to a continuous map <span class="process-math">\(g \colon X \to Y \)</span> from <span class="process-math">\(X \)</span> to <span class="process-math">\(Y \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-continuous-pointwise-limits-of-discontinuous-maps-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-notions-of-metric-continuity.html#problem-uniform-limits-of-lipschitz-continuous-maps" aria-label="Back to 3.5.5.4. Uniform limits of Lipschitz continuous maps."><span class="codenumber">3.5.5.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uniform limits of Lipschitz continuous maps.</span></a></h4>
+<div class="introduction">
+<div class="para logical">
+<div class="para">Consider the sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 1 }^{ \infty } \)</span> of real-valued functions <span class="process-math">\(f_{ n } \colon \clopint{ 0 }{ \infty } \to \R \)</span> defined by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f_{ n } \of{ x } = \sqrt{ x + \frac{ 1 }{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-uniform-limits-of-lipschitz-continuous-maps-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="exercise-like"><h5 class="heading hide-type" title="Task 3.5.5.4.a"><a href="section-notions-of-metric-continuity.html#problem-uniform-limits-of-lipschitz-continuous-maps-3" aria-label="Back to 3.5.5.4.a"><span class="codenumber">3.5.5.4.a</span></a></h5>
+<div class="para">Show that <span class="process-math">\(f_{ n } \)</span> is Lipschitz continuous for each index <span class="process-math">\(n \geq 1 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-uniform-limits-of-lipschitz-continuous-maps-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 3.5.5.4.b"><a href="section-notions-of-metric-continuity.html#problem-uniform-limits-of-lipschitz-continuous-maps-4" aria-label="Back to 3.5.5.4.b"><span class="codenumber">3.5.5.4.b</span></a></h5>
+<div class="para">Show that the sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> converges uniformly, but the uniform limit is not Lipschitz continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-uniform-limits-of-lipschitz-continuous-maps-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 3.5.5.4.c"><a href="section-notions-of-metric-continuity.html#problem-uniform-limits-of-lipschitz-continuous-maps-5" aria-label="Back to 3.5.5.4.c"><span class="codenumber">3.5.5.4.c</span></a></h5>
+<div class="para">Prove that the limit of a uniformly convergent sequence <span class="process-math">\(\of{ g_{ n } }_{ n = 0 }^{ \infty } \)</span> of Lipschitz continuous maps <span class="process-math">\(g_{ n } \colon X \to Y \)</span> from a metric space <span class="process-math">\(\of{ X , \rho_{ X } } \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho_{ Y } } \)</span> is Lipschitz continuous if the sequence <span class="process-math">\(\of{ L_{ g_{ n } } }_{ n = 0 }^{ \infty } \)</span> of Lipschitz constants <span class="process-math">\(L_{ g_{ n } } \)</span> is bounded from above.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-uniform-limits-of-lipschitz-continuous-maps-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></article></article><div class="autopermalink" aria-hidden="true" data-description="Appendix A: Selected Solutions"><a tabindex="-1" href="#solutions" title="Copy heading and permalink for Appendix A: Selected Solutions" aria-label="Copy heading and permalink for Appendix A: Selected Solutions">🔗</a></div>
 </section>
 </div>

@@ -290,7 +290,7 @@
   </p>
   
   <p>
-    The similarity in the names of the uniform norm and uniformly convergent sequences of functions is no coincidence. In fact, it turns out that for bounded maps to a metric space, these two notions coincide.
+    The similarity in the names of the uniform metric and uniformly convergent sequences of functions is no coincidence. In fact, it turns out that for bounded maps to a metric space, these two notions coincide.
   </p>
   
   <theorem xml:id="theorem-convergence-in-the-uniform-metric">

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-diameter-in-the-real-line" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Diameter in the real line
+  </title>
+  
+  <statement>
+    <p>
+      Let <m> \emptyset \subsetneq U \subseteq \R </m> be a non-empty subset of the real line <m> \of{ \R , d } </m>. Prove that <m> U </m> has diameter
+      
+      <md>
+        \diam \of{ U } = \sup \of{ U } - \inf \of{ U }
+      </md>
+    </p>
+  </statement>
+  
+  <!-- <solution>
+    <p>
+      Since <m> \sup \of{ U } </m> and <m> \inf \of{ U } </m> are an upper and lower bound for <m> U </m>, respectively,
+      
+      <md>
+        <mrow>
+          d \of{ u_{ 1 } , u_{ 2 } } \amp = \abs{ u_{ 1 } - u_{ 2 } } = \max \of{ \set{ u_{ 1 } , u_{ 2 } } } - \min \of{ \set{ u_{ 1 } , u_{ 2 } } }
+        </mrow>
+        
+        <mrow>
+          \amp \leq \sup \of{ U } - \inf \of{ U }
+        </mrow>
+      </md>
+      
+      for all points <m> u_{ 1 } , u_{ 2 } \in U </m>, and so
+      
+      <md>
+        \sup_{ u_{ 1 } , u_{ 2 } \in U }{ d \of{ u_{ 1 } , u_{ 2 } } } \leq \sup \of{ U } - \inf \of{ U }
+      </md>.
+      
+      It therefore suffices to prove the reverse inequality.
+    </p>
+    
+    <p>
+      Take sequences <m> \of{ u_{ n } }_{ n = 0 }^{ \infty } </m> and <m> \of{ v_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> u_{ n } , v_{ n } \in U </m> so that
+      
+      <md>
+        <mrow>
+          \lim_{ n \to \infty }{ u_{ n } } \amp = \sup \of{ U } \amp \lim_{ n \to \infty }{ v_{ n } } \amp = \inf \of{ U }
+        </mrow>
+      </md>.
+      
+      Then since <m> \inf \of{ U } \leq \sup \of{ U } </m>, it must be the case that <m> v_{ n } \leq u_{ n } </m> for all sufficiently large indices <m> n </m>. We conclude that
+      
+      <md>
+        \lim_{ n \to \infty }{ d \of{ u_{ n } , v_{ n } } } = \lim_{ n \to \infty }{ \abs{ u_{ n } - v_{ n } } = \lim_{ n \to \infty }{ \of{ u_{ n } - v_{ n } } } = \lim_{ n \to \infty }{ u_{ n } } - \lim_{ n \to \infty }{ v_{ n } } = \sup \of{ U } - \inf \of{ U }
+      </md>.
+      
+      However, <m> d \of{ u_{ n } , v_{ n } } \leq \diam \of{ U } </m> for all indices <m> n \in \N </m>, and so <m> \sup \of{ U } - \inf \of{ U } \leq \diam \of{ U } </m>.
+    </p>
+  </solution> -->
+</exercise>

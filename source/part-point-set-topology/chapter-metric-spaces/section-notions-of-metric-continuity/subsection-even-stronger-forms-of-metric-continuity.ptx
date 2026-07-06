@@ -2,152 +2,410 @@
 
 <subsection xml:id="subsection-even-stronger-forms-of-metric-continuity" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>
-    Even Stronger Forms of Metric Continuity [SKIP]
+    Even Stronger Forms of Metric Continuity
   </title>
 
   <introduction>
     <p>
-      Text before the first subdivision.
+      We conclude this section with a look at a stronger form of continuity than uniform continuity. A map between metric spaces is called <term> Lipschitz continuous </term> if it changes the distance between points by at most some positive scalar multiple.
     </p>
   </introduction>
   
-  
-
-  <conclusion>
-    <p>
-      Text after the last subdivision.
-    </p>
-  </conclusion>
-</subsection>
-
-<!--
-
-  <definition xml:id="definition-TITLE">
+  <definition xml:id="definition-lipschitz-continuity">
     <title>
-      TITLE
+      Lipschitz continuity
     </title>
     
     <idx>
-      TERM
+      lipschitz continuity
     </idx>
     
     <notation>
       <usage>
-        <m>  </m>
+        <m> \LC \of{ X , Y } </m>
       </usage>
       
       <description>
         <p>
-          
+          the set of Lipschitz continuous maps from <m> X </m> to <m> Y </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \LC \of{ X } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the set of Lipschitz continuous real-valued functions on <m> X </m>
         </p>
       </description>
     </notation>
     
     <statement>
       <p>
+        A map <m> f </m> from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m> is called <term> Lipschitz continuous </term> if there is a non-negative real number <m> L \geq 0 </m> so that
         
+        <md>
+          d_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \leq L d_{ X } \of{ x_{ 1 } , x_{ 2 } }
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } \in X </m>.
+      </p>
+      
+      <p>
+        The set of Lipschitz continuous maps from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m> is denoted <m> \LC \of{ X , Y } </m>, and the set of Lipschitz continuous real-valued functions on <m> \of{ X , \rho_{ X } } </m> is denoted <m> \LC \of{ X } = \LC \of{ X , \R } </m>.
       </p>
     </statement>
   </definition>
+  
+  <p>
+    As with uniform continuity, Lipschitz continuity does not apply at a specific point, but rather over the entire domain of a map. <alert> It does not make sense to say that a map between metric spaces is Lipschitz continuous at a point. </alert>
+  </p>
 
-  <lemma xml:id="lemma-TITLE">
+  <example xml:id="example-norms-are-Lipschitz-continuous">
     <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </lemma>
-
-  <proposition xml:id="proposition-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </proposition>
-
-  <theorem xml:id="theorem-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </theorem>
-
-  <corollary xml:id="corollary-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </corollary>
-
-  <example xml:id="example-TITLE">
-    <title>
-      TITLE
+      Norms are Lipschitz continuous
     </title>
     
     <statement>
       <p>
+        Let <m> \of{ V , \norm{ \oparg } } </m> be a normed vector space. The <xref ref="proposition-reverse-triangle-inequality" text="title"/> implies that 
         
+        <md>
+          d \of{ \norm{ \vect{ v }_{ 1 } } , \norm{ \vect{ v }_{ 2 } } } = \abs{ \norm{ \vect{ v }_{ 1 } } - \norm{ \vect{ v }_{ 2 } } } \leq \norm{ \vect{ v }_{ 1 } - \vect{ v }_{ 2 } } = 1 \norm{ \vect{ v }_{ 1 } - \vect{ v }_{ 2 } }
+        </md>
+        
+        for all vectors <m> \vect{ v }_{ 1 } , \vect{ v }_{ 2 } \in V </m>, and so the norm <m> \norm{ \oparg } \colon V \to \R </m> is Lipschitz continuous.
       </p>
     </statement>
   </example>
+  
+  <p>
+    For any Lipschitz continuous map between metric spaces, there is a unique smallest non-negative real number such that the above condition is satisfied. This unique smallest constant is called the <term> Lipschitz constant </term> for the map.
+  </p>
+  
+  <definition xml:id="definition-lipschitz-constant">
+    <title>
+      Lipschitz constant
+    </title>
+    
+    <idx>
+      Lipschitz constant
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> L_{ f } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the Lipschitz constant of <m> f </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        The <term> Lipschitz constant </term> <m> L_{ f } </m> of a map <m> f \colon X \to Y </m> from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m> is the infimum
+        
+        <md>
+          L_{ f } = \inf \of{ \setmid{ L \in \clopint{ 0 }{ \infty } }{ \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \leq L \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } \textrm{ for all } x_{ 1 } , x_{ 2 } \in X } }
+        </md>.
+      </p>
+    </statement>
+  </definition>
+  
+  <proposition xml:id="proposition-lipschitz-constants-and-lipschitz-continuity">
+    <title>
+      Lipschitz constants and Lipschitz continuity
+    </title>
+    
+    <statement>
+      <p>
+        A map <m> f \colon X \to Y </m> from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m> is Lipschitz continuous if and only if <m> L_{ f } \lt \infty </m>, in which case
+        
+        <md>
+          \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \leq L_{ f } \rho_{ X } \of{ x_{ 1 } , x_{ 2 } }
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } \in X </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        We observe that
+        
+        <md>
+          C = \setmid{ L \in \clopint{ 0 }{ \infty } }{ \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \leq L \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } \textrm{ for all } x_{ 1 } , x_{ 2 } \in X }
+        </md>
+        
+        is a subset of the real numbers, and so <m> L_{ f } = \inf \of{ C } \lt \infty </m> if and only if <m> C \neq \emptyset </m> is non-empty. That <m> C \neq \emptyset </m> is non-empty is precisely the Lipschitz continuity condition for <m> f </m>, and so <m> f </m> is Lipschitz continuous if and only if <m> L_{ f } \lt \infty </m>.
+      </p>
+      
+      <p>
+        If <m> C \neq \emptyset </m> is non-empty, let <m> \of{ l_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of elements <m> l_{ n } \in L </m> which converge to <m> L_{ f } = \inf \of{ C } </m>. We observe that
+        
+        <md>
+          <mrow>
+            \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \amp = \lim_{ n \to \infty }{ \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \lim_{ n \to \infty }{ l_{ n } \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } } = L_{ f } \rho \of{ x_{ 1 } , x_{ 2 } }
+          </mrow>
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } \in X </m>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    A map is Lipschitz continuous if it increases the distance between points by at most some nonnegative constant multiplier. This implies that Lipschitz continuity is a stronger condition than uniform continuity, and therefore is also a stronger condition than continuity.
+  </p>
+  
+  <proposition xml:id="proposition-lipschitz-continuity-implies-uniform-continuity">
+    <title>
+      Lipschitz continuity implies uniform continuity
+    </title>
+    
+    <statement>
+      <p>
+        If a map between metric spaces is Lipschitz continuous, then it is uniformly continuous and continuous.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> f \colon X \to Y </m> be a map from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m>, and consider a positive real number <m> \epsilon \gt 0 </m>. There are two cases; either <m> L_{ f } = 0 </m>, or <m> 0 \lt L_{ f } \lt \infty </m>.
+      </p>
+      
+      <p>
+        If <m> L_{ f } = 0 </m>, then <xref ref="proposition-lipschitz-constants-and-lipschitz-continuity"/> implies that
+        
+        <md>
+          0 \leq \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \leq L_{ f } \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } = 0 \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } = 0 \lt \epsilon
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } \in X </m>, and so <m> f \of{ x_{ 1 } } = f \of{ x_{ 2 } } </m> for all points <m> x_{ 1 } , x_{ 2 } \in X </m>. In particular, this implies that <m> f </m> is constant and therefore uniformly continuous.
+      </p>
+      
+      <p>
+        If on the other hand <m> 0 \lt L_{ f } \lt \infty </m>, let <m> \delta = \frac{ \epsilon }{ L_{ f } } </m>, and note that <xref ref="proposition-lipschitz-constants-and-lipschitz-continuity"/> implies that
+        
+        <md>
+          0 \leq \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \leq L_{ f } \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } \lt L_{ f } \of{ \frac{ \epsilon }{ L_{ f } } } = \epsilon
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } \in X </m> so that <m> \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } \lt \delta </m>. Thus <m> f </m> is uniformly continuous. We conclude that <m> f </m> is continuous by <xref ref="proposition-uniform-continuity-implies-continuity"/>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <example xml:id="example-uniform-continuity-does-not-imply-lipschitz-continuity">
+    <title>
+      Uniform continuity does not imply Lipschitz continuity
+    </title>
+    
+    <statement>
+      <p>
+        Consider the real-valued function <m> f \colon \clopint{ 0 }{ \infty } \to \R </m> defined by the formula <m> f \of{ x } = \sqrt{ x } </m>. For each positive real number <m> \epsilon \gt 0 </m>, let <m> \delta = \epsilon^{ 2 } \gt 0 </m>. We observe that
+        
+        <md>
+          \abs{ \sqrt{ x_{ 1 } } + \sqrt{ x_{ 2 } } } \leq \abs{ \sqrt{ x_{ 1 } } } + \abs{ \sqrt{ x_{ 2 } } } = \sqrt{ x_{ 1 } } + \sqrt{ x_{ 2 } } = \abs{ \sqrt{ x_{ 1 } } + \sqrt{ x_{ 2 } } }
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } \in \clopint{ 0 }{ \infty } </m>, and so
+        
+        <md>
+          <mrow>
+            d \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } }^{ 2 } \amp = \abs{ \sqrt{ x_{ 1 } } - \sqrt{ x_{ 2 } } }^{ 2 } \leq \abs{ \sqrt{ x_{ 1 } } + \sqrt{ x_{ 2 } } } \cdot \abs{ \sqrt{ x_{ 1 } } - \sqrt{ x_{ 2 } } } = \abs{ x_{ 1 } - x_{ 2 } }
+          </mrow>
+          
+          <mrow>
+            \amp = d \of{ x_{ 1 } , x_{ 2 } } \lt \delta = \epsilon^{ 2 }
+          </mrow>
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } \in \clopint{ 0 }{ \infty } </m> so that <m> d \of{ x_{ 1 } , x_{ 2 } } \lt \delta </m>. In particular, <m> d \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \lt \epsilon </m> for all points <m> x_{ 1 } , x_{ 2 } \in \clopint{ 0 }{ \infty } </m> so that <m> d \of{ x_{ 1 } , x_{ 2 } } \lt \delta </m>, and so <m> f </m> is uniformly continuous.
+      </p>
+      
+      <p>
+        On the other hand, we observe that
+        
+        <md>
+          <mrow>
+            \frac{ d \of{ f \of{ \frac{ 1 }{ \of{ L + 1 }^{ 2 } } } , f \of{ 0 } } }{ d \of{ \frac{ 1 }{ \of{ L + 1 }^{ 2 } } , 0 } } \amp = \frac{ \abs{ \sqrt{ \frac{ 1 }{ \of{ L + 1 }^{ 2 } } } - \sqrt{ 0 } } }{ \abs{ \frac{ 1 }{ \of{ L + 1 }^{ 2 } } - 0 } } = \abs{ \frac{ \of{ \frac{ 1 }{ L + 1 } } }{ \of{ \frac{ 1 }{ \of{ L + 1 }^{ 2 } } } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \abs{ \frac{ \of{ L + 1 }^{ 2 } }{ L + 1 } } = \abs{ L + 1 } = L + 1 \gt L
+          </mrow>
+        </md>
+        
+        for any non-negative real number <m> 0 \leq L \lt \infty </m>, so that
+        
+        <md>
+          d \of{ f \of{ \frac{ 1 }{ \of{ L + 1 }^{ 2 } } } , f \of{ 0 } } \gt L d \of{ \frac{ 1 }{ \of{ L + 1 }^{ 2 } } , 0 }
+        </md>.
+        
+        Thus <m> L_{ f } \gt L </m>. Since this holds for each non-negative real number <m> 0 \leq L \lt \infty </m>, <m> L_{ f } = \infty </m> and so <m> f </m> is not Lipschitz continuous by <xref ref="proposition-lipschitz-constants-and-lipschitz-continuity"/>.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    Just as in the case of continuity and uniform continuity, Lipschitz continuity is preserved by composition, although possibly at the cost of increasing the Lipschitz constant.
+  </p>
+  
+  <lemma xml:id="lemma-lipschitz-continuity-and-composition">
+    <title>
+      Lipschitz continuity and composition
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> and <m> g \colon Y \to Z </m> be maps between metric spaces <m> \of{ X , \rho_{ X } } </m>, <m> \of{ Y , \rho_{ Y } } </m>, and <m> \of{ Z , \rho_{ Z } } </m>. If <m> f </m> and <m> g </m> are Lipschitz continuous, then so is their composition <m> g \circ f \colon X \to Z </m>, and <m> L_{ g \circ f } \leq L_{ g } L_{ f } </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        We observe that
+        
+        <md>
+          <mrow>
+            \rho_{ Z } \of{ \of{ g \circ f } \of{ x_{ 1 } } , \of{ g \circ f } \of{ x_{ 2 } } } \amp = \rho_{ Z } \of{ g \of{ f \of{ x_{ 1 } } } , g \of{ f \of{ x_{ 2 } } } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq L_{ g } \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq L_{ g } L_{ f } \rho_{ X } \of{ x_{ 1 } , x_{ 2 } }
+          </mrow>
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } \in X </m>. We conclude that the composition <m> g \circ f </m> is Lipschitz continuous and <m> L_{ g \circ f } \leq L_{ g } L_{ f } </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <p>
+    Just as in the case of continuity and uniform continuity, Lipschitz continuous maps from a metric space to a normed vector space form a vector space under the pointwise operations of addition and scalar multiplication, although possibly at the cost of increasing the Lipschitz constant.
+  </p>
+  
+  <proposition xml:id="proposition-vector-arithmetic-and-lipschitz-continuity">
+    <title>
+      Vector arithmetic and Lipschitz continuity
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ X , \rho } </m> be a metric space and <m> \of{ V , \norm{ \oparg } } </m> be a normed vector space.
+        
+        <ol>
+          <li>
+            <title>
+              Vector addition
+            </title>
+            
+            <p>
+              If two maps <m> f , g \colon X \to V </m> from <m> X </m> to <m> Y </m> are Lipschitz continuous, then their pointwise sum <m> f + g \colon X \to V </m> is also Lipschitz continuous, and <m> L_{ f + g } \leq L_{ f } + L_{ g } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Scalar multiplication
+            </title>
+            
+            <p>
+              If a map <m> f \colon X \to V </m> is Lipschitz continuous, then any pointwise scalar multiple <m> \alpha f </m> is also Lipschitz continuous, and <m> L_{ \alpha f } \leq \abs{ \alpha } L_{ f } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Norm
+            </title>
+            
+            <p>
+              If a map <m> f \colon X \to V </m> is uniformly continuous, then its pointwise norm <m> \norm{ f } = \norm{ \oparg } \circ f </m> is also uniformly continuous, and <m> L_{ \norm{ f } } \leq L_{ f } </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            We observe that
+            
+            <md>
+              <mrow>
+                \norm{ \of{ f + g } \of{ x_{ 1 } } - \of{ f + g } \of{ x_{ 2 } } } \amp = \norm{ f \of{ x_{ 1 } } + g \of{ x_{ 1 } } - f \of{ x_{ 2 } } - g \of{ x_{ 2 } } }
+              </mrow>
+              
+              <mrow>
+                \amp \leq \norm{ f \of{ x_{ 1 } } - f \of{ x_{ 2 } } } + \norm{ g \of{ x_{ 1 } } - g \of{ x_{ 2 } } }
+              </mrow>
+              
+              <mrow>
+                \amp \leq L_{ f } \rho \of{ x_{ 1 } , x_{ 2 } } + L_{ g } \rho \of{ x_{ 1 } , x_{ 2 } }
+              </mrow>
+              
+              <mrow>
+                \amp = \of{ L_{ f } + L_{ g } } \rho \of{ x_{ 1 } , x_{ 2 } }
+              </mrow>
+            </md>
+            
+            for all points <m> x_{ 1 } , x_{ 2 } \in X </m>. We conclude that the composition <m> g \circ f </m> is Lipschitz continuous and <m> L_{ f + g } \leq L_{ f } + L_{ g } </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            We observe that
+            
+            <md>
+              <mrow>
+                \norm{ \of{ \alpha f } \of{ x_{ 1 } } - \of{ \alpha f } \of{ x_{ 2 } } } \amp = \norm{ \alpha f \of{ x_{ 1 } } - \alpha f \of{ x_{ 2 } } } = \norm{ \alpha \of{ f \of{ x_{ 1 } } - f \of{ x_{ 2 } } } }
+              </mrow>
+              
+              <mrow>
+                \amp \leq \abs{ \alpha } \norm{ f \of{ x_{ 1 } } - f \of{ x_{ 2 } } } \leq \abs{ \alpha } L_{ f } \rho \of{ x_{ 1 } , x_{ 2 } }
+              </mrow>
+            </md>
+            
+            for all points <m> x_{ 1 } , x_{ 2 } \in X </m>. We conclude that the pointwise scalar multiple <m> \alpha f </m> is Lipschitz continuous and <m> L_{ \alpha f } \leq \abs{ \alpha } L_{ f } </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Recall from <xref ref="example-norms-are-Lipschitz-continuous"/> that the norm <m> \norm{ \oparg } \colon V \to \R </m> is Lipschitz continuous with Lipschitz constant <m> L_{ \norm{ \oparg } } \leq 1 </m>. Thus <xref ref="lemma-lipschitz-continuity-and-composition"/> implies that the composition <m> \norm{ f } = \norm{ \oparg } \circ f </m> is Lipschitz continuous, with Lipschitz constant
+            
+            <md>
+              L_{ \norm{ f } } = L_{ \norm{ \oparg } \circ f } \leq L_{ \norm{ \oparg } } L_{ f } \leq 1 L_{ f } = L_{ f }
+            </md>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </proposition>
 
--->
+  <conclusion>
+    <p>
+      You will have several opportunities to explore applications of Lipschitz continuity in the problems for both this section and <xref ref="section-completeness-and-compactness"/>.
+    </p>
+  </conclusion>
+</subsection>

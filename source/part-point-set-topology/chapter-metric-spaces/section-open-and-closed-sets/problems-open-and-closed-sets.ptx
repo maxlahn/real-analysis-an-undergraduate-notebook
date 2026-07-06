@@ -11,7 +11,19 @@
     </p>
   </introduction>
   
-  <!-- <xi:include href="./problems/problem-TITLE.ptx"/> -->
+  <xi:include href="./problems/problem-open-and-closed-sets-in-metric-subspaces.ptx"/>
+  
+  <xi:include href="./problems/problem-interior-closure-and-boundary-of-complements.ptx"/>
+  
+  <xi:include href="./problems/problem-closure-and-limit-points.ptx"/>
+  
+  <xi:include href="./problems/problem-open-balls-in-ultrametric-spaces.ptx"/>
+  
+  <xi:include href="./problems/problem-diameter-in-the-real-line.ptx"/>
+  
+  <!-- <xi:include href="./problems/problem-diameter-and-radius.ptx"/> -->
+  
+  <!-- <xi:include href="./problems/problem-equivalence-of-boundedness-criteria.ptx"/> -->
 
   <conclusion>
     <p>

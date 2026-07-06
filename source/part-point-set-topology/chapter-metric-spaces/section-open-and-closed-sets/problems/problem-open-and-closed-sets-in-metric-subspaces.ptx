@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-open-and-closed-sets-in-metric-subspaces" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Open and closed sets in metric subspaces
+  </title>
+  
+  <introduction>
+    <p>
+      Let <m> U \subseteq X </m> be a subset of a metric space <m> \of{ X , \rho } </m>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that a subset <m> V \subseteq U </m> is open in the metric subspace <m> \of{ U , \rho } </m> if and only if <m> V = U \cap W </m> for some open set <m> W \subseteq X </m> in <m> X </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        We first observe that for each positive real number <m> r \gt 0 </m> and point <m> c \in U </m>, there are two possibly distinct sets with equal claims to the notation <m> \mB_{ r } \of{ c } </m>. Specifically, we may consider the open ball of radius <m> r </m> and center <m> c </m> in the metric space <m> \of{ X , \rho } </m> or the open ball of the same radius and center in the metric subspace <m> \of{ U , \rho } </m>. The key issue is that these open balls need not agree; that is,
+        
+        <md>
+          \setmid{ u \in U }{ \rho \of{ u , c } \lt r } \subseteq \setmid{ x \in X }{ \rho \of{ x , c } \lt r }
+        </md>,
+        
+        but this containment might be strict. As such, we will avoid the notation <m> \mB_{ r } \of{ c } </m> in the following argument and instead describe the relevant open balls with set-builder notation.
+      </p>
+      
+      <p>
+        First suppose that <m> V </m> is open in <m> U </m>. Then <m> V </m> is a neighborhood of each of its points, and so contains a metric open ball of positive radius centered at each of its points. In particular, for each point <m> v \in V </m> there is a positive real number <m> r_{ v } \gt 0 </m> so that
+        
+        <md>
+          \setmid{ u \in U }{ \rho \of{ u , v } \lt r_{ v } } \subseteq V
+        </md>.
+        
+        Let
+        
+        <md>
+          W = \bigcup_{ v \in V }{ \setmid{ x \in X }{ \rho \of{ x , v } \lt r_{ v } } }
+        </md>.
+        
+        <m> W </m> is a union of metric open balls in <m> X </m>, and so <m> W </m> is open in <m> X </m> by <xref ref="lemma-open-balls-and-closed-disks"/> and (2) of <xref ref="proposition-topology-of-a-metric-space"/>. We observe that
+        
+        <md>
+          <mrow>
+            U \cap W \amp = U \cap \bigcup_{ v \in V }{ \setmid{ x \in X }{ \rho \of{ x , v } \lt r_{ v } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \bigcup_{ v \in V }{ U \cap \setmid{ x \in X }{ \rho \of{ x , v } \lt r_{ v } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \bigcup_{ v \in V }{ \setmid{ u \in U }{ \rho \of{ u , v } \lt r_{ v } } }
+          </mrow>
+          
+          <mrow>
+            \amp \subseteq \bigcup_{ v \in V }{ V } = V
+          </mrow>
+        </md>,
+        
+        and
+        
+        <md>
+          <mrow>
+            V \amp = \bigcup_{ v \in V }{ V } \subseteq \bigcup_{ v \in V }{ \setmid{ u \in U }{ \rho \of{ u , v } \lt r_{ v } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \bigcup_{ v \in V }{ U \cap \setmid{ x \in X }{ \rho \of{ x , v } \lt r_{ v } } }
+          </mrow>
+          <mrow>
+            \amp = U \cap \bigcup_{ v \in V }{ \setmid{ x \in X }{ \rho \of{ x , v } \lt r_{ v } } } = U \cap W
+          </mrow>
+        </md>.
+        
+        Thus <m> V = U \cap W </m>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> V = U \cap W </m> for some open set <m> W \subseteq X </m> in <m> X </m>, and let <m> v \in V </m>. Then <m> v \in W </m>, and so <m> W </m> is a neighborhood of <m> v </m> in <m> X </m>. In particular,
+        
+        <md>
+          \setmid{ x \in X }{ \rho \of{ x , v } \lt r } \subseteq W
+        </md>
+        
+        for some positive real number <m> r \gt 0 </m>. We observe that
+        
+        <md>
+          \setmid{ u \in U }{ \rho \of{ u , v } \lt r } = U \cap \setmid{ x \in X }{ \rho \of{ x , v } \lt r } \subseteq U \cap W = V
+        </md>,
+        
+        and so <m> V </m> is a neighborhood of <m> v </m> in <m> U </m>. Since this holds for all points <m> v \in V </m>, <m> v </m> is open in <m> U </m>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that if a subset <m> V \subseteq U </m> is open in <m> X </m>, then it is open in <m> U </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        If <m> V </m> is open in <m> X </m>, then <m> V = U \cap V </m> is open in <m> U </m> by (a) above.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Construct an explicit counterexample to the converse of (b) above.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        The singleton set <m> V = \set{ 0 } </m> is open in the metric subspace <m> U = \Z </m> of <m> X = \R </m>, but <m> V = \set{ 0 } </m> is not open in <m> X = \R </m>.
+      </p>
+    </solution> -->
+  </task>
+</exercise>

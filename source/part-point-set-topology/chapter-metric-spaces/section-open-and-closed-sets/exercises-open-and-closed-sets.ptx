@@ -11,7 +11,21 @@
     </p>
   </introduction>
   
-  <!-- <xi:include href="./exercises/exercise-TITLE.ptx"/> -->
+  <!-- <xi:include href="./exercises/exercise-balls-disks-and-spheres.ptx"/> -->
+  
+  <xi:include href="./exercises/exercise-neighborhoods.ptx"/>
+  
+  <xi:include href="./exercises/exercise-open-and-closed-sets.ptx"/>
+  
+  <!-- <xi:include href="./exercises/exercise-interior-closure-and-boundary-points.ptx"/> -->
+  
+  <xi:include href="./exercises/exercise-diameter.ptx"/>
+  
+  <xi:include href="./exercises/exercise-bounded-and-unbounded-subsets-of-metric-spaces.ptx"/>
+  
+  <!-- <xi:include href="./exercises/exercise-bounded-and-unbounded-maps.ptx"/> -->
+  
+  <xi:include href="./exercises/exercise-the-uniform-metric.ptx"/>
 
   <conclusion>
     <p>

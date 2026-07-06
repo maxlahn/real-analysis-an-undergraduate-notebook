@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-open-balls-in-ultrametric-spaces" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Open balls in ultrametric spaces
+  </title>
+  
+  <statement>
+    <p>
+      Prove that any point in an open ball in an ultrametric space is its center.
+    </p>
+  </statement>
+  
+  <hint>
+    <p>
+      You may find (c) of <xref ref="problem-ultrametrics"/> to be of use.
+    </p>
+  </hint>
+  
+  <!-- <solution>
+    <p>
+      Let <m> r \gt 0 </m> be a positive real number and <m> c \in X </m> be a point in an ultrametric space <m> \of{ X , \rho } </m>, and consider the open ball
+      
+      <md>
+        \mB_{ r } \of{ c } = \setmid{ x \in X }{ \rho \of{ x , c } \lt r }
+      </md>
+      
+      of radius <m> r </m> and center <m> c </m>. We must show that <m> \mB_{ r } \of{ c } = \mB_{ r } \of{ x } </m> for any point <m> x \in \mB_{ r } \of{ c } </m>.
+    </p>
+    
+    <p>
+      To that end, let <m> x \in \mB_{ r } \of{ c } </m> be such a point, so that <m> \rho \of{ x , c } \lt r </m>, and consider a point <m> y \in X </m>. Then (c) of <xref ref="problem-ultrametrics"/> implies that at least two of the distances <m> \rho \of{ x , c } </m>, <m> \rho \of{ y , c } </m>, and <m> \rho \of{ y , x } </m> agree.
+    </p>
+    
+    <p>
+      First suppose that <m> y \in \mB_{ r } \of{ c } </m>, so that <m> \rho \of{ y , c } \lt r </m>. If <m> \rho \of{ y , c } = \rho \of{ y , x } </m>, then
+      
+      <md>
+        \rho \of{ y , x } = \rho \of{ y , c } \lt r
+      </md>,
+      
+      and so <m> y \in \mB_{ r } \of{ x } </m>. Similarly, if <m> \rho \of{ y , x } = \rho \of{ x , c } </m>, then
+      
+      <md>
+        \rho \of{ y , x } = \rho \of{ x , c } \lt r
+      </md>,
+      
+      and so <m> y \in \mB_{ r } \of{ x } </m>. Finally, if <m> \rho \of{ y , c } = \rho \of{ x , c } </m>, then the strong triangle inequality implies that
+      
+      <md>
+        \rho \of{ y , x } \leq \max \of{ \set{ \rho \of{ y , c } , \rho \of{ x , c } } } = \rho \of{ x , c } \lt r
+      </md>,
+      
+      and so <m> y \in \mB_{ r } \of{ x } </m>. In particular, we have shown that if <m> y \in \mB_{ r } \of{ c } </m>, then <m> y \in \mB_{ r } \of{ x } </m>. By symmetry, we conclude the converse implication, and so <m> \mB_{ r } \of{ x } = \mB_{ r } \of{ c } </m>.
+    </p>
+  </solution> -->
+</exercise>

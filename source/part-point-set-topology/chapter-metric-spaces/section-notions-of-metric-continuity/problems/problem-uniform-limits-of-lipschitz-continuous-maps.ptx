@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-uniform-limits-of-lipschitz-continuous-maps" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Uniform limits of Lipschitz continuous maps
+  </title>
+  
+  <introduction>
+    <p>
+      Consider the sequence <m> \of{ f_{ n } }_{ n = 1 }^{ \infty } </m> of real-valued functions <m> f_{ n } \colon \clopint{ 0 }{ \infty } \to \R </m> defined by the formula
+      
+      <md>
+        f_{ n } \of{ x } = \sqrt{ x + \frac{ 1 }{ n } }
+      </md>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Show that <m> f_{ n } </m> is Lipschitz continuous for each index <m> n \geq 1 </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        We observe that
+        
+        <md>
+          <mrow>
+            d \of{ f_{ n } \of{ x_{ 1 } } , f_{ n } \of{ x_{ 2 } } } \amp = \abs{ \sqrt{ x_{ 1 } + \frac{ 1 }{ n } } - \sqrt{ x_{ 2 } + \frac{ 1 }{ n } } } = \frac{ \abs{ \of{ x_{ 1 } + \frac{ 1 }{ n } } - \of{ x_{ 2 } + \frac{ 1 }{ n } } } }{ \abs{ \sqrt{ x_{ 1 } + \frac{ 1 }{ n } } + \sqrt{ x_{ 2 } + \frac{ 1 }{ n } } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ \abs{ x_{ 1 } - x_{ 2 } } }{ \sqrt{ x_{ 1 } + \frac{ 1 }{ n } } + \sqrt{ x_{ 2 } + \frac{ 1 }{ n } } } \leq \frac{ d \of{ x_{ 1 } , x_{ 2 } } }{ \sqrt{ \frac{ 1 }{ n } } + \sqrt{ \frac{ 1 }{ n } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ d \of{ x_{ 1 } , x_{ 2 } } }{ \of{ \frac{ 2 }{ \sqrt{ n } } } } = \of{ \frac{ \sqrt{ n } }{ 2 } } d \of{ x_{ 1 } , x_{ 2 } }
+          </mrow>
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } \in \clopint{ 0 }{ \infty } </m>, and so <m> f_{ n } </m> is Lipschitz continuous, with Lipschitz constant <m> L_{ f_{ n } } \leq \frac{ \sqrt{ n } }{ 2 } </m>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Show that the sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges uniformly, but the uniform limit is not Lipschitz continuous.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        Let <m> f \colon \clopint{ 0 }{ \infty } \to \R </m> be the real-valued function defined by the formula <m> f \of{ x } = \sqrt{ x } </m>. We have already seen in <xref ref="example-uniform-continuity-does-not-imply-lipschitz-continuity"/> that <m> f </m> is not Lipschitz continuous, and so it suffices to show that the sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges uniformly to <m> f </m>.
+      </p>
+      
+      <p>
+        To that end, we first observe that for all points <m> x_{ 1 } , x_{ 2 } \in \clopint{ 0 }{ \infty } </m> and positive integers <m> n \geq 1 </m>, if <m> x_{ 1 } \lt x_{ 2 } </m>, then
+        
+        <md>
+          <mrow>
+            \abs{ \sqrt{ x_{ 1 } + \frac{ 1 }{ n } } - \sqrt{ x_{ 1 } } } \amp = \abs{ \frac{ x_{ 1 } + \frac{ 1 }{ n } - x_{ 1 } }{ \sqrt{ x_{ 1 } + \frac{ 1 }{ n } } + \sqrt{ x_{ 1 } } } } = \frac{ \frac{ 1 }{ n } }{ \sqrt{ x_{ 1 } + \frac{ 1 }{ n } } + \sqrt{ x_{ 1 } } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \frac{ \frac{ 1 }{ n } }{ \sqrt{ x_{ 2 } + \frac{ 1 }{ n } } + \sqrt{ x_{ 2 } } } = \abs{ \frac{ x_{ 2 } + \frac{ 1 }{ n } - x_{ 2 } }{ \sqrt{ x_{ 2 } + \frac{ 1 }{ n } } + \sqrt{ x_{ 2 } } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \abs{ \sqrt{ x_{ 2 } + \frac{ 1 }{ n } } - \sqrt{ x_{ 2 } } }
+          </mrow>
+        </md>,
+        
+        so that <m> \sqrt{ x + \frac{ 1 }{ n } } - \sqrt{ x } </m> is a decreasing function of <m> x \in \clopint{ 0 }{ \infty } </m>. Let <m> \epsilon \gt 0 </m> be a positive real number. The Archimedean principle implies that
+        
+        <md>
+          n_{ \epsilon } \gt \frac{ 1 }{ \epsilon^{ 2 } }
+        </md>
+        
+        for some positive integer <m> n_{ \epsilon } \geq 1 </m>. We observe that
+        
+        <md>
+          <mrow>
+            d \of{ f_{ n } \of{ x } , f \of{ x } } \amp = \abs{ \sqrt{ x + \frac{ 1 }{ n } } - \sqrt{ x } } = \abs{ \frac{ x + \frac{ 1 }{ n } - x }{ \sqrt{ x + \frac{ 1 }{ n } } + \sqrt{ x } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ 1 }{ n \of{ \sqrt{ 0 + \frac{ 1 }{ n } } + \sqrt{ 0 } } } = \frac{ 1 }{ \sqrt{ n } } \leq \frac{ 1 }{ \sqrt{ n } } \lt \epsilon
+          </mrow>
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m> and points <m> x \in \clopint{ 0 }{ \infty } </m>. Thus the sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges uniformly to <m> f </m>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that the limit of a uniformly convergent sequence <m> \of{ g_{ n } }_{ n = 0 }^{ \infty } </m> of Lipschitz continuous maps <m> g_{ n } \colon X \to Y </m> from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m> is Lipschitz continuous if the sequence <m> \of{ L_{ g_{ n } } }_{ n = 0 }^{ \infty } </m> of Lipschitz constants <m> L_{ g_{ n } } </m> is bounded from above.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        Let <m> g = \uniflim_{ n \to \infty }{ g_{ n } } </m>, and suppose that <m> L \geq L_{ g_{ n } } </m> for all indices <m> n \in \N </m>. For each positive real number <m> \epsilon \gt 0 </m>, there is a natural number <m> n_{ \epsilon } \in \N </m> so that
+        
+        <md>
+          \rho_{ Y } \of{ g_{ n } \of{ x } , g \of{ x } } \lt \frac{ \epsilon }{ 2 }
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m> and points <m> x \in X </m>. Fix such an index <m> n \geq n_{ \epsilon } </m>; for example, we may choose <m> n = n_{ \epsilon } </m>. We observe that
+        
+        <md>
+          <mrow>
+            \rho_{ Y } \of{ g \of{ x_{ 1 } } , g \of{ x_{ 2 } } } \amp \leq \rho_{ Y } \of{ g \of{ x_{ 1 } } , g_{ n } \of{ x_{ 1 } } } + \rho \of{ g_{ n } \of{ x_{ 1 } } , g_{ n } \of{ x_{ 2 } } } + \rho_{ Y } \of{ g_{ n } \of{ x_{ 2 } } , g \of{ x_{ 2 } } }
+          </mrow>
+          
+          <mrow>
+            \amp \lt \frac{ \epsilon }{ 2 } + L_{ g_{ n } } \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } + \frac{ \epsilon }{ 2 } \leq L \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } + \epsilon
+          </mrow>
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } \in X </m>. Since this holds for all positive real numbers <m> \epsilon </m>, we conclude that
+        
+        <md>
+          \rho_{ Y } \of{ g \of{ x_{ 1 } } , g \of{ x_{ 2 } } } \leq L \rho_{ X } \of{ x_{ 1 } , x_{ 2 } }
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } \in X </m>; that is, <m> g </m> is Lipschitz continuous, with Lipschitz constant <m> L_{ g } \leq L </m>.
+      </p>
+    </solution> -->
+  </task>
+</exercise>

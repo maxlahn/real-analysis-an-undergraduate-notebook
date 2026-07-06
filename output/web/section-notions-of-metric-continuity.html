@@ -748,7 +748,7 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list active" id="ptx-toc-group-section-notions-of-metric-continuity">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#subsection-continuous-maps-and-functions" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Continuous Maps and Functions</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#subsection-stronger-forms-of-metric-continuity" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Stronger Forms of Metric Continuity</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#subsection-even-stronger-forms-of-metric-continuity" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Even Stronger Forms of Metric Continuity [SKIP]</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#subsection-even-stronger-forms-of-metric-continuity" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Even Stronger Forms of Metric Continuity</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#exercises-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5.4</span> <span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#problems-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5.5</span> <span class="title">Problems</span></a></div></li>
 </ul>
@@ -1689,17 +1689,294 @@ f \of{ U } \amp \subseteq f \of{ \bigcup_{ k = 1 }^{ n }{ \mB_{ \delta } \of{ x_
 </section>
 <section class="subsection" id="subsection-even-stronger-forms-of-metric-continuity">
 <h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Even Stronger Forms of Metric Continuity [SKIP]</span>
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Even Stronger Forms of Metric Continuity</span>
 </h3>
 <section class="introduction" id="subsection-even-stronger-forms-of-metric-continuity-2">
-<div class="para" id="subsection-even-stronger-forms-of-metric-continuity-2-1">Text before the first subdivision.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-even-stronger-forms-of-metric-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsection-even-stronger-forms-of-metric-continuity-2-1">We conclude this section with a look at a stronger form of continuity than uniform continuity. A map between metric spaces is called <dfn class="terminology">Lipschitz continuous</dfn> if it changes the distance between points by at most some positive scalar multiple.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-even-stronger-forms-of-metric-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="subsection-even-stronger-forms-of-metric-continuity-3">
-<div class="para" id="subsection-even-stronger-forms-of-metric-continuity-3-1">Text after the last subdivision.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-even-stronger-forms-of-metric-continuity-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.5.3: Even Stronger Forms of Metric Continuity [SKIP]"><a tabindex="-1" href="#subsection-even-stronger-forms-of-metric-continuity" title="Copy heading and permalink for Subsection 3.5.3: Even Stronger Forms of Metric Continuity [SKIP]" aria-label="Copy heading and permalink for Subsection 3.5.3: Even Stronger Forms of Metric Continuity [SKIP]">🔗</a></div>
+<article class="definition definition-like" id="definition-lipschitz-continuity"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lipschitz continuity.</span>
+</h4>
+<div class="para logical" id="definition-lipschitz-continuity-5-1">
+<div class="para">A map <span class="process-math">\(f \)</span> from a metric space <span class="process-math">\(\of{ X , \rho_{ X } } \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho_{ Y } } \)</span> is called <dfn class="terminology">Lipschitz continuous</dfn> if there is a non-negative real number <span class="process-math">\(L \geq 0 \)</span> so that</div>
+<div class="displaymath process-math" id="definition-lipschitz-continuity-5-1-6">
+\begin{equation*}
+d_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \leq L d_{ X } \of{ x_{ 1 } , x_{ 2 } }
+\end{equation*}
+</div>
+<div class="para">for all points <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-lipschitz-continuity-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="definition-lipschitz-continuity-5-2">The set of Lipschitz continuous maps from a metric space <span class="process-math">\(\of{ X , \rho_{ X } } \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho_{ Y } } \)</span> is denoted <span class="process-math">\(\LC \of{ X , Y } \text{,}\)</span> and the set of Lipschitz continuous real-valued functions on <span class="process-math">\(\of{ X , \rho_{ X } } \)</span> is denoted <span class="process-math">\(\LC \of{ X } = \LC \of{ X , \R } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-lipschitz-continuity-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.5.16: Lipschitz continuity"><a tabindex="-1" href="#definition-lipschitz-continuity" title="Copy heading and permalink for Definition 3.5.16: Lipschitz continuity" aria-label="Copy heading and permalink for Definition 3.5.16: Lipschitz continuity">🔗</a></div>
+</article>
+<div class="para" id="subsection-even-stronger-forms-of-metric-continuity-4">As with uniform continuity, Lipschitz continuity does not apply at a specific point, but rather over the entire domain of a map. <em class="alert">It does not make sense to say that a map between metric spaces is Lipschitz continuous at a point.</em><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-even-stronger-forms-of-metric-continuity-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-norms-are-Lipschitz-continuous" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Norms are Lipschitz continuous.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-norms-are-Lipschitz-continuous-2-1">
+<div class="para">Let <span class="process-math">\(\of{ V , \norm{ \oparg } } \)</span> be a normed vector space. The <a href="section-introduction-to-metric-geometry.html#proposition-reverse-triangle-inequality" class="xref" data-knowl="./knowl/xref/proposition-reverse-triangle-inequality.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.1.5: Reverse triangle inequality">Reverse triangle inequality</a> implies that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-reverse-triangle-inequality.html" id="example-norms-are-Lipschitz-continuous-2-1-3">
+\begin{equation*}
+d \of{ \norm{ \vect{ v }_{ 1 } } , \norm{ \vect{ v }_{ 2 } } } = \abs{ \norm{ \vect{ v }_{ 1 } } - \norm{ \vect{ v }_{ 2 } } } \leq \norm{ \vect{ v }_{ 1 } - \vect{ v }_{ 2 } } = 1 \norm{ \vect{ v }_{ 1 } - \vect{ v }_{ 2 } }
+\end{equation*}
+</div>
+<div class="para">for all vectors <span class="process-math">\(\vect{ v }_{ 1 } , \vect{ v }_{ 2 } \in V \text{,}\)</span> and so the norm <span class="process-math">\(\norm{ \oparg } \colon V \to \R \)</span> is Lipschitz continuous.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-norms-are-Lipschitz-continuous-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.5.17: Norms are Lipschitz continuous"><a tabindex="-1" href="#example-norms-are-Lipschitz-continuous" title="Copy heading and permalink for Example 3.5.17: Norms are Lipschitz continuous" aria-label="Copy heading and permalink for Example 3.5.17: Norms are Lipschitz continuous">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-even-stronger-forms-of-metric-continuity-6">For any Lipschitz continuous map between metric spaces, there is a unique smallest non-negative real number such that the above condition is satisfied. This unique smallest constant is called the <dfn class="terminology">Lipschitz constant</dfn> for the map.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-even-stronger-forms-of-metric-continuity-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-lipschitz-constant"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lipschitz constant.</span>
+</h4>
+<div class="para logical" id="definition-lipschitz-constant-4-1">
+<div class="para">The <dfn class="terminology">Lipschitz constant</dfn> <span class="process-math">\(L_{ f } \)</span> of a map <span class="process-math">\(f \colon X \to Y \)</span> from a metric space <span class="process-math">\(\of{ X , \rho_{ X } } \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho_{ Y } } \)</span> is the infimum</div>
+<div class="displaymath process-math" id="definition-lipschitz-constant-4-1-6">
+\begin{equation*}
+L_{ f } = \inf \of{ \setmid{ L \in \clopint{ 0 }{ \infty } }{ \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \leq L \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } \textrm{ for all } x_{ 1 } , x_{ 2 } \in X } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-lipschitz-constant-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.5.18: Lipschitz constant"><a tabindex="-1" href="#definition-lipschitz-constant" title="Copy heading and permalink for Definition 3.5.18: Lipschitz constant" aria-label="Copy heading and permalink for Definition 3.5.18: Lipschitz constant">🔗</a></div>
+</article>
+<article class="proposition theorem-like" id="proposition-lipschitz-constants-and-lipschitz-continuity"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lipschitz constants and Lipschitz continuity.</span>
+</h4>
+<div class="para logical" id="proposition-lipschitz-constants-and-lipschitz-continuity-2-1">
+<div class="para">A map <span class="process-math">\(f \colon X \to Y \)</span> from a metric space <span class="process-math">\(\of{ X , \rho_{ X } } \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho_{ Y } } \)</span> is Lipschitz continuous if and only if <span class="process-math">\(L_{ f } \lt \infty \text{,}\)</span> in which case</div>
+<div class="displaymath process-math" id="proposition-lipschitz-constants-and-lipschitz-continuity-2-1-5">
+\begin{equation*}
+\rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \leq L_{ f } \rho_{ X } \of{ x_{ 1 } , x_{ 2 } }
+\end{equation*}
+</div>
+<div class="para">for all points <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-lipschitz-constants-and-lipschitz-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 3.5.19: Lipschitz constants and Lipschitz continuity"><a tabindex="-1" href="#proposition-lipschitz-constants-and-lipschitz-continuity" title="Copy heading and permalink for Proposition 3.5.19: Lipschitz constants and Lipschitz continuity" aria-label="Copy heading and permalink for Proposition 3.5.19: Lipschitz constants and Lipschitz continuity">🔗</a></div>
+</article>
+<details id="proposition-lipschitz-constants-and-lipschitz-continuity-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="proposition-lipschitz-constants-and-lipschitz-continuity-3-1">
+<div class="para">We observe that</div>
+<div class="displaymath process-math" id="proposition-lipschitz-constants-and-lipschitz-continuity-3-1-1">
+\begin{equation*}
+C = \setmid{ L \in \clopint{ 0 }{ \infty } }{ \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \leq L \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } \textrm{ for all } x_{ 1 } , x_{ 2 } \in X }
+\end{equation*}
+</div>
+<div class="para">is a subset of the real numbers, and so <span class="process-math">\(L_{ f } = \inf \of{ C } \lt \infty \)</span> if and only if <span class="process-math">\(C \neq \emptyset \)</span> is non-empty. That <span class="process-math">\(C \neq \emptyset \)</span> is non-empty is precisely the Lipschitz continuity condition for <span class="process-math">\(f \text{,}\)</span> and so <span class="process-math">\(f \)</span> is Lipschitz continuous if and only if <span class="process-math">\(L_{ f } \lt \infty \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-lipschitz-constants-and-lipschitz-continuity-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-lipschitz-constants-and-lipschitz-continuity-3-2">
+<div class="para">If <span class="process-math">\(C \neq \emptyset \)</span> is non-empty, let <span class="process-math">\(\of{ l_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of elements <span class="process-math">\(l_{ n } \in L \)</span> which converge to <span class="process-math">\(L_{ f } = \inf \of{ C } \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="proposition-lipschitz-constants-and-lipschitz-continuity-3-2-5">
+\begin{align*}
+\rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \amp = \lim_{ n \to \infty }{ \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } }\\
+\amp \leq \lim_{ n \to \infty }{ l_{ n } \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } } = L_{ f } \rho \of{ x_{ 1 } , x_{ 2 } }
+\end{align*}
+</div>
+<div class="para">for all points <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-lipschitz-constants-and-lipschitz-continuity-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.5.19.1"><a tabindex="-1" href="#proposition-lipschitz-constants-and-lipschitz-continuity-3" title="Copy heading and permalink for Proof 3.5.19.1" aria-label="Copy heading and permalink for Proof 3.5.19.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-even-stronger-forms-of-metric-continuity-9">A map is Lipschitz continuous if it increases the distance between points by at most some nonnegative constant multiplier. This implies that Lipschitz continuity is a stronger condition than uniform continuity, and therefore is also a stronger condition than continuity.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-even-stronger-forms-of-metric-continuity-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-lipschitz-continuity-implies-uniform-continuity"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lipschitz continuity implies uniform continuity.</span>
+</h4>
+<div class="para" id="proposition-lipschitz-continuity-implies-uniform-continuity-2-1">If a map between metric spaces is Lipschitz continuous, then it is uniformly continuous and continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-lipschitz-continuity-implies-uniform-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 3.5.20: Lipschitz continuity implies uniform continuity"><a tabindex="-1" href="#proposition-lipschitz-continuity-implies-uniform-continuity" title="Copy heading and permalink for Proposition 3.5.20: Lipschitz continuity implies uniform continuity" aria-label="Copy heading and permalink for Proposition 3.5.20: Lipschitz continuity implies uniform continuity">🔗</a></div>
+</article>
+<details id="proposition-lipschitz-continuity-implies-uniform-continuity-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="proposition-lipschitz-continuity-implies-uniform-continuity-3-1">Let <span class="process-math">\(f \colon X \to Y \)</span> be a map from a metric space <span class="process-math">\(\of{ X , \rho_{ X } } \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho_{ Y } } \text{,}\)</span> and consider a positive real number <span class="process-math">\(\epsilon \gt 0 \text{.}\)</span> There are two cases; either <span class="process-math">\(L_{ f } = 0 \text{,}\)</span> or <span class="process-math">\(0 \lt L_{ f } \lt \infty \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-lipschitz-continuity-implies-uniform-continuity-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-lipschitz-continuity-implies-uniform-continuity-3-2">
+<div class="para">If <span class="process-math">\(L_{ f } = 0 \text{,}\)</span> then <a href="section-notions-of-metric-continuity.html#proposition-lipschitz-constants-and-lipschitz-continuity" class="xref" data-knowl="./knowl/xref/proposition-lipschitz-constants-and-lipschitz-continuity.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.5.19: Lipschitz constants and Lipschitz continuity">Proposition 3.5.19 Lipschitz constants and Lipschitz continuity</a> implies that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-lipschitz-constants-and-lipschitz-continuity.html" id="proposition-lipschitz-continuity-implies-uniform-continuity-3-2-3">
+\begin{equation*}
+0 \leq \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \leq L_{ f } \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } = 0 \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } = 0 \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all points <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \text{,}\)</span> and so <span class="process-math">\(f \of{ x_{ 1 } } = f \of{ x_{ 2 } } \)</span> for all points <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \text{.}\)</span> In particular, this implies that <span class="process-math">\(f \)</span> is constant and therefore uniformly continuous.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-lipschitz-continuity-implies-uniform-continuity-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-lipschitz-continuity-implies-uniform-continuity-3-3">
+<div class="para">If on the other hand <span class="process-math">\(0 \lt L_{ f } \lt \infty \text{,}\)</span> let <span class="process-math">\(\delta = \frac{ \epsilon }{ L_{ f } } \text{,}\)</span> and note that <a href="section-notions-of-metric-continuity.html#proposition-lipschitz-constants-and-lipschitz-continuity" class="xref" data-knowl="./knowl/xref/proposition-lipschitz-constants-and-lipschitz-continuity.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.5.19: Lipschitz constants and Lipschitz continuity">Proposition 3.5.19 Lipschitz constants and Lipschitz continuity</a> implies that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-lipschitz-constants-and-lipschitz-continuity.html ./knowl/xref/proposition-uniform-continuity-implies-continuity.html" id="proposition-lipschitz-continuity-implies-uniform-continuity-3-3-4">
+\begin{equation*}
+0 \leq \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \leq L_{ f } \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } \lt L_{ f } \of{ \frac{ \epsilon }{ L_{ f } } } = \epsilon
+\end{equation*}
+</div>
+<div class="para">for all points <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \)</span> so that <span class="process-math">\(\rho_{ X } \of{ x_{ 1 } , x_{ 2 } } \lt \delta \text{.}\)</span> Thus <span class="process-math">\(f \)</span> is uniformly continuous. We conclude that <span class="process-math">\(f \)</span> is continuous by <a href="section-notions-of-metric-continuity.html#proposition-uniform-continuity-implies-continuity" class="xref" data-knowl="./knowl/xref/proposition-uniform-continuity-implies-continuity.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.5.12: Uniform continuity implies continuity">Proposition 3.5.12 Uniform continuity implies continuity</a>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-lipschitz-continuity-implies-uniform-continuity-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.5.20.1"><a tabindex="-1" href="#proposition-lipschitz-continuity-implies-uniform-continuity-3" title="Copy heading and permalink for Proof 3.5.20.1" aria-label="Copy heading and permalink for Proof 3.5.20.1">🔗</a></div>
+</article></details>
+<details id="example-uniform-continuity-does-not-imply-lipschitz-continuity" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uniform continuity does not imply Lipschitz continuity.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-uniform-continuity-does-not-imply-lipschitz-continuity-2-1">
+<div class="para">Consider the real-valued function <span class="process-math">\(f \colon \clopint{ 0 }{ \infty } \to \R \)</span> defined by the formula <span class="process-math">\(f \of{ x } = \sqrt{ x } \text{.}\)</span> For each positive real number <span class="process-math">\(\epsilon \gt 0 \text{,}\)</span> let <span class="process-math">\(\delta = \epsilon^{ 2 } \gt 0 \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="example-uniform-continuity-does-not-imply-lipschitz-continuity-2-1-5">
+\begin{equation*}
+\abs{ \sqrt{ x_{ 1 } } + \sqrt{ x_{ 2 } } } \leq \abs{ \sqrt{ x_{ 1 } } } + \abs{ \sqrt{ x_{ 2 } } } = \sqrt{ x_{ 1 } } + \sqrt{ x_{ 2 } } = \abs{ \sqrt{ x_{ 1 } } + \sqrt{ x_{ 2 } } }
+\end{equation*}
+</div>
+<div class="para">for all points <span class="process-math">\(x_{ 1 } , x_{ 2 } \in \clopint{ 0 }{ \infty } \text{,}\)</span> and so</div>
+<div class="displaymath process-math" id="example-uniform-continuity-does-not-imply-lipschitz-continuity-2-1-7">
+\begin{align*}
+d \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } }^{ 2 } \amp = \abs{ \sqrt{ x_{ 1 } } - \sqrt{ x_{ 2 } } }^{ 2 } \leq \abs{ \sqrt{ x_{ 1 } } + \sqrt{ x_{ 2 } } } \cdot \abs{ \sqrt{ x_{ 1 } } - \sqrt{ x_{ 2 } } } = \abs{ x_{ 1 } - x_{ 2 } }\\
+\amp = d \of{ x_{ 1 } , x_{ 2 } } \lt \delta = \epsilon^{ 2 }
+\end{align*}
+</div>
+<div class="para">for all points <span class="process-math">\(x_{ 1 } , x_{ 2 } \in \clopint{ 0 }{ \infty } \)</span> so that <span class="process-math">\(d \of{ x_{ 1 } , x_{ 2 } } \lt \delta \text{.}\)</span> In particular, <span class="process-math">\(d \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \lt \epsilon \)</span> for all points <span class="process-math">\(x_{ 1 } , x_{ 2 } \in \clopint{ 0 }{ \infty } \)</span> so that <span class="process-math">\(d \of{ x_{ 1 } , x_{ 2 } } \lt \delta \text{,}\)</span> and so <span class="process-math">\(f \)</span> is uniformly continuous.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-uniform-continuity-does-not-imply-lipschitz-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="example-uniform-continuity-does-not-imply-lipschitz-continuity-2-2">
+<div class="para">On the other hand, we observe that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-lipschitz-constants-and-lipschitz-continuity.html" id="example-uniform-continuity-does-not-imply-lipschitz-continuity-2-2-1">
+\begin{align*}
+\frac{ d \of{ f \of{ \frac{ 1 }{ \of{ L + 1 }^{ 2 } } } , f \of{ 0 } } }{ d \of{ \frac{ 1 }{ \of{ L + 1 }^{ 2 } } , 0 } } \amp = \frac{ \abs{ \sqrt{ \frac{ 1 }{ \of{ L + 1 }^{ 2 } } } - \sqrt{ 0 } } }{ \abs{ \frac{ 1 }{ \of{ L + 1 }^{ 2 } } - 0 } } = \abs{ \frac{ \of{ \frac{ 1 }{ L + 1 } } }{ \of{ \frac{ 1 }{ \of{ L + 1 }^{ 2 } } } } }\\
+\amp = \abs{ \frac{ \of{ L + 1 }^{ 2 } }{ L + 1 } } = \abs{ L + 1 } = L + 1 \gt L
+\end{align*}
+</div>
+<div class="para">for any non-negative real number <span class="process-math">\(0 \leq L \lt \infty \text{,}\)</span> so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-lipschitz-constants-and-lipschitz-continuity.html" id="example-uniform-continuity-does-not-imply-lipschitz-continuity-2-2-3">
+\begin{equation*}
+d \of{ f \of{ \frac{ 1 }{ \of{ L + 1 }^{ 2 } } } , f \of{ 0 } } \gt L d \of{ \frac{ 1 }{ \of{ L + 1 }^{ 2 } } , 0 }\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus <span class="process-math">\(L_{ f } \gt L \text{.}\)</span> Since this holds for each non-negative real number <span class="process-math">\(0 \leq L \lt \infty \text{,}\)</span> <span class="process-math">\(L_{ f } = \infty \)</span> and so <span class="process-math">\(f \)</span> is not Lipschitz continuous by <a href="section-notions-of-metric-continuity.html#proposition-lipschitz-constants-and-lipschitz-continuity" class="xref" data-knowl="./knowl/xref/proposition-lipschitz-constants-and-lipschitz-continuity.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.5.19: Lipschitz constants and Lipschitz continuity">Proposition 3.5.19 Lipschitz constants and Lipschitz continuity</a>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-uniform-continuity-does-not-imply-lipschitz-continuity-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.5.21: Uniform continuity does not imply Lipschitz continuity"><a tabindex="-1" href="#example-uniform-continuity-does-not-imply-lipschitz-continuity" title="Copy heading and permalink for Example 3.5.21: Uniform continuity does not imply Lipschitz continuity" aria-label="Copy heading and permalink for Example 3.5.21: Uniform continuity does not imply Lipschitz continuity">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-even-stronger-forms-of-metric-continuity-12">Just as in the case of continuity and uniform continuity, Lipschitz continuity is preserved by composition, although possibly at the cost of increasing the Lipschitz constant.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-even-stronger-forms-of-metric-continuity-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="lemma theorem-like" id="lemma-lipschitz-continuity-and-composition"><h4 class="heading">
+<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lipschitz continuity and composition.</span>
+</h4>
+<div class="para" id="lemma-lipschitz-continuity-and-composition-2-1">Let <span class="process-math">\(f \colon X \to Y \)</span> and <span class="process-math">\(g \colon Y \to Z \)</span> be maps between metric spaces <span class="process-math">\(\of{ X , \rho_{ X } } \text{,}\)</span> <span class="process-math">\(\of{ Y , \rho_{ Y } } \text{,}\)</span> and <span class="process-math">\(\of{ Z , \rho_{ Z } } \text{.}\)</span> If <span class="process-math">\(f \)</span> and <span class="process-math">\(g \)</span> are Lipschitz continuous, then so is their composition <span class="process-math">\(g \circ f \colon X \to Z \text{,}\)</span> and <span class="process-math">\(L_{ g \circ f } \leq L_{ g } L_{ f } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-lipschitz-continuity-and-composition-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Lemma 3.5.22: Lipschitz continuity and composition"><a tabindex="-1" href="#lemma-lipschitz-continuity-and-composition" title="Copy heading and permalink for Lemma 3.5.22: Lipschitz continuity and composition" aria-label="Copy heading and permalink for Lemma 3.5.22: Lipschitz continuity and composition">🔗</a></div>
+</article>
+<details id="lemma-lipschitz-continuity-and-composition-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="lemma-lipschitz-continuity-and-composition-3-1">
+<div class="para">We observe that</div>
+<div class="displaymath process-math" id="lemma-lipschitz-continuity-and-composition-3-1-1">
+\begin{align*}
+\rho_{ Z } \of{ \of{ g \circ f } \of{ x_{ 1 } } , \of{ g \circ f } \of{ x_{ 2 } } } \amp = \rho_{ Z } \of{ g \of{ f \of{ x_{ 1 } } } , g \of{ f \of{ x_{ 2 } } } }\\
+\amp \leq L_{ g } \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } }\\
+\amp \leq L_{ g } L_{ f } \rho_{ X } \of{ x_{ 1 } , x_{ 2 } }
+\end{align*}
+</div>
+<div class="para">for all points <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \text{.}\)</span> We conclude that the composition <span class="process-math">\(g \circ f \)</span> is Lipschitz continuous and <span class="process-math">\(L_{ g \circ f } \leq L_{ g } L_{ f } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-lipschitz-continuity-and-composition-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.5.22.1"><a tabindex="-1" href="#lemma-lipschitz-continuity-and-composition-3" title="Copy heading and permalink for Proof 3.5.22.1" aria-label="Copy heading and permalink for Proof 3.5.22.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-even-stronger-forms-of-metric-continuity-14">Just as in the case of continuity and uniform continuity, Lipschitz continuous maps from a metric space to a normed vector space form a vector space under the pointwise operations of addition and scalar multiplication, although possibly at the cost of increasing the Lipschitz constant.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-even-stronger-forms-of-metric-continuity-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-vector-arithmetic-and-lipschitz-continuity"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.23</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Vector arithmetic and Lipschitz continuity.</span>
+</h4>
+<div class="para logical" id="proposition-vector-arithmetic-and-lipschitz-continuity-2-1">
+<div class="para">Let <span class="process-math">\(\of{ X , \rho } \)</span> be a metric space and <span class="process-math">\(\of{ V , \norm{ \oparg } } \)</span> be a normed vector space.</div>
+<ol class="decimal" id="proposition-vector-arithmetic-and-lipschitz-continuity-2-1-3">
+<li id="proposition-vector-arithmetic-and-lipschitz-continuity-2-1-3-1">
+<span class="heading li--heading"><span class="title li--heading-title">Vector addition.</span></span>
+<div class="para" id="proposition-vector-arithmetic-and-lipschitz-continuity-2-1-3-1-2">If two maps <span class="process-math">\(f , g \colon X \to V \)</span> from <span class="process-math">\(X \)</span> to <span class="process-math">\(Y \)</span> are Lipschitz continuous, then their pointwise sum <span class="process-math">\(f + g \colon X \to V \)</span> is also Lipschitz continuous, and <span class="process-math">\(L_{ f + g } \leq L_{ f } + L_{ g } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-vector-arithmetic-and-lipschitz-continuity-2-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1: Vector addition"><a tabindex="-1" href="#proposition-vector-arithmetic-and-lipschitz-continuity-2-1-3-1" title="Copy heading and permalink for Item 1: Vector addition" aria-label="Copy heading and permalink for Item 1: Vector addition">🔗</a></div>
+</li>
+<li id="proposition-vector-arithmetic-and-lipschitz-continuity-2-1-3-2">
+<span class="heading li--heading"><span class="title li--heading-title">Scalar multiplication.</span></span>
+<div class="para" id="proposition-vector-arithmetic-and-lipschitz-continuity-2-1-3-2-2">If a map <span class="process-math">\(f \colon X \to V \)</span> is Lipschitz continuous, then any pointwise scalar multiple <span class="process-math">\(\alpha f \)</span> is also Lipschitz continuous, and <span class="process-math">\(L_{ \alpha f } \leq \abs{ \alpha } L_{ f } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-vector-arithmetic-and-lipschitz-continuity-2-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2: Scalar multiplication"><a tabindex="-1" href="#proposition-vector-arithmetic-and-lipschitz-continuity-2-1-3-2" title="Copy heading and permalink for Item 2: Scalar multiplication" aria-label="Copy heading and permalink for Item 2: Scalar multiplication">🔗</a></div>
+</li>
+<li id="proposition-vector-arithmetic-and-lipschitz-continuity-2-1-3-3">
+<span class="heading li--heading"><span class="title li--heading-title">Norm.</span></span>
+<div class="para" id="proposition-vector-arithmetic-and-lipschitz-continuity-2-1-3-3-2">If a map <span class="process-math">\(f \colon X \to V \)</span> is uniformly continuous, then its pointwise norm <span class="process-math">\(\norm{ f } = \norm{ \oparg } \circ f \)</span> is also uniformly continuous, and <span class="process-math">\(L_{ \norm{ f } } \leq L_{ f } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-vector-arithmetic-and-lipschitz-continuity-2-1-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3: Norm"><a tabindex="-1" href="#proposition-vector-arithmetic-and-lipschitz-continuity-2-1-3-3" title="Copy heading and permalink for Item 3: Norm" aria-label="Copy heading and permalink for Item 3: Norm">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-vector-arithmetic-and-lipschitz-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 3.5.23: Vector arithmetic and Lipschitz continuity"><a tabindex="-1" href="#proposition-vector-arithmetic-and-lipschitz-continuity" title="Copy heading and permalink for Proposition 3.5.23: Vector arithmetic and Lipschitz continuity" aria-label="Copy heading and permalink for Proposition 3.5.23: Vector arithmetic and Lipschitz continuity">🔗</a></div>
+</article>
+<details id="proposition-vector-arithmetic-and-lipschitz-continuity-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<ol class="decimal" id="proposition-vector-arithmetic-and-lipschitz-continuity-3-1">
+<li id="proposition-vector-arithmetic-and-lipschitz-continuity-3-1-1">
+<div class="para logical" id="proposition-vector-arithmetic-and-lipschitz-continuity-3-1-1-1">
+<div class="para">We observe that</div>
+<div class="displaymath process-math" id="proposition-vector-arithmetic-and-lipschitz-continuity-3-1-1-1-1">
+\begin{align*}
+\norm{ \of{ f + g } \of{ x_{ 1 } } - \of{ f + g } \of{ x_{ 2 } } } \amp = \norm{ f \of{ x_{ 1 } } + g \of{ x_{ 1 } } - f \of{ x_{ 2 } } - g \of{ x_{ 2 } } }\\
+\amp \leq \norm{ f \of{ x_{ 1 } } - f \of{ x_{ 2 } } } + \norm{ g \of{ x_{ 1 } } - g \of{ x_{ 2 } } }\\
+\amp \leq L_{ f } \rho \of{ x_{ 1 } , x_{ 2 } } + L_{ g } \rho \of{ x_{ 1 } , x_{ 2 } }\\
+\amp = \of{ L_{ f } + L_{ g } } \rho \of{ x_{ 1 } , x_{ 2 } }
+\end{align*}
+</div>
+<div class="para">for all points <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \text{.}\)</span> We conclude that the composition <span class="process-math">\(g \circ f \)</span> is Lipschitz continuous and <span class="process-math">\(L_{ f + g } \leq L_{ f } + L_{ g } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-vector-arithmetic-and-lipschitz-continuity-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#proposition-vector-arithmetic-and-lipschitz-continuity-3-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="proposition-vector-arithmetic-and-lipschitz-continuity-3-1-2">
+<div class="para logical" id="proposition-vector-arithmetic-and-lipschitz-continuity-3-1-2-1">
+<div class="para">We observe that</div>
+<div class="displaymath process-math" id="proposition-vector-arithmetic-and-lipschitz-continuity-3-1-2-1-1">
+\begin{align*}
+\norm{ \of{ \alpha f } \of{ x_{ 1 } } - \of{ \alpha f } \of{ x_{ 2 } } } \amp = \norm{ \alpha f \of{ x_{ 1 } } - \alpha f \of{ x_{ 2 } } } = \norm{ \alpha \of{ f \of{ x_{ 1 } } - f \of{ x_{ 2 } } } }\\
+\amp \leq \abs{ \alpha } \norm{ f \of{ x_{ 1 } } - f \of{ x_{ 2 } } } \leq \abs{ \alpha } L_{ f } \rho \of{ x_{ 1 } , x_{ 2 } }
+\end{align*}
+</div>
+<div class="para">for all points <span class="process-math">\(x_{ 1 } , x_{ 2 } \in X \text{.}\)</span> We conclude that the pointwise scalar multiple <span class="process-math">\(\alpha f \)</span> is Lipschitz continuous and <span class="process-math">\(L_{ \alpha f } \leq \abs{ \alpha } L_{ f } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-vector-arithmetic-and-lipschitz-continuity-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#proposition-vector-arithmetic-and-lipschitz-continuity-3-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="proposition-vector-arithmetic-and-lipschitz-continuity-3-1-3">
+<div class="para logical" id="proposition-vector-arithmetic-and-lipschitz-continuity-3-1-3-1">
+<div class="para">Recall from <a href="section-notions-of-metric-continuity.html#example-norms-are-Lipschitz-continuous" class="xref" data-knowl="./knowl/xref/example-norms-are-Lipschitz-continuous.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.5.17: Norms are Lipschitz continuous">Example 3.5.17 Norms are Lipschitz continuous</a> that the norm <span class="process-math">\(\norm{ \oparg } \colon V \to \R \)</span> is Lipschitz continuous with Lipschitz constant <span class="process-math">\(L_{ \norm{ \oparg } } \leq 1 \text{.}\)</span> Thus <a href="section-notions-of-metric-continuity.html#lemma-lipschitz-continuity-and-composition" class="xref" data-knowl="./knowl/xref/lemma-lipschitz-continuity-and-composition.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 3.5.22: Lipschitz continuity and composition">Lemma 3.5.22 Lipschitz continuity and composition</a> implies that the composition <span class="process-math">\(\norm{ f } = \norm{ \oparg } \circ f \)</span> is Lipschitz continuous, with Lipschitz constant</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-norms-are-Lipschitz-continuous.html ./knowl/xref/lemma-lipschitz-continuity-and-composition.html" id="proposition-vector-arithmetic-and-lipschitz-continuity-3-1-3-1-6">
+\begin{equation*}
+L_{ \norm{ f } } = L_{ \norm{ \oparg } \circ f } \leq L_{ \norm{ \oparg } } L_{ f } \leq 1 L_{ f } = L_{ f }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-vector-arithmetic-and-lipschitz-continuity-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#proposition-vector-arithmetic-and-lipschitz-continuity-3-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.5.23.1"><a tabindex="-1" href="#proposition-vector-arithmetic-and-lipschitz-continuity-3" title="Copy heading and permalink for Proof 3.5.23.1" aria-label="Copy heading and permalink for Proof 3.5.23.1">🔗</a></div>
+</article></details>
+<section class="conclusion" id="subsection-even-stronger-forms-of-metric-continuity-16">
+<div class="para" id="subsection-even-stronger-forms-of-metric-continuity-16-1">You will have several opportunities to explore applications of Lipschitz continuity in the problems for both this section and <a href="section-completeness-and-compactness.html" class="internal" title="Section 3.6: Completeness and Compactness">Section 3.6 Completeness and Compactness</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-even-stronger-forms-of-metric-continuity-16-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.5.3: Even Stronger Forms of Metric Continuity"><a tabindex="-1" href="#subsection-even-stronger-forms-of-metric-continuity" title="Copy heading and permalink for Subsection 3.5.3: Even Stronger Forms of Metric Continuity" aria-label="Copy heading and permalink for Subsection 3.5.3: Even Stronger Forms of Metric Continuity">🔗</a></div>
 </section>
 <section class="conclusion" id="section-notions-of-metric-continuity-6">
-<div class="para" id="section-notions-of-metric-continuity-6-1">Text after the last subsection.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-notions-of-metric-continuity-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="section-notions-of-metric-continuity-6-1">In this section, we have examined several nonequivalent notions of continuity for maps between metric spaces. In the next and final section of this chapter, we will introduce the notions of <dfn class="terminology">completeness</dfn> and <dfn class="terminology">compactness</dfn> for metric spaces, which both have to do with the convergence of sequences which morally should have a limit, but might not.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-notions-of-metric-continuity-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="exercises" id="exercises-notions-of-metric-continuity">
 <h3 class="heading hide-type">
@@ -1708,8 +1985,68 @@ f \of{ U } \amp \subseteq f \of{ \bigcup_{ k = 1 }^{ n }{ \mB_{ \delta } \of{ x_
 <section class="introduction" id="exercises-notions-of-metric-continuity-2">
 <div class="para" id="exercises-notions-of-metric-continuity-2-1">The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-notions-of-metric-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="exercises-notions-of-metric-continuity-3">
-<div class="para" id="exercises-notions-of-metric-continuity-3-1">Short answers and/or in-depth solutions to these exercises are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-notions-of-metric-continuity-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="exercisegroup" id="exercise-continuity-at-a-point">
+<h4 class="heading"><span class="title">Continuity at a point.</span></h4>
+<div class="introduction" id="exercise-continuity-at-a-point-2">
+<div class="para" id="exercise-continuity-at-a-point-2-1">Determine whether or not the given map between metric spaces is continuous at the given point.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-continuity-at-a-point-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-continuity-at-a-point-3"><h5 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercise-continuity-at-a-point-3-1-1">Let <span class="process-math">\(f \colon \R \to \R \)</span> be the linear function defined by the formula <span class="process-math">\(f \of{ x } = 3 x - 1 \text{.}\)</span> Determine whether or not <span class="process-math">\(f \)</span> is continuous at <span class="process-math">\(2 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-continuity-at-a-point-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.5.4.1"><a tabindex="-1" href="#exercise-continuity-at-a-point-3" title="Copy heading and permalink for Exercise 3.5.4.1" aria-label="Copy heading and permalink for Exercise 3.5.4.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-continuity-at-a-point-4"><h5 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercise-continuity-at-a-point-4-1-1">Let <span class="process-math">\(g \colon \R \to \R \)</span> be the linear function defined by the formula <span class="process-math">\(f \of{ y } = 2 y^{ 2 } - 1 \text{.}\)</span> Determine whether or not <span class="process-math">\(g \)</span> is continuous at <span class="process-math">\(4 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-continuity-at-a-point-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.5.4.2"><a tabindex="-1" href="#exercise-continuity-at-a-point-4" title="Copy heading and permalink for Exercise 3.5.4.2" aria-label="Copy heading and permalink for Exercise 3.5.4.2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-continuity-at-a-point-5"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercise-continuity-at-a-point-5-1-1">Let <span class="process-math">\(h \colon \clopint{ 0 }{ \infty } \to \R \)</span> be the linear function defined by the formula <span class="process-math">\(h \of{ z } = \sqrt{ z } \text{.}\)</span> Determine whether or not <span class="process-math">\(h \)</span> is continuous at <span class="process-math">\(1 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-continuity-at-a-point-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.5.4.3"><a tabindex="-1" href="#exercise-continuity-at-a-point-5" title="Copy heading and permalink for Exercise 3.5.4.3" aria-label="Copy heading and permalink for Exercise 3.5.4.3">🔗</a></div>
+</article>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise Group 3.5.4.1–3: Continuity at a point"><a tabindex="-1" href="#exercise-continuity-at-a-point" title="Copy heading and permalink for Exercise Group 3.5.4.1–3: Continuity at a point" aria-label="Copy heading and permalink for Exercise Group 3.5.4.1–3: Continuity at a point">🔗</a></div>
+</div>
+<article class="exercise exercise-like" id="exercise-uniform-and-lipschitz-continuity"><h4 class="heading">
+<span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uniform and Lipschitz continuity.</span>
+</h4>
+<div class="introduction" id="exercise-uniform-and-lipschitz-continuity-2">
+<div class="para logical" id="exercise-uniform-and-lipschitz-continuity-2-1">
+<div class="para">Let <span class="process-math">\(-\infty \lt a \lt b \lt \infty \)</span> be real numbers, and consider the real-valued function <span class="process-math">\(f \colon \clint{ a }{ b } \to \R \)</span> defined by the formula</div>
+<div class="displaymath process-math" id="exercise-uniform-and-lipschitz-continuity-2-1-3">
+\begin{equation*}
+f \of{ x } = x^{ 3 }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="exercise-uniform-and-lipschitz-continuity-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="exercise-uniform-and-lipschitz-continuity-3-1-1">Verify that <span class="process-math">\(f \)</span> is not uniformly continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.5.4.4.a"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity-3" title="Copy heading and permalink for Task 3.5.4.4.a" aria-label="Copy heading and permalink for Task 3.5.4.4.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="exercise-uniform-and-lipschitz-continuity-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="exercise-uniform-and-lipschitz-continuity-4-1-1">Without appealing to <a href="section-notions-of-metric-continuity.html#proposition-lipschitz-continuity-implies-uniform-continuity" class="xref" data-knowl="./knowl/xref/proposition-lipschitz-continuity-implies-uniform-continuity.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.5.20: Lipschitz continuity implies uniform continuity">Proposition 3.5.20 Lipschitz continuity implies uniform continuity</a>, verify that <span class="process-math">\(f \)</span> is not Lipschitz continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.5.4.4.b"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity-4" title="Copy heading and permalink for Task 3.5.4.4.b" aria-label="Copy heading and permalink for Task 3.5.4.4.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="exercise-uniform-and-lipschitz-continuity-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="exercise-uniform-and-lipschitz-continuity-5-1-1">Verify that the restriction of <span class="process-math">\(f \)</span> to a closed interval <span class="process-math">\(\clint{ a }{ b } \subsetneq \R \)</span> is uniformly continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.5.4.4.c"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity-5" title="Copy heading and permalink for Task 3.5.4.4.c" aria-label="Copy heading and permalink for Task 3.5.4.4.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="exercise-uniform-and-lipschitz-continuity-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="exercise-uniform-and-lipschitz-continuity-6-1-1">Verify that the restriction of <span class="process-math">\(f \)</span> to a closed interval <span class="process-math">\(\clint{ a }{ b } \subsetneq \R \)</span> is Lipschitz continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.5.4.4.d"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity-6" title="Copy heading and permalink for Task 3.5.4.4.d" aria-label="Copy heading and permalink for Task 3.5.4.4.d">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercise 3.5.4.4: Uniform and Lipschitz continuity"><a tabindex="-1" href="#exercise-uniform-and-lipschitz-continuity" title="Copy heading and permalink for Exercise 3.5.4.4: Uniform and Lipschitz continuity" aria-label="Copy heading and permalink for Exercise 3.5.4.4: Uniform and Lipschitz continuity">🔗</a></div>
+</article>
+<section class="conclusion" id="exercises-notions-of-metric-continuity-5">
+<div class="para" id="exercises-notions-of-metric-continuity-5-1">Short answers and/or in-depth solutions to these exercises are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-notions-of-metric-continuity-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><div class="autopermalink" aria-hidden="true" data-description="Exercises 3.5.4: Exercises"><a tabindex="-1" href="#exercises-notions-of-metric-continuity" title="Copy heading and permalink for Exercises 3.5.4: Exercises" aria-label="Copy heading and permalink for Exercises 3.5.4: Exercises">🔗</a></div>
 </section>
 <section class="reading-questions" id="problems-notions-of-metric-continuity">
@@ -1719,8 +2056,82 @@ f \of{ U } \amp \subseteq f \of{ \bigcup_{ k = 1 }^{ n }{ \mB_{ \delta } \of{ x_
 <section class="introduction" id="problems-notions-of-metric-continuity-2">
 <div class="para" id="problems-notions-of-metric-continuity-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-notions-of-metric-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="problems-notions-of-metric-continuity-3">
-<div class="para" id="problems-notions-of-metric-continuity-3-1">In-depth solutions to these problems are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-notions-of-metric-continuity-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="exercise exercise-like" id="problem-continuity-of-rational-functions"><h4 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Continuity of rational functions.</span>
+</h4>
+<article class="task exercise-like" id="problem-continuity-of-rational-functions-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="problem-continuity-of-rational-functions-2-1-1">Prove using one or more characterizations of continuity that the real-valued function <span class="process-math">\(f \colon \R \to \R \)</span> defined by the formula <span class="process-math">\(f \of{ x } = x \)</span> is continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-continuity-of-rational-functions-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.5.5.1.a"><a tabindex="-1" href="#problem-continuity-of-rational-functions-2" title="Copy heading and permalink for Task 3.5.5.1.a" aria-label="Copy heading and permalink for Task 3.5.5.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="problem-continuity-of-rational-functions-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="problem-continuity-of-rational-functions-3-1-1">Argue that any polynomial function is continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-continuity-of-rational-functions-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.5.5.1.b"><a tabindex="-1" href="#problem-continuity-of-rational-functions-3" title="Copy heading and permalink for Task 3.5.5.1.b" aria-label="Copy heading and permalink for Task 3.5.5.1.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="problem-continuity-of-rational-functions-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="problem-continuity-of-rational-functions-4-1-1">Argue that any rational function is continuous on its implicit domain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-continuity-of-rational-functions-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.5.5.1.c"><a tabindex="-1" href="#problem-continuity-of-rational-functions-4" title="Copy heading and permalink for Task 3.5.5.1.c" aria-label="Copy heading and permalink for Task 3.5.5.1.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Problem 3.5.5.1: Continuity of rational functions"><a tabindex="-1" href="#problem-continuity-of-rational-functions" title="Copy heading and permalink for Problem 3.5.5.1: Continuity of rational functions" aria-label="Copy heading and permalink for Problem 3.5.5.1: Continuity of rational functions">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="problem-uniform-limits-of-uniformly-continuous-maps"><h4 class="heading">
+<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uniform limits of uniformly continuous maps.</span>
+</h4>
+<div class="para" id="problem-uniform-limits-of-uniformly-continuous-maps-2-1">Let <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of uniformly continuous maps <span class="process-math">\(f_{ n } \colon X \to Y \)</span> from a metric space <span class="process-math">\(\of{ X , \rho_{ X } } \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho_{ Y } } \text{.}\)</span> Prove that if <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> converges uniformly, the uniform limit is also uniformly continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-uniform-limits-of-uniformly-continuous-maps-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Problem 3.5.5.2: Uniform limits of uniformly continuous maps"><a tabindex="-1" href="#problem-uniform-limits-of-uniformly-continuous-maps" title="Copy heading and permalink for Problem 3.5.5.2: Uniform limits of uniformly continuous maps" aria-label="Copy heading and permalink for Problem 3.5.5.2: Uniform limits of uniformly continuous maps">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="problem-continuous-pointwise-limits-of-discontinuous-maps"><h4 class="heading">
+<span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Continuous pointwise limits of discontinuous maps.</span>
+</h4>
+<div class="introduction" id="problem-continuous-pointwise-limits-of-discontinuous-maps-2">
+<div class="para" id="problem-continuous-pointwise-limits-of-discontinuous-maps-2-1">We have seen in <a href="section-notions-of-metric-continuity.html#theorem-uniform-limits-of-continuous-maps" class="xref" data-knowl="./knowl/xref/theorem-uniform-limits-of-continuous-maps.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.5.9: Uniform limits of continuous maps">Theorem 3.5.9 Uniform limits of continuous maps</a> and <a href="section-notions-of-metric-continuity.html#problem-uniform-limits-of-uniformly-continuous-maps" class="xref" data-knowl="./knowl/xref/problem-uniform-limits-of-uniformly-continuous-maps.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 3.5.5.2: Uniform limits of uniformly continuous maps">Problem 3.5.5.2 Uniform limits of uniformly continuous maps</a> that uniform limits preserve continuity and uniform continuity. In this problem, we will construct counterexamples to the converses of these results.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-continuous-pointwise-limits-of-discontinuous-maps-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="problem-continuous-pointwise-limits-of-discontinuous-maps-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="problem-continuous-pointwise-limits-of-discontinuous-maps-3-1-1">Give an example of a sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> of continuous maps <span class="process-math">\(f_{ n } \colon X \to Y \)</span> from a metric space <span class="process-math">\(X \)</span> to a metric space <span class="process-math">\(Y \)</span> which converges pointwise but not uniformly to a continuous map <span class="process-math">\(f \colon X \to Y \)</span> from <span class="process-math">\(X \)</span> to <span class="process-math">\(Y \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-continuous-pointwise-limits-of-discontinuous-maps-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.5.5.3.a"><a tabindex="-1" href="#problem-continuous-pointwise-limits-of-discontinuous-maps-3" title="Copy heading and permalink for Task 3.5.5.3.a" aria-label="Copy heading and permalink for Task 3.5.5.3.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="problem-continuous-pointwise-limits-of-discontinuous-maps-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="problem-continuous-pointwise-limits-of-discontinuous-maps-4-1-1">Give an example of a sequence <span class="process-math">\(\of{ g_{ n } }_{ n = 0 }^{ \infty } \)</span> of discontinuous maps <span class="process-math">\(g_{ n } \colon X \to Y \)</span> from a metric space <span class="process-math">\(X \)</span> to a metric space <span class="process-math">\(Y \)</span> which converges uniformly to a continuous map <span class="process-math">\(g \colon X \to Y \)</span> from <span class="process-math">\(X \)</span> to <span class="process-math">\(Y \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-continuous-pointwise-limits-of-discontinuous-maps-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.5.5.3.b"><a tabindex="-1" href="#problem-continuous-pointwise-limits-of-discontinuous-maps-4" title="Copy heading and permalink for Task 3.5.5.3.b" aria-label="Copy heading and permalink for Task 3.5.5.3.b">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Problem 3.5.5.3: Continuous pointwise limits of discontinuous maps"><a tabindex="-1" href="#problem-continuous-pointwise-limits-of-discontinuous-maps" title="Copy heading and permalink for Problem 3.5.5.3: Continuous pointwise limits of discontinuous maps" aria-label="Copy heading and permalink for Problem 3.5.5.3: Continuous pointwise limits of discontinuous maps">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="problem-uniform-limits-of-lipschitz-continuous-maps"><h4 class="heading">
+<span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uniform limits of Lipschitz continuous maps.</span>
+</h4>
+<div class="introduction" id="problem-uniform-limits-of-lipschitz-continuous-maps-2">
+<div class="para logical" id="problem-uniform-limits-of-lipschitz-continuous-maps-2-1">
+<div class="para">Consider the sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 1 }^{ \infty } \)</span> of real-valued functions <span class="process-math">\(f_{ n } \colon \clopint{ 0 }{ \infty } \to \R \)</span> defined by the formula</div>
+<div class="displaymath process-math" id="problem-uniform-limits-of-lipschitz-continuous-maps-2-1-3">
+\begin{equation*}
+f_{ n } \of{ x } = \sqrt{ x + \frac{ 1 }{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-uniform-limits-of-lipschitz-continuous-maps-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="problem-uniform-limits-of-lipschitz-continuous-maps-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="problem-uniform-limits-of-lipschitz-continuous-maps-3-1-1">Show that <span class="process-math">\(f_{ n } \)</span> is Lipschitz continuous for each index <span class="process-math">\(n \geq 1 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-uniform-limits-of-lipschitz-continuous-maps-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.5.5.4.a"><a tabindex="-1" href="#problem-uniform-limits-of-lipschitz-continuous-maps-3" title="Copy heading and permalink for Task 3.5.5.4.a" aria-label="Copy heading and permalink for Task 3.5.5.4.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="problem-uniform-limits-of-lipschitz-continuous-maps-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="problem-uniform-limits-of-lipschitz-continuous-maps-4-1-1">Show that the sequence <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> converges uniformly, but the uniform limit is not Lipschitz continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-uniform-limits-of-lipschitz-continuous-maps-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.5.5.4.b"><a tabindex="-1" href="#problem-uniform-limits-of-lipschitz-continuous-maps-4" title="Copy heading and permalink for Task 3.5.5.4.b" aria-label="Copy heading and permalink for Task 3.5.5.4.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="problem-uniform-limits-of-lipschitz-continuous-maps-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="problem-uniform-limits-of-lipschitz-continuous-maps-5-1-1">Prove that the limit of a uniformly convergent sequence <span class="process-math">\(\of{ g_{ n } }_{ n = 0 }^{ \infty } \)</span> of Lipschitz continuous maps <span class="process-math">\(g_{ n } \colon X \to Y \)</span> from a metric space <span class="process-math">\(\of{ X , \rho_{ X } } \)</span> to a metric space <span class="process-math">\(\of{ Y , \rho_{ Y } } \)</span> is Lipschitz continuous if the sequence <span class="process-math">\(\of{ L_{ g_{ n } } }_{ n = 0 }^{ \infty } \)</span> of Lipschitz constants <span class="process-math">\(L_{ g_{ n } } \)</span> is bounded from above.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-uniform-limits-of-lipschitz-continuous-maps-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.5.5.4.c"><a tabindex="-1" href="#problem-uniform-limits-of-lipschitz-continuous-maps-5" title="Copy heading and permalink for Task 3.5.5.4.c" aria-label="Copy heading and permalink for Task 3.5.5.4.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Problem 3.5.5.4: Uniform limits of Lipschitz continuous maps"><a tabindex="-1" href="#problem-uniform-limits-of-lipschitz-continuous-maps" title="Copy heading and permalink for Problem 3.5.5.4: Uniform limits of Lipschitz continuous maps" aria-label="Copy heading and permalink for Problem 3.5.5.4: Uniform limits of Lipschitz continuous maps">🔗</a></div>
+</article>
+<section class="conclusion" id="problems-notions-of-metric-continuity-7">
+<div class="para" id="problems-notions-of-metric-continuity-7-1">In-depth solutions to these problems are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-notions-of-metric-continuity-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 3.5.5: Problems"><a tabindex="-1" href="#problems-notions-of-metric-continuity" title="Copy heading and permalink for Reading Questions 3.5.5: Problems" aria-label="Copy heading and permalink for Reading Questions 3.5.5: Problems">🔗</a></div>
 </section><div class="autopermalink" aria-hidden="true" data-description="Section 3.5: Notions of Metric Continuity"><a tabindex="-1" href="#section-notions-of-metric-continuity" title="Copy heading and permalink for Section 3.5: Notions of Metric Continuity" aria-label="Copy heading and permalink for Section 3.5: Notions of Metric Continuity">🔗</a></div>
 </section>

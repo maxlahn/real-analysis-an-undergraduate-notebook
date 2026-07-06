@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-interior-closure-and-boundary-of-complements" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Interior, closure, and boundary of complements
+  </title>
+  
+  <introduction>
+    <p>
+      Let <m> U \subseteq X </m> be a subset of a metric space <m> \of{ X , \rho } </m>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that <m> \Int \of{ X \setminus U } = X \setminus \Cl \of{ U } </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        Consider a point <m> x \in X </m>, and suppose that <m> x \in \Int \of{ X \setminus U } </m> is an interior point of the complement <m> X \setminus U </m>. Then <m> N = X \setminus U </m> is a neighborhood of <m> x </m>, and of course
+        
+        <md>
+          N \cap U = \of{ X \setminus U } \cap U = \emptyset
+        </md>.
+        
+        Thus <m> x \in X \setminus \Cl \of{ U } </m> is not a point of closure of <m> U </m>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> x \in X \setminus \Cl \of{ U } </m> is not a point of closure of <m> U </m>. Then <m> N \cap U = \emptyset </m> for some neighborhood <m> N </m> of <m> x </m> in <m> X </m>. In particular, <m> N \subseteq X \setminus U </m>. Since <m> N </m> is a neighborhood of <m> x </m> in <m> X </m>, so is <m> X \setminus U </m>, and so <m> x \in \Int \of{ X \setminus U } </m> is an interior point of <m> X \setminus U </m>.
+      </p>
+      
+      <p>
+        In summary, we have shown that <m> x \in \Int \of{ X \setminus U } </m> is an interior point of the complement <m> X \setminus U </m> if and only if <m> x \in X \setminus \Cl \of{ U } </m> is not a point of closure of <m> U </m>. Thus <m> \Int \of{ X \setminus U } = X \setminus \Cl \of{ U } </m>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that <m> \Cl \of{ X \setminus U } = X \setminus \Int \of{ U } </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        Applying the argument in (a) to the complement <m> X \setminus U </m>, we observe that
+        
+        <md>
+          <mrow>
+            \Cl \of{ X \setminus U } \amp = X \setminus \of{ X \setminus \Cl \of{ X \setminus U } }
+          </mrow>
+          
+          <mrow>
+            \amp = X \setminus \Int \of{ X \setminus \of{ X \setminus U } } = X \setminus \Int \of{ U }
+          </mrow>
+        </md>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that <m> \Bd \of{ X \setminus U } = \Bd \of{ U } = \Cl \of{ U } \cap \Cl \of{ X \setminus U } </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        Consider a point <m> x \in X </m>, and suppose first that <m> x \in \Bd \of{ U } </m> is a boundary point of <m> U </m>. Then <m> N \cap U \neq \emptyset </m> for any neighborhood <m> N </m> of <m> x </m> in <m> X </m>, and so <m> x \in \Cl \of{ U } </m> is a point of closure of <m> U </m> in <m> x </m>. On the other hand,
+        
+        <md>
+          N \cap \of{ X \setminus U } = N \setminus U \neq \emptyset
+        </md>,
+        
+        and so <m> x \in \Cl \of{ X \setminus U } </m> is a point of closure of the complement <m> X \setminus U </m>. Thus <m> x \in \Cl \of{ U } \cap \Cl \of{ X \setminus U } </m>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> x \in \Cl \of{ U } \cap \Cl \of{ X \setminus U } </m>, and let <m> N </m> be a neighborhood of <m> x </m> in <m> X </m>. Since <m> x \in \Cl \of{ U } </m> is a point of closure of <m> U </m>, <m> N \cap U \neq \emptyset </m>. Moreover, since <m> x \in \Cl \of{ X \setminus U } </m> is a point of closure of the complement <m> X \setminus U </m>,
+        
+        <md>
+          N \setminus U = N \cap \of{ X \setminus U } \neq \emptyset
+        </md>.
+        
+        Thus <m> x \in \Bd \of{ U } </m> is a boundary point of <m> U </m>.
+      </p>
+      
+      <p>
+        In summary, we have shown that <m> x \in \Bd \of{ U } </m> is a boundary point of <m> U </m> if and only if <m> x \in \Cl \of{ U } \cap \Cl \of{ X \setminus U } </m> is a point of closure of both <m> U </m> and its complement <m> X \setminus U </m>. Thus <m> \Bd \of{ U } = \Cl \of{ U } \cap \Cl \of{ X \setminus U } </m>. We observe that this implies that
+        
+        <md>
+          <mrow>
+            \Bd \of{ U } \amp = \Cl \of{ U } \cap \Cl \of{ X \setminus U } 
+          </mrow>
+          
+          <mrow>
+            \amp = \Cl \of{ X \setminus U } \cap \Cl \of{ X \setminus \of{ X \setminus U } } = \Bd \of{ X \setminus U }
+          </mrow>
+        </md>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that <m> \Bd \of{ U } = \Cl \of{ U } \setminus \Int \of{ U } </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        Applying the arguments in (b) and (c), we observe that
+        
+        <md>
+          <mrow>
+            \Bd \of{ U } \amp = \Cl \of{ U } \cap \Cl \of{ X \setminus U }
+          </mrow>
+          
+          <mrow>
+            \amp = \Cl \of{ U } \cap \of{ X \setminus \Int \of{ U } } = \Cl \of{ U } \setminus \Int \of{ U }
+          </mrow>
+        </md>.
+      </p>
+    </solution> -->
+  </task>
+</exercise>

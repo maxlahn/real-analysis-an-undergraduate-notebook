@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-bounded-and-unbounded-subsets-of-metric-spaces" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Bounded and unbounded subsets of metric spaces
+  </title>
+  
+  <introduction>
+    <p>
+      Let
+      
+      <md>
+        U = \opint{ 0 }{ 1 } = \setmid{ x \in \R }{ 0 \lt x \lt 1 }
+      </md>
+      
+      be the open interval between <m> 0 </m> and <m> 1 </m>. Determine whether <m> U </m> is a bounded or unbounded subset of the given metric space.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Determine whether <m> U </m> is bounded or unbounded in the metric space <m> \of{ \R , d } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> U </m> is bounded in <m> \R </m>
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Determine whether <m> U </m> is bounded or unbounded in the subspace <m> \of{ \opint{ 0 }{ \infty } , d } </m> of the metric space <m> \of{ \R , d } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> U </m> is bounded in <m> \opint{ 0 }{ \infty } </m>
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Determine whether <m> U </m> is bounded or unbounded in the metric space <m> \of{ \opint{ 0 }{ \infty } , \rho } </m>, where <m> \rho </m> is the metric on <m> \opint{ 0 }{ \infty } </m> defined by the formula
+        
+        <md>
+          \rho \of{ x , y } = \abs{ \ln \of{ \frac{ x }{ y } } }
+        </md>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> U </m> is unbounded in <m> \of{ \opint{ 0 }{ \infty } , \rho } </m>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Determine whether <m> U </m> is bounded or unbounded in the discrete metric space <m> \of{ \opint{ 0 }{ \infty } , \delta_{ \opint{ 0 }{ \infty } } } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> U </m> is bounded in <m> \of{ \opint{ 0 }{ \infty } , \delta_{ \opint{ 0 }{ \infty } } } </m>
+      </p>
+    </answer>
+  </exercise>
+</exercisegroup>

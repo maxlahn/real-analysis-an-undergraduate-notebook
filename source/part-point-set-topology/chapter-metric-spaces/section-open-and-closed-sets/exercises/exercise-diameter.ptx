@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-diameter" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Diameter
+  </title>
+  
+  <introduction>
+    <p>
+      Compute the diameter of the given subsets of metric spaces.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> A = \set{ 0 , 1 , 2 } </m>. Compute the diameter of <m> A </m> as a subset of the metric space <m> \of{ \R , d } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> \diam \of{ A } = 2 </m>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> B = \set{ 0 , 1 , 2 , 5 } </m>. Compute the diameter of <m> B </m> as a subset of the discrete metric space <m> \of{ \R , \delta_{ \R } } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> \diam \of{ B } = 1 </m>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let
+        
+        <md>
+          C = \set{ 0 , 1 , 2 } \cup \set{ 3 - \frac{ 1 }{ n } }_{ n = 1 }^{ \infty }
+        </md>.
+        
+        Compute the diameter of <m> C </m> as a subset of the metric space <m> \of{ \R , d } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> \diam \of{ C } = 4 </m>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let
+        
+        <md>
+          D = 3 \Z = \set{ 3 k \in \Z }{ k \in \Z }
+        </md>
+        
+        be the set of integers which are divisible by <m> 3 </m>. Compute the diameter of <m> D </m> as a subset of the metric space <m> \of{ \R , d } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> \diam \of{ D } = \infty </m>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> E = \set{ \pi } </m>. Compute the diameter of <m> E </m> as a subset of the metric space <m> \of{ \R , d } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> \diam \of{ E } = 0 </m>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> F = \set{ \pi } </m>. Compute the diameter of <m> F </m> as a subset of the discrete metric space <m> \of{ \R , \delta_{ X } } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> \diam \of{ F } = 0 </m>.
+      </p>
+    </answer>
+  </exercise>
+</exercisegroup>

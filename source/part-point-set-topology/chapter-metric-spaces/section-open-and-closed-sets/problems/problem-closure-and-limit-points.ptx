@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-closure-and-limit-points" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Closure and limit points
+  </title>
+  
+  <statement>
+    <p>
+      Let <m> U \subseteq X </m> be a subset of a metric space <m> \of{ X , \rho } </m>. Prove that <m> \Cl \of{ U } = U \cap U' </m>.
+    </p>
+  </statement>
+  
+  <hint>
+    <p>
+      Recall that the <term> derived set </term> <m> U' </m> of a subset <m> U \subseteq X </m> of a metric space <m> \of{ X , \rho } </m> is the set of all limit points of <m> U </m> in <m> X </m>.
+    </p>
+  </hint>
+  
+  <!-- <solution>
+    <p>
+      Consider a point <m> x \in X </m>. Suppose first that <m> x \in \Cl \of{ U } </m> is a point of closure of <m> U </m> in <m> X </m>. Either <m> x \in U </m>, or <m> x \notin U </m>. If <m> x \notin U </m>, then for each positive real number <m> \epsilon \gt 0 </m>, the metric open ball <m> \mB_{ \epsilon } \of{ x } </m> is a neighborhood of <m> x </m> in <m> X </m>, and so <m> \mB_{ \epsilon } \of{ x } \cap U \neq \emptyset </m>. Thus
+      
+      <md>
+        \rho \of{ u , x } \lt \epsilon
+      </md>
+      
+      for some point <m> u \in U </m>. Since <m> x \notin U </m>, we have <m> x \neq u </m>, and so <m> 0 \lt \rho \of{ u , x } \lt \epsilon </m>. Since this holds for all positive real numbers <m> \epsilon \gt 0 </m>, <m> x \in U' </m> is a limit point of <m> U </m>.
+    </p>
+    
+    <p>
+      Conversely, now suppose that <m> x \in U \cup U' </m>. If <m> x \in U </m>, then
+      
+      <md>
+        x = \lim_{ n \to \infty }{ x }
+      </md>
+      
+      is a limit of a constant sequence of points in <m> U </m>. If <m> x \in U' </m>, then <xref ref="proposition-sequential-characterization-of-limit-points"/> implies that
+      
+      <md>
+        x = \lim_{ n \to \infty }{ u_{ n } }
+      </md>
+      
+      is a limit of a sequence of points in <m> U </m>. In either case, there is a sequence <m> \of{ u_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> u_{ n } \in U </m> which converges to <m> x </m>.
+    </p>
+    
+    <p>
+      Let <m> N </m> be a neighborhood of <m> x </m> in <m> X </m>. Then <m> \mB_{ \epsilon } \of{ x } \subseteq N </m> for some positive real number <m> \epsilon \gt 0 </m>. Since
+      
+      <md>
+        \lim_{ n \to \infty }{ u_{ n } } = x
+      </md>,
+      
+      there is a natural number <m> n_{ \epsilon } \in \N </m> so that <m> \rho \of{ u_{ n } , x } \lt \epsilon </m> for all indices <m> n \geq n_{ \epsilon } </m>. We conclude that
+      
+      <md>
+        u_{ n_{ \epsilon } } \in \mB_{ \epsilon } \of{ x } \subseteq N
+      </md>,
+      
+      and so <m> x \in \Cl \of{ U } </m> is a point of closure of <m> U </m>.
+    </p>
+    
+    <p>
+      In summary, we have shown that <m> x \in \Cl \of{ U } </m> is a point of closure of <m> U </m> if and only if either <m> x \in U </m> is an element of <m> U </m> or <m> x \in U' </m> is a limit point of <m> U </m> (or both). Thus <m> \Cl \of{ U } = U \cup U' </m>.
+    </p>
+  </solution> -->
+</exercise>

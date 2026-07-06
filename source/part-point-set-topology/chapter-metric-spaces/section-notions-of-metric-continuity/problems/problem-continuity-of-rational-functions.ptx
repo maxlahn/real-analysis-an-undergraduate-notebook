@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-continuity-of-rational-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Continuity of rational functions
+  </title>
+  
+  <task>
+    <statement>
+      <p>
+        Prove using one or more characterizations of continuity that the real-valued function <m> f \colon \R \to \R </m> defined by the formula <m> f \of{ x } = x </m> is continuous.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        Let <m> V \subseteq \R </m> be an open subset of the real line <m> \R </m>, and note that
+        
+        <md>
+          f^{ -1 } \of{ V } = \setmid{ x \in \R }{ f \of{ x } \in V } = \setmid{ x \in \R }{ x \in V } = V
+        </md>
+        
+        is open in <m> \R </m>. Since the pre-image of any open subset of <m> \R </m> is open in <m> \R </m>, <m> f </m> is continuous.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Argue that any polynomial function is continuous.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        A polynomial function is by definition a linear combination of finite products of <m> f </m> with itself, and so is continuous by (a) above and <xref ref="proposition-vector-arithmetic-of-continuous-maps"/>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Argue that any rational function is continuous on its implicit domain.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        A rational function is by definition a fraction of polynomial functions, and so is continuous by (b) above and <xref ref="corollary-arithmetic-of-continuous-functions"/>.
+      </p>
+    </solution> -->
+  </task>
+</exercise>

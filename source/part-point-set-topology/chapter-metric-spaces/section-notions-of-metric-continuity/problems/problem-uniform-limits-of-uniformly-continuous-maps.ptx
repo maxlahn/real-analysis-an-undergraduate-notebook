@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-uniform-limits-of-uniformly-continuous-maps" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Uniform limits of uniformly continuous maps
+  </title>
+  
+  <statement>
+    <p>
+      Let <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of uniformly continuous maps <m> f_{ n } \colon X \to Y </m> from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m>. Prove that if <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges uniformly, the uniform limit is also uniformly continuous.
+    </p>
+  </statement>
+  
+  <!-- <solution>
+    <p>
+      Let <m> f = \uniflim_{ n \to \infty }{ f_{ n } } </m> be the uniform limit of the sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m>, and consider a positive real number <m> \epsilon \gt 0 </m>. Since <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges uniformly to <m> f </m>, there is a natural number <m> n_{ \epsilon } \in \N </m> so that
+      
+      <md>
+        \rho_{ Y } \of{ f_{ n } \of{ x } , f \of{ x } } \lt \frac{ \epsilon }{ 3 }
+      </md>
+      
+      for all indices <m> n \geq n_{ \epsilon } </m> and points <m> x \in X </m>. Fix one such index <m> n \geq n_{ \epsilon } </m>; for example, we may choose <m> n = n_{ \epsilon } </m>. Since <m> f_{ n } </m> is uniformly continuous, there is a positive real number <m> \delta \gt 0 </m> so that
+      
+      <md>
+        \rho_{ Y } \of{ f_{ n } \of{ x_{ 1 } } , f_{ n } \of{ x_{ 2 } } } \lt \frac{ \epsilon }{ 3 }
+      </md>
+      
+      for all points <m> x_{ 1 } , x_{ 2 } \in X </m> so that <m> \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } \lt \delta </m>. In particular, we observe that
+      
+      <md>
+        <mrow>
+          \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \amp \leq \rho_{ Y } \of{ f \of{ x_{ 1 } } , f_{ n } \of{ x_{ 1 } } } + \rho_{ Y } \of{ f_{ n } \of{ x_{ 1 } } , f_{ n } \of{ x_{ 2 } } } + \rho_{ Y } \of{ f_{ n } \of{ x_{ 2 } } , f \of{ x_{ 2 } } }
+        </mrow>
+        
+        <mrow>
+          \amp \lt \frac{ \epsilon }{ 3 } + \frac{ \epsilon }{ 3 } + \frac{ \epsilon }{ 3 } = \epsilon
+        </mrow>
+      </md>
+      
+      for all points <m> x_{ 1 } , x_{ 2 } \in X </m> so that <m> \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } \lt \delta </m>. Thus <m> f </m> is uniformly continuous.
+    </p>
+  </solution> -->
+</exercise>

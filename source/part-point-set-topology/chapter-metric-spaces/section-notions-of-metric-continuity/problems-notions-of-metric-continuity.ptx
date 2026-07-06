@@ -11,6 +11,14 @@
     </p>
   </introduction>
   
+  <xi:include href="./problems/problem-continuity-of-rational-functions.ptx"/>
+  
+  <xi:include href="./problems/problem-uniform-limits-of-uniformly-continuous-maps.ptx"/>
+  
+  <xi:include href="./problems/problem-continuous-pointwise-limits-of-discontinuous-maps.ptx"/>
+  
+  <xi:include href="./problems/problem-uniform-limits-of-lipschitz-continuous-maps.ptx"/>
+  
   <!-- <xi:include href="./problems/problem-TITLE.ptx"/> -->
 
   <conclusion>

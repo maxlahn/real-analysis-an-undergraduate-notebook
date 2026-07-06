@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-continuity-at-a-point" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Continuity at a point
+  </title>
+  
+  <introduction>
+    <p>
+      Determine whether or not the given map between metric spaces is continuous at the given point.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> f \colon \R \to \R </m> be the linear function defined by the formula <m> f \of{ x } = 3 x - 1 </m>. Determine whether or not <m> f </m> is continuous at <m> 2 </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> f </m> is continuous at <m> 2 </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        Let <m> \epsilon \gt 0 </m> be a positive real number, and let <m> \delta = \frac{ \epsilon }{ 3 } \gt 0 </m>. We observe that
+        
+        <md>
+          <mrow>
+            d \of{ f \of{ x } , f \of{ 2 } } \amp = \abs{ \of{ 3 x - 1 } - \of{ 3 \of{ 2 } - 1 } }
+          </mrow>
+          
+          <mrow>
+            \amp = \abs{ 3 x - 6 } = 3 \abs{ x - 2 } = 3 d \of{ x , 2 } \lt 3 \delta = \epsilon
+          </mrow>
+        </md>
+        
+        for all points <m> x \in \R </m> so that <m> d \of{ x , 2 } \lt \delta </m>. Thus <m> f </m> is continuous at <m> 2 </m>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> g \colon \R \to \R </m> be the linear function defined by the formula <m> f \of{ y } = 2 y^{ 2 } - 1 </m>. Determine whether or not <m> g </m> is continuous at <m> 4 </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> g </m> is continuous at <m> 4 </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        Let <m> \epsilon \gt 0 </m> be a positive real number, and let
+        
+        <md>
+          \delta = \max \of{ \set{ 1 , \frac{ \epsilon }{ 18 } } } \gt 0
+        </md>.
+        
+        We observe that
+        
+        <md>
+          <mrow>
+            d \of{ g \of{ y } , g \of{ 4 } } \amp = \abs{ \of{ 2 y^{ 2 } - 1 } - \of{ 2 \of{ 4 }^{ 2 } - 1 } } = \abs{ 2 y^{ 2 } - 32 } = 2 \abs{ y + 4 } \cdot \abs{ y - 4 }
+          </mrow>
+          
+          <mrow>
+            \amp = 2 \abs{ y + 4 } d \of{ y , 4 } \lt 2 \cdot 9 \delta \lt \epsilon
+          </mrow>
+        </md>
+        
+        for all points <m> y \in \R </m> so that <m> d \of{ y , 4 } \lt \delta </m>. Thus <m> g </m> is continuous at <m> 4 </m>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> h \colon \clopint{ 0 }{ \infty } \to \R </m> be the linear function defined by the formula <m> h \of{ z } = \sqrt{ z } </m>. Determine whether or not <m> h </m> is continuous at <m> 1 </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> h </m> is continuous at <m> 4 </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        Let <m> \epsilon \gt 0 </m> be a positive real number, and let <m> \delta = \epsilon </m>. We observe that
+        
+        <md>
+          d \of{ h \of{ z } , h \of{ 1 } } = \abs{ \sqrt{ z } - \sqrt{ 1 } } = \abs{ \frac{ z - 1 }{ \sqrt{ z } + 1 } } \lt \frac{ \delta }{ 1 } = \epsilon
+        </md>
+        
+        for all points <m> z \in \R </m> so that <m> d \of{ z , 1 } \lt \delta </m>. Thus <m> h </m> is continuous at <m> 1 </m>.
+      </p>
+    </solution>
+  </exercise>
+</exercisegroup>

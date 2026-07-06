@@ -19,7 +19,7 @@
 
   <conclusion>
     <p>
-      Text after the last subsection.
+      In this section, we have examined several nonequivalent notions of continuity for maps between metric spaces. In the next and final section of this chapter, we will introduce the notions of <term> completeness </term> and <term> compactness </term> for metric spaces, which both have to do with the convergence of sequences which morally should have a limit, but might not.
     </p>
   </conclusion>
 

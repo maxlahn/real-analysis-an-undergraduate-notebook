@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-continuous-pointwise-limits-of-discontinuous-maps" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Continuous pointwise limits of discontinuous maps
+  </title>
+  
+  <introduction>
+    <p>
+      We have seen in <xref ref="theorem-uniform-limits-of-continuous-maps"/> and <xref ref="problem-uniform-limits-of-uniformly-continuous-maps"/> that uniform limits preserve continuity and uniform continuity. In this problem, we will construct counterexamples to the converses of these results.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Give an example of a sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> of continuous maps <m> f_{ n } \colon X \to Y </m> from a metric space <m> X </m> to a metric space <m> Y </m> which converges pointwise but not uniformly to a continuous map <m> f \colon X \to Y </m> from <m> X </m> to <m> Y </m>.
+      </p>
+    </statement>
+    
+    <!-- <answer>
+      <p>
+        For each index <m> n \in \N </m>, let <m> f_{ n } \colon \R \to \R </m> be the real-valued function defined by the formula
+        
+        <md>
+          f_{ n } \of{ x } = \frac{ x^{ 2 } }{ 2^{ n } }
+        </md>.
+        
+        Moreover, let <m> f \colon \R \to \R </m> be the constant real-valued function defined by the formula <m> f \of{ x } = 0 </m>.
+      </p>
+    </answer> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Give an example of a sequence <m> \of{ g_{ n } }_{ n = 0 }^{ \infty } </m> of discontinuous maps <m> g_{ n } \colon X \to Y </m> from a metric space <m> X </m> to a metric space <m> Y </m> which converges uniformly to a continuous map <m> g \colon X \to Y </m> from <m> X </m> to <m> Y </m>.
+      </p>
+    </statement>
+    
+    <!-- <answer>
+      <p>
+        For each index <m> n \in \N </m>, let <m> g_{ n } \colon \R \to \R </m> be the real-valued function defined piecewise by the formula
+        
+        <md>
+          f_{ n } \of{ x } =
+            \begin{cases}
+              \frac{ 1 }{ 2^{ n } } \amp x = 0 \\
+              0 \amp x \neq 0
+            \end{cases}
+        </md>.
+        
+        Moreover, let <m> g \colon \R \to \R </m> be the constant real-valued function defined by the formula <m> f \of{ x } = 0 </m>.
+      </p>
+    </answer> -->
+  </task>
+</exercise>

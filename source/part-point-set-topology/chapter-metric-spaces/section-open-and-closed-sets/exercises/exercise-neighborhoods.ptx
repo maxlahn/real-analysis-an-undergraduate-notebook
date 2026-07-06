@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-neighborhoods" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Neighborhoods
+  </title>
+  
+  <introduction>
+    <p>
+      Determine whether or not the given set is a neighborhood of the given point.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let
+        
+        <md>
+          A = \opint{ 0 }{ 2 } = \setmid{ x \in \R }{ 0 \lt x \lt 2 }
+        </md>
+        
+        be the open interval between <m> 0 </m> and <m> 2 </m>. Determine whether or not <m> A </m> is a neighborhood of the point <m> 1 </m> in the metric space <m> \of{ \R , d } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> A </m> is a neighborhood of <m> 1 </m> in <m> \R </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        Since <m> A </m> contains the open ball
+        
+        <md>
+          <mrow>
+            \mB_{ 1 } \of{ 1 } \amp = \setmid{ x \in \R }{ \abs{ x - 1 } \lt 1 } = \setmid{ x \in \R }{ 0 \lt x \lt 2 }
+          </mrow>
+          
+          <mrow>
+            \amp = \opint{ 0 }{ 2 } = A
+          </mrow>
+        </md>
+        
+        of radius <m> 1 </m> and center <m> 1 </m>, <m> A </m> is a neighborhood of <m> 1 </m> in <m> \R </m>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let
+        
+        <md>
+          B = \clint{ 0 }{ 2 } = \setmid{ x \in \R }{ 0 \leq x \leq 2 }
+        </md>
+        
+        be the closed interval between <m> 0 </m> and <m> 2 </m>. Determine whether or not <m> B </m> is a neighborhood of the point <m> 1 </m> in the metric space <m> \of{ \R , d } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> B </m> is a neighborhood of <m> 1 </m> in <m> \R </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        Since <m> B </m> contains the open ball
+        
+        <md>
+          <mrow>
+            \mB_{ 1 } \of{ 1 } \amp = \setmid{ x \in \R }{ \abs{ x - 1 } \lt 1 } = \setmid{ x \in \R }{ 0 \lt x \lt 2 }
+          </mrow>
+          
+          <mrow>
+            \amp = \opint{ 0 }{ 2 } \subsetneq \clint{ 0 }{ 2 } = B
+          </mrow>
+        </md>
+        
+        of radius <m> 1 </m> and center <m> 1 </m>, <m> B </m> is a neighborhood of <m> 1 </m> in <m> \R </m>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let
+        
+        <md>
+          C = \clopint{ 0 }{ 2 } = \setmid{ x \in \R }{ 0 \leq x \lt 2 }
+        </md>
+        
+        be the half-closed, half-open interval between <m> 0 </m> and <m> 2 </m>. Determine whether or not <m> C </m> is a neighborhood of the point <m> 0 </m> in the metric space <m> \of{ \R , d } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> C </m> is not a neighborhood of <m> 0 </m> in <m> \R </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        We note that for any positive real number <m> r \gt 0 </m>, the open ball
+        
+        <md>
+          \mB_{ r } \of{ 0 } = \setmid{ x \in \R }{ \abs{ x - 0 } \lt r } = \setmid{ x \in \R }{ -r \lt x \lt r } = \opint{ -r }{ r }
+        </md>
+        
+        contains negative numbers. Thus any neighborhood of <m> 0 </m> in <m> \R </m> contains negative numbers. Since every element of <m> C </m> is non-negative, <m> C </m> is not a neighborhood of <m> 1 </m> in <m> \R </m>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let
+        
+        <md>
+          D = 2 \Z = \setmid{ 2 k \in \Z }{ k \in \Z } = \set{ \dotsc , -6 , -4 , -2 , 0 , 2 , 4 , 6 , \dotsc }
+        </md>
+        
+        be the set of even integers. Determine whether or not <m> D </m> is a neighborhood of the point <m> 0 </m> in the discrete metric space <m> \of{ \R , \delta_{ \R } } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> D </m> is a neighborhood of <m> 0 </m> in <m> \of{ \R , \delta_{ \R } } </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        We note that since the discrete metric <m> \delta_{ \R } </m> takes only the values <m> 0 </m> and <m> 1 </m>,
+        
+        <md>
+          \mB_{ \frac{ 1 }{ 2 } } \of{ 0 } = \setmid{ x \in \R }{ \delta_{ \R } \of{ x , 0 } \lt \frac{ 1 }{ 2 } } = \setmid{ x \in \R }{ \delta_{ \R } \of{ x , 0 } = 0 } = \set{ 0 }
+        </md>.
+        
+        Since <m> 0 \in D </m>, <m> \mB_{ \frac{ 1 }{ 2 } } \of{ 0 } \subseteq D </m>, and so <m> D </m> is a neighborhood of <m> 0 </m> in <m> \of{ \R , \delta_{ \R } } </m>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let
+        
+        <md>
+          E = \clint{ 0 }{ 1 } = \setmid{ x \in \R }{ 0 \leq x \leq 1 }
+        </md>
+        
+        be the closed interval between <m> 0 </m> and <m> 1 </m>. Determine whether or not <m> E </m> is a neighborhood of the point <m> 0 </m> in the metric subspace <m> \of{ \clint{ 0 }{ 2 } , d } </m> of the real line <m> \of{ \R , d } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> E </m> is a neighborhood of <m> 0 </m> in <m> \clint{ 0 }{ 2 } </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        Since <m> E </m> contains the open ball
+        
+        <md>
+          <mrow>
+            \mB_{ 1 } \of{ 0 } \amp = \setmid{ x \in \clint{ 0 }{ 2 } }{ \abs{ x - 0 } \lt 1 } = \setmid{ x \in \R }{ 0 \leq x \leq 2 \textrm{ and } -1 \lt x \lt 1 }
+          </mrow>
+          
+          <mrow>
+            \amp = \setmid{ x \in \R }{ 0 \leq x \lt 1 } = \clopint{ 0 }{ 1 } \subseteq \clint{ 0 }{ 1 } = E
+          </mrow>
+        </md>
+        
+        of radius <m> 1 </m> and center <m> 1 </m>, <m> E </m> is a neighborhood of <m> 1 </m> in <m> \clint{ 0 }{ 2 } </m>.
+      </p>
+    </solution>
+  </exercise>
+</exercisegroup>

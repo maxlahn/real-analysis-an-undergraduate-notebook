@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-open-and-closed-sets" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Open and closed sets
+  </title>
+  
+  <introduction>
+    <p>
+      Determine whether the given subset of a metric space is open, closed, both open and closed, or neither open nor closed.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let
+        
+        <md>
+          A = \opint{ 0 }{ 2 } = \setmid{ x \in \R }{ 0 \lt x \lt 2 }
+        </md>
+        
+        be the open interval between <m> 0 </m> and <m> 2 </m>. Determine whether or not <m> A </m> is open or closed in the metric space <m> \of{ \R , d } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> A </m> is open in <m> \R </m> but not closed.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let
+        
+        <md>
+          B = \clint{ 0 }{ 2 } = \setmid{ x \in \R }{ 0 \leq x \leq 2 }
+        </md>
+        
+        be the closed interval between <m> 0 </m> and <m> 2 </m>. Determine whether or not <m> B </m> is open or closed in the metric space <m> \of{ \R , d } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> B </m> is closed in <m> \R </m> but not open.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let
+        
+        <md>
+          C = \clopint{ 0 }{ 2 } = \setmid{ x \in \R }{ 0 \leq x \lt 2 }
+        </md>
+        
+        be the half-closed, half-open interval between <m> 0 </m> and <m> 2 </m>. Determine whether or not <m> C </m> is open or closed in the metric space <m> \of{ \R , d } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> C </m> is neither open nor closed in <m> \R </m>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let
+        
+        <md>
+          D = 2 \Z = \setmid{ 2 k \in \Z }{ k \in \Z } = \set{ \dotsc , -6 , -4 , -2 , 0 , 2 , 4 , 6 , \dotsc }
+        </md>
+        
+        be the set of even integers. Determine whether or not <m> D </m> is open or closed in the discrete metric space <m> \of{ \R , \delta_{ \R } } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> D </m> both open and closed in <m> \of{ \R , \delta_{ \R } } </m>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let
+        
+        <md>
+          E = \clint{ 0 }{ 1 } = \setmid{ x \in \R }{ 0 \leq x \leq 1 }
+        </md>
+        
+        be the closed interval between <m> 0 </m> and <m> 1 </m>. Determine whether or not <m> E </m> is open or closed in the metric subspace <m> \of{ \clint{ 0 }{ 2 } , d } </m> of the real line <m> \of{ \R , d } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> E </m> is closed in <m> \clint{ 0 }{ 2 } </m> but not open.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let
+        
+        <md>
+          F = \clint{ 0 }{ 1 } = \setmid{ x \in \R }{ 0 \leq x \leq 1 }
+        </md>
+        
+        be the closed interval between <m> 0 </m> and <m> 1 </m>. Determine whether or not <m> F </m> is open or closed in the metric subspace <m> \of{ \clint{ 0 }{ 1 } \cup \clint{ 2 }{ 3 } , d } </m> of the real line <m> \of{ \R , d } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> F </m> is both open and closed in <m> \clint{ 0 }{ 1 } \cup \clint{ 2 }{ 3 } </m>.
+      </p>
+    </answer>
+  </exercise>
+</exercisegroup>

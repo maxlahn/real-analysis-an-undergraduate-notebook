@@ -11,7 +11,9 @@
     </p>
   </introduction>
   
-  <!-- <xi:include href="./exercises/exercise-TITLE.ptx"/> -->
+  <xi:include href="./exercises/exercise-continuity-at-a-point.ptx"/>
+  
+  <xi:include href="./exercises/exercise-uniform-and-lipschitz-continuity.ptx"/>
 
   <conclusion>
     <p>
