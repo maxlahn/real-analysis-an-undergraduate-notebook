@@ -756,8 +756,11 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="section-completeness-and-compactness.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Completeness and Compactness</span></a></div>
 <ul class="structural toc-item-list active" id="ptx-toc-group-section-completeness-and-compactness">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#exercises-completeness-and-compactness" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#reading-questions-completeness-and-compactness" class="internal"><span class="codenumber">3.6</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#subsection-cauchy-sequences-and-metric-completeness" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Cauchy Sequences and Metric Completeness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#subsection-completion-of-a-metric-space" class="internal"><span class="codenumber">3.6.2</span> <span class="title">Completion of a Metric Space [SKIP]</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#subsection-metric-compactness" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Metric Compactness</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#exercises-completeness-and-compactness" class="internal"><span class="codenumber">3.6.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#problems-completeness-and-compactness" class="internal"><span class="codenumber">3.6.5</span> <span class="title">Problems</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -924,32 +927,588 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Completeness and Compactness</span>
 </h2>
 <section class="introduction" id="section-completeness-and-compactness-2">
-<div class="para" id="section-completeness-and-compactness-2-1">Text before the first subsection.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-completeness-and-compactness-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="section-completeness-and-compactness-2-1">In this section, we will investigate two related notions which, like much of the material of this chapter, have to do with the convergence of sequences in metric spaces. First, we will reexamine the limiting behavior of sequences from a more intrinsic perspective, drawing a distinction between convergent sequences and <dfn class="terminology">Cauchy sequences</dfn>. We will then examine the properties of <dfn class="terminology">complete metric spaces</dfn>, in which this distinction does not exist. Next, we will discuss <dfn class="terminology">compact metric spaces</dfn>, which are those in which, even if a sequence diverges, it has a convergent <dfn class="terminology">subsequence</dfn>. Finally, to conclude this chapter, we will use both of these notions to prove several powerful results about metric spaces.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-completeness-and-compactness-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="section-completeness-and-compactness-3">
-<div class="para" id="section-completeness-and-compactness-3-1">Text after the last subsection.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-completeness-and-compactness-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section>
-<section class="reading-questions" id="exercises-completeness-and-compactness">
+<section class="subsection" id="subsection-cauchy-sequences-and-metric-completeness">
 <h3 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cauchy Sequences and Metric Completeness</span>
+</h3>
+<section class="introduction" id="subsection-cauchy-sequences-and-metric-completeness-2">
+<div class="para" id="subsection-cauchy-sequences-and-metric-completeness-2-1">Thus far, we have examined the limiting behavior of sequences through an extrinsic perspective, focusing on the distance between the values of a given sequence and the points of the metric space. We now turn our attention to a more broad class of sequences, which are called <dfn class="terminology">Cauchy sequences</dfn>, and which are viewed in a more intrinsic way. While a sequence in a metric space is convergent if its values eventually grow close to a specific point, it is Cauchy if its values eventually grow close to each other.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-cauchy-sequences-and-metric-completeness-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="definition definition-like" id="definition-cauchy-sequence"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cauchy sequence.</span>
+</h4>
+<div class="para" id="definition-cauchy-sequence-3-1">A sequence <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> of points <span class="process-math">\(x_{ n } \in X \)</span> in a metric space <span class="process-math">\(\of{ X , \rho } \)</span> is called <dfn class="terminology">Cauchy</dfn> if for all positive real numbers <span class="process-math">\(\epsilon \gt 0 \text{,}\)</span> there is a natural number <span class="process-math">\(n_{ \epsilon } \in \N \)</span> so that <span class="process-math">\(\rho \of{ x_{ m } , x_{ n } } \lt \epsilon \)</span> for all indices <span class="process-math">\(m , n \geq n_{ \epsilon } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-cauchy-sequence-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.6.1: Cauchy sequence"><a tabindex="-1" href="#definition-cauchy-sequence" title="Copy heading and permalink for Definition 3.6.1: Cauchy sequence" aria-label="Copy heading and permalink for Definition 3.6.1: Cauchy sequence">🔗</a></div>
+</article>
+<div class="para" id="subsection-cauchy-sequences-and-metric-completeness-4"> The above requirement is sometimes called the <dfn class="terminology">Cauchy criterion</dfn>, so a sequence in a metric space satisfies the Cauchy criterion if the distances between its values eventually becomes negligible. Note the distinction between this notion and that of convergence: The entries of a convergent sequence must approach a specific point but the entries of a Cauchy sequence must approach each other (while not necessarily approaching a point of the metric space). At first glance, these notions might seem to be equivalent characterizations of sequences. However, we will see that in some metric spaces, this is not the case.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-cauchy-sequences-and-metric-completeness-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-cauchy-sequence" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cauchy sequence.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-cauchy-sequence-2-1">
+<div class="para">For each natural number <span class="process-math">\(k \in \N \text{,}\)</span> let <span class="process-math">\(d_{ k } \in \set{ 0 , 1 , 2 , \dotsc , 9 } \)</span> denote the <span class="process-math">\(k \)</span>th digit in the decimal expansion of <span class="process-math">\(\sqrt{ 2 } \approx 1.414213562 \text{,}\)</span> so that</div>
+<div class="displaymath process-math" id="example-cauchy-sequence-2-1-5">
+\begin{align*}
+d_{ 0 } \amp = 1 \amp d_{ 1 } \amp = 4 \amp d_{ 2 } \amp = 1 \amp d_{ 3 } \amp = 4 \amp d_{ 4 } \amp = 2 \amp \hdots\text{.}
+\end{align*}
+</div>
+<div class="para">Consider the sequence <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> of rational numbers <span class="process-math">\(x_{ n } \in \Q \)</span> defined by the formula</div>
+<div class="displaymath process-math" id="example-cauchy-sequence-2-1-8">
+\begin{equation*}
+x_{ n } = \sum_{ k = 0 }^{ n }{ \frac{ d_{ k } }{ 10^{ k } } } = d_{ 0 } + \frac{ d_{ 1 } }{ 10 } + \frac{ d_{ 2 } }{ 100 } + \dotsb + \frac{ d_{ n } }{ 10^{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. The Archimedean principle implies that</div>
+<div class="displaymath process-math" id="example-cauchy-sequence-2-1-10">
+\begin{equation*}
+n_{ \epsilon } \gt \log \of{ \frac{ 1 }{ \epsilon } }
+\end{equation*}
+</div>
+<div class="para">for some natural number <span class="process-math">\(n_{ \epsilon } \in \N \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="example-cauchy-sequence-2-1-12">
+\begin{align*}
+d \of{ x_{ m } , x_{ n } } \amp = \abs{ x_{ m } - x_{ n } } = x_{ \max \of{ \set{ m , n } } } - x_{ \min \of{ \set{ m , n } } }\\
+\amp = \sum_{ k = 0 }^{ \max \of{ \set{ m , n } } }{ \frac{ d_{ k } }{ 10^{ k } } } - \sum_{ k = 0 }^{ \min \of{ \set{ m , n } } }{ \frac{ d_{ k } }{ 10^{ k } } } = \sum_{ k = \min \of{ \set{ m , n } } + 1 }^{ \max \of{ \set{ m , n } } }{ \frac{ d_{ k } }{ 10^{ k } } }\\
+\amp \leq \frac{ 1 }{ 10^{ \min \of{ \set{ m , n } } } } \leq \frac{ 1 }{ 10^{ n_{ \epsilon } } } \lt \epsilon
+\end{align*}
+</div>
+<div class="para">for all indices <span class="process-math">\(m , n \geq n_{ \epsilon } \text{.}\)</span> Thus <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> is Cauchy.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-cauchy-sequence-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.6.2: Cauchy sequence"><a tabindex="-1" href="#example-cauchy-sequence" title="Copy heading and permalink for Example 3.6.2: Cauchy sequence" aria-label="Copy heading and permalink for Example 3.6.2: Cauchy sequence">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-cauchy-sequences-and-metric-completeness-6">The above example of Cauchy sequences shows that Cauchy sequences in a metric space need not converge; the given Cauchy sequence of rational numbers converges to <span class="process-math">\(\sqrt{ 2 } \)</span> and thus diverges in the metric space <span class="process-math">\(\of{ \Q , d } \text{.}\)</span> However, any convergent sequence is Cauchy.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-cauchy-sequences-and-metric-completeness-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-convergent-sequences-are-cauchy"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Convergent sequences are Cauchy.</span>
+</h4>
+<div class="para" id="proposition-convergent-sequences-are-cauchy-2-1">Any convergent sequence of points in a metric space is Cauchy.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-convergent-sequences-are-cauchy-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 3.6.3: Convergent sequences are Cauchy"><a tabindex="-1" href="#proposition-convergent-sequences-are-cauchy" title="Copy heading and permalink for Proposition 3.6.3: Convergent sequences are Cauchy" aria-label="Copy heading and permalink for Proposition 3.6.3: Convergent sequences are Cauchy">🔗</a></div>
+</article>
+<details id="proposition-convergent-sequences-are-cauchy-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="proposition-convergent-sequences-are-cauchy-3-1">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of points <span class="process-math">\(x_{ n } \in X \)</span> in a metric space <span class="process-math">\(\of{ X , \rho } \text{,}\)</span> and suppose that <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> converges to a limit <span class="process-math">\(x \in X \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-convergent-sequences-are-cauchy-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-convergent-sequences-are-cauchy-3-2">
+<div class="para">Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Since <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \text{,}\)</span> there is a natural number <span class="process-math">\(n_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math" id="proposition-convergent-sequences-are-cauchy-3-2-4">
+\begin{equation*}
+\rho \of{ x_{ n } , x } \lt \frac{ \epsilon }{ 2 }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> In particular, we observe that</div>
+<div class="displaymath process-math" id="proposition-convergent-sequences-are-cauchy-3-2-6">
+\begin{equation*}
+\rho \of{ x_{ m } , x_{ n } } \leq \rho \of{ x_{ m } , x } + \rho \of{ x , x_{ n } } = \rho \of{ x_{ m } , x } + \rho \of{ x_{ n } , x } \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(m , n \geq n_{ \epsilon } \text{.}\)</span> We conclude that the sequence <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> is Cauchy.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-convergent-sequences-are-cauchy-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.6.3.1"><a tabindex="-1" href="#proposition-convergent-sequences-are-cauchy-3" title="Copy heading and permalink for Proof 3.6.3.1" aria-label="Copy heading and permalink for Proof 3.6.3.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-cauchy-sequences-and-metric-completeness-8">So the convergence of a sequence implies that it satisfies the Cauchy criterion. A natural follow-up question to the above result is whether or not it is possible for the reverse implication holds. The answer to this question actually depends on the particulars of the metric space. Such a metric space in which Cauchy sequences converge is called <dfn class="terminology">complete</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-cauchy-sequences-and-metric-completeness-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-metric-completeness"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Metric completeness.</span>
+</h4>
+<div class="para logical" id="definition-metric-completeness-5-1">
+<div class="para">Let <span class="process-math">\(U \subseteq X \)</span> be a subset of a metric space <span class="process-math">\(\of{ X , \rho } \text{.}\)</span>
+</div>
+<ul class="disc" id="definition-metric-completeness-5-1-3">
+<li id="definition-metric-completeness-5-1-3-1">
+<span class="heading li--heading"><span class="title li--heading-title">Completeness.</span></span>
+<div class="para" id="definition-metric-completeness-5-1-3-1-2">The subset <span class="process-math">\(U \)</span> is called <dfn class="terminology">complete</dfn> in <span class="process-math">\(X \)</span> if every Cauchy sequence of points in <span class="process-math">\(U \)</span> converges in <span class="process-math">\(X \)</span> to a limit in <span class="process-math">\(U \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-metric-completeness-5-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Completeness"><a tabindex="-1" href="#definition-metric-completeness-5-1-3-1" title="Copy heading and permalink for Item: Completeness" aria-label="Copy heading and permalink for Item: Completeness">🔗</a></div>
+</li>
+<li id="definition-metric-completeness-5-1-3-2">
+<span class="heading li--heading"><span class="title li--heading-title">Incompleteness.</span></span>
+<div class="para" id="definition-metric-completeness-5-1-3-2-2">The subset <span class="process-math">\(U \)</span> is called <dfn class="terminology">incomplete</dfn> in <span class="process-math">\(X \)</span> if some Cauchy sequence of points in <span class="process-math">\(U \)</span> does not converge in <span class="process-math">\(X \)</span> to a limit in <span class="process-math">\(U \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-metric-completeness-5-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Incompleteness"><a tabindex="-1" href="#definition-metric-completeness-5-1-3-2" title="Copy heading and permalink for Item: Incompleteness" aria-label="Copy heading and permalink for Item: Incompleteness">🔗</a></div>
+</li>
+</ul>
+<div class="para">A metric space <span class="process-math">\(\of{ X , \rho } \)</span> is called <dfn class="terminology">complete</dfn> (resp. <dfn class="terminology">incomplete</dfn>) if <span class="process-math">\(X \)</span> is complete (resp. incomplete) in <span class="process-math">\(X \text{.}\)</span> A complete normed vector space is called a <dfn class="terminology">Banach space</dfn>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-metric-completeness-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.6.4: Metric completeness"><a tabindex="-1" href="#definition-metric-completeness" title="Copy heading and permalink for Definition 3.6.4: Metric completeness" aria-label="Copy heading and permalink for Definition 3.6.4: Metric completeness">🔗</a></div>
+</article>
+<div class="para" id="subsection-cauchy-sequences-and-metric-completeness-10">Complete metric spaces are ideal for performing mathematical analysis, as it is often much easier to verify that a given sequence is Cauchy (and therefore has a limit) than to actually compute its limiting value.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-cauchy-sequences-and-metric-completeness-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-metric-completeness" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Metric completeness.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-metric-completeness-2-1">
+<div class="para">The following are examples of complete and incomplete metric spaces.</div>
+<ul class="disc" id="example-metric-completeness-2-1-1">
+<li id="example-metric-completeness-2-1-1-1">
+<div class="para" id="example-metric-completeness-2-1-1-1-1">Any discrete metric space is complete, since any Cauchy sequence in a discrete metric space is eventually constant. More generally, any metric space whose points are all isolated points (for example, any finite metric space) is complete.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-metric-completeness-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-metric-completeness-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-metric-completeness-2-1-1-2">
+<div class="para" id="example-metric-completeness-2-1-1-2-1">The rational numbers <span class="process-math">\(\Q \)</span> are not complete in the real line <span class="process-math">\(\of{ \R , d } \text{.}\)</span> Indeed, we have already seen an example of a Cauchy sequence of rational numbers which converges in <span class="process-math">\(\R \)</span> to an irrational number <span class="process-math">\(\sqrt{ 2 } \in \R \setminus \Q \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-metric-completeness-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-metric-completeness-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-metric-completeness-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.6.5: Metric completeness"><a tabindex="-1" href="#example-metric-completeness" title="Copy heading and permalink for Example 3.6.5: Metric completeness" aria-label="Copy heading and permalink for Example 3.6.5: Metric completeness">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-cauchy-sequences-and-metric-completeness-12">The above fact about the rational number system is one of the reasons why it doesn’t serve as a good context in which to perform mathematical analysis. However, as we will shortly see, the real number system (and, more generally, Euclidean space of any dimension) is a complete metric space, and so there is a rich theory of real analysis. These facts are themselves intimately related to the fact that the rational number system is not Dedekind complete, while the real number system is. This relationship between Dedekind completeness and completeness as a metric space is true for subspaces of the real numbers because of the relationship between the standard ordering of the real numbers and the point-set topology of the Euclidean metric, which we will examine in more detail in <a href="chapter-topological-spaces.html" class="internal" title="Chapter 4: Topological Spaces">Chapter 4 Topological Spaces</a>. We will prove that the real numbers are complete in the Euclidean metric shortly.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-cauchy-sequences-and-metric-completeness-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsection-cauchy-sequences-and-metric-completeness-13">First, however, let us examine some of the properties of complete subsets of metric spaces in general. The following two results will be useful in determining whether or not a subset of a given metric space is complete. First, notice that any complete subset of a metric space needs to contain all of its limit points, and so must be closed.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-cauchy-sequences-and-metric-completeness-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-complete-subsets-are-closed"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Complete subsets are closed.</span>
+</h4>
+<div class="para" id="proposition-complete-subsets-are-closed-2-1">A complete subset of a metric space is closed.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-complete-subsets-are-closed-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 3.6.6: Complete subsets are closed"><a tabindex="-1" href="#proposition-complete-subsets-are-closed" title="Copy heading and permalink for Proposition 3.6.6: Complete subsets are closed" aria-label="Copy heading and permalink for Proposition 3.6.6: Complete subsets are closed">🔗</a></div>
+</article>
+<details id="proposition-complete-subsets-are-closed-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="proposition-complete-subsets-are-closed-3-1">By contraposition. Let <span class="process-math">\(U \subseteq X \)</span> be a subset of a metric space <span class="process-math">\(\of{ X , \rho } \text{,}\)</span> and suppose that <span class="process-math">\(U \)</span> is not closed in <span class="process-math">\(X \text{.}\)</span> Then <span class="process-math">\(U \subsetneq \Cl \of{ U } = U \cup U' \)</span> by (2) of <a href="section-open-and-closed-sets.html#proposition-interior-closure" class="xref" data-knowl="./knowl/xref/proposition-interior-closure.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.4.9: Interior/closure">Proposition 3.4.9 Interior/closure</a> and <a href="section-open-and-closed-sets.html#problem-closure-and-limit-points" class="xref" data-knowl="./knowl/xref/problem-closure-and-limit-points.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 3.4.5.3: Closure and limit points">Problem 3.4.5.3 Closure and limit points</a>, and so <span class="process-math">\(U' \not \subseteq U \text{;}\)</span> that is, there is some limit point <span class="process-math">\(x \in U' \)</span> which is not an element of <span class="process-math">\(U \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-complete-subsets-are-closed-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-complete-subsets-are-closed-3-2">
+<div class="para">Since <span class="process-math">\(x \in U' \)</span> is a limit point of <span class="process-math">\(U \)</span> in <span class="process-math">\(X \text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="proposition-complete-subsets-are-closed-3-2-4">
+\begin{equation*}
+x = \lim_{ n \to \infty }{ u_{ n } }
+\end{equation*}
+</div>
+<div class="para">for some sequence <span class="process-math">\(\of{ u_{ n } }_{ n = 0 }^{ \infty } \)</span> of points <span class="process-math">\(u_{ n } \in U \text{.}\)</span> Since <span class="process-math">\(\of{ u_{ n } }_{ n = 0 }^{ \infty } \)</span> converges in <span class="process-math">\(X \text{,}\)</span> it is Cauchy. However, the limit of this Cauchy sequence of points in <span class="process-math">\(U \)</span> does not lie in <span class="process-math">\(U \text{.}\)</span> Thus <span class="process-math">\(U \)</span> is not complete in <span class="process-math">\(X \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-complete-subsets-are-closed-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.6.6.1"><a tabindex="-1" href="#proposition-complete-subsets-are-closed-3" title="Copy heading and permalink for Proof 3.6.6.1" aria-label="Copy heading and permalink for Proof 3.6.6.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-cauchy-sequences-and-metric-completeness-15">So any complete subset of a metric space is closed. The converse to this statement is not, in general, true, since any metric space is closed in the metric, but not every metric space is complete. However, there is a partial converse to the above result; any closed subset of a complete metric space is also complete.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-cauchy-sequences-and-metric-completeness-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-closed-subsets-of-complete-metric-spaces"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Closed subsets of complete metric spaces.</span>
+</h4>
+<div class="para" id="proposition-closed-subsets-of-complete-metric-spaces-2-1">A subset of a complete metric space is complete if and only if it is closed.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-closed-subsets-of-complete-metric-spaces-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 3.6.7: Closed subsets of complete metric spaces"><a tabindex="-1" href="#proposition-closed-subsets-of-complete-metric-spaces" title="Copy heading and permalink for Proposition 3.6.7: Closed subsets of complete metric spaces" aria-label="Copy heading and permalink for Proposition 3.6.7: Closed subsets of complete metric spaces">🔗</a></div>
+</article>
+<details id="proposition-closed-subsets-of-complete-metric-spaces-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="proposition-closed-subsets-of-complete-metric-spaces-3-1">Let <span class="process-math">\(U \subseteq X \)</span> be a subset of a complete metric space <span class="process-math">\(\of{ X , \rho } \text{.}\)</span> We have already seen in <a href="section-completeness-and-compactness.html#proposition-complete-subsets-are-closed" class="xref" data-knowl="./knowl/xref/proposition-complete-subsets-are-closed.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.6.6: Complete subsets are closed">Proposition 3.6.6 Complete subsets are closed</a> that if <span class="process-math">\(U \)</span> is complete in <span class="process-math">\(X \text{,}\)</span> then it is closed in <span class="process-math">\(X \text{.}\)</span> It remains to prove the converse implication. To that end, suppose that <span class="process-math">\(U \)</span> is not complete in <span class="process-math">\(X \text{,}\)</span> so that some Cauchy sequence <span class="process-math">\(\of{ u_{ n } }_{ n = 0 }^{ \infty } \)</span> of points <span class="process-math">\(u_{ n } \in U \)</span> does not converge to a limit in <span class="process-math">\(U \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-closed-subsets-of-complete-metric-spaces-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-closed-subsets-of-complete-metric-spaces-3-2">
+<div class="para">However, since <span class="process-math">\(\of{ u_{ n } }_{ n = 0 }^{ \infty } \)</span> is a Cauchy sequence in a complete metric space <span class="process-math">\(\of{ X , \rho } \text{,}\)</span> it converges to a limit</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/problem-closure-and-limit-points.html ./knowl/xref/proposition-interior-closure.html" id="proposition-closed-subsets-of-complete-metric-spaces-3-2-3">
+\begin{equation*}
+x = \lim_{ n \to \infty }{ u_{ n } } \in X\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(u_{ n } \neq x \)</span> for all indices <span class="process-math">\(n \in \N \text{,}\)</span> we conclude that <span class="process-math">\(x \in U' \)</span> is a limit point of <span class="process-math">\(U \)</span> in <span class="process-math">\(X \)</span> which is not contained in <span class="process-math">\(U \text{.}\)</span> <a href="section-open-and-closed-sets.html#problem-closure-and-limit-points" class="xref" data-knowl="./knowl/xref/problem-closure-and-limit-points.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 3.4.5.3: Closure and limit points">Problem 3.4.5.3 Closure and limit points</a> implies that <span class="process-math">\(x \in \Cl \of{ U } \)</span> is a point of closure of <span class="process-math">\(U \)</span> in <span class="process-math">\(X \text{,}\)</span> and so <span class="process-math">\(U \)</span> is a proper subset of its closure <span class="process-math">\(\Cl \of{ U } \text{.}\)</span> (2) of <a href="section-open-and-closed-sets.html#proposition-interior-closure" class="xref" data-knowl="./knowl/xref/proposition-interior-closure.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.4.9: Interior/closure">Proposition 3.4.9 Interior/closure</a> now implies that <span class="process-math">\(U \)</span> is not closed in <span class="process-math">\(X \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-closed-subsets-of-complete-metric-spaces-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.6.7.1"><a tabindex="-1" href="#proposition-closed-subsets-of-complete-metric-spaces-3" title="Copy heading and permalink for Proof 3.6.7.1" aria-label="Copy heading and permalink for Proof 3.6.7.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-cauchy-sequences-and-metric-completeness-17">We now would like to prove the completeness of various metric spaces associated with the real number system <span class="process-math">\(\R \text{.}\)</span> First, however, let us consider the notion of a <dfn class="terminology">subsequence</dfn>. Informally, a subsequence of a sequence is a sequence which takes some, but not necessarily all, of the same entries, and these entries appear in the same relative order. We can form a subsequence of a sequence by selecting some infinite subset of indices to include in the subsequence. In fact, any subsequence can be formed in this manner. In order to formalize this notion, recall that a sequence is formally a map whose domain is the natural numbers or the positive integers, and that an increasing function is an injective and non-decreasing function.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-cauchy-sequences-and-metric-completeness-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-subsequence"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Subsequence.</span>
+</h4>
+<div class="para" id="definition-subsequence-4-1">A sequence <span class="process-math">\(y \colon \N \to X \)</span> of points in a metric space <span class="process-math">\(\of{ X , \rho } \)</span> is a <dfn class="terminology">subsequence</dfn> of a sequence <span class="process-math">\(x \colon \N \to X \)</span> of points in <span class="process-math">\(X \)</span> if <span class="process-math">\(y = x \circ f \)</span> for some increasing function <span class="process-math">\(f \colon \N \to \N \text{.}\)</span> In this case, if <span class="process-math">\(x = \of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> and <span class="process-math">\(f = \of{ n_{ k } }_{ k = 0 }^{ \infty } \text{,}\)</span> then we write <span class="process-math">\(y = \of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-subsequence-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.6.8: Subsequence"><a tabindex="-1" href="#definition-subsequence" title="Copy heading and permalink for Definition 3.6.8: Subsequence" aria-label="Copy heading and permalink for Definition 3.6.8: Subsequence">🔗</a></div>
+</article>
+<details id="example-subsequences" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Subsequences.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-subsequences-2-1">
+<div class="para">The following are examples of subsequences:</div>
+<ul class="disc" id="example-subsequences-2-1-1">
+<li id="example-subsequences-2-1-1-1">
+<div class="para logical" id="example-subsequences-2-1-1-1-1">
+<div class="para">The sequences</div>
+<div class="displaymath process-math" id="example-subsequences-2-1-1-1-1-1">
+\begin{equation*}
+\of{ n }_{ n = 3 }^{ \infty } = \of{ n + 3 }_{ n = 0 }^{ \infty } = \of{ 3 , 4 , 5 , 6 , \dotsc }
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" id="example-subsequences-2-1-1-1-1-2">
+\begin{equation*}
+\of{ 2 n + 1 }_{ n = 0 }^{ \infty } = \of{ 1 , 3 , 5 , 7 , \dotsc }
+\end{equation*}
+</div>
+<div class="para">are subsequences of the sequence <span class="process-math">\(\of{ n }_{ n = 0 }^{ \infty } = \of{ 0 , 1 , 2 , 3 , 4 , \dotsc } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-subsequences-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-subsequences-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-subsequences-2-1-1-2">
+<div class="para logical" id="example-subsequences-2-1-1-2-1">
+<div class="para">The sequence</div>
+<div class="displaymath process-math" id="example-subsequences-2-1-1-2-1-1">
+\begin{equation*}
+\of{ \frac{ 1 }{ n^{ 2 } } }_{ n = 1 }^{ \infty } = \of{ 1 , \frac{ 1 }{ 4 } , \frac{ 1 }{ 9 } , \dotsc }
+\end{equation*}
+</div>
+<div class="para">is a subsequence of the sequence</div>
+<div class="displaymath process-math" id="example-subsequences-2-1-1-2-1-2">
+\begin{equation*}
+\of{ \frac{ 1 }{ n } }_{ n = 1 }^{ \infty } = \of{ 1 , \frac{ 1 }{ 2 } , \frac{ 1 }{ 3 } , \frac{ 1 }{ 4 } , \dotsc }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-subsequences-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-subsequences-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-subsequences-2-1-1-3">
+<div class="para logical" id="example-subsequences-2-1-1-3-1">
+<div class="para">The convergent sequence</div>
+<div class="displaymath process-math" id="example-subsequences-2-1-1-3-1-1">
+\begin{equation*}
+\of{ 1 }_{ n = 0 }^{ \infty } = \of{ \of{ -1 }^{ 2 n } }_{ n = 0 }^{ \infty } = \of{ 1 , 1 , 1 , \dotsc }
+\end{equation*}
+</div>
+<div class="para">is a subsequence of the divergent sequence <span class="process-math">\(\of{ \of{ -1 }^{ n } }_{ n = 0 }^{ \infty } = \of{ 1 , -1 , 1 , -1 , 1 , \dotsc } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-subsequences-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-subsequences-2-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-subsequences-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.6.9: Subsequences"><a tabindex="-1" href="#example-subsequences" title="Copy heading and permalink for Example 3.6.9: Subsequences" aria-label="Copy heading and permalink for Example 3.6.9: Subsequences">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-cauchy-sequences-and-metric-completeness-20">The above example shows that divergent sequences may have convergent subsequences. In fact, much of this section will be devoted to examining the properties of metric spaces in which this is the only possible situation. First, however, note that any subsequence of a convergent sequence in a metric space converges to the same limit. In order to show this, it helps to see the following fact about strictly increasing functions on the natural numbers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-cauchy-sequences-and-metric-completeness-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="lemma theorem-like" id="lemma-increasing-functions"><h4 class="heading">
+<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Increasing functions.</span>
+</h4>
+<div class="para" id="lemma-increasing-functions-2-1">
+<span class="process-math">\(f \of{ n } \geq n \)</span> for any increasing function <span class="process-math">\(f \colon \N \to \N \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-increasing-functions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Lemma 3.6.10: Increasing functions"><a tabindex="-1" href="#lemma-increasing-functions" title="Copy heading and permalink for Lemma 3.6.10: Increasing functions" aria-label="Copy heading and permalink for Lemma 3.6.10: Increasing functions">🔗</a></div>
+</article>
+<details id="lemma-increasing-functions-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="lemma-increasing-functions-3-1">
+<div class="para">By induction on <span class="process-math">\(n \in \N \text{.}\)</span> For the base case <span class="process-math">\(n = 0 \text{,}\)</span> we observe that <span class="process-math">\(f \of{ 0 } \in \N \)</span> is a natural number, and so</div>
+<div class="displaymath process-math" id="lemma-increasing-functions-3-1-4">
+\begin{equation*}
+f \of{ n } = f \of{ 0 } \geq 0 = n\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-increasing-functions-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="lemma-increasing-functions-3-2">
+<div class="para">For the inductive step, suppose for the inductive hypothesis that <span class="process-math">\(f \of{ n } \geq n \)</span> for some natural number <span class="process-math">\(n \in \N \text{.}\)</span> We observe that <span class="process-math">\(n \leq n + 1 \text{,}\)</span> and so <span class="process-math">\(f \of{ n } \leq f \of{ n + 1 } \text{,}\)</span> since <span class="process-math">\(f \)</span> is non-decreasing. Moreover, <span class="process-math">\(n \neq n + 1 \text{,}\)</span> and so <span class="process-math">\(f \of{ n } \neq f \of{ n + 1 } \text{,}\)</span> since <span class="process-math">\(f \)</span> is injective. In particular,</div>
+<div class="displaymath process-math" id="lemma-increasing-functions-3-2-9">
+\begin{equation*}
+f \of{ n + 1 } \gt f \of{ n } \geq n
+\end{equation*}
+</div>
+<div class="para">by the inductive hypothesis, and so <span class="process-math">\(f \of{ n + 1 } \geq n + 1 \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-increasing-functions-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.6.10.1"><a tabindex="-1" href="#lemma-increasing-functions-3" title="Copy heading and permalink for Proof 3.6.10.1" aria-label="Copy heading and permalink for Proof 3.6.10.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-cauchy-sequences-and-metric-completeness-22">We are now ready to show that a subsequence of a convergent sequence in a metric space is itself convergent, and converges to the same limit as the larger sequence. So while a subsequence of a divergent sequence might converge, the reverse situation cannot occur.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-cauchy-sequences-and-metric-completeness-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-subsequences-of-convergent-sequences"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Subsequences of convergent sequences.</span>
+</h4>
+<div class="para logical" id="proposition-subsequences-of-convergent-sequences-2-1">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of points <span class="process-math">\(x_{ n } \in X \)</span> in a metric space <span class="process-math">\(\of{ X , \rho } \text{.}\)</span> If <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> converges in <span class="process-math">\(X \text{,}\)</span> then any subsequence <span class="process-math">\(\of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } \)</span> also converges in <span class="process-math">\(X \text{,}\)</span> and</div>
+<div class="displaymath process-math" id="proposition-subsequences-of-convergent-sequences-2-1-8">
+\begin{equation*}
+\lim_{ k \to \infty }{ x_{ n_{ k } } } = \lim_{ n \to \infty }{ x_{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-subsequences-of-convergent-sequences-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 3.6.11: Subsequences of convergent sequences"><a tabindex="-1" href="#proposition-subsequences-of-convergent-sequences" title="Copy heading and permalink for Proposition 3.6.11: Subsequences of convergent sequences" aria-label="Copy heading and permalink for Proposition 3.6.11: Subsequences of convergent sequences">🔗</a></div>
+</article>
+<details id="proposition-subsequences-of-convergent-sequences-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="proposition-subsequences-of-convergent-sequences-3-1">
+<div class="para">Let</div>
+<div class="displaymath process-math" id="proposition-subsequences-of-convergent-sequences-3-1-1">
+\begin{equation*}
+x = \lim_{ n \to \infty }{ x_{ n } }\text{,}
+\end{equation*}
+</div>
+<div class="para">and consider a positive real number <span class="process-math">\(\epsilon \gt 0 \text{.}\)</span> There is some natural number <span class="process-math">\(n_{ \epsilon } \in \N \)</span> so that <span class="process-math">\(\rho \of{ x_{ n } , x } \lt \epsilon \)</span> for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-subsequences-of-convergent-sequences-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-subsequences-of-convergent-sequences-3-2">
+<div class="para">We observe that <a href="section-completeness-and-compactness.html#lemma-increasing-functions" class="xref" data-knowl="./knowl/xref/lemma-increasing-functions.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 3.6.10: Increasing functions">Lemma 3.6.10 Increasing functions</a> implies that <span class="process-math">\(n_{ k } \geq n_{ \epsilon } \)</span> for all indices <span class="process-math">\(k \geq n_{ \epsilon } \text{,}\)</span> and so</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-increasing-functions.html" id="proposition-subsequences-of-convergent-sequences-3-2-4">
+\begin{equation*}
+\rho \of{ x_{ n_{ k } } , x } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all such indices. Thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-increasing-functions.html" id="proposition-subsequences-of-convergent-sequences-3-2-5">
+\begin{equation*}
+\lim_{ k \to \infty }{ x_{ n_{ k } } } = x = \lim_{ n \to \infty }{ x_{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-subsequences-of-convergent-sequences-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.6.11.1"><a tabindex="-1" href="#proposition-subsequences-of-convergent-sequences-3" title="Copy heading and permalink for Proof 3.6.11.1" aria-label="Copy heading and permalink for Proof 3.6.11.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-cauchy-sequences-and-metric-completeness-24">An analogous argument can be used to show that any subsequence of a sequence of real numbers which diverges to infinity must itself diverge to infinity. Taken together with <a href="section-completeness-and-compactness.html#proposition-subsequences-of-convergent-sequences" class="xref" data-knowl="./knowl/xref/proposition-subsequences-of-convergent-sequences.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.6.11: Subsequences of convergent sequences">Proposition 3.6.11 Subsequences of convergent sequences</a>, these results state that a subsequence of a sequence in a metric space with a limit shares that limit. We have seen that the opposite is not in general true; divergent sequences which do not approach a limit may have subsequences which do. However, this cannot happen if the original sequence was Cauchy; a Cauchy sequence in a metric space with a convergent subsequence converges to the limit of this subsequence.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-cauchy-sequences-and-metric-completeness-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-cauchy-sequences-with-convergent-subsequences"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cauchy sequences with convergent subsequences.</span>
+</h4>
+<div class="para" id="proposition-cauchy-sequences-with-convergent-subsequences-2-1">If a Cauchy sequence of points in a metric space has a convergent subsequence, then it converges.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-cauchy-sequences-with-convergent-subsequences-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 3.6.12: Cauchy sequences with convergent subsequences"><a tabindex="-1" href="#proposition-cauchy-sequences-with-convergent-subsequences" title="Copy heading and permalink for Proposition 3.6.12: Cauchy sequences with convergent subsequences" aria-label="Copy heading and permalink for Proposition 3.6.12: Cauchy sequences with convergent subsequences">🔗</a></div>
+</article>
+<details id="proposition-cauchy-sequences-with-convergent-subsequences-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="proposition-cauchy-sequences-with-convergent-subsequences-3-1">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a Cauchy sequence of points <span class="process-math">\(x_{ n } \in X \)</span> in a metric space <span class="process-math">\(X \text{,}\)</span> and suppose that some subsequence <span class="process-math">\(\of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } \)</span> converges to a point <span class="process-math">\(x \in X \text{.}\)</span> We will show that the entire sequence <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> also converges to <span class="process-math">\(x \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-cauchy-sequences-with-convergent-subsequences-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-cauchy-sequences-with-convergent-subsequences-3-2">
+<div class="para">To that end, let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Since <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> is Cauchy, there is a natural number <span class="process-math">\(m_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-increasing-functions.html" id="proposition-cauchy-sequences-with-convergent-subsequences-3-2-4">
+\begin{equation*}
+\rho \of{ x_{ m } , x_{ n } } \lt \frac{ \epsilon }{ 2 }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(m , n \geq m_{ \epsilon } \text{.}\)</span> Since the subsequence <span class="process-math">\(\of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(x \text{,}\)</span> there is a natural number <span class="process-math">\(k_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-increasing-functions.html" id="proposition-cauchy-sequences-with-convergent-subsequences-3-2-9">
+\begin{equation*}
+\rho \of{ x_{ n_{ k } } , x } \lt \frac{ \epsilon }{ 2 }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(k \geq k_{ \epsilon } \text{.}\)</span> Let <span class="process-math">\(n_{ \epsilon } = \max \of{ \set{ m_{ \epsilon } , k_{ \epsilon } } } \text{.}\)</span> We observe that <a href="section-completeness-and-compactness.html#lemma-increasing-functions" class="xref" data-knowl="./knowl/xref/lemma-increasing-functions.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 3.6.10: Increasing functions">Lemma 3.6.10 Increasing functions</a> implies that <span class="process-math">\(n_{ k } \geq n_{ \epsilon } \)</span> for all indices <span class="process-math">\(k \geq n_{ \epsilon } \text{.}\)</span> In particular,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-increasing-functions.html" id="proposition-cauchy-sequences-with-convergent-subsequences-3-2-15">
+\begin{equation*}
+\rho \of{ x_{ n } , x } \leq \rho \of{ x_{ n } , x_{ n_{ n } } } + \rho \of{ x_{ n_{ n } } , x } \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> Thus the sequence <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(x \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-cauchy-sequences-with-convergent-subsequences-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.6.12.1"><a tabindex="-1" href="#proposition-cauchy-sequences-with-convergent-subsequences-3" title="Copy heading and permalink for Proof 3.6.12.1" aria-label="Copy heading and permalink for Proof 3.6.12.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-cauchy-sequences-and-metric-completeness-26">The above result will come in handy in proving the completeness of the real numbers in the Euclidean metric. So will the following foundational theorem, the content of which is that any bounded sequence of real numbers has a subsequence which is convergent in the Euclidean metric.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-cauchy-sequences-and-metric-completeness-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="theorem-bolzano-weierstrass-theorem"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.13</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="creator">(Bernard Bolzano; Karl Weierstrass)</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bolzano--Weierstrass theorem.</span>
+</h4>
+<div class="para" id="theorem-bolzano-weierstrass-theorem-3-1">Any bounded sequence of real numbers has a convergent subsequence.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-bolzano-weierstrass-theorem-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.6.13: Bolzano--Weierstrass theorem"><a tabindex="-1" href="#theorem-bolzano-weierstrass-theorem" title="Copy heading and permalink for Theorem 3.6.13: Bolzano--Weierstrass theorem" aria-label="Copy heading and permalink for Theorem 3.6.13: Bolzano--Weierstrass theorem">🔗</a></div>
+</article>
+<details id="theorem-bolzano-weierstrass-theorem-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="theorem-bolzano-weierstrass-theorem-4-1">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of real numbers <span class="process-math">\(x_{ n } \in \R \)</span> which is bounded in the Euclidean metric on <span class="process-math">\(\R \text{.}\)</span> For each natural number <span class="process-math">\(m \in \N \text{,}\)</span> consider the set</div>
+<div class="displaymath process-math" id="theorem-bolzano-weierstrass-theorem-4-1-5">
+\begin{equation*}
+T_{ m } = \setmid{ x_{ n } \in \R }{ n \geq m }\text{.}
+\end{equation*}
+</div>
+<div class="para">There are two cases: either <span class="process-math">\(T_{ m } \)</span> has a maximum for every index <span class="process-math">\(m \in \N \)</span> or <span class="process-math">\(T_{ m } \)</span> does not have a maximum for some index <span class="process-math">\(m \in \N \text{.}\)</span> We will show that in either case, <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> has a monotone subsequence.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-bolzano-weierstrass-theorem-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="theorem-bolzano-weierstrass-theorem-4-2">
+<div class="para">First suppose that <span class="process-math">\(T_{ m } \)</span> has a maximum for each index <span class="process-math">\(m \in \N \text{.}\)</span> Consider the sequence <span class="process-math">\(\of{ n_{ k } }_{ k = 0 }^{ \infty } \)</span> of natural numbers <span class="process-math">\(n_{ k } \in \N \)</span> defined recursively by</div>
+<div class="displaymath process-math" id="theorem-bolzano-weierstrass-theorem-4-2-5">
+\begin{align*}
+n_{ 0 } \amp = \min \of{ \setmid{ n \in \N }{ x_{ n } = \max \of{ T_{ 0 } } } }\\
+n_{ k + 1 } \amp = \min \of{ \setmid{ n \in \N }{ n \geq n_{ k } + 1 \textrm{ and } x_{ n } = \max \of{ T_{ n_{ k + 1 } } } } }\text{.}
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(n_{ m + 1 } \geq n_{ m } + 1 \gt n_{ m } \text{,}\)</span> the sequence <span class="process-math">\(\of{ n_{ k } }_{ n = 0 }^{ \infty } \)</span> is increasing, and so <span class="process-math">\(\of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } \)</span> is a subsequence of <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \text{.}\)</span> Moreover, we observe that</div>
+<div class="displaymath process-math" id="theorem-bolzano-weierstrass-theorem-4-2-10">
+\begin{equation*}
+x_{ n_{ k + 1 } } = \max \of{ T_{ n_{ k + 1 } } } \leq \min \of{ T_{ n_{ k } } } = x_{ n_{ k } }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(k \in \N \text{,}\)</span> and so <span class="process-math">\(\of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } \)</span> is non-increasing.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-bolzano-weierstrass-theorem-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="theorem-bolzano-weierstrass-theorem-4-3">
+<div class="para">On the other hand, now suppose that <span class="process-math">\(T_{ m } \)</span> has no maximum for some index <span class="process-math">\(m \in \N \text{.}\)</span> Consider the sequence <span class="process-math">\(\of{ n_{ k } }_{ k = 0 }^{ \infty } \)</span> of natural numbers <span class="process-math">\(n_{ k } \in \N \)</span> defined recursively by</div>
+<div class="displaymath process-math" id="theorem-bolzano-weierstrass-theorem-4-3-5">
+\begin{align*}
+n_{ 0 } \amp = m\\
+n_{ k + 1 } \amp = \min \of{ \setmid{ n \in \N }{ n \geq n_{ k } + 1 \textrm{ and } x_{ n } \gt x_{ n_{ k } } } }\text{.}
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(n_{ m + 1 } \geq n_{ m } + 1 \gt n_{ m } \text{,}\)</span> the sequence <span class="process-math">\(\of{ n_{ k } }_{ n = 0 }^{ \infty } \)</span> is increasing, and so <span class="process-math">\(\of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } \)</span> is a subsequence of <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \text{.}\)</span> Moreover, we observe that</div>
+<div class="displaymath process-math" id="theorem-bolzano-weierstrass-theorem-4-3-10">
+\begin{equation*}
+x_{ n_{ k + 1 } } \gt x_{ n_{ k } }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(k \in \N \text{,}\)</span> and so <span class="process-math">\(\of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } \)</span> is increasing.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-bolzano-weierstrass-theorem-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="theorem-bolzano-weierstrass-theorem-4-4">In either case, <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> has a monotone subsequence <span class="process-math">\(\of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } \text{.}\)</span> Since <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> is bounded, so too is <span class="process-math">\(\of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } \text{,}\)</span> and so <a href="section-limits-in-the-euclidean-metric.html#theorem-monotone-convergence-theorem" class="xref" data-knowl="./knowl/xref/theorem-monotone-convergence-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.13: Monotone convergence theorem">Theorem 3.3.13 Monotone convergence theorem</a> implies that <span class="process-math">\(\of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } \)</span> converges.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-bolzano-weierstrass-theorem-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.6.13.1"><a tabindex="-1" href="#theorem-bolzano-weierstrass-theorem-4" title="Copy heading and permalink for Proof 3.6.13.1" aria-label="Copy heading and permalink for Proof 3.6.13.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-cauchy-sequences-and-metric-completeness-28">So any bounded sequence of real numbers has a subsequence which converges in the Euclidean metric. We will see that this implies that the real line is complete, and so is a Banach space under the Euclidean norm.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-cauchy-sequences-and-metric-completeness-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="lemma theorem-like" id="lemma-cauchy-sequences-are-bounded"><h4 class="heading">
+<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cauchy sequences are bounded.</span>
+</h4>
+<div class="para" id="lemma-cauchy-sequences-are-bounded-2-1">Any Cauchy sequence of points in a metric space is bounded.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-cauchy-sequences-are-bounded-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Lemma 3.6.14: Cauchy sequences are bounded"><a tabindex="-1" href="#lemma-cauchy-sequences-are-bounded" title="Copy heading and permalink for Lemma 3.6.14: Cauchy sequences are bounded" aria-label="Copy heading and permalink for Lemma 3.6.14: Cauchy sequences are bounded">🔗</a></div>
+</article>
+<details id="lemma-cauchy-sequences-are-bounded-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="lemma-cauchy-sequences-are-bounded-3-1">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a Cauchy sequence of points in a metric space <span class="process-math">\(\of{ X , \rho } \text{.}\)</span> Then there is a natural number <span class="process-math">\(n_{ 1 } \in \N \)</span> so that <span class="process-math">\(\rho \of{ x_{ m } , x_{ n } } \lt 1 \)</span> for all indices <span class="process-math">\(n \geq n_{ 1 } \text{.}\)</span> Let</div>
+<div class="displaymath process-math" id="lemma-cauchy-sequences-are-bounded-3-1-6">
+\begin{equation*}
+r = \max \of{ \set{ \rho \of{ x_{ 1 } , x_{ n } } , \dotsc , \rho \of{ x_{ n_{ 1 } - 1 } , x_{ 0 } } , \rho \of{ x_{ n_{ 1 } } , x_{ 0 } } + 1 } } \gt 0\text{.}
+\end{equation*}
+</div>
+<div class="para">For all indices <span class="process-math">\(n \in \N \text{,}\)</span> if <span class="process-math">\(n \lt n_{ 1 } \text{,}\)</span> then <span class="process-math">\(\rho \of{ x_{ n } , x_{ 0 } } \leq r \text{.}\)</span> On the other hand, if <span class="process-math">\(n \geq n_{ 1 } \text{,}\)</span> then</div>
+<div class="displaymath process-math" id="lemma-cauchy-sequences-are-bounded-3-1-11">
+\begin{equation*}
+\rho \of{ x_{ n } , x_{ 0 } } \leq \rho \of{ x_{ n } , x_{ n_{ 1 } } } + \rho \of{ x_{ n_{ 1 } } , x_{ 0 } } \leq \rho \of{ x_{ n } , x_{ n_{ 1 } } } + 1 \leq r\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus <span class="process-math">\(\set{ x_{ n } }_{ n = 0 }^{ \infty } \subseteq \mD_{ r } \of{ x_{ 0 } } \text{,}\)</span> and so the sequence <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> is bounded.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-cauchy-sequences-are-bounded-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.6.14.1"><a tabindex="-1" href="#lemma-cauchy-sequences-are-bounded-3" title="Copy heading and permalink for Proof 3.6.14.1" aria-label="Copy heading and permalink for Proof 3.6.14.1">🔗</a></div>
+</article></details>
+<article class="corollary theorem-like" id="corollary-completeness-of-the-real-line"><h4 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Completeness of the real line.</span>
+</h4>
+<div class="para" id="corollary-completeness-of-the-real-line-2-1">The real line <span class="process-math">\(\of{ \R , d } \)</span> is complete, and so <span class="process-math">\(\of{ \R , \norm{ \oparg } } \)</span> is a Banach space.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-completeness-of-the-real-line-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Corollary 3.6.15: Completeness of the real line"><a tabindex="-1" href="#corollary-completeness-of-the-real-line" title="Copy heading and permalink for Corollary 3.6.15: Completeness of the real line" aria-label="Copy heading and permalink for Corollary 3.6.15: Completeness of the real line">🔗</a></div>
+</article>
+<details id="corollary-completeness-of-the-real-line-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="corollary-completeness-of-the-real-line-3-1">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a Cauchy sequence of real numbers <span class="process-math">\(x_{ n } \in \R \text{.}\)</span> Then <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> is bounded by <a href="section-completeness-and-compactness.html#lemma-cauchy-sequences-are-bounded" class="xref" data-knowl="./knowl/xref/lemma-cauchy-sequences-are-bounded.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 3.6.14: Cauchy sequences are bounded">Lemma 3.6.14 Cauchy sequences are bounded</a>, and so it has a convergent subsequence by the <a href="section-completeness-and-compactness.html#theorem-bolzano-weierstrass-theorem" class="xref" data-knowl="./knowl/xref/theorem-bolzano-weierstrass-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.6.13: Bolzano--Weierstrass theorem">Bolzano--Weierstrass theorem</a>. Since <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> is a Cauchy sequence with a convergent subsequence, it is itself convergent by <a href="section-completeness-and-compactness.html#proposition-cauchy-sequences-with-convergent-subsequences" class="xref" data-knowl="./knowl/xref/proposition-cauchy-sequences-with-convergent-subsequences.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.6.12: Cauchy sequences with convergent subsequences">Proposition 3.6.12 Cauchy sequences with convergent subsequences</a>. Since every Cauchy sequence in <span class="process-math">\(\of{ \R , d } \)</span> converges, this metric space is complete.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-completeness-of-the-real-line-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.6.15.1"><a tabindex="-1" href="#corollary-completeness-of-the-real-line-3" title="Copy heading and permalink for Proof 3.6.15.1" aria-label="Copy heading and permalink for Proof 3.6.15.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-cauchy-sequences-and-metric-completeness-31">So the real line is a complete metric space. As the Euclidean metric on <span class="process-math">\(\R \)</span> is induced by the Euclidean norm, this implies that <span class="process-math">\(\R \)</span> is a Banach space. That this completeness result is dependent on the Dedekind completeness of the real number system is not immediately obvious. However, in our proof of the <a href="section-completeness-and-compactness.html#theorem-bolzano-weierstrass-theorem" class="xref" data-knowl="./knowl/xref/theorem-bolzano-weierstrass-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.6.13: Bolzano--Weierstrass theorem">Bolzano--Weierstrass theorem</a>, we used the fact that a bounded monotone sequence of real numbers converges to a real number, which requires the existence of upper and lower limits and is not true in ordered number systems such at the rational numbers <span class="process-math">\(\Q \)</span> in which these upper and lower limits do not necessarily exist.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-cauchy-sequences-and-metric-completeness-31" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsection-cauchy-sequences-and-metric-completeness-32">In fact, the completeness of the real line implies that the normed vector spaces associated to the <span class="process-math">\(p \)</span>-norms are all also Banach spaces.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-cauchy-sequences-and-metric-completeness-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="corollary theorem-like" id="corollary-completeness-of-the-p-norm"><h4 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Completeness of the <span class="process-math">\(p \)</span>-norm.</span>
+</h4>
+<div class="para" id="corollary-completeness-of-the-p-norm-2-1">
+<span class="process-math">\(\of{ \R^{ n } , \norm{ \oparg }_{ p } } \)</span> is a Banach space for all natural numbers <span class="process-math">\(n \in \N \)</span> and extended real numbers <span class="process-math">\(1 \leq p \leq \infty \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-completeness-of-the-p-norm-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Corollary 3.6.16: Completeness of the  p -norm"><a tabindex="-1" href="#corollary-completeness-of-the-p-norm" title="Copy heading and permalink for Corollary 3.6.16: Completeness of the  p -norm" aria-label="Copy heading and permalink for Corollary 3.6.16: Completeness of the  p -norm">🔗</a></div>
+</article>
+<details id="corollary-completeness-of-the-p-norm-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="corollary-completeness-of-the-p-norm-3-1">
+<div class="para">Let <span class="process-math">\(\of{ \vect{ x }_{ m } }_{ m = 0 }^{ \infty } \)</span> be a Cauchy sequence of points <span class="process-math">\(\vect{ x }_{ m } = \of{ x_{ m , k } }_{ k = 1 }^{ n } \in \R^{ n } \)</span> in the metric space <span class="process-math">\(\of{ \R^{ n } , d_{ p } } \text{.}\)</span> Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Then there is a natural number <span class="process-math">\(m_{ \epsilon } \gt 0 \)</span> so that</div>
+<div class="displaymath process-math" id="corollary-completeness-of-the-p-norm-3-1-6">
+\begin{equation*}
+d \of{ \vect{ x }_{ m } , \vect{ x }_{ p } } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(m , p \geq m_{ \epsilon } \text{.}\)</span> We observe that for each index <span class="process-math">\(1 \leq k \leq n \text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="corollary-completeness-of-the-p-norm-3-1-9">
+\begin{equation*}
+d \of{ x_{ m , k } , x_{ p , k } } = \abs{ x_{ m , k } - x_{ p , k } } \leq \norm{ \vect{ x }_{ m } - \vect{ x }_{ p } }_{ p } = d_{ p } \of{ \vect{ x }_{ m } , \vect{ x }_{ p } } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(m , p \geq m_{ \epsilon } \text{,}\)</span> and so <span class="process-math">\(\of{ x_{ m , k } }_{ m = 0 }^{ \infty } \)</span> is a Cauchy sequence of real numbers.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-completeness-of-the-p-norm-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="corollary-completeness-of-the-p-norm-3-2">
+<div class="para">
+<a href="section-completeness-and-compactness.html#corollary-completeness-of-the-real-line" class="xref" data-knowl="./knowl/xref/corollary-completeness-of-the-real-line.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 3.6.15: Completeness of the real line">Corollary 3.6.15 Completeness of the real line</a> now implies that this sequence converges to some real number</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/corollary-completeness-of-the-real-line.html ./knowl/xref/theorem-sequential-convergence-in-the-p-metric.html ./knowl/xref/problem-sequential-convergence-in-the-infinity-metric.html" id="corollary-completeness-of-the-p-norm-3-2-2">
+\begin{equation*}
+x_{ k } = \lim_{ m \to \infty }{ x_{ m , k } }\text{.}
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(\vect{ x } = \of{ x_{ k } }_{ k = 1 }^{ n } \in \R^{ n } \text{.}\)</span> <a href="section-convergence-and-limits.html#theorem-sequential-convergence-in-the-p-metric" class="xref" data-knowl="./knowl/xref/theorem-sequential-convergence-in-the-p-metric.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.7: Sequential convergence in the  p -metric">Theorem 3.2.7 Sequential convergence in the <span class="process-math">\(p \)</span>-metric</a> and <a href="section-convergence-and-limits.html#problem-sequential-convergence-in-the-infinity-metric" class="xref" data-knowl="./knowl/xref/problem-sequential-convergence-in-the-infinity-metric.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 3.2.5.2: Sequential convergence in the infinity metric">Problem 3.2.5.2 Sequential convergence in the infinity metric</a> now imply that <span class="process-math">\(\of{ \vect{ x }_{ m } }_{ m = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(\vect{ x } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-completeness-of-the-p-norm-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="corollary-completeness-of-the-p-norm-3-3">Since every Cauchy sequence in <span class="process-math">\(\of{ \R^{ n } , d_{ p } } \)</span> converges, this metric space is complete. We conclude that <span class="process-math">\(\of{ \R^{ n } , \norm{ \oparg }_{ p } } \)</span> is a Banach space.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-completeness-of-the-p-norm-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.6.16.1"><a tabindex="-1" href="#corollary-completeness-of-the-p-norm-3" title="Copy heading and permalink for Proof 3.6.16.1" aria-label="Copy heading and permalink for Proof 3.6.16.1">🔗</a></div>
+</article></details>
+<section class="conclusion" id="subsection-cauchy-sequences-and-metric-completeness-34">
+<div class="para" id="subsection-cauchy-sequences-and-metric-completeness-34-1">It may appear from the above result that almost all commonly appearing metric spaces are complete, but this is certainly not the case. The rational numbers, <span class="process-math">\(\Q \text{,}\)</span> for example, form a metric subspace of the real line <span class="process-math">\(\R \)</span> which are not complete. We showed this by exhibiting a Cauchy sequence of rational numbers which converge to an irrational number, but this could also be observed by noting that the rational numbers are not a closed subset of the real numbers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-cauchy-sequences-and-metric-completeness-34-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsection-cauchy-sequences-and-metric-completeness-34-2">As the properties of complete metric spaces are incredibly useful for performing analysis, it is almost always preferable to work in a complete metric space. Shortly, we will see that this is usually possible, by passing to the <dfn class="terminology">completion</dfn> of an incomplete metric space.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-cauchy-sequences-and-metric-completeness-34-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.6.1: Cauchy Sequences and Metric Completeness"><a tabindex="-1" href="#subsection-cauchy-sequences-and-metric-completeness" title="Copy heading and permalink for Subsection 3.6.1: Cauchy Sequences and Metric Completeness" aria-label="Copy heading and permalink for Subsection 3.6.1: Cauchy Sequences and Metric Completeness">🔗</a></div>
+</section>
+<section class="subsection" id="subsection-completion-of-a-metric-space">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Completion of a Metric Space [SKIP]</span>
+</h3>
+<section class="introduction" id="subsection-completion-of-a-metric-space-2">
+<div class="para" id="subsection-completion-of-a-metric-space-2-1">Text before the first subdivision.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-completion-of-a-metric-space-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="conclusion" id="subsection-completion-of-a-metric-space-3">
+<div class="para" id="subsection-completion-of-a-metric-space-3-1">Text after the last subdivision.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-completion-of-a-metric-space-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.6.2: Completion of a Metric Space [SKIP]"><a tabindex="-1" href="#subsection-completion-of-a-metric-space" title="Copy heading and permalink for Subsection 3.6.2: Completion of a Metric Space [SKIP]" aria-label="Copy heading and permalink for Subsection 3.6.2: Completion of a Metric Space [SKIP]">🔗</a></div>
+</section>
+<section class="subsection" id="subsection-metric-compactness">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Metric Compactness</span>
+</h3>
+<section class="introduction" id="subsection-metric-compactness-2">
+<div class="para" id="subsection-metric-compactness-2-1">When is it the case that a sequence in a metric space has a convergent subsequence? This is a natural question to ask about metric spaces. We have seen so far that this occurs when the original sequence converges, and when the sequence is a bounded sequence of real numbers, but this phenomenon is not limited to the case of convergent sequences. In some metric spaces, all sequences have convergent subsequences. These metric spaces are called <dfn class="terminology">(sequentially) compact</dfn>, and we will devote the rest of this chapter to investigating the properties of sequentially compact metric spaces.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-metric-compactness-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="conclusion" id="subsection-metric-compactness-3">
+<div class="para" id="subsection-metric-compactness-3-1">Text after the last subdivision.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-metric-compactness-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.6.3: Metric Compactness"><a tabindex="-1" href="#subsection-metric-compactness" title="Copy heading and permalink for Subsection 3.6.3: Metric Compactness" aria-label="Copy heading and permalink for Subsection 3.6.3: Metric Compactness">🔗</a></div>
+</section>
+<section class="conclusion" id="section-completeness-and-compactness-6">
+<div class="para" id="section-completeness-and-compactness-6-1">Text after the last subsection.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-completeness-and-compactness-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="exercises" id="exercises-completeness-and-compactness">
+<h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
 </h3>
 <section class="introduction" id="exercises-completeness-and-compactness-2">
 <div class="para" id="exercises-completeness-and-compactness-2-1">The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-completeness-and-compactness-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="conclusion" id="exercises-completeness-and-compactness-3">
-<div class="para" id="exercises-completeness-and-compactness-3-1">Short answers and/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-completeness-and-compactness-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 3.6: Exercises"><a tabindex="-1" href="#exercises-completeness-and-compactness" title="Copy heading and permalink for Reading Questions 3.6: Exercises" aria-label="Copy heading and permalink for Reading Questions 3.6: Exercises">🔗</a></div>
+<div class="para" id="exercises-completeness-and-compactness-3-1">Short answers and/or in-depth solutions to these exercises are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-completeness-and-compactness-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Exercises 3.6.4: Exercises"><a tabindex="-1" href="#exercises-completeness-and-compactness" title="Copy heading and permalink for Exercises 3.6.4: Exercises" aria-label="Copy heading and permalink for Exercises 3.6.4: Exercises">🔗</a></div>
 </section>
-<section class="reading-questions" id="reading-questions-completeness-and-compactness">
+<section class="reading-questions" id="problems-completeness-and-compactness">
 <h3 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reading Questions</span>
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
 </h3>
-<section class="introduction" id="reading-questions-completeness-and-compactness-2">
-<div class="para" id="reading-questions-completeness-and-compactness-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#reading-questions-completeness-and-compactness-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="problems-completeness-and-compactness-2">
+<div class="para" id="problems-completeness-and-compactness-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-completeness-and-compactness-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="reading-questions-completeness-and-compactness-3">
-<div class="para" id="reading-questions-completeness-and-compactness-3-1">In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#reading-questions-completeness-and-compactness-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 3.6: Reading Questions"><a tabindex="-1" href="#reading-questions-completeness-and-compactness" title="Copy heading and permalink for Reading Questions 3.6: Reading Questions" aria-label="Copy heading and permalink for Reading Questions 3.6: Reading Questions">🔗</a></div>
+<section class="conclusion" id="problems-completeness-and-compactness-3">
+<div class="para" id="problems-completeness-and-compactness-3-1">In-depth solutions to these problems are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-completeness-and-compactness-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 3.6.5: Problems"><a tabindex="-1" href="#problems-completeness-and-compactness" title="Copy heading and permalink for Reading Questions 3.6.5: Problems" aria-label="Copy heading and permalink for Reading Questions 3.6.5: Problems">🔗</a></div>
 </section><div class="autopermalink" aria-hidden="true" data-description="Section 3.6: Completeness and Compactness"><a tabindex="-1" href="#section-completeness-and-compactness" title="Copy heading and permalink for Section 3.6: Completeness and Compactness" aria-label="Copy heading and permalink for Section 3.6: Completeness and Compactness">🔗</a></div>
 </section>
 </div>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<subsection xml:id="subsection-TITLE" xmlns:xi="http://www.w3.org/2001/XInclude">
+<subsection xml:id="subsection-metric-compactness" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>
-    SUBSECTION TITLE
+    Metric Compactness
   </title>
 
   <introduction>
     <p>
-      Text before the first subdivision.
+      When is it the case that a sequence in a metric space has a convergent subsequence? This is a natural question to ask about metric spaces. We have seen so far that this occurs when the original sequence converges, and when the sequence is a bounded sequence of real numbers, but this phenomenon is not limited to the case of convergent sequences. In some metric spaces, all sequences have convergent subsequences. These metric spaces are called <term> (sequentially) compact </term>, and we will devote the rest of this chapter to investigating the properties of sequentially compact metric spaces.
     </p>
   </introduction>
   

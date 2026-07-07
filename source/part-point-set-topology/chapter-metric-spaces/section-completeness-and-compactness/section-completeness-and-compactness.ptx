@@ -7,11 +7,15 @@
 
   <introduction>
     <p>
-      Text before the first subsection.
+      In this section, we will investigate two related notions which, like much of the material of this chapter, have to do with the convergence of sequences in metric spaces. First, we will reexamine the limiting behavior of sequences from a more intrinsic perspective, drawing a distinction between convergent sequences and <term> Cauchy sequences </term>. We will then examine the properties of <term> complete metric spaces </term>, in which this distinction does not exist. Next, we will discuss <term> compact metric spaces </term>, which are those in which, even if a sequence diverges, it has a convergent <term> subsequence </term>. Finally, to conclude this chapter, we will use both of these notions to prove several powerful results about metric spaces.
     </p>
   </introduction>
 
-  <!-- <xi:include href="./subsection-TITLE.ptx"/> -->
+  <xi:include href="./subsection-cauchy-sequences-and-metric-completeness.ptx"/>
+
+  <xi:include href="./subsection-completion-of-a-metric-space.ptx"/>
+
+  <xi:include href="./subsection-metric-compactness.ptx"/>
 
   <conclusion>
     <p>
@@ -19,7 +23,7 @@
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-completeness-and-compactness.ptx"/>
+  <xi:include href="./exercises-completeness-and-compactness.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-completeness-and-compactness.ptx"/>
+  <xi:include href="./problems-completeness-and-compactness.ptx"/>
 </section>

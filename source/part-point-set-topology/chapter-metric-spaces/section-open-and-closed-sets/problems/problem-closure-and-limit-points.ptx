@@ -7,7 +7,7 @@
   
   <statement>
     <p>
-      Let <m> U \subseteq X </m> be a subset of a metric space <m> \of{ X , \rho } </m>. Prove that <m> \Cl \of{ U } = U \cap U' </m>.
+      Let <m> U \subseteq X </m> be a subset of a metric space <m> \of{ X , \rho } </m>. Prove that <m> \Cl \of{ U } = U \cup U' </m>.
     </p>
   </statement>
   

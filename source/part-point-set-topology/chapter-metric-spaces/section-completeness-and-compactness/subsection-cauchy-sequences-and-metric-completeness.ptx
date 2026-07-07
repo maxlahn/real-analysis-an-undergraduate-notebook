@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-cauchy-sequences-and-metric-completeness" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Cauchy Sequences and Metric Completeness
+  </title>
+
+  <introduction>
+    <p>
+      Thus far, we have examined the limiting behavior of sequences through an extrinsic perspective, focusing on the distance between the values of a given sequence and the points of the metric space. We now turn our attention to a more broad class of sequences, which are called <term> Cauchy sequences </term>, and which are viewed in a more intrinsic way. While a sequence in a metric space is convergent if its values eventually grow close to a specific point, it is Cauchy if its values eventually grow close to each other.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-cauchy-sequence">
+    <title>
+      Cauchy sequence
+    </title>
+    
+    <idx>
+      Cauchy sequence
+    </idx>
+    
+    <statement>
+      <p>
+        A sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> x_{ n } \in X </m> in a metric space <m> \of{ X , \rho } </m> is called <term> Cauchy </term> if for all positive real numbers <m> \epsilon \gt 0 </m>, there is a natural number <m> n_{ \epsilon } \in \N </m> so that <m> \rho \of{ x_{ m } , x_{ n } } \lt \epsilon </m> for all indices <m> m , n \geq n_{ \epsilon } </m>.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    <idx>
+      Cauchy criterion
+    </idx>
+    
+    The above requirement is sometimes called the <term> Cauchy criterion </term>, so a sequence in a metric space satisfies the Cauchy criterion if the distances between its values eventually becomes negligible. Note the distinction between this notion and that of convergence: The entries of a convergent sequence must approach a specific point but the entries of a Cauchy sequence must approach each other (while not necessarily approaching a point of the metric space). At first glance, these notions might seem to be equivalent characterizations of sequences. However, we will see that in some metric spaces, this is not the case.
+  </p>
+
+  <example xml:id="example-cauchy-sequence">
+    <title>
+      Cauchy sequence
+    </title>
+    
+    <statement>
+      <p>
+        For each natural number <m> k \in \N </m>, let <m> d_{ k } \in \set{ 0 , 1 , 2 , \dotsc , 9 } </m> denote the <m> k </m>th digit in the decimal expansion of <m> \sqrt{ 2 } \approx 1.414213562 </m>, so that
+        
+        <md>
+          <mrow>
+            d_{ 0 } \amp = 1 \amp d_{ 1 } \amp = 4 \amp d_{ 2 } \amp = 1 \amp d_{ 3 } \amp = 4 \amp d_{ 4 } \amp = 2 \amp \hdots
+          </mrow>
+        </md>.
+        
+        Consider the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of rational numbers <m> x_{ n } \in \Q </m> defined by the formula
+        
+        <md>
+          x_{ n } = \sum_{ k = 0 }^{ n }{ \frac{ d_{ k } }{ 10^{ k } } } = d_{ 0 } + \frac{ d_{ 1 } }{ 10 } + \frac{ d_{ 2 } }{ 100 } + \dotsb + \frac{ d_{ n } }{ 10^{ n } }
+        </md>.
+        
+        Let <m> \epsilon \gt 0 </m> be a positive real number. The Archimedean principle implies that
+        
+        <md>
+          n_{ \epsilon } \gt \log \of{ \frac{ 1 }{ \epsilon } }
+        </md>
+        
+        for some natural number <m> n_{ \epsilon } \in \N </m>. We observe that
+        
+        <md>
+          <mrow>
+            d \of{ x_{ m } , x_{ n } } \amp = \abs{ x_{ m } - x_{ n } } = x_{ \max \of{ \set{ m , n } } } - x_{ \min \of{ \set{ m , n } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \sum_{ k = 0 }^{ \max \of{ \set{ m , n } } }{ \frac{ d_{ k } }{ 10^{ k } } } - \sum_{ k = 0 }^{ \min \of{ \set{ m , n } } }{ \frac{ d_{ k } }{ 10^{ k } } } = \sum_{ k = \min \of{ \set{ m , n } } + 1 }^{ \max \of{ \set{ m , n } } }{ \frac{ d_{ k } }{ 10^{ k } } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \frac{ 1 }{ 10^{ \min \of{ \set{ m , n } } } } \leq \frac{ 1 }{ 10^{ n_{ \epsilon } } } \lt \epsilon
+          </mrow>
+        </md>
+        
+        for all indices <m> m , n \geq n_{ \epsilon } </m>. Thus <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is Cauchy.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    The above example of Cauchy sequences shows that Cauchy sequences in a metric space need not converge; the given Cauchy sequence of rational numbers converges to <m> \sqrt{ 2 } </m> and thus diverges in the metric space <m> \of{ \Q , d } </m>. However, any convergent sequence is Cauchy.
+  </p>
+  
+  <proposition xml:id="proposition-convergent-sequences-are-cauchy">
+    <title>
+      Convergent sequences are Cauchy
+    </title>
+    
+    <statement>
+      <p>
+        Any convergent sequence of points in a metric space is Cauchy.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of points <m> x_{ n } \in X </m> in a metric space <m> \of{ X , \rho } </m>, and suppose that <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges to a limit <m> x \in X </m>.
+      </p>
+      
+      <p>
+        Let <m> \epsilon \gt 0 </m> be a positive real number. Since <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m>, there is a natural number <m> n_{ \epsilon } \in \N </m> so that
+        
+        <md>
+          \rho \of{ x_{ n } , x } \lt \frac{ \epsilon }{ 2 }
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>. In particular, we observe that
+        
+        <md>
+          \rho \of{ x_{ m } , x_{ n } } \leq \rho \of{ x_{ m } , x } + \rho \of{ x , x_{ n } } = \rho \of{ x_{ m } , x } + \rho \of{ x_{ n } , x } \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+        </md>
+        
+        for all indices <m> m , n \geq n_{ \epsilon } </m>. We conclude that the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is Cauchy.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    So the convergence of a sequence implies that it satisfies the Cauchy criterion. A natural follow-up question to the above result is whether or not it is possible for the reverse implication holds. The answer to this question actually depends on the particulars of the metric space. Such a metric space in which Cauchy sequences converge is called <term> complete </term>.
+  </p>
+  
+  <definition xml:id="definition-metric-completeness">
+    <title>
+      Metric completeness
+    </title>
+    
+    <idx>
+      metric completeness
+    </idx>
+    
+    <idx>
+      metric incompleteness
+    </idx>
+    
+    <idx>
+      Banach space
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a metric space <m> \of{ X , \rho } </m>.
+        
+        <ul>
+          <li>
+            <title>
+              Completeness
+            </title>
+            
+            <p>
+              The subset <m> U </m> is called <term> complete </term> in <m> X </m> if every Cauchy sequence of points in <m> U </m> converges in <m> X </m> to a limit in <m> U </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Incompleteness
+            </title>
+            
+            <p>
+              The subset <m> U </m> is called <term> incomplete </term> in <m> X </m> if some Cauchy sequence of points in <m> U </m> does not converge in <m> X </m> to a limit in <m> U </m>.
+            </p>
+          </li>
+        </ul>
+        
+        A metric space <m> \of{ X , \rho } </m> is called <term> complete </term> (resp. <term> incomplete </term>) if <m> X </m> is complete (resp. incomplete) in <m> X </m>. A complete normed vector space is called a <term> Banach space </term>.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    Complete metric spaces are ideal for performing mathematical analysis, as it is often much easier to verify that a given sequence is Cauchy (and therefore has a limit) than to actually compute its limiting value.
+  </p>
+  
+  <example xml:id="example-metric-completeness">
+    <title>
+      Metric completeness
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of complete and incomplete metric spaces.
+        
+        <ul>
+          <li>
+            <p>
+              Any discrete metric space is complete, since any Cauchy sequence in a discrete metric space is eventually constant. More generally, any metric space whose points are all isolated points (for example, any finite metric space) is complete.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The rational numbers <m> \Q </m> are not complete in the real line <m> \of{ \R , d } </m>. Indeed, we have already seen an example of a Cauchy sequence of rational numbers which converges in <m> \R </m> to an irrational number <m> \sqrt{ 2 } \in \R \setminus \Q </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    The above fact about the rational number system is one of the reasons why it doesn't serve as a good context in which to perform mathematical analysis. However, as we will shortly see, the real number system (and, more generally, Euclidean space of any dimension) is a complete metric space, and so there is a rich theory of real analysis. These facts are themselves intimately related to the fact that the rational number system is not Dedekind complete, while the real number system is. This relationship between Dedekind completeness and completeness as a metric space is true for subspaces of the real numbers because of the relationship between the standard ordering of the real numbers and the point-set topology of the Euclidean metric, which we will examine in more detail in <xref ref="chapter-topological-spaces"/>. We will prove that the real numbers are complete in the Euclidean metric shortly.
+  </p>
+  
+  <p>
+    First, however, let us examine some of the properties of complete subsets of metric spaces in general. The following two results will be useful in determining whether or not a subset of a given metric space is complete. First, notice that any complete subset of a metric space needs to contain all of its limit points, and so must be closed.
+  </p>
+  
+  <proposition xml:id="proposition-complete-subsets-are-closed">
+    <title>
+      Complete subsets are closed
+    </title>
+    
+    <statement>
+      <p>
+        A complete subset of a metric space is closed.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        By contraposition. Let <m> U \subseteq X </m> be a subset of a metric space <m> \of{ X , \rho } </m>, and suppose that <m> U </m> is not closed in <m> X </m>. Then <m> U \subsetneq \Cl \of{ U } = U \cup U' </m> by (2) of <xref ref="proposition-interior-closure"/> and <xref ref="problem-closure-and-limit-points"/>, and so <m> U' \not \subseteq U </m>; that is, there is some limit point <m> x \in U' </m> which is not an element of <m> U </m>.
+      </p>
+      
+      <p>
+        Since <m> x \in U' </m> is a limit point of <m> U </m> in <m> X </m>,
+        
+        <md>
+          x = \lim_{ n \to \infty }{ u_{ n } }
+        </md>
+        
+        for some sequence <m> \of{ u_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> u_{ n } \in U </m>. Since <m> \of{ u_{ n } }_{ n = 0 }^{ \infty } </m> converges in <m> X </m>, it is Cauchy. However, the limit of this Cauchy sequence of points in <m> U </m> does not lie in <m> U </m>. Thus <m> U </m> is not complete in <m> X </m>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    So any complete subset of a metric space is closed. The converse to this statement is not, in general, true, since any metric space is closed in the metric, but not every metric space is complete. However, there is a partial converse to the above result; any closed subset of a complete metric space is also complete.
+  </p>
+  
+  <proposition xml:id="proposition-closed-subsets-of-complete-metric-spaces">
+    <title>
+      Closed subsets of complete metric spaces
+    </title>
+    
+    <statement>
+      <p>
+        A subset of a complete metric space is complete if and only if it is closed.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a complete metric space <m> \of{ X , \rho } </m>. We have already seen in <xref ref="proposition-complete-subsets-are-closed"/> that if <m> U </m> is complete in <m> X </m>, then it is closed in <m> X </m>. It remains to prove the converse implication. To that end, suppose that <m> U </m> is not complete in <m> X </m>, so that some Cauchy sequence <m> \of{ u_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> u_{ n } \in U </m> does not converge to a limit in <m> U </m>.
+      </p>
+      
+      <p>
+        However, since <m> \of{ u_{ n } }_{ n = 0 }^{ \infty } </m> is a Cauchy sequence in a complete metric space <m> \of{ X , \rho } </m>, it converges to a limit
+        
+        <md>
+          x = \lim_{ n \to \infty }{ u_{ n } } \in X
+        </md>.
+        
+        Since <m> u_{ n } \neq x </m> for all indices <m> n \in \N </m>, we conclude that <m> x \in U' </m> is a limit point of <m> U </m> in <m> X </m> which is not contained in <m> U </m>. <xref ref="problem-closure-and-limit-points"/> implies that <m> x \in \Cl \of{ U } </m> is a point of closure of <m> U </m> in <m> X </m>, and so <m> U </m> is a proper subset of its closure <m> \Cl \of{ U } </m>. (2) of <xref ref="proposition-interior-closure"/> now implies that <m> U </m> is not closed in <m> X </m>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    We now would like to prove the completeness of various metric spaces associated with the real number system <m> \R </m>. First, however, let us consider the notion of a <term> subsequence </term>. Informally, a subsequence of a sequence is a sequence which takes some, but not necessarily all, of the same entries, and these entries appear in the same relative order. We can form a subsequence of a sequence by selecting some infinite subset of indices to include in the subsequence. In fact, any subsequence can be formed in this manner. In order to formalize this notion, recall that a sequence is formally a map whose domain is the natural numbers or the positive integers, and that an increasing function is an injective and non-decreasing function.
+  </p>
+  
+  <definition xml:id="definition-subsequence">
+    <title>
+      Subsequence
+    </title>
+    
+    <idx>
+      subsequence
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } </m>
+      </usage>
+      
+      <description>
+        <p>
+          a subsequence of <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        A sequence <m> y \colon \N \to X </m> of points in a metric space <m> \of{ X , \rho } </m> is a <term> subsequence </term> of a sequence <m> x \colon \N \to X </m> of points in <m> X </m> if <m> y = x \circ f </m> for some increasing function <m> f \colon \N \to \N </m>. In this case, if <m> x = \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> and <m> f = \of{ n_{ k } }_{ k = 0 }^{ \infty } </m>, then we write <m> y = \of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } </m>.
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-subsequences">
+    <title>
+      Subsequences
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of subsequences:
+        
+        <ul>
+          <li>
+            <p>
+              The sequences
+              
+              <md>
+                \of{ n }_{ n = 3 }^{ \infty } = \of{ n + 3 }_{ n = 0 }^{ \infty } = \of{ 3 , 4 , 5 , 6 , \dotsc }
+              </md>
+              
+              and
+              
+              <md>
+                \of{ 2 n + 1 }_{ n = 0 }^{ \infty } = \of{ 1 , 3 , 5 , 7 , \dotsc }
+              </md>
+              
+              are subsequences of the sequence <m> \of{ n }_{ n = 0 }^{ \infty } = \of{ 0 , 1 , 2 , 3 , 4 , \dotsc } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The sequence
+              
+              <md>
+                \of{ \frac{ 1 }{ n^{ 2 } } }_{ n = 1 }^{ \infty } = \of{ 1 , \frac{ 1 }{ 4 } , \frac{ 1 }{ 9 } , \dotsc }
+              </md>
+              
+              is a subsequence of the sequence
+              
+              <md>
+                \of{ \frac{ 1 }{ n } }_{ n = 1 }^{ \infty } = \of{ 1 , \frac{ 1 }{ 2 } , \frac{ 1 }{ 3 } , \frac{ 1 }{ 4 } , \dotsc }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The convergent sequence
+              
+              <md>
+                \of{ 1 }_{ n = 0 }^{ \infty } = \of{ \of{ -1 }^{ 2 n } }_{ n = 0 }^{ \infty } = \of{ 1 , 1 , 1 , \dotsc }
+              </md>
+              
+              is a subsequence of the divergent sequence <m> \of{ \of{ -1 }^{ n } }_{ n = 0 }^{ \infty } = \of{ 1 , -1 , 1 , -1 , 1 , \dotsc } </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    The above example shows that divergent sequences may have convergent subsequences. In fact, much of this section will be devoted to examining the properties of metric spaces in which this is the only possible situation. First, however, note that any subsequence of a convergent sequence in a metric space converges to the same limit. In order to show this, it helps to see the following fact about strictly increasing functions on the natural numbers.
+  </p>
+  
+  <lemma xml:id="lemma-increasing-functions">
+    <title>
+      Increasing functions
+    </title>
+    
+    <statement>
+      <p>
+        <m> f \of{ n } \geq n </m> for any increasing function <m> f \colon \N \to \N </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        By induction on <m> n \in \N </m>. For the base case <m> n = 0 </m>, we observe that <m> f \of{ 0 } \in \N </m> is a natural number, and so
+        
+        <md>
+          f \of{ n } = f \of{ 0 } \geq 0 = n
+        </md>.
+      </p>
+      
+      <p>
+        For the inductive step, suppose for the inductive hypothesis that <m> f \of{ n } \geq n </m> for some natural number <m> n \in \N </m>. We observe that <m> n \leq n + 1 </m>, and so <m> f \of{ n } \leq f \of{ n + 1 } </m>, since <m> f </m> is non-decreasing. Moreover, <m> n \neq n + 1 </m>, and so <m> f \of{ n } \neq f \of{ n + 1 } </m>, since <m> f </m> is injective. In particular,
+        
+        <md>
+          f \of{ n + 1 } \gt f \of{ n } \geq n
+        </md>
+        
+        by the inductive hypothesis, and so <m> f \of{ n + 1 } \geq n + 1 </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <p>
+    We are now ready to show that a subsequence of a convergent sequence in a metric space is itself convergent, and converges to the same limit as the larger sequence. So while a subsequence of a divergent sequence might converge, the reverse situation cannot occur.
+  </p>
+
+  <proposition xml:id="proposition-subsequences-of-convergent-sequences">
+    <title>
+      Subsequences of convergent sequences
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of points <m> x_{ n } \in X </m> in a metric space <m> \of{ X , \rho } </m>. If <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges in <m> X </m>, then any subsequence <m> \of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } </m> also converges in <m> X </m>, and
+        
+        <md>
+          \lim_{ k \to \infty }{ x_{ n_{ k } } } = \lim_{ n \to \infty }{ x_{ n } }
+        </md>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let
+        
+        <md>
+          x = \lim_{ n \to \infty }{ x_{ n } }
+        </md>,
+        
+        and consider a positive real number <m> \epsilon \gt 0 </m>. There is some natural number <m> n_{ \epsilon } \in \N </m> so that <m> \rho \of{ x_{ n } , x } \lt \epsilon </m> for all indices <m> n \geq n_{ \epsilon } </m>.
+      </p>
+      
+      <p>
+        We observe that <xref ref="lemma-increasing-functions"/> implies that <m> n_{ k } \geq n_{ \epsilon } </m> for all indices <m> k \geq n_{ \epsilon } </m>, and so
+        
+        <md>
+          \rho \of{ x_{ n_{ k } } , x } \lt \epsilon
+        </md>
+        
+        for all such indices. Thus
+        
+        <md>
+          \lim_{ k \to \infty }{ x_{ n_{ k } } } = x = \lim_{ n \to \infty }{ x_{ n } }
+        </md>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    An analogous argument can be used to show that any subsequence of a sequence of real numbers which diverges to infinity must itself diverge to infinity. Taken together with <xref ref="proposition-subsequences-of-convergent-sequences"/>, these results state that a subsequence of a sequence in a metric space with a limit shares that limit. We have seen that the opposite is not in general true; divergent sequences which do not approach a limit may have subsequences which do. However, this cannot happen if the original sequence was Cauchy; a Cauchy sequence in a metric space with a convergent subsequence converges to the limit of this subsequence.
+  </p>
+  
+  <proposition xml:id="proposition-cauchy-sequences-with-convergent-subsequences">
+    <title>
+      Cauchy sequences with convergent subsequences
+    </title>
+    
+    <statement>
+      <p>
+        If a Cauchy sequence of points in a metric space has a convergent subsequence, then it converges.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a Cauchy sequence of points <m> x_{ n } \in X </m> in a metric space <m> X </m>, and suppose that some subsequence <m> \of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } </m> converges to a point <m> x \in X </m>. We will show that the entire sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> also converges to <m> x </m>.
+      </p>
+      
+      <p>
+        To that end, let <m> \epsilon \gt 0 </m> be a positive real number. Since <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is Cauchy, there is a natural number <m> m_{ \epsilon } \in \N </m> so that 
+        <md>
+          \rho \of{ x_{ m } , x_{ n } } \lt \frac{ \epsilon }{ 2 }
+        </md>
+        
+        for all indices <m> m , n \geq m_{ \epsilon } </m>. Since the subsequence <m> \of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } </m> converges to <m> x </m>, there is a natural number <m> k_{ \epsilon } \in \N </m> so that
+        
+        <md>
+          \rho \of{ x_{ n_{ k } } , x } \lt \frac{ \epsilon }{ 2 }
+        </md>
+        
+        for all indices <m> k \geq k_{ \epsilon } </m>. Let <m> n_{ \epsilon } = \max \of{ \set{ m_{ \epsilon } , k_{ \epsilon } } } </m>. We observe that <xref ref="lemma-increasing-functions"/> implies that <m> n_{ k } \geq n_{ \epsilon } </m> for all indices <m> k \geq n_{ \epsilon } </m>. In particular,
+        
+        <md>
+          \rho \of{ x_{ n } , x } \leq \rho \of{ x_{ n } , x_{ n_{ n } } } + \rho \of{ x_{ n_{ n } } , x } \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>. Thus the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> x </m>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    The above result will come in handy in proving the completeness of the real numbers in the Euclidean metric. So will the following foundational theorem, the content of which is that any bounded sequence of real numbers has a subsequence which is convergent in the Euclidean metric.
+  </p>
+
+  <theorem xml:id="theorem-bolzano-weierstrass-theorem">
+    <title>
+      Bolzano--Weierstrass theorem
+    </title>
+    
+    <creator>
+      Bernard Bolzano; Karl Weierstrass
+    </creator>
+    
+    <statement>
+      <p>
+        Any bounded sequence of real numbers has a convergent subsequence.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of real numbers <m> x_{ n } \in \R </m> which is bounded in the Euclidean metric on <m> \R </m>. For each natural number <m> m \in \N </m>, consider the set
+        
+        <md>
+          T_{ m } = \setmid{ x_{ n } \in \R }{ n \geq m }
+        </md>.
+        
+        There are two cases: either <m> T_{ m } </m> has a maximum for every index <m> m \in \N </m> or <m> T_{ m } </m> does not have a maximum for some index <m> m \in \N </m>. We will show that in either case, <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> has a monotone subsequence.
+      </p>
+      
+      <p>
+        First suppose that <m> T_{ m } </m> has a maximum for each index <m> m \in \N </m>. Consider the sequence <m> \of{ n_{ k } }_{ k = 0 }^{ \infty } </m> of natural numbers <m> n_{ k } \in \N </m> defined recursively by
+        
+        <md>
+          <mrow>
+            n_{ 0 } \amp = \min \of{ \setmid{ n \in \N }{ x_{ n } = \max \of{ T_{ 0 } } } }
+          </mrow>
+          
+          <mrow>
+            n_{ k + 1 } \amp = \min \of{ \setmid{ n \in \N }{ n \geq n_{ k } + 1 \textrm{ and } x_{ n } = \max \of{ T_{ n_{ k + 1 } } } } }
+          </mrow>
+        </md>.
+        
+        Since <m> n_{ m + 1 } \geq n_{ m } + 1 \gt n_{ m } </m>, the sequence <m> \of{ n_{ k } }_{ n = 0 }^{ \infty } </m> is increasing, and so <m> \of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } </m> is a subsequence of <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m>. Moreover, we observe that
+        
+        <md>
+          x_{ n_{ k + 1 } } = \max \of{ T_{ n_{ k + 1 } } } \leq \min \of{ T_{ n_{ k } } } = x_{ n_{ k } }
+        </md>
+        
+        for all indices <m> k \in \N </m>, and so <m> \of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } </m> is non-increasing.
+      </p>
+      
+      <p>
+        On the other hand, now suppose that <m> T_{ m } </m> has no maximum for some index <m> m \in \N </m>. Consider the sequence <m> \of{ n_{ k } }_{ k = 0 }^{ \infty } </m> of natural numbers <m> n_{ k } \in \N </m> defined recursively by
+        
+        <md>
+          <mrow>
+            n_{ 0 } \amp = m
+          </mrow>
+          
+          <mrow>
+            n_{ k + 1 } \amp = \min \of{ \setmid{ n \in \N }{ n \geq n_{ k } + 1 \textrm{ and } x_{ n } \gt x_{ n_{ k } } } }
+          </mrow>
+        </md>.
+        
+        Since <m> n_{ m + 1 } \geq n_{ m } + 1 \gt n_{ m } </m>, the sequence <m> \of{ n_{ k } }_{ n = 0 }^{ \infty } </m> is increasing, and so <m> \of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } </m> is a subsequence of <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m>. Moreover, we observe that
+        
+        <md>
+          x_{ n_{ k + 1 } } \gt x_{ n_{ k } }
+        </md>
+        
+        for all indices <m> k \in \N </m>, and so <m> \of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } </m> is increasing.
+      </p>
+      
+      <p>
+        In either case, <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> has a monotone subsequence <m> \of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } </m>. Since <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is bounded, so too is <m> \of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } </m>, and so <xref ref="theorem-monotone-convergence-theorem"/> implies that <m> \of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } </m> converges.
+      </p>
+    </proof>
+  </theorem>
+  
+  <p>
+    So any bounded sequence of real numbers has a subsequence which converges in the Euclidean metric. We will see that this implies that the real line is complete, and so is a Banach space under the Euclidean norm.
+  </p>
+  
+  <lemma xml:id="lemma-cauchy-sequences-are-bounded">
+    <title>
+      Cauchy sequences are bounded
+    </title>
+    
+    <statement>
+      <p>
+        Any Cauchy sequence of points in a metric space is bounded.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a Cauchy sequence of points in a metric space <m> \of{ X , \rho } </m>. Then there is a natural number <m> n_{ 1 } \in \N </m> so that <m> \rho \of{ x_{ m } , x_{ n } } \lt 1 </m> for all indices <m> n \geq n_{ 1 } </m>. Let
+        
+        <md>
+          r = \max \of{ \set{ \rho \of{ x_{ 1 } , x_{ n } } , \dotsc , \rho \of{ x_{ n_{ 1 } - 1 } , x_{ 0 } } , \rho \of{ x_{ n_{ 1 } } , x_{ 0 } } + 1 } } \gt 0
+        </md>.
+        
+        For all indices <m> n \in \N </m>, if <m> n \lt n_{ 1 } </m>, then <m> \rho \of{ x_{ n } , x_{ 0 } } \leq r </m>. On the other hand, if <m> n \geq n_{ 1 } </m>, then
+        
+        <md>
+          \rho \of{ x_{ n } , x_{ 0 } } \leq \rho \of{ x_{ n } , x_{ n_{ 1 } } } + \rho \of{ x_{ n_{ 1 } } , x_{ 0 } } \leq \rho \of{ x_{ n } , x_{ n_{ 1 } } } + 1 \leq r
+        </md>.
+        
+        Thus <m> \set{ x_{ n } }_{ n = 0 }^{ \infty } \subseteq \mD_{ r } \of{ x_{ 0 } } </m>, and so the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is bounded.
+      </p>
+    </proof>
+  </lemma>
+
+  <corollary xml:id="corollary-completeness-of-the-real-line">
+    <title>
+      Completeness of the real line
+    </title>
+    
+    <statement>
+      <p>
+        The real line <m> \of{ \R , d } </m> is complete, and so <m> \of{ \R , \norm{ \oparg } } </m> is a Banach space.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a Cauchy sequence of real numbers <m> x_{ n } \in \R </m>. Then <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is bounded by <xref ref="lemma-cauchy-sequences-are-bounded"/>, and so it has a convergent subsequence by the <xref ref="theorem-bolzano-weierstrass-theorem" text="title"/>. Since <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is a Cauchy sequence with a convergent subsequence, it is itself convergent by <xref ref="proposition-cauchy-sequences-with-convergent-subsequences"/>. Since every Cauchy sequence in <m> \of{ \R , d } </m> converges, this metric space is complete.
+      </p>
+    </proof>
+  </corollary>
+  
+  <p>
+    So the real line is a complete metric space. As the Euclidean metric on <m> \R </m> is induced by the Euclidean norm, this implies that <m> \R </m> is a Banach space. That this completeness result is dependent on the Dedekind completeness of the real number system is not immediately obvious. However, in our proof of the <xref ref="theorem-bolzano-weierstrass-theorem" text="title"/>, we used the fact that a bounded monotone sequence of real numbers converges to a real number, which requires the existence of upper and lower limits and is not true in ordered number systems such at the rational numbers <m> \Q </m> in which these upper and lower limits do not necessarily exist.
+  </p>
+  
+  <p>
+    In fact, the completeness of the real line implies that the normed vector spaces associated to the <m> p </m>-norms are all also Banach spaces.
+  </p>
+
+  <corollary xml:id="corollary-completeness-of-the-p-norm">
+    <title>
+      Completeness of the <m> p </m>-norm
+    </title>
+    
+    <statement>
+      <p>
+        <m> \of{ \R^{ n } , \norm{ \oparg }_{ p } } </m> is a Banach space for all natural numbers <m> n \in \N </m> and extended real numbers <m> 1 \leq p \leq \infty </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \of{ \vect{ x }_{ m } }_{ m = 0 }^{ \infty } </m> be a Cauchy sequence of points <m> \vect{ x }_{ m } = \of{ x_{ m , k } }_{ k = 1 }^{ n } \in \R^{ n } </m> in the metric space <m> \of{ \R^{ n } , d_{ p } } </m>. Let <m> \epsilon \gt 0 </m> be a positive real number. Then there is a natural number <m> m_{ \epsilon } \gt 0 </m> so that
+        
+        <md>
+          d \of{ \vect{ x }_{ m } , \vect{ x }_{ p } } \lt \epsilon
+        </md>
+        
+        for all indices <m> m , p \geq m_{ \epsilon } </m>. We observe that for each index <m> 1 \leq k \leq n </m>,
+        
+        <md>
+          d \of{ x_{ m , k } , x_{ p , k } } = \abs{ x_{ m , k } - x_{ p , k } } \leq \norm{ \vect{ x }_{ m } - \vect{ x }_{ p } }_{ p } = d_{ p } \of{ \vect{ x }_{ m } , \vect{ x }_{ p } } \lt \epsilon
+        </md>
+        
+        for all indices <m> m , p \geq m_{ \epsilon } </m>, and so <m> \of{ x_{ m , k } }_{ m = 0 }^{ \infty } </m> is a Cauchy sequence of real numbers.
+      </p>
+      
+      <p>
+        <xref ref="corollary-completeness-of-the-real-line"/> now implies that this sequence converges to some real number
+        
+        <md>
+          x_{ k } = \lim_{ m \to \infty }{ x_{ m , k } }
+        </md>.
+        
+        Let <m> \vect{ x } = \of{ x_{ k } }_{ k = 1 }^{ n } \in \R^{ n } </m>. <xref ref="theorem-sequential-convergence-in-the-p-metric"/> and <xref ref="problem-sequential-convergence-in-the-infinity-metric"/> now imply that <m> \of{ \vect{ x }_{ m } }_{ m = 0 }^{ \infty } </m> converges to <m> \vect{ x } </m>.
+      </p>
+      
+      <p>
+        Since every Cauchy sequence in <m> \of{ \R^{ n } , d_{ p } } </m> converges, this metric space is complete. We conclude that <m> \of{ \R^{ n } , \norm{ \oparg }_{ p } } </m> is a Banach space.
+      </p>
+    </proof>
+  </corollary>
+
+  <conclusion>
+    <p>
+      It may appear from the above result that almost all commonly appearing metric spaces are complete, but this is certainly not the case. The rational numbers, <m> \Q </m>, for example, form a metric subspace of the real line <m> \R </m> which are not complete. We showed this by exhibiting a Cauchy sequence of rational numbers which converge to an irrational number, but this could also be observed by noting that the rational numbers are not a closed subset of the real numbers.
+    </p>
+    
+    <p>
+      As the properties of complete metric spaces are incredibly useful for performing analysis, it is almost always preferable to work in a complete metric space. Shortly, we will see that this is usually possible, by passing to the <term> completion </term> of an incomplete metric space.
+    </p>
+  </conclusion>
+</subsection>
