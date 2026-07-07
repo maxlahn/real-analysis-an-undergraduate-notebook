@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.13</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="creator">(Bernard Bolzano; Karl Weierstrass)</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bolzano--Weierstrass theorem.</span>
+</h2>
+<div class="para">Any bounded sequence of real numbers has a convergent subsequence.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-bolzano-weierstrass-theorem-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.6.13: Bolzano--Weierstrass theorem"><a tabindex="-1" href="#theorem-bolzano-weierstrass-theorem" title="Copy heading and permalink for Theorem 3.6.13: Bolzano--Weierstrass theorem" aria-label="Copy heading and permalink for Theorem 3.6.13: Bolzano--Weierstrass theorem">🔗</a></div>
+</article>
+<details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of real numbers <span class="process-math">\(x_{ n } \in \R \)</span> which is bounded in the Euclidean metric on <span class="process-math">\(\R \text{.}\)</span> For each natural number <span class="process-math">\(m \in \N \text{,}\)</span> consider the set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T_{ m } = \setmid{ x_{ n } \in \R }{ n \geq m }\text{.}
+\end{equation*}
+</div>
+<div class="para">There are two cases: either <span class="process-math">\(T_{ m } \)</span> has a maximum for every index <span class="process-math">\(m \in \N \)</span> or <span class="process-math">\(T_{ m } \)</span> does not have a maximum for some index <span class="process-math">\(m \in \N \text{.}\)</span> We will show that in either case, <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> has a monotone subsequence.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-bolzano-weierstrass-theorem-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">First suppose that <span class="process-math">\(T_{ m } \)</span> has a maximum for each index <span class="process-math">\(m \in \N \text{.}\)</span> Consider the sequence <span class="process-math">\(\of{ n_{ k } }_{ k = 0 }^{ \infty } \)</span> of natural numbers <span class="process-math">\(n_{ k } \in \N \)</span> defined recursively by</div>
+<div class="displaymath process-math">
+\begin{align*}
+n_{ 0 } \amp = \min \of{ \setmid{ n \in \N }{ x_{ n } = \max \of{ T_{ 0 } } } }\\
+n_{ k + 1 } \amp = \min \of{ \setmid{ n \in \N }{ n \geq n_{ k } + 1 \textrm{ and } x_{ n } = \max \of{ T_{ n_{ k + 1 } } } } }\text{.}
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(n_{ m + 1 } \geq n_{ m } + 1 \gt n_{ m } \text{,}\)</span> the sequence <span class="process-math">\(\of{ n_{ k } }_{ n = 0 }^{ \infty } \)</span> is increasing, and so <span class="process-math">\(\of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } \)</span> is a subsequence of <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \text{.}\)</span> Moreover, we observe that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x_{ n_{ k + 1 } } = \max \of{ T_{ n_{ k + 1 } } } \leq \min \of{ T_{ n_{ k } } } = x_{ n_{ k } }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(k \in \N \text{,}\)</span> and so <span class="process-math">\(\of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } \)</span> is non-increasing.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-bolzano-weierstrass-theorem-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">On the other hand, now suppose that <span class="process-math">\(T_{ m } \)</span> has no maximum for some index <span class="process-math">\(m \in \N \text{.}\)</span> Consider the sequence <span class="process-math">\(\of{ n_{ k } }_{ k = 0 }^{ \infty } \)</span> of natural numbers <span class="process-math">\(n_{ k } \in \N \)</span> defined recursively by</div>
+<div class="displaymath process-math">
+\begin{align*}
+n_{ 0 } \amp = m\\
+n_{ k + 1 } \amp = \min \of{ \setmid{ n \in \N }{ n \geq n_{ k } + 1 \textrm{ and } x_{ n } \gt x_{ n_{ k } } } }\text{.}
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(n_{ m + 1 } \geq n_{ m } + 1 \gt n_{ m } \text{,}\)</span> the sequence <span class="process-math">\(\of{ n_{ k } }_{ n = 0 }^{ \infty } \)</span> is increasing, and so <span class="process-math">\(\of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } \)</span> is a subsequence of <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \text{.}\)</span> Moreover, we observe that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x_{ n_{ k + 1 } } \gt x_{ n_{ k } }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(k \in \N \text{,}\)</span> and so <span class="process-math">\(\of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } \)</span> is increasing.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-bolzano-weierstrass-theorem-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">In either case, <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> has a monotone subsequence <span class="process-math">\(\of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } \text{.}\)</span> Since <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> is bounded, so too is <span class="process-math">\(\of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } \text{,}\)</span> and so <a href="section-limits-in-the-euclidean-metric.html#theorem-monotone-convergence-theorem" class="xref" data-knowl="./knowl/xref/theorem-monotone-convergence-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.13: Monotone convergence theorem">Theorem 3.3.13 Monotone convergence theorem</a> implies that <span class="process-math">\(\of{ x_{ n_{ k } } }_{ k = 0 }^{ \infty } \)</span> converges.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-bolzano-weierstrass-theorem-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.6.13.1"><a tabindex="-1" href="#theorem-bolzano-weierstrass-theorem-4" title="Copy heading and permalink for Proof 3.6.13.1" aria-label="Copy heading and permalink for Proof 3.6.13.1">🔗</a></div>
+</article></details><span class="incontext"><a class="internal" href="section-completeness-and-compactness.html#theorem-bolzano-weierstrass-theorem">In Context</a></span>
+</body>
+</html>
