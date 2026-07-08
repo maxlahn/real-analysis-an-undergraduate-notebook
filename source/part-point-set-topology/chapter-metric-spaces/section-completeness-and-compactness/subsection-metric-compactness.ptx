@@ -132,7 +132,7 @@
           </mrow>
           
           <mrow>
-            \amp = \lim_{ k \to \infty }{ \rho_{ Y } \of{ f \of{ x_{ 1 , n_{ k } } } , f \of{ x } } } + \lim_{ k \to \infty }{ \rho_{ Y } \of{ f \of{ x_{ 2 , n_{ k } } } , x } } } = 0 + 0 = 0
+            \amp = \lim_{ k \to \infty }{ \rho_{ Y } \of{ f \of{ x_{ 1 , n_{ k } } } , f \of{ x } } } + \lim_{ k \to \infty }{ \rho_{ Y } \of{ f \of{ x_{ 2 , n_{ k } } } , f \of{ x } } } = 0 + 0 = 0
           </mrow>
         </md>
         
@@ -182,8 +182,56 @@
   </proposition>
   
   <p>
-    The above result implies that sequential compactness is a topological invariant of metric spaces, since it is preserved under continuous maps between metric spaces. Intuitively, a compact metric space can be viewed as self-contained, since it is impossible for a divergent sequence to fully escape. The following theorem gives an equivalent characterization of sequential compactness which may be surprising; a metric space is (sequentially) compact if and only if it is complete and totally bounded.
+    The above result implies that sequential compactness is a topological invariant of metric spaces, since it is preserved under continuous maps between metric spaces. Intuitively, a compact metric space can be viewed as self-contained, since it is impossible for a divergent sequence to fully escape. We will end this section with an equivalent characterization of sequential compactness which may be surprising; a metric space is (sequentially) compact if and only if it is complete and totally bounded. In order to show this, we will require the following supporting lemma:
   </p>
+  
+  <lemma xml:id="lemma-sequences-in-totally-bounded-subsets">
+    <title>
+      Sequences in totally bounded subsets
+    </title>
+    
+    <statement>
+      <p>
+        If a subset <m> U \subseteq X </m> of a metric space <m> \of{ X , \rho } </m> is totally bounded, then every sequence of points in <m> U </m> has a Cauchy subsequence.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        If <m> U = \emptyset </m> is empty, then the desired result holds vacuously. We may therefore suppose that <m> U \neq \emptyset </m> is non-empty. Let <m> \of{ u_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of points <m> u_{ n } \in U </m>. We aim to show that this sequence has a Cauchy subsequence. To that end, we first observe that since <m> U </m> is totally bounded in <m> X </m>, it is bounded by <xref ref="proposition-total-boundedness-implies-boundedness"/>, and so <m> \diam \of{ U } \lt \infty </m> is finite. let <m> \of{ r_{ m } }_{ m = 0 }^{ \infty } </m> be a sequence of positive real numbers <m> r_{ n } \gt 0 </m> so that <m> r_{ 0 } \gt \diam \of{ U } </m> and
+        
+        <md>
+          \lim_{ m \to \infty }{ r_{ m } } = 0
+        </md>.
+        
+        We argue inductively that for each natural number <m> m \in \N </m>, there is a subsequence <m> \of{ v_{ m , n } }_{ n = 0 }^{ \infty } </m> of <m> \of{ u_{ n } }_{ n = 0 }^{ \infty } </m> whose entries are all contained in an open ball of radius <m> r_{ m } </m>, and moreover that if <m> m \leq p </m> then <m> \of{ v_{ p , n } }_{ n = 0 }^{ \infty } </m> is a subsequence of <m> \of{ v_{ m , n } }_{ n = 0 }^{ \infty } </m>.
+      </p>
+      
+      <p>
+        Indeed, for the base case <m> m = 0 </m>, we observe that <m> U </m> is contained in an open ball of radius <m> r_{ 0 } \gt \diam \of{ U } </m> around any of its points, so we may take <m> v_{ 0 , n } = u_{ n } </m> for all indices <m> n \in \N </m>.
+      </p>
+      
+      <p>
+        For the inductive step, suppose for the inductive hypothesis that for some natural number <m> m \in \N </m> the sequence <m> \of{ u_{ n } }_{ n = 0 }^{ \infty } </m> has a subsequence <m> \of{ v_{ m , n } }_{ n = 0 }^{ \infty } </m> whose entries are all contained in an open ball of radius <m> r_{ m } </m>. Since <m> U </m> is totally bounded, it is contained in a union of finitely many open balls of radius <m> r_{ m + 1 } </m>. The pigeonhole principle implies that infinitely many entries of <m> \of{ v_{ m , n } }_{ n = 0 }^{ \infty } </m> lie in one of these open balls. Removing all other entries, we obtain a further subsequence <m> \of{ v_{ m + 1 , n } }_{ n = 0 }^{ \infty } </m> whose entries all lie in a ball of radius <m> r_{ m + 1 } </m>.
+      </p>
+      
+      <p>
+        Consider the subsequence <m> \of{ u_{ n_{ k } } }_{ k = 0 }^{ \infty } </m> of <m> \of{ u_{ n } }_{ n = 0 }^{ \infty } </m> defined by the formula
+        
+        <md>
+          u_{ n_{ k } } = v_{ n , n }
+        </md>.
+        
+        We will show that this subsequence is Cauchy. Indeed, let <m> \epsilon \gt 0 </m> be a positive real number. Since <m> \of{ r_{ m } }_{ m = 0 }^{ \infty } </m> converges to <m> 0 </m>, there is a natural number <m> m_{ \epsilon } \in \N </m> so that
+        
+        <md>
+          r_{ m } \lt \frac{ \epsilon }{ 2 }
+        </md>
+        
+        for all indices <m> m \geq m_{ \epsilon } </m>. Indeed, since <m> \of{ u_{ n_{ k } } }_{ k = m_{ \epsilon } }^{ \infty } </m> is a subsequence of <m> \of{ v_{ m_{ \epsilon } , n } }_{ n = 0 }^{ \infty } </m>, its entries all lie in an open ball of radius <m> r_{ m } \lt \frac{ \epsilon }{ 2 } </m>. In particular, the entries of <m> \of{ u_{ n_{ k } } }_{ k = m_{ \epsilon } }^{ \infty } </m> have distance strictly less than <m> \epsilon </m> from each other. Thus <m> \of{ u_{ n_{ k } } }_{ k = 0 }^{ \infty } </m> is Cauchy.
+      </p>
+    </proof>
+  </lemma>
   
   <theorem xml:id="theorem-heine-borel-theorem">
     <title>
@@ -222,7 +270,7 @@
         
         <md>
           <mrow>
-            \rho \of{ u_{ n_{ k_{ \epsilon } + 1 } } , u_{ n_{ k_{ \epsilon } } } \amp \leq \rho \of{ u_{ n_{ k_{ \epsilon } + 1 } } , u } + \rho \of{ u , u_{ n_{ k_{ \epsilon } } } } = \rho \of{ u_{ n_{ k_{ \epsilon } + 1 } } , u } + \rho \of{ u_{ n_{ k_{ \epsilon } } } , u }
+            \rho \of{ u_{ n_{ k_{ \epsilon } + 1 } } , u_{ n_{ k_{ \epsilon } } } } \amp \leq \rho \of{ u_{ n_{ k_{ \epsilon } + 1 } } , u } + \rho \of{ u , u_{ n_{ k_{ \epsilon } } } } = \rho \of{ u_{ n_{ k_{ \epsilon } + 1 } } , u } + \rho \of{ u_{ n_{ k_{ \epsilon } } } , u }
           </mrow>
           
           <mrow>
@@ -240,7 +288,7 @@
       </p>
       
       <p>
-        Conversely, now suppose that <m> U </m> is complete and totally bounded in <m> X </m>, and let <m> \of{ u_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of points <m> u_{ n } \in U </m>.
+        Conversely, now suppose that <m> U </m> is complete and totally bounded in <m> X </m>. Then <xref ref="lemma-sequences-in-totally-bounded-subsets"/> implies that every sequence of points in <m> U </m> has a Cauchy subsequence, and completeness implies that such a subsequence converges to a limit in <m> U </m>. Thus every sequence of points in <m> U </m> has a subsequence which converges to a limit in <m> U </m>; that is, <m> U </m> is compact.
       </p>
     </proof>
   </theorem>
