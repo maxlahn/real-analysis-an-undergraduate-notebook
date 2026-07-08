@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.21</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="creator">(Eduard Heine; Émile Borel)</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Heine-Borel Theorem.</span>
+</h2>
+<div class="para">A subset of a metric space is compact if and only if it is complete and totally bounded.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-heine-borel-theorem-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.6.21: Heine-Borel Theorem"><a tabindex="-1" href="#theorem-heine-borel-theorem" title="Copy heading and permalink for Theorem 3.6.21: Heine-Borel Theorem" aria-label="Copy heading and permalink for Theorem 3.6.21: Heine-Borel Theorem">🔗</a></div>
+</article>
+<details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para">Let <span class="process-math">\(U \subseteq X \)</span> be a subset of a metric space <span class="process-math">\(\of{ X , \rho } \text{,}\)</span> and suppose first that <span class="process-math">\(U \)</span> is compact. If <span class="process-math">\(\of{ u_{ n } }_{ n = 0 }^{ \infty } \)</span> is a Cauchy sequence of points <span class="process-math">\(u_{ n } \in U \text{,}\)</span> then compactness implies that <span class="process-math">\(\of{ u_{ n } }_{ n = 0 }^{ \infty } \)</span> has a subsequence which converges to a limit in <span class="process-math">\(U \text{.}\)</span> <a href="section-completeness-and-compactness.html#proposition-cauchy-sequences-with-convergent-subsequences" class="xref" data-knowl="./knowl/xref/proposition-cauchy-sequences-with-convergent-subsequences.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.6.12: Cauchy sequences with convergent subsequences">Proposition 3.6.12 Cauchy sequences with convergent subsequences</a> implies that <span class="process-math">\(\of{ u_{ n } }_{ n = 0 }^{ \infty } \)</span> converges to this limit. Since every Cauchy sequence in <span class="process-math">\(U \)</span> converges to a limit in <span class="process-math">\(U \text{,}\)</span> <span class="process-math">\(U \)</span> is complete.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-heine-borel-theorem-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Now suppose for a contradiction that <span class="process-math">\(U \)</span> is not totally bounded in <span class="process-math">\(X \text{.}\)</span> Then there exists a positive real number <span class="process-math">\(\epsilon \gt 0 \)</span> so that <span class="process-math">\(U \)</span> is not contained in any finite union of open balls of radius <span class="process-math">\(\epsilon \text{.}\)</span> In particular, there is a sequence <span class="process-math">\(\of{ u_{ n } }_{ n = 0 }^{ \infty } \)</span> of points <span class="process-math">\(u_{ n } \in U \)</span> so that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u_{ n } \not \subseteq \bigcup_{ k = 0 }^{ n - 1 }{ \mB_{ \epsilon } \of{ u_{ k } } }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \in \N \text{.}\)</span> Since <span class="process-math">\(U \)</span> is compact, this sequence has a subsequence <span class="process-math">\(\of{ u_{ n_{ k } } }_{ k = 0 }^{ \infty } \)</span> which converges to some point <span class="process-math">\(u \in U \text{.}\)</span> In particular, there is a natural number <span class="process-math">\(k_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho \of{ u_{ n_{ k } } , u } \lt \frac{ \epsilon }{ 2 }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(k \geq k_{ \epsilon } \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math">
+\begin{align*}
+\rho \of{ u_{ n_{ k_{ \epsilon } + 1 } } , u_{ n_{ k_{ \epsilon } } } \amp \leq \rho \of{ u_{ n_{ k_{ \epsilon } + 1 } } , u } + \rho \of{ u , u_{ n_{ k_{ \epsilon } } } } = \rho \of{ u_{ n_{ k_{ \epsilon } + 1 } } , u } + \rho \of{ u_{ n_{ k_{ \epsilon } } } , u }\\
+\amp \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon\text{,}
+\end{align*}
+</div>
+<div class="para">so that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u_{ n_{ k_{ \epsilon } + 1 } } \in \mB_{ \epsilon } \of{ u_{ n_{ k_{ \epsilon } } } } \subseteq \bigcup_{ k = 0 }^{ n_{ k_{ \epsilon } + 1 } - 1 }{ \mB_{ \epsilon } \of{ u_{ k } } }\text{.}
+\end{equation*}
+</div>
+<div class="para">This contradiction implies that <span class="process-math">\(U \)</span> is totally bounded in <span class="process-math">\(X \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-heine-borel-theorem-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Conversely, now suppose that <span class="process-math">\(U \)</span> is complete and totally bounded in <span class="process-math">\(X \text{,}\)</span> and let <span class="process-math">\(\of{ u_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of points <span class="process-math">\(u_{ n } \in U \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-heine-borel-theorem-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.6.21.1"><a tabindex="-1" href="#theorem-heine-borel-theorem-4" title="Copy heading and permalink for Proof 3.6.21.1" aria-label="Copy heading and permalink for Proof 3.6.21.1">🔗</a></div>
+</article></details><span class="incontext"><a class="internal" href="section-completeness-and-compactness.html#theorem-heine-borel-theorem">In Context</a></span>
+</body>
+</html>

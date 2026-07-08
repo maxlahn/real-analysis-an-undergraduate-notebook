@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="corollary theorem-like"><h2 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Completeness of the <span class="process-math">\(p \)</span>-norm.</span>
+</h2>
+<div class="para">
+<span class="process-math">\(\of{ \R^{ n } , \norm{ \oparg }_{ p } } \)</span> is a Banach space for all natural numbers <span class="process-math">\(n \in \N \)</span> and extended real numbers <span class="process-math">\(1 \leq p \leq \infty \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-completeness-of-the-p-norm-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Corollary 3.6.16: Completeness of the  p -norm"><a tabindex="-1" href="#corollary-completeness-of-the-p-norm" title="Copy heading and permalink for Corollary 3.6.16: Completeness of the  p -norm" aria-label="Copy heading and permalink for Corollary 3.6.16: Completeness of the  p -norm">🔗</a></div>
+</article>
+<details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\of{ \vect{ x }_{ m } }_{ m = 0 }^{ \infty } \)</span> be a Cauchy sequence of points <span class="process-math">\(\vect{ x }_{ m } = \of{ x_{ m , k } }_{ k = 1 }^{ n } \in \R^{ n } \)</span> in the metric space <span class="process-math">\(\of{ \R^{ n } , d_{ p } } \text{.}\)</span> Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Then there is a natural number <span class="process-math">\(m_{ \epsilon } \gt 0 \)</span> so that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d \of{ \vect{ x }_{ m } , \vect{ x }_{ p } } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(m , p \geq m_{ \epsilon } \text{.}\)</span> We observe that for each index <span class="process-math">\(1 \leq k \leq n \text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d \of{ x_{ m , k } , x_{ p , k } } = \abs{ x_{ m , k } - x_{ p , k } } \leq \norm{ \vect{ x }_{ m } - \vect{ x }_{ p } }_{ p } = d_{ p } \of{ \vect{ x }_{ m } , \vect{ x }_{ p } } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(m , p \geq m_{ \epsilon } \text{,}\)</span> and so <span class="process-math">\(\of{ x_{ m , k } }_{ m = 0 }^{ \infty } \)</span> is a Cauchy sequence of real numbers.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-completeness-of-the-p-norm-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">
+<a href="section-completeness-and-compactness.html#corollary-completeness-of-the-real-line" class="xref" data-knowl="./knowl/xref/corollary-completeness-of-the-real-line.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 3.6.15: Completeness of the real line">Corollary 3.6.15 Completeness of the real line</a> now implies that this sequence converges to some real number</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/corollary-completeness-of-the-real-line.html ./knowl/xref/theorem-sequential-convergence-in-the-p-metric.html ./knowl/xref/problem-sequential-convergence-in-the-infinity-metric.html">
+\begin{equation*}
+x_{ k } = \lim_{ m \to \infty }{ x_{ m , k } }\text{.}
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(\vect{ x } = \of{ x_{ k } }_{ k = 1 }^{ n } \in \R^{ n } \text{.}\)</span> <a href="section-convergence-and-limits.html#theorem-sequential-convergence-in-the-p-metric" class="xref" data-knowl="./knowl/xref/theorem-sequential-convergence-in-the-p-metric.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.7: Sequential convergence in the  p -metric">Theorem 3.2.7 Sequential convergence in the <span class="process-math">\(p \)</span>-metric</a> and <a href="section-convergence-and-limits.html#problem-sequential-convergence-in-the-infinity-metric" class="xref" data-knowl="./knowl/xref/problem-sequential-convergence-in-the-infinity-metric.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 3.2.5.2: Sequential convergence in the infinity metric">Problem 3.2.5.2 Sequential convergence in the infinity metric</a> now imply that <span class="process-math">\(\of{ \vect{ x }_{ m } }_{ m = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(\vect{ x } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-completeness-of-the-p-norm-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Since every Cauchy sequence in <span class="process-math">\(\of{ \R^{ n } , d_{ p } } \)</span> converges, this metric space is complete. We conclude that <span class="process-math">\(\of{ \R^{ n } , \norm{ \oparg }_{ p } } \)</span> is a Banach space.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-completeness-of-the-p-norm-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.6.16.1"><a tabindex="-1" href="#corollary-completeness-of-the-p-norm-3" title="Copy heading and permalink for Proof 3.6.16.1" aria-label="Copy heading and permalink for Proof 3.6.16.1">🔗</a></div>
+</article></details><span class="incontext"><a class="internal" href="section-completeness-and-compactness.html#corollary-completeness-of-the-p-norm">In Context</a></span>
+</body>
+</html>
