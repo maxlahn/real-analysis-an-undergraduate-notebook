@@ -19,7 +19,7 @@
 
   <conclusion>
     <p>
-      Text after the last subsection.
+      Completeness and compactness are important geometric and topological properties for the study of metric geometry. While completeness is not easily generalizable to the broader spaces which we will study in <xref ref="chapter-topological-spaces"/>, compactness remains a central idea in the study of topological spaces. We will see that in the absence of a metric, we will rely on an equivalent characterization of compactness derived from a similar idea to total boundedness.
     </p>
   </conclusion>
 

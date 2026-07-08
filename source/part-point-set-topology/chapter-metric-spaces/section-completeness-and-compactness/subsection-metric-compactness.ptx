@@ -7,147 +7,269 @@
 
   <introduction>
     <p>
-      When is it the case that a sequence in a metric space has a convergent subsequence? This is a natural question to ask about metric spaces. We have seen so far that this occurs when the original sequence converges, and when the sequence is a bounded sequence of real numbers, but this phenomenon is not limited to the case of convergent sequences. In some metric spaces, all sequences have convergent subsequences. These metric spaces are called <term> (sequentially) compact </term>, and we will devote the rest of this chapter to investigating the properties of sequentially compact metric spaces.
+      When is it the case that a sequence in a metric space has a convergent subsequence? This is a natural question to ask about metric spaces. We have seen so far that this occurs when the original sequence converges, and when the sequence is a bounded sequence of real numbers, but this phenomenon is not limited to the case of convergent sequences. In some metric spaces, all sequences have convergent subsequences. These metric spaces are called <term> (sequentially) compact </term>, and we will devote the rest of this section to investigating the properties of sequentially compact metric spaces.
     </p>
   </introduction>
   
-  
-
-  <conclusion>
-    <p>
-      Text after the last subdivision.
-    </p>
-  </conclusion>
-</subsection>
-
-<!--
-
-  <definition xml:id="definition-TITLE">
+  <definition xml:id="definition-sequential-compactness">
     <title>
-      TITLE
+      Sequential compactness
     </title>
     
     <idx>
-      TERM
+      sequential compactness
     </idx>
-    
-    <notation>
-      <usage>
-        <m>  </m>
-      </usage>
-      
-      <description>
-        <p>
-          
-        </p>
-      </description>
-    </notation>
     
     <statement>
       <p>
-        
+        A subset <m> U \subseteq X </m> of a metric space <m> \of{ X , \rho } </m> is called <term> (sequentially) compact </term> if every sequence <m> \of{ u_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> u_{ n } \in U </m> has a subsequence which converges to a limit in <m> U </m>, and <term> (sequentially) non-compact </term> otherwise. A metric space <m> \of{ X , \rho } </m> is called <term> compact </term> (resp. <term> non-compact </term>) if <m> X </m> is compact (resp. non-compact).
       </p>
     </statement>
   </definition>
-
-  <lemma xml:id="lemma-TITLE">
+  
+  <example xml:id="example-sequential-compactness">
     <title>
-      TITLE
+      Sequential compactness
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of compact and non-compact metric spaces:
+        
+        <ul>
+          <li>
+            <p>
+              A discrete metric space <m> \of{ X , \delta_{ X } } </m> is compact if and only if the ground set <m> X </m> is finite. More generally, any finite metric space is compact.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The <m> n </m>-dimensional Euclidean space <m> \R^{ n } </m> is compact if <m> n = 0 </m> and non-compact if <m> n \geq 1 </m>. In particular, the real line <m> \R </m> is non-compact.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    The compactness of a metric space has profound implications for the behavior of continuous maps on that space. We will see in the next chapter that much can be said about continuous maps with compact (in the more general sense which we will introduce later) domains. For example, a continuous map with domain a compact metric space is uniformly continuous.
+  </p>
+  
+  <theorem xml:id="theorem-heine-cantor-theorem">
+    <title>
+      Heine-Cantor theorem
     </title>
     
     <creator>
-      CREATOR
+      Eduard Heine; Georg Cantor
     </creator>
     
     <statement>
       <p>
-        
+        A continuous map from a compact metric space to a metric space is uniformly continuous.
       </p>
     </statement>
     
     <proof>
       <p>
+        Let <m> f \colon X \to Y </m> be a map from a compact metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m>, and suppose that <m> f </m> is not uniformly continuous. Then there is a positive real number <m> \epsilon \gt 0 </m> so that for all positive real numbers <m> \delta \gt 0 </m>,
         
+        <md>
+          \rho_{ Y } \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \geq \epsilon
+        </md>
+        
+        for some points <m> x_{ 1 } , x_{ 2 } \in X </m> with <m> \rho_{ X } \of{ x_{ 1 } , x_{ 2 } } \lt \delta </m>.
       </p>
-    </proof>
-  </lemma>
-
-  <proposition xml:id="proposition-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
+      
       <p>
+        Let <m> \of{ \delta_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of positive real numbers <m> \delta_{ n } \gt 0 </m> so that
         
+        <md>
+          \lim_{ n \to \infty }{ \delta_{ n } } = 0
+        </md>.
+        
+        For each index <m> n \in \N </m>, there are points <m> x_{ 1 , n } , x_{ 2 , n } \in X </m> so that <m> \rho_{ X } \of{ x_{ 1 , n } , x_{ 2 , n } } \lt \delta_{ n } </m> but <m> \rho_{ Y } \of{ f \of{ x_{ 1 , n } } , f \of{ x_{ 2 , n } } } \geq \epsilon </m>. Since <m> X </m> is compact, the sequence <m> \of{ x_{ 2 , n } }_{ n = 0 }^{ \infty } </m> has a convergent subsequence <m> \of{ x_{ 2 , n_{ k } } }_{ k = 0 }^{ \infty } </m>; that is,
+        
+        <md>
+          \lim_{ k \to \infty }{ x_{ 2 , n_{ k } } } = x
+        </md>
+        
+        for some point <m> x \in X </m>. We will argue that <m> \of{ x_{ 1 , n_{ k } } }_{ k = 0 }^{ \infty } </m> also converges to <m> x </m>. Indeed, let <m> \epsilon \gt 0 </m> be a positive real number. Since <m> \of{ \delta_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> 0 </m>, there is some natural number <m> n_{ \epsilon } \in \N </m> so that
+        
+        <md>
+          \delta_{ n } \lt \frac{ \epsilon }{ 2 }
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>. Moreover, since <m> \of{ x_{ 2 , n_{ k } } }_{ k = 0 }^{ \infty } </m> converges to <m> x </m>, there is a natural number <m> k_{ \epsilon } \in \N </m> so that
+        
+        <md>
+          \rho_{ X } \of{ x_{ 2 , n_{ k } } , x } \lt \frac{ \epsilon }{ 2 }
+        </md>
+        
+        for all indices <m> k \geq k_{ \epsilon } </m>. Let <m> m_{ \epsilon } = \max \of{ \set{ n_{ \epsilon } , k_{ \epsilon } } } \in \N </m>, and note that <xref ref="lemma-increasing-functions"/> implies that <m> n_{ k } \geq m_{ \epsilon } </m> whenever <m> k \geq m_{ \epsilon } </m>. In particular, this implies that
+        
+        <md>
+          <mrow>
+            \rho_{ X } \of{ x_{ 1 , n_{ k } } , x } \amp \leq \rho_{ X } \of{ x_{ 1 , n_{ k } } , x_{ 2 , n_{ k } } } + \rho_{ X } \of{ x_{ 2 , n_{ k } } , x } \lt \delta_{ n } + \rho_{ X } \of{ x_{ 2 , n_{ k } } , x }
+          </mrow>
+          
+          <mrow>
+            \amp \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+          </mrow>
+        </md>
+        
+        for all indices <m> k \geq m_{ \epsilon } </m>. Thus <m> \of{ x_{ 1 , n_{ k } } }_{ k = 0 }^{ \infty } </m> also converges to <m> x </m>.
       </p>
-    </statement>
-    
-    <proof>
+      
       <p>
+        If <m> f </m> were continuous at <m> x </m>, then both <m> \of{ f \of{ x_{ 1 , n_{ k } } } }_{ k = 0 }^{ \infty } </m> and <m> \of{ f \of{ x_{ 2 , n_{ k } } } }_{ k = 0 }^{ \infty } </m> would converge to <m> f \of{ x } </m>. In this case, we would see that
         
+        <md>
+          <mrow>
+            \epsilon \amp \leq \lim_{ k \to \infty }{ \rho_{ Y } \of{ f \of{ x_{ 1 , n_{ k } } } , f \of{ x_{ 2 , n_{ k } } } } } \leq \lim_{ k \to \infty }{ \of{ \rho_{ Y } \of{ f \of{ x_{ 1 , n_{ k } } } , f \of{ x } } + \rho_{ Y } \of{ f \of{ x_{ 2 , n_{ k } } } , x } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \lim_{ k \to \infty }{ \rho_{ Y } \of{ f \of{ x_{ 1 , n_{ k } } } , f \of{ x } } } + \lim_{ k \to \infty }{ \rho_{ Y } \of{ f \of{ x_{ 2 , n_{ k } } } , x } } } = 0 + 0 = 0
+          </mrow>
+        </md>
+        
+        This contradiction implies that <m> f </m> is not continuous at <m> x </m>.
       </p>
-    </proof>
-  </proposition>
-
-  <theorem xml:id="theorem-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
+      
       <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
+        In summary, we have shown that if <m> f </m> is not uniformly continuous, then it is not continuous. Equivalently, if <m> f </m> is continuous, then it is uniformly continuous.
       </p>
     </proof>
   </theorem>
-
-  <corollary xml:id="corollary-TITLE">
+  
+  <p>
+    We observe that there is no version of the <xref ref="theorem-heine-cantor-theorem" text="title"/> for Lipschitz continuity; indeed, the function <m> f \colon \clint{ 0 }{ 1 } \to \clint{ 0 }{ 1 } </m> defined by the formula <m> f \of{ x } = \sqrt{ x } </m> is continuous but not Lipschitz continuous, even though we will see that the closed interval <m> \clint{ 0 }{ 1 } </m> is compact.
+  </p>
+  
+  <p>
+    Continuity of a map between metric spaces is a local property which places bounds on the amount the map can increase the distance between close points. Compactness allows us to port this local property of continuity to a global property of uniform continuity, so that any continuous map is uniformly continuous on a compact subset of the domain. It is for this reason (that we may transfer many local geometric and topological properties to global properties) that compact subsets of metric spaces are so useful. We will see that compact metric spaces are also complete, and so it is often the case that the most salient information about a metric space are its compact subspaces.
+  </p>
+  
+  <p>
+    In fact, more can be said about this situation. The image of a compact subset of a metric space under a continuous map is a compact subset of the codomain.
+  </p>
+  
+  <proposition xml:id="proposition-continuous-images-of-compact-subsets">
     <title>
-      TITLE
+      Continuous images of compact subsets
     </title>
-    
-    <creator>
-      CREATOR
-    </creator>
     
     <statement>
       <p>
-        
+        Let <m> f \colon X \to Y </m> be a continuous map from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m>. If a subset <m> U \subseteq X </m> is compact, then its image <m> f \of{ U } \subseteq Y </m> is also compact.
       </p>
     </statement>
     
     <proof>
       <p>
+        Let <m> \of{ v_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of points <m> v_{ n } \in f \of{ U } </m>. For each index <m> n \in \N </m>, there is some point <m> u_{ n } \in U </m> so that <m> f \of{ u_{ n } } = v_{ n } </m>. Since <m> U </m> is compact, the sequence <m> \of{ u_{ n } }_{ n = 0 }^{ \infty } </m> has a convergent subsequence <m> \of{ u_{ n_{ k } } }_{ k = 0 }^{ \infty } </m>. Since <m> f </m> is continuous,
         
+        <md>
+          \lim_{ k \to \infty }{ v_{ n_{ k } } } = \lim_{ k \to \infty }{ f \of{ u_{ n_{ k } } } } = f \of{ \lim_{ n \to \infty }{ u_{ n_{ k } } } }
+        </md>;
+        
+        that is, the subsequence <m> \of{ v_{ n_{ k } } }_{ k = 0 }^{ \infty } </m> of <m> \of{ v_{ n } }_{ n = 0 }^{ \infty } </m> converges to a point in <m> f \of{ U } </m>. Since every sequence in <m> f \of{ U } </m> has a subsequence which converges to a limit in <m> f \of{ U } </m>, we conclude that <m> f \of{ U } </m> is compact.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    The above result implies that sequential compactness is a topological invariant of metric spaces, since it is preserved under continuous maps between metric spaces. Intuitively, a compact metric space can be viewed as self-contained, since it is impossible for a divergent sequence to fully escape. The following theorem gives an equivalent characterization of sequential compactness which may be surprising; a metric space is (sequentially) compact if and only if it is complete and totally bounded.
+  </p>
+  
+  <theorem xml:id="theorem-heine-borel-theorem">
+    <title>
+      Heine-Borel Theorem
+    </title>
+    
+    <creator>
+      Eduard Heine; Émile Borel
+    </creator>
+    
+    <statement>
+      <p>
+        A subset of a metric space is compact if and only if it is complete and totally bounded.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a metric space <m> \of{ X , \rho } </m>, and suppose first that <m> U </m> is compact. If <m> \of{ u_{ n } }_{ n = 0 }^{ \infty } </m> is a Cauchy sequence of points <m> u_{ n } \in U </m>, then compactness implies that <m> \of{ u_{ n } }_{ n = 0 }^{ \infty } </m> has a subsequence which converges to a limit in <m> U </m>. <xref ref="proposition-cauchy-sequences-with-convergent-subsequences"/> implies that <m> \of{ u_{ n } }_{ n = 0 }^{ \infty } </m> converges to this limit. Since every Cauchy sequence in <m> U </m> converges to a limit in <m> U </m>, <m> U </m> is complete.
+      </p>
+      
+      <p>
+        Now suppose for a contradiction that <m> U </m> is not totally bounded in <m> X </m>. Then there exists a positive real number <m> \epsilon \gt 0 </m> so that <m> U </m> is not contained in any finite union of open balls of radius <m> \epsilon </m>. In particular, there is a sequence <m> \of{ u_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> u_{ n } \in U </m> so that
+        
+        <md>
+          u_{ n } \not \subseteq \bigcup_{ k = 0 }^{ n - 1 }{ \mB_{ \epsilon } \of{ u_{ k } } }
+        </md>
+        
+        for all indices <m> n \in \N </m>. Since <m> U </m> is compact, this sequence has a subsequence <m> \of{ u_{ n_{ k } } }_{ k = 0 }^{ \infty } </m> which converges to some point <m> u \in U </m>. In particular, there is a natural number <m> k_{ \epsilon } \in \N </m> so that
+        
+        <md>
+          \rho \of{ u_{ n_{ k } } , u } \lt \frac{ \epsilon }{ 2 }
+        </md>
+        
+        for all indices <m> k \geq k_{ \epsilon } </m>. We observe that
+        
+        <md>
+          <mrow>
+            \rho \of{ u_{ n_{ k_{ \epsilon } + 1 } } , u_{ n_{ k_{ \epsilon } } } \amp \leq \rho \of{ u_{ n_{ k_{ \epsilon } + 1 } } , u } + \rho \of{ u , u_{ n_{ k_{ \epsilon } } } } = \rho \of{ u_{ n_{ k_{ \epsilon } + 1 } } , u } + \rho \of{ u_{ n_{ k_{ \epsilon } } } , u }
+          </mrow>
+          
+          <mrow>
+            \amp \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+          </mrow>
+        </md>,
+        
+        so that
+        
+        <md>
+          u_{ n_{ k_{ \epsilon } + 1 } } \in \mB_{ \epsilon } \of{ u_{ n_{ k_{ \epsilon } } } } \subseteq \bigcup_{ k = 0 }^{ n_{ k_{ \epsilon } + 1 } - 1 }{ \mB_{ \epsilon } \of{ u_{ k } } }
+        </md>.
+        
+        This contradiction implies that <m> U </m> is totally bounded in <m> X </m>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> U </m> is complete and totally bounded in <m> X </m>, and let <m> \of{ u_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of points <m> u_{ n } \in U </m>.
+      </p>
+    </proof>
+  </theorem>
+  
+  <p>
+    We may use equivalent characterizations of completeness and total boundedness in Euclidean space to reduce the above theorem into a result which makes it easier to determine if a subset of Euclidean space is compact. Since Euclidean space is complete, a subset is complete if and only if it is closed. Moreover, as we have previously shown, a subset of Euclidean space is totally bounded if and only if it is bounded. Therefore, a subset of Euclidean space is sequentially compact if and only if it is closed and bounded. This is the content of the following corollary to the <xref ref="theorem-heine-borel-theorem" text="title"/>, which is sometimes also called the Heine-Borel theorem.
+  </p>
+  
+  <corollary xml:id="corollary-compact-subsets-of-euclidean-space">
+    <title>
+      Compact subsets of Euclidean space
+    </title>
+    
+    <statement>
+      <p>
+        A subset of Euclidean space is compact if and only if it is closed and bounded.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        The <xref ref="theorem-heine-borel-theorem" text="title"/> implies that a subset of Euclidean space is compact if and only if it is complete and totally bounded. Since Euclidean space is complete by <xref ref="corollary-completeness-of-the-p-norm"/>, <xref ref="proposition-closed-subsets-of-complete-metric-spaces"/> implies that a subset of Euclidean space is complete if and only if it is closed. Moreover, <xref ref="proposition-total-boundedness-in-euclidean-space"/> implies that a subset of Euclidean space is totally bounded if and only if it is bounded.
       </p>
     </proof>
   </corollary>
 
-  <example xml:id="example-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-  </example>
-
--->
+  <conclusion>
+    <p>
+      <xref ref="corollary-compact-subsets-of-euclidean-space"/> allows our intuition about the geometry and point-set topology of Euclidean spaces to inform our understanding of compactness in arbitrary metric spaces.
+    </p>
+  </conclusion>
+</subsection>
