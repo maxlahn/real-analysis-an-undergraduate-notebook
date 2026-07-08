@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="lemma theorem-like"><h2 class="heading">
+<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequences in totally bounded subsets.</span>
+</h2>
+<div class="para">If a subset <span class="process-math">\(U \subseteq X \)</span> of a metric space <span class="process-math">\(\of{ X , \rho } \)</span> is totally bounded, then every sequence of points in <span class="process-math">\(U \)</span> has a Cauchy subsequence.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-sequences-in-totally-bounded-subsets-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Lemma 3.6.21: Sequences in totally bounded subsets"><a tabindex="-1" href="#lemma-sequences-in-totally-bounded-subsets" title="Copy heading and permalink for Lemma 3.6.21: Sequences in totally bounded subsets" aria-label="Copy heading and permalink for Lemma 3.6.21: Sequences in totally bounded subsets">🔗</a></div>
+</article>
+<details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical">
+<div class="para">If <span class="process-math">\(U = \emptyset \)</span> is empty, then the desired result holds vacuously. We may therefore suppose that <span class="process-math">\(U \neq \emptyset \)</span> is non-empty. Let <span class="process-math">\(\of{ u_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of points <span class="process-math">\(u_{ n } \in U \text{.}\)</span> We aim to show that this sequence has a Cauchy subsequence. To that end, we first observe that since <span class="process-math">\(U \)</span> is totally bounded in <span class="process-math">\(X \text{,}\)</span> it is bounded by <a href="section-open-and-closed-sets.html#proposition-total-boundedness-implies-boundedness" class="xref" data-knowl="./knowl/xref/proposition-total-boundedness-implies-boundedness.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.4.24: Total boundedness implies boundedness">Proposition 3.4.24 Total boundedness implies boundedness</a>, and so <span class="process-math">\(\diam \of{ U } \lt \infty \)</span> is finite. let <span class="process-math">\(\of{ r_{ m } }_{ m = 0 }^{ \infty } \)</span> be a sequence of positive real numbers <span class="process-math">\(r_{ n } \gt 0 \)</span> so that <span class="process-math">\(r_{ 0 } \gt \diam \of{ U } \)</span> and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-total-boundedness-implies-boundedness.html">
+\begin{equation*}
+\lim_{ m \to \infty }{ r_{ m } } = 0\text{.}
+\end{equation*}
+</div>
+<div class="para">We argue inductively that for each natural number <span class="process-math">\(m \in \N \text{,}\)</span> there is a subsequence <span class="process-math">\(\of{ v_{ m , n } }_{ n = 0 }^{ \infty } \)</span> of <span class="process-math">\(\of{ u_{ n } }_{ n = 0 }^{ \infty } \)</span> whose entries are all contained in an open ball of radius <span class="process-math">\(r_{ m } \text{,}\)</span> and moreover that if <span class="process-math">\(m \leq p \)</span> then <span class="process-math">\(\of{ v_{ p , n } }_{ n = 0 }^{ \infty } \)</span> is a subsequence of <span class="process-math">\(\of{ v_{ m , n } }_{ n = 0 }^{ \infty } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-sequences-in-totally-bounded-subsets-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Indeed, for the base case <span class="process-math">\(m = 0 \text{,}\)</span> we observe that <span class="process-math">\(U \)</span> is contained in an open ball of radius <span class="process-math">\(r_{ 0 } \gt \diam \of{ U } \)</span> around any of its points, so we may take <span class="process-math">\(v_{ 0 , n } = u_{ n } \)</span> for all indices <span class="process-math">\(n \in \N \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-sequences-in-totally-bounded-subsets-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">For the inductive step, suppose for the inductive hypothesis that for some natural number <span class="process-math">\(m \in \N \)</span> the sequence <span class="process-math">\(\of{ u_{ n } }_{ n = 0 }^{ \infty } \)</span> has a subsequence <span class="process-math">\(\of{ v_{ m , n } }_{ n = 0 }^{ \infty } \)</span> whose entries are all contained in an open ball of radius <span class="process-math">\(r_{ m } \text{.}\)</span> Since <span class="process-math">\(U \)</span> is totally bounded, it is contained in a union of finitely many open balls of radius <span class="process-math">\(r_{ m + 1 } \text{.}\)</span> The pigeonhole principle implies that infinitely many entries of <span class="process-math">\(\of{ v_{ m , n } }_{ n = 0 }^{ \infty } \)</span> lie in one of these open balls. Removing all other entries, we obtain a further subsequence <span class="process-math">\(\of{ v_{ m + 1 , n } }_{ n = 0 }^{ \infty } \)</span> whose entries all lie in a ball of radius <span class="process-math">\(r_{ m + 1 } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-sequences-in-totally-bounded-subsets-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Consider the subsequence <span class="process-math">\(\of{ u_{ n_{ k } } }_{ k = 0 }^{ \infty } \)</span> of <span class="process-math">\(\of{ u_{ n } }_{ n = 0 }^{ \infty } \)</span> defined by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u_{ n_{ k } } = v_{ n , n }\text{.}
+\end{equation*}
+</div>
+<div class="para">We will show that this subsequence is Cauchy. Indeed, let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Since <span class="process-math">\(\of{ r_{ m } }_{ m = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(0 \text{,}\)</span> there is a natural number <span class="process-math">\(m_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r_{ m } \lt \frac{ \epsilon }{ 2 }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(m \geq m_{ \epsilon } \text{.}\)</span> Indeed, since <span class="process-math">\(\of{ u_{ n_{ k } } }_{ k = m_{ \epsilon } }^{ \infty } \)</span> is a subsequence of <span class="process-math">\(\of{ v_{ m_{ \epsilon } , n } }_{ n = 0 }^{ \infty } \text{,}\)</span> its entries all lie in an open ball of radius <span class="process-math">\(r_{ m } \lt \frac{ \epsilon }{ 2 } \text{.}\)</span> In particular, the entries of <span class="process-math">\(\of{ u_{ n_{ k } } }_{ k = m_{ \epsilon } }^{ \infty } \)</span> have distance strictly less than <span class="process-math">\(\epsilon \)</span> from each other. Thus <span class="process-math">\(\of{ u_{ n_{ k } } }_{ k = 0 }^{ \infty } \)</span> is Cauchy.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-sequences-in-totally-bounded-subsets-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.6.21.1"><a tabindex="-1" href="#lemma-sequences-in-totally-bounded-subsets-3" title="Copy heading and permalink for Proof 3.6.21.1" aria-label="Copy heading and permalink for Proof 3.6.21.1">🔗</a></div>
+</article></details><span class="incontext"><a class="internal" href="section-completeness-and-compactness.html#lemma-sequences-in-totally-bounded-subsets">In Context</a></span>
+</body>
+</html>

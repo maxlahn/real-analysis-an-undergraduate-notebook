@@ -19,11 +19,11 @@
 </head>
 <body class="ignore-math">
 <article class="theorem theorem-like"><h2 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.21</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="creator">(Eduard Heine; Émile Borel)</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Heine-Borel Theorem.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.22</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="creator">(Eduard Heine; Émile Borel)</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Heine-Borel Theorem.</span>
 </h2>
 <div class="para">A subset of a metric space is compact if and only if it is complete and totally bounded.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-heine-borel-theorem-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.6.21: Heine-Borel Theorem"><a tabindex="-1" href="#theorem-heine-borel-theorem" title="Copy heading and permalink for Theorem 3.6.21: Heine-Borel Theorem" aria-label="Copy heading and permalink for Theorem 3.6.21: Heine-Borel Theorem">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.6.22: Heine-Borel Theorem"><a tabindex="-1" href="#theorem-heine-borel-theorem" title="Copy heading and permalink for Theorem 3.6.22: Heine-Borel Theorem" aria-label="Copy heading and permalink for Theorem 3.6.22: Heine-Borel Theorem">🔗</a></div>
 </article>
 <details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
 <article class="hiddenproof knowl__content">
@@ -45,7 +45,7 @@ u_{ n } \not \subseteq \bigcup_{ k = 0 }^{ n - 1 }{ \mB_{ \epsilon } \of{ u_{ k 
 <div class="para">for all indices <span class="process-math">\(k \geq k_{ \epsilon } \text{.}\)</span> We observe that</div>
 <div class="displaymath process-math">
 \begin{align*}
-\rho \of{ u_{ n_{ k_{ \epsilon } + 1 } } , u_{ n_{ k_{ \epsilon } } } \amp \leq \rho \of{ u_{ n_{ k_{ \epsilon } + 1 } } , u } + \rho \of{ u , u_{ n_{ k_{ \epsilon } } } } = \rho \of{ u_{ n_{ k_{ \epsilon } + 1 } } , u } + \rho \of{ u_{ n_{ k_{ \epsilon } } } , u }\\
+\rho \of{ u_{ n_{ k_{ \epsilon } + 1 } } , u_{ n_{ k_{ \epsilon } } } } \amp \leq \rho \of{ u_{ n_{ k_{ \epsilon } + 1 } } , u } + \rho \of{ u , u_{ n_{ k_{ \epsilon } } } } = \rho \of{ u_{ n_{ k_{ \epsilon } + 1 } } , u } + \rho \of{ u_{ n_{ k_{ \epsilon } } } , u }\\
 \amp \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon\text{,}
 \end{align*}
 </div>
@@ -59,9 +59,9 @@ u_{ n_{ k_{ \epsilon } + 1 } } \in \mB_{ \epsilon } \of{ u_{ n_{ k_{ \epsilon } 
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-heine-borel-theorem-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Conversely, now suppose that <span class="process-math">\(U \)</span> is complete and totally bounded in <span class="process-math">\(X \text{,}\)</span> and let <span class="process-math">\(\of{ u_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of points <span class="process-math">\(u_{ n } \in U \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-heine-borel-theorem-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Conversely, now suppose that <span class="process-math">\(U \)</span> is complete and totally bounded in <span class="process-math">\(X \text{.}\)</span> Then <a href="section-completeness-and-compactness.html#lemma-sequences-in-totally-bounded-subsets" class="xref" data-knowl="./knowl/xref/lemma-sequences-in-totally-bounded-subsets.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 3.6.21: Sequences in totally bounded subsets">Lemma 3.6.21 Sequences in totally bounded subsets</a> implies that every sequence of points in <span class="process-math">\(U \)</span> has a Cauchy subsequence, and completeness implies that such a subsequence converges to a limit in <span class="process-math">\(U \text{.}\)</span> Thus every sequence of points in <span class="process-math">\(U \)</span> has a subsequence which converges to a limit in <span class="process-math">\(U \text{;}\)</span> that is, <span class="process-math">\(U \)</span> is compact.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-heine-borel-theorem-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Proof 3.6.21.1"><a tabindex="-1" href="#theorem-heine-borel-theorem-4" title="Copy heading and permalink for Proof 3.6.21.1" aria-label="Copy heading and permalink for Proof 3.6.21.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.6.22.1"><a tabindex="-1" href="#theorem-heine-borel-theorem-4" title="Copy heading and permalink for Proof 3.6.22.1" aria-label="Copy heading and permalink for Proof 3.6.22.1">🔗</a></div>
 </article></details><span class="incontext"><a class="internal" href="section-completeness-and-compactness.html#theorem-heine-borel-theorem">In Context</a></span>
 </body>
 </html>
