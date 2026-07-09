@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-comparison-and-topology" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Comparison and Topology
+  </title>
+
+  <introduction>
+    <p>
+      In this section, we will explore the relationships between topology and order theory. We will explore the order-theoretic properties of the partial order on the set of topologies on a fixed set, and we will explore ways of generating topologies by specifying some (but not necessarily all) open sets. Finally we will explore some natural topologies inherited by any totally ordered set. 
+    </p>
+  </introduction>
+
+  <xi:include href="./subsection-the-lattice-of-topologies.ptx"/>
+
+  <xi:include href="./subsection-base-of-topology.ptx"/>
+
+  <xi:include href="./subsection-order-topologies.ptx"/>
+
+  <conclusion>
+    <p>
+      Text after the last subsection.
+    </p>
+  </conclusion>
+
+  <xi:include href="./exercises-comparison-and-topology.ptx"/>
+
+  <xi:include href="./problems-comparison-and-topology.ptx"/>
+</section>
