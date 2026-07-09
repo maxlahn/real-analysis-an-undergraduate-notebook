@@ -7,7 +7,9 @@
 
   <introduction>
     <p>
-      Text before the first section.
+      In the previous chapter, we examined several point-set topological concepts such as sequential and map convergence, openness and closedness, continuity, and completeness and compactness in the context of metric spaces. However, we also saw other instances of these topological notions, such as the pointwise convergence of a sequence of maps to a metric space, which in spite of the similarities with sequential convergence in a metric space, cannot be described as convergence with respect to a metric. What then, is the structure with respect to which a pointwise convergence sequence of maps converges?
+
+In this chapter, we introduce <term> topological spaces </term>, which provide a more general setting than metric spaces in which we may consider many (but not all) of the same analytical notions as in the previous chapter. Just as a metric space is a ground set considered with the additional structure of a metric, a topological space is a set considered with the additional structure of a <term> topology </term>, which designates certain privileged subsets of the ground set as <term> open </term>. In the previous chapter, we took the real-valued function which computed the distance between two points as fundamental, and we developed a sense of openness for subsets based on this measure of distance. Now, we will take this openness to be fundamental and generalize the notions of convergence, continuity, and compactness investigated in the previous chapter.
     </p>
   </introduction>
 
@@ -17,7 +19,7 @@
 
   <xi:include href="./section-convergence-and-separation/section-convergence-and-separation.ptx"/>
 
-  <xi:include href="./section-continuity-in-topological-spaces/section-continuity-in-topological-spaces.ptx"/>
+  <xi:include href="./section-continuity/section-continuity.ptx"/>
 
   <xi:include href="./section-connectedness-and-compactness/section-connectedness-and-compactness.ptx"/>
 

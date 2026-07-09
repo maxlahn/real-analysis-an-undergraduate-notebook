@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-examples-of-topologies" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Examples of Topologies
+  </title>
+
+  <introduction>
+    <p>
+      A <term> topology </term> on a set is just a designation of <term> open </term> subsets, which are required to satisfy some of the important properties of open sets in metric spaces. Specifically, besides some non-degeneracy requirements, the collection of open sets in a topological space is required to be stable under arbitrary unions and finite intersections.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-topology">
+    <title>
+      Topology
+    </title>
+    
+    <idx>
+      ground set
+    </idx>
+    
+    <idx>
+      underlying set
+    </idx>
+    
+    <idx>
+      points
+    </idx>
+    
+    <idx>
+      topology
+    </idx>
+    
+    <idx>
+      open set
+    </idx>
+    
+    <idx>
+      non-degeneracy
+    </idx>
+    
+    <idx>
+      <m> \cup </m>-stability
+    </idx>
+    
+    <idx>
+      finite <m> \cap </m>-stability
+    </idx>
+    
+    <idx>
+      topological space
+    </idx>
+    
+    <statement>
+      <p>
+        A collection <m> \tau \subseteq \ps \of{ X } </m> of subsets of a set <m> X </m>, which is called the <term> ground set </term> or <term> underlying set </term> and whose elements are called <term> points </term>, is called a <term> topology </term> on <m> \ps \of{ X } </m>, and its elements are called <term> open </term>, if it satisfies the following conditions:
+        
+        <ul>
+          <li>
+            <title>
+              Non-degeneracy
+            </title>
+            
+            <p>
+              The empty set <m> \emptyset \in \tau </m> and the ground set <m> X </m> are open.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              <m> \cup </m>-stability
+            </title>
+            
+            <p>
+              For any indexed family <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> of open sets <m> U_{ j } \in \tau </m>, the union
+              
+              <md>
+                \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } \in \tau 
+              </md>
+              
+              is open.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Finite <m> \cap </m>-stability
+            </title>
+            
+            <p>
+              For any finite sequence <m> \of{ U_{ j } }_{ j = 1 }^{ m } </m> of open sets <m> U_{ j } \in \tau </m>, the intersection
+              
+              <md>
+                \bigcap_{ j = 1 }^{ m }{ U_{ j } } \in \tau 
+              </md>
+              
+              is open.
+            </p>
+          </li>
+        </ul>
+        
+        In this case, the ordered pair <m> \of{ X , \tau } </m> is called a <term> topological space </term>.
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-topological-spaces">
+    <title>
+      Topological spaces
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of topological spaces:
+        
+        <ul>
+          <li>
+            <title>
+              Discrete topology
+            </title>
+            
+            <idx>
+              discrete topology
+            </idx>
+            
+            <idx>
+              discrete topological space
+            </idx>
+            
+            <notation>
+              <usage>
+                <m> \top_{ X } </m>
+              </usage>
+              
+              <description>
+                <p>
+                  the discrete topology on <m> X </m>
+                </p>
+              </description>
+            </notation>
+            
+            <p>
+              For any set <m> X </m>, the power set <m> \ps \of{ X } </m> of <m> X </m> is a topology on <m> X </m>. Considered in this context, <m> \ps \of{ X } </m> is called the <term> discrete topology </term> on <m> X </m> and is denoted <m> \top_{ X } </m>. The topological space <m> \of{ X , \top_{ X } } </m> is called a <term> discrete (topological) space </term>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Indiscrete topology
+            </title>
+            
+            <idx>
+              indiscrete topology
+            </idx>
+            
+            <idx>
+              indiscrete topological space
+            </idx>
+            
+            <notation>
+              <usage>
+                <m> \bot_{ X } </m>
+              </usage>
+              
+              <description>
+                <p>
+                  the indiscrete topology on <m> X </m>
+                </p>
+              </description>
+            </notation>
+            
+            <p>
+              For any set <m> X </m>, the set <m> \bot_{ X } = \set{ \emptyset , X } </m> is a topology on <m> X </m> called the <term> discrete topology </term> on <m> X </m>. The topological space <m> \of{ X , \bot_{ X } } </m> is called an <term> indiscrete (topological) space </term>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Sierpiński space
+            </title>
+            
+            <idx>
+              Sierpiński space
+            </idx>
+            
+            <p>
+              The <term> Sierpiński space </term> is the topological space <m> \of{ X , \tau } </m> with ground set <m> X = \set{ 0 , 1 } </m> and topology <m> \tau = \set{ \emptyset , \set{ 1 } , \set{ 0 , 1 } } </m>. This topological space is a well-known simple counterexample to many false statements about topological spaces that feel true intuitively.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+
+  <remark xml:id="remark-implied-topologies">
+    <title>
+      Implied topologies
+    </title>
+    
+    <statement>
+      <p>
+        We will see that in general, there many topologies on a given set, no one of which can truly be considered canonical. However, sometimes if a topology <m> \tau </m> on a set <m> X </m> is clear from context, previously specified, or otherwise implied, some mathematicians will refer to the topological space <m> \of{ X , \tau } </m> by only the underlying set <m> X </m>.
+      </p>
+    </statement>
+  </remark>
+  
+  <p>
+    At the beginning of <xref ref="chapter-metric-spaces"/>, we saw how some structures on a ground set induce others in a canonical way. For example, we saw that an inner product on a real or complex vector space induces a norm on that vector space, and that a norm on such a vector space induces a metric on the underlying set. In this way, we viewed an inner product space as a special kind of normed vector space and a normed vector space as a special kind of metric space. Similarly, we will now see that, in a metric space, the metric induces a topology on the ground set in a canonical way, so that we may view a metric space as a special kind of topological space.
+  </p>
+  
+  <definition xml:id="definition-metric-topology">
+    <title>
+      Metric topology
+    </title>
+    
+    <idx>
+      metric topology
+    </idx>
+    
+    <idx>
+      metrizability
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \tau_{ \rho } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the metric topology induced by <m> \rho </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        The <term> metric topology </term> <m> \tau_{ \rho } </m> induced on a set <m> X </m> by a metric <m> \rho \colon X \times X \to \R </m> on <m> X </m> is the collection of open subsets in <m> X </m>. That <m> \tau_{ \rho } </m> is a topology on <m> X </m> follows immediately from (1), (2), and (4) of <xref ref="proposition-topology-of-a-metric-space"/>.
+      </p>
+      
+      <p>
+        A topology <m> \tau </m> on a set <m> X </m> is called <term> metrizable </term> if it is the metric topology induced by a metric on <m> X </m>, and <term> non-metrizable </term> otherwise. A topological space <m> \of{ X , \tau } </m> is called <term> metrizable </term> (resp. <term> non-metrizable </term>) if the topology is metrizable (resp. non-metrizable).
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="example-metric-topologies">
+    <title>
+      Metric topologies
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of metrizable and non-metrizable topologies:
+        
+        <ul>
+          <li>
+            <p>
+              The <term> Euclidean topology </term> <m> \tau_{ d } </m> on <m> n </m>-dimensional real coordinate space <m> \R^{ n } </m> is the metric topology induced by the Euclidean metric <m> d \colon \R^{ n } \times \R^{ n } \to \R </m>. This topology is also called the <term> standard topology </term> or the <term> usual topology </term> on <m> \R^{ n } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The discrete topology <m> \top_{ X } </m> on a set <m> X </m> is the metric topology induced by the discrete metric <m> \delta_{ X } \colon X \times X \to \R </m>. In particular, any discrete topological space is metrizable.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              On the other hand, the indiscrete topology <m> \bot_{ X } </m> is non-metrizable unless <m> \card{ X } \leq 1 </m>, in which case <m> \bot_{ X } = \top_{ X } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The Sierpiński space <m> \of{ \set{ 0 , 1 } , \set{ \emptyset , \set{ 1 } , \set{ 0 , 1 } } } </m> is non-metrizable; that is, the topology <m> \set{ \emptyset , \set{ 1 } , \set{ 0 , 1 } } </m> is not induced on the ground set <m> \set{ 0 , 1 } </m> by any metric. More generally, a finite topological space is metrizable if and only if it is discrete.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    The above definition shows that we actually are already familiar with a special class of topological spaces; just as a metric space hides inside any normed vector space, so too does a topological space hide inside any metric space. However, as shown in the last two examples above, not every topological space arises in this manner. Moreover, there is in general no unique metric which induces a topology on a metrizable topological space; for example, any positive scalar multiple a metric induces the same topology on the underlying set.
+  </p>
+  
+  <p>
+    In the same way that a metric induces a metric on any subset of its underlying set, a topology on a set induces a topology on any subset of its underlying set. For metric spaces, this subspace construction is a simple restriction of the metric to a subset of its domain. There is a similar, but slightly more intricate construction for topological spaces.
+  </p>
+  
+  <lemma xml:id="lemma-subspace-topology">
+    <title>
+      Subspace topology
+    </title>
+    
+    <statement>
+      <p>
+        Fix a subset <m> U \subseteq X </m> of a topological space <m> \of{ X , \tau } </m>. Then the collection
+        
+        <md>
+          \setmid{ U \cap V \in \ps{ X } }{ V \in \tau }
+        </md>
+        
+        is a topology on <m> U </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Denote by <m> \tau' </m> the collection
+        
+        <md>
+          \tau' = \setmid{ U \cap V \in \ps{ X } }{ V \in \tau }
+        </md>.
+        
+        Since <m> \tau </m> is non-degenerate, <m> \emptyset , X \in \tau </m> are open in <m> X </m>, and so
+        
+        <md>
+          \emptyset = U \cap \emptyset \in \tau'
+        </md>
+        
+        and
+        
+        <md>
+          U = U \cap X \in \tau'
+        </md>;
+        
+        that is, <m> \tau' </m> is non-degenerate.
+      </p>
+      
+      <p>
+        Now consider an indexed family <m> \of{ W_{ j } }_{ j \in \mathcal{ J } } </m> of sets <m> W_{ j } \in \tau' </m>. Then for each index <m> j \in \mathcal{ J } </m>, <m> W_{ j } = U \cap V_{ j } </m> for some open set <m> V_{ j } \in \tau </m> in <m> X </m>. Since <m> \tau </m> is stable under unions,
+        
+        <md>
+          \bigcup_{ j \in \mathcal{ J } }{ V_{ j } } \in \tau
+        </md>
+        
+        is open in <m> X </m>, and so
+        
+        <md>
+          \bigcup_{ j \in \mathcal{ J } }{ W_{ j } } = \bigcup_{ j \in \mathcal{ J } }{ \of{ U \cap V_{ j } } } = U \cap \bigcup_{ j \in \mathcal{ J } }{ V_{ j } } \in \tau'
+        </md>;
+        
+        that is, <m> \tau' </m> is stable under unions.
+      </p>
+      
+      <p>
+        Finally, consider a finite sequence <m> \of{ W_{ j } }_{ j = 1 }^{ m } </m> of sets <m> W_{ j } \in \tau' </m>. Then for each index <m> 1 \leq j \leq m </m>, <m> W_{ j } = U \cap V_{ j } </m> for some open set <m> V_{ j } \in \tau </m> in <m> X </m>. Since <m> \tau </m> is stable under finite intersections,
+        
+        <md>
+          \bigcap_{ j = 1 }^{ m }{ V_{ j } } \in \tau
+        </md>
+        
+        is open in <m> X </m>, and so
+        
+        <md>
+          \bigcap_{ j = 1 }^{ m }{ W_{ j } } = \bigcap_{ j = 1 }^{ m }{ \of{ U \cap V_{ j } } } = U \cap \bigcap_{ j = 1 }^{ m }{ V_{ j } } \in \tau'
+        </md>;
+        
+        that is, <m> \tau' </m> is stable under finite intersections.
+      </p>
+      
+      <p>
+        Since <m> \tau' </m> is non-degenerate, stable under unions, and stable under finite intersections, it is a topology on <m> U </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <definition xml:id="definition-subspace-topology">
+    <title>
+      Subspace topology
+    </title>
+    
+    <idx>
+      subspace topology
+    </idx>
+    
+    <idx>
+      topological subspace
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \rest{ \tau }_{ U } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the subspace topology induced on <m> U </m> by <m> \tau </m>.
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        The <term> subspace topology </term> <m> \rest{ \tau }_{ U } </m> induced on a subset <m> U \subseteq X </m> of a topological space <m> \of{ X , \tau } </m> is the collection
+        
+        <md>
+          \rest{ \tau }_{ U } = \setmid{ U \cap V \in \ps{ X } }{ V \in \tau }
+        </md>.
+        
+        This collection <m> \rest{ \tau }_{ U } </m> is a topology on <m> U </m> by <xref ref="lemma-subspace-topology"/>, and the topological space <m> \of{ U , \rest{ \tau }_{ U } } </m> is called a <term> (topological) subspace </term> of <m> \of{ X , \tau } </m>. 
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    It turns out that this notion of the restriction of a topology to a subspace is compatible with the restriction of a metric to a subspace. That is, the restriction of a metric topology is precisely the metric topology induced by the restriction of that metric to that subset.
+  </p>
+  
+  <lemma xml:id="lemma-topological-subspaces-of-metric-spaces">
+    <title>
+      Topological subspaces of metric spaces
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a metric space <m> \of{ X , \rho } </m>. Then <m> \rest{ \tau_{ \rho } }_{ U } = \tau_{ \rest{ \rho }_{ U } } </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Part (a) of <xref ref="problem-open-and-closed-sets-in-metric-subspaces"/> implies that a subset <m> V \subseteq U </m> is open in <m> U </m> if and only if <m> V = U \cap W </m> for some open subset <m> W \subseteq X </m>; that is, <m> V \in \tau_{ \rest{ \rho }_{ U } } </m> if and only if <m> V = U \cap W </m> for some <m> W \in \tau_{ \rho } </m>. We conclude that <m> \tau_{ \rest{ \rho }_{ U } } = \rest{ \tau_{ \rho } }_{ U } </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <conclusion>
+    <p>
+      One consequence of <xref ref="lemma-topological-subspaces-of-metric-spaces"/> is that metric subspaces are topological subspaces. Just as with metric subspaces, we will often abuse notation and refer to a subspace topology with the same notation as the original topology, so that we may speak of a topological subspace <m> \of{ U , \tau } </m> of a topological space <m> \of{ X , \tau } </m>; here we really mean <m> \of{ U , \rest{ \tau }_{ U } } </m>.
+    </p>
+  </conclusion>
+</subsection>

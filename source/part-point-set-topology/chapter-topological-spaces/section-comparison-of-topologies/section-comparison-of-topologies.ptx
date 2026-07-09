@@ -2,7 +2,7 @@
 
 <section xml:id="section-comparison-of-topologies" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>
-    Comparison of Topologies [SKIP]
+    Comparison of Topologies
   </title>
 
   <introduction>
@@ -19,7 +19,7 @@
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-comparison-of-topologies.ptx"/>
+  <xi:include href="./exercises-comparison-of-topologies.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-comparison-of-topologies.ptx"/>
+  <xi:include href="./problems-comparison-of-topologies.ptx"/>
 </section>

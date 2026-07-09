@@ -7,19 +7,21 @@
 
   <introduction>
     <p>
-      Text before the first subsection.
+      In the previous chapter, we used the distance function on a metric space to provide a quantitative measure of how close two points were to each other. In this chapter, we will see that we can relax this to a more qualitative notion of closeness and still construct many of the point-set topological concepts defined for metric spaces. In particular, many of the definitions of the previous chapter can be equivalently defined in terms of open neighborhoods.
     </p>
   </introduction>
 
-  <!-- <xi:include href="./subsection-TITLE.ptx"/> -->
+  <xi:include href="./subsection-examples-of-topologies.ptx"/>
+
+  <xi:include href="./subsection-algebra-of-open-and-closed-sets.ptx"/>
 
   <conclusion>
     <p>
-      Text after the last subsection.
+      Now that we have defined the central object of study, the remainder of this chapter will be dedicated to expanding our understanding of the point-set topological notions and methods developed in <xref ref="chapter-metric-spaces"/> to the more general setting of topological spaces. In the next section, we will construct more examples of topologies on a set coming from the natural partial order on its power set.
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-introduction-to-topology.ptx"/>
+  <xi:include href="./exercises-introduction-to-topology.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-introduction-to-topology.ptx"/>
+  <xi:include href="./problems-introduction-to-topology.ptx"/>
 </section>

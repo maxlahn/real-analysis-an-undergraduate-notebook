@@ -19,7 +19,7 @@
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-convergence-and-separation.ptx"/>
+  <xi:include href="./exercises-convergence-and-separation.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-convergence-and-separation.ptx"/>
+  <xi:include href="./problems-convergence-and-separation.ptx"/>
 </section>

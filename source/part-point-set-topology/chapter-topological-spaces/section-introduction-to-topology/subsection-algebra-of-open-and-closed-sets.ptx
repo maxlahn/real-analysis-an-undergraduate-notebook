@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-algebra-of-open-and-closed-sets" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Algebra of Open and Closed Sets
+  </title>
+
+  <introduction>
+    <p>
+      The topology in a topological space elevates certain subsets of the ground set as <term> open </term>. In an analogous manner to our definition of closedness for subsets of a metric space, a subset of a topological space is called <term> closed </term> if and only if its complement is open.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-closed-subset">
+    <title>
+      Closed subset
+    </title>
+    
+    <idx>
+      closed subset
+    </idx>
+    
+    <statement>
+      <p>
+        A subset <m> U \subseteq X </m> of a topological space <m> \of{ X , \tau } </m> is called <term> closed </term> in <m> X </m> if its complement <m> X \setminus U \in \tau </m> is open in <m> X </m>.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    The defining properties of a topology impose constraints on the set of closed subsets of a topological space.
+  </p>
+  
+  <lemma xml:id="lemma-closed-subsets-of-a-topological-space">
+    <title>
+      Closed subsets of a topological space
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ X , \tau } </m> be a topological space.
+        
+        <ol>
+          <li>
+            <p>
+              The empty set <m> \emptyset </m> and the ground set <m> X </m> are closed in <m> X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              For any indexed family <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> of closed sets <m> U_{ j } </m> in <m> X </m>, the intersection
+              
+              <md>
+                \bigcap_{ j \in \mathcal{ J } }{ U_{ j } }
+              </md>
+              
+              is closed in <m> X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              For any finite sequence <m> \of{ U_{ j } }_{ j = 1 }^{ m } </m> of closed sets <m> U_{ j } </m> in <m> X </m>, the union
+              
+              <md>
+                \bigcup_{ j = 1 }^{ m }{ U_{ j } }
+              </md>
+              
+              is closed in <m> X </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            The non-degeneracy of the topology <m> \tau </m> implies that <m> \emptyset , X \in \tau </m> are open in <m> X </m>, and so their complements <m> \emptyset = X \setminus X </m> and <m> X = X \setminus \emptyset </m> are closed in <m> X </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            For each index <m> j \in \mathcal{ J } </m>, <m> U_{ j } = X \setminus V_{ j } </m> for some open subset <m> V_{ j } \in \tau </m>. The stability of the topology <m> \tau </m> under unions implies that
+            
+            <md>
+              \bigcup_{ j \in \mathcal{ J } }{ V_{ j } } \in \tau
+            </md>
+            
+            is open in <m> X </m>, and so
+            
+            <md>
+              \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcap_{ j \in \mathcal{ J } }{ \of{ X \setminus V_{ j } } } = X \setminus \bigcup_{ j \in \mathcal{ J } }{ V_{ j } }
+            </md>
+            
+            is closed in <m> X </m>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            For each index <m> 1 \leq j \leq m </m>, <m> U_{ j } = X \setminus V_{ j } </m> for some open subset <m> V_{ j } \in \tau </m>. The stability of the topology <m> \tau </m> under finite intersections implies that
+            
+            <md>
+              \bigcap_{ j = 1 }^{ m }{ V_{ j } } \in \tau
+            </md>
+            
+            is open in <m> X </m>, and so
+            
+            <md>
+              \bigcup_{ j = 1 }^{ m }{ U_{ j } } = \bigcup_{ j = 1 }^{ m }{ \of{ X \setminus V_{ j } } } = X \setminus \bigcap_{ j = 1 }^{ m }{ V_{ j } }
+            </md>
+            
+            is closed in <m> X </m>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </lemma>
+  
+  <p>
+    There is also a natural generalization of the notion of neighborhoods to the setting of topological spaces. Rather than requiring a <term> neighborhood </term> of a point in a topological space to contain an open ball centered around that point, we require that it contain some open subset which contains the point.
+  </p>
+  
+  <definition xml:id="definition-topological-neighborhood">
+    <title>
+      Neighborhood
+    </title>
+    
+    <idx>
+      neighborhood
+    </idx>
+    
+    <statement>
+      <p>
+        A subset <m> N \subseteq X </m> of a topological space <m> \of{ X , \tau } </m> is called a <term> neighborhood </term> of a point <m> x \in X </m> if <m> x \in U \subseteq N </m> for some open set <m> U \in \tau </m> in <m> X </m>.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="example-neighborhoods">
+    <title>
+      Neighborhoods
+    </title>
+    
+    <statement>
+      <p>
+        Recall that the Sierpiński space <m> \of{ X , \tau } </m> is the topological space with ground set <m> X = \set{ 0 , 1 } </m> and topology <m> \tau = \set{ \emptyset , \set{ 1 } , \set{ 0 , 1 } } </m>. Thus <m> X = \set{ 0 , 1 } </m> is the only neighborhood of the point <m> 0 </m>, but <m> \set{ 1 } </m> and <m> \set{ 0 , 1 } </m> are neighborhoods of the point <m> 1 </m>.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    Just as in a metric space, we will interpret the relationship of between a point in a topological space and a neighborhood to mean that the neighborhood contains all points which are <q> close enough </q> to that point. In a metric space, this notion of nearness for points can be <em> quantifiably </em> determined. In a topological space, however, we will use the concept of neighborhoods introduced above to obtain <em> qualitative </em> measures of closeness for points: two points are considered to be <q> close </q> in a topological space if many neighborhoods of one point also contain the other point.
+  </p>
+  
+  <p>
+    The cognitive metaphor described above is called <term> locality </term>. For example, a point-set topological property can be said to hold locally if any point in the topological space has a neighborhood on which that property holds. Similarly, the <term> local properties </term> of a topological space are those which involve the existence of neighborhoods around any given point which satisfy certain conditions. These local properties of a topological space can be contrasted with its <term> global properties </term>, which hold on its entire ground set. For example, we will later see manifolds to witness strong local properties while having incredibly large variability in their global properties. We will see several examples of local properties, such as continuity, in the remainder of our investigation of topological spaces.
+  </p>
+  
+  <p>
+    In many ways, the concept of topological spaces was created exactly to formalize the most general setting in which locality can be considered even in the absence of a metric to provide a quantitative measure of nearness for points. Because of the definition of the metric topology induced by a metric on its ground set, these notions of metric and topological locality coincide for metric topological spaces. That is, a metric space and its associated metric topological space have the same neighborhoods. This also implies that all notions in the context of metric spaces defined solely on neighborhoods can be reliably generalized to the context of topological spaces. In particular, we can use neighborhoods to define the <term> interior </term>, <term> closure </term>, and <term> boundary </term> of a subset of a topological space.
+  </p>
+  
+  <definition xml:id="definition-topological-interior-closure-boundary">
+    <title>
+      Interior; closure; boundary
+    </title>
+    
+    <idx>
+      interior point
+    </idx>
+    
+    <idx>
+      interior
+    </idx>
+    
+    <idx>
+      point of closure
+    </idx>
+    
+    <idx>
+      closure
+    </idx>
+    
+    <idx>
+      boundary
+    </idx>
+    
+    <idx>
+      boundary point
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \Int \of{ U } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the interior of <m> U </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> U^{ \circ } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the interior of <m> U </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \Cl \of{ U } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the closure of <m> U </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \overline{ U } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the closure of <m> U </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \Bd \of{ U } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the boundary of <m> U </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \partial U </m>
+      </usage>
+      
+      <description>
+        <p>
+          the boundary of <m> U </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a topological space <m> \of{ X , \tau } </m>.
+        
+        <ul>
+          <li>
+            <title>
+              Interior
+            </title>
+            
+            <p>
+              A point <m> x \in X </m> is an <term> interior point </term> of <m> U </m> if <m> U </m> is a neighborhood of <m> x </m> in <m> X </m>. The set of interior points of <m> U </m> is called the <term> interior </term> of <m> U </m> and is denoted <m> \Int \of{ U } </m> or <m> U^{ \circ } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Closure
+            </title>
+            
+            <p>
+              A point <m> x \in X </m> is a <term> point of closure </term> of <m> U </m> in <m> X </m> if every neighborhood of <m> x </m> in <m> X </m> meets <m> U </m>; that is, <m> x </m> is a point of closure of <m> U </m> in <m> X </m> if <m> N \cap U \neq \emptyset </m> for any neighborhood <m> N \subseteq X </m> of <m> x </m> in <m> X </m>. The set of points of closure of <m> U </m> in <m> X </m> is called the <term> closure </term> of <m> U </m> in <m> X </m> and is denoted <m> \Cl \of{ U } </m> or <m> \overline{ U } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Boundary
+            </title>
+            
+            <p>
+              A point <m> x \in X </m> is a <term> boundary point </term> of <m> U </m> in <m> X </m> if every neighborhood of <m> x </m> in <m> X </m> meets both <m> U </m> and its complement <m> X \setminus U </m>; that is, <m> x </m> is a boundary point of <m> U </m> in <m> X </m> if <m> N \cap U \neq \emptyset </m> and <m> N \setminus U \neq \emptyset </m> for any neighborhood <m> N \subseteq X </m> of <m> x </m> in <m> X </m>. The set of boundary points of <m> U </m> in <m> X </m> is called the <term> boundary </term> of <m> U </m> in <m> X </m> and is denoted <m> \Bd \of{ U } </m> or <m> \partial U </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    That the above definitions are phrased in terms of neighborhoods implies that many of the related results in the setting of metric spaces also hold for topological spaces in general. Even better, the proofs of these results for metric spaces can easily be altered to construct proofs of their generalizations.
+  </p>
+  
+  <theorem xml:id="theorem-interior-closure-boundary">
+    <title>
+      Interior; closure; boundary
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> U </m> be a subset of a metric space <m> \of{ X , \tau } </m>.
+        
+        <ol>
+          <li>
+            <title>
+              Interior
+            </title>
+            
+            <p>
+              <m> U </m> is open in <m> X </m> if and only if <m> \Int \of{ U } = U </m>. More generally, <m> U </m> has interior
+              
+              <md>
+                \Int \of{ U } = \bigcup_{ V \in \mathcal{ O }_{ U } }{ V } = X \setminus \Cl \of{ X \setminus U }
+              </md>,
+              
+              where <m> \mathcal{ O }_{ U } </m> is the collection of open sets in <m> X </m> which are contained in <m> U </m>. Finally, <m> \Int \of{ \Int \of{ U } } = \Int \of{ U } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Closure
+            </title>
+            
+            <p>
+              <m> U </m> is closed in <m> X </m> if and only if <m> \Cl \of{ U } = U </m>. More generally, <m> U </m> has closure
+              
+              <md>
+                \Cl \of{ U } = \bigcap_{ V \in \mathcal{ C }_{ U } }{ V } = X \setminus \Int \of{ X \setminus U }
+              </md>,
+              
+              where <m> \mathcal{ C }_{ U } </m> is the collection of closed sets in <m> X </m> which contain <m> U </m>. Finally, <m> \Cl \of{ \Cl \of{ U } } = \Cl \of{ U } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Boundary
+            </title>
+            
+            <p>
+              <m> U </m> has boundary <m> \Bd \of{ U } = \Cl \of{ U } \cap \Cl \of{ X \setminus U } </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <conclusion>
+    <p>
+      The proof of <xref ref="theorem-interior-closure-boundary"/> is nearly identical to the proofs of <xref ref="proposition-interior-closure"/>, <xref ref="proposition-interior-closure"/>, <xref ref="theorem-interior-closure"/>, and <xref ref="corollary-idempotence-of-interior-closure"/> and the solution to <xref ref="problem-interior-closure-and-boundary-of-complements"/>, and so it is left to the reader.
+    </p>
+  </conclusion>
+</subsection>
