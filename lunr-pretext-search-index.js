@@ -4750,7 +4750,178 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.1",
   "title": "Introduction to Topology",
-  "body": " Introduction to Topology   Text before the first subsection.     Text after the last subsection.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Reading Questions   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and\/or instructor rather than spoiling the answers.    "
+  "body": " Introduction to Topology   In the previous chapter, we used the distance function on a metric space to provide a quantitative measure of how close two points were to each other. In this chapter, we will see that we can relax this to a more qualitative notion of closeness and still construct many of the point-set topological concepts defined for metric spaces. In particular, many of the definitions of the previous chapter can be equivalently defined in terms of open neighborhoods.    Examples of Topologies   A topology on a set is just a designation of open subsets, which are required to satisfy some of the important properties of open sets in metric spaces. Specifically, besides some non-degeneracy requirements, the collection of open sets in a topological space is required to be stable under arbitrary unions and finite intersections.    Topology  ground set  underlying set  points  topology  open set  non-degeneracy   -stability  finite -stability  topological space   A collection of subsets of a set , which is called the ground set or underlying set and whose elements are called points , is called a topology on , and its elements are called open , if it satisfies the following conditions:   Non-degeneracy  The empty set and the ground set are open.     -stability  For any indexed family of open sets , the union is open.    Finite -stability  For any finite sequence of open sets , the intersection is open.   In this case, the ordered pair is called a topological space .     Topological spaces   The following are examples of topological spaces:   Discrete topology  discrete topology  discrete topological space       the discrete topology on     For any set , the power set of is a topology on . Considered in this context, is called the discrete topology on and is denoted . The topological space is called a discrete (topological) space .    Indiscrete topology  indiscrete topology  indiscrete topological space       the indiscrete topology on     For any set , the set is a topology on called the discrete topology on . The topological space is called an indiscrete (topological) space .    Sierpiński space  Sierpiński space  The Sierpiński space is the topological space with ground set and topology . This topological space is a well-known simple counterexample to many false statements about topological spaces that feel true intuitively.        Implied topologies   We will see that in general, there many topologies on a given set, no one of which can truly be considered canonical. However, sometimes if a topology on a set is clear from context, previously specified, or otherwise implied, some mathematicians will refer to the topological space by only the underlying set .    At the beginning of , we saw how some structures on a ground set induce others in a canonical way. For example, we saw that an inner product on a real or complex vector space induces a norm on that vector space, and that a norm on such a vector space induces a metric on the underlying set. In this way, we viewed an inner product space as a special kind of normed vector space and a normed vector space as a special kind of metric space. Similarly, we will now see that, in a metric space, the metric induces a topology on the ground set in a canonical way, so that we may view a metric space as a special kind of topological space.   Metric topology  metric topology  metrizability       the metric topology induced by      The metric topology  induced on a set by a metric on is the collection of open subsets in . That is a topology on follows immediately from (1), (2), and (4) of .  A topology on a set is called metrizable if it is the metric topology induced by a metric on , and non-metrizable otherwise. A topological space is called metrizable (resp. non-metrizable ) if the topology is metrizable (resp. non-metrizable).     Metric topologies   The following are examples of metrizable and non-metrizable topologies:   The Euclidean topology  on -dimensional real coordinate space is the metric topology induced by the Euclidean metric . This topology is also called the standard topology or the usual topology on .    The discrete topology on a set is the metric topology induced by the discrete metric . In particular, any discrete topological space is metrizable.    On the other hand, the indiscrete topology is non-metrizable unless , in which case .    The Sierpiński space is non-metrizable; that is, the topology is not induced on the ground set by any metric. More generally, a finite topological space is metrizable if and only if it is discrete.       The above definition shows that we actually are already familiar with a special class of topological spaces; just as a metric space hides inside any normed vector space, so too does a topological space hide inside any metric space. However, as shown in the last two examples above, not every topological space arises in this manner. Moreover, there is in general no unique metric which induces a topology on a metrizable topological space; for example, any positive scalar multiple a metric induces the same topology on the underlying set.  In the same way that a metric induces a metric on any subset of its underlying set, a topology on a set induces a topology on any subset of its underlying set. For metric spaces, this subspace construction is a simple restriction of the metric to a subset of its domain. There is a similar, but slightly more intricate construction for topological spaces.   Subspace topology   Fix a subset of a topological space . Then the collection is a topology on .    Denote by the collection . Since is non-degenerate, are open in , and so and ; that is, is non-degenerate.  Now consider an indexed family of sets . Then for each index , for some open set in . Since is stable under unions, is open in , and so ; that is, is stable under unions.  Finally, consider a finite sequence of sets . Then for each index , for some open set in . Since is stable under finite intersections, is open in , and so ; that is, is stable under finite intersections.  Since is non-degenerate, stable under unions, and stable under finite intersections, it is a topology on .     Subspace topology  subspace topology  topological subspace       the subspace topology induced on by .     The subspace topology  induced on a subset of a topological space is the collection . This collection is a topology on by , and the topological space is called a (topological) subspace of .    It turns out that this notion of the restriction of a topology to a subspace is compatible with the restriction of a metric to a subspace. That is, the restriction of a metric topology is precisely the metric topology induced by the restriction of that metric to that subset.   Topological subspaces of metric spaces   Let be a subset of a metric space . Then .    Part (a) of implies that a subset is open in if and only if for some open subset ; that is, if and only if for some . We conclude that .     One consequence of is that metric subspaces are topological subspaces. Just as with metric subspaces, we will often abuse notation and refer to a subspace topology with the same notation as the original topology, so that we may speak of a topological subspace of a topological space ; here we really mean .     Algebra of Open and Closed Sets   The topology in a topological space elevates certain subsets of the ground set as open . In an analogous manner to our definition of closedness for subsets of a metric space, a subset of a topological space is called closed if and only if its complement is open.    Closed subset  closed subset   A subset of a topological space is called closed in if its complement is open in .    The defining properties of a topology impose constraints on the set of closed subsets of a topological space.   Closed subsets of a topological space   Let be a topological space.   The empty set and the ground set are closed in .    For any indexed family of closed sets in , the intersection is closed in .    For any finite sequence of closed sets in , the union is closed in .         The non-degeneracy of the topology implies that are open in , and so their complements and are closed in .    For each index , for some open subset . The stability of the topology under unions implies that is open in , and so is closed in .    For each index , for some open subset . The stability of the topology under finite intersections implies that is open in , and so is closed in .      There is also a natural generalization of the notion of neighborhoods to the setting of topological spaces. Rather than requiring a neighborhood of a point in a topological space to contain an open ball centered around that point, we require that it contain some open subset which contains the point.   Neighborhood  neighborhood   A subset of a topological space is called a neighborhood of a point if for some open set in .     Neighborhoods   Recall that the Sierpiński space is the topological space with ground set and topology . Thus is the only neighborhood of the point , but and are neighborhoods of the point .    Just as in a metric space, we will interpret the relationship of between a point in a topological space and a neighborhood to mean that the neighborhood contains all points which are close enough to that point. In a metric space, this notion of nearness for points can be quantifiably determined. In a topological space, however, we will use the concept of neighborhoods introduced above to obtain qualitative measures of closeness for points: two points are considered to be close in a topological space if many neighborhoods of one point also contain the other point.  The cognitive metaphor described above is called locality . For example, a point-set topological property can be said to hold locally if any point in the topological space has a neighborhood on which that property holds. Similarly, the local properties of a topological space are those which involve the existence of neighborhoods around any given point which satisfy certain conditions. These local properties of a topological space can be contrasted with its global properties , which hold on its entire ground set. For example, we will later see manifolds to witness strong local properties while having incredibly large variability in their global properties. We will see several examples of local properties, such as continuity, in the remainder of our investigation of topological spaces.  In many ways, the concept of topological spaces was created exactly to formalize the most general setting in which locality can be considered even in the absence of a metric to provide a quantitative measure of nearness for points. Because of the definition of the metric topology induced by a metric on its ground set, these notions of metric and topological locality coincide for metric topological spaces. That is, a metric space and its associated metric topological space have the same neighborhoods. This also implies that all notions in the context of metric spaces defined solely on neighborhoods can be reliably generalized to the context of topological spaces. In particular, we can use neighborhoods to define the interior , closure , and boundary of a subset of a topological space.   Interior; closure; boundary  interior point  interior  point of closure  closure  boundary  boundary point       the interior of          the interior of          the closure of          the closure of          the boundary of          the boundary of      Let be a subset of a topological space .   Interior  A point is an interior point of if is a neighborhood of in . The set of interior points of is called the interior of and is denoted or .    Closure  A point is a point of closure of in if every neighborhood of in meets ; that is, is a point of closure of in if for any neighborhood of in . The set of points of closure of in is called the closure of in and is denoted or .    Boundary  A point is a boundary point of in if every neighborhood of in meets both and its complement ; that is, is a boundary point of in if and for any neighborhood of in . The set of boundary points of in is called the boundary of in and is denoted or .       That the above definitions are phrased in terms of neighborhoods implies that many of the related results in the setting of metric spaces also hold for topological spaces in general. Even better, the proofs of these results for metric spaces can easily be altered to construct proofs of their generalizations.   Interior; closure; boundary   Let be a subset of a metric space .   Interior   is open in if and only if . More generally, has interior , where is the collection of open sets in which are contained in . Finally, .    Closure   is closed in if and only if . More generally, has closure , where is the collection of closed sets in which contain . Finally, .    Boundary   has boundary .        The proof of is nearly identical to the proofs of , , , and and the solution to , and so it is left to the reader.     Now that we have defined the central object of study, the remainder of this chapter will be dedicated to expanding our understanding of the point-set topological notions and methods developed in to the more general setting of topological spaces. In the next section, we will construct more examples of topologies on a set coming from the natural partial order on its power set.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available in . However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Problems   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these problems are available in . However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and\/or instructor rather than spoiling the answers.    "
+},
+{
+  "id": "subsection-examples-of-topologies-2-1",
+  "level": "2",
+  "url": "section-introduction-to-topology.html#subsection-examples-of-topologies-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "topology open "
+},
+{
+  "id": "definition-topology",
+  "level": "2",
+  "url": "section-introduction-to-topology.html#definition-topology",
+  "type": "Definition",
+  "number": "4.1.1",
+  "title": "Topology.",
+  "body": " Topology  ground set  underlying set  points  topology  open set  non-degeneracy   -stability  finite -stability  topological space   A collection of subsets of a set , which is called the ground set or underlying set and whose elements are called points , is called a topology on , and its elements are called open , if it satisfies the following conditions:   Non-degeneracy  The empty set and the ground set are open.     -stability  For any indexed family of open sets , the union is open.    Finite -stability  For any finite sequence of open sets , the intersection is open.   In this case, the ordered pair is called a topological space .   "
+},
+{
+  "id": "example-topological-spaces",
+  "level": "2",
+  "url": "section-introduction-to-topology.html#example-topological-spaces",
+  "type": "Example",
+  "number": "4.1.2",
+  "title": "Topological spaces.",
+  "body": " Topological spaces   The following are examples of topological spaces:   Discrete topology  discrete topology  discrete topological space       the discrete topology on     For any set , the power set of is a topology on . Considered in this context, is called the discrete topology on and is denoted . The topological space is called a discrete (topological) space .    Indiscrete topology  indiscrete topology  indiscrete topological space       the indiscrete topology on     For any set , the set is a topology on called the discrete topology on . The topological space is called an indiscrete (topological) space .    Sierpiński space  Sierpiński space  The Sierpiński space is the topological space with ground set and topology . This topological space is a well-known simple counterexample to many false statements about topological spaces that feel true intuitively.      "
+},
+{
+  "id": "remark-implied-topologies",
+  "level": "2",
+  "url": "section-introduction-to-topology.html#remark-implied-topologies",
+  "type": "Remark",
+  "number": "4.1.3",
+  "title": "Implied topologies.",
+  "body": " Implied topologies   We will see that in general, there many topologies on a given set, no one of which can truly be considered canonical. However, sometimes if a topology on a set is clear from context, previously specified, or otherwise implied, some mathematicians will refer to the topological space by only the underlying set .   "
+},
+{
+  "id": "definition-metric-topology",
+  "level": "2",
+  "url": "section-introduction-to-topology.html#definition-metric-topology",
+  "type": "Definition",
+  "number": "4.1.4",
+  "title": "Metric topology.",
+  "body": " Metric topology  metric topology  metrizability       the metric topology induced by      The metric topology  induced on a set by a metric on is the collection of open subsets in . That is a topology on follows immediately from (1), (2), and (4) of .  A topology on a set is called metrizable if it is the metric topology induced by a metric on , and non-metrizable otherwise. A topological space is called metrizable (resp. non-metrizable ) if the topology is metrizable (resp. non-metrizable).   "
+},
+{
+  "id": "example-metric-topologies",
+  "level": "2",
+  "url": "section-introduction-to-topology.html#example-metric-topologies",
+  "type": "Example",
+  "number": "4.1.5",
+  "title": "Metric topologies.",
+  "body": " Metric topologies   The following are examples of metrizable and non-metrizable topologies:   The Euclidean topology  on -dimensional real coordinate space is the metric topology induced by the Euclidean metric . This topology is also called the standard topology or the usual topology on .    The discrete topology on a set is the metric topology induced by the discrete metric . In particular, any discrete topological space is metrizable.    On the other hand, the indiscrete topology is non-metrizable unless , in which case .    The Sierpiński space is non-metrizable; that is, the topology is not induced on the ground set by any metric. More generally, a finite topological space is metrizable if and only if it is discrete.      "
+},
+{
+  "id": "lemma-subspace-topology",
+  "level": "2",
+  "url": "section-introduction-to-topology.html#lemma-subspace-topology",
+  "type": "Lemma",
+  "number": "4.1.6",
+  "title": "Subspace topology.",
+  "body": " Subspace topology   Fix a subset of a topological space . Then the collection is a topology on .    Denote by the collection . Since is non-degenerate, are open in , and so and ; that is, is non-degenerate.  Now consider an indexed family of sets . Then for each index , for some open set in . Since is stable under unions, is open in , and so ; that is, is stable under unions.  Finally, consider a finite sequence of sets . Then for each index , for some open set in . Since is stable under finite intersections, is open in , and so ; that is, is stable under finite intersections.  Since is non-degenerate, stable under unions, and stable under finite intersections, it is a topology on .   "
+},
+{
+  "id": "definition-subspace-topology",
+  "level": "2",
+  "url": "section-introduction-to-topology.html#definition-subspace-topology",
+  "type": "Definition",
+  "number": "4.1.7",
+  "title": "Subspace topology.",
+  "body": " Subspace topology  subspace topology  topological subspace       the subspace topology induced on by .     The subspace topology  induced on a subset of a topological space is the collection . This collection is a topology on by , and the topological space is called a (topological) subspace of .   "
+},
+{
+  "id": "lemma-topological-subspaces-of-metric-spaces",
+  "level": "2",
+  "url": "section-introduction-to-topology.html#lemma-topological-subspaces-of-metric-spaces",
+  "type": "Lemma",
+  "number": "4.1.8",
+  "title": "Topological subspaces of metric spaces.",
+  "body": " Topological subspaces of metric spaces   Let be a subset of a metric space . Then .    Part (a) of implies that a subset is open in if and only if for some open subset ; that is, if and only if for some . We conclude that .   "
+},
+{
+  "id": "subsection-algebra-of-open-and-closed-sets-2-1",
+  "level": "2",
+  "url": "section-introduction-to-topology.html#subsection-algebra-of-open-and-closed-sets-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "open closed "
+},
+{
+  "id": "definition-closed-subset",
+  "level": "2",
+  "url": "section-introduction-to-topology.html#definition-closed-subset",
+  "type": "Definition",
+  "number": "4.1.9",
+  "title": "Closed subset.",
+  "body": " Closed subset  closed subset   A subset of a topological space is called closed in if its complement is open in .   "
+},
+{
+  "id": "lemma-closed-subsets-of-a-topological-space",
+  "level": "2",
+  "url": "section-introduction-to-topology.html#lemma-closed-subsets-of-a-topological-space",
+  "type": "Lemma",
+  "number": "4.1.10",
+  "title": "Closed subsets of a topological space.",
+  "body": " Closed subsets of a topological space   Let be a topological space.   The empty set and the ground set are closed in .    For any indexed family of closed sets in , the intersection is closed in .    For any finite sequence of closed sets in , the union is closed in .         The non-degeneracy of the topology implies that are open in , and so their complements and are closed in .    For each index , for some open subset . The stability of the topology under unions implies that is open in , and so is closed in .    For each index , for some open subset . The stability of the topology under finite intersections implies that is open in , and so is closed in .     "
+},
+{
+  "id": "subsection-algebra-of-open-and-closed-sets-6",
+  "level": "2",
+  "url": "section-introduction-to-topology.html#subsection-algebra-of-open-and-closed-sets-6",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "neighborhood "
+},
+{
+  "id": "definition-topological-neighborhood",
+  "level": "2",
+  "url": "section-introduction-to-topology.html#definition-topological-neighborhood",
+  "type": "Definition",
+  "number": "4.1.11",
+  "title": "Neighborhood.",
+  "body": " Neighborhood  neighborhood   A subset of a topological space is called a neighborhood of a point if for some open set in .   "
+},
+{
+  "id": "example-neighborhoods",
+  "level": "2",
+  "url": "section-introduction-to-topology.html#example-neighborhoods",
+  "type": "Example",
+  "number": "4.1.12",
+  "title": "Neighborhoods.",
+  "body": " Neighborhoods   Recall that the Sierpiński space is the topological space with ground set and topology . Thus is the only neighborhood of the point , but and are neighborhoods of the point .   "
+},
+{
+  "id": "subsection-algebra-of-open-and-closed-sets-10",
+  "level": "2",
+  "url": "section-introduction-to-topology.html#subsection-algebra-of-open-and-closed-sets-10",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "locality local properties global properties "
+},
+{
+  "id": "subsection-algebra-of-open-and-closed-sets-11",
+  "level": "2",
+  "url": "section-introduction-to-topology.html#subsection-algebra-of-open-and-closed-sets-11",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "interior closure boundary "
+},
+{
+  "id": "definition-topological-interior-closure-boundary",
+  "level": "2",
+  "url": "section-introduction-to-topology.html#definition-topological-interior-closure-boundary",
+  "type": "Definition",
+  "number": "4.1.13",
+  "title": "Interior; closure; boundary.",
+  "body": " Interior; closure; boundary  interior point  interior  point of closure  closure  boundary  boundary point       the interior of          the interior of          the closure of          the closure of          the boundary of          the boundary of      Let be a subset of a topological space .   Interior  A point is an interior point of if is a neighborhood of in . The set of interior points of is called the interior of and is denoted or .    Closure  A point is a point of closure of in if every neighborhood of in meets ; that is, is a point of closure of in if for any neighborhood of in . The set of points of closure of in is called the closure of in and is denoted or .    Boundary  A point is a boundary point of in if every neighborhood of in meets both and its complement ; that is, is a boundary point of in if and for any neighborhood of in . The set of boundary points of in is called the boundary of in and is denoted or .      "
+},
+{
+  "id": "theorem-interior-closure-boundary",
+  "level": "2",
+  "url": "section-introduction-to-topology.html#theorem-interior-closure-boundary",
+  "type": "Theorem",
+  "number": "4.1.14",
+  "title": "Interior; closure; boundary.",
+  "body": " Interior; closure; boundary   Let be a subset of a metric space .   Interior   is open in if and only if . More generally, has interior , where is the collection of open sets in which are contained in . Finally, .    Closure   is closed in if and only if . More generally, has closure , where is the collection of closed sets in which contain . Finally, .    Boundary   has boundary .      "
 },
 {
   "id": "section-comparison-of-topologies",
@@ -4758,8 +4929,8 @@ var ptx_lunr_docs = [
   "url": "section-comparison-of-topologies.html",
   "type": "Section",
   "number": "4.2",
-  "title": "Comparison of Topologies [SKIP]",
-  "body": " Comparison of Topologies [SKIP]   Text before the first subsection.     Text after the last subsection.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Reading Questions   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and\/or instructor rather than spoiling the answers.    "
+  "title": "Comparison of Topologies",
+  "body": " Comparison of Topologies   Text before the first subsection.     Text after the last subsection.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available in . However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Problems   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these problems are available in . However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and\/or instructor rather than spoiling the answers.    "
 },
 {
   "id": "section-convergence-and-separation",
@@ -4768,16 +4939,16 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.3",
   "title": "Convergence and Separation",
-  "body": " Convergence and Separation   Text before the first subsection.     Text after the last subsection.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Reading Questions   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and\/or instructor rather than spoiling the answers.    "
+  "body": " Convergence and Separation   Text before the first subsection.     Text after the last subsection.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available in . However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Problems   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these problems are available in . However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and\/or instructor rather than spoiling the answers.    "
 },
 {
-  "id": "section-continuity-in-topological-spaces",
+  "id": "section-continuity",
   "level": "1",
-  "url": "section-continuity-in-topological-spaces.html",
+  "url": "section-continuity.html",
   "type": "Section",
   "number": "4.4",
-  "title": "Continuity in Topological Spaces",
-  "body": " Continuity in Topological Spaces   Text before the first subsection.     Text after the last subsection.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Reading Questions   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and\/or instructor rather than spoiling the answers.    "
+  "title": "Continuity",
+  "body": " Continuity   Text before the first subsection.     Text after the last subsection.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available in . However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Problems   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these problems are available in . However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and\/or instructor rather than spoiling the answers.    "
 },
 {
   "id": "section-connectedness-and-compactness",
@@ -4785,8 +4956,8 @@ var ptx_lunr_docs = [
   "url": "section-connectedness-and-compactness.html",
   "type": "Section",
   "number": "4.5",
-  "title": "Connectedness and Compactness [SKIP]",
-  "body": " Connectedness and Compactness [SKIP]   Text before the first subsection.     Text after the last subsection.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Reading Questions   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and\/or instructor rather than spoiling the answers.    "
+  "title": "Connectedness and Compactness",
+  "body": " Connectedness and Compactness   Text before the first subsection.     Text after the last subsection.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available in . However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Problems   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these problems are available in . However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and\/or instructor rather than spoiling the answers.    "
 },
 {
   "id": "section-differentiability",
