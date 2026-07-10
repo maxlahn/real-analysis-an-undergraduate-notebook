@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-complete-subspaces-of-euclidean-space" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Complete subspaces of Euclidean space
+  </title>
+  
+  <introduction>
+    <p>
+      Determine whether the given subset of Euclidean space is complete or incomplete.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> U </m> be the subset of the Euclidean plane <m> \R^{ 2 } </m> defined by
+        
+        <md>
+          U = \setmid{ \vect{ x } \in \R^{ 2 } }{ \vect{ x } \neq \vect{ 0 } }
+        </md>.
+        
+        Determine whether <m> U </m> is complete or incomplete in <m> \R^{ 2 } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> U </m> is incomplete in <m> \R^{ 2 } </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        For any vector <m> \vect{ u } \in U </m>, the sequence <m> \of{ \vect{ u }_{ n } }_{ n = 1 }^{ \infty } </m> defined by the formula
+        
+        <md>
+          \vect{ u }_{ n } = \frac{ \vect{ u } }{ n }
+        </md>
+        
+        is a Cauchy sequence which does not converge to a limit in <m> U </m>, and so <m> U </m> is not complete.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> V </m> be the subset of <m> 3 </m>-dimensional Euclidean space <m> \R^{ 3 } </m> defined by
+        
+        <md>
+          V = \setmid{ \vect{ x } \in \R^{ 3 } }{ \norm{ \vect{ x } } = 2 }
+        </md>.
+        
+        Determine whether <m> V </m> is complete or incomplete in <m> \R^{ 3 } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> V </m> is complete in <m> \R^{ 3 } </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        <m> V </m> is the pre-image of the closed set <m> \set{ 2 } </m> of <m> \R </m> under the continuous map <m> \norm{ \oparg } \colon \R^{ 3 } \to \R </m>, and so <m> V </m> is closed. Since <m> V </m> is a closed subset of a complete metric space, it is complete.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Determine whether the irrational numbers <m> \R \setminus \Q </m> is complete or incomplete in the real line <m> \R </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The irrational numbers <m> \R \setminus \Q </m> are incomplete in the real line <m> \R </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        For any irrational number <m> x \in \R \setminus \Q </m>, the sequence <m> \of{ x_{ n } }_{ n = 1 }^{ \infty } </m> defined by the formula
+        
+        <md>
+          x_{ n } = \frac{ x }{ n }
+        </md>
+        
+        is a Cauchy sequence of irrational numbers which does not converge to a limit in <m> \R \setminus \Q </m>, and so the irrational numbers <m> \R \setminus \Q </m> are incomplete in the real line <m> \R </m>.
+      </p>
+    </solution>
+  </exercise>
+</exercisegroup>

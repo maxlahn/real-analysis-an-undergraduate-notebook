@@ -11,7 +11,9 @@
     </p>
   </introduction>
   
-  <!-- <xi:include href="./exercises/exercise-TITLE.ptx"/> -->
+  <xi:include href="./exercises/exercise-cauchy-sequences.ptx"/>
+  
+  <xi:include href="./exercises/exercise-complete-subspaces-of-euclidean-space.ptx"/>
 
   <conclusion>
     <p>

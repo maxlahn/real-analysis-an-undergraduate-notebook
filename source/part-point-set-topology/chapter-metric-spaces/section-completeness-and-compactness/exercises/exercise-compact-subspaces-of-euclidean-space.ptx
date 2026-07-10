@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-compact-subspaces-of-euclidean-space" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Compact subspaces of Euclidean space
+  </title>
+  
+  <introduction>
+    <p>
+      Determine whether or not the given subset of Euclidean space is compact.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> U </m> be the subset of the Euclidean plane <m> \R^{ 2 } </m> defined by
+        
+        <md>
+          U = \setmid{ \vect{ x } \in \R^{ 2 } }{ \vect{ x } \neq \vect{ 0 } }
+        </md>.
+        
+        Determine whether or not <m> U </m> is compact in <m> \R^{ 2 } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> U </m> is not compact.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        As shown in <xref ref="exercise-compact-subspaces-of-euclidean-space"/>, <m> U </m> is not complete in <m> \R^{ 2 } </m>. Thus the <xref ref="theorem-heine-borel-theorem" text="title"/> implies that <m> U </m> is not compact.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> V </m> be the subset of <m> 3 </m>-dimensional Euclidean space <m> \R^{ 3 } </m> defined by
+        
+        <md>
+          V = \setmid{ \vect{ x } \in \R^{ 3 } }{ \norm{ \vect{ x } } = 2 }
+        </md>.
+        
+        Determine whether or not <m> V </m> is compact.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> V </m> is compact.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        As shown in <xref ref="exercise-compact-subspaces-of-euclidean-space"/>, <m> V </m> is complete in <m> \R^{ 2 } </m>. Moreover, <m> V \subseteq \mB_{ 3 } \of{ \vect{ 0 } } </m> is bounded. Thus <xref ref="corollary-compact-subsets-of-euclidean-space"/> implies that <m> V </m> is compact.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Determine whether or not the irrational numbers <m> \R \setminus \Q </m> are compact.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The irrational numbers <m> \R \setminus \Q </m> are not compact.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        As shown in <xref ref="exercise-compact-subspaces-of-euclidean-space"/>, the irrational numbers <m> \R \setminus \Q </m> are not complete in the real line <m> \R </m>. Thus the <xref ref="theorem-heine-borel-theorem" text="title"/> implies that <m> \R \setminus \Q </m> is not compact.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> a , b \in \R </m> be real numbers, and suppose that <m> a \leq b </m>. Determine whether or not the closed interval <m> \clint{ a }{ b } </m> is compact.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The closed interval <m> \clint{ a }{ b } </m> is compact.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        Since the interval <m> \clint{ a }{ b } </m> is closed in the real line <m> \R </m>, <xref ref="proposition-closed-subsets-of-complete-metric-spaces"/> implies that <m> \clint{ a }{ b } </m> is complete in <m> \R^{ 2 } </m>. Moreover, <m> \clint{ a }{ b } \subsetneq \mB_{ b - a + 1 } \of{ a } </m> is bounded. Thus <xref ref="corollary-compact-subsets-of-euclidean-space"/> implies that <m> \clint{ a }{ b } </m> is compact.
+      </p>
+    </solution>
+  </exercise>
+</exercisegroup>

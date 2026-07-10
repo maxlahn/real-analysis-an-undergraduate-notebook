@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-cauchy-sequences" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Cauchy sequences
+  </title>
+  
+  <introduction>
+    <p>
+      Determine whether or not the given sequence of points in a metric space is Cauchy.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Consider the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of real numbers <m> x_{ n } </m> defined by the formula
+        
+        <md>
+          x_{ n } = 2 + 3^{ -n }
+        </md>.
+        
+        Determine whether or not the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is a Cauchy sequence in the real line <m> \of{ \R , d } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is a Cauchy sequence in the real line <m> \of{ \R , d } </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        Let <m> \epsilon \gt 0 </m> be a positive real number. The Archimedean principle implies that
+        
+        <md>
+          n_{ \epsilon } \gt \log_{ 3 } \of{ \frac{ 1 }{ \epsilon } }
+        </md>
+        
+        for some natural number <m> n_{ \epsilon } \in \N </m>. We observe that
+        
+        <md>
+          <mrow>
+            d \of{ x_{ m } , x_{ n } } \amp = \abs{ \of{ 2 + 3^{ -m } } - \of{ 2 + 3^{ -n } } } = 3^{ -\min \of{ \set{ m , n } } } - 3^{ -\max \of{ \set{ m , n } } }
+          </mrow>
+          
+          <mrow>
+            \amp = 3^{ -\min \of{ \set{ m , n } } } \of{ 1 - 3^{ \min \of{ \set{ m , n } } - \max \of{ \set{ m , n } } } } \leq 3^{ -n_{ \epsilon } } \lt \epsilon
+          </mrow>
+        </md>
+        
+        for all indices <m> m , n \geq n_{ \epsilon } </m>, and so the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is Cauchy.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Consider the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of real numbers <m> x_{ n } </m> defined by the formula
+        
+        <md>
+          x_{ n } = 2 + 3^{ -n }
+        </md>.
+        
+        Determine whether or not the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is a Cauchy sequence in the discrete metric space <m> \of{ \R , \delta_{ \R } } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is not a Cauchy sequence in the discrete metric space <m> \of{ \R , \delta_{ \R } } </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        Since
+        
+        <md>
+          x_{ n } = 3^{ -n } \gt 3^{ -\of{ n + 1 } } = x_{ n + 1 }
+        </md>
+        
+        for all indices <m> n \in \N </m>,
+        
+        <md>
+          \delta_{ \R } \of{ x_{ n } , x_{ n + 1 } } = 1
+        </md>
+        
+        for all such indices. In particular, there is no natural number <m> n_{ 1 } \in \N </m> so that <m> \delta_{ \R } \of{ x_{ m } , x_{ n } } \lt 1 </m> for all indices <m> m , n \geq n_{ 1 } </m>. Thus the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is not a Cauchy sequence in the discrete metric space <m> \of{ \R , \delta_{ \R } } </m>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Consider the sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> of bounded real-valued functions <m> f_{ n } \colon \clopint{ 0 }{ \infty } \to \R </m> defined by the formula
+        
+        <md>
+          f_{ n } \of{ x } = \frac{ 1 }{ x^{ n } }
+        </md>.
+        
+        Determine whether or not the sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> is a Cauchy sequence in the metric space <m> \of{ \Bdd \of{ \clopint{ 1 }{ \infty } } , d_{ \infty } } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> is a Cauchy sequence in the metric space <m> \of{ \Bdd \of{ \clopint{ 1 }{ \infty } } , d_{ \infty } } </m>.
+      </p>
+    </answer>
+    
+    <!-- <solution>
+      <p>
+        
+      </p>
+    </solution> -->
+  </exercise>
+</exercisegroup>

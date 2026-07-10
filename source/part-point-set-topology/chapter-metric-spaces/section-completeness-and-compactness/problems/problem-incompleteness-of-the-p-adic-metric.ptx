@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-incompleteness-of-the-p-adic-metric" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Incompleteness of the <m> p </m>-adic metric
+  </title>
+  
+  <introduction>
+    <p>
+      Fix a prime number <m> p \in \N </m>, and recall that the <term> <m> p </m>-adic valuation </term> <m> \abs{ \oparg }_{ p } \colon \Q \to \Q </m> is a rational-valued function defined by the formula
+        
+        <md>
+          \abs{ q }_{ p } =
+            \begin{cases}
+              0 \amp q = 0 \\
+              p^{ -k_{ p } \of{ q } } \amp q \neq 0
+            \end{cases}
+        </md>,
+        
+        where <m> k_{ p } \of{ q } \in \Z </m> is the unique integer so that <m> q = p^{ k_{ p } \of{ q } } \of{ \frac{ a }{ b } } </m> for some integers <m> a , b \in \Z </m> which are not divisible by <m> p </m>.
+      </p>
+      
+      <p>
+        Moreover, recall from (b) of <xref ref="problem-ultrametrics"/> that the <m> p </m>-adic valuation <m> \abs{ \oparg }_{ p } </m> induces an ultrametric <m> \rho_{ p } \colon \Q^{ 2 } \to \R </m> called the <term> <m> p </m>-adic metric </term> defined by the formula
+        
+        <md>
+          \rho_{ p } \of{ q_{ 1 } , q_{ 2 } } = \abs{ q_{ 1 } - q_{ 2 } }_{ p }
+        </md>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Consider the sequence <m> \of{ q_{ n } }_{ n = 0 }^{ \infty } </m> of rational numbers <m> q_{ n } \in \Q </m> defined by the formula
+        
+        <md>
+          q_{ n } = \sum_{ k = 0 }^{ n }{ p^{ k } } = 1 + p + p^{ 2 } + \dotsb + p^{ n }
+        </md>.
+        
+        Show that <m> \of{ q_{ n } }_{ n = 0 }^{ \infty } </m> is a Cauchy sequence in <m> \of{ \Q , \rho_{ p } } </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Consider the sequence <m> \of{ r_{ n } }_{ n = 0 }^{ \infty } </m> of rational numbers <m> r_{ n } \in \Q </m> defined by the formula
+        
+        <md>
+          r_{ n } = \sum_{ k = 0 }^{ n }{ p^{ k! } } = p + p + p^{ 2 } + p^{ 6 } + \dotsb + p^{ n! }
+        </md>.
+        
+        Show that <m> \of{ r_{ n } }_{ n = 0 }^{ \infty } </m> is a Cauchy sequence in <m> \of{ \Q , \rho_{ p } } </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        
+      </p>
+    </solution> -->
+  </task>
+  
+  <conclusion>
+    <p>
+      While the Cauchy sequence <m> \of{ q_{ n } }_{ n = 0 }^{ \infty } </m> converges in the <m> p </m>-adic metric to a rational number, the Cauchy sequence <m> \of{ r_{ n } }_{ n = 0 }^{ \infty } </m> diverges and therefore is a witness to the incompleteness of <m> \of{ \Q , \rho_{ p } } </m>.
+    </p>
+  </conclusion>
+</exercise>

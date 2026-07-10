@@ -85,7 +85,7 @@
         Fix a prime number <m> p \in \N </m>. The <term> <m> p </m>-adic valuation </term> <m> \abs{ \oparg }_{ p } \colon \Q \to \Q </m> is a rational-valued function defined by the formula
         
         <md>
-          \abs{ q } =
+          \abs{ q }_{ p } =
             \begin{cases}
               0 \amp q = 0 \\
               p^{ -k_{ p } \of{ q } } \amp q \neq 0

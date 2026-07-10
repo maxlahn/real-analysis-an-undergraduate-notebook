@@ -189,7 +189,7 @@
         <ul>
           <li>
             <p>
-              Any discrete metric space is complete, since any Cauchy sequence in a discrete metric space is eventually constant. More generally, any metric space whose points are all isolated points (for example, any finite metric space) is complete.
+              Any discrete metric space or finite metric space is complete, since any Cauchy sequence in a discrete metric space is eventually constant.
             </p>
           </li>
           

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-completeness-of-discrete-metric-spaces" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Completeness of discrete metric spaces
+  </title>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that any discrete metric space is complete.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        Fix a set <m> X </m>, and consider the associated discrete metric space <m> \of{ X , \delta_{ X } } </m>. Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a Cauchy sequence of points <m> x_{ n } \in X </m>. Then there is a natural number <m> n_{ 1 } \in \N </m> so that <m> \delta_{ X } \of{ x_{ m } , x_{ n } } \lt 1 </m> for all indices <m> n \geq n_{ 1 } </m>. Since the values of the discrete metric are <m> 0 </m> and <m> 1 </m>, this implies that
+        
+        <md>
+          \delta_{ X } \of{ x_{ m } , x_{ n } } = 0
+        </md>
+        
+        for all indices <m> n \geq n_{ 1 } </m>. In particular, non-degeneracy of the metric <m> \delta_{ X } </m> implies that
+        
+        <md>
+          x_{ n_{ 1 } } = x_{ n_{ 1 } + 1 } = x_{ n_{ 1 } + 2 } = \dotsb
+        </md>,
+        
+        so that the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is eventually constant and therefore converges by (a) <xref ref="problem-eventually-constant-sequences"/>. Since every Cauchy sequence converges to a limit in <m> X </m>, we conclude that the metric space <m> \of{ X , \delta_{ X } } </m> is complete.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that any metric space with finite ground set is complete.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        Fix a metric <m> \rho \colon X \times X \to \R </m> on a finite set <m> X </m>, and let
+        
+        <md>
+          \epsilon = \min \of{ \setmid{ \rho \of{ x_{ 1 } , x_{ 2 } } \in \opint{ 0 }{ \infty } : x_{ 1 } , x_{ 2 } \in X \textrm{ and } x_{ 1 } \neq x_{ 2 } } }
+        </md>
+        
+        be the minimum distance between any pair of distinct points. For a Cauchy sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> x_{ n } \in X </m>, there is a natural number <m> n_{ \epsilon } \in \N </m> so that <m> \rho \of{ x_{ m } , x_{ n } } \lt \epsilon </m> for all indices <m> m , n \geq n_{ \epsilon } </m>. Since the only value of <m> \rho </m> strictly less than <m> \epsilon </m> is <m> 0 </m>, this implies that
+        
+        <md>
+          \delta_{ X } \of{ x_{ m } , x_{ n } } = 0
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>. In particular, non-degeneracy of the metric <m> \rho </m> implies that
+        
+        <md>
+          x_{ n_{ 1 } } = x_{ n_{ 1 } + 1 } = x_{ n_{ 1 } + 2 } = \dotsb
+        </md>,
+        
+        so that the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> is eventually constant and therefore converges by (a) <xref ref="problem-eventually-constant-sequences"/>. Since every Cauchy sequence converges to a limit in <m> X </m>, we conclude that the metric space <m> \of{ X , \rho } </m> is complete.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Consider the metric subspace <m> \of{ X , d } </m> of the real line <m> \of{ \R , d } </m> with ground set
+        
+        <md>
+          X = \setmid{ \frac{ 1 }{ n } \in \R }{ n \in \N \setminus \set{ 0 } }
+        </md>.
+        
+        Argue that <m> \of{ X , d } </m> is a counterexample to the <em> false </em> claim that any metric space whose points are all isolated points is complete.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 1 }^{ \infty } </m> be the sequence of points <m> x_{ n } \in X </m> defined by the formula
+        
+        <md>
+          x_{ n } = \frac{ 1 }{ n }
+        </md>.
+        
+        Since <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges in the real line <m> \R </m> to <m> 0 </m>, it is Cauchy by <xref ref="proposition-convergent-sequences-are-cauchy"/>. However, <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> does not converge in the metric subspace <m> \of{ X , d } </m>. Thus <m> \of{ X , d } </m> is not complete. However, for each positive integer <m> n \geq 1 </m>,
+        
+        <md>
+          \mB_{ \frac{ 1 }{ n } - \frac{ 1 }{ n + 1 } } \of{ \frac{ 1 }{ n } } = \setmid{ x \in X }{ \abs{ x - \frac{ 1 }{ n } } \lt \frac{ 1 }{ n } - \frac{ 1 }{ n + 1 } } = \set{ \frac{ 1 }{ n } }
+        </md>,
+        
+        and so <m> \frac{ 1 }{ n } </m> is an isolated point of <m> X </m>.
+      </p>
+    </solution> -->
+  </task>
+</exercise>
