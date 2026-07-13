@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proposition theorem-like"><h2 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uniqueness of sequential limits in a metric space.</span>
+</h2>
+<div class="para">Convergent sequences of points in metric spaces converge to unique points.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-uniqueness-of-sequential-limits-in-a-metric-space-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 3.2.3: Uniqueness of sequential limits in a metric space"><a tabindex="-1" href="#proposition-uniqueness-of-sequential-limits-in-a-metric-space" title="Copy heading and permalink for Proposition 3.2.3: Uniqueness of sequential limits in a metric space" aria-label="Copy heading and permalink for Proposition 3.2.3: Uniqueness of sequential limits in a metric space">🔗</a></div>
+</article>
+<details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of points <span class="process-math">\(x_{ n } \in X \)</span> in a metric space <span class="process-math">\(\of{ X , \rho } \text{,}\)</span> and suppose that <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> converges to two points <span class="process-math">\(x , y \in X \text{.}\)</span> We will show that <span class="process-math">\(x = y \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-uniqueness-of-sequential-limits-in-a-metric-space-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">To that end, let <span class="process-math">\(\epsilon \)</span> be a positive real number, and note that <span class="process-math">\(\frac{ \epsilon }{ 2 } \)</span> is a positive real number. There are thus natural numbers <span class="process-math">\(m_{ \frac{ \epsilon }{ 2 } } , n_{ \frac{ \epsilon }{ 2 } } \in \N \)</span> so that <span class="process-math">\(\rho \of{ x_{ n } , x } \lt \frac{ \epsilon }{ 2 } \)</span> for all indices <span class="process-math">\(n \geq m_{ \frac{ \epsilon }{ 2 } } \)</span> and <span class="process-math">\(\rho \of{ x_{ n } , y } \lt \frac{ \epsilon }{ 2 } \)</span> for all indices <span class="process-math">\(n \geq n_{ \frac{ \epsilon }{ 2 } } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-uniqueness-of-sequential-limits-in-a-metric-space-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(p_{ \epsilon } = \max \of{ m_{ \frac{ \epsilon }{ 2 } } , n_{ \frac{ \epsilon }{ 2 } } } \text{,}\)</span> and note that <span class="process-math">\(p_{ \epsilon } \geq m_{ \frac{ \epsilon }{ 2 } } \)</span> and <span class="process-math">\(p_{ \epsilon } \geq n_{ \frac{ \epsilon }{ 2 } } \text{.}\)</span> We conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-metrics-are-non-negative.html">
+\begin{equation*}
+\rho \of{ x , y } \leq \rho \of{ x , x_{ p_{ \epsilon } } } + \rho \of{ x_{ p_{ \epsilon } } , y } = \rho \of{ x_{ p_{ \epsilon } } , x } + \rho \of{ x_{ p_{ \epsilon } } , y } \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon\text{.}
+\end{equation*}
+</div>
+<div class="para">In summary, we have shown that <span class="process-math">\(\rho \of{ x , y } \lt \epsilon \)</span> for all positive real numbers <span class="process-math">\(\epsilon \gt 0 \text{.}\)</span> Since <span class="process-math">\(\rho \of{ x , y } \geq 0 \)</span> by <a href="section-introduction-to-metric-geometry.html#lemma-metrics-are-non-negative" class="xref" data-knowl="./knowl/xref/lemma-metrics-are-non-negative.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 3.1.4: Metrics are non-negative">Lemma 3.1.4 Metrics are non-negative</a>, we conclude that <span class="process-math">\(\rho \of{ x , y } = 0 \)</span> and hence <span class="process-math">\(x = y \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-uniqueness-of-sequential-limits-in-a-metric-space-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.2.3.1"><a tabindex="-1" href="#proposition-uniqueness-of-sequential-limits-in-a-metric-space-3" title="Copy heading and permalink for Proof 3.2.3.1" aria-label="Copy heading and permalink for Proof 3.2.3.1">🔗</a></div>
+</article></details><span class="incontext"><a class="internal" href="section-convergence-and-limits.html#proposition-uniqueness-of-sequential-limits-in-a-metric-space">In Context</a></span>
+</body>
+</html>
