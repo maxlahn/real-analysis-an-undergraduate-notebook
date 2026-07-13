@@ -7,15 +7,21 @@
 
   <introduction>
     <p>
-      Text before the first subsection.
+      We are now ready to reexamine limiting behavior such as convergence and divergence in the more general setting of topological spaces. In the previous chapter, we explored the convergence of objects such as sequences and maps in the context of metric spaces. In a metric space, we had the benefit of a metric granting us a quantitative measure of closeness upon which our formulation of convergence relied. In a general topological space, however, we don't explicitly have access to the same kind of data to measure how close points are to each other. Instead, we must rely on other qualitative measures of locality to formalize limiting behavior.
+    </p>
+    
+    <p>
+      We will see that, in contrast to the relatively amenable case of convergence in a metric space, topological convergence can be far more outlandish. For example, some convergent sequences and maps in some topological spaces converge to more than point, and many of the reasonable results from the previous chapter don't hold in certain classes of topological spaces. In particular, many point-set topological notions such as continuity and compactness cannot in general be described in sequential terms as in the context of metric spaces. With this in mind, we will briefly introduce sequential convergence in topological spaces, but we will almost immediately generalize this to discuss the limiting behavior of a more general class of indexed families of points. Then we will discuss the separation axioms, which will allow us to consider certain classes of topological spaces in which limiting behavior is more well-behaved.
     </p>
   </introduction>
 
-  <!-- <xi:include href="./subsection-TITLE.ptx"/> -->
+  <xi:include href="./subsection-sequential-convergence-and-beyond.ptx"/>
+
+  <xi:include href="./subsection-the-separation-axioms.ptx"/>
 
   <conclusion>
     <p>
-      Text after the last subsection.
+      We will revisit Hausdorff spaces in the following section, wherein we will define and characterize map convergence and continuity for maps between topological spaces.
     </p>
   </conclusion>
 

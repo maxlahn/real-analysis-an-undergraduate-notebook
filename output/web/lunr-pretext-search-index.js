@@ -5083,7 +5083,223 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.3",
   "title": "Convergence and Separation",
-  "body": " Convergence and Separation   Text before the first subsection.     Text after the last subsection.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available in . However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Problems   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these problems are available in . However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and\/or instructor rather than spoiling the answers.    "
+  "body": " Convergence and Separation   We are now ready to reexamine limiting behavior such as convergence and divergence in the more general setting of topological spaces. In the previous chapter, we explored the convergence of objects such as sequences and maps in the context of metric spaces. In a metric space, we had the benefit of a metric granting us a quantitative measure of closeness upon which our formulation of convergence relied. In a general topological space, however, we don't explicitly have access to the same kind of data to measure how close points are to each other. Instead, we must rely on other qualitative measures of locality to formalize limiting behavior.  We will see that, in contrast to the relatively amenable case of convergence in a metric space, topological convergence can be far more outlandish. For example, some convergent sequences and maps in some topological spaces converge to more than point, and many of the reasonable results from the previous chapter don't hold in certain classes of topological spaces. In particular, many point-set topological notions such as continuity and compactness cannot in general be described in sequential terms as in the context of metric spaces. With this in mind, we will briefly introduce sequential convergence in topological spaces, but we will almost immediately generalize this to discuss the limiting behavior of a more general class of indexed families of points. Then we will discuss the separation axioms, which will allow us to consider certain classes of topological spaces in which limiting behavior is more well-behaved.    Sequential Convergence and Beyond   In the previous chapter, we defined convergence in a metric space in a way which relied explicitly on the metric in question. In topological spaces, however, we must rely only on what data is available from the topology. Instead of defining sequential convergence and divergence in terms of some distance function, we will define it in terms of the neighborhoods of points. A sequence of points in a topological space is said to converge to a point if the values of the sequence are eventually contained in any neighborhood of the putative limit.    Sequential convergence\/divergence in a topological space  convergent sequence  divergent sequence   A sequence of points in a topological space  converges to a point if for every neighborhood of in , there is a natural number so that for all indices .  A sequence of points in a topological space is called convergent if it converges to some point and divergent otherwise if it does not converge to any point.    We first observe that the above notion of sequential convergence coincides precisely with our previous notion of sequential convergence in metric spaces whenever a topological space is metrizable.   Sequential convergence in metrizable spaces   Let be a sequence of points in a metric space . For any point , the sequence converges to in the metric space if and only if converges to in the metrizable topological space .    First suppose that converges to in the metric space , and let be a neighorhood of in . Then for some positive real number . There is some natural number so that for all indices . In particular, we observe that for all indices . Thus converges to in the metric topological space .  Conversely, now suppose that converges to in the metric topological space , and let be a positive real number. Since is a neighborhood of in , there is a natural number so that for all indices . In particular, for all indices . Thus converges to in the metric space .    One consequence of is that we have already explored plenty of examples of convergent and divergent sequences in metrizable topological spaces, and we are familiar with the properties of sequential convergence in metrizable topological spaces. For example, and implies that limits of convergent sequences in metrizable topological spaces are unique.   Uniqueness of sequential limits in metrizable spaces   Convergent sequences of points in metrizable topological spaces converge to unique points.    One might hope that could be extended to apply to sequential convergence in all topological spaces. However, our familiar intuition regarding such convergence can break down in non-metrizable topological spaces.   Sequential convergence\/divergence in non-metrizable spaces   The following are examples of convergent and divergent sequences in non-metrizable topological spaces:   Let be a sequence of points in an indiscrete topological space . For any point , since the only neighborhood of in is itself, the sequence converges to .    Recall that the Sierpiński space is the topological space with ground set and topology . Let be the constant sequence of points defined by the formula .  The two neighborhoods of in are and , and these neighborhoods both contain every entry of the sequence . In particular, the entries of eventually lie in any neighborhood of , so that converges to .  However, the only neighborhood of in is , and this neighborhood contains every entry of the sequence . In particular, the entries of eventually lie in any neighborhood of . So also converges to .       The above example shows that in our generalization of metric spaces to topological spaces, we have lost at least one nice property of limiting behavior; sequences of points can converge to more than one limit. This by itself is not cause to abandon our study of the limiting behavior of sequences; we will see that many of the topological spaces encountered in practice are Hausdorff , a class of topological spaces in which convergent sequences converge to unique limits, even if these spaces are not metrizable.  The true reasons for our shift in focus from sequences to more general indexed families of points called nets are more subtle, and they are concerned with adapting the sequential characterizations of many of the point-set topological notions introduced in . For example, while we have seen characterizations of continuity and compactness in terms of the convergence of sequences, such characterizations are not extended to topological spaces in general. Indeed, there are topological spaces for which the limiting behavior of sequences alone is not sufficient data to fully describe central point-set topological properties such as continuity or compactness.   The cocountable topology  cocountable topology   The cocountable topology  on a set is the set . One can verify that is a topology on for which all convergent sequences are eventually constant. Moreover, if is uncountable, then is not the discrete topology on .    The above example of a topological space whose point-set topological properties cannot be defined solely in terms of the convergence\/divergence of sequences motivates the following broadening of our scope to include more general indexed families of points. Instead of only considering families indexed by the natural numbers, we allow the indexing sets to be particular types of preordered sets called directed sets .   Directed set  upwards directed set  downwards directed set  directed set  net   A preordered set is called upwards directed (resp. downwards directed ) if every finite set of elements in has a common upper bound (resp. common lower bound). An family indexed by a directed set is called a net .     Directed sets   The following are examples of directed sets.   Any totally ordered set is directed both upwards and downwards. Indeed, given two elements in a totally ordered set , either , in which case , or , in which case .    The power set of a set is directed both upwards and downwards. Indeed, given two subsets , .    Fix a point in a metric space , and let denote the binary relation on defined so that if and only if . Then the preordered set is directed both upwards and downwards.    Let be real numbers, and suppose that . A finite partition of the closed interval is a finite sequence so that and . Given two such partitions and , we write if is a subsequence of . Considered with this binary relation, the set of finite partitions of is directed both upwards and downwards. This directed set will be an important part of the definition of the Riemann integral in .        Net convergence  net convergence  net divergence   Let be a net of points in a topological space indexed by a directed set .   Upwards convergence  Suppose that the indexing set is upwards directed. A net of points  converges upwards to a point if for all neighborhoods of in , there is an index so that for all indices .  The net is called upwards convergent if it converges upward to a point in , and is called upwards divergent if it does not converge upwards to any point in .  If converges upwards to a unique point , then this point is called the upwards limit of and is denoted .    Downwards convergence  Suppose that the indexing set is downwards directed. A net of points  converges downwards to a point if for all neighborhoods of in , there is an index so that for all indices .  The net is called downwards convergent if it converges downward to a point in , and is called downwards divergent if it does not converge downwards to any point in .  If converges downwards to a unique point , then this point is called the downwards limit of and is denoted .        Direction of convergence  If the indexing set of a net of points in a topological space is directed either only upwards or only downwards, then one may speak of the convergence or limit of said net without specifying the direction. Similarly, we may avoid specifying the direction of convergence explicitly if it is clear from context.    The main utility of net convergence is in generalizing the sequential characterizations of various point-set topological notions to general topological spaces. However, we will see that additional hypotheses on the spaces in question will allow us to recover these sequential characterizations, even if they do not hold in the most general case.     The Separation Axioms   The non-degeneracy of a metric implies that any two distinct points in a metric space are separated by some positive distance, and hence are the centers of disjoint metric open balls of positive radius. These separation properties of a metric space have strong implications for the uniqueness of limits. For general topological spaces, there is a zoo of distinct yet related versions of these separation axioms which seek to compare how a given topology separates points relative to the discrete and indiscrete topologies.    Topological distinguishability  topological distinguishability   space  Kolmogorov space   Two points in a topological space are called topologically indistinguishable if a subset is a neighborhood of in if and only if is a neighborhood of in . Two points are called topologically distinguishable otherwise if they are not topologically indistinguishable.  A topological space is called   or Kolmogorov if all pairs of distinct points in are topologically distinguishable.      spaces   The following are examples and non-examples of spaces:   Any two points in an indiscrete space are topologically indistinguishable. As such, any indiscrete space with at least two points is not .    The points and in the Sierpiński space with ground set and topology are topologically distinguishable, since is a neighborhood of in but not a neighborhood of in . In particular, is .       We have previously seen that sequential limits in the Sierpiński space are not unique, and so is not a strong enough separation axiom to impose unique limits. One issue of separability in the Sierpiński space is that every neighborhood of contains . The following separation axiom aims to address this issue.   Separation  separation   space  Fréchet space   Two points in a topological space are called separated if there are neighborhoods and of and in , respectively, so that and .  A topological space is called   or Fréchet if all pairs of distinct points in are separated.      spaces   The following are examples and non-examples of spaces:   The points and in the Sierpiński space with ground set and topology are not separated, since every neighborhood of in contains . Since two distinct points are not separated, the Sierpiński space is not .    cofinite topology  A subset of a set is called cofinite if its complement is finite. The cofinite subsets of comprise a topology on called the cofinite topology on .  If is finite, then every subset of is cofinite, and so the cofinite topology on is discrete. However, if is infinite, then for any distinct points , and are neighborhoods of and in , respectively, so that and , and so and are separated. Since any pair of distinct points are separated, is .        Topological distinguishability and separation   Two separated points in a topological space are topologically distinguishable.    Let be points in a topological space . If and are separated, then there are neighborhoods and of and in , respectively, so that and . In particular, is a neighborhood of but not a neighborhood of , and so and are topologically distinguishable.      and spaces   Any space is .    Let be a space. Then any two distinct points are separated, and so implies that and are topologically distinguishable. Since any two distinct points are topologically distinguishable, is .    Although is a much stronger separation axiom than , it is still not strong enough to force the uniqueness of sequential\/net limits. Indeed, we note that the sequence of natural numbers converges in the cofinite topology to every single natural number. One issue here is that while distinct points in a space have distinct neighborhoods, they might not have disjoint neighborhoods. The following and final separation axiom we will consider here aims to address this issue.   Separation by neighborhoods  separation by neighborhoods   space  Hausdorff space   Two points in a topological space are called separated by neighborhoods if there are neighborhoods and of and in , respectively, so that .  A topological space is called   or Hausdorff if all pairs of distinct points in are separated by neighborhoods.      spaces   The following are examples and non-examples of spaces:   If is an infinite set, then no two cofinite subsets of are disjoint. Indeed, given two such cofinite subsets , is the union of two finite sets and is therefore finite. Since is infinite and is cofinite, is non-empty.  In particular, if is an infinite set, then the above argument implies that the cofinite topology on is not , since any neighborhoods of any two distinct points intersect.    Let be a metric space, and consider two distinct points . The non-degeneracy of the metric implies that . Note that for any point , if , then implies that . Similarly, if , then . In particular, let for each , and note that . Thus every metrizable space is .        Separation by neighborhoods and separation   Two points in a topological space which are separated by neighborhoods are separated.    Let be points in a topological space . If and are separated by neighborhoods, then there are neighborhoods and of and in , respectively, so that . In particular, and , and so and are separated.      and spaces   Any space is .    Let be a space. Then any two distinct points are separated by neighborhoods, and so implies that and are separated. Since any two distinct points are separated, is .    The main attraction of the separation axiom is that it is the minimal required hypotheses on a topological space to guarantee the uniqueness of limits for sequences and nets of points.   Uniqueness of limits in spaces   If a net of points in a space converges, then it converges to a unique limit.    Let be a net of points in a space indexed by a directed set . We will prove the result in the case is directed upwards; the downwards directed case is entirely analogous.  Suppose for a contradiction that the net converges upwards to two distinct points . Since is , and are separated by neighborhoods; that is, there are neighborhoods of and in , respectively, so that . Since converges to both and , there are indices so that for all indices and for all indices .  Since is directed upwards, there is some index so that . We conclude that . This contradiction implies that converges to at most one point in .     While there are many separation axioms beyond , , and , their utility is highly context-dependent and field-specific. However, the \/Hausdorff property is ubiquitous throughout all of point-set topology.     We will revisit Hausdorff spaces in the following section, wherein we will define and characterize map convergence and continuity for maps between topological spaces.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available in . However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Problems   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these problems are available in . However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and\/or instructor rather than spoiling the answers.    "
+},
+{
+  "id": "definition-sequential-convergence-divergence-in-a-topological-space",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#definition-sequential-convergence-divergence-in-a-topological-space",
+  "type": "Definition",
+  "number": "4.3.1",
+  "title": "Sequential convergence\/divergence in a topological space.",
+  "body": " Sequential convergence\/divergence in a topological space  convergent sequence  divergent sequence   A sequence of points in a topological space  converges to a point if for every neighborhood of in , there is a natural number so that for all indices .  A sequence of points in a topological space is called convergent if it converges to some point and divergent otherwise if it does not converge to any point.   "
+},
+{
+  "id": "lemma-sequential-convergence-in-metrizable-spaces",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#lemma-sequential-convergence-in-metrizable-spaces",
+  "type": "Lemma",
+  "number": "4.3.2",
+  "title": "Sequential convergence in metrizable spaces.",
+  "body": " Sequential convergence in metrizable spaces   Let be a sequence of points in a metric space . For any point , the sequence converges to in the metric space if and only if converges to in the metrizable topological space .    First suppose that converges to in the metric space , and let be a neighorhood of in . Then for some positive real number . There is some natural number so that for all indices . In particular, we observe that for all indices . Thus converges to in the metric topological space .  Conversely, now suppose that converges to in the metric topological space , and let be a positive real number. Since is a neighborhood of in , there is a natural number so that for all indices . In particular, for all indices . Thus converges to in the metric space .   "
+},
+{
+  "id": "corollary-uniqueness-of-sequential-limits-in-metrizable-spaces",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#corollary-uniqueness-of-sequential-limits-in-metrizable-spaces",
+  "type": "Corollary",
+  "number": "4.3.3",
+  "title": "Uniqueness of sequential limits in metrizable spaces.",
+  "body": " Uniqueness of sequential limits in metrizable spaces   Convergent sequences of points in metrizable topological spaces converge to unique points.   "
+},
+{
+  "id": "example-sequential-convergence-divergence-in-non-metrizable-spaces",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#example-sequential-convergence-divergence-in-non-metrizable-spaces",
+  "type": "Example",
+  "number": "4.3.4",
+  "title": "Sequential convergence\/divergence in non-metrizable spaces.",
+  "body": " Sequential convergence\/divergence in non-metrizable spaces   The following are examples of convergent and divergent sequences in non-metrizable topological spaces:   Let be a sequence of points in an indiscrete topological space . For any point , since the only neighborhood of in is itself, the sequence converges to .    Recall that the Sierpiński space is the topological space with ground set and topology . Let be the constant sequence of points defined by the formula .  The two neighborhoods of in are and , and these neighborhoods both contain every entry of the sequence . In particular, the entries of eventually lie in any neighborhood of , so that converges to .  However, the only neighborhood of in is , and this neighborhood contains every entry of the sequence . In particular, the entries of eventually lie in any neighborhood of . So also converges to .      "
+},
+{
+  "id": "subsection-sequential-convergence-and-beyond-10",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#subsection-sequential-convergence-and-beyond-10",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Hausdorff "
+},
+{
+  "id": "subsection-sequential-convergence-and-beyond-11",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#subsection-sequential-convergence-and-beyond-11",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "nets "
+},
+{
+  "id": "example-the-cocountable-topology",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#example-the-cocountable-topology",
+  "type": "Example",
+  "number": "4.3.5",
+  "title": "The cocountable topology.",
+  "body": " The cocountable topology  cocountable topology   The cocountable topology  on a set is the set . One can verify that is a topology on for which all convergent sequences are eventually constant. Moreover, if is uncountable, then is not the discrete topology on .   "
+},
+{
+  "id": "subsection-sequential-convergence-and-beyond-13",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#subsection-sequential-convergence-and-beyond-13",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "directed sets "
+},
+{
+  "id": "definition-directed-set",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#definition-directed-set",
+  "type": "Definition",
+  "number": "4.3.6",
+  "title": "Directed set.",
+  "body": " Directed set  upwards directed set  downwards directed set  directed set  net   A preordered set is called upwards directed (resp. downwards directed ) if every finite set of elements in has a common upper bound (resp. common lower bound). An family indexed by a directed set is called a net .   "
+},
+{
+  "id": "example-directed-sets",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#example-directed-sets",
+  "type": "Example",
+  "number": "4.3.7",
+  "title": "Directed sets.",
+  "body": " Directed sets   The following are examples of directed sets.   Any totally ordered set is directed both upwards and downwards. Indeed, given two elements in a totally ordered set , either , in which case , or , in which case .    The power set of a set is directed both upwards and downwards. Indeed, given two subsets , .    Fix a point in a metric space , and let denote the binary relation on defined so that if and only if . Then the preordered set is directed both upwards and downwards.    Let be real numbers, and suppose that . A finite partition of the closed interval is a finite sequence so that and . Given two such partitions and , we write if is a subsequence of . Considered with this binary relation, the set of finite partitions of is directed both upwards and downwards. This directed set will be an important part of the definition of the Riemann integral in .      "
+},
+{
+  "id": "definition-net-convergence",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#definition-net-convergence",
+  "type": "Definition",
+  "number": "4.3.8",
+  "title": "Net convergence.",
+  "body": " Net convergence  net convergence  net divergence   Let be a net of points in a topological space indexed by a directed set .   Upwards convergence  Suppose that the indexing set is upwards directed. A net of points  converges upwards to a point if for all neighborhoods of in , there is an index so that for all indices .  The net is called upwards convergent if it converges upward to a point in , and is called upwards divergent if it does not converge upwards to any point in .  If converges upwards to a unique point , then this point is called the upwards limit of and is denoted .    Downwards convergence  Suppose that the indexing set is downwards directed. A net of points  converges downwards to a point if for all neighborhoods of in , there is an index so that for all indices .  The net is called downwards convergent if it converges downward to a point in , and is called downwards divergent if it does not converge downwards to any point in .  If converges downwards to a unique point , then this point is called the downwards limit of and is denoted .      "
+},
+{
+  "id": "remark-direction-of-convergence",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#remark-direction-of-convergence",
+  "type": "Remark",
+  "number": "4.3.9",
+  "title": "Direction of convergence.",
+  "body": " Direction of convergence  If the indexing set of a net of points in a topological space is directed either only upwards or only downwards, then one may speak of the convergence or limit of said net without specifying the direction. Similarly, we may avoid specifying the direction of convergence explicitly if it is clear from context.  "
+},
+{
+  "id": "subsection-the-separation-axioms-2-1",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#subsection-the-separation-axioms-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "separation axioms "
+},
+{
+  "id": "definition-topological-distinguishability",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#definition-topological-distinguishability",
+  "type": "Definition",
+  "number": "4.3.10",
+  "title": "Topological distinguishability.",
+  "body": " Topological distinguishability  topological distinguishability   space  Kolmogorov space   Two points in a topological space are called topologically indistinguishable if a subset is a neighborhood of in if and only if is a neighborhood of in . Two points are called topologically distinguishable otherwise if they are not topologically indistinguishable.  A topological space is called   or Kolmogorov if all pairs of distinct points in are topologically distinguishable.   "
+},
+{
+  "id": "example-t-zero-spaces",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#example-t-zero-spaces",
+  "type": "Example",
+  "number": "4.3.11",
+  "title": "<span class=\"process-math\">\\(T_{ 0 } \\)<\/span> spaces.",
+  "body": "  spaces   The following are examples and non-examples of spaces:   Any two points in an indiscrete space are topologically indistinguishable. As such, any indiscrete space with at least two points is not .    The points and in the Sierpiński space with ground set and topology are topologically distinguishable, since is a neighborhood of in but not a neighborhood of in . In particular, is .      "
+},
+{
+  "id": "definition-separation",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#definition-separation",
+  "type": "Definition",
+  "number": "4.3.12",
+  "title": "Separation.",
+  "body": " Separation  separation   space  Fréchet space   Two points in a topological space are called separated if there are neighborhoods and of and in , respectively, so that and .  A topological space is called   or Fréchet if all pairs of distinct points in are separated.   "
+},
+{
+  "id": "example-t-one-spaces",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#example-t-one-spaces",
+  "type": "Example",
+  "number": "4.3.13",
+  "title": "<span class=\"process-math\">\\(T_{ 1 } \\)<\/span> spaces.",
+  "body": "  spaces   The following are examples and non-examples of spaces:   The points and in the Sierpiński space with ground set and topology are not separated, since every neighborhood of in contains . Since two distinct points are not separated, the Sierpiński space is not .    cofinite topology  A subset of a set is called cofinite if its complement is finite. The cofinite subsets of comprise a topology on called the cofinite topology on .  If is finite, then every subset of is cofinite, and so the cofinite topology on is discrete. However, if is infinite, then for any distinct points , and are neighborhoods of and in , respectively, so that and , and so and are separated. Since any pair of distinct points are separated, is .      "
+},
+{
+  "id": "lemma-topological-distinguishability-and-separation",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#lemma-topological-distinguishability-and-separation",
+  "type": "Lemma",
+  "number": "4.3.14",
+  "title": "Topological distinguishability and separation.",
+  "body": " Topological distinguishability and separation   Two separated points in a topological space are topologically distinguishable.    Let be points in a topological space . If and are separated, then there are neighborhoods and of and in , respectively, so that and . In particular, is a neighborhood of but not a neighborhood of , and so and are topologically distinguishable.   "
+},
+{
+  "id": "proposition-t-zero-and-t-one-spaces",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#proposition-t-zero-and-t-one-spaces",
+  "type": "Proposition",
+  "number": "4.3.15",
+  "title": "<span class=\"process-math\">\\(T_{ 0 } \\)<\/span> and <span class=\"process-math\">\\(T_{ 1 } \\)<\/span> spaces.",
+  "body": "  and spaces   Any space is .    Let be a space. Then any two distinct points are separated, and so implies that and are topologically distinguishable. Since any two distinct points are topologically distinguishable, is .   "
+},
+{
+  "id": "definition-separation-by-neighborhoods",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#definition-separation-by-neighborhoods",
+  "type": "Definition",
+  "number": "4.3.16",
+  "title": "Separation by neighborhoods.",
+  "body": " Separation by neighborhoods  separation by neighborhoods   space  Hausdorff space   Two points in a topological space are called separated by neighborhoods if there are neighborhoods and of and in , respectively, so that .  A topological space is called   or Hausdorff if all pairs of distinct points in are separated by neighborhoods.   "
+},
+{
+  "id": "example-t-two-spaces",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#example-t-two-spaces",
+  "type": "Example",
+  "number": "4.3.17",
+  "title": "<span class=\"process-math\">\\(T_{ 2 } \\)<\/span> spaces.",
+  "body": "  spaces   The following are examples and non-examples of spaces:   If is an infinite set, then no two cofinite subsets of are disjoint. Indeed, given two such cofinite subsets , is the union of two finite sets and is therefore finite. Since is infinite and is cofinite, is non-empty.  In particular, if is an infinite set, then the above argument implies that the cofinite topology on is not , since any neighborhoods of any two distinct points intersect.    Let be a metric space, and consider two distinct points . The non-degeneracy of the metric implies that . Note that for any point , if , then implies that . Similarly, if , then . In particular, let for each , and note that . Thus every metrizable space is .      "
+},
+{
+  "id": "lemma-separation-and-separation-by-neighborhoods",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#lemma-separation-and-separation-by-neighborhoods",
+  "type": "Lemma",
+  "number": "4.3.18",
+  "title": "Separation by neighborhoods and separation.",
+  "body": " Separation by neighborhoods and separation   Two points in a topological space which are separated by neighborhoods are separated.    Let be points in a topological space . If and are separated by neighborhoods, then there are neighborhoods and of and in , respectively, so that . In particular, and , and so and are separated.   "
+},
+{
+  "id": "proposition-t-one-and-t-two-spaces",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#proposition-t-one-and-t-two-spaces",
+  "type": "Proposition",
+  "number": "4.3.19",
+  "title": "<span class=\"process-math\">\\(T_{ 1 } \\)<\/span> and <span class=\"process-math\">\\(T_{ 2 } \\)<\/span> spaces.",
+  "body": "  and spaces   Any space is .    Let be a space. Then any two distinct points are separated by neighborhoods, and so implies that and are separated. Since any two distinct points are separated, is .   "
+},
+{
+  "id": "theorem-uniqueness-of-limits-in-t-two-spaces",
+  "level": "2",
+  "url": "section-convergence-and-separation.html#theorem-uniqueness-of-limits-in-t-two-spaces",
+  "type": "Theorem",
+  "number": "4.3.20",
+  "title": "Uniqueness of limits in <span class=\"process-math\">\\(T_{ 2 } \\)<\/span> spaces.",
+  "body": " Uniqueness of limits in spaces   If a net of points in a space converges, then it converges to a unique limit.    Let be a net of points in a space indexed by a directed set . We will prove the result in the case is directed upwards; the downwards directed case is entirely analogous.  Suppose for a contradiction that the net converges upwards to two distinct points . Since is , and are separated by neighborhoods; that is, there are neighborhoods of and in , respectively, so that . Since converges to both and , there are indices so that for all indices and for all indices .  Since is directed upwards, there is some index so that . We conclude that . This contradiction implies that converges to at most one point in .   "
 },
 {
   "id": "section-continuity",

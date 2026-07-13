@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-the-separation-axioms" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    The Separation Axioms
+  </title>
+
+  <introduction>
+    <p>
+      The non-degeneracy of a metric implies that any two distinct points in a metric space are separated by some positive distance, and hence are the centers of disjoint metric open balls of positive radius. These separation properties of a metric space have strong implications for the uniqueness of limits. For general topological spaces, there is a zoo of distinct yet related versions of these <term> separation axioms </term> which seek to compare how a given topology separates points relative to the discrete and indiscrete topologies.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-topological-distinguishability">
+    <title>
+      Topological distinguishability
+    </title>
+    
+    <idx>
+      topological distinguishability
+    </idx>
+    
+    <idx>
+      <m> T_{ 0 } </m> space
+    </idx>
+    
+    <idx>
+      Kolmogorov space
+    </idx>
+    
+    <statement>
+      <p>
+        Two points <m> x_{ 1 } , x_{ 2 } \in X </m> in a topological space <m> \of{ X , \tau } </m> are called <term> topologically indistinguishable </term> if a subset <m> N \subseteq X </m> is a neighborhood of <m> x_{ 1 } </m> in <m> X </m> if and only if <m> N </m> is a neighborhood of <m> x_{ 2 } </m> in <m> X </m>. Two points <m> x_{ 1 } , x_{ 2 } \in X </m> are called <term> topologically distinguishable </term> otherwise if they are not topologically indistinguishable.
+      </p>
+      
+      <p>
+        A topological space <m> \of{ X , \tau } </m> is called <term> <m> T_{ 0 } </m> </term> or <term> Kolmogorov </term> if all pairs of distinct points in <m> X </m> are topologically distinguishable.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="example-t-zero-spaces">
+    <title>
+      <m> T_{ 0 } </m> spaces
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples and non-examples of <m> T_{ 0 } </m> spaces:
+        
+        <ul>
+          <li>
+            <p>
+              Any two points <m> x_{ 1 } , x_{ 2 } \in X </m> in an indiscrete space <m> \of{ X , \bot_{ X } } </m> are topologically indistinguishable. As such, any indiscrete space with at least two points is not <m> T_{ 0 } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The points <m> 0 </m> and <m> 1 </m> in the Sierpiński space <m> \of{ X , \tau } </m> with ground set <m> X = \set{ 0 , 1 } </m> and topology <m> \tau = \set{ \emptyset , \set{ 1 } , \set{ 0 , 1 } } </m> are topologically distinguishable, since <m> \set{ 1 } </m> is a neighborhood of <m> 1 </m> in <m> X </m> but not a neighborhood of <m> 0 </m> in <m> X </m>. In particular, <m> \of{ X , \tau } </m> is <m> T_{ 0 } </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    We have previously seen that sequential limits in the Sierpiński space are not unique, and so <m> T_{ 0 } </m> is not a strong enough separation axiom to impose unique limits. One issue of separability in the Sierpiński space is that every neighborhood of <m> 0 </m> contains <m> 1 </m>. The following separation axiom aims to address this issue.
+  </p>
+  
+  <definition xml:id="definition-separation">
+    <title>
+      Separation
+    </title>
+    
+    <idx>
+      separation
+    </idx>
+    
+    <idx>
+      <m> T_{ 1 } </m> space
+    </idx>
+    
+    <idx>
+      Fréchet space
+    </idx>
+    
+    <statement>
+      <p>
+        Two points <m> x_{ 1 } , x_{ 2 } \in X </m> in a topological space <m> \of{ X , \tau } </m> are called <term> separated </term> if there are neighborhoods <m> N_{ 1 } \subseteq X </m> and <m> N_{ 2 } \subseteq X </m> of <m> x_{ 1 } </m> and <m> x_{ 2 } </m> in <m> X </m>, respectively, so that <m> x_{ 1 } \notin N_{ 2 } </m> and <m> x_{ 2 } \notin N_{ 1 } </m>.
+      </p>
+      
+      <p>
+        A topological space <m> \of{ X , \tau } </m> is called <term> <m> T_{ 1 } </m> </term> or <term> Fréchet </term> if all pairs of distinct points in <m> X </m> are separated.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="example-t-one-spaces">
+    <title>
+      <m> T_{ 1 } </m> spaces
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples and non-examples of <m> T_{ 1 } </m> spaces:
+        
+        <ul>
+          <li>
+            <p>
+              The points <m> 0 </m> and <m> 1 </m> in the Sierpiński space <m> \of{ X , \tau } </m> with ground set <m> X = \set{ 0 , 1 } </m> and topology <m> \tau = \set{ \emptyset , \set{ 1 } , \set{ 0 , 1 } } </m> are not separated, since every neighborhood of <m> 0 </m> in <m> X </m> contains <m> 1 </m>. Since two distinct points are not separated, the Sierpiński space is not <m> T_{ 1 } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <idx>
+              cofinite topology
+            </idx>
+            
+            <p>
+              A subset <m> U \subseteq X </m> of a set <m> X </m> is called <term> cofinite </term> if its complement <m> X \setminus U </m> is finite. The cofinite subsets of <m> X </m> comprise a topology <m> \tau </m> on <m> X </m> called the <term> cofinite topology </term> on <m> X </m>.
+            </p>
+            
+            <p>
+              If <m> X </m> is finite, then every subset of <m> X </m> is cofinite, and so the cofinite topology on <m> X </m> is discrete. However, if <m> X </m> is infinite, then for any distinct points <m> x_{ 1 } , x_{ 2 } \in X </m>, <m> N_{ 1 } = X \setminus \set{ x_{ 2 } } </m> and <m> N_{ 2 } = X \setminus \set{ x_{ 1 } } </m> are neighborhoods of <m> x_{ 1 } </m> and <m> x_{ 2 } </m> in <m> X </m>, respectively, so that <m> x_{ 1 } \notin N_{ 2 } </m> and <m> x_{ 2 } \notin N_{ 1 } </m>, and so <m> x_{ 1 } </m> and <m> x_{ 2 } </m> are separated. Since any pair of distinct points are separated, <m> \of{ X , \tau } </m> is <m> T_{ 1 } </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <lemma xml:id="lemma-topological-distinguishability-and-separation">
+    <title>
+      Topological distinguishability and separation
+    </title>
+    
+    <statement>
+      <p>
+        Two separated points in a topological space are topologically distinguishable.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> x_{ 1 } , x_{ 2 } \in X </m> be points in a topological space <m> \of{ X , \tau } </m>. If <m> x_{ 1 } </m> and <m> x_{ 2 } </m> are separated, then there are neighborhoods <m> N_{ 1 } \subseteq X </m> and <m> N_{ 2 } \subseteq X </m> of <m> x_{ 1 } </m> and <m> x_{ 2 } </m> in <m> X </m>, respectively, so that <m> x_{ 1 } \notin N_{ 2 } </m> and <m> x_{ 2 } \notin N_{ 1 } </m>. In particular, <m> N_{ 1 } </m> is a neighborhood of <m> x_{ 1 } </m> but not a neighborhood of <m> x_{ 2 } </m>, and so <m> x_{ 1 } </m> and <m> x_{ 2 } </m> are topologically distinguishable.
+      </p>
+    </proof>
+  </lemma>
+  
+  <proposition xml:id="proposition-t-zero-and-t-one-spaces">
+    <title>
+      <m> T_{ 0 } </m> and <m> T_{ 1 } </m> spaces
+    </title>
+    
+    <statement>
+      <p>
+        Any <m> T_{ 1 } </m> space is <m> T_{ 0 } </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \of{ X , \tau } </m> be a <m> T_{ 1 } </m> space. Then any two distinct points <m> x_{ 1 } , x_{ 2 } \in X </m> are separated, and so <xref ref="lemma-topological-distinguishability-and-separation"/> implies that <m> x_{ 1 } </m> and <m> x_{ 2 } </m> are topologically distinguishable. Since any two distinct points are topologically distinguishable, <m> \of{ X , \tau } </m> is <m> T_{ 0 } </m>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    Although <m> T_{ 1 } </m> is a much stronger separation axiom than <m> T_{ 0 } </m>, it is still not strong enough to force the uniqueness of sequential/net limits. Indeed, we note that the sequence <m> \of{ n }_{ n = 0 }^{ \infty } </m> of natural numbers converges in the cofinite topology to every single natural number. One issue here is that while distinct points in a <m> T_{ 1 } </m> space have distinct neighborhoods, they might not have disjoint neighborhoods. The following and final separation axiom we will consider here aims to address this issue.
+  </p>
+  
+  <definition xml:id="definition-separation-by-neighborhoods">
+    <title>
+      Separation by neighborhoods
+    </title>
+    
+    <idx>
+      separation by neighborhoods
+    </idx>
+    
+    <idx>
+      <m> T_{ 2 } </m> space
+    </idx>
+    
+    <idx>
+      Hausdorff space
+    </idx>
+    
+    <statement>
+      <p>
+        Two points <m> x_{ 1 } , x_{ 2 } \in X </m> in a topological space <m> \of{ X , \tau } </m> are called <term> separated by neighborhoods </term> if there are neighborhoods <m> N_{ 1 } \subseteq X </m> and <m> N_{ 2 } \subseteq X </m> of <m> x_{ 1 } </m> and <m> x_{ 2 } </m> in <m> X </m>, respectively, so that <m> N_{ 1 } \cap N_{ 2 } = \emptyset </m>.
+      </p>
+      
+      <p>
+        A topological space <m> \of{ X , \tau } </m> is called <term> <m> T_{ 2 } </m> </term> or <term> Hausdorff </term> if all pairs of distinct points in <m> X </m> are separated by neighborhoods.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="example-t-two-spaces">
+    <title>
+      <m> T_{ 2 } </m> spaces
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples and non-examples of <m> T_{ 2 } </m> spaces:
+        
+        <ul>
+          <li>
+            <p>
+              If <m> X </m> is an infinite set, then no two cofinite subsets of <m> X </m> are disjoint. Indeed, given two such cofinite subsets <m> U , V \subseteq X </m>,
+              
+              <md>
+                X \setminus \of{ U \cap V } = \of{ X \setminus U } \cup \of{ X \setminus V }
+              </md>
+              
+              is the union of two finite sets and is therefore finite. Since <m> X </m> is infinite and <m> U \cap V </m> is cofinite, <m> U \cap V \neq \emptyset </m> is non-empty.
+            </p>
+            
+            <p>
+              In particular, if <m> X </m> is an infinite set, then the above argument implies that the cofinite topology on <m> X </m> is not <m> T_{ 2 } </m>, since any neighborhoods of any two distinct points <m> x_{ 1 } , x_{ 2 } \in X </m> intersect.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Let <m> \of{ X , \rho } </m> be a metric space, and consider two distinct points <m> x_{ 1 } , x_{ 2 } \in X </m>. The non-degeneracy of the metric <m> \rho </m> implies that <m> \rho \of{ x_{ 1 } , x_{ 2 } } \gt 0 </m>. Note that for any point <m> x \in X </m>, if <m> \rho \of{ x , x_{ 1 } } \lt \frac{ \rho \of{ x_{ 1 } , x_{ 2 } } }{ 2 } </m>, then <xref ref="proposition-reverse-triangle-inequality"/> implies that
+              
+              <md>
+                <mrow>
+                  \rho \of{ x , x_{ 2 } } \amp \geq \abs{ \rho \of{ x_{ 1 } , x_{ 2 } } - \rho \of{ z , x_{ 1 } } } \geq \rho \of{ x_{ 1 } , x_{ 2 } } - \rho \of{ z , x_{ 1 } }
+                </mrow>
+                
+                <mrow>
+                  \amp \gt \rho \of{ x_{ 1 } , x_{ 2 } } - \frac{ \rho \of{ x_{ 1 } , x_{ 2 } } }{ 2 } = \rho \of{ x_{ 1 } , x_{ 2 } }
+                </mrow>
+              </md>.
+              
+              Similarly, if <m> \rho \of{ x , x_{ 2 } } \lt \frac{ \rho \of{ x_{ 1 } , x_{ 2 } } }{ 2 } </m>, then <m> \rho \of{ x , x_{ 2 } } \gt \frac{ \rho \of{ x_{ 1 } , x_{ 2 } } }{ 2 } </m>. In particular, let <m> N_{ i } = \mB_{ \frac{ \rho \of{ x_{ 1 } , x_{ 2 } } }{ 2 } } \of{ x_{ i } } </m> for each <m> i \in \set{ 1 , 2 } </m>, and note that <m> N_{ 1 } \cap N_{ 2 } = \emptyset </m>. Thus every metrizable space is <m> T_{ 2 } </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <lemma xml:id="lemma-separation-and-separation-by-neighborhoods">
+    <title>
+      Separation by neighborhoods and separation
+    </title>
+    
+    <statement>
+      <p>
+        Two points in a topological space which are separated by neighborhoods are separated.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> x_{ 1 } , x_{ 2 } \in X </m> be points in a topological space <m> \of{ X , \tau } </m>. If <m> x_{ 1 } </m> and <m> x_{ 2 } </m> are separated by neighborhoods, then there are neighborhoods <m> N_{ 1 } \subseteq X </m> and <m> N_{ 2 } \subseteq X </m> of <m> x_{ 1 } </m> and <m> x_{ 2 } </m> in <m> X </m>, respectively, so that <m> N_{ 1 } \cap N_{ 2 } = \emptyset </m>. In particular, <m> x_{ 1 } \notin N_{ 2 } </m> and <m> x_{ 2 } \notin N_{ 1 } </m>, and so <m> x_{ 1 } </m> and <m> x_{ 2 } </m> are separated.
+      </p>
+    </proof>
+  </lemma>
+  
+  <proposition xml:id="proposition-t-one-and-t-two-spaces">
+    <title>
+      <m> T_{ 1 } </m> and <m> T_{ 2 } </m> spaces
+    </title>
+    
+    <statement>
+      <p>
+        Any <m> T_{ 2 } </m> space is <m> T_{ 1 } </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \of{ X , \tau } </m> be a <m> T_{ 2 } </m> space. Then any two distinct points <m> x_{ 1 } , x_{ 2 } \in X </m> are separated by neighborhoods, and so <xref ref="lemma-separation-and-separation-by-neighborhoods"/> implies that <m> x_{ 1 } </m> and <m> x_{ 2 } </m> are separated. Since any two distinct points are separated, <m> \of{ X , \tau } </m> is <m> T_{ 1 } </m>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    The main attraction of the <m> T_{ 2 } </m> separation axiom is that it is the minimal required hypotheses on a topological space to guarantee the uniqueness of limits for sequences and nets of points.
+  </p>
+  
+  <theorem xml:id="theorem-uniqueness-of-limits-in-t-two-spaces">
+    <title>
+      Uniqueness of limits in <m> T_{ 2 } </m> spaces
+    </title>
+    
+    <statement>
+      <p>
+        If a net of points in a <m> T_{ 2 } </m> space converges, then it converges to a unique limit.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> be a net of points <m> x_{ \alpha } \in X </m> in a <m> T_{ 2 } </m> space <m> \of{ X , \alpha } </m> indexed by a directed set <m> \of{ A , \precsim } </m>. We will prove the result in the case <m> A </m> is directed upwards; the downwards directed case is entirely analogous.
+      </p>
+      
+      <p>
+        Suppose for a contradiction that the net <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> converges upwards to two distinct points <m> x_{ 1 } , x_{ 2 } \in X </m>. Since <m> \of{ X , \tau } </m> is <m> T_{ 2 } </m>, <m> x_{ 1 } </m> and <m> x_{ 2 } </m> are separated by neighborhoods; that is, there are neighborhoods <m> N_{ 1 } , N_{ 2 } \subseteq X </m> of <m> x_{ 1 } </m> and <m> x_{ 2 } </m> in <m> X </m>, respectively, so that <m> N_{ 1 } \cap N_{ 2 } = \emptyset </m>. Since <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> converges to both <m> x_{ 1 } </m> and <m> x_{ 2 } </m>, there are indices <m> \alpha_{ N_{ 1 } } , \alpha_{ N_{ 2 } } \in A </m> so that <m> x_{ \alpha } \in N_{ 1 } </m> for all indices <m> \alpha \succsim \alpha_{ N_{ 1 } } </m> and <m> x_{ \alpha } \in N_{ 2 } </m> for all indices <m> \alpha \succsim \alpha_{ N_{ 2 } } </m>.
+      </p>
+      
+      <p>
+        Since <m> A </m> is directed upwards, there is some index <m> \alpha \in A </m> so that <m> \alpha_{ N_{ 1 } } , \alpha_{ N_{ 2 } } \preceq \alpha </m>. We conclude that <m> x_{ \alpha } \in N_{ 1 } \cap N_{ 2 } </m>. This contradiction implies that <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> converges to at most one point in <m> X </m>.
+      </p>
+    </proof>
+  </theorem>
+
+  <conclusion>
+    <p>
+      While there are <alert> many </alert> separation axioms beyond <m> T_{ 0 } </m>, <m> T_{ 1 } </m>, and <m> T_{ 2 } </m>, their utility is highly context-dependent and field-specific. However, the <m> T_{ 2 } </m>/Hausdorff property is ubiquitous throughout all of point-set topology.
+    </p>
+  </conclusion>
+</subsection>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-sequential-convergence-and-beyond" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Sequential Convergence and Beyond
+  </title>
+
+  <introduction>
+    <p>
+      In the previous chapter, we defined convergence in a metric space in a way which relied explicitly on the metric in question. In topological spaces, however, we must rely only on what data is available from the topology. Instead of defining sequential convergence and divergence in terms of some distance function, we will define it in terms of the neighborhoods of points. A sequence of points in a topological space is said to converge to a point if the values of the sequence are eventually contained in any neighborhood of the putative limit.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-sequential-convergence-divergence-in-a-topological-space">
+    <title>
+      Sequential convergence/divergence in a topological space
+    </title>
+    
+    <idx>
+      convergent sequence
+    </idx>
+    
+    <idx>
+      divergent sequence
+    </idx>
+    
+    <statement>
+      <p>
+        A sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> x_{ n } \in X </m> in a topological space <m> \of{ X , \tau } </m> <term> converges </term> to a point <m> x \in X </m> if for every neighborhood <m> N </m> of <m> x </m> in <m> X </m>, there is a natural number <m> n_{ N } </m> so that <m> x_{ n } \in N </m> for all indices <m> n \geq n_{ N } </m>.
+      </p>
+      
+      <p>
+        A sequence of points in a topological space is called <term> convergent </term> if it converges to some point and <term> divergent </term> otherwise if it does not converge to any point.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    We first observe that the above notion of sequential convergence coincides precisely with our previous notion of sequential convergence in metric spaces whenever a topological space is metrizable.
+  </p>
+  
+  <lemma xml:id="lemma-sequential-convergence-in-metrizable-spaces">
+    <title>
+      Sequential convergence in metrizable spaces
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of points in a metric space <m> \of{ X , \rho } </m>. For any point <m> x \in X </m>, the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> x </m> in the metric space <m> \of{ X , \rho } </m> if and only if <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> x </m> in the metrizable topological space <m> \of{ X , \tau_{ \rho } } </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        First suppose that <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> x </m> in the metric space <m> \of{ X , \rho } </m>, and let <m> N \subseteq X </m> be a neighorhood of <m> x </m> in <m> X </m>. Then <m> \mB_{ \epsilon } \of{ x } \subseteq N </m> for some positive real number <m> \epsilon \gt 0 </m>. There is some natural number <m> n_{ N } \in \N </m> so that
+        
+        <md>
+          \rho \of{ x_{ n } , x } \lt \epsilon
+        </md>
+        
+        for all indices <m> n \geq n_{ N } </m>. In particular, we observe that <m> x_{ n } \in \mB_{ \epsilon } \of{ x } \subseteq N </m> for all indices <m> n \geq n_{ N } </m>. Thus <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> x </m> in the metric topological space <m> \of{ X , \tau_{ \rho } } </m>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> x </m> in the metric topological space <m> \of{ X , \tau_{ \rho } } </m>, and let <m> \epsilon \gt 0 </m> be a positive real number. Since <m> \mB_{ \epsilon } \of{ x } </m> is a neighborhood of <m> x </m> in <m> X </m>, there is a natural number <m> n_{ \epsilon } \in \N </m> so that <m> x_{ n } \in \mB_{ \epsilon } \of{ x } </m> for all indices <m> n \geq n_{ \epsilon } </m>. In particular,
+        
+        <md>
+          \rho \of{ x_{ n } , x } \lt \epsilon
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m>. Thus <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> x </m> in the metric space <m> \of{ X , \rho } </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <p>
+    One consequence of <xref ref="lemma-sequential-convergence-in-metrizable-spaces"/> is that we have already explored plenty of examples of convergent and divergent sequences in metrizable topological spaces, and we are familiar with the properties of sequential convergence in metrizable topological spaces. For example, <xref ref="lemma-sequential-convergence-in-metrizable-spaces"/> and <xref ref="proposition-uniqueness-of-sequential-limits-in-a-metric-space"/> implies that limits of convergent sequences in metrizable topological spaces are unique.
+  </p>
+
+  <corollary xml:id="corollary-uniqueness-of-sequential-limits-in-metrizable-spaces">
+    <title>
+      Uniqueness of sequential limits in metrizable spaces
+    </title>
+    
+    <statement>
+      <p>
+        Convergent sequences of points in metrizable topological spaces converge to unique points.
+      </p>
+    </statement>
+  </corollary>
+  
+  <p>
+    One might hope that <xref ref="corollary-uniqueness-of-sequential-limits-in-metrizable-spaces"/> could be extended to apply to sequential convergence in all topological spaces. However, our familiar intuition regarding such convergence can break down in non-metrizable topological spaces.
+  </p>
+
+  <example xml:id="example-sequential-convergence-divergence-in-non-metrizable-spaces">
+    <title>
+      Sequential convergence/divergence in non-metrizable spaces
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of convergent and divergent sequences in non-metrizable topological spaces:
+        
+        <ul>
+          <li>
+            <p>
+              Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of points <m> x_{ n } \in X </m> in an indiscrete topological space <m> \of{ X , \bot_{ X } } </m>. For any point <m> x \in X </m>, since the only neighborhood of <m> x </m> in <m> X </m> is <m> X </m> itself, the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> x </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Recall that the Sierpiński space <m> \of{ X , \tau } </m> is the topological space with ground set <m> X = \set{ 0 , 1 } </m> and topology <m> \tau = \set{ \emptyset , \set{ 1 } , \set{ 0 , 1 } } </m>. Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be the constant sequence of points <m> x_{ n } \in X </m> defined by the formula <m> x_{ n } = 1 </m>.
+            </p>
+            
+            <p>
+              The two neighborhoods of <m> 1 </m> in <m> X </m> are <m> \set{ 1 } </m> and <m> \set{ 0 , 1 } </m>, and these neighborhoods both contain every entry of the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m>. In particular, the entries of <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> eventually lie in any neighborhood of <m> 1 </m>, so that <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> 1 </m>.
+            </p>
+            
+            <p>
+              However, the only neighborhood of <m> 0 </m> in <m> X </m> is <m> \set{ 0 , 1 } </m>, and this neighborhood contains every entry of the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m>. In particular, the entries of <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> eventually lie in any neighborhood of <m> 0 </m>. So <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> also converges to <m> 0 </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    The above example shows that in our generalization of metric spaces to topological spaces, we have lost at least one nice property of limiting behavior; sequences of points can converge to more than one limit. This by itself is not cause to abandon our study of the limiting behavior of sequences; we will see that many of the topological spaces encountered in practice are <term> Hausdorff </term>, a class of topological spaces in which convergent sequences converge to unique limits, even if these spaces are not metrizable.
+  </p>
+  
+  <p>
+    The true reasons for our shift in focus from sequences to more general indexed families of points called <term> nets </term> are more subtle, and they are concerned with adapting the sequential characterizations of many of the point-set topological notions introduced in <xref ref="chapter-metric-spaces"/>. For example, while we have seen characterizations of continuity and compactness in terms of the convergence of sequences, such characterizations are not extended to topological spaces in general. Indeed, there are topological spaces for which the limiting behavior of sequences alone is not sufficient data to fully describe central point-set topological properties such as continuity or compactness.
+  </p>
+
+  <example xml:id="example-the-cocountable-topology">
+    <title>
+      The cocountable topology
+    </title>
+    
+    <idx>
+      cocountable topology
+    </idx>
+    
+    <statement>
+      <p>
+        The <term> cocountable topology </term> <m> \tau </m> on a set <m> X </m> is the set
+        
+        <md>
+          \tau = \setmid{ U \in \ps \of{ X } }{ U = \emptyset \textrm{ or } X \setminus U \textrm{ is countable} }
+        </md>.
+        
+        One can verify that <m> \tau </m> is a topology on <m> X </m> for which all convergent sequences are eventually constant. Moreover, if <m> X </m> is uncountable, then <m> \tau </m> is not the discrete topology on <m> X </m>.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    The above example of a topological space whose point-set topological properties cannot be defined solely in terms of the convergence/divergence of sequences motivates the following broadening of our scope to include more general indexed families of points. Instead of only considering families indexed by the natural numbers, we allow the indexing sets to be particular types of preordered sets called <term> directed sets </term>.
+  </p>
+  
+  <definition xml:id="definition-directed-set">
+    <title>
+      Directed set
+    </title>
+    
+    <idx>
+      upwards directed set
+    </idx>
+    
+    <idx>
+      downwards directed set
+    </idx>
+    
+    <idx>
+      directed set
+    </idx>
+    
+    <idx>
+      net
+    </idx>
+    
+    <statement>
+      <p>
+        A preordered set <m> \of{ A , \precsim } </m> is called <term> upwards directed </term> (resp. <term> downwards directed </term>) if every finite set of elements in <m> A </m> has a common upper bound (resp. common lower bound). An family <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> indexed by a directed set <m> A </m> is called a <term> net </term>.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="example-directed-sets">
+    <title>
+      Directed sets
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of directed sets.
+        
+        <ul>
+          <li>
+            <p>
+              Any totally ordered set is directed both upwards and downwards. Indeed, given two elements <m> x , y \in X </m> in a totally ordered set <m> \of{ X , \leq } </m>, either <m> x \leq y </m>, in which case <m> x \leq x , y \leq y </m>, or <m> y \leq x </m>, in which case <m> y \leq x , y \leq x </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The power set <m> \ps \of{ X } </m> of a set <m> X </m> is directed both upwards and downwards. Indeed, given two subsets <m> U , V \subseteq X </m>,
+              
+              <md>
+                U \cap V \subseteq U , V \subseteq U \cup V
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Fix a point <m> c \in X </m> in a metric space <m> \of{ X , \rho } </m>, and let <m> \precsim_{ c } </m> denote the binary relation on <m> X \setminus \set{ c } </m> defined so that <m> x \precsim_{ c } y </m> if and only if <m> \rho \of{ x , c } \leq \rho \of{ y , c } </m>. Then the preordered set <m> \of{ X \setminus \set{ c } , \precsim_{ c } } </m> is directed both upwards and downwards.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Let <m> a , b \in \R </m> be real numbers, and suppose that <m> a \leq b </m>. A <term> finite partition </term> of the closed interval <m> \clint{ a }{ b } </m> is a finite sequence <m> \of{ x_{ j } }_{ j = 0 }^{ m } </m> so that <m> x_{ 0 } = a </m> and <m> x_{ m } = b </m>. Given two such partitions <m> P </m> and <m> Q </m>, we write <m> P \preceq Q </m> if <m> P </m> is a subsequence of <m> Q </m>. Considered with this binary relation, the set of finite partitions of <m> \clint{ a }{ b } </m> is directed both upwards and downwards. This directed set will be an important part of the definition of the Riemann integral in <xref ref="section-riemann-sums"/>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <definition xml:id="definition-net-convergence">
+    <title>
+      Net convergence
+    </title>
+    
+    <idx>
+      net convergence
+    </idx>
+    
+    <idx>
+      net divergence
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> be a net of points <m> x_{ \alpha } \in X </m> in a topological space <m> \of{ X , \tau } </m> indexed by a directed set <m> \of{ A , \preceq } </m>.
+        
+        <ul>
+          <li>
+            <title>
+              Upwards convergence
+            </title>
+            
+            <p>
+              Suppose that the indexing set <m> A </m> is upwards directed. A net <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> of points <m> x_{ \alpha } \in X </m> <term> converges upwards </term> to a point <m> x \in X </m> if for all neighborhoods <m> N \subseteq X </m> of <m> x </m> in <m> X </m>, there is an index <m> \alpha_{ N } \in A </m> so that <m> x_{ \alpha } \in N </m> for all indices <m> \alpha \succeq \alpha_{ N } </m>.
+            </p>
+            
+            <p>
+              The net <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> is called <term> upwards convergent </term> if it converges upward to a point in <m> X </m>, and <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> is called <term> upwards divergent </term> if it does not converge upwards to any point in <m> X </m>.
+            </p>
+            
+            <p>
+              If <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> converges upwards to a unique point <m> x \in X </m>, then this point is called the <term> upwards limit </term> of <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> and is denoted
+              
+              <md>
+                \lim_{ \alpha \uparrow }{ x_{ \alpha } } = x
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Downwards convergence
+            </title>
+            
+            <p>
+              Suppose that the indexing set <m> A </m> is downwards directed. A net <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> of points <m> x_{ \alpha } \in X </m> <term> converges downwards </term> to a point <m> x \in X </m> if for all neighborhoods <m> N \subseteq X </m> of <m> x </m> in <m> X </m>, there is an index <m> \alpha_{ N } \in A </m> so that <m> x_{ \alpha } \in N </m> for all indices <m> \alpha \preceq \alpha_{ N } </m>.
+            </p>
+            
+            <p>
+              The net <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> is called <term> downwards convergent </term> if it converges downward to a point in <m> X </m>, and <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> is called <term> downwards divergent </term> if it does not converge downwards to any point in <m> X </m>.
+            </p>
+            
+            <p>
+              If <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> converges downwards to a unique point <m> x \in X </m>, then this point is called the <term> downwards limit </term> of <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> and is denoted
+              
+              <md>
+                \lim_{ \alpha \downarrow }{ x_{ \alpha } } = x
+              </md>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+  
+  <remark xml:id="remark-direction-of-convergence">
+    <title>
+      Direction of convergence
+    </title>
+    
+    <p>
+      If the indexing set <m> A </m> of a net <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> of points <m> x_{ \alpha } \in X </m> in a topological space <m> \of{ X , \tau } </m> is directed either only upwards or only downwards, then one may speak of the convergence or limit of said net without specifying the direction. Similarly, we may avoid specifying the direction of convergence explicitly if it is clear from context.
+    </p>
+  </remark>
+  
+  <conclusion>
+    <p>
+      The main utility of net convergence is in generalizing the sequential characterizations of various point-set topological notions to general topological spaces. However, we will see that additional hypotheses on the spaces in question will allow us to recover these sequential characterizations, even if they do not hold in the most general case.
+    </p>
+  </conclusion>
+</subsection>
