@@ -9,6 +9,10 @@
     <p>
       The non-degeneracy of a metric implies that any two distinct points in a metric space are separated by some positive distance, and hence are the centers of disjoint metric open balls of positive radius. These separation properties of a metric space have strong implications for the uniqueness of limits. For general topological spaces, there is a zoo of distinct yet related versions of these <term> separation axioms </term> which seek to compare how a given topology separates points relative to the discrete and indiscrete topologies.
     </p>
+    
+    <p>
+      The indiscrete topological spaces are the <em> least </em> separated among all topological spaces. If a topological space <m> \of{ X , \tau } </m> is indiscrete, then there is no point-set topological way to distinguish between the points of <m> X </m>. At the very least, all separation axioms must address this glaring pathology.
+    </p>
   </introduction>
   
   <definition xml:id="definition-topological-distinguishability">
@@ -30,10 +34,42 @@
     
     <statement>
       <p>
-        Two points <m> x_{ 1 } , x_{ 2 } \in X </m> in a topological space <m> \of{ X , \tau } </m> are called <term> topologically indistinguishable </term> if a subset <m> N \subseteq X </m> is a neighborhood of <m> x_{ 1 } </m> in <m> X </m> if and only if <m> N </m> is a neighborhood of <m> x_{ 2 } </m> in <m> X </m>. Two points <m> x_{ 1 } , x_{ 2 } \in X </m> are called <term> topologically distinguishable </term> otherwise if they are not topologically indistinguishable.
-      </p>
-      
-      <p>
+        Let <m> \of{ X , \tau } </m> be a topological space.
+        
+        <ul>
+          <li>
+            <title>
+              Topological indistinguishability
+            </title>
+            
+            <p>
+              Two points <m> x_{ 1 } , x_{ 2 } \in X </m> are called <term> topologically indistinguishable </term> if they have precisely the same neighborhoods
+              
+              <md>
+                \Nbhd \of{ x_{ 1 } } = \Nbhd \of{ x_{ 2 } }
+              </md>;
+              
+              that is, <m> x_{ 1 } </m> and <m> x_{ 2 } </m> are topologically indistinguishable if for any subset <m> N \subseteq X </m>, <m> N </m> is a neighborhood of <m> x_{ 1 } </m> in <m> X </m> if and only if <m> N </m> is a neighborhood of <m> x_{ 2 } </m> in <m> X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Topological distinguishability
+            </title>
+            
+            <p>
+              Two points <m> x_{ 1 } , x_{ 2 } \in X </m> are called <term> topologically distinguishable </term> if
+              
+              <md>
+                \Nbhd \of{ x_{ 1 } } \neq \Nbhd \of{ x_{ 2 } }
+              </md>;
+              
+              that is, <m> x_{ 1 } </m> and <m> x_{ 2 } </m> are topologically indistinguishable if there is some subset <m> N \subseteq X </m> which is a neighborhood of one of <m> x_{ 1 } </m> and <m> x_{ 2 } </m> but not a neighborhood of the other.
+            </p>
+          </li>
+        </ul>
+        
         A topological space <m> \of{ X , \tau } </m> is called <term> <m> T_{ 0 } </m> </term> or <term> Kolmogorov </term> if all pairs of distinct points in <m> X </m> are topologically distinguishable.
       </p>
     </statement>
@@ -144,7 +180,7 @@
     
     <proof>
       <p>
-        Let <m> x_{ 1 } , x_{ 2 } \in X </m> be points in a topological space <m> \of{ X , \tau } </m>. If <m> x_{ 1 } </m> and <m> x_{ 2 } </m> are separated, then there are neighborhoods <m> N_{ 1 } \subseteq X </m> and <m> N_{ 2 } \subseteq X </m> of <m> x_{ 1 } </m> and <m> x_{ 2 } </m> in <m> X </m>, respectively, so that <m> x_{ 1 } \notin N_{ 2 } </m> and <m> x_{ 2 } \notin N_{ 1 } </m>. In particular, <m> N_{ 1 } </m> is a neighborhood of <m> x_{ 1 } </m> but not a neighborhood of <m> x_{ 2 } </m>, and so <m> x_{ 1 } </m> and <m> x_{ 2 } </m> are topologically distinguishable.
+        Let <m> x_{ 1 } , x_{ 2 } \in X </m> be points in a topological space <m> \of{ X , \tau } </m>. If <m> x_{ 1 } </m> and <m> x_{ 2 } </m> are separated, then there are neighborhoods <m> N_{ 1 } \in \Nbhd \of{ x_{ 1 } } </m> and <m> N_{ 2 } \in \Nbhd \of{ x_{ 2 } } </m> of <m> x_{ 1 } </m> and <m> x_{ 2 } </m> in <m> X </m>, respectively, so that <m> x_{ 1 } \notin N_{ 2 } </m> and <m> x_{ 2 } \notin N_{ 1 } </m>. In particular, <m> N_{ 1 } \in \Nbhd \of{ x_{ 1 } } \setminus \Nbhd \of{ x_{ 2 } } </m> is a neighborhood of <m> x_{ 1 } </m> but not a neighborhood of <m> x_{ 2 } </m>, and so <m> x_{ 1 } </m> and <m> x_{ 2 } </m> are topologically distinguishable.
       </p>
     </proof>
   </lemma>
@@ -168,7 +204,7 @@
   </proposition>
   
   <p>
-    Although <m> T_{ 1 } </m> is a much stronger separation axiom than <m> T_{ 0 } </m>, it is still not strong enough to force the uniqueness of sequential/net limits. Indeed, we note that the sequence <m> \of{ n }_{ n = 0 }^{ \infty } </m> of natural numbers converges in the cofinite topology to every single natural number. One issue here is that while distinct points in a <m> T_{ 1 } </m> space have distinct neighborhoods, they might not have disjoint neighborhoods. The following and final separation axiom we will consider here aims to address this issue.
+    Although <m> T_{ 1 } </m> is a much stronger separation axiom than <m> T_{ 0 } </m>, it is still not strong enough to force the uniqueness of sequential/net limits. Indeed, we note that the sequence <m> \of{ n }_{ n = 0 }^{ \infty } </m> of natural numbers converges in the cofinite topology on <m> \N </m> to every single natural number. One issue here is that while distinct points in a <m> T_{ 1 } </m> space have distinct neighborhoods, they might not have <em> disjoint </em> neighborhoods. The following and final separation axiom we will consider here aims to address this issue.
   </p>
   
   <definition xml:id="definition-separation-by-neighborhoods">
@@ -190,7 +226,7 @@
     
     <statement>
       <p>
-        Two points <m> x_{ 1 } , x_{ 2 } \in X </m> in a topological space <m> \of{ X , \tau } </m> are called <term> separated by neighborhoods </term> if there are neighborhoods <m> N_{ 1 } \subseteq X </m> and <m> N_{ 2 } \subseteq X </m> of <m> x_{ 1 } </m> and <m> x_{ 2 } </m> in <m> X </m>, respectively, so that <m> N_{ 1 } \cap N_{ 2 } = \emptyset </m>.
+        Two points <m> x_{ 1 } , x_{ 2 } \in X </m> in a topological space <m> \of{ X , \tau } </m> are called <term> separated by neighborhoods </term> if there are neighborhoods <m> N_{ 1 } \in \Nbhd \of{ x_{ 1 } } </m> and <m> N_{ 2 } \in \Nbhd \of{ x_{ 2 } } </m> of <m> x_{ 1 } </m> and <m> x_{ 2 } </m> in <m> X </m>, respectively, so that <m> N_{ 1 } \cap N_{ 2 } = \emptyset </m>.
       </p>
       
       <p>
@@ -239,7 +275,7 @@
                 </mrow>
               </md>.
               
-              Similarly, if <m> \rho \of{ x , x_{ 2 } } \lt \frac{ \rho \of{ x_{ 1 } , x_{ 2 } } }{ 2 } </m>, then <m> \rho \of{ x , x_{ 2 } } \gt \frac{ \rho \of{ x_{ 1 } , x_{ 2 } } }{ 2 } </m>. In particular, let <m> N_{ i } = \mB_{ \frac{ \rho \of{ x_{ 1 } , x_{ 2 } } }{ 2 } } \of{ x_{ i } } </m> for each <m> i \in \set{ 1 , 2 } </m>, and note that <m> N_{ 1 } \cap N_{ 2 } = \emptyset </m>. Thus every metrizable space is <m> T_{ 2 } </m>.
+              Similarly, if <m> \rho \of{ x , x_{ 2 } } \lt \frac{ \rho \of{ x_{ 1 } , x_{ 2 } } }{ 2 } </m>, then <m> \rho \of{ x , x_{ 2 } } \gt \frac{ \rho \of{ x_{ 1 } , x_{ 2 } } }{ 2 } </m>. In particular, let <m> N_{ i } = \mB_{ \frac{ \rho \of{ x_{ 1 } , x_{ 2 } } }{ 2 } } \of{ x_{ i } } \in \Nbhd \of{ x_{ i } } </m> for each <m> i \in \set{ 1 , 2 } </m>, and note that <m> N_{ 1 } \cap N_{ 2 } = \emptyset </m>. Thus every metrizable space is <m> T_{ 2 } </m>.
             </p>
           </li>
         </ul>
@@ -260,7 +296,7 @@
     
     <proof>
       <p>
-        Let <m> x_{ 1 } , x_{ 2 } \in X </m> be points in a topological space <m> \of{ X , \tau } </m>. If <m> x_{ 1 } </m> and <m> x_{ 2 } </m> are separated by neighborhoods, then there are neighborhoods <m> N_{ 1 } \subseteq X </m> and <m> N_{ 2 } \subseteq X </m> of <m> x_{ 1 } </m> and <m> x_{ 2 } </m> in <m> X </m>, respectively, so that <m> N_{ 1 } \cap N_{ 2 } = \emptyset </m>. In particular, <m> x_{ 1 } \notin N_{ 2 } </m> and <m> x_{ 2 } \notin N_{ 1 } </m>, and so <m> x_{ 1 } </m> and <m> x_{ 2 } </m> are separated.
+        Let <m> x_{ 1 } , x_{ 2 } \in X </m> be points in a topological space <m> \of{ X , \tau } </m>. If <m> x_{ 1 } </m> and <m> x_{ 2 } </m> are separated by neighborhoods, then there are neighborhoods <m> N_{ 1 } \in \Nbhd \of{ x_{ 1 } } </m> and <m> N_{ 2 } \in \Nbhd \of{ x_{ 2 } } </m> of <m> x_{ 1 } </m> and <m> x_{ 2 } </m> in <m> X </m>, respectively, so that <m> N_{ 1 } \cap N_{ 2 } = \emptyset </m>. In particular, <m> x_{ 1 } \notin N_{ 2 } </m> and <m> x_{ 2 } \notin N_{ 1 } </m>, and so <m> x_{ 1 } </m> and <m> x_{ 2 } </m> are separated.
       </p>
     </proof>
   </lemma>
@@ -284,7 +320,7 @@
   </proposition>
   
   <p>
-    The main attraction of the <m> T_{ 2 } </m> separation axiom is that it is the minimal required hypotheses on a topological space to guarantee the uniqueness of limits for sequences and nets of points.
+    The main attraction of the <m> T_{ 2 } </m> separation axiom is that it is the minimal required hypotheses on a topological space to guarantee the uniqueness of limits for convergent sequences and nets of points.
   </p>
   
   <theorem xml:id="theorem-uniqueness-of-limits-in-t-two-spaces">
@@ -304,18 +340,18 @@
       </p>
       
       <p>
-        Suppose for a contradiction that the net <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> converges upwards to two distinct points <m> x_{ 1 } , x_{ 2 } \in X </m>. Since <m> \of{ X , \tau } </m> is <m> T_{ 2 } </m>, <m> x_{ 1 } </m> and <m> x_{ 2 } </m> are separated by neighborhoods; that is, there are neighborhoods <m> N_{ 1 } , N_{ 2 } \subseteq X </m> of <m> x_{ 1 } </m> and <m> x_{ 2 } </m> in <m> X </m>, respectively, so that <m> N_{ 1 } \cap N_{ 2 } = \emptyset </m>. Since <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> converges to both <m> x_{ 1 } </m> and <m> x_{ 2 } </m>, there are indices <m> \alpha_{ N_{ 1 } } , \alpha_{ N_{ 2 } } \in A </m> so that <m> x_{ \alpha } \in N_{ 1 } </m> for all indices <m> \alpha \succsim \alpha_{ N_{ 1 } } </m> and <m> x_{ \alpha } \in N_{ 2 } </m> for all indices <m> \alpha \succsim \alpha_{ N_{ 2 } } </m>.
+        Suppose for a contradiction that the net <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> converges upwards to two distinct points <m> x_{ 1 } , x_{ 2 } \in X </m>. Since <m> \of{ X , \tau } </m> is <m> T_{ 2 } </m>, <m> x_{ 1 } </m> and <m> x_{ 2 } </m> are separated by neighborhoods; that is, there are neighborhoods <m> N_{ 1 } \in \Nbhd \of{ x_{ 1 } } </m> and <m> N_{ 2 } \in \Nbhd \of{ x_{ 2 } } </m> of <m> x_{ 1 } </m> and <m> x_{ 2 } </m> in <m> X </m>, respectively, so that <m> N_{ 1 } \cap N_{ 2 } = \emptyset </m>. Since <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> converges to both <m> x_{ 1 } </m> and <m> x_{ 2 } </m>, there are indices <m> \alpha_{ N_{ 1 } } , \alpha_{ N_{ 2 } } \in A </m> so that <m> x_{ \alpha } \in N_{ 1 } </m> for all indices <m> \alpha \succsim \alpha_{ N_{ 1 } } </m> and <m> x_{ \alpha } \in N_{ 2 } </m> for all indices <m> \alpha \succsim \alpha_{ N_{ 2 } } </m>.
       </p>
       
       <p>
-        Since <m> A </m> is directed upwards, there is some index <m> \alpha \in A </m> so that <m> \alpha_{ N_{ 1 } } , \alpha_{ N_{ 2 } } \preceq \alpha </m>. We conclude that <m> x_{ \alpha } \in N_{ 1 } \cap N_{ 2 } </m>. This contradiction implies that <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> converges to at most one point in <m> X </m>.
+        Since <m> A </m> is directed upwards, there is some index <m> \alpha \in A </m> so that <m> \alpha_{ N_{ 1 } } , \alpha_{ N_{ 2 } } \preceq \alpha </m>. We conclude that <m> x_{ \alpha } \in N_{ 1 } </m> and <m> x_{ \alpha } \in N_{ 2 } </m>, and so <m> x_{ \alpha } \in N_{ 1 } \cap N_{ 2 } = \emptyset </m>. This contradiction implies that <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> converges to at most one point in <m> X </m>.
       </p>
     </proof>
   </theorem>
 
   <conclusion>
     <p>
-      While there are <alert> many </alert> separation axioms beyond <m> T_{ 0 } </m>, <m> T_{ 1 } </m>, and <m> T_{ 2 } </m>, their utility is highly context-dependent and field-specific. However, the <m> T_{ 2 } </m>/Hausdorff property is ubiquitous throughout all of point-set topology.
+      While there are <alert> many </alert> separation axioms beyond <m> T_{ 0 } </m>, <m> T_{ 1 } </m>, and <m> T_{ 2 } </m>, their utility is highly context-dependent and field-specific. However, the <m> T_{ 2 } </m>/Hausdorff property is ubiquitous throughout all of point-set topology and real analysis.
     </p>
   </conclusion>
 </subsection>

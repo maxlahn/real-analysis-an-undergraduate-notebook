@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-map-convergence-and-continuity-at-a-point" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Map Convergence and Continuity at a Point
+  </title>
+
+  <introduction>
+    <p>
+      Other than the <m> \epsilon </m>-<m> \delta </m> characterization, all other characterizations of continuity for maps between metric spaces provided in <xref ref="proposition-characterizations-of-metric-continuity"/> may be generalized to maps between topological spaces. While the neighborhood characterization is identical, we have already seen that the point-set topology of general topological spaces requires us to consider nets of points rather than sequences. So the sequential characterization of continuity will become the net characterization. We begin with the convergence of maps between topological spaces.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-topological-map-convergence">
+    <title>
+      Topological map convergence
+    </title>
+    
+    <idx>
+      map convergence
+    </idx>
+    
+    <idx>
+      map divergence
+    </idx>
+    
+    <idx>
+      limit
+    </idx>
+    
+    <statement>
+      <p>
+        A map <m> f \colon X \to Y </m> from a topological space <m> \of{ X , \tau_{ X } } </m> to a topological space <m> \of{ Y , \tau_{ Y } } </m> <term> converges </term> at a point <m> c \in X </m> to a point <m> l \in Y </m> if for all neighborhoods <m> N \in \Nbhd_{ Y } \of{ l } </m> of <m> l </m> in <m> Y </m>, there is a neighborhood <m> M \in \Nbhd_{ X } \of{ c } </m> of <m> c </m> in <m> X </m> so that <m> f \of{ x } \in N </m> for all points <m> x \in M \setminus \set{ c } </m>.
+      </p>
+      
+      <p>
+        Such a map <m> f \colon X \to Y </m> is called <term> convergent </term> at a point <m> c \in X </m> if it converges at <m> c </m> to some point in <m> Y </m> and <term> divergent </term> at <m> c </m> otherwise if it does not converge at <m> c </m> to any point in <m> Y </m>. If such a map <m> f \colon X \to Y </m> converges at a point <m> c \in X </m> to a <em> unique </em> point <m> l \in Y </m>, then this unique point is called a <term> limit </term>, and is denoted
+        
+        <md>
+          \lim_{ x \to c }{ f \of{ x } } = l
+        </md>.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    As with previous generalizations of concepts introduced in <xref ref="chapter-metric-spaces"/>, the convergence of a map between metric spaces is equivalent to its convergence as a map between the underlying metrizable topological spaces.
+  </p>
+
+  <lemma xml:id="lemma-map-convergence-for-metrizable-spaces">
+    <title>
+      Map convergence for metrizable spaces
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> be a map from a metric space <m> \of{ X , \rho_{ X } } </m> to a metric space <m> \of{ Y , \rho_{ Y } } </m>. For any points <m> c \in X </m> and <m> l \in Y </m>, <m> f </m> converges at <m> c </m> to <m> l </m> as a map between metric spaces if and only if <m> f </m> converges at <m> c </m> to <m> l </m> as a map from the metrizable space <m> \of{ X , \tau_{ \rho_{ X } } } </m> to the metrizable space <m> \of{ Y , \tau_{ \rho_{ Y } } } </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        First suppose that <m> f </m> converges at <m> c </m> to <m> l </m> as a map between metric spaces, and let <m> N \in \Nbhd_{ Y } \of{ l } </m> be a neighborhood of <m> l </m> in <m> Y </m>. Then <m> \mB_{ \epsilon } \of{ l } \subseteq N </m> for some positive real number <m> \epsilon \gt 0 </m>. Since <m> f </m> converges at <m> c </m> to <m> l </m>, there is some positive real number <m> \delta \gt 0 </m> so that
+        
+        <md>
+          \rho_{ Y } \of{ f \of{ x } , l } \lt \epsilon
+        </md>
+        
+        for all points <m> x \in X </m> so that <m> 0 \lt \rho_{ X } \of{ x , c } \lt \delta </m>. Let <m> M = \mB_{ \delta } \of{ c } </m>, and note that <m> M \in \Nbhd_{ X } \of{ c } </m> is a neighborhood of <m> c </m> in <m> X </m>. Moreover, for all points <m> x \in X </m>, if
+        
+        <md>
+          x \in M \setminus \set{ c } = \mB_{ \delta } \of{ c } \setminus \set{ c } = \setmid{ x \in X }{ 0 \lt \rho_{ X } \of{ x , c } \lt \delta }
+        </md>,
+        
+        then <m> \rho_{ Y } \of{ f \of{ x } , l } \lt \epsilon </m>, so that <m> x \in \mB_{ \epsilon } \of{ l } \subseteq N </m>. We conclude that <m> f </m> converges at <m> c </m> to <m> l </m> as a map between metrizable spaces.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> f </m> converges at <m> c </m> to <m> l </m> as a map between metrizable spaces, and let <m> \epsilon \gt 0 </m> be a positive real number. Then <m> N = \mB_{ \epsilon } \of{ l } \in \Nbhd_{ Y } \of{ l } </m> is a neighborhood of <m> l </m> in <m> Y </m>, and so there is some neighborhood <m> M \in \Nbhd_{ X } \of{ c } </m> so that <m> f \of{ x } \in N </m> for all points <m> x \in M \setminus \set{ c } </m>.
+      </p>
+      
+      <p>
+        Since <m> M </m> is a neighborhood of <m> c </m>, <m> \mB_{ \delta } \of{ c } </m> for some positive real number <m> \delta \gt 0 </m>. In particular, for all points <m> x \in X </m>, if <m> 0 \lt \rho_{ X } \of{ x , c } \lt \delta </m>, then
+        
+        <md>
+          x \in \setmid{ x \in X }{ 0 \lt \rho_{ X } \of{ x , c } \lt \delta } = \mB_{ \delta } \of{ c } \setminus \set{ c } = M \setminus \set{ c }
+        </md>,
+        
+        and so <m> f \of{ x } \in N = \mB_{ \epsilon } \of{ l } </m>; that is, <m> \rho_{ Y } \of{ f \of{ x } , l } \lt \epsilon </m>. We conclude that <m> f </m> converges at <m> c </m> to <m> l </m> as a map between metric spaces.
+      </p>
+    </proof>
+  </lemma>
+  
+  <p>
+    Since the convergence of maps between metrizable topological spaces is precisely the convergence of maps between metric spaces, we already have extensive experience working with the convergence of such maps. For example, the convergence of maps between metrizable spaces may be characterized in terms of sequential convergence. However, only one of the implications relevant for such a characterization holds for topological spaces in general.
+  </p>
+  
+  <proposition xml:id="proposition-sequential-characterization-of-map-convergence">
+    <title>
+      Sequential <q> characterization </q> of map convergence
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> be a map from a topological space <m> \of{ X , \tau_{ X } } </m> to a topological space <m> \of{ Y , \tau_{ Y } } </m>. If <m> f </m> converges at a point <m> c \in X </m> to a point <m> l \in Y </m>, then for all sequences <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> x_{ n } \in X \setminus \set{ c } </m> converging to <m> c </m>, the sequence <m> \of{ f \of{ x_{ n } } }_{ n = 0 }^{ \infty } </m> converges to <m> l </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of points <m> x_{ n } \in X \setminus \set{ c } </m> converging to <m> c </m>, and consider a neighborhood <m> N \in \Nbhd_{ Y } \of{ l } </m> of <m> l </m> in <m> Y </m>. Since <m> f </m> converges at <m> c </m> to <m> l </m>, <m> f \of{ M \setminus \set{ c } } \subseteq N </m> for some neighborhood <m> M \in \Nbhd_{ X } \of{ c } </m> of <m> c </m> in <m> X </m>. Moreover, since <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> c </m>, there is some natural number <m> n_{ M } \in \N </m> so that <m> x_{ n } \in M </m> for all indices <m> n \geq n_{ M } </m>.
+      </p>
+      
+      <p>
+        We observe that <m> x_{ n } \in M \setminus \set{ c } </m> and so
+        
+        <md>
+          f \of{ x_{ n } } \in f \of{ M \setminus \set{ c } } \subseteq N
+        </md>
+        
+        for all indices <m> n \geq n_{ M } </m>. Thus the sequence <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> l </m>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    One might hope to find a converse to <xref ref="proposition-sequential-characterization-of-map-convergence"/> as exists for metric spaces, but unfortunately no such result holds for topological spaces in general. However, we can obtain a full characterization of map convergence by considering the convergence of arbitrary nets instead of only sequences.
+  </p>
+  
+  <theorem xml:id="theorem-net-characterization-of-map-convergence">
+    <title>
+      Net characterization of map convergence
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> be a map from a topological space <m> \of{ X , \tau_{ X } } </m> to a topological space <m> \of{ Y , \tau_{ Y } } </m>, and fix points <m> c \in X </m> and <m> l \in Y </m>. Then the following are equivalent:
+        
+        <ol>
+          <li>
+            <p>
+              The map <m> f </m> converges to <m> c </m> at <m> l </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              For every net <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> of points <m> x_{ \alpha } \in X \setminus \set{ c } </m> indexed by an upwards directed set <m> \of{ A , \precsim } </m>, if <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> converges upwards to <m> c </m>, then <m> \of{ f \of{ x_{ \alpha } } }_{ \alpha \in A } </m> converges upwards to <m> l </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              For every net <m> \of{ x_{ \beta } }_{ \beta \in B } </m> of points <m> x_{ \beta } \in X \setminus \set{ c } </m> indexed by a downwards directed set <m> \of{ B , \precsim } </m>, if <m> \of{ x_{ \beta } }_{ \beta \in B } </m> converges downwards to <m> c </m>, then <m> \of{ f \of{ x_{ \beta } } }_{ \beta \in B } </m> converges downwards to <m> l </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        First suppose that <m> f </m> converges at <m> c </m> to <m> l </m>, and let <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> be a net of points <m> x_{ \alpha } \in X \setminus \set{ c } </m> indexed by an upwards directed set <m> \of{ A , \precsim } </m> which converges upwards to <m> c </m>. Let <m> N \in \Nbhd_{ Y } \of{ l } </m> be a neighborhood of <m> l </m> in <m> Y </m>. Since <m> f </m> converges at <m> c </m> to <m> l </m>, <m> f \of{ M \setminus \set{ c } } \subseteq N </m> for some neighborhood <m> M \in \Nbhd_{ X } \of{ c } </m> of <m> c </m> in <m> X </m>.
+      </p>
+      
+      <p>
+        Moreover, since <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> converges upwards to <m> c </m>, there is an index <m> \alpha_{ N_{ l } } \in A </m> so that <m> x_{ \alpha } \in M </m> for all indices <m> \alpha \succeq \alpha_{ N_{ l } } </m>. In particular, <m> x_{ \alpha } \in M \setminus \set{ c } </m>, so that <m> f \of{ x_{ \alpha } } \in N </m> for all indices <m> \alpha \succeq \alpha_{ N_{ l } } </m>. We conclude that <m> \of{ f \of{ x_{ \alpha } } }_{ \alpha \in A } </m> converges upwards to <m> l </m>.
+      </p>
+      
+      <p>
+        Now suppose that for every net <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> of points <m> x_{ \alpha } \in X \setminus \set{ c } </m> indexed by an upwards directed set <m> \of{ A , \precsim } </m>, if <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> converges upwards to <m> c </m>, then <m> \of{ f \of{ x_{ \alpha } } }_{ \alpha \in A } </m> converges upwards to <m> l </m>. Let <m> \of{ x_{ \beta } }_{ \beta \in B } </m> be a net of points <m> x_{ \beta } \in X \setminus \set{ c } </m> indexed by a downwards directed set <m> \of{ B , \precsim } </m> which converges downwards to <m> c </m>.
+      </p>
+      
+      <p>
+        Let <m> A = B </m> and <m> \succsim = \op{ \precsim } </m> be the opposite of <m> \precsim </m>, as described in <xref ref="problem-opposite-of-an-order"/>. Since <m> \of{ B , \precsim } </m> is downwards directed, <m> \of{ A , \succsim } </m> is upwards directed. Moreover, one can check that the downwards convergence of <m> \of{ x_{ \beta } }_{ \beta \in B } </m> as a net indexed by <m> \of{ B , \precsim } </m> implies the upwards convergence of <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> as a net indexed by <m> \of{ A , \succsim } </m>. In particular, <m> \of{ f \of{ x_{ \alpha } } }_{ \alpha \in A } </m> converges upwards to <m> l </m> as a net indexed by <m> \of{ A , \succsim } </m>, which again implies that <m> \of{ f \of{ x_{ \beta } } }_{ \beta \in B } </m> converges downwards to <m> l </m> as a net indexed by <m> \of{ B , \precsim } </m>.
+      </p>
+      
+      <p>
+        Finally, we wish to prove that if for every net <m> \of{ x_{ \beta } }_{ \beta \in B } </m> of points <m> x_{ \beta } \in X \setminus \set{ c } </m> indexed by a downwards directed set <m> \of{ B , \precsim } </m>, if <m> \of{ x_{ \beta } }_{ \beta \in B } </m> converges downwards to <m> c </m>, then <m> \of{ f \of{ x_{ \beta } } }_{ \beta \in B } </m> converges downwards to <m> l </m>, then <m> f </m> converges to <m> c </m> at <m> l </m>. We will prove the contrapositive implication.
+      </p>
+      
+      <p>
+        To that end, suppose that <m> f </m> does not converge at <m> c </m> to <m> l </m>. Then there is a neighborhood <m> N \in \Nbhd_{ Y } \of{ l } </m> of <m> l </m> in <m> Y </m> so that for every neighborhood <m> M \in \Nbhd_{ X } \of{ c } </m> of <m> c </m> in <m> X </m>, there is some point <m> x \in M \setminus \set{ c } </m> so that <m> f \of{ x } \notin N </m>. Recall that the set <m> \Nbhd_{ X } \of{ c } </m> of neighborhoods of <m> c </m> in <m> X </m> is partially ordered and directed downwards by containment <m> \subseteq </m>. The <xref ref="axiom-axiom-of-choice" text="title"/> allows us to find an indexed family <m> \of{ x_{ M } }_{ M \in \Nbhd_{ X } \of{ c } } </m> of points <m> x_{ N } \in X </m> so that for each index <m> M \in \Nbhd_{ X } \of{ c } </m>, <m> x_{ M } \in M \setminus \set{ c } </m> but <m> f \of{ x_{ M } } \notin N </m>.
+      </p>
+      
+      <p>
+        Since <m> x_{ M } \notin N </m> for all indices <m> M \in \Nbhd_{ X } \of{ c } </m>, the net <m> \of{ f \of{ x_{ M } } }_{ M \in \Nbhd_{ X } \of{ c } } </m> cannot converge downwards to <m> l </m>. It therefore suffices to show that the net <m> \of{ x_{ M } }_{ M \in \Nbhd_{ X } \of{ c } } </m> converges downwards to <m> c </m>. To that end, let <m> M \in \Nbhd_{ X } \of{ c } </m> be a neighborhood of <m> c </m> in <m> X </m>. Then
+        
+        <md>
+          x_{ P } \in P \subseteq M
+        </md>
+        
+        for all indices <m> P \subseteq M </m>; that is, the net <m> \of{ x_{ M } }_{ M \in \Nbhd_{ X } \of{ c } } </m> converges downwards to <m> c </m>.
+      </p>
+    </proof>
+  </theorem>
+  
+  <p>
+    We will use <xref ref="theorem-net-characterization-of-map-convergence"/> to construct an analogue for the sequential characterization of continuity at a point.
+  </p>
+  
+  <theorem xml:id="theorem-characterizations-of-topological-continuity">
+    <title>
+      Characterizations of topological continuity
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> be a map from a topological space <m> \of{ X , \tau_{ X } } </m> to a topological space <m> \of{ Y , \tau_{ Y } } </m>. For a point <m> c \in X </m>, the following are equivalent:
+        
+        <ol>
+          <li>
+            <title>
+              Convergence characterization of continuity
+            </title>
+            
+            <p>
+              The map <m> f </m> converges at <m> c </m> to <m> f \of{ c } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Neighborhood characterization of continuity
+            </title>
+            
+            <p>
+              The pre-image <m> f^{ -1 } \of{ N } </m> of any neighborhood <m> N \in \Nbhd_{ Y } \of{ f \of{ c } } </m> of <m> f \of{ c } </m> in <m> Y </m> is a neighborhood of <m> c </m> in <m> X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Net characterization of continuity
+            </title>
+            
+            <p>
+              For every net <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> of points <m> x_{ \alpha } \in X </m> indexed by an upwards directed set <m> \of{ A , \precsim } </m>, if <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> converges upwards to <m> c </m>, then <m> \of{ f \of{ x_{ \alpha } } }_{ \alpha \in A } </m> converges upwards to <m> f \of{ c } </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        First suppose that <m> f </m> converges at <m> c </m> to <m> f \of{ c } </m>, and let <m> N \in \Nbhd_{ Y } \of{ f \of{ c } } </m> be a neighborhood of <m> f \of{ c } </m> in <m> Y </m>. Then <m> f \of{ M \setminus \set{ c } } \subseteq N </m> for some neighborhood <m> M \in \Nbhd_{ X } \of{ c } </m> of <m> c </m> in <m> X </m>. We observe that <m> f \of{ c } \in N </m> as well, so that <m> f \of{ M } \subseteq N </m>. Since <m> M </m> is a neighborhood of <m> c </m> in <m> X </m>, <m> c \in U \subseteq M </m> for some open set <m> U \in \tau_{ X } </m> in <m> X </m>. Therefore,
+        
+        <md>
+          x \in U \subseteq M \subseteq \setmid{ x \in X }{ f \of{ x } \in N } = f^{ -1 } \of{ N }
+        </md>,
+        
+        and so the pre-image <m> f^{ -1 } \of{ N } \in \Nbhd_{ X } \of{ c } </m> is a neighborhood of <m> c </m> in <m> X </m>.
+      </p>
+      
+      <p>
+        Now suppose that the pre-image <m> f^{ -1 } \of{ N } </m> of every neighborhood <m> M \in \Nbhd_{ Y } \of{ f \of{ c } } </m> of <m> f \of{ c } </m> in <m> Y </m> is a neighborhood of <m> c </m> in <m> X </m>, and let <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> be a net of points <m> x_{ \alpha } \in X </m> indexed by an upwards directed set <m> \of{ A , \precsim } </m> which converges upwards to <m> c </m>. Let <m> N \in \Nbhd_{ Y } \of{ f \of{ c } } </m> be a neighborhood of <m> f \of{ c } </m> in <m> Y </m>.
+      </p>
+      
+      <p>
+        Since <m> f^{ -1 } \of{ N } </m> is a neighborhood of <m> f \of{ c } </m> in <m> X </m>, there is an index <m> \alpha_{ N } \in A </m> so that <m> x_{ \alpha } \in f^{ -1 } \of{ N } </m> for all indices <m> \alpha \succeq \alpha_{ N } </m>. In particular, <m> f \of{ x_{ \alpha } } \in N </m> for all indices <m> \alpha \succeq \alpha_{ N } </m>, and so the net <m> \of{ f \of{ x_{ \alpha } } }_{ \alpha \in A } </m> converges upwards to <m> f \of{ c } </m>.
+      </p>
+      
+      <p>
+        Finally, now suppose that for every net <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> of points <m> x_{ \alpha } \in X </m> indexed by an upwards directed set <m> \of{ A , \precsim } </m>, if <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> converges upwards to <m> c </m>, then <m> \of{ f \of{ x_{ \alpha } } }_{ \alpha \in A } </m> converges upwards to <m> f \of{ c } </m>. Then <xref ref="theorem-net-characterization-of-map-convergence"/> implies that <m> f </m> converges at <m> c </m> to <m> f \of{ c } </m>.
+      </p>
+    </proof>
+  </theorem>
+  
+  <definition xml:id="definition-topological-continuity">
+    <title>
+      Continuity
+    </title>
+    
+    <idx>
+      continuity
+    </idx>
+    
+    <idx>
+      discontinuity
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \CDiff \of{ X , Y } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the space of continuous maps from <m> X </m> to <m> Y </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \CDiff \of{ X } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the space of continuous real-valued functions on <m> X </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> be a map from a topological space <m> \of{ X , \tau_{ X } } </m> to a topological space <m> \of{ Y , \tau_{ Y } } </m>.
+        
+        <ul>
+          <li>
+            <title>
+              Continuity
+            </title>
+            
+            <p>
+              <m> f </m> is <term> continuous </term> at a point <m> c \in X </m> if it satisfies any (and therefore all) of the conditions in <xref ref="theorem-characterizations-of-topological-continuity"/>. <m> f </m> is <term> continuous </term> if it is continuous at every point <m> c \in X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Discontinuity
+            </title>
+            
+            <p>
+              <m> f </m> is <term> discontinuous </term> at a point <m> c \in X </m> if it does not satisfies any of the conditions in <xref ref="theorem-characterizations-of-topological-continuity"/>. <m> f </m> is <term> discontinuous </term> if it is discontinuous at some point <m> c \in X </m>.
+            </p>
+          </li>
+        </ul>
+        
+        The set of continuous maps from <m> X </m> to <m> Y </m> is denoted <m> \CDiff \of{ X , Y } </m>. In the special case <m> \of{ Y , \tau_{ Y } } = \of{ \R , \tau_{ d } } </m>, the set of continuous, real-valued functions on a topological space <m> \of{ X , \tau_{ X } } </m> is denoted <m> \CDiff \of{ X } = \CDiff \of{ X , \R } </m>.
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-continuity-at-a-point">
+    <title>
+      Continuity at a point
+    </title>
+    
+    <idx>
+      particular point topology
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> f \colon \R \to \R </m> be the real-valued function defined piecewise by the formula
+        
+        <md>
+          f \of{ x } =
+            \begin{cases}
+              0 \amp x = 0 \\
+              1 \amp x \neq 0
+            \end{cases}
+        </md>.
+        
+        While <m> f </m> is not continuous at <m> 0 </m> when the domain and codomain are equipped with the Euclidean topology <m> \tau_{ d } </m>, we can construct a topology <m> \tau </m> on <m> \R </m> so that <m> f </m> is a continuous map from <m> \of{ \R , \tau } </m> to <m> \of{ \R , \tau_{ d } } </m>.
+      </p>
+      
+      <p>
+        Specifically, let
+        
+        <md>
+          \tau = \setmid{ U \in \ps{ \R } }{ 0 \in U \textrm{ or } U = \emptyset }
+        </md>.
+        
+        One can check that <m> \tau </m> is a topology on <m> \R </m> called the <term> particular point topology </term>. We see that if <m> N \in \Nbhd_{ \of{ \R , \tau_{ d } } } \of{ 0 } </m> is a neighborhood of <m> 0 </m> in <m> \of{ \R , \tau_{ d } } </m>, then
+        
+        <md>
+          f^{ -1 } \of{ N } =
+            \begin{cases}
+              \R \amp 1 \in N \\
+              \set{ 0 } \amp 1 \notin N
+            \end{cases}
+        </md>.
+        
+        In either case, <m> f^{ -1 } \of{ N } </m> is an open neighborhood of <m> 0 </m> in the particular point topology, and so <m> f </m> is continuous at <m> 0 </m> as a map from <m> \of{ \R , \tau } </m> to <m> \of{ \R , \tau_{ d } } </m>.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    Many of the standard properties of continuous maps between metric spaces also apply to continuous maps between topological spaces. For example, continuity is preserved by composition.
+  </p>
+
+  <proposition xml:id="proposition-composition-of-continuous-maps-topological">
+    <title>
+      Composition of continuous maps
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> and <m> g \colon Y \to Z </m> be maps between topological spaces <m> \of{ X , \tau_{ X } } </m>, <m> \of{ Y , \tau_{ Y } } </m>, and <m> \of{ Z , \tau_{ Z } } </m>. If for some point <m> x \in X </m>, <m> f </m> is continuous at <m> x </m> and <m> g </m> is continuous at <m> f \of{ x } </m>, then the composition <m> g \circ f </m> is continuous at <m> x </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> W \in \Nbhd_{ Z } \of{ \of{ g \circ f } \of{ x } } </m> be a neighborhood of <m> \of{ g \circ f } \of{ x } = g \of{ f \of{ x } } </m> in <m> Z </m>. Since <m> g </m> is continuous at <m> f \of{ x } </m>, the pre-image <m> g^{ -1 } \of{ W } \in \Nbhd_{ Y } \of{ f \of{ x } } </m> is a neighborhood of <m> f \of{ x } </m> in <m> Y </m>. Moreover, since <m> f </m> is continuous at <m> x </m>, the pre-image
+        
+        <md>
+          <mrow>
+            f^{ -1 } \of{ g^{ -1 } \of{ W } } \amp = \setmid{ x \in X }{ f \of{ x } \in g^{ -1 } \of{ W } } = \setmid{ x \in X }{ g \of{ f \of{ x } } \in W }
+          </mrow>
+          
+          <mrow>
+            \amp = \setmid{ x \in X }{ \of{ g \circ f } \of{ x } \in W } = \of{ g \circ f }^{ -1 } \of{ W }
+          </mrow>
+        </md>.
+        
+        Thus the neighborhood characterization of continuity in <xref ref="theorem-characterizations-of-topological-continuity"/> implies that <m> g \circ f </m> is continuous at <m> x </m>.
+      </p>
+    </proof>
+  </proposition>
+
+  <corollary xml:id="corollary-composition-of-continuous-maps">
+    <title>
+      Composition of continuous maps
+    </title>
+    
+    <statement>
+      <p>
+        The composition of continuous maps between topological spaces is continuous.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <conclusion>
+    <p>
+      As previously mentioned, we can recover the sequential characterization of map convergence (and therefore the sequential characterization of continuity at a point) by imposing additional hypotheses on the spaces in question. For example, to establish a sequential characterization of convergence of maps from a topological space <m> X </m> to a topological space <m> Y </m>, it is sufficient to require that <m> X </m> be first-countable.
+    </p>
+  </conclusion>
+</subsection>

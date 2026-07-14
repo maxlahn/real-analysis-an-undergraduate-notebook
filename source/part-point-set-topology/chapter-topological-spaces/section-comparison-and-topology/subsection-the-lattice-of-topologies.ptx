@@ -7,7 +7,7 @@
 
   <introduction>
     <p>
-      We now investigate the structure of the collection of topologies on a given set. As a subcollection of the second power set, this collection of topologies inherits a partial order by containment. Much of this section will be devoted to exploring the order-theoretic properties of this partially ordered set. In particular, we will see that any collection of topologies has a unique supremum and infimum in this partially ordered set, and therefore that any collection of subsets of a set generates a unique topology.
+      We now investigate the structure of the collection of topologies on a given set. As a subcollection of the second power set, this collection of topologies inherits a partial order by containment <m> \subseteq </m>. Much of this section will be devoted to exploring the order-theoretic properties of this partially ordered set. In particular, we will see that any collection of topologies has a unique supremum and infimum in this partially ordered set, and therefore that any collection of subsets of a set generates a unique topology.
     </p>
   </introduction>
   
@@ -38,7 +38,7 @@
     
     <notation>
       <usage>
-        <m> \mathcal{ T }_{ X } </m>
+        <m> \Topol_{ X } </m>
       </usage>
       
       <description>
@@ -50,7 +50,7 @@
     
     <statement>
       <p>
-        Denote by <m> \mathcal{ T }_{ X } \subseteq \ps \of{ \ps \of{ X } } </m> the set of topologies on a set <m> X </m>. <m> \mathcal{ T }_{ X } </m> is partially ordered by containment, and the partially ordered set <m> \of{ \mathcal{ T }_{ X } , \subseteq } </m> is called the <term> lattice of topologies </term> on <m> X </m>.
+        Denote by <m> \Topol_{ X } \subseteq \ps \of{ \ps \of{ X } } </m> the set of topologies on a set <m> X </m>. <m> \Topol_{ X } </m> is partially ordered by containment, and the partially ordered set <m> \of{ \Topol_{ X } , \subseteq } </m> is called the <term> lattice of topologies </term> on <m> X </m>.
         
         <ul>
           <li>
@@ -59,7 +59,7 @@
             </title>
             
             <p>
-              For all topologies <m> \tau_{ 1 } , \tau_{ 2 } \in \mathcal{ T }_{ X } </m> on <m> X </m>, if <m> \tau_{ 1 } \subseteq \tau_{ 2 } </m>, then we say that <m> \tau_{ 1 } </m> is <term> coarser </term> than <m> \tau_{ 2 } </m>, or equivalently that <m> \tau_{ 1 } </m> is a <term> coarsening </term> of <m> \tau_{ 2 } </m>.
+              For all topologies <m> \tau_{ 1 } , \tau_{ 2 } \in \Topol_{ X } </m> on <m> X </m>, if <m> \tau_{ 1 } \subseteq \tau_{ 2 } </m>, then we say that <m> \tau_{ 1 } </m> is <term> coarser </term> than <m> \tau_{ 2 } </m>, or equivalently that <m> \tau_{ 1 } </m> is a <term> coarsening </term> of <m> \tau_{ 2 } </m>.
             </p>
             
             <p>
@@ -73,7 +73,7 @@
             </title>
             
             <p>
-              For all topologies <m> \tau_{ 1 } , \tau_{ 2 } \in \mathcal{ T }_{ X } </m> on <m> X </m>, if <m> \tau_{ 1 } \supseteq \tau_{ 2 } </m>, then we say that <m> \tau_{ 1 } </m> is <term> finer </term> than <m> \tau_{ 2 } </m>, or equivalently that <m> \tau_{ 1 } </m> is a <term> refinement </term> of <m> \tau_{ 2 } </m>.
+              For all topologies <m> \tau_{ 1 } , \tau_{ 2 } \in \Topol_{ X } </m> on <m> X </m>, if <m> \tau_{ 1 } \supseteq \tau_{ 2 } </m>, then we say that <m> \tau_{ 1 } </m> is <term> finer </term> than <m> \tau_{ 2 } </m>, or equivalently that <m> \tau_{ 1 } </m> is a <term> refinement </term> of <m> \tau_{ 2 } </m>.
             </p>
             
             <p>
@@ -86,7 +86,7 @@
   </definition>
   
   <p>
-    We will eventually see that any collection of topologies on a given set has a unique supremum and infimum in the partial order of topological comparison. More easy to see, however, is that the lattice of topologies on that set itself has a maximum and minimum; any topology is coarser than the discrete topology and finer than the indiscrete topology. This justifies our use of the <q> top </q> and  <q> bottom </q> notation for the discrete topology <m> \top_{ X } </m> and the indiscrete topology <m> \bot_{ X } </m> on a set <m> X </m>; in the lattice <m> \mathcal{ T }_{ X } </m> of topologies on <m> X </m>, <m> \top_{ X } </m> and <m> \bot_{ X } </m> are the maximum and minimum elements, respectively.
+    We will eventually see that any collection of topologies on a given set has a unique supremum and infimum in the partial order of topological comparison. More easy to see, however, is that the lattice of topologies on that set itself has a maximum and minimum; any topology is coarser than the discrete topology and finer than the indiscrete topology. This justifies our use of the <q> top </q> and  <q> bottom </q> notation for the discrete topology <m> \top_{ X } </m> and the indiscrete topology <m> \bot_{ X } </m> on a set <m> X </m>; in the lattice <m> \Topol_{ X } </m> of topologies on <m> X </m>, <m> \top_{ X } </m> and <m> \bot_{ X } </m> are the maximum and minimum elements, respectively.
   </p>
   
   <lemma xml:id="lemma-bounds-on-topologies">
@@ -96,19 +96,19 @@
     
     <statement>
       <p>
-        The lattice of topologies on a set is a bounded partially ordered set.
+        The lattice of topologies on a set is bounded as a partially ordered set.
       </p>
     </statement>
     
     <proof>
       <p>
-        Consider the lattice <m> \mathcal{ T }_{ X } </m> of topologies on a set <m> X </m>. We observe that
+        Consider the lattice <m> \Topol_{ X } </m> of topologies on a set <m> X </m>. We observe that
         
         <md>
           \bot_{ X } = \set{ \emptyset , X } \subseteq \tau \subseteq \ps \of{ X } = \top_{ X }
         </md>
         
-        for all topologies <m> \tau \in \mathcal{ T }_{ X } </m>, and so <m> \mathcal{ T }_{ X } </m> is bounded from above and below.
+        for all topologies <m> \tau \in \Topol_{ X } </m>, and so <m> \Topol_{ X } </m> is bounded from above and below.
       </p>
     </proof>
   </lemma>
@@ -130,7 +130,7 @@
     
     <proof>
       <p>
-        Let <m> \of{ \tau_{ j } }_{ j \in \mathcal{ J } } </m> be an indexed family of topologies <m> \tau_{ j } \in \mathcal{ T }_{ X } </m> on a set <m> X </m>, and let
+        Let <m> \of{ \tau_{ j } }_{ j \in \mathcal{ J } } </m> be an indexed family of topologies <m> \tau_{ j } \in \Topol_{ X } </m> on a set <m> X </m>, and let
         
         <md>
           \tau = \bigcap_{ j \in \mathcal{ J } }{ \tau_{ j } }
@@ -219,7 +219,7 @@
         Every collection <m> \mathcal{ S } \subseteq \ps \of{ X } </m> of subsets of a set <m> X </m> is a subbase of a unique topology
         
         <md>
-          \gen{ \mathcal{ S } } = \bigcap_{ S \subseteq \tau \in \mathcal{ T }_{ X } }{ \tau }
+          \gen{ \mathcal{ S } } = \bigcap_{ S \subseteq \tau \in \Topol_{ X } }{ \tau }
         </md>
         
         on <m> X </m> called the topology <term> generated </term> by <m> \mathcal{ S } </m>. 
@@ -291,26 +291,26 @@
     The concept of generated topologies will now allow us to show that the lattice of topologies on a given set is a complete lattice. That is, any collection of topologies has a unique least upper bound and a unique greatest lower bound.
   </p>
   
-  <theorem xml:id="theorem-lattice-of-topologies">
+  <theorem xml:id="theorem-complete-lattice-of-topologies">
     <title>
-      Lattice of topologies
+      Complete lattice of topologies
     </title>
     
     <statement>
       <p>
-        The lattice <m> \mathcal{ T }_{ X } </m> of topologies on a set <m> X </m> is a complete lattice; that is, any collection <m> \mathcal{ S } \subseteq \mathcal{ T }_{ X } </m> of topologies on <m> X </m> has a unique supremum and infimum.
+        The lattice <m> \Topol_{ X } </m> of topologies on a set <m> X </m> is a complete lattice; that is, any collection <m> \mathcal{ S } \subseteq \Topol_{ X } </m> of topologies on <m> X </m> has a unique supremum and infimum.
       </p>
     </statement>
     
     <proof>
       <p>
-        Let <m> \mathcal{ S } \subseteq \mathcal{ T }_{ X } </m> be a collection of topologies on a set <m> X </m>. Since the intersection
+        Let <m> \mathcal{ S } \subseteq \Topol_{ X } </m> be a collection of topologies on a set <m> X </m>. Since the intersection
         
         <md>
           \bigcap_{ \tau \in \mathcal{ S } }{ \tau }
         </md>
         
-        is an infimum for <m> \mathcal{ S } </m> in the partially ordered set <m> \of{ \ps \of{ \ps \of{ X } } , \subseteq } </m>, it is an infimum for <m> \mathcal{ S } </m> in <m> \of{ \mathcal{ T }_{ X } , \subseteq } </m>; that is, this intersection is the finest common coarsening of the topologies in <m> \mathcal{ S } </m>. It therefore suffices to show that <m> \mathcal{ S } </m> has a supremum.
+        is an infimum for <m> \mathcal{ S } </m> in the partially ordered set <m> \of{ \ps \of{ \ps \of{ X } } , \subseteq } </m>, it is an infimum for <m> \mathcal{ S } </m> in <m> \of{ \Topol_{ X } , \subseteq } </m>; that is, this intersection is the finest common coarsening of the topologies in <m> \mathcal{ S } </m>. It therefore suffices to show that <m> \mathcal{ S } </m> has a supremum.
       </p>
       
       <p>
@@ -320,7 +320,7 @@
           \sigma = \gen{ \bigcup_{ \tau \in \mathcal{ S } }{ \tau } }
         </md>
         
-        be the topology on <m> X </m> generated by the union of all topologies in <m> \mathcal{ S } </m>. Then <m> \sigma </m> is a common refinement of each topology in <m> \mathcal{ S } </m>. Moreover, if <m> \sigma' \in \mathcal{ T }_{ X } </m> is a common refinement of each topology in <m> \mathcal{ S } </m>, then it contains the union of all such topologies, and therefore is a refinement of <m> \tau </m>. Thus <m> \sigma </m> is an infimum for <m> \mathcal{ S } </m> in <m> \of{ \mathcal{ T }_{ X } , \subseteq } </m>; that is, this intersection is the coarsest common refinement of the topologies in <m> \mathcal{ S } </m>.
+        be the topology on <m> X </m> generated by the union of all topologies in <m> \mathcal{ S } </m>. Then <m> \sigma </m> is a common refinement of each topology in <m> \mathcal{ S } </m>. Moreover, if <m> \sigma' \in \Topol_{ X } </m> is a common refinement of each topology in <m> \mathcal{ S } </m>, then it contains the union of all such topologies, and therefore is a refinement of <m> \tau </m>. Thus <m> \sigma </m> is an infimum for <m> \mathcal{ S } </m> in <m> \of{ \Topol_{ X } , \subseteq } </m>; that is, this intersection is the coarsest common refinement of the topologies in <m> \mathcal{ S } </m>.
       </p>
     </proof>
   </theorem>

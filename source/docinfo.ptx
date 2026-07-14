@@ -347,6 +347,10 @@
       
       \DeclareMathOperator{\Ext}{ Ext } <!-- Topological exterior -->
       
+      \DeclareMathOperator{\Nbhd}{ \mathcal{ N } } <!-- Neighborhood system -->
+      
+      \DeclareMathOperator{\Topol}{ \mathcal{ T } } <!-- Lattice of topologies -->
+      
       \DeclareMathOperator{\supp}{ supp } <!-- Support -->
       
       <!-- Metric geometry macros -->

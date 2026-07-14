@@ -90,7 +90,7 @@
   </corollary>
   
   <p>
-    One might hope that <xref ref="corollary-uniqueness-of-sequential-limits-in-metrizable-spaces"/> could be extended to apply to sequential convergence in all topological spaces. However, our familiar intuition regarding such convergence can break down in non-metrizable topological spaces.
+    One might hope that <xref ref="corollary-uniqueness-of-sequential-limits-in-metrizable-spaces"/> could be extended to apply to sequential convergence in all topological spaces, metrizable and non-metrizable. However, our familiar intuition regarding such convergence can break down in non-metrizable spaces.
   </p>
 
   <example xml:id="example-sequential-convergence-divergence-in-non-metrizable-spaces">
@@ -152,13 +152,17 @@
           \tau = \setmid{ U \in \ps \of{ X } }{ U = \emptyset \textrm{ or } X \setminus U \textrm{ is countable} }
         </md>.
         
-        One can verify that <m> \tau </m> is a topology on <m> X </m> for which all convergent sequences are eventually constant. Moreover, if <m> X </m> is uncountable, then <m> \tau </m> is not the discrete topology on <m> X </m>.
+        One can verify that <m> \tau </m> is a topology on <m> X </m> for which all convergent sequences are eventually constant. We have seen in <xref ref="problem-eventually-constant-sequences"/> that the discrete topology has the same property. Moreover, if <m> X </m> is uncountable, then <m> \tau </m> is not the discrete topology on <m> X </m>.
+      </p>
+      
+      <p>
+        In particular, if <m> X </m> is uncountable, then sequential convergence in the cocountable topology <m> \tau </m> on <m> X </m> is precisely the same as sequential convergence in the discrete topology <m> \top_{ X } </m> on <m> X </m>, even though these topologies are quite different.
       </p>
     </statement>
   </example>
   
   <p>
-    The above example of a topological space whose point-set topological properties cannot be defined solely in terms of the convergence/divergence of sequences motivates the following broadening of our scope to include more general indexed families of points. Instead of only considering families indexed by the natural numbers, we allow the indexing sets to be particular types of preordered sets called <term> directed sets </term>.
+    The above example of a topological space whose point-set topological properties cannot be defined solely in terms of the convergence/divergence of sequences motivates the following broadening of our scope to include more general indexed families of points. Instead of only considering families indexed by the natural numbers <m> \N </m>, we allow the indexing sets to be particular types of preordered sets called <term> directed sets </term>.
   </p>
   
   <definition xml:id="definition-directed-set">
@@ -222,6 +226,10 @@
           </li>
           
           <li>
+            Fix a point <m> x \in X </m> in a topological space <m> \of{ X , \tau } </m>. The set <m> \Nbhd \of{ x } </m> of neighborhoods of <m> x </m> in <m> X </m> is partial ordered by containment <m> \subseteq </m>, and <m> \Nbhd \of{ x } </m> is directed both upwards and downwards. Indeed, the intersection and union of any finite collection of neighborhoods of <m> x </m> in <m> X </m> is itself a neighborhood of <m> x </m> in <m> X </m>.
+          </li>
+          
+          <li>
             <p>
               Let <m> a , b \in \R </m> be real numbers, and suppose that <m> a \leq b </m>. A <term> finite partition </term> of the closed interval <m> \clint{ a }{ b } </m> is a finite sequence <m> \of{ x_{ j } }_{ j = 0 }^{ m } </m> so that <m> x_{ 0 } = a </m> and <m> x_{ m } = b </m>. Given two such partitions <m> P </m> and <m> Q </m>, we write <m> P \preceq Q </m> if <m> P </m> is a subsequence of <m> Q </m>. Considered with this binary relation, the set of finite partitions of <m> \clint{ a }{ b } </m> is directed both upwards and downwards. This directed set will be an important part of the definition of the Riemann integral in <xref ref="section-riemann-sums"/>.
             </p>
@@ -255,7 +263,7 @@
             </title>
             
             <p>
-              Suppose that the indexing set <m> A </m> is upwards directed. A net <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> of points <m> x_{ \alpha } \in X </m> <term> converges upwards </term> to a point <m> x \in X </m> if for all neighborhoods <m> N \subseteq X </m> of <m> x </m> in <m> X </m>, there is an index <m> \alpha_{ N } \in A </m> so that <m> x_{ \alpha } \in N </m> for all indices <m> \alpha \succeq \alpha_{ N } </m>.
+              Suppose that the indexing set <m> A </m> is upwards directed. A net <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> of points <m> x_{ \alpha } \in X </m> <term> converges upwards </term> to a point <m> x \in X </m> if for all neighborhoods <m> N \in \Nbhd \of{ x } </m> of <m> x </m> in <m> X </m>, there is an index <m> \alpha_{ N } \in A </m> so that <m> x_{ \alpha } \in N </m> for all indices <m> \alpha \succeq \alpha_{ N } </m>.
             </p>
             
             <p>
@@ -277,7 +285,7 @@
             </title>
             
             <p>
-              Suppose that the indexing set <m> A </m> is downwards directed. A net <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> of points <m> x_{ \alpha } \in X </m> <term> converges downwards </term> to a point <m> x \in X </m> if for all neighborhoods <m> N \subseteq X </m> of <m> x </m> in <m> X </m>, there is an index <m> \alpha_{ N } \in A </m> so that <m> x_{ \alpha } \in N </m> for all indices <m> \alpha \preceq \alpha_{ N } </m>.
+              Suppose that the indexing set <m> A </m> is downwards directed. A net <m> \of{ x_{ \alpha } }_{ \alpha \in A } </m> of points <m> x_{ \alpha } \in X </m> <term> converges downwards </term> to a point <m> x \in X </m> if for all neighborhoods <m> N \in \Nbhd \of{ x } </m> of <m> x </m> in <m> X </m>, there is an index <m> \alpha_{ N } \in A </m> so that <m> x_{ \alpha } \in N </m> for all indices <m> \alpha \preceq \alpha_{ N } </m>.
             </p>
             
             <p>
@@ -307,9 +315,99 @@
     </p>
   </remark>
   
+  <p>
+    We will see that all interesting point-set topological notions can be defined in terms of the convergence of nets. For example, we now give such characterizations of limit points and isolated points.
+  </p>
+  
+  <definition xml:id="definition-limit-isolated-point">
+    <title>
+      Limit/isolated points
+    </title>
+    
+    <idx>
+      accumulation
+    </idx>
+    
+    <idx>
+      limit point
+    </idx>
+    
+    <idx>
+      accumulation point
+    </idx>
+    
+    <idx>
+      isolation
+    </idx>
+    
+    <idx>
+      isolated point
+    </idx>
+    
+    <statement>
+      <p>
+        Consider a subset <m> U \subseteq X </m> of a topological space <m> \of{ X , \tau } </m>.
+        
+        <ul>
+          <li>
+            <title>
+              Limit point
+            </title>
+            
+            <p>
+              We say that <m> U </m> <term> accumulates </term> at a point <m> x \in X </m> if <m> N \cap U \not \subseteq \set{ x } </m> for all neighborhoods <m> N \in \Nbhd_{ X } \of{ x } </m> of <m> x </m> in <m> X </m>. In this case, <m> x </m> is called a <term> limit point </term> (or <term> accumulation point </term>) of <m> U </m> in <m> X </m>. The set of such limit points of <m> U </m> in <m> X </m> is called the <term> derived set </term> of <m> U </m> and is denoted <m> U' </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Isolated point
+            </title>
+            
+            <p>
+              We say that a point <m> x \in X </m> is <term> isolated </term> from <m> U </m> if <m> N \cap U \subseteq \set{ x } </m> for some neighborhood <m> N \in \Nbhd_{ X } \of{ x } </m> of <m> x </m> in <m> X </m>. If this condition holds for some point <m> x \in U </m>, then <m> x </m> is called an <term> isolated point </term> of <m> U </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+  
+  <proposition xml:id="proposition-net-characterization-of-limit-points">
+    <title>
+      Net characterization of limit points
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a topological space <m> \of{ X , \tau } </m>. A point <m> x \in X </m> is a limit point of <m> U </m> in <m> X </m> if and only if some net <m> \of{ u_{ \alpha } }_{ \alpha \in A } </m> of points <m> u_{ \alpha } \in U \setminus \set{ x } </m> converges to <m> x </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        First suppose that <m> x \in X </m> is a limit point of <m> U </m> in <m> X </m>. Then for each neighborhood <m> N \in \Nbhd_{ X } \of{ x } </m> of <m> x </m> in <m> X </m>, there is a point <m> u \in N \cap U \setminus \set{ x } </m>. The <xref ref="axiom-axiom-of-choice" text="title"/> allows us to choose an indexed family <m> \of{ u_{ N } }_{ N \in \Nbhd_{ X } \of{ x } } </m> of points <m> u_{ N } \in U \setminus \set{ x } </m> so that <m> u_{ N } \in N </m> for all indices <m> N \in \Nbhd_{ X } \of{ x } </m>.
+      </p>
+      
+      <p>
+        We observe that for each neighborhood <m> N \in \Nbhd_{ X } \of{ x } </m> of <m> x </m> in <m> X </m>,
+        
+        <md>
+          u_{ M } \in M \subseteq N
+        </md>
+        
+        for all indices <m> M \subseteq N </m>. Thus <m> \of{ u_{ N } }_{ N \in \Nbhd_{ X } \of{ x } } </m> converges downwards to <m> x </m>.
+      </p>
+      
+      <p>
+        Conversely, suppose that <m> x \in X </m> is isolated from <m> U </m>. Then <m> N \cap U \subseteq \set{ x } </m> for some neighborhood <m> N \in \Nbhd_{ X } \of{ x } </m> of <m> x </m> in <m> X </m>. Let <m> \of{ u_{ \alpha } }_{ \alpha \in A } </m> be a net of points <m> u_{ \alpha } \in U \setminus \set{ x } </m>. We observe that <m> u_{ \alpha } \notin N </m> for all indices <m> \alpha \in A </m>, and so <m> \of{ u_{ \alpha } }_{ \alpha \in A } </m> does not converge to <m> x </m>.
+      </p>
+    </proof>
+  </proposition>
+  
   <conclusion>
     <p>
-      The main utility of net convergence is in generalizing the sequential characterizations of various point-set topological notions to general topological spaces. However, we will see that additional hypotheses on the spaces in question will allow us to recover these sequential characterizations, even if they do not hold in the most general case.
+      The main utility of net convergence is in generalizing the sequential characterizations of various point-set topological notions to general topological spaces. Indeed, all sequential characterizations of such properties for metric spaces have analogs in terms of the convergence of nets. However, we will see that additional hypotheses on the spaces in question will allow us to recover these sequential characterizations, even if they do not hold in the most general case. For example, first-countability is sufficient (although not necessary) to guarantee the equivalence of the general topological notions with their sequential counterparts.
     </p>
   </conclusion>
 </subsection>

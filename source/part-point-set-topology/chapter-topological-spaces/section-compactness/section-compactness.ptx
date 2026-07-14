@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-compactness" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Compactness
+  </title>
+
+  <introduction>
+    <p>
+      Recall that a subset <m> U \subseteq X </m> of a metric space <m> \of{ X , \rho } </m> is (sequentially) compact if every sequence of points in <m> U </m> has a subsequence which converges to a limit in <m> U </m>. In this section, we investigate two analogues of this property for general topological spaces.
+    </p>
+  </introduction>
+
+  <!-- <xi:include href="./subsection-open-covers.ptx"/> -->
+
+  <!-- <xi:include href="./subsection-compactness-and-sequential-compactness.ptx"/> -->
+
+  <conclusion>
+    <p>
+      Text after the last subsection.
+    </p>
+  </conclusion>
+
+  <xi:include href="./exercises-compactness.ptx"/>
+
+  <xi:include href="./problems-compactness.ptx"/>
+</section>

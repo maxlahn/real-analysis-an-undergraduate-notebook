@@ -134,9 +134,45 @@
       neighborhood
     </idx>
     
+    <notation>
+      <usage>
+        <m> \Nbhd \of{ x } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the set of neighborhoods of <m> x </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \Nbhd_{ X } \of{ x } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the set of neighborhoods of <m> x </m> in <m> X </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \Nbhd_{ \of{ X , \tau } } \of{ x } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the set of neighborhoods of <m> x </m> in <m> \of{ X , \tau } </m>
+        </p>
+      </description>
+    </notation>
+    
     <statement>
       <p>
-        A subset <m> N \subseteq X </m> of a topological space <m> \of{ X , \tau } </m> is called a <term> neighborhood </term> of a point <m> x \in X </m> if <m> x \in U \subseteq N </m> for some open set <m> U \in \tau </m> in <m> X </m>.
+        A subset <m> N \subseteq X </m> of a topological space <m> \of{ X , \tau } </m> is called a <term> neighborhood </term> of a point <m> x \in X </m> in <m> X </m> if <m> x \in U \subseteq N </m> for some open set <m> U \in \tau </m> in <m> X </m>. The set of neighborhoods of <m> x </m> in <m> X </m> is variously denoted <m> \Nbhd \of{ x } </m>, <m> \Nbhd_{ X } \of{ x } </m>, and/or <m> \Nbhd_{ \of{ X , \tau } } \of{ x } </m>, depending on which information is clear from context.
       </p>
     </statement>
   </definition>
@@ -148,7 +184,13 @@
     
     <statement>
       <p>
-        Recall that the Sierpiński space <m> \of{ X , \tau } </m> is the topological space with ground set <m> X = \set{ 0 , 1 } </m> and topology <m> \tau = \set{ \emptyset , \set{ 1 } , \set{ 0 , 1 } } </m>. Thus <m> X = \set{ 0 , 1 } </m> is the only neighborhood of the point <m> 0 </m>, but <m> \set{ 1 } </m> and <m> \set{ 0 , 1 } </m> are neighborhoods of the point <m> 1 </m>.
+        Recall that the Sierpiński space <m> \of{ X , \tau } </m> is the topological space with ground set <m> X = \set{ 0 , 1 } </m> and topology <m> \tau = \set{ \emptyset , \set{ 1 } , \set{ 0 , 1 } } </m>. Thus <m> X = \set{ 0 , 1 } </m> is the only neighborhood of the point <m> 0 </m>, but <m> \set{ 1 } </m> and <m> \set{ 0 , 1 } </m> are neighborhoods of the point <m> 1 </m>; that is,
+        
+        <md>
+          <mrow>
+            \Nbhd \of{ 0 } \amp = \set{ \set{ 0 , 1 } } \amp \Nbhd \of{ 1 } = \set{ \set{ 1 } , \set{ 0 , 1 } }
+          </mrow>
+        </md>
       </p>
     </statement>
   </example>
@@ -277,7 +319,7 @@
             </title>
             
             <p>
-              A point <m> x \in X </m> is an <term> interior point </term> of <m> U </m> if <m> U </m> is a neighborhood of <m> x </m> in <m> X </m>. The set of interior points of <m> U </m> is called the <term> interior </term> of <m> U </m> and is denoted <m> \Int \of{ U } </m> or <m> U^{ \circ } </m>.
+              A point <m> x \in X </m> is an <term> interior point </term> of <m> U </m> if <m> U \in \Nbhd_{ X } \of{ x } </m> is a neighborhood of <m> x </m> in <m> X </m>. The set of interior points of <m> U </m> is called the <term> interior </term> of <m> U </m> and is denoted <m> \Int \of{ U } </m> or <m> U^{ \circ } </m>.
             </p>
           </li>
           
@@ -287,7 +329,7 @@
             </title>
             
             <p>
-              A point <m> x \in X </m> is a <term> point of closure </term> of <m> U </m> in <m> X </m> if every neighborhood of <m> x </m> in <m> X </m> meets <m> U </m>; that is, <m> x </m> is a point of closure of <m> U </m> in <m> X </m> if <m> N \cap U \neq \emptyset </m> for any neighborhood <m> N \subseteq X </m> of <m> x </m> in <m> X </m>. The set of points of closure of <m> U </m> in <m> X </m> is called the <term> closure </term> of <m> U </m> in <m> X </m> and is denoted <m> \Cl \of{ U } </m> or <m> \overline{ U } </m>.
+              A point <m> x \in X </m> is a <term> point of closure </term> of <m> U </m> in <m> X </m> if every neighborhood of <m> x </m> in <m> X </m> meets <m> U </m>; that is, <m> x </m> is a point of closure of <m> U </m> in <m> X </m> if <m> N \cap U \neq \emptyset </m> for any neighborhood <m> N \in \Nbhd_{ X } \of{ x } </m> of <m> x </m> in <m> X </m>. The set of points of closure of <m> U </m> in <m> X </m> is called the <term> closure </term> of <m> U </m> in <m> X </m> and is denoted <m> \Cl \of{ U } </m> or <m> \overline{ U } </m>.
             </p>
           </li>
           
@@ -297,7 +339,7 @@
             </title>
             
             <p>
-              A point <m> x \in X </m> is a <term> boundary point </term> of <m> U </m> in <m> X </m> if every neighborhood of <m> x </m> in <m> X </m> meets both <m> U </m> and its complement <m> X \setminus U </m>; that is, <m> x </m> is a boundary point of <m> U </m> in <m> X </m> if <m> N \cap U \neq \emptyset </m> and <m> N \setminus U \neq \emptyset </m> for any neighborhood <m> N \subseteq X </m> of <m> x </m> in <m> X </m>. The set of boundary points of <m> U </m> in <m> X </m> is called the <term> boundary </term> of <m> U </m> in <m> X </m> and is denoted <m> \Bd \of{ U } </m> or <m> \partial U </m>.
+              A point <m> x \in X </m> is a <term> boundary point </term> of <m> U </m> in <m> X </m> if every neighborhood of <m> x </m> in <m> X </m> meets both <m> U </m> and its complement <m> X \setminus U </m>; that is, <m> x </m> is a boundary point of <m> U </m> in <m> X </m> if <m> N \cap U \neq \emptyset </m> and <m> N \setminus U \neq \emptyset </m> for any neighborhood <m> N \in \Nbhd_{ X } \of{ x } </m> of <m> x </m> in <m> X </m>. The set of boundary points of <m> U </m> in <m> X </m> is called the <term> boundary </term> of <m> U </m> in <m> X </m> and is denoted <m> \Bd \of{ U } </m> or <m> \partial U </m>.
             </p>
           </li>
         </ul>

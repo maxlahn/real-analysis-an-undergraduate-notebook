@@ -137,7 +137,7 @@
     </proof>
   </proposition>
   
-  <definition xml:id="definition-continuity">
+  <definition xml:id="definition-metric-continuity">
     <title>
       Continuity
     </title>
@@ -205,7 +205,7 @@
     </statement>
   </definition>
 
-  <example xml:id="example-continuity">
+  <example xml:id="example-metric-continuity">
     <title>
       Continuity
     </title>

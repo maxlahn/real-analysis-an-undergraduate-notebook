@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-continuous-maps-between-topological-spaces" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Continuous Maps between Topological Spaces
+  </title>
+
+  <introduction>
+    <p>
+      While we have seen characterizations of continuity at a point, we will be more interested in maps which are continuous everywhere. For the remainder of this section, we will explore the properties of such maps, and define maximal and minimal topologies with respect to continuity. To begin, we observe that <xref ref="corollary-open-set-characterization-of-metric-continuity"/> holds for maps between topological spaces.
+    </p>
+  </introduction>
+  
+  <proposition xml:id="proposition-open-set-characterization-of-continuity">
+    <title>
+      Open set characterization of continuity
+    </title>
+    
+    <statement>
+      <p>
+        A map <m> f \colon X \to Y </m> from a topological space <m> \of{ X , \tau_{ X } } </m> to a topological space <m> \of{ Y , \tau_{ Y } } </m> is continuous if and only if the pre-image <m> f^{ -1 } \of{ V } </m> of every open set <m> V \in \tau_{ Y } </m> in <m> Y </m> is open in <m> X </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Suppose first that <m> f </m> is continuous, and let <m> V \subseteq Y </m> be an open subset of <m> Y </m>. Let <m> c \in f^{ -1 } \of{ V } </m>. Since <m> V </m> is open, it is a neighborhood of <m> f \of{ c } </m>, and so the neighborhood characterization of continuity in <xref ref="theorem-characterizations-of-topological-continuity"/> implies that <m> f^{ -1 } \of{ V } </m> is a neighborhood of <m> c </m>. Since this is true of every point <m> c \in f^{ -1 } \of{ V } </m>, <m> f^{ -1 } \of{ V } \in \tau_{ X } </m> is open in <m> X </m>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that the pre-image of every open set in <m> Y </m> is an open set in <m> X </m>, and consider a point <m> c \in X </m> and a neighborhood <m> N \subseteq Y </m> of <m> f \of{ c } </m> in <m> Y </m>. Then <m> f \of{ c } \in V \subseteq N </m> for some open set <m> V \in \tau_{ Y } </m>, and so <m> f^{ -1 } \of{ V } \in \tau_{ X } </m> is open in <m> X </m>. We observe that
+        
+        <md>
+          c \in f^{ -1 } \of{ V } = \setmid{ x \in X }{ f \of{ x } \in V } \subseteq \setmid{ x \in X }{ f \of{ x } \in N } = f^{ -1 } \of{ N }
+        </md>,
+        
+        and so <m> f^{ -1 } \of{ N } </m> is a neighborhood of <m> c </m>. The neighborhood characterization of continuity in <xref ref="theorem-characterizations-of-topological-continuity"/> now implies that <m> f </m> is continuous at <m> c </m>. Since this holds for all points <m> c \in X </m>, <m> f </m> is continuous.
+      </p>
+    </proof>
+  </proposition>
+
+  <example xml:id="example-continuity">
+    <title>
+      Continuity
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of continuous and discontinuous maps between topological spaces:
+        
+        <ul>
+          <li>
+            <p>
+              Any map <m> f \colon X \to Y </m> from a discrete topological space <m> \of{ X , \top_{ X } } </m> to a topological space <m> \of{ Y , \tau_{ Y } } </m> is continuous.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Any map <m> f \colon X \to Y </m> from a topological space <m> \of{ X , \tau_{ X } } </m> to an indiscrete topological space <m> \of{ Y , \bot_{ Y } } </m> is continuous.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Any constant map <m> f \colon X \to Y </m> from a topological space <m> \of{ X , \tau_{ X } } </m> to a topological space <m> \of{ Y , \tau_{ Y } } </m> is continuous.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Any non-constant map <m> f \colon X \to Y </m> from an indiscrete topological space <m> \of{ X , \bot_{ X } } </m> to a <m> T_{ 0 } </m> topological space <m> \of{ Y , \tau_{ Y } } </m> with at least two points is discontinuous.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    We will use the observations of <xref ref="example-continuity"/> together with <xref ref="theorem-complete-lattice-of-topologies"/> as a platform for building topologies in such a way to guarantee the continuity of certain maps. First, however, we will require the following corollary:
+  </p>
+  
+  <corollary xml:id="lemma-continuity-coarsening-and-refinement">
+    <title>
+      Continuity, coarsening, and refinement
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to Y </m> be a continuous map from a topological space <m> \of{ X , \tau_{ X } } </m> to a topological space <m> \of{ Y , \tau_{ Y } } </m>. Then for any refinement <m> \tau_{ X }' \supseteq \tau_{ X } </m> of <m> \tau_{ X } </m> and any coarsening <m> \tau_{ Y }' \subseteq \tau_{ Y } </m> of <m> \tau_{ Y } </m>, <m> f </m> is continuous as a map from <m> \of{ X , \tau_{ X }' } </m> to <m> \of{ Y , \tau_{ Y }' } </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> V \in \tau_{ Y }' </m> be an open set in <m> \of{ Y , \tau_{ Y }' } </m>. Since <m> \tau_{ Y }' \subseteq \tau_{ Y } </m>, <m> V \in \tau_{ Y } </m>, and so the continuity of <m> f </m> as a map from <m> \of{ X , \tau_{ X } } </m> to <m> \of{ Y , \tau_{ Y } } </m> implies that <m> f^{ -1 } \of{ V } \in \tau_{ X } </m> is an open set in <m> \of{ X , \tau_{ X } } </m>. Since <m> \tau_{ X } \subseteq \tau_{ X }' </m>, <m> V \in \tau_{ X }' </m>.
+      </p>
+      
+      <p>
+        In summary, we have shown that for any open set <m> V \in \tau_{ Y }' </m>, the pre-image <m> f^{ -1 } \of{ V } \in \tau_{ X }' </m> is open. Thus <m> f </m> is a continuous map from <m> \of{ X , \tau_{ X }' } </m> to <m> \of{ Y , \tau_{ Y }' } </m>.
+      </p>
+    </proof>
+  </corollary>
+  
+  <p>
+    To summarize <xref ref="lemma-continuity-coarsening-and-refinement"/>, we note that it is easy for a map to be continuous if the topology on its domain is very fine and the topology on its codomain is very coarse. For the same reason, it is very hard for a map to be continuous if the topology on its domain is very coarse and the topology on its codomain is very fine. We exploit this tension to define topologies which are just coarse enough or just fine enough to make certain maps continuous.
+  </p>
+  
+  <definition xml:id="definition-final-topology">
+    <title>
+      Final topology
+    </title>
+    
+    <idx>
+      final topology
+    </idx>
+    
+    <statement>
+      <p>
+        The <term> final topology </term> on a set <m> Y </m> induced by an indexed family <m> \of{ f_{ j } }_{ j \in \mathcal{ J } } </m> of maps <m> f_{ j } \colon X_{ j } \to Y </m> from topological spaces <m> \of{ X_{ j } , \tau_{ X_{ j } } } </m> to a set <m> Y </m> is the finest topology on <m> Y </m> so that each map <m> f_{ j } \colon X_{ j } \to Y </m> is continuous. Concretely, the final topology <m> \tau </m> induced on <m> Y </m> by <m> \of{ f_{ j } }_{ j \in \mathcal{ J } } </m> is defined by
+        
+        <md>
+          \tau = \bigcap_{ j \in \mathcal{ J } }{ \setmid{ V \in \ps \of{ Y } }{ f_{ j }^{ -1 } \of{ V } \in \tau_{ X_{ j } } } }
+        </md>.
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-quotient-topology">
+    <title>
+      Quotient topology
+    </title>
+    
+    <idx>
+      quotient topology
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> q \colon X \to X / { \equiv } </m> be the quotient map associated to an equivalence relation <m> \equiv </m> on a topological space <m> \of{ X , \tau } </m>. Concretely, <m> q </m> sends a point <m> x \in X </m> to its equivalence class <m> \class{ x }_{ \equiv } </m>. The <term> quotient topology </term> on <m> X / { \equiv } </m> is the final topology induced by <m> q </m>; that is, the quotient topology is the finest topology on <m> X / { \equiv } </m> so that <m> q </m> is continuous. When <m> X / { \equiv } </m> is equipped with the quotient topology, the resulting topological space is called a <term> quotient space </term>.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    The final topology on a set can also be characterized in terms of the continuity of outgoing maps.
+  </p>
+
+  <lemma xml:id="lemma-continuous-maps-from-final-spaces">
+    <title>
+      Continuous maps from final spaces
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \tau_{ Y } </m> be the final topology on a set <m> Y </m> induced by an indexed family <m> \of{ f_{ j } }_{ j \in \mathcal{ J } } </m> of maps <m> f_{ j } \colon X_{ j } \to Y </m> from topological spaces <m> \of{ X_{ j } , \tau_{ X_{ j } } } </m> to <m> Y </m>. Then a map <m> g \colon Y \to Z </m> from <m> \of{ Y , \tau_{ Y } } </m> to a topological space <m> \of{ X , \tau_{ X } } </m> is continuous if and only if the composition <m> g \circ f_{ j } \colon X_{ j } \to Z </m> is continuous for all indices <m> j \in \mathcal{ J } </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        If <m> g </m> is continuous, then <m> g \circ f_{ j } </m> is continuous for each index <m> j \in \mathcal{ J } </m> by <xref ref="corollary-composition-of-continuous-maps"/>. Thus it suffices to prove the converse implication. To that end, suppose that <m> g \circ f_{ j } </m> is continuous for each index <m> j \in \mathcal{ J } </m>, and let <m> W \in \tau_{ Z } </m> be an open set in <m> Z </m>. We wish to show that <m> g^{ -1 } \of{ W } \in \tau_{ Y } </m> is open in <m> Y </m>.
+      </p>
+      
+      <p>
+        To that end, we note that
+        
+        <md>
+          f_{ j }^{ -1 } \of{ g^{ -1 } \of{ W } } = \of{ g \circ f_{ j } }^{ -1 } \of{ W } \in \tau_{ X }
+        </md>
+        
+        is open in <m> X </m> for each index <m> j \in \mathcal{ J } </m>, and so
+        
+        <md>
+          g^{ -1 } \of{ W } \in \bigcap_{ j \in \mathcal{ J } }{ \setmid{ V \in \ps \of{ Y } }{ f_{ j }^{ -1 } \of{ V } \in \tau_{ X } } } = \tau_{ Y }
+        </md>
+        
+        is open in <m> Y </m>. We conclude by the <xref ref="proposition-open-set-characterization-of-continuity"/> that <m> g </m> is continuous.
+      </p>
+    </proof>
+  </lemma>
+  
+  <p>
+    Dual to the notion of a final topology is that of an initial topology. While final topologies are as fine as possible while requiring the continuity of some incoming maps, initial topologies are as coarse as possible while requiring the continuity of some outgoing maps.
+  </p>
+  
+  <definition xml:id="definition-initial-topology">
+    <title>
+      Initial topology
+    </title>
+    
+    <idx>
+      initial topology
+    </idx>
+    
+    <statement>
+      <p>
+        The <term> initial topology </term> on a set <m> X </m> induced by an indexed family <m> \of{ f_{ j } }_{ j \in \mathcal{ J } } </m> of maps <m> f_{ j } \colon X \to Y_{ j } </m> from a set <m> X </m> to topological spaces <m> \of{ Y_{ j } , \tau_{ Y_{ j } } } </m> is the coarsest topology on <m> X </m> so that each map <m> f_{ j } \colon X \to Y_{ j } </m> is continuous. Concretely, the initial topology <m> \tau </m> induced on <m> X </m> by <m> \of{ f_{ j } }_{ j \in \mathcal{ J } } </m> is
+        
+        <md>
+          \tau = \gen{ \bigcup_{ j \in \mathcal{ J } }{ \setmid{ f_{ j }^{ -1 } \of{ V } \in \ps \of{ X } }{ V \in \tau_{ Y_{ j } } } } }
+        </md>.
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-initial-topologies">
+    <title>
+      Initial topologies
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of initial topologies:
+        
+        <ul>
+          <li>
+            <p>
+              The subspace topology <m> \rest{ \tau }_{ U } </m> on a subset <m> U \subseteq X </m> of a topological space <m> \of{ X , \tau } </m> is the initial topology induced by the inclusion map <m> \iota \colon U \to X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <idx>
+              product topology
+            </idx>
+            
+            <p>
+              The <term> product topology </term> on a Cartesian product <m> X = \prod_{ j \in \mathcal{ J } }{ Y_{ j } } </m> of topological spaces <m> \of{ Y_{ j } , \tau_{ X_{ j } } } </m> is the initial topology induced by the indexed family <m> \of{ \pi_{ j } }_{ j \in \mathcal{ J } } </m> of projection maps <m> \pi_{ j } \colon X \to Y_{ j } </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    The initial topology on a set can also be characterized in terms of the continuity of incoming maps. The proof of this characterization is slightly harder than the analogous result for final topologies, since in this case we have a subbase for the initial topology rather than an explicit description.
+  </p>
+
+  <lemma xml:id="lemma-continuous-maps-to-initial-spaces">
+    <title>
+      Continuous maps to initial spaces
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \tau_{ Y } </m> be the initial topology on a set <m> Y </m> induced by an indexed family <m> \of{ g_{ j } }_{ j \in \mathcal{ J } } </m> of maps <m> g_{ j } \colon Y \to Z_{ j } </m> from <m> Y </m> to topological spaces <m> \of{ Z_{ j } , \tau_{ Z_{ j } } } </m>. Then a map <m> f \colon X \to Y </m> from a topological space <m> \of{ X , \tau_{ X } } </m> to <m> \of{ Y , \tau_{ Y } } </m> is continuous if and only if the composition <m> g_{ j } \circ f \colon X \to Z_{ j } </m> is continuous for all indices <m> j \in \mathcal{ J } </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        If <m> f </m> is continuous, then <m> g_{ j } \circ f </m> is continuous for each index <m> j \in \mathcal{ J } </m> by <xref ref="corollary-composition-of-continuous-maps"/>. Thus it suffices to prove the converse implication. To that end, suppose that <m> g_{ j } \circ f </m> is continuous for each index <m> j \in \mathcal{ J } </m>, and let <m> V \in \tau_{ Y } </m> be an open set in <m> Y </m>. Then <xref provisional="problem-explicit-descriptions-of-the-generated-topology"/> implies that
+        
+        <md>
+          V = \bigcup_{ k \in \mathcal{ K } }{ \bigcap_{ l = 1 }^{ p_{ k } }{ g_{ j_{ k , l } }^{ -1 } \of{ W_{ k , l } } } }
+        </md>
+        
+        for some indices <m> j_{ k , l } \in \mathcal{ J } </m> and open sets <m> W_{ k , l } \in \tau_{ Z_{ j_{ k , l } } } </m>. Since topologies are stable under finite intersections and arbitrary unions,
+        
+        <md>
+          <mrow>
+            f^{ -1 } \of{ V } \amp = f^{ -1 } \of{ \bigcup_{ k \in \mathcal{ K } }{ \bigcap_{ l = 1 }^{ p_{ k } }{ g_{ j_{ k , l } }^{ -1 } \of{ W_{ k , l } } } } } = \bigcup_{ k \in \mathcal{ K } }{ \bigcap_{ l = 1 }^{ p_{ k } }{ f^{ -1 } \of{ g_{ j_{ k , l } }^{ -1 } \of{ W_{ k , l } } } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \bigcup_{ k \in \mathcal{ K } }{ \bigcap_{ l = 1 }^{ p_{ k } }{ \of{ g_{ j_{ k , l } } \circ f }^{ -1 } \of{ W_{ k , l } } } } \in \tau_{ X }
+          </mrow>
+        </md>
+        
+        is open in <m> X </m>, and so <m> f </m> is continuous.
+      </p>
+    </proof>
+  </lemma>
+
+  <conclusion>
+    <p>
+      Typically, the above examples of final and initial topologies are implicitly assumed, so that unless otherwise specified, quotient maps, subset inclusions, and projection maps of Cartesian products are continuous.
+    </p>
+  </conclusion>
+</subsection>

@@ -7,15 +7,17 @@
 
   <introduction>
     <p>
-      Text before the first subsection.
+      In this section, we extend the notion of continuity from the specific setting of maps between metric spaces to the broader setting of maps between topological spaces. As in metric geometry, a map between topological spaces is <term> continuous </term> at a point if the images of nearby points are nearby to the image of that point. We will see several characterizations of topological continuity which are analogous to the metric characterizations.
     </p>
   </introduction>
 
-  <!-- <xi:include href="./subsection-TITLE.ptx"/> -->
+  <xi:include href="./subsection-map-convergence-and-continuity-at-a-point.ptx"/>
+
+  <xi:include href="./subsection-continuous-maps-between-topological-spaces.ptx"/>
 
   <conclusion>
     <p>
-      Text after the last subsection.
+      In the next section, we will explore how compactness generalizes to topological spaces. In particular, we will use compactness to construct a subbase for a natural topology on the set <m> \CDiff \of{ X , Y } </m> of continuous maps from a topological space <m> X </m> to a topological space <m> Y </m>.
     </p>
   </conclusion>
 

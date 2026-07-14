@@ -21,7 +21,7 @@ In this chapter, we introduce <term> topological spaces </term>, which provide a
 
   <xi:include href="./section-continuity/section-continuity.ptx"/>
 
-  <xi:include href="./section-connectedness-and-compactness/section-connectedness-and-compactness.ptx"/>
+  <xi:include href="./section-compactness/section-compactness.ptx"/>
 
   <conclusion>
     <p>
