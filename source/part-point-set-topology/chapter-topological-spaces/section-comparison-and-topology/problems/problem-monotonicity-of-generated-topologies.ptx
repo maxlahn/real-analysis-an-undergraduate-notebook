@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-monotonicity-of-generated-topologies" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Monotonicity of generated topologies
+  </title>
+  
+  <statement>
+    <p>
+      Fix collections <m> \mathcal{ A } , \mathcal{ B } \subseteq \ps \of{ X } </m> of subsets of a set <m> X </m>. Show that if <m> \mathcal{ A } \subseteq \mathcal{ B } </m>, then <m> \gen{ \mathcal{ A } } \subseteq \gen{ \mathcal{ B } } </m>.
+    </p>
+  </statement>
+  
+  <!-- <solution>
+    <p>
+      Since <m> \mathcal{ A } \subseteq \mathcal{ B } </m>, every topology on <m> X </m> which contains <m> \mathcal{ B } </m> is a topology on <m> X </m> which contains <m> \mathcal{ A } </m>. We conclude that
+      
+      <md>
+        \gen{ \mathcal{ A } } = \bigcap_{ \mathcal{ A } \subseteq \tau \in \Topol_{ X } }{ \tau } \subseteq \bigcap_{ \mathcal{ B } \subseteq \tau \in \Topol_{ X } }{ \tau } = \gen{ \mathcal{ B } }
+      </md>.
+    </p>
+  </solution> -->
+</exercise>

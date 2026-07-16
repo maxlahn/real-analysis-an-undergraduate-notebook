@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-closed-sets-in-subspaces" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Closed sets in subspaces
+  </title>
+  
+  <statement>
+    <p>
+      Let <m> U \subseteq X </m> be a subset of a topological space <m> \of{ X , \tau } </m>. Prove that a subset <m> W \subseteq U </m> is closed in <m> U </m> if and only if <m> W = U \cap V </m> for some closed set <m> V \subseteq X </m> in <m> X </m>.
+    </p>
+  </statement>
+  
+  <!-- <solution>
+    <p>
+      Fix a subset <m> W \subseteq U </m> of <m> U </m>, and suppose first that <m> W </m> is closed in <m> U </m>. Then <m> U \setminus W \in \rest{ \tau }_{ U } </m> is open in <m> U </m>, and so <m> U \setminus W = U \cap Y </m> for some open set <m> Y \in \tau </m> in <m> X </m>. Let <m> V = X \setminus Y </m>, and note that <m> V </m> is closed in <m> X </m>. Moreover,
+      
+      <md>
+        <mrow>
+          W \amp = U \setminus \of{ U \setminus W } = U \setminus \of{ U \cap Y }
+        </mrow>
+        
+        <mrow>
+          \amp = \of{ U \setminus U } \cup \of{ U \setminus Y } = \emptyset \cup \setmid{ u \in U }{ u \notin Y }
+        </mrow>
+        
+        <mrow>
+          \amp = \setmid{ x \in X }{ x \in U \textrm{ and } x \notin Y } = U \cap \setmid{ x \in X }{ x \notin Y }
+        </mrow>
+        
+        <mrow>
+          \amp = U \cap \of{ X \setminus Y } = U \cap V
+        </mrow>
+      </md>.
+    </p>
+    
+    <p>
+      Conversely, now suppose that <m> W = U \cap V </m> for some closed set <m> V \subseteq X </m> in <m> X </m>. Then <m> X \setminus V \in \tau </m> is open in <m> X </m>, and so
+      
+      <md>
+        <mrow>
+          U \setminus W = U \setminus \of{ U \cap V } = \of{ U \setminus U } \cup \of{ U \setminus V }
+        </mrow>
+        
+        <mrow>
+          \amp = \emptyset \cup \of{ U \cap \of{ X \setminus V } } = U \cap \of{ X \setminus V } \in \rest{ \tau }_{ U }
+        </mrow>
+      </md>
+      
+      is open in <m> U </m>. We conclude that <m> W </m> is closed in <m> U </m>.
+    </p>
+  </solution> -->
+</exercise>

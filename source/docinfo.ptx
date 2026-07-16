@@ -405,6 +405,8 @@
     
     <!-- MANIFOLD-THEORETIC MACROS -->
       <!-- Differential operators -->
+      \DeclareMathOperator{\DL}{ DL } <!-- Differentiability locus -->
+      
       \DeclareMathOperator{\diff}{ d } <!-- Differential/exterior derivative -->
       
       \DeclareMathOperator{\pdiff}{ \partial } <!-- Partial differential/directional derivative -->

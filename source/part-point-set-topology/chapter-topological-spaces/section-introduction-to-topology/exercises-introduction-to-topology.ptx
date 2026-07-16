@@ -11,6 +11,10 @@
     </p>
   </introduction>
   
+  <xi:include href="./exercises/exercise-examples-of-topologies.ptx"/>
+  
+  <xi:include href="./exercises/exercise-computing-subspace-topologies.ptx"/>
+  
   <!-- <xi:include href="./exercises/exercise-TITLE.ptx"/> -->
 
   <conclusion>

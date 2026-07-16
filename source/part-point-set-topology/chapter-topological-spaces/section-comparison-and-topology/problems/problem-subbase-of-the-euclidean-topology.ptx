@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-subbase-of-the-euclidean-topology" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Subbase of the Euclidean topology
+  </title>
+  
+  <statement>
+    <p>
+      Consider the collections <m> \mathcal{ U } </m> and <m> \mathcal{ D } </m> of upwards- and downwards pointing rays in the real numbers <m> \R </m>, respectively; that is,
+      
+      <md>
+        <mrow>
+          \mathcal{ U } \amp = \setmid{ \opint{ a }{ \infty } \in \ps \of{ \R } }{ a \in \R }
+        </mrow>
+        
+        <mrow>
+          \mathcal{ D } \amp = \setmid{ \opint{ -\infty }{ b } \in \ps \of{ \R } }{ b \in \R }
+        </mrow>
+      </md>.
+      
+      Show that <m> \mathcal{ U } \cup \mathcal{ D } </m> is a subbase of the Euclidean topology <m> \tau_{ d } </m> on <m> \R </m>.
+    </p>
+  </statement>
+  
+  <hint>
+    <p>
+      First argue that every open set in the real line <m> \of{ \R , \tau_{ d } } </m> is a union of bounded open intervals. What do finite intersections of subbasic open sets (elements of <m> \mathcal{ U } \cap \mathcal{ D } </m>) look like?
+    </p>
+  </hint>
+  
+  <!-- <solution>
+    <p>
+      We remark that each set in <m> \mathcal{ U } \cup \mathcal{ D } </m> is open in the Euclidean topology <m> \tau_{ d } </m>; that is, <m> \mathcal{ U } \cup \mathcal{ D } \subseteq \tau_{ d } </m>. Since the topology <m> \gen{ \mathcal{ U } \cup \mathcal{ D } } </m> is the coarsest topology on <m> \R </m> containing <m> \mathcal{ U } \cup \mathcal{ D } </m>, <m> \gen{ \mathcal{ U } \cup \mathcal{ D } } \subseteq \tau_{ d } </m>. It therefore suffices to prove the reverse containment.
+    </p>
+    
+    <p>
+      To that end, let <m> U \in \tau_{ d } </m> be an open set in <m> \of{ \R , \tau_{ d } } </m>. Then <m> U </m> is a neighborhood of each of its points, and so for each point <m> u \in U </m>, there is a positive real number <m> r_{ u } \gt 0 </m> so that <m> \mB_{ r_{ u } } \of{ u } \subseteq U </m>. We conclude that
+      
+      <md>
+        U = \bigcup_{ u \in U }{ \mB_{ r_{ u } } \of{ u } } = \bigcup_{ u \in U }{ \of{ \opint{ u - r_{ u } }{ \infty } \cap \opint{ -\infty }{ u + r_{ u } } } }
+      </md>.
+      
+      In particular, <m> U </m> is a union of finite intersections of subbasic open sets in <m> \of{ \R , \gen{ \mathcal{ U } \cup \mathcal{ D } } } </m> and therefore is open in this topology; that is, <m> \tau_{ d } \subseteq \gen{ \mathcal{ U } \cup \mathcal{ D } } </m>.
+    </p>
+    
+    <p>
+      Since <m> \gen{ \mathcal{ U } \cup \mathcal{ D } } \subseteq \tau_{ d } </m> and <m> \tau_{ d } \subseteq \gen{ \mathcal{ U } \cup \mathcal{ D } } </m>, we conclude that <m> \gen{ \mathcal{ U } \cup \mathcal{ D } } = \tau_{ d } </m>, and so <m> \mathcal{ U } \cup \mathcal{ D } </m> is a subbase of the Euclidean topology <m> \tau_{ d } </m>.
+    </p>
+  </solution> -->
+</exercise>

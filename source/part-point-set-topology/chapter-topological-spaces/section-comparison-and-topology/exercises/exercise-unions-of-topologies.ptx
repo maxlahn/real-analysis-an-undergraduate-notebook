@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="exercise-unions-of-topologies" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Unions of topologies
+  </title>
+  
+  <statement>
+    <p>
+      Give an example of two topologies on a set whose union is not a topology on that set.
+    </p>
+  </statement>
+  
+  <solution>
+    <p>
+      Let <m> X = \set{ a , b , c } </m>, and consider the topologies
+      
+      <md>
+        <mrow>
+          \tau_{ 1 } \amp = \set{ \emptyset , \set{ a } , X } \amp \tau_{ 2 } \amp = \set{ \emptyset , \set{ b } , X }
+        </mrow>
+      </md>.
+      
+      Then <m> \tau_{ 1 } \cup \tau_{ 2 } = \set{ \emptyset , \set{ a } , \set{ b } , X } </m> is not a topology on <m> X </m>, since it is not stable under unions. Indeed, <m> \set{ a } , \set{ b } \in \tau_{ 1 } \cup \tau_{ 2 } </m>, but <m> \set{ a } \cup \set{ b } = \set{ a , b } \notin \tau_{ 1 } \cup \tau_{ 2 } </m>.
+    </p>
+  </solution>
+</exercise>

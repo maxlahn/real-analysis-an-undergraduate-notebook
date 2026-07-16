@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-net-convergence-and-subspaces" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Net convergence and subspaces
+  </title>
+  
+  <statement>
+    <p>
+      Let <m> U \subseteq X </m> be a subset of a topological space <m> \of{ X , \tau } </m>, and consider a net <m> \of{ u_{ \alpha } }_{ \alpha \in A } </m> of points <m> u_{ \alpha } \in U </m> indexed by an upwards directed set <m> \of{ A , \precsim } </m>. Prove that for a point <m> u \in U </m>, <m> \of{ u_{ \alpha } }_{ \alpha \in A } </m> converges upwards to <m> u </m> as a net in <m> X </m> if and only if it converges upwards to <m> u </m> as a net in <m> U </m>.
+    </p>
+  </statement>
+  
+  <hint>
+    <p>
+      What are the neighborhoods of <m> u </m> in the subspace <m> \of{ U , \rest{ \tau }_{ U } } </m>?
+    </p>
+  </hint>
+  
+  <solution>
+    <p>
+      First suppose that <m> \of{ u_{ \alpha } }_{ \alpha \in A } </m> converges upwards to <m> u </m> as a net in <m> X </m>, and let <m> N \in \Nbhd_{ U } \of{ u } </m> be a neighborhood of <m> u </m> in <m> U </m>. Then <m> u \in W \subseteq N </m> for some open set <m> W \in \rest{ \tau }_{ U } </m> in <m> U </m>. We recall that <m> W = U \cap V </m> for some open set <m> V \in \tau </m> in <m> X </m>, and so <m> V \in \Nbhd_{ X } \of{ u } </m> is a neighborhood of <m> u </m> in <m> X </m>.
+    </p>
+    
+    <p>
+      Since <m> \of{ u_{ \alpha } }_{ \alpha \in A } </m> converges upwards to <m> u </m> as a net in <m> X </m>, there is some index <m> \alpha_{ N } \in A </m> so that <m> u_{ \alpha } \in V </m> for all indices <m> \alpha \succeq \alpha_{ N } </m>. We observe that
+      
+      <md>
+        u_{ \alpha } \in U \cap V = W \subseteq N
+      </md>
+      
+      for all indices <m> \alpha \succeq \alpha_{ N } </m>, and so <m> \of{ u_{ \alpha } }_{ \alpha \in A } </m> converges upwards to <m> u </m> as a net in <m> U </m>.
+    </p>
+    
+    <p>
+      Conversely, now suppose that <m> \of{ u_{ \alpha } }_{ \alpha \in A } </m> converges upwards to <m> u </m> as a net in <m> U </m>, and let <m> N \in \Nbhd_{ X } \of{ u } </m> be a neighborhood of <m> u </m> in <m> X </m>. Then <m> u \in V \subseteq N </m> for some open set <m> V \in \tau </m> in <m> X </m>. Let <m> W = U \cap V \in \rest{ \tau }_{ U } </m>, and observe that <m> W \in \Nbhd_{ U } \of{ u } </m> is a neighborhood of <m> u </m> in <m> U </m>.
+    </p>
+    
+    <p>
+      Since <m> \of{ u_{ \alpha } }_{ \alpha \in A } </m> converges upwards to <m> u </m> as a net in <m> U </m>, there is some index <m> \alpha_{ N } \in A </m> so that <m> u_{ \alpha } \in W </m> for all indices <m> \alpha \succeq \alpha_{ N } </m>. We observe that
+      
+      <md>
+        u_{ \alpha } \in W = U \cap V \subseteq V \subseteq N
+      </md>
+      
+      for all indices <m> \alpha \succeq \alpha_{ N } </m>, and so <m> \of{ u_{ \alpha } }_{ \alpha \in A } </m> converges upwards to <m> u </m> as a net in <m> X </m>.
+    </p>
+  </solution>
+</exercise>

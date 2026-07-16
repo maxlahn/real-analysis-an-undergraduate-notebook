@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-examples-of-topologies" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Examples of Topologies
+  </title>
+  
+  <introduction>
+    <p>
+      Verify that the given collection of subsets comprise a topology.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <idx>
+      cofinite
+    </idx>
+    
+    <idx>
+      cofinite topology
+    </idx>
+    
+    <statement>
+      <p>
+        A subset <m> U \subseteq X </m> of a set <m> X </m> is called <term> cofinite </term> in <m> X </m> if the complement <m> X \setminus U </m> is finite. The <term> cofinite topology </term>
+        
+        <md>
+          \tau = \setmid{ U \in \ps \of{ X } }{ U = \emptyset \textrm{ or } X \setminus U \textrm{ is finite} }
+        </md>
+        
+        on <m> X </m> is the collection of all cofinite subsets of <m> X </m> along with the empty set <m> \emptyset </m>. Verify that <m> \tau </m> is a topology on <m> X </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        We see that <m> \emptyset \in \tau </m> and <m> X \setminus X = \emptyset </m> is finite, so that <m> X </m> is cofinite in <m> X </m>. Thus <m> \emptyset , X \in \tau </m>, and so <m> \tau </m> is non-degenerate.
+      </p>
+      
+      <p>
+        Now let <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> be an indexed family of subsets <m> U_{ j } \in \tau </m>. Since unions with the empty set do not affect the value of the union, we may suppose that <m> U_{ j } \neq \emptyset </m> for all indices <m> j \in \mathcal{ J } </m>. So <m> X \setminus U_{ j } </m> is finite for each index <m> j \in \mathcal{ J } </m>. (4) of <xref ref="theorem-analogous-properties-of-indexed-intersections-and-unions"/> implies that
+        
+        <md>
+          X \setminus \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcap_{ j \in \mathcal{ J } }{ \of{ X \setminus U_{ j } } }
+        </md>
+        
+        is an intersection of finite sets, and so is itself finite. Thus <m> \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } \in \tau </m> is cofinite in <m> X </m>, and so <m> \tau </m> is stable under unions.
+      </p>
+      
+      <p>
+        Finally, let <m> \of{ U_{ j } }_{ j = 1 }^{ m } </m> be a finite sequence of subsets <m> U_{ j } \in \tau </m>. If <m> U_{ j } = \emptyset </m> for any index <m> j \in \mathcal{ J } </m>, then
+        
+        <md>
+          \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \emptyset \in \tau
+        </md>.
+        
+        So we may suppose that <m> U_{ j } \neq \emptyset </m> for all indices <m> j \in \mathcal{ J } </m>. In particular, <m> X \setminus U_{ j } </m> is finite for each index <m> j \in \mathcal{ J } </m>. (4) of <xref ref="theorem-analogous-properties-of-indexed-intersections-and-unions"/> implies that
+        
+        <md>
+          X \setminus \bigcap_{ j = 1 }^{ m }{ U_{ j } } = \bigcup_{ j = 1 }^{ m }{ \of{ X \setminus U_{ j } } }
+        </md>
+        
+        is a finite union of finite sets, and so is itself finite. Thus <m> \bigcap_{ j = 1 }^{ m }{ U_{ j } } \in \tau </m> is cofinite in <m> X </m>, and so <m> \tau </m> is stable under finite intersections.
+      </p>
+      
+      <p>
+        Since <m> \tau </m> is non-degenerate, stable under unions, and stable under finite intersections, it is a topology on <m> X </m>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <idx>
+      cocountable
+    </idx>
+    
+    <idx>
+      cocountable topology
+    </idx>
+    
+    <statement>
+      <p>
+        A subset <m> U \subseteq X </m> of a set <m> X </m> is called <term> cocountable </term> in <m> X </m> if the complement <m> X \setminus U </m> is countable. The <term> cocountable topology </term>
+        
+        <md>
+          \tau = \setmid{ U \in \ps \of{ X } }{ U = \emptyset \textrm{ or } X \setminus U \textrm{ is countable} }
+        </md>
+        
+        on <m> X </m> is the collection of all cocountable subsets of <m> X </m> along with the empty set <m> \emptyset </m>. Verify that <m> \tau </m> is a topology on <m> X </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        We see that <m> \emptyset \in \tau </m> and <m> X \setminus X = \emptyset </m> is countable, so that <m> X </m> is cocountable in <m> X </m>. Thus <m> \emptyset , X \in \tau </m>, and so <m> \tau </m> is non-degenerate.
+      </p>
+      
+      <p>
+        Now let <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> be an indexed family of subsets <m> U_{ j } \in \tau </m>. Since unions with the empty set do not affect the value of the union, we may suppose that <m> U_{ j } \neq \emptyset </m> for all indices <m> j \in \mathcal{ J } </m>. So <m> X \setminus U_{ j } </m> is countable for each index <m> j \in \mathcal{ J } </m>. (4) of <xref ref="theorem-analogous-properties-of-indexed-intersections-and-unions"/> implies that
+        
+        <md>
+          X \setminus \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcap_{ j \in \mathcal{ J } }{ \of{ X \setminus U_{ j } } }
+        </md>
+        
+        is an intersection of countable sets, and so is itself countable. Thus <m> \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } \in \tau </m> is cocountable in <m> X </m>, and so <m> \tau </m> is stable under unions.
+      </p>
+      
+      <p>
+        Finally, let <m> \of{ U_{ j } }_{ j = 1 }^{ m } </m> be a finite sequence of subsets <m> U_{ j } \in \tau </m>. If <m> U_{ j } = \emptyset </m> for any index <m> j \in \mathcal{ J } </m>, then
+        
+        <md>
+          \bigcap_{ j \in \mathcal{ J } }{ U_{ j } } = \emptyset \in \tau
+        </md>.
+        
+        So we may suppose that <m> U_{ j } \neq \emptyset </m> for all indices <m> j \in \mathcal{ J } </m>. In particular, <m> X \setminus U_{ j } </m> is countable for each index <m> j \in \mathcal{ J } </m>. (4) of <xref ref="theorem-analogous-properties-of-indexed-intersections-and-unions"/> implies that
+        
+        <md>
+          X \setminus \bigcap_{ j = 1 }^{ m }{ U_{ j } } = \bigcup_{ j = 1 }^{ m }{ \of{ X \setminus U_{ j } } }
+        </md>
+        
+        is a finite union of countable sets, and so is itself countable. Thus <m> \bigcap_{ j = 1 }^{ m }{ U_{ j } } \in \tau </m> is cocountable in <m> X </m>, and so <m> \tau </m> is stable under finite intersections.
+      </p>
+      
+      <p>
+        Since <m> \tau </m> is non-degenerate, stable under unions, and stable under finite intersections, it is a topology on <m> X </m>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <idx>
+      particular point topology
+    </idx>
+    
+    <statement>
+      <p>
+        Fix an element <m> x \in X </m> of a set <m> X </m>. The <term> particular point topology </term>
+        
+        <md>
+          \tau = \setmid{ U \in \ps \of{ X } }{ U = \emptyset \textrm{ or } x \in U }
+        </md>
+        
+        on <m> X </m> is the collection of all subsets of <m> X </m> which contain <m> x </m> along with the empty set <m> \emptyset </m>. Verify that <m> \tau </m> is a topology on <m> X </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        We see that <m> \emptyset \in \tau </m> and <m> x \in X </m>, so that <m> X \in \tau </m>. Since <m> \emptyset , X \in \tau </m>, <m> \tau </m> is non-degenerate.
+      </p>
+      
+      <p>
+        Now let <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> be an indexed family of subsets <m> U_{ j } \in \tau </m>. If <m> U_{ j } = \emptyset </m> for all indices <m> j \in \mathcal{ J } </m>, then
+        
+        <md>
+          \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } = \bigcup_{ j \in \mathcal{ J } }{ \emptyset } = \emptyset \in \tau
+        </md>.
+        
+        Otherwise, if <m> U_{ j } \neq \emptyset </m> for some index <m> j \in \mathcal{ J } </m>, then <m> x \in U_{ j } </m> for some index <m> j \in \mathcal{ J } </m>, and so
+        
+        <md>
+          x \in \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } \in \tau
+        </md>.
+        
+        Thus <m> \tau </m> is stable under unions.
+      </p>
+      
+      <p>
+        Finally, let <m> \of{ U_{ j } }_{ j = 1 }^{ m } </m> be a finite sequence of subsets <m> U_{ j } \in \tau </m>. If <m> U_{ j } = \emptyset </m> for any index <m> 1 \leq j \leq m </m>, then
+        
+        <md>
+          \bigcap_{ j = 1 }^{ m }{ U_{ j } } = \emptyset \in \tau
+        </md>.
+        
+        So we may suppose that <m> U_{ j } \neq \emptyset </m> for all indices <m> 1 \leq j \leq m </m>. In particular, <m> x \in U_{ j } </m> for all indices <m> 1 \leq j \leq m </m>, and so
+        
+        <md>
+          x \in \bigcap_{ j = 1 }^{ m }{ U_{ j } } \in \tau
+        </md>.
+        
+        Thus <m> \tau </m> is stable under finite intersections.
+      </p>
+      
+      <p>
+        Since <m> \tau </m> is non-degenerate, stable under unions, and stable under finite intersections, it is a topology on <m> X </m>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Fix an element <m> x \in X </m> of a set <m> X </m>. The <term> excluded point topology </term>
+        
+        <md>
+          \tau = \setmid{ U \in \ps \of{ X } }{ U = X \textrm{ or } x \notin U }
+        </md>
+        
+        on <m> X </m> is the collection of all subsets of <m> X </m> which do not contain <m> x </m> along with <m> X </m> itself. Verify that <m> \tau </m> is a topology on <m> X </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        We see that <m> X \in \tau </m> and <m> x \notin \emptyset </m>, so that <m> \emptyset \in \tau </m>. Since <m> \emptyset , X \in \tau </m>, <m> \tau </m> is non-degenerate.
+      </p>
+      
+      <p>
+        Now let <m> \of{ U_{ j } }_{ j \in \mathcal{ J } } </m> be an indexed family of subsets <m> U_{ j } \in \tau </m>. If <m> U_{ j } = X </m> for some index <m> j \in \mathcal{ J } </m>, then
+        
+        <md>
+          \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } = X \in \tau
+        </md>.
+        
+        Otherwise, if <m> U_{ j } \neq X </m> for all indices <m> j \in \mathcal{ J } </m>, then <m> x \notin U_{ j } </m> for all indices <m> j \in \mathcal{ J } </m>, and so
+        
+        <md>
+          x \in \bigcup_{ j \in \mathcal{ J } }{ U_{ j } } \in \tau
+        </md>.
+        
+        Thus <m> \tau </m> is stable under unions.
+      </p>
+      
+      <p>
+        Finally, let <m> \of{ U_{ j } }_{ j = 1 }^{ m } </m> be a finite sequence of subsets <m> U_{ j } \in \tau </m>. If <m> U_{ j } = X </m> for all indices <m> 1 \leq j \leq m </m>, then
+        
+        <md>
+          \bigcap_{ j = 1 }^{ m }{ U_{ j } } = \bigcap_{ j = 1 }^{ m }{ X } = X \in \tau
+        </md>.
+        
+        So we may suppose that <m> U_{ j } \neq X </m> for all indices <m> 1 \leq j \leq m </m>. In particular, <m> x \notin U_{ j } </m> for some index <m> 1 \leq j \leq m </m>, and so
+        
+        <md>
+          x \notin \bigcap_{ j = 1 }^{ m }{ U_{ j } } \in \tau
+        </md>.
+        
+        Thus <m> \tau </m> is stable under finite intersections.
+      </p>
+      
+      <p>
+        Since <m> \tau </m> is non-degenerate, stable under unions, and stable under finite intersections, it is a topology on <m> X </m>.
+      </p>
+    </solution>
+  </exercise>
+</exercisegroup>

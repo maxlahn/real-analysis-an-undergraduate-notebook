@@ -11,7 +11,11 @@
     </p>
   </introduction>
   
-  <!-- <xi:include href="./problems/problem-TITLE.ptx"/> -->
+  <xi:include href="./problems/problem-topologies-induced-by-p-metrics.ptx"/>
+  
+  <xi:include href="./problems/problem-closed-sets-in-subspaces.ptx"/>
+  
+  <xi:include href="./problems/problem-monotonicity-of-interior-closure-and-boundary.ptx"/>
 
   <conclusion>
     <p>

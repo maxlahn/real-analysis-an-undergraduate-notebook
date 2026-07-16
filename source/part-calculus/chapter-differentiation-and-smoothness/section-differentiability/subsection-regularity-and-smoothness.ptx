@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-regularity-and-smoothness" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Regularity and Smoothness
+  </title>
+
+  <introduction>
+    <p>
+      For real-valued functions which are differentiable at many points in their domain, we can view the derivative not just as a number, but rather as a real-valued function which itself may be subject to analysis. A natural question in this setting is whether we can differentiate this derivative itself. This is not always possible; the derivative of a differentiable function need not itself be differentiable. In fact, such a derivative need not even be continuous. Differentiable functions whose derivative is itself differentiable are called <term> twice differentiable </term>, and the derivative of the derivative of such a function is called its <term> second derivative </term>. Continuing in such a manner, we may speak of <term> <m> n </m>-times differentiable </term> functions and their <term> <m> n </m>th derivatives </term>.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-higher-order-differentiability">
+    <title>
+      Higher order differentiability
+    </title>
+    
+    <idx>
+      differentiability locus
+    </idx>
+    
+    <idx>
+      derivative
+    </idx>
+    
+    <idx>
+      differentiability
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \DL^{ k } \of{ f } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the <m> k </m>-times differentiability locus of <m> f </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> f^{ \of{ k } } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the <m> k </m>th derivative of <m> f </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Fix a real-valued function <m> f \colon X \to \R </m> on a subset <m> X \subseteq \R </m>. The higher order differentiability properties of <m> f </m> are defined recursively as follows:
+        
+        <ul>
+          <li>
+            <p>
+              <m> f </m> is <m> 0 </m>-times differentiable, its <term> <m> 0 </m>-times differentiability locus </term> is <m> \DL^{ 0 } \of{ f } = X </m>, and its <term> <m> 0 </m>th derivative </term> is <m> f^{ \of{ 0 } } = f \colon \DL^{ 0 } \of{ f } \to \R </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Suppose that <m> f </m> has <m> k </m>-times differentiability locus <m> \DL^{ k } \of{ f } </m> and <m> k </m>th derivative <m> f^{ \of{ k } } \colon \DL^{ k } \of{ f } \to \R </m>. The <m> \of{ k + 1 } </m>-times differentiability locus <m> \DL^{ k + 1 } \of{ f } </m> is the differentiability locus
+              
+              <md>
+                <mrow>
+                  \DL^{ k + 1 } \of{ f } \amp = \DL \of{ f^{ \of{ k } } } = \setmid{ x \in \DL^{ k } \of{ f } }{ f^{ \of{ k } } \textrm{ is differentiable at } x }
+                </mrow>
+                
+                <mrow>
+                  \amp \subseteq \DL^{ k } \of{ f } \cap \of{ \DL^{ k } \of{ f } }'
+                </mrow>
+              </md>.
+              
+              The <term> <m> \of{ k + 1 } </m>st derivative </term> <m> f^{ \of{ k + 1 } } </m> of <m> f </m> is the derivative
+              
+              <md>
+                f^{ \of{ k + 1 } } = \of{ f^{ \of{ k } } }' \colon \DL^{ k + 1 } \of{ f } \to \R
+              </md>.
+              
+              Then <m> f </m> is <term> <m> \of{ k + 1 } </m>-times differentiable </term> if <m> f^{ \of{ k } } </m> is differentiable at every point of <m> \DL^{ k } \of{ f } \cap \of{ \DL^{ k } \of{ f } }' </m>; that is, <m> f </m> is <m> \of{ k + 1 } </m>-times differentiable if
+              
+              <md>
+                \DL^{ k + 1 } \of{ f } = \DL^{ k } \of{ f } \cap \of{ \DL^{ k } \of{ f } }'
+              </md>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="example-higher-order-differentiability">
+    <title>
+      Higher order differentiability
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of higher order derivatives of functions:
+        
+        <ul>
+          <li>
+            <p>
+              Since polynomial functions are differentiable, and their derivatives are polynomials (which are also differentiable), every polynomial function is <m> k </m>-times differentiable for all <m> k \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Fix a natural number <m> k \in \N </m>, and consider the power function <m> p \colon \R \to \R </m> defined by the formula <m> p \of{ x } = x^{ k + \frac{ 1 }{ 3 } } </m>. Once we have explored the calculus of power series in <xref ref="section-power-series"/>, we will see that <m> p </m> is <m> k </m>-times differentiable but not <m> \of{ k + 1 } </m>-times differentiable.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    As previously mentioned, the derivative of a differentiable function need not be continuous. Requiring continuity in the derivatives of a function yield the concept of <term> regularity </term>. Intuitively, the regularity of a function determines how many of its derivatives are continuous.
+  </p>
+  
+  <definition xml:id="definition-regularity">
+    <title>
+      Regularity
+    </title>
+    
+    <idx>
+      regularity
+    </idx>
+    
+    <idx>
+      continuous differentiability
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \CDiff^{ k } \of{ X } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the set of <m> k </m>-times continuously differentiable functions on <m> X </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        A real-valued function <m> f \colon X \to \R </m> on a subset <m> X \subseteq \R </m> is called <m> k </m>-times continuously differentiable if it is <m> k </m>-times differentiable and its <m> k </m>th derivative <m> f^{ \of{ k } } \colon \DL^{ k } \of{ f } \to \R </m> is continuous. The set of <m> k </m>-times continuously differentiable functions on <m> X </m> is denoted <m> \CDiff^{ k } \of{ X } </m>.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="example-regularity">
+    <title>
+      Regularity
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of functions of different regularity:
+        
+        <ul>
+          <li>
+            <p>
+              Since polynomial functions are continuous and differentiable, and their derivatives are polynomials (which are also continuous and differentiable), every polynomial function is <m> k </m>-times continuously differentiable for all <m> k \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Fix a natural number <m> k \in \N </m>, and consider the power function <m> p \colon \R \to \R </m> defined by the formula <m> p \of{ x } = x^{ k + \frac{ 1 }{ 3 } } </m>. Once we have explored the calculus of power series in <xref ref="section-power-series"/>, we will see that <m> p </m> is <m> k </m>-times continuously differentiable but not <m> \of{ k + 1 } </m>-times differentiable; that is <m> p \in \CDiff^{ k } \of{ \R } \setminus \CDiff^{ k + 1 } \of{ \R } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Let <m> f \colon \R \to \R </m> be the real-valued function defined piecewise by the formula
+              
+              <md>
+                f \of{ x } =
+                  \begin{cases}
+                    x^{ 2 } \sin \of{ \frac{ 1 }{ x } } \amp x \neq 0 \\
+                    0 \amp x = 0
+                  \end{cases}
+              </md>.
+              
+              Then <m> f </m> is differentiable but not continuously differentiable.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <lemma xml:id="lemma-monotonicity-of-regularity-classes">
+    <title>
+      Monotonicity of regularity classes
+    </title>
+    
+    <statement>
+      <p>
+        For any subset <m> X \subseteq \R </m>,
+        
+        <md>
+          \CDiff^{ 0 } \of{ X } \supseteq \CDiff^{ 1 } \of{ X } \supseteq \CDiff^{ 2 } \of{ X } \supseteq \CDiff^{ 3 } \of{ X } \supseteq \dotsb
+        </md>.
+        
+        Moreover, the intersection <m> \bigcap_{ k = 0 }^{ \infty }{ \CDiff^{ k } \of{ X } } </m> is non-empty.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> k \in \N </m> be a natural number, and suppose that <m> f \in \CDiff^{ k + 1 } \of{ X } </m>; that is, <m> f \colon X \to \R </m> is a <m> \of{ k + 1 } </m>-times continuously differentiable real-valued function on <m> X </m>. Since <m> f </m> is <m> \of{ k + 1 } </m>-times differentiable, it is <m> k </m>-times differentiable, and its <m> k </m>th derivative <m> f^{ \of{ k } } \colon \DL^{ k } \of{ f } \to \R </m> is itself differentiable. <xref ref="lemma-differentiability-implies-continuity"/> implies that <m> f^{ \of{ k } } </m> is continuous at every point <m> x \in \DL^{ k } \of{ f } \cap \of{ \DL^{ k } \of{ f } }' </m>.
+      </p>
+      
+      <p>
+        On the other hand, if <m> x \in \DL^{ k } \of{ f } \setminus \of{ \DL^{ k } \of{ f } }' </m>, then <m> x </m> is an isolated point of <m> \DL^{ k } \of{ f } </m>, and therefore <m> f^{ \of{ k } } </m> is automatically continuous at <m> x </m>. Thus <m> f^{ \of{ k } } </m> is continuous, and so <m> f \in \CDiff^{ k } \of{ X } </m> is <m> k </m>-times continuously differentiable.
+      </p>
+      
+      <p>
+        We have already seen that constant functions are continuously differentiable, and their derivatives are also constant functions. Thus any constant function is <m> k </m>-times continuously differentiable for all <m> k \in \N </m>, and so
+        
+        <md>
+          \bigcap_{ k = 0 }^{ \infty }{ \CDiff^{ k } \of{ X } } \neq \emptyset
+        </md>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <definition xml:id="definition-smoothness">
+    <title>
+      Smoothness
+    </title>
+    
+    <idx>
+      smooth
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \CDiff^{ \infty } \of{ X } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the set of smooth functions on <m> X </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        A real-valued function <m> f \colon X \to \R </m> on a subset <m> X \subseteq \R </m> is called <term> smooth </term> if it is <m> k </m>-times continuously differentiable for all <m> k \in \N </m>. The set of smooth functions on <m> X </m> is denoted
+        
+        <md>
+          \CDiff^{ \infty } \of{ X } = \bigcup_{ k = 0 }^{ \infty }{ \CDiff^{ k } \of{ X } }
+        </md>.
+      </p>
+    </statement>
+  </definition>
+
+  <conclusion>
+    <p>
+      There are several interesting topologies on the space <m> \CDiff^{ k } \of{ X } </m> of <m> k </m>-times differentiable functions on a subset <m> X \subseteq \R </m> In general, the uniform convergence of a sequence of continuously differentiable functions does not imply the uniform convergence of its derivatives. However, if the derivative converge uniformly, then the uniform limit of the functions is differentiable, and its derivative is the uniform limit of the derivatives.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->

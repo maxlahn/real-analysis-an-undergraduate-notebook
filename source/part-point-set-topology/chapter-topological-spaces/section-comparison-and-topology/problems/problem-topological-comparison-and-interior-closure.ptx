@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-topological-comparison-and-interior-closure" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Topological comparison and interior/closure
+  </title>
+  
+  <introduction>
+    <p>
+      Fix two topologies <m> \tau_{ 1 } , \tau_{ 2 } \in \Topol_{ X } </m> on a set <m> X </m>, and suppose that <m> \tau_{ 1 } \subseteq \tau_{ 2 } </m>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        For a subset <m> U </m>, compare its interior <m> \Int_{ \of{ X , \tau_{ 1 } } } \of{ U } </m> in the topological space <m> \of{ X , \tau_{ 1 } } </m> with its interior <m> \Int_{ \of{ X , \tau_{ 2 } } } \of{ U } </m> in the topological space <m> \of{ X , \tau_{ 2 } } </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        Since <m> \tau_{ 1 } \subseteq \tau_{ 2 } </m>, any open set in <m> \of{ X , \tau_{ 1 } } </m> which is contained in <m> U </m> is an open set in <m> \of{ X , \tau_{ 2 } } </m> which is contained in <m> U </m>. We conclude that
+        
+        <md>
+          \Int_{ \of{ X , \tau_{ 1 } } } \of{ U } = \bigcup_{ U \subseteq V \in \tau_{ 1 } }{ V } \subseteq \bigcup_{ U \subseteq V \in \tau_{ 2 } }{ V } = \Int_{ \of{ X , \tau_{ 2 } } } \of{ U }
+        </md>
+        
+        by (1) of <xref ref="theorem-interior-closure-boundary"/>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        For a subset <m> U </m>, compare its closure <m> \Cl_{ \of{ X , \tau_{ 1 } } } \of{ U } </m> in the topological space <m> \of{ X , \tau_{ 1 } } </m> with its closure <m> \Cl_{ \of{ X , \tau_{ 2 } } } \of{ U } </m> in the topological space <m> \of{ X , \tau_{ 2 } } </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        We observe that
+        
+        <md>
+          \Cl_{ \of{ X , \tau_{ 1 } } } \of{ U } = X \setminus \Int_{ \of{ X , \tau_{ 1 } } } \of{ X \setminus U } \supseteq X \setminus \Int_{ \of{ X , \tau_{ 2 } } } \of{ X \setminus U } = \Cl_{ \of{ X , \tau_{ 2 } } } \of{ U }
+        </md>
+        
+        by (1) of <xref ref="theorem-interior-closure-boundary"/> and (a) above.
+      </p>
+    </solution> -->
+  </task>
+</exercise>

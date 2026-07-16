@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-computing-subspace-topologies" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Computing subspace topologies
+  </title>
+  
+  <introduction>
+    <p>
+      Describe the subspace topology induced on the given subset of a topological space.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a set <m> X </m>. Verify that if <m> X </m> is equipped with the cofinite topology, then the subspace topology induced on <m> U </m> is the cofinite topology on <m> U </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Denote by <m> \tau_{ X } </m> and <m> \tau_{ U } </m> the cofinite topologies on <m> X </m> and <m> U </m>; we aim to show that <m> \rest{ \tau_{ X } }_{ U } = \tau_{ U } </m>.
+      </p>
+      
+      <p>
+        To that end, let <m> W \in \ps \of{ X } </m> be a subset of <m> X </m>, and suppose first that <m> W \in \tau_{ U } </m>. If <m> W = \emptyset </m>, then <m> W = U \cap \emptyset \in \rest{ \tau_{ X } }_{ U } </m>. On the other hand, if <m> W \neq \emptyset </m>, then <m> U \setminus W </m> is finite. We observe that <m> X \setminus \of{ U \setminus W } \in \tau_{ X } </m> is cofinite in <m> X </m>, and so
+        
+        <md>
+          <mrow>
+            W \amp = U \setminus \of{ U \setminus W } = \setmid{ u \in U }{ u \notin U \setminus W }
+          </mrow>
+          
+          <mrow>
+            \amp = \setmid{ x \in X }{ x \in U \textrm{ and } x \notin U \setminus W } = U \cap \setmid{ x \in X }{ x \notin U \setminus W }
+          </mrow>
+          
+          <mrow>
+            \amp = U \cap \of{ X \setminus \of{ U \setminus W } } \in \rest{ \tau_{ X } }_{ U }
+          </mrow>
+        </md>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> W \in \rest{ \tau_{ X } }_{ U } </m>. Then <m> W = U \cap V </m> for some <m> V \in \tau_{ X } </m>. If <m> V = \emptyset </m>, then
+        
+        <md>
+          W = U \cap V = U \cap \emptyset = \emptyset \in \tau_{ U }
+        </md>.
+        
+        On the other hand, if <m> V \neq \emptyset </m>, then <m> X \setminus V </m> is finite, and so (a) of <xref ref="problem-de-morgans-laws"/> implies that
+        
+        <md>
+          <mrow>
+            U \setminus W \amp = U \setminus \of{ U \cap V } = \of{ U \setminus U } \cup \of{ U \setminus V }
+          </mrow>
+          
+          <mrow>
+            \amp = \emptyset \cup \of{ U \setminus V } = U \setminus V \subseteq X \setminus V
+          </mrow>
+        </md>
+        
+        is finite, so that <m> W \in \tau_{ U } </m>.
+      </p>
+      
+      <p>
+        In summary, we have shown that <m> W \in \tau_{ U } </m> if and only if <m> W \in \rest{ \tau_{ X } }_{ U } </m>. We conclude that <m> \rest{ \tau_{ X } }_{ U } = \tau_{ U } </m>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a set <m> X </m>. Verify that if <m> X </m> is equipped with the cocountable topology, then the subspace topology induced on <m> U </m> is the cocountable topology on <m> U </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Denote by <m> \tau_{ X } </m> and <m> \tau_{ U } </m> the cocountable topologies on <m> X </m> and <m> U </m>; we aim to show that <m> \rest{ \tau_{ X } }_{ U } = \tau_{ U } </m>.
+      </p>
+      
+      <p>
+        To that end, let <m> W \in \ps \of{ X } </m> be a subset of <m> X </m>, and suppose first that <m> W \in \tau_{ U } </m>. If <m> W = \emptyset </m>, then <m> W = U \cap \emptyset \in \rest{ \tau_{ X } }_{ U } </m>. On the other hand, if <m> W \neq \emptyset </m>, then <m> U \setminus W </m> is countable. We observe that <m> X \setminus \of{ U \setminus W } \in \tau_{ X } </m> is cocountable in <m> X </m>, and so
+        
+        <md>
+          <mrow>
+            W \amp = U \setminus \of{ U \setminus W } = \setmid{ u \in U }{ u \notin U \setminus W }
+          </mrow>
+          
+          <mrow>
+            \amp = \setmid{ x \in X }{ x \in U \textrm{ and } x \notin U \setminus W } = U \cap \setmid{ x \in X }{ x \notin U \setminus W }
+          </mrow>
+          
+          <mrow>
+            \amp = U \cap \of{ X \setminus \of{ U \setminus W } } \in \rest{ \tau_{ X } }_{ U }
+          </mrow>
+        </md>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that <m> W \in \rest{ \tau_{ X } }_{ U } </m>. Then <m> W = U \cap V </m> for some <m> V \in \tau_{ X } </m>. If <m> V = \emptyset </m>, then
+        
+        <md>
+          W = U \cap V = U \cap \emptyset = \emptyset \in \tau_{ U }
+        </md>.
+        
+        On the other hand, if <m> V \neq \emptyset </m>, then <m> X \setminus V </m> is countable, and so (a) of <xref ref="problem-de-morgans-laws"/> implies that
+        
+        <md>
+          <mrow>
+            U \setminus W \amp = U \setminus \of{ U \cap V } = \of{ U \setminus U } \cup \of{ U \setminus V }
+          </mrow>
+          
+          <mrow>
+            \amp = \emptyset \cup \of{ U \setminus V } = U \setminus V \subseteq X \setminus V
+          </mrow>
+        </md>
+        
+        is countable, so that <m> W \in \tau_{ U } </m>.
+      </p>
+      
+      <p>
+        In summary, we have shown that <m> W \in \tau_{ U } </m> if and only if <m> W \in \rest{ \tau_{ X } }_{ U } </m>. We conclude that <m> \rest{ \tau_{ X } }_{ U } = \tau_{ U } </m>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a set <m> X </m>, and fix a point <m> x \in X </m>. Verify that if <m> X </m> is equipped with the particular point topology, then the subspace topology induced on <m> U </m> is either the particular point topology if <m> x \in U </m> or the discrete topology if <m> x \notin U </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Denote by <m> \tau_{ X } </m> the particular point topology. First suppose that <m> x \in U </m>, and denote by <m> \tau_{ U } </m> the particular point topology; we aim to show that <m> \rest{ \tau_{ X } }_{ U } = \tau_{ U } </m>.
+      </p>
+      
+      <p>
+        To that end, let <m> W \in \ps \of{ U } </m> be a subset of <m> U </m>, and suppose first that <m> W \in \tau_{ U } </m>. If <m> W = \emptyset </m>, then <m> W = U \cap \emptyset \in \rest{ \tau_{ X } }_{ U } </m>. On the other hand, if <m> W \neq \emptyset </m>, then <m> x \in W \in \tau_{ X } </m>, and so
+        
+        <md>
+          W = U \cap W \in \rest{ \tau_{ X } }_{ U }
+        </md>.
+      </p>
+      
+      <p>
+        Now suppose that <m> W \in \rest{ \tau_{ X } }_{ U } </m>. Then <m> W = U \cap V </m> for some <m> V \in \tau_{ X } </m>. If <m> V = \emptyset </m>, then
+        
+        <md>
+          W = U \cap V = U \cap \emptyset = \emptyset \in \tau_{ U }
+        </md>.
+        
+        On the other hand, if <m> V \neq \emptyset </m>, then <m> x \in V </m>, and so
+        
+        <md>
+          x \in U \cap V = W \in \tau_{ U }
+        </md>.
+      </p>
+      
+      <p>
+        In summary, we have shown that <m> W \in \rest{ \tau_{ X } }_{ U } </m> if and only if <m> W \in \tau_{ U } </m>. We conclude that <m> \rest{ \tau_{ X } }_{ U } = \tau_{ U } </m>.
+      </p>
+      
+      <p>
+        Now suppose that <m> x \notin U </m>. Then for any subset <m> W \subseteq U </m>, (a) of <xref ref="problem-distributivity-of-set-operations"/> implies that
+        
+        <md>
+          <mrow>
+            W \amp = U \cap W = \of{ U \cap W } \cup \emptyset
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ U \cap W } \cup \of{ U \cap \set{ x } } = U \cap \of{ W \cup \set{ x } } \in \rest{ \tau_{ X } }_{ U }
+          </mrow>
+        </md>.
+        
+        We conclude that <m> \rest{ \tau_{ X } }_{ U } = \ps \of{ U } = \top_{ U } </m> is the discrete topology on <m> U </m>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> U \subseteq X </m> be a subset of a set <m> X </m>, and fix a point <m> x \in X </m>. Verify that if <m> X </m> is equipped with the excluded point topology, then the subspace topology induced on <m> U </m> is either the excluded point topology if <m> x \in U </m> or the indiscrete topology if <m> x \notin U </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Denote by <m> \tau_{ X } </m> the excluded point topology. First suppose that <m> x \in U </m>, and denote by <m> \tau_{ U } </m> the excluded point topology; we aim to show that <m> \rest{ \tau_{ X } }_{ U } = \tau_{ U } </m>.
+      </p>
+      
+      <p>
+        To that end, let <m> W \in \ps \of{ U } </m> be a subset of <m> U </m>, and suppose first that <m> W \in \tau_{ U } </m>. If <m> W = U </m>, then <m> W = U \cap X \in \rest{ \tau_{ X } }_{ U } </m>. On the other hand, if <m> W \neq U </m>, then <m> x \notin W \in \tau_{ X } </m>, and so
+        
+        <md>
+          W = U \cap W \in \rest{ \tau_{ X } }_{ U }
+        </md>.
+      </p>
+      
+      <p>
+        Now suppose that <m> W \in \rest{ \tau_{ X } }_{ U } </m>. Then <m> W = U \cap V </m> for some <m> V \in \tau_{ X } </m>. If <m> V = X </m>, then
+        
+        <md>
+          W = U \cap X = U \in \tau_{ U }
+        </md>.
+        
+        On the other hand, if <m> V \neq X </m>, then <m> x \notin V </m>, and so
+        
+        <md>
+          x \notin U \cap V = W \in \tau_{ U }
+        </md>.
+      </p>
+      
+      <p>
+        In summary, we have shown that <m> W \in \rest{ \tau_{ X } }_{ U } </m> if and only if <m> W \in \tau_{ U } </m>. We conclude that <m> \rest{ \tau_{ X } }_{ U } = \tau_{ U } </m>.
+      </p>
+      
+      <p>
+        Now suppose that <m> x \notin U </m>. Then <m> x \notin W \in \tau_{ X } </m> for any subset <m> W \subseteq U </m>, and so
+        
+        <md>
+          W = U \cap W \in \rest{ \tau_{ X } }_{ U }
+        </md>.
+        
+        We conclude that <m> \rest{ \tau_{ X } }_{ U } = \ps \of{ U } = \top_{ U } </m> is the discrete topology on <m> U </m>.
+      </p>
+    </solution>
+  </exercise>
+</exercisegroup>

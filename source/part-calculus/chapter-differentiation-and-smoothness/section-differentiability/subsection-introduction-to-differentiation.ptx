@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-introduction-to-differentiation" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Introduction to Differentiation
+  </title>
+
+  <introduction>
+    <p>
+      A real-valued function defined on a subset of the real line is called <term> differentiable </term> at a point if it can be well-approximated by a linear function in a neighborhood of that point. In this case, the <term> derivative </term> of the function gives the slope of this local linear approximation.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-differentiability">
+    <title>
+      Differentiability
+    </title>
+    
+    <idx>
+      differentiability
+    </idx>
+    
+    <idx>
+      derivative
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> f' \of{ c } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the derivative of <m> f </m> at <m> c </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> f' </m>
+      </usage>
+      
+      <description>
+        <p>
+          the derivative of <m> f </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        A real-valued function <m> f \colon X \to \R </m> on a subset <m> X \subseteq \R </m> is called <term> differentiable </term> at a point <m> c \in X \cap X' </m> if there is a real number <m> D \in \R </m> so that for all positive real numbers <m> \epsilon \gt 0 </m>, there is a positive real number <m> \delta \gt 0 </m> so that
+        
+        <md>
+          \abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } - D } \lt \epsilon
+        </md>
+        
+        for all points <m> x \in X </m> so that <m> 0 \lt \abs{ x - c } \lt \delta </m>; that is, <m> f </m> is differentiable at <m> c </m> if <m> c </m> is a limit point of <m> X </m> in <m> \R </m> and
+        
+        <md>
+          \lim_{ x \to c }{ \frac{ f \of{ x } - f \of{ c } }{ x - c } } = D
+        </md>.
+        
+        In this case, the above limit is called the <term> derivative </term> of <m> f </m> at <m> c </m> and is denoted <m> f' \of{ c } = D </m>.
+      </p>
+      
+      <p>
+        The <term> differentiability locus </term> <m> \DL \of{ f } </m> of <m> f </m> is the subset of <m> X \cap X' </m> comprised by the points at which <m> f </m> is differentiable. The function <m> f </m> is called <term> differentiable </term> if <m> \DL \of{ f } = X \cap X' </m>. The <term> derivative </term> of <m> f </m> is the real-valued function <m> f' \colon \DL \of{ f } \to \R </m>.
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-differentiability">
+    <title>
+      Differentiability
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of differentiable functions:
+        
+        <ul>
+          <li>
+            <p>
+              Let <m> f \colon \R \to \R </m> be a constant function defined by the formula <m> f \of{ x } = a </m> for some real number <m> a \in \R </m>, and consider a point <m> c \in \R </m>. Since for any <m> \epsilon \gt 0 </m>,
+              
+              <md>
+                <mrow>
+                  \abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } - 0 } \amp = \abs{ \frac{ a - a }{ x - c } }
+                </mrow>
+                
+                <mrow>
+                  \amp = \abs{ \frac{ 0 }{ x - c } } = \abs{ 0 } = 0 \lt \epsilon
+                </mrow>
+              </md>
+              
+              for all points <m> x \in \R \setminus \set{ c } </m>, <m> f </m> is differentiable at <m> c </m>, with derivative <m> f' \of{ c } = 0 </m>. Since <m> c </m> was chosen arbitrarily, <m> f </m> has differentiability locus <m> \DL \of{ f } = \R = \R \cap \R' </m>, so that <m> f </m> is differentiable.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Let <m> g \colon \R \to \R </m> be a linear function defined by the formula <m> g \of{ x } = a x + b </m> for some real numbers <m> a , b \in \R </m>, and consider a point <m> c \in \R </m>. Since for any positive real number <m> \epsilon \gt 0 </m>,
+              
+              <md>
+                <mrow>
+                  \abs{ \frac{ g \of{ x } - g \of{ c } }{ x - c } - a } \amp = \abs{ \frac{ \of{ a x + b } - \of{ a c + b } }{ x - c } - a } = \abs{ \frac{ a x + b - a c - b }{ x - c } - a }
+                </mrow>
+                
+                <mrow>
+                  \amp = \abs{ \frac{ a x - a c }{ x - c } - a } = \abs{ \frac{ a \of{ x - c } }{ x - c } - a }
+                </mrow>
+                
+                <mrow>
+                  \amp = \abs{ a - a } = \abs{ 0 } = 0 \lt \epsilon
+                </mrow>
+              </md>
+              
+              for all points <m> x \in \R \setminus \set{ c } </m>, <m> f </m> is differentiable at <m> c </m>, with derivative <m> f' \of{ c } = 0 </m>. Since <m> c </m> was chosen arbitrarily, <m> g </m> has differentiability locus <m> \DL \of{ g } = \R = \R \cap \R' </m>, so that <m> g </m> is differentiable.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Let <m> h \colon \R \to \R </m> be the quadratic function defined by the formula <m> h \of{ x } = x^{ 2 } </m>, and consider a point <m> c \in \R </m>. For any positive real number <m> \epsilon \gt 0 </m>, let <m> \delta = \epsilon \gt 0 </m>. We observe that
+              
+              <md>
+                <mrow>
+                  \abs{ \frac{ h \of{ x } - h \of{ c } }{ x - c } - 2 c } \amp = \abs{ \frac{ x^{ 2 } - c^{ 2 } }{ x - c } - 2 c } = \abs{ \frac{ \of{ x + c } \of{ x - c } }{ x - c } - 2 c }
+                </mrow>
+                
+                <mrow>
+                  \amp = \abs{ x + c - 2 c } = \abs{ x - c } \lt \delta = \epsilon
+                </mrow>
+              </md>
+              
+              for all points <m> x \in \R </m> so that <m> 0 \lt \abs{ x - c } \lt \delta </m>. We conclude that <m> h </m> is differentiable at <m> c </m>, with derivative <m> h' \of{ c } = 2 c </m>. Since <m> c </m> was chosen arbitrarily, <m> h </m> has differentiability locus <m> \DL \of{ h } = \R = \R \cap \R' </m>, so that <m> h </m> is differentiable.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    Extensions of the above examples can be used to compute the derivatives of a plethora of differentiable functions. Specifically, we will shortly see how to compute the derivative of a complicated function by breaking it down into smaller differentiable pieces. First, however, we observe that differentiability at a point is a stronger condition than continuity at that point.
+  </p>
+
+  <lemma xml:id="lemma-differentiability-implies-continuity">
+    <title>
+      Differentiability implies continuity
+    </title>
+    
+    <statement>
+      <p>
+        A real-valued function <m> f \colon X \to \R </m> on a subset <m> X \subseteq \R </m> is continuous at every point <m> c \in \DL \of{ f } </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> f \colon X \to \R </m> be a real-valued function on a subset <m> X \subseteq \R </m>, and suppose that <m> f </m> is differentiable at a point <m> c \in X </m>. Then there is a positive real number <m> \delta_{ f } \gt 0 </m> so that
+        
+        <md>
+          \abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } - f' \of{ c } } \lt 1
+        </md>
+        
+        for all points <m> x \in X </m> so that <m> 0 \lt \abs{ x - c } \lt \delta_{ f } </m>. Let <m> \epsilon \gt 0 </m> be a positive real number, and let
+        
+        <md>
+          \delta = \min \of{ \set{ \delta_{ f } , \frac{ \epsilon }{ 1 + \abs{ f' \of{ c } } } } } \gt 0
+        </md>.
+        
+        We observe that
+        
+        <md>
+          <mrow>
+            \abs{ f \of{ x } - f \of{ c } } \amp = \abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } } \cdot \abs{ x - c } = \abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } - f' \of{ c } + f' \of{ c } } \cdot \abs{ x - c }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \of{ \abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } - f' \of{ c } } + \abs{ f' \of{ c } } } \abs{ x - c }
+          </mrow>
+          
+          <mrow>
+            \amp \lt \of{ 1 + \abs{ f' \of{ c } } } \delta \lt \of{ 1 + \abs{ f' \of{ c } } } \of{ \frac{ \epsilon }{ 1 + \abs{ f' \of{ c } } } } = \epsilon
+          </mrow>
+        </md>
+        
+        for any point <m> x \in X </m> so that <m> 0 \lt \abs{ x - c } \lt \delta </m>, and so we conclude that <m> f </m> is continuous at <m> c </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <p>
+    While differentiable functions are continuous, continuous functions need not be differentiable. For example, the absolute value function <m> \abs{ x } </m> is continuous, but <m> \abs{ x } </m> is not differentiable at the point <m> x = 0 </m>.
+  </p>
+  
+  <p>
+    We now observe that differentiability is preserved under the pointwise addition, subtraction, and multiplication of functions.
+  </p>
+  
+  <proposition xml:id="proposition-arithmetic-of-differentiable-functions">
+    <title>
+      Arithmetic of differentiable functions
+    </title>
+    
+    <statement>
+      <ol>
+        <li>
+          <title>
+            Addition of differentiable functions
+          </title>
+          
+          <p>
+            Let <m> f , g \colon X \to \R </m> be real-valued functions on a subset <m> X \subseteq \R </m>. For a point <m> c \in X </m>, if <m> f </m> and <m> g </m> are differentiable at <m> c </m>, then <m> f + g </m> is differentiable at <m> c </m>, and
+            
+            <md>
+              \of{ f + g }' \of{ c } = f' \of{ c } + g' \of{ c }
+            </md>.
+          </p>
+        </li>
+        
+        <li>
+          <title>
+            Multiplication of differentiable functions
+          </title>
+          
+          <p>
+            Let <m> f , g \colon X \to \R </m> be real-valued functions on a subset <m> X \subseteq \R </m>. For a point <m> c \in X </m>, if <m> f </m> and <m> g </m> are differentiable at <m> c </m>, then <m> f \cdot g </m> is differentiable at <m> c </m>, and
+            
+            <md>
+              \of{ f \cdot g }' \of{ c } = f' \of{ c } g \of{ c } + f \of{ c } g' \of{ c }
+            </md>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            Let <m> \epsilon \gt 0 </m> be a positive real number. Since <m> f </m> and <m> g </m> are differentiable at <m> c </m>, there are positive real numbers <m> \delta_{ f } , \delta_{ g } \gt 0 </m> so that
+            
+            <md>
+              \abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } - f' \of{ c } } \lt \frac{ \epsilon }{ 2 }
+            </md>
+            
+            for all points <m> x \in X </m> so that <m> 0 \lt \abs{ x - c } \lt \delta_{ f } </m>, and
+            
+            <md>
+              \abs{ \frac{ g \of{ x } - g \of{ c } }{ x - c } - g' \of{ c } } \lt \frac{ \epsilon }{ 2 }
+            </md>
+            
+            for all points <m> x \in X </m> so that <m> 0 \lt \abs{ x - c } \lt \delta_{ g } </m>. Let <m> \delta = \min \of{ \set{ \delta_{ f } , \delta_{ g } } } \gt 0 </m>, and note that
+            
+            <md>
+              <mrow>
+                \abs{ \frac{ \of{ f + g } \of{ x } - \of{ f + g } \of{ c } }{ x - c } - \of{ f' \of{ c } + g' \of{ c } } } \amp = \abs{ \frac{ f \of{ x } + g \of{ x } - f \of{ c } - g \of{ c } }{ x - c } - f' \of{ c } - g' \of{ c } }
+              </mrow>
+              
+              <mrow>
+                \amp = \abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } - f' \of{ c } + \frac{ g \of{ x } - g \of{ c } }{ x - c } - g' \of{ c } }
+              </mrow>
+              
+              <mrow>
+                \amp \leq \abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } - f' \of{ c } } + \abs{ \frac{ g \of{ x } - g \of{ c } }{ x - c } - g' \of{ c } }
+              </mrow>
+              
+              <mrow>
+                \amp \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+              </mrow>
+            </md>
+            
+            for all points <m> x \in X </m> so that <m> 0 \lt \abs{ x - c } \lt \delta </m>. Thus <m> f + g </m> is differentiable at <m> c </m>, with derivative
+            
+            <md>
+              \of{ f + g }' \of{ c } = f' \of{ c } + g' \of{ c }
+            </md>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Because utilizing the <m> \epsilon </m>-<m> \delta </m> characterization of convergence is slightly more complicated than it's worth, we compute the derivative directly. Since <m> f </m> and <m> g </m> are differentiable at <m> c </m>,
+            
+            <md>
+              \lim_{ x \to c }{ \frac{ f \of{ x } - f \of{ c } }{ x - c } } = f' \of{ c }
+            </md>
+            
+            and
+            
+            <md>
+              \lim_{ x \to c }{ \frac{ g \of{ x } - g \of{ c } }{ x - c } } = g' \of{ c }
+            </md>.
+            
+            Moreover, <xref ref="lemma-differentiability-implies-continuity"/> implies that <m> g </m> is continuous at <m> c </m>, so that
+            
+            <md>
+              \lim_{ x \to c }{ g \of{ x } } = g \of{ c }
+            </md>.
+            
+            We conclude that
+            
+            <md>
+              <mrow>
+                \lim_{ x \to c }{ \frac{ \of{ f \cdot g } \of{ x } - \of{ f \cdot g } \of{ c } }{ x - c } } \amp = \lim_{ x \to c }{ \frac{ f \of{ x } g \of{ x } - f \of{ c } g \of{ x } + f \of{ c } g \of{ x } - f \of{ c } g \of{ c } }{ x - c } }
+              </mrow>
+              
+              <mrow>
+                \amp = \lim_{ x \to c }{ \of{ \of{ \frac{ f \of{ x } - f \of{ c } }{ x - c } } g \of{ x } + f \of{ c } \of{ \frac{ g \of{ x } - g \of{ c } }{ x - c } } } }
+              </mrow>
+              
+              <mrow>
+                \amp = f' \of{ c } g \of{ c } + f \of{ c } g' \of{ c }
+              </mrow>
+            </md>.
+            
+            Thus <m> f \cdot g </m> is differentiable at <m> c </m>, with derivative <m> \of{ f \cdot g }' \of{ c } = f' \of{ c } g \of{ c } + f \of{ c } g' \of{ c } </m>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </proposition>
+  
+  <p>
+    In fact, modest hypotheses on the denominator of a quotient of differentiable functions implies that such a quotient is also differentiable. You will have an opportunity to prove this <term> quotient rule </term> in the problems for this section. First, however, we observe the following immediate corollary of <xref ref="proposition-arithmetic-of-differentiable-functions"/>:
+  </p>
+
+  <corollary xml:id="corollary-differentiability-of-polynomials">
+    <title>
+      Differentiability of polynomials
+    </title>
+    
+    <statement>
+      <p>
+        Polynomial functions are differentiable at every real number.
+      </p>
+    </statement>
+  </corollary>
+  
+  <p>
+    We can combine functions in more ways than just pointwise arithmetic. One of the fundamental such operations is composition. Here we see that the composition of two differentiable functions is also differentiable.
+  </p>
+  
+  <theorem xml:id="theorem-chain-rule">
+    <title>
+      Chain rule
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to \R </m> and <m> g \colon Y \to \R </m> be real-valued functions on subsets <m> X , Y \subseteq \R </m>, and suppose that <m> f \of{ X } \subseteq Y </m>. If <m> f </m> is differentiable at a point <m> c \in X </m> and <m> g </m> is differentiable at <m> f \of{ c } </m>, then <m> g \circ f \colon X \to \R </m> is differentiable at <m> c </m>, with derivative
+        
+        <md>
+          \of{ g \circ f }' \of{ c } = g' \of{ f \of{ c } } f' \of{ c }
+        </md>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        We first argue that
+        
+        <md>
+          \lim_{ x \to c }{ \frac{ g \of{ f \of{ x } } - g \of{ f \of{ c } } }{ f \of{ x } - f \of{ c } } } = g' \of{ f \of{ c } }
+        </md>.
+        
+        Indeed, let <m> \epsilon \gt 0 </m> be a positive real number. Since <m> g </m> is differentiable at <m> f \of{ c } </m>, there is a positive real number <m> \eta \gt 0 </m> so that
+        
+        <md>
+          \abs{ \frac{ g \of{ y } - g \of{ f \of{ c } } }{ y - f \of{ c } } - g' \of{ f \of{ c } } } \lt \epsilon
+        </md>
+        
+        for all points <m> y \in Y </m> so that <m> 0 \lt \abs{ y - f \of{ c } } \lt \eta </m>. Since <m> f </m> is differentiable at <m> c </m>, it is continuous at <m> c </m> by <xref ref="lemma-differentiability-implies-continuity"/>, and so there is a positive real number <m> \delta \gt 0 </m> so that <m> \abs{ f \of{ x } - f \of{ c } } \lt \eta </m> for all points <m> x \in X </m> so that <m> \abs{ x - c } \lt \delta </m>. In particular, if <m> 0 \lt \abs{ x - c } \lt \delta </m>, then
+        
+        <md>
+          \abs{ \frac{ g \of{ f \of{ x } } - g \of{ f \of{ c } } }{ f \of{ x } - f \of{ c } } - g' \of{ f \of{ c } } } \lt \epsilon
+        </md>.
+        
+        We conclude that
+        
+        <md>
+          \lim_{ x \to c }{ \frac{ g \of{ f \of{ x } } - g \of{ f \of{ c } } }{ f \of{ x } - f \of{ c } } } = g' \of{ f \of{ c } }
+        </md>.
+      </p>
+      
+      <p>
+        We now observe that
+        
+        <md>
+          <mrow>
+            \lim_{ x \to c }{ \frac{ \of{ g \circ f } \of{ x } - \of{ g \circ f } \of{ c } }{ x - c } } \amp = \lim_{ x \to c }{ \frac{ g \of{ f \of{ x } } - g \of{ f \of{ c } } }{ x - c } }
+          </mrow>
+          
+          <mrow>
+            \amp = \lim_{ x \to c }{ \of{ \frac{ g \of{ f \of{ x } } - g \of{ f \of{ c } } }{ f \of{ x } - f \of{ c } } } \of{ \frac{ f \of{ x } - f \of{ c } }{ x - c } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ \lim_{ x \to c }{ \frac{ g \of{ f \of{ x } } - g \of{ f \of{ c } } }{ f \of{ x } - f \of{ c } } } } \of{ \lim_{ x \to c }{ \frac{ f \of{ x } - f \of{ c } }{ x - c } } }
+          </mrow>
+          
+          <mrow>
+            \amp = g' \of{ f \of{ c } } f' \of{ c }
+          </mrow>
+        </md>,
+        
+        and so <m> g \circ f </m> is differentiable at <m> c </m>, with derivative <m> \of{ g \circ f }' \of{ c } = g' \of{ f \of{ c } } f' \of{ c } </m>.
+      </p>
+    </proof>
+  </theorem>
+
+  <conclusion>
+    <p>
+      The <xref ref="theorem-chain-rule" text="title"/> is one of the most important foundational results in differential calculus, and has important generalizations to the differentiability of maps between higher-dimensional Euclidean spaces.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->

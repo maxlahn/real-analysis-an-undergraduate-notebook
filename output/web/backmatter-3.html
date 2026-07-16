@@ -57,7 +57,7 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.13';
+eBookConfig.runestone_version = '8.1.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
@@ -487,6 +487,8 @@ eBookConfig.enable_chatcodes =  false;
 
 
   
+  \DeclareMathOperator{\DL}{ DL } 
+  
   \DeclareMathOperator{\diff}{ d } 
   
   \DeclareMathOperator{\pdiff}{ \partial } 
@@ -829,8 +831,11 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-differentiability.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Differentiability</span></a></div>
 <ul id="ptx-toc-group-section-differentiability" class="structural toc-item-list">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#exercises-differentiability" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#reading-questions-differentiability" class="internal"><span class="codenumber">5.1</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-differentiability.html#subsection-introduction-to-differentiation" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Introduction to Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-differentiability.html#subsection-regularity-and-smoothness" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Regularity and Smoothness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-differentiability.html#subsection-analysis-of-critical-points" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Analysis of Critical Points [Skip]</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#exercises-differentiability" class="internal"><span class="codenumber">5.1.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#reading-questions-differentiability" class="internal"><span class="codenumber">5.1.5</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -1741,6 +1746,54 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </td>
 <td><a href="section-continuity.html#definition-topological-continuity" class="xref" data-knowl="./knowl/notation/definition-topological-continuity.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.4.6: Continuity">Definition 4.4.6</a></td>
+</tr>
+<tr>
+<td><span class="process-math">\(f' \of{ c } \)</span></td>
+<td>
+<div class="para" id="definition-differentiability-4-2-1">the derivative of <span class="process-math">\(f \)</span> at <span class="process-math">\(c \)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-differentiability-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td><a href="section-differentiability.html#definition-differentiability" class="xref" data-knowl="./knowl/notation/definition-differentiability.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.1.1: Differentiability">Definition 5.1.1</a></td>
+</tr>
+<tr>
+<td><span class="process-math">\(f' \)</span></td>
+<td>
+<div class="para" id="definition-differentiability-5-2-1">the derivative of <span class="process-math">\(f \)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-differentiability-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td><a href="section-differentiability.html#definition-differentiability" class="xref" data-knowl="./knowl/notation/definition-differentiability.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.1.1: Differentiability">Definition 5.1.1</a></td>
+</tr>
+<tr>
+<td><span class="process-math">\(\DL^{ k } \of{ f } \)</span></td>
+<td>
+<div class="para" id="definition-higher-order-differentiability-5-2-1">the <span class="process-math">\(k \)</span>-times differentiability locus of <span class="process-math">\(f \)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-higher-order-differentiability-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td><a href="section-differentiability.html#definition-higher-order-differentiability" class="xref" data-knowl="./knowl/notation/definition-higher-order-differentiability.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.1.7: Higher order differentiability">Definition 5.1.7</a></td>
+</tr>
+<tr>
+<td><span class="process-math">\(f^{ \of{ k } } \)</span></td>
+<td>
+<div class="para" id="definition-higher-order-differentiability-6-2-1">the <span class="process-math">\(k \)</span>th derivative of <span class="process-math">\(f \)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-higher-order-differentiability-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td><a href="section-differentiability.html#definition-higher-order-differentiability" class="xref" data-knowl="./knowl/notation/definition-higher-order-differentiability.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.1.7: Higher order differentiability">Definition 5.1.7</a></td>
+</tr>
+<tr>
+<td><span class="process-math">\(\CDiff^{ k } \of{ X } \)</span></td>
+<td>
+<div class="para" id="definition-regularity-4-2-1">the set of <span class="process-math">\(k \)</span>-times continuously differentiable functions on <span class="process-math">\(X \)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-regularity-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td><a href="section-differentiability.html#definition-regularity" class="xref" data-knowl="./knowl/notation/definition-regularity.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.1.9: Regularity">Definition 5.1.9</a></td>
+</tr>
+<tr>
+<td><span class="process-math">\(\CDiff^{ \infty } \of{ X } \)</span></td>
+<td>
+<div class="para" id="definition-smoothness-3-2-1">the set of smooth functions on <span class="process-math">\(X \)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-smoothness-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td><a href="section-differentiability.html#definition-smoothness" class="xref" data-knowl="./knowl/notation/definition-smoothness.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.1.12: Smoothness">Definition 5.1.12</a></td>
 </tr>
 </table>
 <div class="autopermalink" aria-hidden="true" data-description="Appendix B: List of Symbols"><a tabindex="-1" href="#backmatter-3" title="Copy heading and permalink for Appendix B: List of Symbols" aria-label="Copy heading and permalink for Appendix B: List of Symbols">🔗</a></div>

@@ -7,7 +7,7 @@
 
   <introduction>
     <p>
-      Text before the first section.
+      In this chapter, we begin our study of calculus by exploring differentiation and differentiable functions. We will apply the point-set topological techniques developed in <xref ref="part-point-set-topology"/> to the well-known field of differential calculus, using limits to compute and analyze instantaneous rates of change of functions.
     </p>
   </introduction>
 

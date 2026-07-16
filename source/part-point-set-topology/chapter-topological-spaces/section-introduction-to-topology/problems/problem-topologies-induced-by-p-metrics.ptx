@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-topologies-induced-by-p-metrics" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Topologies induced by <m> p </m>-metrics
+  </title>
+  
+  <statement>
+    <p>
+      Show that for all <m> 1 \leq p \leq \infty </m>, the <m> p </m>-metrics <m> d_{ p } \colon \R^{ n } \times \R^{ n } \to \R </m> induce the same metric topology on <m> n </m>-dimensional real coordinate space <m> \R^{ n } </m>.
+    </p>
+  </statement>
+  
+  <hint>
+    <p>
+      You may find (b) of <xref ref="problem-norm-equivalence"/> useful.
+    </p>
+  </hint>
+  
+  <!-- <solution>
+    <p>
+      We will show that any <m> p </m>-metric induces the Euclidean topology <m> \tau_{ d } </m> on <m> \R^{ n } </m>. Indeed, fix <m> 1 \leq p \leq \infty </m>, and note that (b) of <xref ref="problem-norm-equivalence"/> implies that there are positive real numbers <m> A , B \in \opint{ 0 }{ \infty } </m> so that
+      
+      <md>
+        A \norm{ \vect{ v } }_{ p } \leq \norm{ \vect{ v } } \leq B \norm{ \vect{ v } }_{ p }
+      </md>
+      
+      for all vectors <m> \vect{ v } \in \R^{ n } </m>. let <m> U \subseteq \R^{ n } </m>, and suppose first that <m> U \in \tau_{ d_{ p } } </m> be open in the metric topology <m> \tau_{ d_{ p } } </m> induced by the <m> p </m>-metric <m> d_{ p } </m>. Then for each point <m> \vect{ u } \in U </m>, there is a positive real number <m> r \gt 0 </m> so that
+      
+      <md>
+        \setmid{ \vect{ x } \in \R^{ n } }{ \norm{ \vect{ x } - \vect{ u } }_{ p } \lt r } \subseteq U
+      </md>.
+      
+      We observe that
+      
+      <md>
+        \setmid{ \vect{ x } \in \R^{ n } }{ \norm{ \vect{ x } - \vect{ u } } \lt A r } \subseteq \setmid{ \vect{ x } \in \R^{ n } }{ \norm{ \vect{ x } - \vect{ u } }_{ p } \lt r } \subseteq U
+      </md>.
+      
+      Thus <m> U \in \tau_{ d } </m> is open in the Euclidean topology <m> \tau_{ d } </m>.
+    </p>
+    
+    <p>
+      Conversely, now suppose that <m> U \in \tau_{ d } </m> is open in the Euclidean metric. Then for each point <m> \vect{ u } \in U </m>, there is a positive real number <m> r \gt 0 </m> so that
+      
+      <md>
+        \setmid{ \vect{ x } \in \R^{ n } }{ \norm{ \vect{ x } - \vect{ u } } \lt r } \subseteq U
+      </md>.
+      
+      We observe that
+      
+      <md>
+        \setmid{ \vect{ x } \in \R^{ n } }{ \norm{ \vect{ x } - \vect{ u } }_{ p } \lt \frac{ r }{ B } } \subseteq \setmid{ \vect{ x } \in \R^{ n } }{ \norm{ \vect{ x } - \vect{ u } } \lt r } \subseteq U
+      </md>.
+      
+      Thus <m> U \in \tau_{ d_{ p } } </m> is open in the metric topology <m> \tau_{ d_{ p } } </m> induced by the <m> p </m>-metric <m> d_{ p } </m>. 
+    </p>
+    
+    <p>
+      In summary, we have shown that <m> U \in \tau_{ d_{ p } } </m> if and only if <m> U \in \tau_{ d } </m>, so that <m> \tau_{ d_{ p } } = \tau_{ d } </m>.
+    </p>
+  </solution> -->
+</exercise>

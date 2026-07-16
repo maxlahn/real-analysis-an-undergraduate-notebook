@@ -301,7 +301,7 @@
         Fix a subset <m> U \subseteq X </m> of a topological space <m> \of{ X , \tau } </m>. Then the collection
         
         <md>
-          \setmid{ U \cap V \in \ps{ X } }{ V \in \tau }
+          \setmid{ U \cap V \in \ps \of{ X } }{ V \in \tau }
         </md>
         
         is a topology on <m> U </m>.
@@ -313,7 +313,7 @@
         Denote by <m> \tau' </m> the collection
         
         <md>
-          \tau' = \setmid{ U \cap V \in \ps{ X } }{ V \in \tau }
+          \tau' = \setmid{ U \cap V \in \ps \of{ X } }{ V \in \tau }
         </md>.
         
         Since <m> \tau </m> is non-degenerate, <m> \emptyset , X \in \tau </m> are open in <m> X </m>, and so
@@ -399,7 +399,7 @@
         The <term> subspace topology </term> <m> \rest{ \tau }_{ U } </m> induced on a subset <m> U \subseteq X </m> of a topological space <m> \of{ X , \tau } </m> is the collection
         
         <md>
-          \rest{ \tau }_{ U } = \setmid{ U \cap V \in \ps{ X } }{ V \in \tau }
+          \rest{ \tau }_{ U } = \setmid{ U \cap V \in \ps \of{ X } }{ V \in \tau }
         </md>.
         
         This collection <m> \rest{ \tau }_{ U } </m> is a topology on <m> U </m> by <xref ref="lemma-subspace-topology"/>, and the topological space <m> \of{ U , \rest{ \tau }_{ U } } </m> is called a <term> (topological) subspace </term> of <m> \of{ X , \tau } </m>. 

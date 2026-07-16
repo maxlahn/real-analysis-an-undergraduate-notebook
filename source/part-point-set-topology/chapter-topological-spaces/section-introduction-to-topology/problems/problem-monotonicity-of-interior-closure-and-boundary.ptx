@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-monotonicity-of-interior-closure-and-boundary" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Monotonicity of interior, closure, and boundary
+  </title>
+  
+  <introduction>
+    <p>
+      Fix subsets <m> U , V \subseteq X </m> of a topological space <m> \of{ X , \tau } </m>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that if <m> U \subseteq V </m>, then <m> \Int \of{ U } \subseteq \Int \of{ V } </m> and <m> \Cl \of{ U } \subseteq \Cl \of{ V } </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        Let <m> \mathcal{ O }_{ U } </m> and <m> \mathcal{ O }_{ V } </m> denote the collections of open sets in <m> X </m> which are contained in <m> U </m> and <m> V </m>, respectively. Since <m> U \subseteq V </m>, <m> \mathcal{ O }_{ U } \subseteq \mathcal{ O }_{ V } </m>, and so (1) of <xref ref="theorem-interior-closure-boundary"/> implies that
+        
+        <md>
+          \Int \of{ U } = \bigcup_{ W \in \mathcal{ O }_{ U } }{ W } \subseteq \bigcup_{ W \in \mathcal{ O }_{ V } }{ W } = \Int \of{ V }
+        </md>.
+      </p>
+      
+      <p>
+        Similarly, let <m> \mathcal{ C }_{ U } </m> and <m> \mathcal{ C }_{ V } </m> denote the collections of closed sets in <m> X </m> which contain <m> U </m> and <m> V </m>, respectively. Since <m> U \subseteq V </m>, <m> \mathcal{ O }_{ U } \supseteq \mathcal{ O }_{ V } </m>, and so (2) of <xref ref="theorem-interior-closure-boundary"/> implies that
+        
+        <md>
+          \Cl \of{ U } = \bigcap_{ W \in \mathcal{ C }_{ U } }{ W } \subseteq \bigcap_{ W \in \mathcal{ C }_{ V } }{ W } = \Cl \of{ V }
+        </md>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Give concrete examples so that <m> A \subsetneq B </m> but <m> \Int \of{ A } = \Int \of{ B } </m> and <m> \Cl \of{ A } = \Cl \of{ B } </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        If <m> \of{ X , \tau } = \of{ \R , \tau_{ d } } </m> is the real line, then we may choose <m> A = \opint{ 0 }{ 1 } </m> and <m> B = \clint{ 0 }{ 1 } </m>. Indeed, <m> A \subsetneq B </m>, but
+        
+        <md>
+          \Int \of{ A } = \Int \of{ B } = \opint{ 0 }{ 1 }
+        </md>,
+        
+        and
+        
+        <md>
+          \Cl \of{ A } = \Cl \of{ B } = \clint{ 0 }{ 1 }
+        </md>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Give concrete examples so that <m> A \subseteq B </m> but <m> \Bd \of{ A } \not \subseteq \Bd \of{ B } </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        If <m> \of{ X , \tau } = \of{ \R , \tau_{ d } } </m> is the real line, then we may choose <m> A = \clint{ 0 }{ 1 } </m> and <m> B = \clint{ 0 }{ 2 } </m>. Indeed, <m> A \subseteq B </m>, but <m> \Bd \of{ A } = \set{ 0 , 1 } </m> and <m> \Bd \of{ B } = \set{ 0 , 2 } </m>.
+      </p>
+    </solution> -->
+  </task>
+</exercise>

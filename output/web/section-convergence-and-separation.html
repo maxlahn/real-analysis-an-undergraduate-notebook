@@ -57,7 +57,7 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.13';
+eBookConfig.runestone_version = '8.1.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
@@ -487,6 +487,8 @@ eBookConfig.enable_chatcodes =  false;
 
 
   
+  \DeclareMathOperator{\DL}{ DL } 
+  
   \DeclareMathOperator{\diff}{ d } 
   
   \DeclareMathOperator{\pdiff}{ \partial } 
@@ -829,8 +831,11 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-differentiability.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Differentiability</span></a></div>
 <ul id="ptx-toc-group-section-differentiability" class="structural toc-item-list">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#exercises-differentiability" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#reading-questions-differentiability" class="internal"><span class="codenumber">5.1</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-differentiability.html#subsection-introduction-to-differentiation" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Introduction to Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-differentiability.html#subsection-regularity-and-smoothness" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Regularity and Smoothness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-differentiability.html#subsection-analysis-of-critical-points" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Analysis of Critical Points [Skip]</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#exercises-differentiability" class="internal"><span class="codenumber">5.1.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#reading-questions-differentiability" class="internal"><span class="codenumber">5.1.5</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -1476,8 +1481,23 @@ X \setminus \of{ U \cap V } = \of{ X \setminus U } \cup \of{ X \setminus V }
 <section class="introduction" id="problems-convergence-and-separation-2">
 <div class="para" id="problems-convergence-and-separation-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-convergence-and-separation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="problems-convergence-and-separation-3">
-<div class="para" id="problems-convergence-and-separation-3-1">In-depth solutions to these problems are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-convergence-and-separation-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="exercise exercise-like" id="problem-net-convergence-and-subspaces"><h3 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Net convergence and subspaces.</span>
+</h3>
+<div class="para" id="problem-net-convergence-and-subspaces-2-1">Let <span class="process-math">\(U \subseteq X \)</span> be a subset of a topological space <span class="process-math">\(\of{ X , \tau } \text{,}\)</span> and consider a net <span class="process-math">\(\of{ u_{ \alpha } }_{ \alpha \in A } \)</span> of points <span class="process-math">\(u_{ \alpha } \in U \)</span> indexed by an upwards directed set <span class="process-math">\(\of{ A , \precsim } \text{.}\)</span> Prove that for a point <span class="process-math">\(u \in U \text{,}\)</span> <span class="process-math">\(\of{ u_{ \alpha } }_{ \alpha \in A } \)</span> converges upwards to <span class="process-math">\(u \)</span> as a net in <span class="process-math">\(X \)</span> if and only if it converges upwards to <span class="process-math">\(u \)</span> as a net in <span class="process-math">\(U \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-net-convergence-and-subspaces-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="problem-net-convergence-and-subspaces-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="problem-net-convergence-and-subspaces-3-1">What are the neighborhoods of <span class="process-math">\(u \)</span> in the subspace <span class="process-math">\(\of{ U , \rest{ \tau }_{ U } } \text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-net-convergence-and-subspaces-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 4.3.4.1.1"><a tabindex="-1" href="#problem-net-convergence-and-subspaces-3" title="Copy heading and permalink for Hint 4.3.4.1.1" aria-label="Copy heading and permalink for Hint 4.3.4.1.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Problem 4.3.4.1: Net convergence and subspaces"><a tabindex="-1" href="#problem-net-convergence-and-subspaces" title="Copy heading and permalink for Problem 4.3.4.1: Net convergence and subspaces" aria-label="Copy heading and permalink for Problem 4.3.4.1: Net convergence and subspaces">🔗</a></div>
+</article>
+<section class="conclusion" id="problems-convergence-and-separation-4">
+<div class="para" id="problems-convergence-and-separation-4-1">In-depth solutions to these problems are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-convergence-and-separation-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 4.3.4: Problems"><a tabindex="-1" href="#problems-convergence-and-separation" title="Copy heading and permalink for Reading Questions 4.3.4: Problems" aria-label="Copy heading and permalink for Reading Questions 4.3.4: Problems">🔗</a></div>
 </section><div class="autopermalink" aria-hidden="true" data-description="Section 4.3: Convergence and Separation"><a tabindex="-1" href="#section-convergence-and-separation" title="Copy heading and permalink for Section 4.3: Convergence and Separation" aria-label="Copy heading and permalink for Section 4.3: Convergence and Separation">🔗</a></div>
 </section>

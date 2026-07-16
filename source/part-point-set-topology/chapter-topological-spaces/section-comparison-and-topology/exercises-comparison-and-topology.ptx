@@ -11,7 +11,11 @@
     </p>
   </introduction>
   
-  <!-- <xi:include href="./exercises/exercise-TITLE.ptx"/> -->
+  <xi:include href="./exercises/exercise-comparison-of-topologies-on-r.ptx"/>
+  
+  <xi:include href="./exercises/exercise-unions-of-topologies.ptx"/>
+  
+  <xi:include href="./exercises/exercise-from-subbase-to-topology.ptx"/>
 
   <conclusion>
     <p>

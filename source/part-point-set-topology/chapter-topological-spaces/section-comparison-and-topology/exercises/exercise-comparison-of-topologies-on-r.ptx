@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="exercise-comparison-of-topologies-on-r" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Comparison of topologies on <m> \R </m>
+  </title>
+  
+  <statement>
+    <p>
+      Compare the following topologies on the real numbers <m> \R </m>: the indiscrete topology <m> \bot_{ \R } </m>; the discrete topology <m> \top_{ \R } </m>; the Euclidean topology <m> \tau_{ d } </m>; the cofinite topology <m> \tau_{ 1 } </m>; the cocountable topology <m> \tau_{ 2 } </m>; the particular point topology <m> \tau_{ 3 } </m> specified with particular point <m> 0 \in \R </m>; and the excluded point topology <m> \tau_{ 4 } </m> specified with excluded point <m> 0 \in \R </m>.
+    </p>
+  </statement>
+  
+  <answer>
+    <p>
+      We observe that all comparison relationships can be summarized by
+      
+      <md>
+        <mrow>
+          \bot_{ \R } \amp \subseteq \tau_{ 1 } \subseteq \tau_{ 2 } \subseteq \top_{ \R }
+        </mrow>
+        
+        <mrow>
+          \bot_{ \R } \amp \subseteq \tau_{ 1 } \subseteq \tau_{ d } \subseteq \top_{ \R }
+        </mrow>
+        
+        <mrow>
+          \bot_{ \R } \amp \subseteq \tau_{ 3 } \subseteq \top_{ \R }
+        </mrow>
+        
+        <mrow>
+          \bot_{ \R } \amp \subseteq \tau_{ 4 } \subseteq \top_{ \R }
+        </mrow>
+      </md>.
+    </p>
+  </answer>
+</exercise>
