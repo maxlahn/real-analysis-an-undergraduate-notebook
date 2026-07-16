@@ -57,7 +57,7 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.13';
+eBookConfig.runestone_version = '8.1.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
@@ -487,6 +487,8 @@ eBookConfig.enable_chatcodes =  false;
 
 
   
+  \DeclareMathOperator{\DL}{ DL } 
+  
   \DeclareMathOperator{\diff}{ d } 
   
   \DeclareMathOperator{\pdiff}{ \partial } 
@@ -829,8 +831,11 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-differentiability.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Differentiability</span></a></div>
 <ul id="ptx-toc-group-section-differentiability" class="structural toc-item-list">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#exercises-differentiability" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#reading-questions-differentiability" class="internal"><span class="codenumber">5.1</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-differentiability.html#subsection-introduction-to-differentiation" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Introduction to Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-differentiability.html#subsection-regularity-and-smoothness" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Regularity and Smoothness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-differentiability.html#subsection-analysis-of-critical-points" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Analysis of Critical Points [Skip]</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#exercises-differentiability" class="internal"><span class="codenumber">5.1.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#reading-questions-differentiability" class="internal"><span class="codenumber">5.1.5</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -1594,7 +1599,7 @@ T = \setmid{ n \in \N }{ n = 2 k \textrm{ for some } k \in \N } = \set{ 0 , 2 , 
 <div class="para" id="problems-what-is-a-set-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-what-is-a-set-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <article class="exercise exercise-like" id="problem-distributivity-of-set-operations"><h3 class="heading">
-<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The distributive properties of set operations.</span>
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Distributivity of set operations.</span>
 </h3>
 <article class="task exercise-like" id="problem-distributivity-of-set-operations-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="problem-distributivity-of-set-operations-3-1-1">Prove that <span class="process-math">\(S \cap \of{ T \cup U } = \of{ S \cap T } \cup \of{ S \cap U } \)</span> for all sets <span class="process-math">\(S \text{,}\)</span> <span class="process-math">\(T \text{,}\)</span> and <span class="process-math">\(U \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-distributivity-of-set-operations-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1610,7 +1615,7 @@ T = \setmid{ n \in \N }{ n = 2 k \textrm{ for some } k \in \N } = \set{ 0 , 2 , 
 <div class="para" id="problem-distributivity-of-set-operations-5-1">Taken together, these results are called the <dfn class="terminology">distributive properties</dfn> of the set operations.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-distributivity-of-set-operations-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Problem 1.1.5.1: The distributive properties of set operations"><a tabindex="-1" href="#problem-distributivity-of-set-operations" title="Copy heading and permalink for Problem 1.1.5.1: The distributive properties of set operations" aria-label="Copy heading and permalink for Problem 1.1.5.1: The distributive properties of set operations">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Problem 1.1.5.1: Distributivity of set operations"><a tabindex="-1" href="#problem-distributivity-of-set-operations" title="Copy heading and permalink for Problem 1.1.5.1: Distributivity of set operations" aria-label="Copy heading and permalink for Problem 1.1.5.1: Distributivity of set operations">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="problem-de-morgans-laws"><h3 class="heading">
 <span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">De Morgan’s laws.</span>

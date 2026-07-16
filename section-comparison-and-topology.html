@@ -57,7 +57,7 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.13';
+eBookConfig.runestone_version = '8.1.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
@@ -487,6 +487,8 @@ eBookConfig.enable_chatcodes =  false;
 
 
   
+  \DeclareMathOperator{\DL}{ DL } 
+  
   \DeclareMathOperator{\diff}{ d } 
   
   \DeclareMathOperator{\pdiff}{ \partial } 
@@ -829,8 +831,11 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-differentiability.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Differentiability</span></a></div>
 <ul id="ptx-toc-group-section-differentiability" class="structural toc-item-list">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#exercises-differentiability" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#reading-questions-differentiability" class="internal"><span class="codenumber">5.1</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-differentiability.html#subsection-introduction-to-differentiation" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Introduction to Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-differentiability.html#subsection-regularity-and-smoothness" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Regularity and Smoothness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-differentiability.html#subsection-analysis-of-critical-points" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Analysis of Critical Points [Skip]</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#exercises-differentiability" class="internal"><span class="codenumber">5.1.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#reading-questions-differentiability" class="internal"><span class="codenumber">5.1.5</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -1226,8 +1231,38 @@ x \in \bigcap_{ k = 1 }^{ n }{ S_{ k } } \subseteq U
 <section class="introduction" id="exercises-comparison-and-topology-2">
 <div class="para" id="exercises-comparison-and-topology-2-1">The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-comparison-and-topology-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="exercises-comparison-and-topology-3">
-<div class="para" id="exercises-comparison-and-topology-3-1">Short answers and/or in-depth solutions to these exercises are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-comparison-and-topology-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="exercise exercise-like" id="exercise-comparison-of-topologies-on-r"><h3 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comparison of topologies on <span class="process-math">\(\R \)</span>.</span>
+</h3>
+<div class="para" id="exercise-comparison-of-topologies-on-r-2-1">Compare the following topologies on the real numbers <span class="process-math">\(\R \text{:}\)</span> the indiscrete topology <span class="process-math">\(\bot_{ \R } \text{;}\)</span> the discrete topology <span class="process-math">\(\top_{ \R } \text{;}\)</span> the Euclidean topology <span class="process-math">\(\tau_{ d } \text{;}\)</span> the cofinite topology <span class="process-math">\(\tau_{ 1 } \text{;}\)</span> the cocountable topology <span class="process-math">\(\tau_{ 2 } \text{;}\)</span> the particular point topology <span class="process-math">\(\tau_{ 3 } \)</span> specified with particular point <span class="process-math">\(0 \in \R \text{;}\)</span> and the excluded point topology <span class="process-math">\(\tau_{ 4 } \)</span> specified with excluded point <span class="process-math">\(0 \in \R \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-comparison-of-topologies-on-r-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 4.2.4.1: Comparison of topologies on  \R "><a tabindex="-1" href="#exercise-comparison-of-topologies-on-r" title="Copy heading and permalink for Exercise 4.2.4.1: Comparison of topologies on  \R " aria-label="Copy heading and permalink for Exercise 4.2.4.1: Comparison of topologies on  \R ">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-unions-of-topologies"><h3 class="heading">
+<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Unions of topologies.</span>
+</h3>
+<div class="para" id="exercise-unions-of-topologies-2-1">Give an example of two topologies on a set whose union is not a topology on that set.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-unions-of-topologies-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 4.2.4.2: Unions of topologies"><a tabindex="-1" href="#exercise-unions-of-topologies" title="Copy heading and permalink for Exercise 4.2.4.2: Unions of topologies" aria-label="Copy heading and permalink for Exercise 4.2.4.2: Unions of topologies">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-from-subbase-to-topology"><h3 class="heading">
+<span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">From subbase to topology.</span>
+</h3>
+<div class="para logical" id="exercise-from-subbase-to-topology-2-1">
+<div class="para">Let <span class="process-math">\(X = \set{ a , b , c , d } \text{,}\)</span> and consider the collection <span class="process-math">\(\mathcal{ S } \subseteq \ps \of{ X } \)</span> be the collection of subsets of <span class="process-math">\(X \)</span> defined by</div>
+<div class="displaymath process-math" id="exercise-from-subbase-to-topology-2-1-4">
+\begin{equation*}
+\mathcal{ S } = \set{ \set{ a , b } , \set{ b , c } , \set{ c , d } }\text{.}
+\end{equation*}
+</div>
+<div class="para">Compute explicitly the topology <span class="process-math">\(\tau = \gen{ \mathcal{ S } } \)</span> on <span class="process-math">\(X \)</span> generated by <span class="process-math">\(\mathcal{ S } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-from-subbase-to-topology-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 4.2.4.3: From subbase to topology"><a tabindex="-1" href="#exercise-from-subbase-to-topology" title="Copy heading and permalink for Exercise 4.2.4.3: From subbase to topology" aria-label="Copy heading and permalink for Exercise 4.2.4.3: From subbase to topology">🔗</a></div>
+</article>
+<section class="conclusion" id="exercises-comparison-and-topology-6">
+<div class="para" id="exercises-comparison-and-topology-6-1">Short answers and/or in-depth solutions to these exercises are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-comparison-and-topology-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><div class="autopermalink" aria-hidden="true" data-description="Exercises 4.2.4: Exercises"><a tabindex="-1" href="#exercises-comparison-and-topology" title="Copy heading and permalink for Exercises 4.2.4: Exercises" aria-label="Copy heading and permalink for Exercises 4.2.4: Exercises">🔗</a></div>
 </section>
 <section class="reading-questions" id="problems-comparison-and-topology">
@@ -1237,8 +1272,58 @@ x \in \bigcap_{ k = 1 }^{ n }{ S_{ k } } \subseteq U
 <section class="introduction" id="problems-comparison-and-topology-2">
 <div class="para" id="problems-comparison-and-topology-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-comparison-and-topology-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="problems-comparison-and-topology-3">
-<div class="para" id="problems-comparison-and-topology-3-1">In-depth solutions to these problems are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-comparison-and-topology-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="exercise exercise-like" id="problem-monotonicity-of-generated-topologies"><h3 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Monotonicity of generated topologies.</span>
+</h3>
+<div class="para" id="problem-monotonicity-of-generated-topologies-2-1">Fix collections <span class="process-math">\(\mathcal{ A } , \mathcal{ B } \subseteq \ps \of{ X } \)</span> of subsets of a set <span class="process-math">\(X \text{.}\)</span> Show that if <span class="process-math">\(\mathcal{ A } \subseteq \mathcal{ B } \text{,}\)</span> then <span class="process-math">\(\gen{ \mathcal{ A } } \subseteq \gen{ \mathcal{ B } } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-monotonicity-of-generated-topologies-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Problem 4.2.5.1: Monotonicity of generated topologies"><a tabindex="-1" href="#problem-monotonicity-of-generated-topologies" title="Copy heading and permalink for Problem 4.2.5.1: Monotonicity of generated topologies" aria-label="Copy heading and permalink for Problem 4.2.5.1: Monotonicity of generated topologies">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="problem-topological-comparison-and-interior-closure"><h3 class="heading">
+<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Topological comparison and interior/closure.</span>
+</h3>
+<div class="introduction" id="problem-topological-comparison-and-interior-closure-2">
+<div class="para" id="problem-topological-comparison-and-interior-closure-2-1">Fix two topologies <span class="process-math">\(\tau_{ 1 } , \tau_{ 2 } \in \Topol_{ X } \)</span> on a set <span class="process-math">\(X \text{,}\)</span> and suppose that <span class="process-math">\(\tau_{ 1 } \subseteq \tau_{ 2 } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-topological-comparison-and-interior-closure-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="problem-topological-comparison-and-interior-closure-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="problem-topological-comparison-and-interior-closure-3-1-1">For a subset <span class="process-math">\(U \text{,}\)</span> compare its interior <span class="process-math">\(\Int_{ \of{ X , \tau_{ 1 } } } \of{ U } \)</span> in the topological space <span class="process-math">\(\of{ X , \tau_{ 1 } } \)</span> with its interior <span class="process-math">\(\Int_{ \of{ X , \tau_{ 2 } } } \of{ U } \)</span> in the topological space <span class="process-math">\(\of{ X , \tau_{ 2 } } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-topological-comparison-and-interior-closure-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.2.5.2.a"><a tabindex="-1" href="#problem-topological-comparison-and-interior-closure-3" title="Copy heading and permalink for Task 4.2.5.2.a" aria-label="Copy heading and permalink for Task 4.2.5.2.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="problem-topological-comparison-and-interior-closure-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="problem-topological-comparison-and-interior-closure-4-1-1">For a subset <span class="process-math">\(U \text{,}\)</span> compare its closure <span class="process-math">\(\Cl_{ \of{ X , \tau_{ 1 } } } \of{ U } \)</span> in the topological space <span class="process-math">\(\of{ X , \tau_{ 1 } } \)</span> with its closure <span class="process-math">\(\Cl_{ \of{ X , \tau_{ 2 } } } \of{ U } \)</span> in the topological space <span class="process-math">\(\of{ X , \tau_{ 2 } } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-topological-comparison-and-interior-closure-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.2.5.2.b"><a tabindex="-1" href="#problem-topological-comparison-and-interior-closure-4" title="Copy heading and permalink for Task 4.2.5.2.b" aria-label="Copy heading and permalink for Task 4.2.5.2.b">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Problem 4.2.5.2: Topological comparison and interior/closure"><a tabindex="-1" href="#problem-topological-comparison-and-interior-closure" title="Copy heading and permalink for Problem 4.2.5.2: Topological comparison and interior/closure" aria-label="Copy heading and permalink for Problem 4.2.5.2: Topological comparison and interior/closure">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="problem-subbase-of-the-euclidean-topology"><h3 class="heading">
+<span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Subbase of the Euclidean topology.</span>
+</h3>
+<div class="para logical" id="problem-subbase-of-the-euclidean-topology-2-1">
+<div class="para">Consider the collections <span class="process-math">\(\mathcal{ U } \)</span> and <span class="process-math">\(\mathcal{ D } \)</span> of upwards- and downwards pointing rays in the real numbers <span class="process-math">\(\R \text{,}\)</span> respectively; that is,</div>
+<div class="displaymath process-math" id="problem-subbase-of-the-euclidean-topology-2-1-4">
+\begin{align*}
+\mathcal{ U } \amp = \setmid{ \opint{ a }{ \infty } \in \ps \of{ \R } }{ a \in \R }\\
+\mathcal{ D } \amp = \setmid{ \opint{ -\infty }{ b } \in \ps \of{ \R } }{ b \in \R }\text{.}
+\end{align*}
+</div>
+<div class="para">Show that <span class="process-math">\(\mathcal{ U } \cup \mathcal{ D } \)</span> is a subbase of the Euclidean topology <span class="process-math">\(\tau_{ d } \)</span> on <span class="process-math">\(\R \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-subbase-of-the-euclidean-topology-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="problem-subbase-of-the-euclidean-topology-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="problem-subbase-of-the-euclidean-topology-3-1">First argue that every open set in the real line <span class="process-math">\(\of{ \R , \tau_{ d } } \)</span> is a union of bounded open intervals. What do finite intersections of subbasic open sets (elements of <span class="process-math">\(\mathcal{ U } \cap \mathcal{ D } \)</span>) look like?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-subbase-of-the-euclidean-topology-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 4.2.5.3.1"><a tabindex="-1" href="#problem-subbase-of-the-euclidean-topology-3" title="Copy heading and permalink for Hint 4.2.5.3.1" aria-label="Copy heading and permalink for Hint 4.2.5.3.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Problem 4.2.5.3: Subbase of the Euclidean topology"><a tabindex="-1" href="#problem-subbase-of-the-euclidean-topology" title="Copy heading and permalink for Problem 4.2.5.3: Subbase of the Euclidean topology" aria-label="Copy heading and permalink for Problem 4.2.5.3: Subbase of the Euclidean topology">🔗</a></div>
+</article>
+<section class="conclusion" id="problems-comparison-and-topology-6">
+<div class="para" id="problems-comparison-and-topology-6-1">In-depth solutions to these problems are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-comparison-and-topology-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 4.2.5: Problems"><a tabindex="-1" href="#problems-comparison-and-topology" title="Copy heading and permalink for Reading Questions 4.2.5: Problems" aria-label="Copy heading and permalink for Reading Questions 4.2.5: Problems">🔗</a></div>
 </section><div class="autopermalink" aria-hidden="true" data-description="Section 4.2: Comparison and Topology"><a tabindex="-1" href="#section-comparison-and-topology" title="Copy heading and permalink for Section 4.2: Comparison and Topology" aria-label="Copy heading and permalink for Section 4.2: Comparison and Topology">🔗</a></div>
 </section>

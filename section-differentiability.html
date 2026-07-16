@@ -57,7 +57,7 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.13';
+eBookConfig.runestone_version = '8.1.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
@@ -487,6 +487,8 @@ eBookConfig.enable_chatcodes =  false;
 
 
   
+  \DeclareMathOperator{\DL}{ DL } 
+  
   \DeclareMathOperator{\diff}{ d } 
   
   \DeclareMathOperator{\pdiff}{ \partial } 
@@ -829,8 +831,11 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="section-differentiability.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Differentiability</span></a></div>
 <ul class="structural toc-item-list active" id="ptx-toc-group-section-differentiability">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#exercises-differentiability" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#reading-questions-differentiability" class="internal"><span class="codenumber">5.1</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-differentiability.html#subsection-introduction-to-differentiation" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Introduction to Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-differentiability.html#subsection-regularity-and-smoothness" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Regularity and Smoothness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-differentiability.html#subsection-analysis-of-critical-points" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Analysis of Critical Points [Skip]</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#exercises-differentiability" class="internal"><span class="codenumber">5.1.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#reading-questions-differentiability" class="internal"><span class="codenumber">5.1.5</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -940,32 +945,524 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Differentiability</span>
 </h1>
 <section class="introduction" id="section-differentiability-2">
-<div class="para" id="section-differentiability-2-1">Text before the first subsection.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-differentiability-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="section-differentiability-2-1">The fundamental object in differential calculus is the <dfn class="terminology">differentiable function</dfn> and its <dfn class="terminology">derivative</dfn>. In this section, we formally differentiability as a property of real-valued functions defined on subsets of the real line <span class="process-math">\(\R \text{.}\)</span> We will develop techniques of differentiation, compare the regularities of various functions, and begin local analysis of functions at their <dfn class="terminology">critical points</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-differentiability-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="section-differentiability-3">
-<div class="para" id="section-differentiability-3-1">Text after the last subsection.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-differentiability-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="subsection" id="subsection-introduction-to-differentiation">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Introduction to Differentiation</span>
+</h2>
+<section class="introduction" id="subsection-introduction-to-differentiation-2">
+<div class="para" id="subsection-introduction-to-differentiation-2-1">A real-valued function defined on a subset of the real line is called <dfn class="terminology">differentiable</dfn> at a point if it can be well-approximated by a linear function in a neighborhood of that point. In this case, the <dfn class="terminology">derivative</dfn> of the function gives the slope of this local linear approximation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-introduction-to-differentiation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="definition definition-like" id="definition-differentiability"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Differentiability.</span>
+</h3>
+<div class="para logical" id="definition-differentiability-6-1">
+<div class="para">A real-valued function <span class="process-math">\(f \colon X \to \R \)</span> on a subset <span class="process-math">\(X \subseteq \R \)</span> is called <dfn class="terminology">differentiable</dfn> at a point <span class="process-math">\(c \in X \cap X' \)</span> if there is a real number <span class="process-math">\(D \in \R \)</span> so that for all positive real numbers <span class="process-math">\(\epsilon \gt 0 \text{,}\)</span> there is a positive real number <span class="process-math">\(\delta \gt 0 \)</span> so that</div>
+<div class="displaymath process-math" id="definition-differentiability-6-1-8">
+\begin{equation*}
+\abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } - D } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all points <span class="process-math">\(x \in X \)</span> so that <span class="process-math">\(0 \lt \abs{ x - c } \lt \delta \text{;}\)</span> that is, <span class="process-math">\(f \)</span> is differentiable at <span class="process-math">\(c \)</span> if <span class="process-math">\(c \)</span> is a limit point of <span class="process-math">\(X \)</span> in <span class="process-math">\(\R \)</span> and</div>
+<div class="displaymath process-math" id="definition-differentiability-6-1-16">
+\begin{equation*}
+\lim_{ x \to c }{ \frac{ f \of{ x } - f \of{ c } }{ x - c } } = D\text{.}
+\end{equation*}
+</div>
+<div class="para">In this case, the above limit is called the <dfn class="terminology">derivative</dfn> of <span class="process-math">\(f \)</span> at <span class="process-math">\(c \)</span> and is denoted <span class="process-math">\(f' \of{ c } = D \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-differentiability-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="definition-differentiability-6-2">The <dfn class="terminology">differentiability locus</dfn> <span class="process-math">\(\DL \of{ f } \)</span> of <span class="process-math">\(f \)</span> is the subset of <span class="process-math">\(X \cap X' \)</span> comprised by the points at which <span class="process-math">\(f \)</span> is differentiable. The function <span class="process-math">\(f \)</span> is called <dfn class="terminology">differentiable</dfn> if <span class="process-math">\(\DL \of{ f } = X \cap X' \text{.}\)</span> The <dfn class="terminology">derivative</dfn> of <span class="process-math">\(f \)</span> is the real-valued function <span class="process-math">\(f' \colon \DL \of{ f } \to \R \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-differentiability-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 5.1.1: Differentiability"><a tabindex="-1" href="#definition-differentiability" title="Copy heading and permalink for Definition 5.1.1: Differentiability" aria-label="Copy heading and permalink for Definition 5.1.1: Differentiability">🔗</a></div>
+</article>
+<details id="example-differentiability" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Differentiability.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-differentiability-2-1">
+<div class="para">The following are examples of differentiable functions:</div>
+<ul class="disc" id="example-differentiability-2-1-1">
+<li id="example-differentiability-2-1-1-1">
+<div class="para logical" id="example-differentiability-2-1-1-1-1">
+<div class="para">Let <span class="process-math">\(f \colon \R \to \R \)</span> be a constant function defined by the formula <span class="process-math">\(f \of{ x } = a \)</span> for some real number <span class="process-math">\(a \in \R \text{,}\)</span> and consider a point <span class="process-math">\(c \in \R \text{.}\)</span> Since for any <span class="process-math">\(\epsilon \gt 0 \text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="example-differentiability-2-1-1-1-1-6">
+\begin{align*}
+\abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } - 0 } \amp = \abs{ \frac{ a - a }{ x - c } }\\
+\amp = \abs{ \frac{ 0 }{ x - c } } = \abs{ 0 } = 0 \lt \epsilon
+\end{align*}
+</div>
+<div class="para">for all points <span class="process-math">\(x \in \R \setminus \set{ c } \text{,}\)</span> <span class="process-math">\(f \)</span> is differentiable at <span class="process-math">\(c \text{,}\)</span> with derivative <span class="process-math">\(f' \of{ c } = 0 \text{.}\)</span> Since <span class="process-math">\(c \)</span> was chosen arbitrarily, <span class="process-math">\(f \)</span> has differentiability locus <span class="process-math">\(\DL \of{ f } = \R = \R \cap \R' \text{,}\)</span> so that <span class="process-math">\(f \)</span> is differentiable.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-differentiability-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-differentiability-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-differentiability-2-1-1-2">
+<div class="para logical" id="example-differentiability-2-1-1-2-1">
+<div class="para">Let <span class="process-math">\(g \colon \R \to \R \)</span> be a linear function defined by the formula <span class="process-math">\(g \of{ x } = a x + b \)</span> for some real numbers <span class="process-math">\(a , b \in \R \text{,}\)</span> and consider a point <span class="process-math">\(c \in \R \text{.}\)</span> Since for any positive real number <span class="process-math">\(\epsilon \gt 0 \text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="example-differentiability-2-1-1-2-1-6">
+\begin{align*}
+\abs{ \frac{ g \of{ x } - g \of{ c } }{ x - c } - a } \amp = \abs{ \frac{ \of{ a x + b } - \of{ a c + b } }{ x - c } - a } = \abs{ \frac{ a x + b - a c - b }{ x - c } - a }\\
+\amp = \abs{ \frac{ a x - a c }{ x - c } - a } = \abs{ \frac{ a \of{ x - c } }{ x - c } - a }\\
+\amp = \abs{ a - a } = \abs{ 0 } = 0 \lt \epsilon
+\end{align*}
+</div>
+<div class="para">for all points <span class="process-math">\(x \in \R \setminus \set{ c } \text{,}\)</span> <span class="process-math">\(f \)</span> is differentiable at <span class="process-math">\(c \text{,}\)</span> with derivative <span class="process-math">\(f' \of{ c } = 0 \text{.}\)</span> Since <span class="process-math">\(c \)</span> was chosen arbitrarily, <span class="process-math">\(g \)</span> has differentiability locus <span class="process-math">\(\DL \of{ g } = \R = \R \cap \R' \text{,}\)</span> so that <span class="process-math">\(g \)</span> is differentiable.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-differentiability-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-differentiability-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-differentiability-2-1-1-3">
+<div class="para logical" id="example-differentiability-2-1-1-3-1">
+<div class="para">Let <span class="process-math">\(h \colon \R \to \R \)</span> be the quadratic function defined by the formula <span class="process-math">\(h \of{ x } = x^{ 2 } \text{,}\)</span> and consider a point <span class="process-math">\(c \in \R \text{.}\)</span> For any positive real number <span class="process-math">\(\epsilon \gt 0 \text{,}\)</span> let <span class="process-math">\(\delta = \epsilon \gt 0 \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="example-differentiability-2-1-1-3-1-6">
+\begin{align*}
+\abs{ \frac{ h \of{ x } - h \of{ c } }{ x - c } - 2 c } \amp = \abs{ \frac{ x^{ 2 } - c^{ 2 } }{ x - c } - 2 c } = \abs{ \frac{ \of{ x + c } \of{ x - c } }{ x - c } - 2 c }\\
+\amp = \abs{ x + c - 2 c } = \abs{ x - c } \lt \delta = \epsilon
+\end{align*}
+</div>
+<div class="para">for all points <span class="process-math">\(x \in \R \)</span> so that <span class="process-math">\(0 \lt \abs{ x - c } \lt \delta \text{.}\)</span> We conclude that <span class="process-math">\(h \)</span> is differentiable at <span class="process-math">\(c \text{,}\)</span> with derivative <span class="process-math">\(h' \of{ c } = 2 c \text{.}\)</span> Since <span class="process-math">\(c \)</span> was chosen arbitrarily, <span class="process-math">\(h \)</span> has differentiability locus <span class="process-math">\(\DL \of{ h } = \R = \R \cap \R' \text{,}\)</span> so that <span class="process-math">\(h \)</span> is differentiable.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-differentiability-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-differentiability-2-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-differentiability-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 5.1.2: Differentiability"><a tabindex="-1" href="#example-differentiability" title="Copy heading and permalink for Example 5.1.2: Differentiability" aria-label="Copy heading and permalink for Example 5.1.2: Differentiability">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-introduction-to-differentiation-5">Extensions of the above examples can be used to compute the derivatives of a plethora of differentiable functions. Specifically, we will shortly see how to compute the derivative of a complicated function by breaking it down into smaller differentiable pieces. First, however, we observe that differentiability at a point is a stronger condition than continuity at that point.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-introduction-to-differentiation-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="lemma theorem-like" id="lemma-differentiability-implies-continuity"><h3 class="heading">
+<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Differentiability implies continuity.</span>
+</h3>
+<div class="para" id="lemma-differentiability-implies-continuity-2-1">A real-valued function <span class="process-math">\(f \colon X \to \R \)</span> on a subset <span class="process-math">\(X \subseteq \R \)</span> is continuous at every point <span class="process-math">\(c \in \DL \of{ f } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-differentiability-implies-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Lemma 5.1.3: Differentiability implies continuity"><a tabindex="-1" href="#lemma-differentiability-implies-continuity" title="Copy heading and permalink for Lemma 5.1.3: Differentiability implies continuity" aria-label="Copy heading and permalink for Lemma 5.1.3: Differentiability implies continuity">🔗</a></div>
+</article>
+<details id="lemma-differentiability-implies-continuity-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="lemma-differentiability-implies-continuity-3-1">
+<div class="para">Let <span class="process-math">\(f \colon X \to \R \)</span> be a real-valued function on a subset <span class="process-math">\(X \subseteq \R \text{,}\)</span> and suppose that <span class="process-math">\(f \)</span> is differentiable at a point <span class="process-math">\(c \in X \text{.}\)</span> Then there is a positive real number <span class="process-math">\(\delta_{ f } \gt 0 \)</span> so that</div>
+<div class="displaymath process-math" id="lemma-differentiability-implies-continuity-3-1-6">
+\begin{equation*}
+\abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } - f' \of{ c } } \lt 1
+\end{equation*}
+</div>
+<div class="para">for all points <span class="process-math">\(x \in X \)</span> so that <span class="process-math">\(0 \lt \abs{ x - c } \lt \delta_{ f } \text{.}\)</span> Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number, and let</div>
+<div class="displaymath process-math" id="lemma-differentiability-implies-continuity-3-1-10">
+\begin{equation*}
+\delta = \min \of{ \set{ \delta_{ f } , \frac{ \epsilon }{ 1 + \abs{ f' \of{ c } } } } } \gt 0\text{.}
+\end{equation*}
+</div>
+<div class="para">We observe that</div>
+<div class="displaymath process-math" id="lemma-differentiability-implies-continuity-3-1-11">
+\begin{align*}
+\abs{ f \of{ x } - f \of{ c } } \amp = \abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } } \cdot \abs{ x - c } = \abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } - f' \of{ c } + f' \of{ c } } \cdot \abs{ x - c }\\
+\amp \leq \of{ \abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } - f' \of{ c } } + \abs{ f' \of{ c } } } \abs{ x - c }\\
+\amp \lt \of{ 1 + \abs{ f' \of{ c } } } \delta \lt \of{ 1 + \abs{ f' \of{ c } } } \of{ \frac{ \epsilon }{ 1 + \abs{ f' \of{ c } } } } = \epsilon
+\end{align*}
+</div>
+<div class="para">for any point <span class="process-math">\(x \in X \)</span> so that <span class="process-math">\(0 \lt \abs{ x - c } \lt \delta \text{,}\)</span> and so we conclude that <span class="process-math">\(f \)</span> is continuous at <span class="process-math">\(c \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-differentiability-implies-continuity-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.1.3.1"><a tabindex="-1" href="#lemma-differentiability-implies-continuity-3" title="Copy heading and permalink for Proof 5.1.3.1" aria-label="Copy heading and permalink for Proof 5.1.3.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-introduction-to-differentiation-7">While differentiable functions are continuous, continuous functions need not be differentiable. For example, the absolute value function <span class="process-math">\(\abs{ x } \)</span> is continuous, but <span class="process-math">\(\abs{ x } \)</span> is not differentiable at the point <span class="process-math">\(x = 0 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-introduction-to-differentiation-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsection-introduction-to-differentiation-8">We now observe that differentiability is preserved under the pointwise addition, subtraction, and multiplication of functions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-introduction-to-differentiation-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-arithmetic-of-differentiable-functions"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Arithmetic of differentiable functions.</span>
+</h3>
+<ol class="decimal" id="proposition-arithmetic-of-differentiable-functions-2-1">
+<li id="proposition-arithmetic-of-differentiable-functions-2-1-1">
+<span class="heading li--heading"><span class="title li--heading-title">Addition of differentiable functions.</span></span>
+<div class="para logical" id="proposition-arithmetic-of-differentiable-functions-2-1-1-2">
+<div class="para">Let <span class="process-math">\(f , g \colon X \to \R \)</span> be real-valued functions on a subset <span class="process-math">\(X \subseteq \R \text{.}\)</span> For a point <span class="process-math">\(c \in X \text{,}\)</span> if <span class="process-math">\(f \)</span> and <span class="process-math">\(g \)</span> are differentiable at <span class="process-math">\(c \text{,}\)</span> then <span class="process-math">\(f + g \)</span> is differentiable at <span class="process-math">\(c \text{,}\)</span> and</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-differentiable-functions-2-1-1-2-9">
+\begin{equation*}
+\of{ f + g }' \of{ c } = f' \of{ c } + g' \of{ c }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-arithmetic-of-differentiable-functions-2-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1: Addition of differentiable functions"><a tabindex="-1" href="#proposition-arithmetic-of-differentiable-functions-2-1-1" title="Copy heading and permalink for Item 1: Addition of differentiable functions" aria-label="Copy heading and permalink for Item 1: Addition of differentiable functions">🔗</a></div>
+</li>
+<li id="proposition-arithmetic-of-differentiable-functions-2-1-2">
+<span class="heading li--heading"><span class="title li--heading-title">Multiplication of differentiable functions.</span></span>
+<div class="para logical" id="proposition-arithmetic-of-differentiable-functions-2-1-2-2">
+<div class="para">Let <span class="process-math">\(f , g \colon X \to \R \)</span> be real-valued functions on a subset <span class="process-math">\(X \subseteq \R \text{.}\)</span> For a point <span class="process-math">\(c \in X \text{,}\)</span> if <span class="process-math">\(f \)</span> and <span class="process-math">\(g \)</span> are differentiable at <span class="process-math">\(c \text{,}\)</span> then <span class="process-math">\(f \cdot g \)</span> is differentiable at <span class="process-math">\(c \text{,}\)</span> and</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-differentiable-functions-2-1-2-2-9">
+\begin{equation*}
+\of{ f \cdot g }' \of{ c } = f' \of{ c } g \of{ c } + f \of{ c } g' \of{ c }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-arithmetic-of-differentiable-functions-2-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2: Multiplication of differentiable functions"><a tabindex="-1" href="#proposition-arithmetic-of-differentiable-functions-2-1-2" title="Copy heading and permalink for Item 2: Multiplication of differentiable functions" aria-label="Copy heading and permalink for Item 2: Multiplication of differentiable functions">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 5.1.4: Arithmetic of differentiable functions"><a tabindex="-1" href="#proposition-arithmetic-of-differentiable-functions" title="Copy heading and permalink for Proposition 5.1.4: Arithmetic of differentiable functions" aria-label="Copy heading and permalink for Proposition 5.1.4: Arithmetic of differentiable functions">🔗</a></div>
+</article>
+<details id="proposition-arithmetic-of-differentiable-functions-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<ol class="decimal" id="proposition-arithmetic-of-differentiable-functions-3-1">
+<li id="proposition-arithmetic-of-differentiable-functions-3-1-1">
+<div class="para logical" id="proposition-arithmetic-of-differentiable-functions-3-1-1-1">
+<div class="para">Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Since <span class="process-math">\(f \)</span> and <span class="process-math">\(g \)</span> are differentiable at <span class="process-math">\(c \text{,}\)</span> there are positive real numbers <span class="process-math">\(\delta_{ f } , \delta_{ g } \gt 0 \)</span> so that</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-differentiable-functions-3-1-1-1-6">
+\begin{equation*}
+\abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } - f' \of{ c } } \lt \frac{ \epsilon }{ 2 }
+\end{equation*}
+</div>
+<div class="para">for all points <span class="process-math">\(x \in X \)</span> so that <span class="process-math">\(0 \lt \abs{ x - c } \lt \delta_{ f } \text{,}\)</span> and</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-differentiable-functions-3-1-1-1-9">
+\begin{equation*}
+\abs{ \frac{ g \of{ x } - g \of{ c } }{ x - c } - g' \of{ c } } \lt \frac{ \epsilon }{ 2 }
+\end{equation*}
+</div>
+<div class="para">for all points <span class="process-math">\(x \in X \)</span> so that <span class="process-math">\(0 \lt \abs{ x - c } \lt \delta_{ g } \text{.}\)</span> Let <span class="process-math">\(\delta = \min \of{ \set{ \delta_{ f } , \delta_{ g } } } \gt 0 \text{,}\)</span> and note that</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-differentiable-functions-3-1-1-1-13">
+\begin{align*}
+\abs{ \frac{ \of{ f + g } \of{ x } - \of{ f + g } \of{ c } }{ x - c } - \of{ f' \of{ c } + g' \of{ c } } } \amp = \abs{ \frac{ f \of{ x } + g \of{ x } - f \of{ c } - g \of{ c } }{ x - c } - f' \of{ c } - g' \of{ c } }\\
+\amp = \abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } - f' \of{ c } + \frac{ g \of{ x } - g \of{ c } }{ x - c } - g' \of{ c } }\\
+\amp \leq \abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } - f' \of{ c } } + \abs{ \frac{ g \of{ x } - g \of{ c } }{ x - c } - g' \of{ c } }\\
+\amp \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+\end{align*}
+</div>
+<div class="para">for all points <span class="process-math">\(x \in X \)</span> so that <span class="process-math">\(0 \lt \abs{ x - c } \lt \delta \text{.}\)</span> Thus <span class="process-math">\(f + g \)</span> is differentiable at <span class="process-math">\(c \text{,}\)</span> with derivative</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-differentiable-functions-3-1-1-1-18">
+\begin{equation*}
+\of{ f + g }' \of{ c } = f' \of{ c } + g' \of{ c }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-arithmetic-of-differentiable-functions-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#proposition-arithmetic-of-differentiable-functions-3-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="proposition-arithmetic-of-differentiable-functions-3-1-2">
+<div class="para logical" id="proposition-arithmetic-of-differentiable-functions-3-1-2-1">
+<div class="para">Because utilizing the <span class="process-math">\(\epsilon \)</span>-<span class="process-math">\(\delta \)</span> characterization of convergence is slightly more complicated than it’s worth, we compute the derivative directly. Since <span class="process-math">\(f \)</span> and <span class="process-math">\(g \)</span> are differentiable at <span class="process-math">\(c \text{,}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-differentiability-implies-continuity.html" id="proposition-arithmetic-of-differentiable-functions-3-1-2-1-6">
+\begin{equation*}
+\lim_{ x \to c }{ \frac{ f \of{ x } - f \of{ c } }{ x - c } } = f' \of{ c }
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-differentiability-implies-continuity.html" id="proposition-arithmetic-of-differentiable-functions-3-1-2-1-7">
+\begin{equation*}
+\lim_{ x \to c }{ \frac{ g \of{ x } - g \of{ c } }{ x - c } } = g' \of{ c }\text{.}
+\end{equation*}
+</div>
+<div class="para">Moreover, <a href="section-differentiability.html#lemma-differentiability-implies-continuity" class="xref" data-knowl="./knowl/xref/lemma-differentiability-implies-continuity.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 5.1.3: Differentiability implies continuity">Lemma 5.1.3 Differentiability implies continuity</a> implies that <span class="process-math">\(g \)</span> is continuous at <span class="process-math">\(c \text{,}\)</span> so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-differentiability-implies-continuity.html" id="proposition-arithmetic-of-differentiable-functions-3-1-2-1-11">
+\begin{equation*}
+\lim_{ x \to c }{ g \of{ x } } = g \of{ c }\text{.}
+\end{equation*}
+</div>
+<div class="para">We conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-differentiability-implies-continuity.html" id="proposition-arithmetic-of-differentiable-functions-3-1-2-1-12">
+\begin{align*}
+\lim_{ x \to c }{ \frac{ \of{ f \cdot g } \of{ x } - \of{ f \cdot g } \of{ c } }{ x - c } } \amp = \lim_{ x \to c }{ \frac{ f \of{ x } g \of{ x } - f \of{ c } g \of{ x } + f \of{ c } g \of{ x } - f \of{ c } g \of{ c } }{ x - c } }\\
+\amp = \lim_{ x \to c }{ \of{ \of{ \frac{ f \of{ x } - f \of{ c } }{ x - c } } g \of{ x } + f \of{ c } \of{ \frac{ g \of{ x } - g \of{ c } }{ x - c } } } }\\
+\amp = f' \of{ c } g \of{ c } + f \of{ c } g' \of{ c }\text{.}
+\end{align*}
+</div>
+<div class="para">Thus <span class="process-math">\(f \cdot g \)</span> is differentiable at <span class="process-math">\(c \text{,}\)</span> with derivative <span class="process-math">\(\of{ f \cdot g }' \of{ c } = f' \of{ c } g \of{ c } + f \of{ c } g' \of{ c } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-arithmetic-of-differentiable-functions-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#proposition-arithmetic-of-differentiable-functions-3-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.1.4.1"><a tabindex="-1" href="#proposition-arithmetic-of-differentiable-functions-3" title="Copy heading and permalink for Proof 5.1.4.1" aria-label="Copy heading and permalink for Proof 5.1.4.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-introduction-to-differentiation-10">In fact, modest hypotheses on the denominator of a quotient of differentiable functions implies that such a quotient is also differentiable. You will have an opportunity to prove this <dfn class="terminology">quotient rule</dfn> in the problems for this section. First, however, we observe the following immediate corollary of <a href="section-differentiability.html#proposition-arithmetic-of-differentiable-functions" class="xref" data-knowl="./knowl/xref/proposition-arithmetic-of-differentiable-functions.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 5.1.4: Arithmetic of differentiable functions">Proposition 5.1.4 Arithmetic of differentiable functions</a>:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-introduction-to-differentiation-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="corollary theorem-like" id="corollary-differentiability-of-polynomials"><h3 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Differentiability of polynomials.</span>
+</h3>
+<div class="para" id="corollary-differentiability-of-polynomials-2-1">Polynomial functions are differentiable at every real number.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-differentiability-of-polynomials-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Corollary 5.1.5: Differentiability of polynomials"><a tabindex="-1" href="#corollary-differentiability-of-polynomials" title="Copy heading and permalink for Corollary 5.1.5: Differentiability of polynomials" aria-label="Copy heading and permalink for Corollary 5.1.5: Differentiability of polynomials">🔗</a></div>
+</article>
+<div class="para" id="subsection-introduction-to-differentiation-12">We can combine functions in more ways than just pointwise arithmetic. One of the fundamental such operations is composition. Here we see that the composition of two differentiable functions is also differentiable.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-introduction-to-differentiation-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="theorem-chain-rule"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Chain rule.</span>
+</h3>
+<div class="para logical" id="theorem-chain-rule-2-1">
+<div class="para">Let <span class="process-math">\(f \colon X \to \R \)</span> and <span class="process-math">\(g \colon Y \to \R \)</span> be real-valued functions on subsets <span class="process-math">\(X , Y \subseteq \R \text{,}\)</span> and suppose that <span class="process-math">\(f \of{ X } \subseteq Y \text{.}\)</span> If <span class="process-math">\(f \)</span> is differentiable at a point <span class="process-math">\(c \in X \)</span> and <span class="process-math">\(g \)</span> is differentiable at <span class="process-math">\(f \of{ c } \text{,}\)</span> then <span class="process-math">\(g \circ f \colon X \to \R \)</span> is differentiable at <span class="process-math">\(c \text{,}\)</span> with derivative</div>
+<div class="displaymath process-math" id="theorem-chain-rule-2-1-11">
+\begin{equation*}
+\of{ g \circ f }' \of{ c } = g' \of{ f \of{ c } } f' \of{ c }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-chain-rule-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 5.1.6: Chain rule"><a tabindex="-1" href="#theorem-chain-rule" title="Copy heading and permalink for Theorem 5.1.6: Chain rule" aria-label="Copy heading and permalink for Theorem 5.1.6: Chain rule">🔗</a></div>
+</article>
+<details id="theorem-chain-rule-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="theorem-chain-rule-3-1">
+<div class="para">We first argue that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-differentiability-implies-continuity.html" id="theorem-chain-rule-3-1-1">
+\begin{equation*}
+\lim_{ x \to c }{ \frac{ g \of{ f \of{ x } } - g \of{ f \of{ c } } }{ f \of{ x } - f \of{ c } } } = g' \of{ f \of{ c } }\text{.}
+\end{equation*}
+</div>
+<div class="para">Indeed, let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Since <span class="process-math">\(g \)</span> is differentiable at <span class="process-math">\(f \of{ c } \text{,}\)</span> there is a positive real number <span class="process-math">\(\eta \gt 0 \)</span> so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-differentiability-implies-continuity.html" id="theorem-chain-rule-3-1-6">
+\begin{equation*}
+\abs{ \frac{ g \of{ y } - g \of{ f \of{ c } } }{ y - f \of{ c } } - g' \of{ f \of{ c } } } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all points <span class="process-math">\(y \in Y \)</span> so that <span class="process-math">\(0 \lt \abs{ y - f \of{ c } } \lt \eta \text{.}\)</span> Since <span class="process-math">\(f \)</span> is differentiable at <span class="process-math">\(c \text{,}\)</span> it is continuous at <span class="process-math">\(c \)</span> by <a href="section-differentiability.html#lemma-differentiability-implies-continuity" class="xref" data-knowl="./knowl/xref/lemma-differentiability-implies-continuity.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 5.1.3: Differentiability implies continuity">Lemma 5.1.3 Differentiability implies continuity</a>, and so there is a positive real number <span class="process-math">\(\delta \gt 0 \)</span> so that <span class="process-math">\(\abs{ f \of{ x } - f \of{ c } } \lt \eta \)</span> for all points <span class="process-math">\(x \in X \)</span> so that <span class="process-math">\(\abs{ x - c } \lt \delta \text{.}\)</span> In particular, if <span class="process-math">\(0 \lt \abs{ x - c } \lt \delta \text{,}\)</span> then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-differentiability-implies-continuity.html" id="theorem-chain-rule-3-1-18">
+\begin{equation*}
+\abs{ \frac{ g \of{ f \of{ x } } - g \of{ f \of{ c } } }{ f \of{ x } - f \of{ c } } - g' \of{ f \of{ c } } } \lt \epsilon\text{.}
+\end{equation*}
+</div>
+<div class="para">We conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-differentiability-implies-continuity.html" id="theorem-chain-rule-3-1-19">
+\begin{equation*}
+\lim_{ x \to c }{ \frac{ g \of{ f \of{ x } } - g \of{ f \of{ c } } }{ f \of{ x } - f \of{ c } } } = g' \of{ f \of{ c } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-chain-rule-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="theorem-chain-rule-3-2">
+<div class="para">We now observe that</div>
+<div class="displaymath process-math" id="theorem-chain-rule-3-2-1">
+\begin{align*}
+\lim_{ x \to c }{ \frac{ \of{ g \circ f } \of{ x } - \of{ g \circ f } \of{ c } }{ x - c } } \amp = \lim_{ x \to c }{ \frac{ g \of{ f \of{ x } } - g \of{ f \of{ c } } }{ x - c } }\\
+\amp = \lim_{ x \to c }{ \of{ \frac{ g \of{ f \of{ x } } - g \of{ f \of{ c } } }{ f \of{ x } - f \of{ c } } } \of{ \frac{ f \of{ x } - f \of{ c } }{ x - c } } }\\
+\amp = \of{ \lim_{ x \to c }{ \frac{ g \of{ f \of{ x } } - g \of{ f \of{ c } } }{ f \of{ x } - f \of{ c } } } } \of{ \lim_{ x \to c }{ \frac{ f \of{ x } - f \of{ c } }{ x - c } } }\\
+\amp = g' \of{ f \of{ c } } f' \of{ c }\text{,}
+\end{align*}
+</div>
+<div class="para">and so <span class="process-math">\(g \circ f \)</span> is differentiable at <span class="process-math">\(c \text{,}\)</span> with derivative <span class="process-math">\(\of{ g \circ f }' \of{ c } = g' \of{ f \of{ c } } f' \of{ c } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-chain-rule-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.1.6.1"><a tabindex="-1" href="#theorem-chain-rule-3" title="Copy heading and permalink for Proof 5.1.6.1" aria-label="Copy heading and permalink for Proof 5.1.6.1">🔗</a></div>
+</article></details>
+<section class="conclusion" id="subsection-introduction-to-differentiation-14">
+<div class="para" id="subsection-introduction-to-differentiation-14-1">The <a href="section-differentiability.html#theorem-chain-rule" class="xref" data-knowl="./knowl/xref/theorem-chain-rule.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.1.6: Chain rule">Chain rule</a> is one of the most important foundational results in differential calculus, and has important generalizations to the differentiability of maps between higher-dimensional Euclidean spaces.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-introduction-to-differentiation-14-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Subsection 5.1.1: Introduction to Differentiation"><a tabindex="-1" href="#subsection-introduction-to-differentiation" title="Copy heading and permalink for Subsection 5.1.1: Introduction to Differentiation" aria-label="Copy heading and permalink for Subsection 5.1.1: Introduction to Differentiation">🔗</a></div>
+</section>
+<section class="subsection" id="subsection-regularity-and-smoothness">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Regularity and Smoothness</span>
+</h2>
+<section class="introduction" id="subsection-regularity-and-smoothness-2">
+<div class="para" id="subsection-regularity-and-smoothness-2-1">For real-valued functions which are differentiable at many points in their domain, we can view the derivative not just as a number, but rather as a real-valued function which itself may be subject to analysis. A natural question in this setting is whether we can differentiate this derivative itself. This is not always possible; the derivative of a differentiable function need not itself be differentiable. In fact, such a derivative need not even be continuous. Differentiable functions whose derivative is itself differentiable are called <dfn class="terminology">twice differentiable</dfn>, and the derivative of the derivative of such a function is called its <dfn class="terminology">second derivative</dfn>. Continuing in such a manner, we may speak of <dfn class="terminology"><span class="process-math">\(n \)</span>-times differentiable</dfn> functions and their <dfn class="terminology"><span class="process-math">\(n \)</span>th derivatives</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-regularity-and-smoothness-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="definition definition-like" id="definition-higher-order-differentiability"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Higher order differentiability.</span>
+</h3>
+<div class="para logical" id="definition-higher-order-differentiability-7-1">
+<div class="para">Fix a real-valued function <span class="process-math">\(f \colon X \to \R \)</span> on a subset <span class="process-math">\(X \subseteq \R \text{.}\)</span> The higher order differentiability properties of <span class="process-math">\(f \)</span> are defined recursively as follows:</div>
+<ul class="disc" id="definition-higher-order-differentiability-7-1-4">
+<li id="definition-higher-order-differentiability-7-1-4-1">
+<div class="para" id="definition-higher-order-differentiability-7-1-4-1-1">
+<span class="process-math">\(f \)</span> is <span class="process-math">\(0 \)</span>-times differentiable, its <dfn class="terminology"><span class="process-math">\(0 \)</span>-times differentiability locus</dfn> is <span class="process-math">\(\DL^{ 0 } \of{ f } = X \text{,}\)</span> and its <dfn class="terminology"><span class="process-math">\(0 \)</span>th derivative</dfn> is <span class="process-math">\(f^{ \of{ 0 } } = f \colon \DL^{ 0 } \of{ f } \to \R \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-higher-order-differentiability-7-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#definition-higher-order-differentiability-7-1-4-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="definition-higher-order-differentiability-7-1-4-2">
+<div class="para logical" id="definition-higher-order-differentiability-7-1-4-2-1">
+<div class="para">Suppose that <span class="process-math">\(f \)</span> has <span class="process-math">\(k \)</span>-times differentiability locus <span class="process-math">\(\DL^{ k } \of{ f } \)</span> and <span class="process-math">\(k \)</span>th derivative <span class="process-math">\(f^{ \of{ k } } \colon \DL^{ k } \of{ f } \to \R \text{.}\)</span> The <span class="process-math">\(\of{ k + 1 } \)</span>-times differentiability locus <span class="process-math">\(\DL^{ k + 1 } \of{ f } \)</span> is the differentiability locus</div>
+<div class="displaymath process-math" id="definition-higher-order-differentiability-7-1-4-2-1-8">
+\begin{align*}
+\DL^{ k + 1 } \of{ f } \amp = \DL \of{ f^{ \of{ k } } } = \setmid{ x \in \DL^{ k } \of{ f } }{ f^{ \of{ k } } \textrm{ is differentiable at } x }\\
+\amp \subseteq \DL^{ k } \of{ f } \cap \of{ \DL^{ k } \of{ f } }'\text{.}
+\end{align*}
+</div>
+<div class="para">The <dfn class="terminology"><span class="process-math">\(\of{ k + 1 } \)</span>st derivative</dfn> <span class="process-math">\(f^{ \of{ k + 1 } } \)</span> of <span class="process-math">\(f \)</span> is the derivative</div>
+<div class="displaymath process-math" id="definition-higher-order-differentiability-7-1-4-2-1-12">
+\begin{equation*}
+f^{ \of{ k + 1 } } = \of{ f^{ \of{ k } } }' \colon \DL^{ k + 1 } \of{ f } \to \R\text{.}
+\end{equation*}
+</div>
+<div class="para">Then <span class="process-math">\(f \)</span> is <dfn class="terminology"><span class="process-math">\(\of{ k + 1 } \)</span>-times differentiable</dfn> if <span class="process-math">\(f^{ \of{ k } } \)</span> is differentiable at every point of <span class="process-math">\(\DL^{ k } \of{ f } \cap \of{ \DL^{ k } \of{ f } }' \text{;}\)</span> that is, <span class="process-math">\(f \)</span> is <span class="process-math">\(\of{ k + 1 } \)</span>-times differentiable if</div>
+<div class="displaymath process-math" id="definition-higher-order-differentiability-7-1-4-2-1-19">
+\begin{equation*}
+\DL^{ k + 1 } \of{ f } = \DL^{ k } \of{ f } \cap \of{ \DL^{ k } \of{ f } }'\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-higher-order-differentiability-7-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#definition-higher-order-differentiability-7-1-4-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-higher-order-differentiability-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 5.1.7: Higher order differentiability"><a tabindex="-1" href="#definition-higher-order-differentiability" title="Copy heading and permalink for Definition 5.1.7: Higher order differentiability" aria-label="Copy heading and permalink for Definition 5.1.7: Higher order differentiability">🔗</a></div>
+</article>
+<details id="example-higher-order-differentiability" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Higher order differentiability.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-higher-order-differentiability-2-1">
+<div class="para">The following are examples of higher order derivatives of functions:</div>
+<ul class="disc" id="example-higher-order-differentiability-2-1-1">
+<li id="example-higher-order-differentiability-2-1-1-1">
+<div class="para" id="example-higher-order-differentiability-2-1-1-1-1">Since polynomial functions are differentiable, and their derivatives are polynomials (which are also differentiable), every polynomial function is <span class="process-math">\(k \)</span>-times differentiable for all <span class="process-math">\(k \in \N \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-higher-order-differentiability-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-higher-order-differentiability-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-higher-order-differentiability-2-1-1-2">
+<div class="para" id="example-higher-order-differentiability-2-1-1-2-1">Fix a natural number <span class="process-math">\(k \in \N \text{,}\)</span> and consider the power function <span class="process-math">\(p \colon \R \to \R \)</span> defined by the formula <span class="process-math">\(p \of{ x } = x^{ k + \frac{ 1 }{ 3 } } \text{.}\)</span> Once we have explored the calculus of power series in <a href="section-power-series.html" class="internal" title="Section 7.3: Power Series">Section 7.3 Power Series</a>, we will see that <span class="process-math">\(p \)</span> is <span class="process-math">\(k \)</span>-times differentiable but not <span class="process-math">\(\of{ k + 1 } \)</span>-times differentiable.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-higher-order-differentiability-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-higher-order-differentiability-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-higher-order-differentiability-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 5.1.8: Higher order differentiability"><a tabindex="-1" href="#example-higher-order-differentiability" title="Copy heading and permalink for Example 5.1.8: Higher order differentiability" aria-label="Copy heading and permalink for Example 5.1.8: Higher order differentiability">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-regularity-and-smoothness-5">As previously mentioned, the derivative of a differentiable function need not be continuous. Requiring continuity in the derivatives of a function yield the concept of <dfn class="terminology">regularity</dfn>. Intuitively, the regularity of a function determines how many of its derivatives are continuous.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-regularity-and-smoothness-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-regularity"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Regularity.</span>
+</h3>
+<div class="para" id="definition-regularity-5-1">A real-valued function <span class="process-math">\(f \colon X \to \R \)</span> on a subset <span class="process-math">\(X \subseteq \R \)</span> is called <span class="process-math">\(k \)</span>-times continuously differentiable if it is <span class="process-math">\(k \)</span>-times differentiable and its <span class="process-math">\(k \)</span>th derivative <span class="process-math">\(f^{ \of{ k } } \colon \DL^{ k } \of{ f } \to \R \)</span> is continuous. The set of <span class="process-math">\(k \)</span>-times continuously differentiable functions on <span class="process-math">\(X \)</span> is denoted <span class="process-math">\(\CDiff^{ k } \of{ X } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-regularity-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 5.1.9: Regularity"><a tabindex="-1" href="#definition-regularity" title="Copy heading and permalink for Definition 5.1.9: Regularity" aria-label="Copy heading and permalink for Definition 5.1.9: Regularity">🔗</a></div>
+</article>
+<details id="example-regularity" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Regularity.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-regularity-2-1">
+<div class="para">The following are examples of functions of different regularity:</div>
+<ul class="disc" id="example-regularity-2-1-1">
+<li id="example-regularity-2-1-1-1">
+<div class="para" id="example-regularity-2-1-1-1-1">Since polynomial functions are continuous and differentiable, and their derivatives are polynomials (which are also continuous and differentiable), every polynomial function is <span class="process-math">\(k \)</span>-times continuously differentiable for all <span class="process-math">\(k \in \N \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-regularity-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-regularity-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-regularity-2-1-1-2">
+<div class="para" id="example-regularity-2-1-1-2-1">Fix a natural number <span class="process-math">\(k \in \N \text{,}\)</span> and consider the power function <span class="process-math">\(p \colon \R \to \R \)</span> defined by the formula <span class="process-math">\(p \of{ x } = x^{ k + \frac{ 1 }{ 3 } } \text{.}\)</span> Once we have explored the calculus of power series in <a href="section-power-series.html" class="internal" title="Section 7.3: Power Series">Section 7.3 Power Series</a>, we will see that <span class="process-math">\(p \)</span> is <span class="process-math">\(k \)</span>-times continuously differentiable but not <span class="process-math">\(\of{ k + 1 } \)</span>-times differentiable; that is <span class="process-math">\(p \in \CDiff^{ k } \of{ \R } \setminus \CDiff^{ k + 1 } \of{ \R } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-regularity-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-regularity-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-regularity-2-1-1-3">
+<div class="para logical" id="example-regularity-2-1-1-3-1">
+<div class="para">Let <span class="process-math">\(f \colon \R \to \R \)</span> be the real-valued function defined piecewise by the formula</div>
+<div class="displaymath process-math" id="example-regularity-2-1-1-3-1-2">
+\begin{equation*}
+f \of{ x } =
+\begin{cases}
+x^{ 2 } \sin \of{ \frac{ 1 }{ x } } \amp x \neq 0 \\
+0 \amp x = 0
+\text{.}\end{cases}
+\end{equation*}
+</div>
+<div class="para">Then <span class="process-math">\(f \)</span> is differentiable but not continuously differentiable.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-regularity-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-regularity-2-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-regularity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 5.1.10: Regularity"><a tabindex="-1" href="#example-regularity" title="Copy heading and permalink for Example 5.1.10: Regularity" aria-label="Copy heading and permalink for Example 5.1.10: Regularity">🔗</a></div>
+</article></details>
+<article class="lemma theorem-like" id="lemma-monotonicity-of-regularity-classes"><h3 class="heading">
+<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Monotonicity of regularity classes.</span>
+</h3>
+<div class="para logical" id="lemma-monotonicity-of-regularity-classes-2-1">
+<div class="para">For any subset <span class="process-math">\(X \subseteq \R \text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="lemma-monotonicity-of-regularity-classes-2-1-2">
+\begin{equation*}
+\CDiff^{ 0 } \of{ X } \supseteq \CDiff^{ 1 } \of{ X } \supseteq \CDiff^{ 2 } \of{ X } \supseteq \CDiff^{ 3 } \of{ X } \supseteq \dotsb\text{.}
+\end{equation*}
+</div>
+<div class="para">Moreover, the intersection <span class="process-math">\(\bigcap_{ k = 0 }^{ \infty }{ \CDiff^{ k } \of{ X } } \)</span> is non-empty.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-monotonicity-of-regularity-classes-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Lemma 5.1.11: Monotonicity of regularity classes"><a tabindex="-1" href="#lemma-monotonicity-of-regularity-classes" title="Copy heading and permalink for Lemma 5.1.11: Monotonicity of regularity classes" aria-label="Copy heading and permalink for Lemma 5.1.11: Monotonicity of regularity classes">🔗</a></div>
+</article>
+<details id="lemma-monotonicity-of-regularity-classes-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="lemma-monotonicity-of-regularity-classes-3-1">Let <span class="process-math">\(k \in \N \)</span> be a natural number, and suppose that <span class="process-math">\(f \in \CDiff^{ k + 1 } \of{ X } \text{;}\)</span> that is, <span class="process-math">\(f \colon X \to \R \)</span> is a <span class="process-math">\(\of{ k + 1 } \)</span>-times continuously differentiable real-valued function on <span class="process-math">\(X \text{.}\)</span> Since <span class="process-math">\(f \)</span> is <span class="process-math">\(\of{ k + 1 } \)</span>-times differentiable, it is <span class="process-math">\(k \)</span>-times differentiable, and its <span class="process-math">\(k \)</span>th derivative <span class="process-math">\(f^{ \of{ k } } \colon \DL^{ k } \of{ f } \to \R \)</span> is itself differentiable. <a href="section-differentiability.html#lemma-differentiability-implies-continuity" class="xref" data-knowl="./knowl/xref/lemma-differentiability-implies-continuity.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 5.1.3: Differentiability implies continuity">Lemma 5.1.3 Differentiability implies continuity</a> implies that <span class="process-math">\(f^{ \of{ k } } \)</span> is continuous at every point <span class="process-math">\(x \in \DL^{ k } \of{ f } \cap \of{ \DL^{ k } \of{ f } }' \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-monotonicity-of-regularity-classes-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="lemma-monotonicity-of-regularity-classes-3-2">On the other hand, if <span class="process-math">\(x \in \DL^{ k } \of{ f } \setminus \of{ \DL^{ k } \of{ f } }' \text{,}\)</span> then <span class="process-math">\(x \)</span> is an isolated point of <span class="process-math">\(\DL^{ k } \of{ f } \text{,}\)</span> and therefore <span class="process-math">\(f^{ \of{ k } } \)</span> is automatically continuous at <span class="process-math">\(x \text{.}\)</span> Thus <span class="process-math">\(f^{ \of{ k } } \)</span> is continuous, and so <span class="process-math">\(f \in \CDiff^{ k } \of{ X } \)</span> is <span class="process-math">\(k \)</span>-times continuously differentiable.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-monotonicity-of-regularity-classes-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="lemma-monotonicity-of-regularity-classes-3-3">
+<div class="para">We have already seen that constant functions are continuously differentiable, and their derivatives are also constant functions. Thus any constant function is <span class="process-math">\(k \)</span>-times continuously differentiable for all <span class="process-math">\(k \in \N \text{,}\)</span> and so</div>
+<div class="displaymath process-math" id="lemma-monotonicity-of-regularity-classes-3-3-3">
+\begin{equation*}
+\bigcap_{ k = 0 }^{ \infty }{ \CDiff^{ k } \of{ X } } \neq \emptyset\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-monotonicity-of-regularity-classes-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.1.11.1"><a tabindex="-1" href="#lemma-monotonicity-of-regularity-classes-3" title="Copy heading and permalink for Proof 5.1.11.1" aria-label="Copy heading and permalink for Proof 5.1.11.1">🔗</a></div>
+</article></details>
+<article class="definition definition-like" id="definition-smoothness"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Smoothness.</span>
+</h3>
+<div class="para logical" id="definition-smoothness-4-1">
+<div class="para">A real-valued function <span class="process-math">\(f \colon X \to \R \)</span> on a subset <span class="process-math">\(X \subseteq \R \)</span> is called <dfn class="terminology">smooth</dfn> if it is <span class="process-math">\(k \)</span>-times continuously differentiable for all <span class="process-math">\(k \in \N \text{.}\)</span> The set of smooth functions on <span class="process-math">\(X \)</span> is denoted</div>
+<div class="displaymath process-math" id="definition-smoothness-4-1-7">
+\begin{equation*}
+\CDiff^{ \infty } \of{ X } = \bigcup_{ k = 0 }^{ \infty }{ \CDiff^{ k } \of{ X } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-smoothness-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 5.1.12: Smoothness"><a tabindex="-1" href="#definition-smoothness" title="Copy heading and permalink for Definition 5.1.12: Smoothness" aria-label="Copy heading and permalink for Definition 5.1.12: Smoothness">🔗</a></div>
+</article>
+<section class="conclusion" id="subsection-regularity-and-smoothness-10">
+<div class="para" id="subsection-regularity-and-smoothness-10-1">There are several interesting topologies on the space <span class="process-math">\(\CDiff^{ k } \of{ X } \)</span> of <span class="process-math">\(k \)</span>-times differentiable functions on a subset <span class="process-math">\(X \subseteq \R \)</span> In general, the uniform convergence of a sequence of continuously differentiable functions does not imply the uniform convergence of its derivatives. However, if the derivative converge uniformly, then the uniform limit of the functions is differentiable, and its derivative is the uniform limit of the derivatives.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-regularity-and-smoothness-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Subsection 5.1.2: Regularity and Smoothness"><a tabindex="-1" href="#subsection-regularity-and-smoothness" title="Copy heading and permalink for Subsection 5.1.2: Regularity and Smoothness" aria-label="Copy heading and permalink for Subsection 5.1.2: Regularity and Smoothness">🔗</a></div>
+</section>
+<section class="subsection" id="subsection-analysis-of-critical-points">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Analysis of Critical Points [Skip]</span>
+</h2>
+<section class="introduction" id="subsection-analysis-of-critical-points-2">
+<div class="para" id="subsection-analysis-of-critical-points-2-1">Text before the first subdivision.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-analysis-of-critical-points-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="conclusion" id="subsection-analysis-of-critical-points-3">
+<div class="para" id="subsection-analysis-of-critical-points-3-1">Text after the last subdivision.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-analysis-of-critical-points-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Subsection 5.1.3: Analysis of Critical Points [Skip]"><a tabindex="-1" href="#subsection-analysis-of-critical-points" title="Copy heading and permalink for Subsection 5.1.3: Analysis of Critical Points [Skip]" aria-label="Copy heading and permalink for Subsection 5.1.3: Analysis of Critical Points [Skip]">🔗</a></div>
+</section>
+<section class="conclusion" id="section-differentiability-6">
+<div class="para" id="section-differentiability-6-1">Text after the last subsection.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-differentiability-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="reading-questions" id="exercises-differentiability">
 <h2 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
 </h2>
 <section class="introduction" id="exercises-differentiability-2">
 <div class="para" id="exercises-differentiability-2-1">The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-differentiability-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="conclusion" id="exercises-differentiability-3">
 <div class="para" id="exercises-differentiability-3-1">Short answers and/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-differentiability-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 5.1: Exercises"><a tabindex="-1" href="#exercises-differentiability" title="Copy heading and permalink for Reading Questions 5.1: Exercises" aria-label="Copy heading and permalink for Reading Questions 5.1: Exercises">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 5.1.4: Exercises"><a tabindex="-1" href="#exercises-differentiability" title="Copy heading and permalink for Reading Questions 5.1.4: Exercises" aria-label="Copy heading and permalink for Reading Questions 5.1.4: Exercises">🔗</a></div>
 </section>
 <section class="reading-questions" id="reading-questions-differentiability">
 <h2 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reading Questions</span>
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reading Questions</span>
 </h2>
 <section class="introduction" id="reading-questions-differentiability-2">
 <div class="para" id="reading-questions-differentiability-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#reading-questions-differentiability-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="conclusion" id="reading-questions-differentiability-3">
 <div class="para" id="reading-questions-differentiability-3-1">In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#reading-questions-differentiability-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 5.1: Reading Questions"><a tabindex="-1" href="#reading-questions-differentiability" title="Copy heading and permalink for Reading Questions 5.1: Reading Questions" aria-label="Copy heading and permalink for Reading Questions 5.1: Reading Questions">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 5.1.5: Reading Questions"><a tabindex="-1" href="#reading-questions-differentiability" title="Copy heading and permalink for Reading Questions 5.1.5: Reading Questions" aria-label="Copy heading and permalink for Reading Questions 5.1.5: Reading Questions">🔗</a></div>
 </section><div class="autopermalink" aria-hidden="true" data-description="Section 5.1: Differentiability"><a tabindex="-1" href="#section-differentiability" title="Copy heading and permalink for Section 5.1: Differentiability" aria-label="Copy heading and permalink for Section 5.1: Differentiability">🔗</a></div>
 </section>
 </div>

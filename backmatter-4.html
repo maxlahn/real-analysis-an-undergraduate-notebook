@@ -57,7 +57,7 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.13';
+eBookConfig.runestone_version = '8.1.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
@@ -490,6 +490,8 @@ eBookConfig.enable_chatcodes =  false;
 
 
   
+  \DeclareMathOperator{\DL}{ DL } 
+  
   \DeclareMathOperator{\diff}{ d } 
   
   \DeclareMathOperator{\pdiff}{ \partial } 
@@ -832,8 +834,11 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-differentiability.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Differentiability</span></a></div>
 <ul id="ptx-toc-group-section-differentiability" class="structural toc-item-list">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#exercises-differentiability" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#reading-questions-differentiability" class="internal"><span class="codenumber">5.1</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-differentiability.html#subsection-introduction-to-differentiation" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Introduction to Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-differentiability.html#subsection-regularity-and-smoothness" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Regularity and Smoothness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-differentiability.html#subsection-analysis-of-critical-points" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Analysis of Critical Points [Skip]</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#exercises-differentiability" class="internal"><span class="codenumber">5.1.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#reading-questions-differentiability" class="internal"><span class="codenumber">5.1.5</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -1031,11 +1036,15 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="indexitem">coarsening<span class="indexknowl"> <a href="section-comparison-and-topology.html#definition-comparison-of-topologies" class="xref" data-knowl="./knowl/index/definition-comparison-of-topologies.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.2.1: Comparison of topologies">Definition</a></span>
 </div>
-<div class="indexitem">cocountable topology<span class="indexknowl"> <a href="section-convergence-and-separation.html#example-the-cocountable-topology" class="xref" data-knowl="./knowl/index/example-the-cocountable-topology.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.3.5: The cocountable topology">Example</a></span>
+<div class="indexitem">cocountable<span class="indexknowl"> <a href="section-introduction-to-topology.html#exercise-examples-of-topologies-4" class="xref" data-knowl="./knowl/index/exercise-examples-of-topologies-4.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 4.1.3.2">Exercise</a></span>
+</div>
+<div class="indexitem">cocountable topology<span class="indexknowl"> <a href="section-introduction-to-topology.html#exercise-examples-of-topologies-4" class="xref" data-knowl="./knowl/index/exercise-examples-of-topologies-4.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 4.1.3.2">Exercise</a> <a href="section-convergence-and-separation.html#example-the-cocountable-topology" class="xref" data-knowl="./knowl/index/example-the-cocountable-topology.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.3.5: The cocountable topology">Example</a></span>
 </div>
 <div class="indexitem">codomain<span class="indexknowl"> <a href="section-maps-and-functions.html#definition-map-function" class="xref" data-knowl="./knowl/index/definition-map-function.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.3: Map">Definition</a></span>
 </div>
-<div class="indexitem">cofinite topology<span class="indexknowl"> <a href="section-convergence-and-separation.html#example-t-one-spaces-2-1-2-2" class="xref" data-knowl="./knowl/index/example-t-one-spaces-2-1-2-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Item">Item</a></span>
+<div class="indexitem">cofinite<span class="indexknowl"> <a href="section-introduction-to-topology.html#exercise-examples-of-topologies-3" class="xref" data-knowl="./knowl/index/exercise-examples-of-topologies-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 4.1.3.1">Exercise</a></span>
+</div>
+<div class="indexitem">cofinite topology<span class="indexknowl"> <a href="section-introduction-to-topology.html#exercise-examples-of-topologies-3" class="xref" data-knowl="./knowl/index/exercise-examples-of-topologies-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 4.1.3.1">Exercise</a> <a href="section-convergence-and-separation.html#example-t-one-spaces-2-1-2-2" class="xref" data-knowl="./knowl/index/example-t-one-spaces-2-1-2-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Item">Item</a></span>
 </div>
 <div class="indexitem">commutativity<span class="indexknowl"> <a href="section-finitary-operations-and-relations.html#definition-commutativity-associativity" class="xref" data-knowl="./knowl/index/definition-commutativity-associativity.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.4.8: Commutativity; associativity">Definition</a></span>
 </div>
@@ -1055,6 +1064,8 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="indexitem">continuity<span class="indexknowl"> <a href="section-notions-of-metric-continuity.html#definition-metric-continuity" class="xref" data-knowl="./knowl/index/definition-metric-continuity.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.5.2: Continuity">Definition</a> <a href="section-continuity.html#definition-topological-continuity" class="xref" data-knowl="./knowl/index/definition-topological-continuity.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.4.6: Continuity">Definition</a></span>
 </div>
+<div class="indexitem">continuous differentiability<span class="indexknowl"> <a href="section-differentiability.html#definition-regularity" class="xref" data-knowl="./knowl/index/definition-regularity.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.1.9: Regularity">Definition</a></span>
+</div>
 <div class="indexitem">converge<span class="indexknowl"> <a href="section-convergence-and-limits.html#definition-sequential-convergence-divergence" class="xref" data-knowl="./knowl/index/definition-sequential-convergence-divergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.2.1: Sequential convergence/divergence">Definition</a></span>
 </div>
 <div class="indexitem">convergent<span class="indexknowl"> <a href="section-convergence-and-limits.html#definition-sequential-convergence-divergence" class="xref" data-knowl="./knowl/index/definition-sequential-convergence-divergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.2.1: Sequential convergence/divergence">Definition</a></span>
@@ -1073,9 +1084,15 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="indexitem">definable collection<span class="indexknowl"> <a href="section-what-is-a-set.html#definition-definable-collection" class="xref" data-knowl="./knowl/index/definition-definable-collection.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.1.2: Definable collection">Definition</a></span>
 </div>
+<div class="indexitem">derivative<span class="indexknowl"> <a href="section-differentiability.html#definition-differentiability" class="xref" data-knowl="./knowl/index/definition-differentiability.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.1.1: Differentiability">Definition</a> <a href="section-differentiability.html#definition-higher-order-differentiability" class="xref" data-knowl="./knowl/index/definition-higher-order-differentiability.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.1.7: Higher order differentiability">Definition</a></span>
+</div>
 <div class="indexitem">derived set<span class="indexknowl"> <a href="section-convergence-and-limits.html#definition-accumulation-isolation" class="xref" data-knowl="./knowl/index/definition-accumulation-isolation.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.2.21: Accumulation; isolation">Definition</a></span>
 </div>
 <div class="indexitem">diameter<span class="indexknowl"> <a href="section-open-and-closed-sets.html#definition-diameter" class="xref" data-knowl="./knowl/index/definition-diameter.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.4.13: Diameter">Definition</a></span>
+</div>
+<div class="indexitem">differentiability<span class="indexknowl"> <a href="section-differentiability.html#definition-differentiability" class="xref" data-knowl="./knowl/index/definition-differentiability.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.1.1: Differentiability">Definition</a> <a href="section-differentiability.html#definition-higher-order-differentiability" class="xref" data-knowl="./knowl/index/definition-higher-order-differentiability.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.1.7: Higher order differentiability">Definition</a></span>
+</div>
+<div class="indexitem">differentiability locus<span class="indexknowl"> <a href="section-differentiability.html#definition-higher-order-differentiability" class="xref" data-knowl="./knowl/index/definition-higher-order-differentiability.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.1.7: Higher order differentiability">Definition</a></span>
 </div>
 <div class="indexitem">directed set<span class="indexknowl"> <a href="section-convergence-and-separation.html#definition-directed-set" class="xref" data-knowl="./knowl/index/definition-directed-set.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.3.6: Directed set">Definition</a></span>
 </div>
@@ -1091,7 +1108,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="indexitem">disjunction<span class="indexknowl"> <a href="section-what-is-a-set.html#subsection-set-operations" class="internal" title="Subsection 1.1.3: Set Operations">Subsection</a></span>
 </div>
-<div class="indexitem">Distributive property<span class="indexknowl"> <a href="section-what-is-a-set.html#problem-distributivity-of-set-operations" class="xref" data-knowl="./knowl/index/problem-distributivity-of-set-operations.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.1.5.1: The distributive properties of set operations">Problem</a></span>
+<div class="indexitem">Distributive property<span class="indexknowl"> <a href="section-what-is-a-set.html#problem-distributivity-of-set-operations" class="xref" data-knowl="./knowl/index/problem-distributivity-of-set-operations.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 1.1.5.1: Distributivity of set operations">Problem</a></span>
 </div>
 <div class="indexitem">diverge<span class="indexknowl"> <a href="section-convergence-and-limits.html#definition-sequential-convergence-divergence" class="xref" data-knowl="./knowl/index/definition-sequential-convergence-divergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.2.1: Sequential convergence/divergence">Definition</a></span>
 </div>
@@ -1355,7 +1372,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="indexletter" id="indexletter-p">
 <div class="indexitem">partial order<span class="indexknowl"> <a href="section-introduction-to-order-theory.html#definition-partial-order" class="xref" data-knowl="./knowl/index/definition-partial-order.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.5.3: Partial order">Definition</a></span>
 </div>
-<div class="indexitem">particular point topology<span class="indexknowl"> <a href="section-continuity.html#example-continuity-at-a-point" class="xref" data-knowl="./knowl/index/example-continuity-at-a-point.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.4.7: Continuity at a point">Example</a></span>
+<div class="indexitem">particular point topology<span class="indexknowl"> <a href="section-introduction-to-topology.html#exercise-examples-of-topologies-5" class="xref" data-knowl="./knowl/index/exercise-examples-of-topologies-5.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 4.1.3.3">Exercise</a> <a href="section-continuity.html#example-continuity-at-a-point" class="xref" data-knowl="./knowl/index/example-continuity-at-a-point.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.4.7: Continuity at a point">Example</a></span>
 </div>
 <div class="indexitem">partition<span class="indexknowl"> <a href="section-finitary-operations-and-relations.html#proposition-equivalence-partition" class="xref" data-knowl="./knowl/index/proposition-equivalence-partition.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 1.4.17: Equivalence partition">Proposition</a></span>
 </div>
@@ -1423,6 +1440,8 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="indexitem">reflexivity<span class="indexknowl"> <a href="section-finitary-operations-and-relations.html#definition-equivalence-relation" class="xref" data-knowl="./knowl/index/definition-equivalence-relation.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.4.14: Equivalence relation">Definition</a> <a href="section-introduction-to-order-theory.html#definition-preorder" class="xref" data-knowl="./knowl/index/definition-preorder.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.5.1: Preorder">Definition</a></span>
 </div>
+<div class="indexitem">regularity<span class="indexknowl"> <a href="section-differentiability.html#definition-regularity" class="xref" data-knowl="./knowl/index/definition-regularity.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.1.9: Regularity">Definition</a></span>
+</div>
 <div class="indexitem">removable discontinuity<span class="indexknowl"> <a href="section-the-complete-ordered-field.html#example-fields-2-1-1-3" class="xref" data-knowl="./knowl/index/example-fields-2-1-1-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Item: The field of rational functions">Item</a></span>
 </div>
 <div class="indexitem">restriction<span class="indexknowl"> <a href="section-maps-and-functions.html#definition-restriction" class="xref" data-knowl="./knowl/index/definition-restriction.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.7: Restriction">Definition</a> <a href="section-finitary-operations-and-relations.html#example-restriction-of-a-finitary-relation" class="xref" data-knowl="./knowl/index/example-restriction-of-a-finitary-relation.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.4.13: Restriction of a finitary relation">Example</a></span>
@@ -1454,6 +1473,8 @@ eBookConfig.enable_chatcodes =  false;
 <div class="indexitem">Sierpiński space<span class="indexknowl"> <a href="section-introduction-to-topology.html#example-topological-spaces-2-1-1-3" class="xref" data-knowl="./knowl/index/example-topological-spaces-2-1-1-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Item: Sierpiński space">Item</a></span>
 </div>
 <div class="indexitem">sign<span class="indexknowl"> <a href="section-the-complete-ordered-field.html#problem-sign-in-an-ordered-field" class="xref" data-knowl="./knowl/index/problem-sign-in-an-ordered-field.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 2.3.4.2: Sign in an ordered field">Problem</a></span>
+</div>
+<div class="indexitem">smooth<span class="indexknowl"> <a href="section-differentiability.html#definition-smoothness" class="xref" data-knowl="./knowl/index/definition-smoothness.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.1.12: Smoothness">Definition</a></span>
 </div>
 <div class="indexitem">sphere<span class="indexknowl"> <a href="section-open-and-closed-sets.html#definition-metric-open-ball-closed-disk-sphere" class="xref" data-knowl="./knowl/index/definition-metric-open-ball-closed-disk-sphere.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.4.1: Open ball; closed disk; sphere">Definition</a></span>
 </div>
