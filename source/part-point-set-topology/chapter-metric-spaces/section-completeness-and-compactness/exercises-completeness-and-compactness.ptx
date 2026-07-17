@@ -14,6 +14,8 @@
   <xi:include href="./exercises/exercise-cauchy-sequences.ptx"/>
   
   <xi:include href="./exercises/exercise-complete-subspaces-of-euclidean-space.ptx"/>
+  
+  <xi:include href="./exercises/exercise-compact-subspaces-of-euclidean-space.ptx"/>
 
   <conclusion>
     <p>
