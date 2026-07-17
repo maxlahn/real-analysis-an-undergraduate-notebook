@@ -17,7 +17,7 @@
     </p>
   </hint>
   
-  <solution>
+  <!-- <solution>
     <p>
       First suppose that <m> \of{ u_{ \alpha } }_{ \alpha \in A } </m> converges upwards to <m> u </m> as a net in <m> X </m>, and let <m> N \in \Nbhd_{ U } \of{ u } </m> be a neighborhood of <m> u </m> in <m> U </m>. Then <m> u \in W \subseteq N </m> for some open set <m> W \in \rest{ \tau }_{ U } </m> in <m> U </m>. We recall that <m> W = U \cap V </m> for some open set <m> V \in \tau </m> in <m> X </m>, and so <m> V \in \Nbhd_{ X } \of{ u } </m> is a neighborhood of <m> u </m> in <m> X </m>.
     </p>
@@ -45,5 +45,5 @@
       
       for all indices <m> \alpha \succeq \alpha_{ N } </m>, and so <m> \of{ u_{ \alpha } }_{ \alpha \in A } </m> converges upwards to <m> u </m> as a net in <m> X </m>.
     </p>
-  </solution>
+  </solution> -->
 </exercise>

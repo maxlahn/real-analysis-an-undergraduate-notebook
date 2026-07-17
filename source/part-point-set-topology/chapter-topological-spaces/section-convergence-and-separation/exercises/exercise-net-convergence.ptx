@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-net-convergence" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Net convergence
+  </title>
+  
+  <introduction>
+    <p>
+      Verify that the given net of points converges.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> F </m> be the collection of finite subsets of the natural numbers <m> \N </m>; that is,
+        
+        <md>
+          F = \setmid{ S \in \ps \of{ N } }{ S \textrm{ is finite} }
+        </md>.
+        
+        <m> F </m> is partially ordered and directed both upwards and downwards by containment <m> \subseteq </m>. Consider the net <m> \of{ x_{ S } }_{ S \in F } </m> of real numbers <m> x_{ S } \in \R </m> defined by the formula
+        
+        <md>
+          x_{ S } = 2^{ -\max \of{ S } }
+        </md>.
+        
+        Verify that <m> \of{ x_{ S } }_{ S \in F } </m> converges upwards to <m> 0 </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Let <m> N \in \Nbhd \of{ 0 } </m> be a neighborhood of <m> 0 </m> in <m> \R </m>. Then <m> \mB_{ \epsilon } \of{ 0 } \subseteq N </m> for some positive real number <m> \epsilon \gt 0 </m>. The Archimedean principle implies that
+        
+        <md>
+          n \gt \log_{ 2 } \of{ \frac{ 1 }{ \epsilon } }
+        </md>
+        
+        for some natural number <m> n_{ \epsilon } \in \N </m>. Let <m> S_{ N } = \set{ n_{ \epsilon } } \in F </m>. We observe that for all indices <m> S \supseteq S_{ N } </m>,
+        
+        <md>
+          <mrow>
+            d \of{ x_{ S } , 0 } \amp = \abs{ 2^{ -\max \of{ S } } - 0 } = \abs{ 2^{ -\max \of{ S } } } = 2^{ -\max \of{ S } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq 2^{ -\max \of{ S_{ N } } } = 2^{ -n_{ \epsilon } } \lt \epsilon 
+          </mrow>
+        </md>,
+        
+        and so <m> x_{ S } \in \mB_{ \epsilon } \of{ 0 } \subseteq N </m>. We conclude that the net <m> \of{ x_{ S } }_{ S \in F } </m> converges upwards to <m> 0 </m>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> \of{ x_{ N } }_{ N \in \Nbhd \of{ x } } </m> be a net of points in a topological space <m> \of{ X , \tau } </m> indexed by the neighborhood system <m> \Nbhd \of{ x } </m>. Verify that if <m> x_{ N } \in N </m> for all indices <m> N \in \Nbhd \of{ x } </m>, then <m> \of{ x_{ N } }_{ N \in \Nbhd \of{ x } } </m> converges downwards to <m> x </m>.
+      </p>
+    </statement>
+    
+    <solution>
+      <p>
+        Let <m> N \in \Nbhd \of{ x } </m> be a neighborhood of <m> x </m> in <m> X </m>. Since
+        
+        <md>
+          x_{ M } \in M \subseteq N
+        </md>
+        
+        for all indices <m> M \subseteq N </m>, the net <m> \of{ x_{ N } }_{ N \in \Nbhd \of{ x } } </m> converges downwards to <m> x </m>.
+      </p>
+    </solution>
+  </exercise>
+</exercisegroup>

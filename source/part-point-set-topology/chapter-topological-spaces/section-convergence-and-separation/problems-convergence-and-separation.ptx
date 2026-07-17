@@ -12,6 +12,10 @@
   </introduction>
   
   <xi:include href="./problems/problem-net-convergence-and-subspaces.ptx"/>
+  
+  <xi:include href="./problems/problem-points-of-closure.ptx"/>
+  
+  <xi:include href="./problems/problem-non-hausdorff-spaces.ptx"/>
 
   <conclusion>
     <p>

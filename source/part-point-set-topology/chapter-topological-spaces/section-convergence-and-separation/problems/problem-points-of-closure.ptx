@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-points-of-closure" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Points of closure
+  </title>
+  
+  <introduction>
+    <p>
+      Let <m> U \subseteq X </m> be a subset of a topological space <m> \of{ X , \tau } </m>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that a point <m> x \in X </m> is a point of closure of <m> U </m> in <m> X </m> if and only if a net of points in <m> U </m> converges to <m> x </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        First suppose that <m> x \in \Cl \of{ U } </m> is a point of closure of <m> U </m> in <m> X </m>. Then for every neighborhood <m> N \in \Nbhd_{ X } \of{ x } </m>, there is a point <m> u \in U \cap N </m>. The <xref ref="axiom-axiom-of-choice" text="title"/> allows us to choose an indexed family <m> \of{ u_{ N } }_{ N \in \Nbhd_{ X } \of{ x } } </m> of points <m> u_{ N } \in U </m> so that <m> u_{ N } \in U \cap N </m> for all indices <m> N \in \Nbhd_{ X } \of{ x } </m>.
+      </p>
+      
+      <p>
+        Recall that the index set <m> \Nbhd_{ X } \of{ x } </m> is directed downwards, so that <m> \of{ u_{ N } }_{ N \in \Nbhd_{ X } \of{ x } } </m> is a net of points in <m> U </m>. We will show that <m> \of{ u_{ N } }_{ N \in \Nbhd_{ X } \of{ x } } </m> converges downwards to <m> x </m>. Let <m> N \in \Nbhd_{ X } \of{ x } </m> be a neighborhood of <m> x </m> in <m> X </m>. Then
+        
+        <md>
+          u_{ M } \in M \subseteq N
+        </md>
+        
+        for all indices <m> M \subseteq N </m>, and so <m> \of{ u_{ N } }_{ N \in \Nbhd_{ X } \of{ x } } </m> converges downwards to <m> x </m>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that a net <m> \of{ u_{ \alpha } }_{ \alpha \in A } </m> of points <m> u_{ \alpha } \in U </m> indexed by a directed set <m> \of{ A , \preceq } </m> converges to <m> x </m>. We will suppose that <m> A </m> and this convergence are directed upwards. Let <m> N \in \Nbhd_{ X } \of{ x } </m> be a neighborhood of <m> x </m> in <m> X </m>. Then there is some index <m> \alpha_{ N } \in A </m> so that <m> u_{ \alpha } \in N </m> for all indices <m> \alpha \succeq \alpha_{ N } </m>. In particular, <m> u_{ \alpha_{ N } } \in U \cap N </m>, so that <m> U \cap N \neq \emptyset </m> is non-empty. Since this holds for all neighborhoods <m> N \in \Nbhd_{ X } \of{ x } </m> of <m> x </m> in <m> X </m>, <m> x \in \Cl \of{ U } </m> is a point of closure of <m> U </m> in <m> X </m>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that <m> \Cl \of{ U } = U \cup U' </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      
+      <p>
+        Let <m> x \in \Cl \of{ U } </m> be a point of closure of <m> U </m> in <m> X </m>. Then (a) above implies that there is a net <m> \of{ u_{ \alpha } }_{ \alpha \in A } </m> of points <m> u_{ \alpha } \in U </m> indexed by a directed set <m> \of{ A , \preceq } </m> which converges to <m> x </m>. We will suppose that <m> A </m> and this convergence are directed upwards. If <m> x = u_{ \alpha } </m> for some index <m> \alpha \in A </m>, then <m> x = u_{ \alpha } \in U </m>. On the other hand, if <m> x \neq u_{ \alpha } </m> for all indices <m> \alpha \in A </m>, then <m> x \in U' </m> is a limit point of <m> U </m> in <m> X </m>. We conclude that <m> \Cl \of{ U } \subseteq U \cup U' </m>.
+      </p>
+      
+      <p>
+        On the other hand, <m> \Cl \of{ U } </m> is the smallest closed set in <m> X </m> which contains <m> U </m>, and so <m> U \subseteq \Cl \of{ U } </m>. Moreover, (a) above implies that <m> U' \subseteq \Cl \of{ U } </m>, since every limit point of <m> U </m> in <m> X </m> is a limit of a convergent net of points in <m> U </m>. We conclude that <m> \Cl \of{ U } = U \cup U' </m>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <conclusion>
+    <p>
+      We remark that the union <m> \Cl \of{ U } = U \cup U' </m> need not be a disjoint union; that is, <m> U </m> and its derived set <m> U' </m> might have significant overlap.
+    </p>
+  </conclusion>
+</exercise>

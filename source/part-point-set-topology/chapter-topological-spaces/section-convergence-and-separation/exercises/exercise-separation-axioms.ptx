@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-separation-axioms" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Separation axioms
+  </title>
+  
+  <introduction>
+    <p>
+      Determine which separation axioms are satisfied by the given topological space.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Is an indiscrete topological space <m> \of{ X , \bot_{ X } } </m> <m> T_{ 0 } </m>? Is it <m> T_{ 1 } </m>? Is it <m> T_{ 2 } </m>?
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        If <m> X </m> has at most one element, then the indiscrete topological space <m> \of{ X , \bot_{ X } } </m> is <m> T_{ 0 } </m>, <m> T_{ 1 } </m>, and <m> T_{ 2 } </m>. However, if <m> X </m> has at least two elements, then the indiscrete topological space <m> \of{ X , \bot_{ X } } </m> is neither <m> T_{ 0 } </m>, <m> T_{ 1 } </m>, nor <m> T_{ 2 } </m>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Is discrete topological space <m> \of{ X , \top_{ X } } </m> <m> T_{ 0 } </m>? Is it <m> T_{ 1 } </m>? Is it <m> T_{ 2 } </m>?
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The discrete topological space <m> \of{ X , \top_{ X } } </m> is <m> T_{ 0 } </m>, <m> T_{ 1 } </m>, and <m> T_{ 2 } </m>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Is Euclidean space <m> \of{ \R^{ n } , \tau_{ d } } </m> <m> T_{ 0 } </m>? Is it <m> T_{ 1 } </m>? Is it <m> T_{ 2 } </m>?
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        Euclidean space <m> \of{ \R^{ n } , \tau_{ d } } </m> is <m> T_{ 0 } </m>, <m> T_{ 1 } </m>, and <m> T_{ 2 } </m>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> \tau </m> be the cofinite topology on a set <m> X </m>. Is the topological space <m> \of{ X , \tau } </m> <m> T_{ 0 } </m>? Is it <m> T_{ 1 } </m>? Is it <m> T_{ 2 } </m>?
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The topological space <m> \of{ X , \tau } </m> is <m> T_{ 0 } </m>, <m> T_{ 1 } </m>, and <m> T_{ 2 } </m> if <m> X </m> is finite. However, if <m> X </m> is infinite, then the topological space <m> \of{ X , \tau } </m> is only <m> T_{ 0 } </m> and <m> T_{ 1 } </m>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> \tau </m> be the cocountable topology on a set <m> X </m>. Is the topological space <m> \of{ X , \tau } </m> <m> T_{ 0 } </m>? Is it <m> T_{ 1 } </m>? Is it <m> T_{ 2 } </m>?
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The topological space <m> \of{ X , \tau } </m> is <m> T_{ 0 } </m>, <m> T_{ 1 } </m>, and <m> T_{ 2 } </m> if <m> X </m> is countable. However, if <m> X </m> is uncountable, then the topological space <m> \of{ X , \tau } </m> is only <m> T_{ 0 } </m> and <m> T_{ 1 } </m>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> \tau </m> be a particular point topology on a set <m> X </m>. Is the topological space <m> \of{ X , \tau } </m> <m> T_{ 0 } </m>? Is it <m> T_{ 1 } </m>? Is it <m> T_{ 2 } </m>?
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The topological space <m> \of{ X , \tau } </m> is <m> T_{ 0 } </m>, <m> T_{ 1 } </m>, and <m> T_{ 2 } </m> if <m> X </m> has at most one element. However, if <m> X </m> has at least two elements, then the topological space <m> \of{ X , \tau } </m> is only <m> T_{ 0 } </m>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> \tau </m> be an excluded point topology on a set <m> X </m>. Is the topological space <m> \of{ X , \tau } </m> <m> T_{ 0 } </m>? Is it <m> T_{ 1 } </m>? Is it <m> T_{ 2 } </m>?
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The topological space <m> \of{ X , \tau } </m> is <m> T_{ 0 } </m>, <m> T_{ 1 } </m>, and <m> T_{ 2 } </m> if <m> X </m> has at most one element. However, if <m> X </m> has at least two elements, then the topological space <m> \of{ X , \tau } </m> is only <m> T_{ 0 } </m>.
+      </p>
+    </answer>
+  </exercise>
+</exercisegroup>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-non-hausdorff-spaces" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Non-Hausdorff spaces
+  </title>
+  
+  <introduction>
+    <p>
+      Let <m> \of{ X , \tau } </m> be a topological space. For two points <m> x , y \in X </m>, let <m> \preceq </m> be the binary relation on the Cartesian product <m> \Nbhd \of{ x } \times \Nbhd \of{ y } </m> defined by the following condition: <m> \of{ M_{ 1 } , V_{ 1 } } \preceq \of{ M_{ 2 } , V_{ 2 } } </m> if and only if both <m> M_{ 1 } \subseteq M_{ 2 } </m> and <m> V_{ 1 } \subseteq V_{ 2 } </m>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Show that <m> \Nbhd \of{ x } \times \Nbhd \of{ y } </m> is partially ordered and directed both upwards and downwards by <m> \preceq </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        Let <m> \of{ U , V } \in \Nbhd \of{ x } \times \Nbhd \of{ y } </m>. Since <m> U \subseteq U </m> and <m> V \subseteq V </m>, <m> \of{ U , V } \preceq \of{ U , V } </m>, and so <m> \preceq </m> is reflexive.
+      </p>
+      
+      <p>
+        Let <m> \of{ M_{ 1 } , V_{ 1 } } , \of{ M_{ 2 } , V_{ 2 } } \in \Nbhd \of{ x } \times \Nbhd \of{ y } </m>, and suppose that <m> \of{ M_{ 1 } , V_{ 1 } } \preceq \of{ M_{ 2 } , V_{ 2 } } </m> and <m> \of{ M_{ 2 } , V_{ 2 } } \preceq \of{ M_{ 1 } , V_{ 1 } } </m>. Then <m> M_{ 1 } \subseteq M_{ 2 } </m>, <m> V_{ 1 } \subseteq V_{ 2 } </m>, <m> M_{ 2 } \subseteq M_{ 1 } </m>, and <m> V_{ 2 } \subseteq V_{ 1 } </m>. We conclude that <m> M_{ 1 } = M_{ 2 } </m> and <m> V_{ 1 } = V_{ 2 } </m>, so that <m> \of{ M_{ 1 } , V_{ 1 } } = \of{ M_{ 2 } , V_{ 2 } } </m>; that is, <m> \preceq </m> is anti-symmetric.
+      </p>
+      
+      <p>
+        Let <m> \of{ M_{ 1 } , V_{ 1 } } , \of{ M_{ 2 } , V_{ 2 } } , \of{ M_{ 3 } , V_{ 3 } } \in \Nbhd \of{ x } \times \Nbhd \of{ y } </m>, and suppose that <m> \of{ M_{ 1 } , V_{ 1 } } \preceq \of{ M_{ 2 } , V_{ 2 } } </m> and <m> \of{ M_{ 2 } , V_{ 2 } } \preceq \of{ M_{ 3 } , V_{ 3 } } </m>. Then <m> M_{ 1 } \subseteq M_{ 2 } </m>, <m> V_{ 1 } \subseteq V_{ 2 } </m>, <m> M_{ 2 } \subseteq M_{ 3 } </m>, and <m> V_{ 2 } \subseteq V_{ 3 } </m>. We conclude that <m> M_{ 1 } \subseteq M_{ 3 } </m> and <m> V_{ 1 } \subseteq V_{ 3 } </m>, so that <m> \of{ M_{ 1 } , V_{ 1 } } \preceq \of{ M_{ 3 } , V_{ 3 } } </m>; that is, <m> \preceq </m> is transitive.
+      </p>
+      
+      <p>
+        Finally, let <m> \of{ M_{ 1 } , V_{ 1 } } , \of{ M_{ 2 } , V_{ 2 } } \in \Nbhd \of{ x } \times \Nbhd \of{ y } </m>. Then <m> M_{ 1 } \cap M_{ 2 } , M_{ 1 } \cup M_{ 2 } \in \Nbhd \of{ x } </m> and <m> V_{ 1 } \cap V_{ 2 } , V_{ 1 } \cup V_{ 2 } \in \Nbhd \of{ y } </m>, and so <m> \of{ M_{ 1 } \cap M_{ 2 } , V_{ 1 } \cap V_{ 2 } } , \of{ M_{ 1 } \cup M_{ 2 } , V_{ 1 } \cup V_{ 2 } } \in \Nbhd \of{ x } \times \Nbhd \of{ y } </m>. Moreover, since <m> M_{ 1 } \cap M_{ 2 } \subseteq M_{ 1 } , M_{ 2 } \subseteq M_{ 1 } \cup M_{ 2 } </m> and <m> V_{ 1 } \cap V_{ 2 } \subseteq V_{ 1 } , V_{ 2 } \subseteq V_{ 1 } \cup V_{ 2 } </m>, we have
+        
+        <md>
+          \of{ M_{ 1 } \cap M_{ 2 } , V_{ 1 } \cap V_{ 2 } } \preceq \of{ M_{ 1 } , V_{ 1 } } , \of{ M_{ 2 } , V_{ 2 } } \preceq \of{ M_{ 1 } \cup M_{ 2 } , V_{ 1 } \cup V_{ 2 } }
+        </md>.
+      </p>
+      
+      <p>
+        Since <m> \preceq </m> is reflexive, anti-symmetric, and transitive, it is a partial order on <m> \Nbhd \of{ x } \times \Nbhd \of{ y } </m>. Moreover, since any pair of elements has a common upper bound and a common lower bound, <m> \Nbhd \of{ x } \times \Nbhd \of{ y } </m> is directed both upwards and downwards.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that if <m> \of{ X , \tau } </m> is not Hausdorff, then there is a convergent net of points in <m> X </m> which does not have a unique limit.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        If <m> \of{ X , \tau } </m> is not Hausdorff, then there are distinct points <m> x , y \in X </m> which are not separated by neighborhoods. In particular, <m> M \cap N \neq \emptyset </m> for all neighborhoods <m> M \in \Nbhd \of{ x } </m> and <m> N \in \Nbhd \of{ y } </m> of <m> x </m> and <m> y </m> in <m> X </m>. The <xref ref="axiom-axiom-of-choice" text="title"/> allows us to find a indexed family <m> \of{ x_{ \of{ M , N } } }_{ \of{ M , N } \in \Nbhd \of{ x } \times \Nbhd \of{ y } } </m> of points <m> x \in X </m> so that <m> x_{ \of{ M , N } } \in M \cap N </m> for all indices <m> \of{ M , N } \in \Nbhd \of{ x } \times \Nbhd \of{ y } </m>.
+      </p>
+      
+      <p>
+        We will show that the net <m> \of{ x_{ \of{ M , N } } }_{ \of{ M , N } \in \Nbhd \of{ x } \times \Nbhd \of{ y } } </m> converges downwards to both <m> x </m> and <m> y </m>. Indeed, let <m> M \in \Nbhd \of{ x } </m> be a neighborhood of <m> x </m> in <m> X </m>. Then
+        
+        <md>
+          x_{ \of{ U , V } } \in U \cap V \subseteq U \subseteq M
+        </md>
+        
+        for all indices <m> \of{ U , V } \succeq \of{ M , X } </m>, and so <m> \of{ x_{ \of{ M , N } } }_{ \of{ M , N } \in \Nbhd \of{ x } \times \Nbhd \of{ y } } </m> converges downwards to <m> x </m>. Similarly, let <m> N \in \Nbhd \of{ y } </m> be a neighborhood of <m> y </m> in <m> X </m>. Then
+        
+        <md>
+          x_{ \of{ U , V } } \in U \cap V \subseteq V \subseteq N
+        </md>
+        
+        for all indices <m> \of{ U , V } \succeq \of{ X , N } </m>, and so <m> \of{ x_{ \of{ M , N } } }_{ \of{ M , N } \in \Nbhd \of{ x } \times \Nbhd \of{ y } } </m> converges downwards to <m> y </m>.
+      </p>
+    </solution> -->
+  </task>
+</exercise>
