@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-average-and-instantaneous-rates-of-change" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Average and Instantaneous Rates of Change
+  </title>
+
+  <introduction>
+    <p>
+      The <term> average rate of change </term> of a real-valued function <m> f \colon X \to \R </m> defined on some subset <m> X \subseteq \R </m> which contains a closed interval <m> \clint{ a }{ b } \subseteq X </m> is the difference quotient
+      
+      <md>
+        \frac{ f \of{ b } - f \of{ a } }{ b - a }
+      </md>.
+      
+      In <xref ref="section-differentiability"/>, we saw that the derivative of a differentiable function is a limit of such difference quotients; as such, the derivative is often interpreted as an <term> instantaneous rate of change </term>. The <term> mean value theorem </term> relates these two rates of change under some mild hypotheses on <m> f </m>.
+    </p>
+  </introduction>
+  
+  <p>
+    Before we explore the <xref ref="theorem-mean-value-theorem" text="title"/> in its full generality, we prove a special case. The proof of the <xref ref="theorem-mean-value-theorem" text="title"/> will rely on the following supporting lemma:
+  </p>
+  
+  <lemma xml:id="lemma-rolles-lemma">
+    <title>
+      Rolle's lemma
+    </title>
+    
+    <creator>
+      Michel Rolle
+    </creator>
+    
+    <statement>
+      <p>
+        Let <m> f \colon \clint{ a }{ b } \to \R </m> be a real-valued function defined on a closed interval <m> \clint{ a }{ b } \subsetneq \R </m>. If <m> f </m> is continuous on the closed interval <m> \clint{ a }{ b } </m> and differentiable on the open interval <m> \opint{ a }{ b } </m> and <m> f \of{ a } = f \of{ b } </m>, then <m> f' \of{ c } = 0 </m> for some point <m> a \lt c \lt b </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> a \lt c \lt b </m>, and suppose that <m> f' \of{ c } \gt 0 </m>. Then since <m> \frac{ f' \of{ c } }{ 2 } \gt 0 </m> is positive, there is some positive real number <m> \delta \gt 0 </m> so that
+        
+        <md>
+          \abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } - f' \of{ c } } \lt \frac{ f' \of{ c } }{ 2 }
+        </md>
+        
+        for all points <m> x \in \clint{ a }{ b } </m> so that <m> 0 \lt \abs{ x - c } \lt \delta </m>. In particular,
+        
+        <md>
+          \frac{ f \of{ x } - f \of{ c } }{ x - c } \gt f' \of{ c } - \frac{ f' \of{ c } }{ 2 } = \frac{ f' \of{ c } }{ 2 } \gt 0
+        </md>
+        
+        for all points <m> x \in \clint{ a }{ b } </m> so that <m> 0 \lt \abs{ x - c } \lt \delta </m>, so that <m> f \of{ x } - f \of{ c } </m> and <m> x - c </m> have the same sign; that is, so long as <m> x \in \clint{ a }{ b } </m> and <m> 0 \lt \abs{ x - c } \lt \delta </m>, then <m> f \of{ x } \lt f \of{ c } </m> if <m> x \lt c </m> and <m> f \of{ x } \gt f \of{ c } </m> if <m> x \gt c </m>. In particular, we conclude that <m> f </m> does not achieve a maximum or minimum at <m> c </m>.
+      </p>
+      
+      <p>
+        Similarly, now suppose that <m> f' \of{ c } \lt 0 </m>. Then since <m> -\frac{ f' \of{ c } }{ 2 } \gt 0 </m> is positive, there is some positive real number <m> \delta \gt 0 </m> so that
+        
+        <md>
+          \abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } - f' \of{ c } } \lt -\frac{ f' \of{ c } }{ 2 }
+        </md>
+        
+        for all points <m> x \in \clint{ a }{ b } </m> so that <m> 0 \lt \abs{ x - c } \lt \delta </m>. In particular,
+        
+        <md>
+          \frac{ f \of{ x } - f \of{ c } }{ x - c } \lt -f' \of{ c } + \frac{ f' \of{ c } }{ 2 } = -\frac{ f' \of{ c } }{ 2 } \lt 0
+        </md>
+        
+        for all points <m> x \in \clint{ a }{ b } </m> so that <m> 0 \lt \abs{ x - c } \lt \delta </m>, so that <m> f \of{ x } - f \of{ c } </m> and <m> x - c </m> have opposite sign; that is, so long as <m> x \in \clint{ a }{ b } </m> and <m> 0 \lt \abs{ x - c } \lt \delta </m>, then <m> f \of{ x } \gt f \of{ c } </m> if <m> x \lt c </m> and <m> f \of{ x } \lt f \of{ c } </m> if <m> x \gt c </m>. In particular, we conclude that <m> f </m> does not achieve a maximum or minimum at <m> c </m>.
+      </p>
+      
+      <p>
+        However, <m> \clint{ a }{ b } </m> is closed and bounded, and hence compact by <xref ref="corollary-compact-subsets-of-euclidean-space"/>. Since <m> f </m> is continuous and <m> \clint{ a }{ b } </m> is compact, <xref ref="proposition-continuous-images-of-compact-subsets"/> implies that
+        
+        <md>
+          \im \of{ f } = f \of{ \clint{ a }{ b } } = \setmid{ f \of{ x } \in \R }{ a \leq x \leq b }
+        </md>
+        
+        is compact and hence also closed and bounded. In particular, <m> f </m> attains a maximum <m> \max_{ a \leq x \leq b }{ f \of{ x } } = \max \of{ \im \of{ f } } </m> and a minimum <m> \min_{ a \leq x \leq b }{ f \of{ x } } = \min \of{ \im \of{ f } } </m>.
+      </p>
+      
+      <p>
+        To summarize our argument so far, we have shown that <m> f </m> does not achieve a maximum or minimum value at any point where its derivative is non-zero, but <m> f </m> must achieve a maximum and minimum value somewhere in <m> \clint{ a }{ b } </m>. If <m> f </m> achieves a maximum or a minimum value at an interior point <m> a \lt c \lt b </m>, then the above argument shows that <m> f' \of{ c } = 0 </m>. Otherwise, <m> f </m> attains both its maximum and minimum values at the endpoints <m> a </m> and <m> b </m>. In this case, <m> f </m> must be constant because <m> f \of{ a } = f \of{ b } </m>. In particular, this implies that <m> f' \of{ c } = 0 </m> for all points <m> a \lt c \lt b </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <p>
+    We remark that the details of the above proof of <xref ref="lemma-rolles-lemma" text="title"/> are necessary even if we have an understanding of the analysis of critical points and local extrema. Indeed, the result often taught in calculus classes that for a function <m> f \colon X \to \R </m>, if <m> f </m> is differentiable at a point <m> c \in X </m> and <m> f' \of{ c } \gt 0 </m>, then <m> f </m> is increasing near <m> c </m> is false; such a conclusion actually requires continuous differentiability near <m> c </m>.
+  </p>
+  
+  <theorem xml:id="theorem-mean-value-theorem">
+    <title>
+      Mean value theorem
+    </title>
+    
+    <creator>
+      Joseph-Louis Lagrange
+    </creator>
+    
+    <statement>
+      <p>
+        Let <m> f \colon \clint{ a }{ b } \to \R </m> be a real-valued function defined on a closed interval <m> \clint{ a }{ b } \subsetneq \R </m>. If <m> f </m> is continuous on the closed interval <m> \clint{ a }{ b } </m> and differentiable on the open interval <m> \opint{ a }{ b } </m>, then
+        
+        <md>
+          f' \of{ c } = \frac{ f \of{ b } - f \of{ a } }{ b - a }
+        </md>
+        
+        for some point <m> a \lt c \lt b </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> g \colon \clint{ a }{ b } \to \R </m> be the real-valued function defined by the formula
+        
+        <md>
+          g \of{ x } = f \of{ x } - \of{ \frac{ f \of{ b } - f \of{ a } }{ b - a } } x
+        </md>.
+        
+        Then <m> g </m> is continuous by <xref ref="proposition-vector-arithmetic-of-continuous-maps"/> and differentiable on the open interval <m> \opint{ a }{ b } </m> by <xref ref="proposition-arithmetic-of-differentiable-functions"/>, with derivative
+        
+        <md>
+          g' \of{ x } = f' \of{ x } - \frac{ f \of{ b } - f \of{ a } }{ b - a }
+        </md>.
+        
+        Moreover,
+        
+        <md>
+          <mrow>
+            g \of{ b } \amp = f \of{ b } - \of{ \frac{ f \of{ b } - f \of{ a } }{ b - a } } b
+          </mrow>
+          
+          <mrow>
+            \amp = f \of{ b } - \of{ \frac{ f \of{ b } - f \of{ a } }{ b - a } } \of{ b - a } - \of{ \frac{ f \of{ b } - f \of{ a } }{ b - a } } a
+          </mrow>
+          
+          <mrow>
+            \amp = f \of{ b } - \of{ f \of{ b } - f \of{ a } } - \of{ \frac{ f \of{ b } - f \of{ a } }{ b - a } } a
+          </mrow>
+          
+          <mrow>
+            \amp = f \of{ b } - \of{ \frac{ f \of{ b } - f \of{ a } }{ b - a } } a = g \of{ a }
+          </mrow>
+        </md>.
+        
+        <xref ref="lemma-rolles-lemma"/> now implies that <m> g' \of{ c } = 0 </m> for some interior point <m> a \lt c \lt b </m>; that is,
+        
+        <md>
+          f' \of{ c } = \frac{ f \of{ b } - f \of{ a } }{ b - a }
+        </md>.
+      </p>
+    </proof>
+  </theorem>
+
+  <example xml:id="example-hypotheses-of-the-mean-value-theorem">
+    <title>
+      Hypotheses of the <xref ref="theorem-mean-value-theorem" text="title"/>
+    </title>
+    
+    <statement>
+      <p>
+        The following examples demonstrate that each of the hypotheses of the <xref ref="theorem-mean-value-theorem" text="title"/> is necessary:
+        
+        <ol>
+          <li>
+            <p>
+              Let <m> f \colon \clint{ 0 }{ 1 } \cup \clint{ 2 }{ 3 } \to \R </m> be the real-valued function defined piecewise by the formula
+              
+              <md>
+                f \of{ x } =
+                  \begin{cases}
+                    0 \amp 0 \leq x \leq 1 \\
+                    1 \amp 2 \leq x \leq 3
+                  \end{cases}
+              </md>.
+              
+              Then <m> f </m> is continuous on <m> \clint{ 0 }{ 1 } \cup \clint{ 2 }{ 3 } </m> and differentiable on the interior <m> \opint{ 0 }{ 1 } \cup \opint{ 2 }{ 3 } </m>, but
+              
+              <md>
+                f' \of{ x } = 0 \neq \frac{ 1 }{ 3 } = \frac{ 1 - 0 }{ 3 - 0 } = \frac{ f \of{ 3 } - f \of{ 0 } }{ 3 - 0 }
+              </md>
+              
+              for all interior points <m> x \in \opint{ 0 }{ 1 } \cup \opint{ 2 }{ 3 } </m>. This example shows that <m> f </m> must be defined on a closed interval in order to guarantee the conclusions of the <xref ref="theorem-mean-value-theorem" text="title"/>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Let <m> f \colon \clint{ 0 }{ 1 } \to \R </m> be the real-valued function defined piecewise by the formula
+              
+              <md>
+                f \of{ x } =
+                  \begin{cases}
+                    0 \amp 0 \leq x \lt 1 \\
+                    1 \amp x = 1
+                  \end{cases}
+              </md>.
+              
+              Then <m> f </m> is continuous on <m> \clopint{ 0 }{ 1 } </m> and differentiable on the interior <m> \opint{ 0 }{ 1 } </m>, but
+              
+              <md>
+                f' \of{ x } = 0 \neq 1 = \frac{ 1 - 0 }{ 1 - 0 } = \frac{ f \of{ 1 } - f \of{ 0 } }{ 1 - 0 }
+              </md>
+              
+              for all interior points <m> x \in \opint{ 0 }{ 1 } </m>. This example shows that <m> f </m> must be continuous on the closed interval <m> \clint{ 0 }{ 1 } </m> in order to guarantee the conclusions of the <xref ref="theorem-mean-value-theorem" text="title"/>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Let <m> f \colon \clint{ -1 }{ 1 } \to \R </m> be the real-valued function defined by the formula <m> f \of{ x } = \abs{ x } </m>. Then <m> f </m> is continuous on <m> \clint{ 0 }{ 1 } </m> and differentiable at every interior point except <m> x = 0 </m>, but
+              
+              <md>
+                f' \of{ x } = \pm 1 \neq 0 = \frac{ 1 - 1 }{ 1 - \of{ -1 } } = \frac{ f \of{ 1 } - f \of{ -1 } }{ 1 - \of{ -1 } }
+              </md>
+              
+              for all interior points <m> x \in \opint{ -1 }{ 1 } \setminus \set{ 0 } </m>. This example shows that <m> f </m> must be differentiable on the open interval <m> \opint{ -1 }{ 1 } </m> in order to guarantee the conclusions of the <xref ref="theorem-mean-value-theorem" text="title"/>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </example>
+
+  <conclusion>
+    <p>
+      While all of the hypotheses of the <xref ref="theorem-mean-value-theorem" text="title"/> are necessary in order to guarantee its conclusion, they are sufficient as written. Indeed, a function <m> f \colon \clint{ a }{ b } \to \R </m> need not be differentiable at the endpoints <m> a </m> or <m> b </m> in order to apply the <xref ref="theorem-mean-value-theorem" text="title"/>; for an example, see the function defined by the formula
+      
+      <md>
+        f \of{ x } = \sqrt{ \of{ \frac{ a - b }{ 2 } }^{ 2 } - \of{ x - \frac{ a + b }{ 2 } }^{ 2 } }
+      </md>,
+      
+      which is differentiable on the open interval <m> \opint{ a }{ b } </m> but not at the endpoints and yet satisfies the conclusions of the <xref ref="theorem-mean-value-theorem" text="title"/>.
+    </p>
+  </conclusion>
+</subsection>

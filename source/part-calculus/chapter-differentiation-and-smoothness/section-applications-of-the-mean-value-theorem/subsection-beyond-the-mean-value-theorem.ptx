@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-beyond-the-mean-value-theorem" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Beyond the Mean Value Theorem
+  </title>
+
+  <introduction>
+    <p>
+      <xref ref="lemma-rolles-lemma" text="title"/> and the <xref ref="theorem-mean-value-theorem" text="title"/> are two of a constellation of similar results relating the derivatives of some differentiable functions to the average rates of change of said functions. Particularly useful among these results is the following lemma, from which the <xref ref="theorem-mean-value-theorem" text="title"/> and more can be derived:
+    </p>
+  </introduction>
+  
+  <lemma xml:id="lemma-generalized-mean-value-theorem">
+    <title>
+      Generalized mean value theorem
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f , g , h \colon \clint{ a }{ b } \to \R </m> be real-valued functions defined on a closed interval <m> \clint{ a }{ b } </m>, and consider the real-valued function <m> D \colon \clint{ a }{ b } \to \R </m> defined by the formula
+        
+        <md>
+          <mrow>
+            D \of{ x } \amp = \det \of{ \begin{matrix} f \of{ x } \amp g \of{ x } \amp h \of{ x } \\ f \of{ a } \amp g \of{ a } \amp h \of{ a } \\ f \of{ b } \amp g \of{ b } \amp h \of{ b } \end{matrix} }
+          </mrow>
+          
+          <mrow>
+            \amp = f \of{ x } \of{ g \of{ a } h \of{ b } - g \of{ b } h \of{ b } } - g \of{ x } \of{ f \of{ a } h \of{ b } - f \of{ b } h \of{ a } }
+          </mrow>
+          
+          <mrow>
+            \amp \qquad + h \of{ x } \of{ f \of{ a } g \of{ b } - f \of{ b } g \of{ a } }
+          </mrow>
+        </md>.
+        
+        If <m> f </m>, <m> g </m>, and <m> h </m> are continuous on the closed interval <m> \clint{ a }{ b } </m> and differentiable on the interior <m> \opint{ a }{ b } </m>, then <m> D </m> is differentiable on <m> \opint{ a }{ b } </m>, and <m> D' \of{ c } = 0 </m> for some interior point <m> a \lt c \lt b </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        We observe that <m> D </m> is a linear combination of <m> f </m>, <m> g </m>, and <m> h </m>, and so is continuous on <m> \clint{ a }{ b } </m> by <xref ref="proposition-vector-arithmetic-of-continuous-maps"/> and is differentiable on <m> \opint{ a }{ b } </m> by <xref ref="proposition-arithmetic-of-differentiable-functions"/>. Moreover,
+        
+        <md>
+          D \of{ a } = \det \of{ \begin{matrix} f \of{ a } \amp g \of{ a } \amp h \of{ a } \\ f \of{ a } \amp g \of{ a } \amp h \of{ a } \\ f \of{ b } \amp g \of{ b } \amp h \of{ b } \end{matrix} }
+        </md>
+        
+        and
+        
+        <md>
+          D \of{ b } = \det \of{ \begin{matrix} f \of{ b } \amp g \of{ b } \amp h \of{ b } \\ f \of{ a } \amp g \of{ a } \amp h \of{ a } \\ f \of{ b } \amp g \of{ b } \amp h \of{ b } \end{matrix} }
+        </md>
+        
+        are determinants of <m> 3 \times 3 </m> matrices with repeated rows, and so <m> D \of{ a } = D \of{ b } = 0 </m> by a standard result of linear algebra. Alternatively, one can verify that <m> D \of{ a } = D \of{ b } = 0 </m> by direct computation. In any case, <xref ref="lemma-rolles-lemma" text="title"/> now implies that <m> D' \of{ c } = 0 </m> for some interior point <m> a \lt c \lt b </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <p>
+    One can use <xref ref="lemma-generalized-mean-value-theorem"/> to construct another proof of the <xref ref="theorem-mean-value-theorem" text="title"/>, but its real strength is in its generality. We include the following alternative proof of <xref ref="lemma-generalized-mean-value-theorem"/> for completeness:
+  </p>
+  
+  <proof xml:id="proof-alternative-proof-of-the-mean-value-theorem">
+    <title>
+      Alternative proof of the <xref ref="theorem-mean-value-theorem" text="title"/>
+    </title>
+    
+    <p>
+      Let <m> g , h \colon \clint{ a }{ b } \to \R </m> be the real-valued functions defined by the formulas <m> g \of{ x } = x </m> and <m> h \of{ x } = 1 </m>, and consider the function <m> D \colon \clint{ a }{ b } \to \R </m> defined as in <xref ref="lemma-generalized-mean-value-theorem"/>. Then
+      
+      <md>
+        <mrow>
+          D \of{ x } \amp = \det \of{ \begin{matrix} f \of{ x } \amp g \of{ x } \amp h \of{ x } \\ f \of{ a } \amp g \of{ a } \amp h \of{ a } \\ f \of{ b } \amp g \of{ b } \amp h \of{ b } \end{matrix} } = \det \of{ \begin{matrix} f \of{ x } \amp x \amp 1 \\ f \of{ a } \amp a \amp 1 \\ f \of{ b } \amp b \amp 1 \end{matrix} }
+        </mrow>
+        
+        <mrow>
+          \amp = f \of{ x } \of{ a - b } - x \of{ f \of{ a } - f \of{ b } } + 1 \of{ f \of{ a } b - f \of{ b } a }
+        </mrow>
+      </md>,
+      
+      and so
+      
+      <md>
+        D' \of{ x } = f' \of{ x } \of{ a - b } - \of{ f \of{ a } - f \of{ b } }
+      </md>.
+      
+      <xref ref="lemma-generalized-mean-value-theorem"/> implies that there is some interior point <m> a \lt c \lt b </m> so that <m> D' \of{ c } = 0 </m>. We observe that
+      
+      <md>
+        <mrow>
+          0 = D' \of{ c } \amp = f' \of{ c } \of{ a - b } - \of{ f \of{ a } - f \of{ b } }
+        </mrow>
+        
+        <mrow>
+          f \of{ a } - f \of{ b } \amp = f' \of{ c } \of{ a - b }
+        </mrow>
+        
+        <mrow>
+          \frac{ f \of{ b } - f \of{ a } }{ b - a } = \frac{ f \of{ a } - f \of{ b } }{ a - b } \amp = f' \of{ c }
+        </mrow>
+      </md>.
+    </p>
+  </proof>
+  
+  <p>
+    <xref ref="lemma-generalized-mean-value-theorem"/> relates the derivatives of three differentiable functions, and the <xref ref="theorem-mean-value-theorem"/> deals with the derivative of just one differentiable function. Intermediate between these results is the following result, which relates the derivatives of two differentiable functions:
+  </p>
+
+  <theorem xml:id="theorem-extended-mean-value-theorem">
+    <title>
+      Extended mean value theorem
+    </title>
+    
+    <creator>
+      Augustin-Louis Cauchy
+    </creator>
+    
+    <statement>
+      <p>
+        Let <m> f , g \colon \clint{ a }{ b } \to \R </m> be real-valued functions defined on a closed interval <m> \clint{ a }{ b } \subsetneq \R </m>. If <m> f </m> and <m> g </m> are continuous on the closed interval <m> \clint{ a }{ b } </m> and differentiable on the open interval <m> \opint{ a }{ b } </m>, then
+        
+        <md>
+          f' \of{ c } \of{ g \of{ b } - g \of{ a } } = \of{ f \of{ b } - f \of{ a } } g' \of{ c }
+        </md>
+        
+        for some point <m> a \lt c \lt b </m>. 
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> h \colon \clint{ a }{ b } \to \R </m> be the constant real-valued function defined by the formula <m> h \of{ x } = 1 </m>, and consider the function <m> D \colon \clint{ a }{ b } \to \R </m> defined as in <xref ref="lemma-generalized-mean-value-theorem"/>. Then
+        
+        <md>
+          <mrow>
+            D \of{ x } \amp = \det \of{ \begin{matrix} f \of{ x } \amp g \of{ x } \amp h \of{ x } \\ f \of{ a } \amp g \of{ a } \amp h \of{ a } \\ f \of{ b } \amp g \of{ b } \amp h \of{ b } \end{matrix} } = \det \of{ \begin{matrix} f \of{ x } \amp g \of{ x } \amp 1 \\ f \of{ a } \amp g \of{ a } \amp 1 \\ f \of{ b } \amp g \of{ b } \amp 1 \end{matrix} }
+          </mrow>
+          
+          <mrow>
+            \amp = f \of{ x } \of{ g \of{ a } - g \of{ b } } - g \of{ x } \of{ f \of{ a } - f \of{ b } } + \of{ f \of{ a } g \of{ b } - f \of{ b } g \of{ a } }
+          </mrow>
+        </md>,
+        
+        and so
+        
+        <md>
+          D' \of{ x } = f' \of{ x } \of{ g \of{ a } - g \of{ b } } - g' \of{ x } \of{ f \of{ a } - f \of{ b } }
+        </md>.
+        
+        <xref ref="lemma-generalized-mean-value-theorem"/> implies that there is some interior point <m> a \lt c \lt b </m> so that <m> D' \of{ c } = 0 </m>. We observe that
+        
+        <md>
+          <mrow>
+            0 = D' \of{ c } \amp = f' \of{ c } \of{ g \of{ a } - g \of{ b } } - g' \of{ c } \of{ f \of{ a } - f \of{ b } }
+          </mrow>
+          
+          <mrow>
+            f' \of{ c } \of{ g \of{ b } - g \of{ a } } \amp = g' \of{ c } \of{ f \of{ b } - f \of{ a } }
+          </mrow>
+        </md>.
+      </p>
+    </proof>
+  </theorem>
+  
+  <p>
+    We will use the <xref ref="theorem-extended-mean-value-theorem" text="title"/> to compute certain limits taking indeterminate form.
+  </p>
+  
+  <corollary xml:id="corollary-lhopitals-rule">
+    <title>
+      L'Hôpital's rule
+    </title>
+    
+    <creator>
+      Guillaume de l'Hôpital
+    </creator>
+    
+    <statement>
+      <p>
+        Let <m> f , g \colon \opint{ a }{ b } \to \R </m> be real-valued functions on an open interval <m> \opint{ a }{ b } \subseteq \R </m>, and consider an interior point <m> a \lt c \lt b </m>. Suppose that either
+        
+        <md>
+          \lim_{ x \to c }{ f \of{ x } } = \lim_{ x \to c }{ g \of{ x } } = 0
+        </md>
+        
+        or
+        
+        <md>
+          \lim_{ x \to c }{ \abs{ f \of{ x } } } = \lim_{ x \to c }{ \abs{ g \of{ x } } } = \infty
+        </md>.
+        
+        If <m> f </m> and <m> g </m> are differentiable on <m> \opint{ a }{ b } \setminus c </m>, <m> g' \of{ x } \neq 0 </m> for all <m> x \in \opint{ a }{ b } \setminus \set{ c } </m>, and
+        
+        <md>
+          \lim_{ x \to c }{ \frac{ f' \of{ x } }{ g' \of{ x } } } = L
+        </md>
+        
+        for some extended real number <m> L \in \clint{ -\infty }{ \infty } </m>, then
+        
+        <md>
+          \lim_{ x \to c }{ \frac{ f \of{ x } }{ g \of{ x } } } = L
+        </md>
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Since <m> g </m> is continuous on <m> \opint{ a }{ b } </m> and <m> g' \of{ x } \neq 0 </m> for all <m> x \in \opint{ a }{ b } \setminus \set{ c } </m>, <m> g \of{ x } </m> attains no local extrema on <m> \opint{ a }{ b } \setminus \set{ c } </m>. In particular, <m> g \of{ x } </m> is strictly monotone on <m> \opint{ a }{ c } </m> and on <m> \opint{ b }{ c } </m>. Without loss of generality, we may shrink the interval <m> \opint{ a }{ b } </m> so that <m> g \of{ x } \neq 0 </m> for all points <m> x \in \opint{ a }{ b } \setminus \set{ c } </m>.
+      </p>
+      
+      <p>
+        For each point <m> x \in \opint{ a }{ b } \setminus \set{ c } </m>, let <m> I_{ x } </m> denote the interval with endpoints <m> x </m> and <m> c </m>, including <m> x </m> but not <m> c </m>; that is,
+        
+        <md>
+          I_{ x } =
+            \begin{cases}
+              \clopint{ x }{ c } \amp a \lt x \lt c \lt b \\
+              \opclint{ c }{ x } \amp a \lt c \lt x \lt b
+            \end{cases}
+        </md>.
+        
+        Moreover, let <m> i , s \colon \opint{ a }{ b } \setminus \set{ c } \to \clint{ -\infty }{ \infty } </m> be the extended real-valued functions defined by the formulas
+        
+        <md>
+          <mrow>
+            i \of{ x } \amp = \inf_{ y \in I_{ x } }{ \frac{ f' \of{ y } }{ g' \of{ y } } } \amp s \of{ x } \amp = \sup_{ y \in I_{ x } }{ \frac{ f' \of{ y } }{ g' \of{ y } } }
+          </mrow>
+        </md>.
+        
+        We observe that since <m> \lim_{ x \to c }{ \frac{ f' \of{ x } }{ g' \of{ x } } } = L </m>,
+        
+        <md>
+          \lim_{ x \to c }{ i \of{ x } } = \lim_{ x \to c }{ s \of{ x } } = L
+        </md>.
+      </p>
+      
+      <p>
+        Consider distinct points <m> y , z \in I_{ x } </m>. Since the restriction of <m> g </m> to either <m> \opclint{ a }{ c } </m> or <m> \clopint{ c }{ b } </m> is strictly monotone and therefore injective, <m> g \of{ y } \neq g \of{ z } </m>. Moreover, the restrictions of <m> f </m> and <m> g </m> to the closed interval between <m> y </m> and <m> z </m> satisfy the hypotheses of <xref ref="theorem-extended-mean-value-theorem"/>, and so
+        
+        <md>
+          \frac{ f \of{ z } - f \of{ y } }{ g \of{ z } - g \of{ y } } = \frac{ f' \of{ t } }{ g' \of{ t } }
+        </md>
+        
+        for some point <m> t \in I_{ x } </m> lying strictly between <m> y </m> and <m> z </m>. In particular, we conclude that
+        
+        <md>
+          i \of{ x } \leq \frac{ f \of{ z } - f \of{ y } }{ g \of{ z } - g \of{ y } } \leq s \of{ x }
+        </md>
+        
+        for all <m> x \in \opint{ a }{ b } \setminus \set{ c } </m> and distinct points <m> y , z \in I_{ x } </m>.
+      </p>
+      
+      <p>
+        We first suppose that
+        
+        <md>
+          \lim_{ x \to c }{ f \of{ x } } = \lim_{ x \to c }{ g \of{ x } } = 0
+        </md>.
+        
+        Then the above argument implies that
+        
+        <md>
+          i \of{ x } \leq \frac{ \frac{ f \of{ x } }{ g \of{ x } } - \frac{ f \of{ y } }{ g \of{ x } } }{ 1 - \frac{ g \of{ y } }{ g \of{ x } } } \leq s \of{ x }
+        </md>
+        
+        for all <m> x \in \opint{ a }{ b } </m> and <m> y \in I_{ x } \setminus \set{ x } </m>. Taking a limit as <m> y \to c </m>, we obtain
+        
+        <md>
+          i \of{ x } \leq \frac{ f \of{ x } }{ g \of{ x } } \leq s \of{ x }
+        </md>.
+        
+        The <xref ref="theorem-squeeze-theorem" text="title"/> and <xref ref="theorem-sequential-characterization-of-map-convergence"/> now implies that
+        
+        <md>
+          \lim_{ x \to c }{ \frac{ f \of{ x } }{ g \of{ x } } } = L
+        </md>.
+      </p>
+      
+      <p>
+        We now suppose that
+        
+        <md>
+          \lim_{ x \to c }{ \abs{ f \of{ x } } } = \lim_{ x \to c }{ \abs{ g \of{ x } } } = \infty
+        </md>.
+        
+        Then the above argument implies that
+        
+        <md>
+          i \of{ x } \leq \frac{ \frac{ f \of{ y } }{ g \of{ y } } - \frac{ f \of{ x } }{ g \of{ y } } }{ 1 - \frac{ g \of{ x } }{ g \of{ y } } } \leq s \of{ x }
+        </md>
+        
+        for all <m> x \in \opint{ a }{ b } </m> and <m> y \in I_{ x } \setminus \set{ x } </m>. Taking limits as <m> y \to c </m>, we observe that
+        
+        <md>
+          \lim_{ y \to c }{ \frac{ f \of{ x } }{ g \of{ y } } } = \lim_{ y \to c }{ \frac{ g \of{ x } }{ g \of{ y } } } = 0
+        </md>.
+        
+        We conclude that
+        
+        <md>
+          i \of{ x } \leq \liminf_{ y \in I_{ x } }{ \frac{ f \of{ y } }{ g \of{ y } } } \leq \limsup_{ y \in I_{ x } }{ \frac{ f \of{ y } }{ g \of{ y } } } \leq s \of{ x }
+        </md>
+        
+        for all <m> x \in \opint{ a }{ b } \setminus \set{ c } </m>. The <xref ref="theorem-squeeze-theorem" text="title"/> and <xref ref="theorem-sequential-characterization-of-map-convergence"/> now implies that
+        
+        <md>
+          \lim_{ x \to c }{ \frac{ f \of{ x } }{ g \of{ x } } } = L
+        </md>.
+      </p>
+    </proof>
+  </corollary>
+
+  <conclusion>
+    <p>
+      While different in formulation than the other <xref ref="theorem-mean-value-theorem" text="title"/>-like results covered in this section, <xref ref="corollary-lhopitals-rule" text="title"/> also relates the values of some differentiable functions with the values of their derivatives.
+    </p>
+  </conclusion>
+</subsection>

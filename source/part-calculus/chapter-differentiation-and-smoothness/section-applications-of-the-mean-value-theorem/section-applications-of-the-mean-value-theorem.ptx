@@ -7,15 +7,17 @@
 
   <introduction>
     <p>
-      Text before the first subsection.
+      In this section, we introduce one of the fundamental results of differential calculus. The <term> mean value theorem </term> relates the instantaneous rate of change of a differentiable function given by its derivative and its average rate of change given by a difference quotient. While not immediately obvious, the mean value theorem has several deep consequences for the study of differentiable functions. We will derive the mean value theorem and exhibit several of these corollaries.
     </p>
   </introduction>
 
-  <!-- <xi:include href="./subsection-TITLE.ptx"/> -->
+  <xi:include href="./subsection-average-and-instantaneous-rates-of-change.ptx"/>
+
+  <xi:include href="./subsection-beyond-the-mean-value-theorem.ptx"/>
 
   <conclusion>
     <p>
-      Text after the last subsection.
+      In the next section, we will explore approximations of multiply-differentiable functions by higher order polynomials.
     </p>
   </conclusion>
 
