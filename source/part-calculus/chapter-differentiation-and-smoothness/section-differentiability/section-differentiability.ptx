@@ -7,7 +7,7 @@
 
   <introduction>
     <p>
-      The fundamental object in differential calculus is the <term> differentiable function </term> and its <term> derivative </term>. In this section, we formally differentiability as a property of real-valued functions defined on subsets of the real line <m> \R </m>. We will develop techniques of differentiation, compare the regularities of various functions, and begin local analysis of functions at their <term> critical points </term>.
+      The fundamental object in differential calculus is the <term> differentiable function </term> and its <term> derivative </term>. In this section, we formally differentiability as a property of real-valued functions defined on subsets of the real line <m> \R </m>. We will develop techniques of differentiation, compile a list of differentiable functions, and compare the regularities of various functions.
     </p>
   </introduction>
 
@@ -15,15 +15,13 @@
 
   <xi:include href="./subsection-regularity-and-smoothness.ptx"/>
 
-  <xi:include href="./subsection-analysis-of-critical-points.ptx"/>
-
   <conclusion>
     <p>
       Text after the last subsection.
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-differentiability.ptx"/>
+  <xi:include href="./exercises-differentiability.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-differentiability.ptx"/>
+  <xi:include href="./problems-differentiability.ptx"/>
 </section>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-analysis-of-critical-points" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Analysis of Critical Points
+  </title>
+
+  <introduction>
+    <p>
+      In this section, we analyze the local behavior of a real-valued function based on differentiability criteria and/or the value of the derivative. We will make a distinction between <term> critical points </term> and <term> regular points </term> and begin to develop tools to analyze the local behavior near each. Finally, we will also classify certain kinds of critical points based on several derivative tests.
+    </p>
+  </introduction>
+
+  <xi:include href="./subsection-local-behavior-near-critical-points.ptx"/>
+
+  <xi:include href="./subsection-classification-of-critical-points.ptx"/>
+
+  <conclusion>
+    <p>
+      In the next section, we will relate the instantaneous rate of change of a differentiable function (that is, its derivative) to its average rate of change via the <term> mean value theorem </term>.
+    </p>
+  </conclusion>
+
+  <xi:include href="./exercises-analysis-of-critical-points.ptx"/>
+
+  <xi:include href="./problems-analysis-of-critical-points.ptx"/>
+</section>

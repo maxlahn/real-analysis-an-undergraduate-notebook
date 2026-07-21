@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-local-behavior-near-critical-points" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Local Behavior Near Critical Points
+  </title>
+
+  <introduction>
+    <p>
+      The local behavior of a differentiable real-valued function near a point can be very different depending on the sign of the derivative at that point. We will make the distinction between <term> critical points </term>, where the derivative vanishes (or does not exist), and <term> regular points </term>, where the derivative is non-zero.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-critical-regular-point-value">
+    <title>
+      Critical/regular point/value
+    </title>
+    
+    <idx>
+      critical point
+    </idx>
+    
+    <idx>
+      stationary point
+    </idx>
+    
+    <idx>
+      critical value
+    </idx>
+    
+    <idx>
+      regular point
+    </idx>
+    
+    <idx>
+      regular value
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to \R </m> be a real-valued function defined on an interval <m> X \subseteq \R </m>.
+        
+        <ul>
+          <li>
+            <title>
+              Critical point/value
+            </title>
+            
+            <p>
+              A point <m> x \in X </m> is called a <term> critical point </term> of <m> f </m> if either <m> f' \of{ x } = 0 </m>, in which case <m> x </m> is called a <term> stationary (critical) point </term> of <m> f </m>, or <m> f </m> is not differentiable at <m> x </m>.
+            </p>
+            
+            <p>
+              A real number <m> y \in \R </m> is called a <term> critical value </term> of <m> f </m> if <m> f \of{ x } = y </m> for some critical point <m> x \in X </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Regular point/value
+            </title>
+            
+            <p>
+              A point <m> x \in X </m> is called a <term> regular point </term> of <m> f </m> if it is not a critical point of <m> f </m>; that is, <m> x </m> is a regular point of <m> f </m> if <m> f </m> is differentiable at <m> x </m> and <m> f' \of{ x } \neq 0 </m>.
+            </p>
+            
+            <p>
+              A real number <m> y \in \R </m> is called a <term> regular value </term> of <m> f </m> if it is not a critical value of <m> f </m>; that is, <m> y </m> is a regular value of <m> f </m> if the pre-image
+              
+              <md>
+                f^{ -1 } \of{ y } = \setmid{ x \in X }{ f \of{ x } = y }
+              </md>
+              
+              consists only of regular points of <m> f </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="example-critical-regular-points-values">
+    <title>
+      Critical/regular points/values
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of critical points, regular points, critical values, and regular values of functions:
+        
+        <ul>
+          <li>
+            <p>
+              Let <m> f \colon \R \to \R </m> be the function defined piecewise by the formula
+              
+              <md>
+                f \of{ x } = \sgn \of{ x } =
+                  \begin{cases}
+                    1 \amp x \gt 0 \\
+                    0 \amp x = 0 \\
+                    -1 \amp x \lt 0
+                  \end{cases}
+              </md>.
+              
+              Then every point <m> x \in \R </m> is a critical point of <m> f </m>. If <m> x \neq 0 </m>, then <m> x </m> is a stationary critical point of <m> f </m>, and if <m> x = 0 </m>, then <m> x </m> is a point of non-differentiability. Thus <m> 1 </m>, <m> 0 </m>, and <m> -1 </m> are critical values of <m> f </m>, and all other real numbers are regular values.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Let <m> g \colon \R \to \R </m> be the function defined piecewise by the formula
+              
+              <md>
+                g \of{ y } = \abs{ y } =
+                  \begin{cases}
+                    y \amp y \geq 0 \\
+                    -y \amp y \lt 0
+                  \end{cases}
+              </md>.
+              
+              Then <m> 0 </m> is the only critical point of <m> g </m>, and it is a point of non-differentiability. Thus <m> 0 </m> is a critical value of <m> g </m>, and all other real numbers are regular values.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Let <m> h \colon \R \to \R </m> be the function defined by the formula <m> h \of{ z } = z^{ 2 } </m>. Then <m> 0 </m> is the only critical point of <m> h </m>, and it is a stationary critical point. Thus <m> 0 </m> is a critical value of <m> g </m>, and all other real numbers are regular values.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    One use of the critical points of a real-valued function is in finding <term> local extrema </term>, which occur when the restriction of a function to a neighborhood attains an extreme value on that neighborhood.
+  </p>
+  
+  <definition xml:id="definition-local-extrema">
+    <title>
+      Local extrema
+    </title>
+    
+    <idx>
+      local maximum
+    </idx>
+    
+    <idx>
+      local minimum
+    </idx>
+    
+    <idx>
+      local extremum
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to \R </m> be a real-valued function defined on a subset <m> X \subseteq \R </m>.
+        
+        <ul>
+          <li>
+            <title>
+              Local maximum
+            </title>
+            
+            <p>
+              <m> f </m> attains a <term> local maximum </term> at a point <m> x \in X </m> if there is a neighborhood <m> N \in \Nbhd_{ X } \of{ x } </m> of <m> x </m> in <m> X </m> so that
+              
+              <md>
+                f \of{ y } \leq f \of{ x }
+              </md>
+              
+              for all points <m> y \in N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Local minimum
+            </title>
+            
+            <p>
+              <m> f </m> attains a <term> local minimum </term> at a point <m> x \in X </m> if there is a neighborhood <m> N \in \Nbhd_{ X } \of{ x } </m> of <m> x </m> in <m> X </m> so that
+              
+              <md>
+                f \of{ x } \leq f \of{ y }
+              </md>
+              
+              for all points <m> y \in N </m>.
+            </p>
+          </li>
+        </ul>
+        
+        <term> Local extremum </term> is a generic term which encompasses both local maxima and local minima.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    In fact, local extrema may only be attained at critical points. If a local extremum is attained at a point of non-differentiability, then this is clear. However, if the local extremum is attained at a point at which the function is differentiable, then this point is a stationary critical point. This is the content of the following lemma:
+  </p>
+  
+  <lemma xml:id="lemma-local-extrema-are-stationary-points">
+    <title>
+      Local extrema are stationary points
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to \R </m> be a real-valued function defined on a subset <m> X \subseteq \R </m> which attains a local extremum at a point <m> c \in X </m> so that every neighborhood of <m> c </m> contains points strictly greater than <m> c </m> and points strictly less than <m> c </m>. If <m> f </m> is differentiable at <m> c </m>, then <m> f' \of{ c } = 0 </m>; that is, <m> c </m> is a stationary point of <m> f </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        By contraposition. Suppose first that <m> f' \of{ c } \gt 0 </m> is positive. Then since <m> \frac{ f' \of{ c } }{ 2 } \gt 0 </m> is positive, there is some positive real number <m> \delta \gt 0 </m> so that
+        
+        <md>
+          \abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } - f' \of{ c } } \lt \frac{ f' \of{ c } }{ 2 }
+        </md>
+        
+        for all points <m> x \in X </m> so that <m> 0 \lt \abs{ x - c } \lt \delta </m>. In particular,
+        
+        <md>
+          \frac{ f \of{ x } - f \of{ c } }{ x - c } \gt f' \of{ c } - \frac{ f' \of{ c } }{ 2 } = \frac{ f' \of{ c } }{ 2 } \gt 0
+        </md>
+        
+        for all points <m> x \in X </m> so that <m> 0 \lt \abs{ x - c } \lt \delta </m>, so that <m> f \of{ x } - f \of{ c } </m> and <m> x - c </m> have the same sign; that is, so long as <m> x \in \clint{ a }{ b } </m> and <m> 0 \lt \abs{ x - c } \lt \delta </m>, then <m> f \of{ x } \lt f \of{ c } </m> if <m> x \lt c </m> and <m> f \of{ x } \gt f \of{ c } </m> if <m> x \gt c </m>. In particular, since the neighborhood <m> \mB_{ \delta } \of{ c } = \opint{ c - \delta }{ c + \delta } \cap X </m> contains points strictly less than <m> c </m> and contains points strictly larger than <m> c </m>, we conclude that <m> f </m> does not achieve a maximum or minimum at <m> c </m>.
+      </p>
+      
+      <p>
+        Similarly, now suppose that <m> f' \of{ c } \lt 0 </m> is negative. Then since <m> -\frac{ f' \of{ c } }{ 2 } \gt 0 </m> is positive, there is some positive real number <m> \delta \gt 0 </m> so that
+        
+        <md>
+          \abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } - f' \of{ c } } \lt -\frac{ f' \of{ c } }{ 2 }
+        </md>
+        
+        for all points <m> x \in X </m> so that <m> 0 \lt \abs{ x - c } \lt \delta </m>. In particular,
+        
+        <md>
+          \frac{ f \of{ x } - f \of{ c } }{ x - c } \lt -f' \of{ c } + \frac{ f' \of{ c } }{ 2 } = -\frac{ f' \of{ c } }{ 2 } \lt 0
+        </md>
+        
+        for all points <m> x \in X </m> so that <m> 0 \lt \abs{ x - c } \lt \delta </m>, so that <m> f \of{ x } - f \of{ c } </m> and <m> x - c </m> have opposite sign; that is, so long as <m> x \in \clint{ a }{ b } </m> and <m> 0 \lt \abs{ x - c } \lt \delta </m>, then <m> f \of{ x } \gt f \of{ c } </m> if <m> x \lt c </m> and <m> f \of{ x } \lt f \of{ c } </m> if <m> x \gt c </m>.  In particular, since the neighborhood <m> \mB_{ \delta } \of{ c } = \opint{ c - \delta }{ c + \delta } \cap X </m> contains points strictly less than <m> c </m> and contains points strictly larger than <m> c </m>, we conclude that <m> f </m> does not achieve a maximum or minimum at <m> c </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <p>
+    A famous consequence of <xref ref="lemma-local-extrema-are-stationary-points"/> due to Fermat occurs when we suppose the domain of the function in question is an interval. In this case, interior points automatically satisfy the hypothesis of <xref ref="lemma-local-extrema-are-stationary-points"/>.
+  </p>
+  
+  <theorem xml:id="theorem-interior-extremum-theorem">
+    <title>
+      Interior extremum theorem
+    </title>
+    
+    <creator>
+      Pierre de Fermat
+    </creator>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to \R </m> be a real-valued function defined on an interval <m> X \subseteq \R </m> which attains a local extremum at an interior point <m> c \in \Int \of{ X } </m>. If <m> f </m> is differentiable at <m> c </m>, then <m> f' \of{ c } = 0 </m>; that is, <m> c </m> is a stationary point of <m> f </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Any neighborhood <m> N \in \Nbhd_{ X } \of{ c } </m> of an interior point <m> c \in \Int \of{ X } </m> contains an open interval containing <m> c </m>, and therefore contains points strictly greater than <m> c </m> and points strictly less than <m> c </m>. The desired conclusion now follows immediately from <xref ref="lemma-local-extrema-are-stationary-points"/>.
+      </p>
+    </proof>
+  </theorem>
+  
+  <p>
+    One use of the <xref ref="theorem-interior-extremum-theorem" text="title"/> is to prove the following theorem of Darboux, which establishes an intermediate value property for the derivative of a differentiable function <alert> even if said function is not continuously differentiable </alert>.
+  </p>
+  
+  <theorem xml:id="theorem-darbouxs-theorem">
+    <title>
+      Darboux's theorem
+    </title>
+    
+    <creator>
+      Jean-Gaston Darboux
+    </creator>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to \R </m> be a real-valued function defined on an interval <m> X \subseteq \R </m>. If <m> f </m> is differentiable, then <m> \im \of{ f' } = f' \of{ X } </m> is an interval.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> a , b \in X </m>, and suppose that <m> a \lt b </m>. There are three cases; either <m> f' \of{ a } = f' \of{ b } </m>, <m> f' \of{ a } \lt f' \of{ b } </m>, or <m> f' \of{ a } \gt f' \of{ b } </m>. If <m> f \of{ a } = f \of{ b } </m>, then <m> \im \of{ f' } </m> vacuously contains all points between <m> f' \of{ a } </m> and <m> f' \of{ b } </m>.
+      </p>
+      
+      <p>
+        Suppose that <m> f' \of{ a } \lt f' \of{ b } </m>, let <m> f' \of{ a } \lt r \lt f' \of{ b } </m>, and consider the function <m> g \colon X \to \R </m> defined by the formula
+        
+        <md>
+          g \of{ x } = f \of{ x } - r x
+        </md>.
+        
+        We observe that <m> g' \of{ a } = f' \of{ a } - r \lt 0 </m> and <m> g' \of{ b } = f' \of{ b } - r \gt 0 </m>. In particular, the argument in the proof of <xref ref="lemma-local-extrema-are-stationary-points"/> implies that <m> g </m> does not attain a minimum value at <m> a </m> or <m> b </m>.
+      </p>
+      
+      <p>
+        However, since <m> g </m> is continuous on the compact interval <m> \clint{ a }{ b } </m>, it attains a minimum value on <m> \clint{ a }{ b } </m>. Thus <m> g </m> attains a minimum value at some interior point <m> c \in \opint{ a }{ b } </m>, and so the <xref ref="theorem-interior-extremum-theorem" text="title"/> implies that <m> g' \of{ c } = 0 </m>; that is,
+        
+        <md>
+          g' \of{ c } = f' \of{ c } - r
+        </md>,
+        
+        so that <m> f' \of{ c } = r </m>.
+      </p>
+      
+      <p>
+        Now suppose that <m> f' \of{ b } \lt f' \of{ a } </m>, let <m> f' \of{ b } \lt r \lt f' \of{ a } </m>, and consider the function <m> g \colon X \to \R </m> defined by the formula
+        
+        <md>
+          g \of{ x } = f \of{ x } - r x
+        </md>.
+        
+        We observe that <m> g' \of{ a } = f' \of{ a } - r \gt 0 </m> and <m> g' \of{ b } = f' \of{ b } - r \lt 0 </m>. In particular, the argument in the proof of <xref ref="lemma-local-extrema-are-stationary-points"/> implies that <m> g </m> does not attain a maximum value at <m> a </m> or <m> b </m>.
+      </p>
+      
+      <p>
+        However, since <m> g </m> is continuous on the compact interval <m> \clint{ a }{ b } </m>, it attains a maximum value on <m> \clint{ a }{ b } </m>. Thus <m> g </m> attains a maximum value at some interior point <m> c \in \opint{ a }{ b } </m>, and so the <xref ref="theorem-interior-extremum-theorem" text="title"/> implies that <m> g' \of{ c } = 0 </m>; that is,
+        
+        <md>
+          g' \of{ c } = f' \of{ c } - r
+        </md>,
+        
+        so that <m> f' \of{ c } = r </m>.
+      </p>
+    </proof>
+  </theorem>
+  
+  <p>
+    We have thus far only explored the local behavior of functions near critical points, but there is also much to say of the behavior of a function near regular points. For example, if a differentiable function has only regular points, then it is strictly monotone.
+  </p>
+  
+  <corollary xml:id="corollary-monotonicity-in-the-absence-of-critical-points">
+    <title>
+      Monotonicity in the absence of critical points
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to \R </m> be a differentiable function defined on an interval <m> X \subseteq \R </m>. If <m> f </m> does not have any critical points in <m> X </m>, then <m> f </m> is strictly monotone.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        If <m> f' </m> takes both positive and negative values on <m> X </m>, then <xref ref="theorem-darbouxs-theorem" text="title"/> implies that <m> f' \of{ x } = 0 </m> for some point <m> x \in X </m>. This contradiction implies that <m> f' </m> either takes only positive values on <m> X </m> or takes only negative values on <m> X </m>. We will prove the result in the case <m> f' \of{ x } \gt 0 </m> for all points <m> x \in X </m>; the case <m> f' \of{ x } \lt 0 </m> for all <m> x \in X </m> is similar.
+      </p>
+      
+      <p>
+        Let <m> a , b \in X </m>, and suppose that <m> a \lt b </m>. Since <m> f </m> is continuous on the compact interval <m> \clint{ a }{ b } \subseteq X </m>, it attains a maximum value on <m> \clint{ a }{ b } </m>. If <m> f </m> attains a maximum value at an interior point <m> c \in \opint{ a }{ b } </m>, then the <xref ref="theorem-interior-extremum-theorem" text="title"/> implies that <m> f' \of{ c } = 0 </m>. This contradiction implies that <m> f </m> attains a maximum value at one of the endpoints <m> a </m> or <m> b </m>.
+      </p>
+      
+      <p>
+        Since <m> f' \of{ a } \gt 0 </m> and any neighborhood of <m> a </m> in <m> \clint{ a }{ b } </m> contains points which are strictly larger than <m> a </m>, the argument in the proof of <xref ref="lemma-local-extrema-are-stationary-points"/> implies that <m> f </m> does not attain a maximum value at <m> a </m>. Thus we conclude that <m> f \of{ a } \lt f \of{ b } </m>. Since <m> a </m> and <m> b </m> were chosen arbitrarily, <m> f </m> is increasing.
+      </p>
+    </proof>
+  </corollary>
+
+  <conclusion>
+    <p>
+      Stronger versions of <xref ref="corollary-monotonicity-in-the-absence-of-critical-points"/> are usually called the <term> inverse function theorem </term>, and establish the differentiability of the left inverse of any such function. You will have an opportunity to explore these additional conclusions in the problems for this section.
+    </p>
+  </conclusion>
+</subsection>

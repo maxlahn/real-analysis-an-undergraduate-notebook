@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-classification-of-critical-points" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Classification of Critical Points
+  </title>
+
+  <introduction>
+    <p>
+      While the previous results of this section are quite strong, we wish to establish even stronger characterizations of real-valued functions based on local analyses near critical points. However, these analyses will require us to consider critical points which are not themselves limits of critical points.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-isolated-critical-point">
+    <title>
+      Isolated critical point
+    </title>
+    
+    <idx>
+      isolated critical point
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to \R </m> be a real-valued function defined on a subset <m> X \subseteq \R </m>. A critical point <m> x \in X </m> of <m> f </m> is called <term> isolated </term> if there is a neighborhood <m> N \in \Nbhd_{ X } \of{ x } </m> so that <m> N \setminus \set{ x } </m> consists only of regular points of <m> f </m>.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="example-isolated-critical-points">
+    <title>
+      Isolated critical points
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples and non-examples of isolated critical points of real-valued functions:
+        
+        <ul>
+          <li>
+            <p>
+              Let <m> f \colon \R \to \R </m> be the continuous real-valued function defined piecewise by the formula
+              
+              <md>
+                f \of{ x } =
+                  \begin{cases}
+                    x \sin \of{ \frac{ 1 }{ x } } \amp x \neq 0 \\
+                    0 \amp x = 0
+                  \end{cases}
+              </md>.
+              
+              Then <m> f </m> has infinitely many non-zero isolated critical points which accumulate at the critical point <m> 0 </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Let <m> g \colon \R \to \R </m> be the continuous real-valued function defined by the formula <m> g \of{ y } = \abs{ y } </m>. Then <m> g </m> has one critical point at <m> 0 </m>, which is isolated.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Let <m> h \colon \clint{ -1 }{ 1 } \to \R </m> be the continuous real-valued function defined by the formula
+              
+              <md>
+                h \of{ z } = \sqrt{ 1 - z^{ 2 } }
+              </md>.
+              
+              Then <m> h </m> has three critical points at <m> -1 </m>, <m> 0 </m>, and <m> 1 </m>, each of which is isolated.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    If <m> c </m> is an isolated critical point of a continuous real-valued function defined on an interval, then continuity and <xref ref="corollary-monotonicity-in-the-absence-of-critical-points"/> implies that the restrictions of <m> f </m> to some intervals <m> \opclint{ c - \delta }{ c } </m> and <m> \clopint{ c }{ c + \delta } </m> are strictly monotone. This can be used to detect the presence of a local extremum.
+  </p>
+  
+  <theorem xml:id="theorem-first-derivative-test">
+    <title>
+      First derivative test
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to \R </m> be a continuous real-valued function defined on an interval <m> X \subseteq \R </m>. If <m> c \in \Int \of{ X } </m> is an interior point of <m> X </m> in <m> \R </m> and an isolated critical point of <m> f </m>, then <m> f </m> attains a local extremum at <m> c </m> if and only if the derivative <m> f' </m> changes sign at <m> c </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Under these assumptions, the previous discussion applies; there is some positive real number <m> \delta \gt 0 </m> so that <m> \opint{ c - \delta }{ c + \delta } \subseteq X </m> so that <m> f ' </m> does not change sign on the intervals <m> \opint{ c - \delta }{ c } </m> and <m> \opint{ c }{ c + \delta } </m>.
+      </p>
+      
+      <p>
+        If <m> f' </m> takes only positive values on both <m> \opint{ c - \delta }{ c } </m> and <m> \opint{ c }{ c + \delta } </m>, then the continuity of <m> f </m> and <xref ref="corollary-monotonicity-in-the-absence-of-critical-points"/> implies that the restrictions of <m> f </m> to the intervals <m> \opclint{ c - \delta }{ c } </m> and <m> \clopint{ c }{ c + \delta } </m> are increasing. We conclude that the restriction of <m> f </m> to <m> \opint{ c - \delta }{ c + \delta } </m> is increasing, so that
+        
+        <md>
+          f \of{ c - \eta } \lt f \of{ c } \lt f \of{ c + \eta }
+        </md>
+        
+        for all sufficiently small positive real numbers <m> 0 \lt \eta \lt \delta </m>. In particular, this implies that <m> f </m> cannot attain a local extremum at <m> c </m>.
+      </p>
+      
+      <p>
+        If <m> f' </m> takes only negative values on both <m> \opint{ c - \delta }{ c } </m> and <m> \opint{ c }{ c + \delta } </m>, then the continuity of <m> f </m> and <xref ref="corollary-monotonicity-in-the-absence-of-critical-points"/> implies that the restrictions of <m> f </m> to the intervals <m> \opclint{ c - \delta }{ c } </m> and <m> \clopint{ c }{ c + \delta } </m> are decreasing. We conclude that the restriction of <m> f </m> to <m> \opint{ c - \delta }{ c + \delta } </m> is decreasing, so that
+        
+        <md>
+          f \of{ c - \eta } \gt f \of{ c } \gt f \of{ c + \eta }
+        </md>
+        
+        for all sufficiently small positive real numbers <m> 0 \lt \eta \lt \delta </m>. In particular, this implies that <m> f </m> cannot attain a local extremum at <m> c </m>.
+      </p>
+      
+      <p>
+        If <m> f' </m> takes only positive values on <m> \opint{ c - \delta }{ c } </m> and only negative values on <m> \opint{ c }{ c + \delta } </m>, then the continuity of <m> f </m> and <xref ref="corollary-monotonicity-in-the-absence-of-critical-points"/> implies that the restrictions of <m> f </m> to the intervals <m> \opclint{ c - \delta }{ c } </m> and <m> \clopint{ c }{ c + \delta } </m> are increasing and decreasing, respectively. We conclude that
+        
+        <md>
+          f \of{ c - \eta } \lt f \of{ c } \gt f \of{ c + \eta }
+        </md>
+        
+        for all sufficiently small positive real numbers <m> 0 \lt \eta \lt \delta </m>. In particular, this implies that <m> f </m> attains a local maximum at <m> c </m>.
+      </p>
+      
+      <p>
+        Finally, if <m> f' </m> takes only negative values on <m> \opint{ c - \delta }{ c } </m> and only positive values on <m> \opint{ c }{ c + \delta } </m>, then the continuity of <m> f </m> and <xref ref="corollary-monotonicity-in-the-absence-of-critical-points"/> implies that the restrictions of <m> f </m> to the intervals <m> \opclint{ c - \delta }{ c } </m> and <m> \clopint{ c }{ c + \delta } </m> are decreasing and increasing, respectively. We conclude that
+        
+        <md>
+          f \of{ c - \eta } \gt f \of{ c } \lt f \of{ c + \eta }
+        </md>
+        
+        for all sufficiently small positive real numbers <m> 0 \lt \eta \lt \delta </m>. In particular, this implies that <m> f </m> attains a local minimum at <m> c </m>.
+      </p>
+    </proof>
+  </theorem>
+
+  <example xml:id="example-using-the-first-derivative-test">
+    <title>
+      Using the first derivative test
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> n \geq 1 </m> be a positive integer, and consider the real-valued function <m> f \colon \R \to \R </m> defined by the formula <m> f \of{ x } = x^{ n } </m>. Recall that <m> f </m> is differentiable, with derivative <m> f' \of{ x } = n x^{ n - 1 } </m>. If <m> n = 1 </m>, then
+        
+        <md>
+          f' \of{ x } = 1 x^{ 0 } = 1 \neq 0
+        </md>
+        
+        for all points <m> x \neq 0 </m>, and so <m> f </m> has no critical points. However, if <m> n \geq 2 </m>, then
+        
+        <md>
+          f' \of{ x } = n x^{ n - 1 }
+        </md>
+        
+        vanishes precisely when <m> x = 0 </m>; that is, <m> 0 </m> is the only critical point of <m> f </m>, and it is a stationary critical point.
+      </p>
+      
+      <p>
+        We observe that if <m> n \geq 2 </m> is even, then <m> f' \of{ x } \lt 0 </m> when <m> x \lt 0 </m> and <m> f' \of{ x } \gt 0 </m> when <m> x \gt 0 </m>. The <xref ref="theorem-first-derivative-test" text="title"/> implies that <m> f </m> attains a local minimum at <m> 0 </m> in this case.
+      </p>
+      
+      <p>
+        On the other hand, if <m> n \geq 2 </m> is odd, then <m> f' \of{ x } \gt 0 </m> when <m> x \neq 0 </m>. The <xref ref="theorem-first-derivative-test" text="title"/> implies that <m> f </m> does not attain a local extremum at <m> 0 </m> in this case.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    When a real-valued function is twice-differentiable at an isolated stationary critical point, its second derivative can also sometimes be used to detect the presence of local extrema at critical points.
+  </p>
+  
+  <corollary xml:id="corollary-second-derivative-test">
+    <title>
+      Second derivative test
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to \R </m> be a differentiable real-valued function defined on an interval <m> X \subseteq \R </m>. Suppose that <m> c \in \Int \of{ X } </m> is an interior point of <m> X </m> in <m> \R </m> and an isolated stationary critical point of <m> f </m> at which <m> f </m> is twice-differentiable. If <m> f'' \of{ c } \gt 0 </m>, then <m> f </m> attains a local minimum at <m> 0 </m>, and if <m> f'' \of{ c } \lt 0 </m>, then <m> f </m> attains a local maximum at <m> 0 </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Since <m> c </m> is a stationary critical point of <m> f </m>, <m> f' \of{ c } = 0 </m>. Since <m> \frac{ \abs{ f'' \of{ c } } }{ 2 } \gt 0 </m> is a positive real number, there is a positive real number <m> \delta \gt 0 </m> so that <m> \opint{ c - \delta }{ c + \delta } \subseteq X </m> and
+        
+        <md>
+          \abs{ \frac{ f' \of{ x } - f' \of{ c } }{ x - c } - f'' \of{ c } } \lt \frac{ \abs{ f'' \of{ c } } }{ 2 }
+        </md>
+        
+        for all points <m> x \in \opint{ c - \delta }{ c + \delta } </m>. If <m> f'' \of{ c } \gt 0 </m>, then
+        
+        <md>
+          \frac{ f' \of{ x } }{ x - c } = \frac{ f' \of{ x } - f' \of{ c } }{ x - c } \gt \frac{ f'' \of{ c } }{ 2 } \gt 0
+        </md>,
+        
+        and so <m> f' \of{ x } </m> and <m> x - c </m> have the same sign; that is, <m> f' </m> takes only negative values on <m> \opint{ c - \delta }{ c } </m> and takes only positive values on <m> \opint{ c }{ c + \delta } </m>. The <xref ref="theorem-first-derivative-test" text="title"/> now implies that <m> f </m> attains a local minimum at <m> c </m>.
+      </p>
+      
+      <p>
+        On the other hand, if <m> f'' \of{ c } \gt 0 </m>, then
+        
+        <md>
+          \frac{ f' \of{ x } }{ x - c } = \frac{ f' \of{ x } - f' \of{ c } }{ x - c } \lt \frac{ f'' \of{ c } }{ 2 } \lt 0
+        </md>,
+        
+        and so <m> f' \of{ x } </m> and <m> x - c </m> have opposite signs; that is, <m> f' </m> takes only positive values on <m> \opint{ c - \delta }{ c } </m> and takes only negative values on <m> \opint{ c }{ c + \delta } </m>. The <xref ref="theorem-first-derivative-test" text="title"/> now implies that <m> f </m> attains a local maximum at <m> c </m>.
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-using-the-second-derivative-test">
+    <title>
+      Using the second derivative test
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> n \geq 2 </m>, and consider the real-valued function <m> f \colon \R \to \R </m> defined by the formula <m> f \of{ x } = x^{ n } </m>. Recall that <m> f </m> is differentiable, with derivative <m> f' \of{ x } = n x^{ n - 1 } </m> and second derivative <m> f'' \of{ x } = n \of{ n - 1 } x^{ n - 2 } </m>. We have seen in <xref ref="example-using-the-first-derivative-test"/> that <m> f </m> has a single stationary critical point at <m> 0 </m>.
+      </p>
+      
+      <p>
+        We observe that if <m> n = 2 </m>, then <m> f'' \of{ 0 } = 2 \cdot 1 = 2 \gt 0 </m>, and so the <xref ref="corollary-second-derivative-test" text="title"/> implies that <m> f </m> attains a local minimum at <m> 0 </m> in this case. However, if <m> n \geq 3 </m>, then
+        
+        <md>
+          f'' \of{ 0 } = n \of{ n - 1 } 0^{ n - 2 } = 0
+        </md>,
+        
+        and so the <xref ref="corollary-second-derivative-test" text="title"/> is inconclusive. 
+      </p>
+    </statement>
+  </example>
+
+  <conclusion>
+    <p>
+      So we see that the <xref ref="corollary-second-derivative-test" text="title"/> may not be conclusive even for functions whose isolated critical points may be analyzed by the <xref ref="theorem-first-derivative-test" text="title"/>.
+    </p>
+  </conclusion>
+</subsection>

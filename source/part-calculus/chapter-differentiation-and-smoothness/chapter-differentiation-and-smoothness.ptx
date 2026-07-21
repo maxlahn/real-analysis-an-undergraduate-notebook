@@ -13,6 +13,8 @@
 
   <xi:include href="./section-differentiability/section-differentiability.ptx"/>
 
+  <xi:include href="./section-analysis-of-critical-points/section-analysis-of-critical-points.ptx"/>
+
   <xi:include href="./section-applications-of-the-mean-value-theorem/section-applications-of-the-mean-value-theorem.ptx"/>
 
   <xi:include href="./section-higher-order-derivatives/section-higher-order-derivatives.ptx"/>

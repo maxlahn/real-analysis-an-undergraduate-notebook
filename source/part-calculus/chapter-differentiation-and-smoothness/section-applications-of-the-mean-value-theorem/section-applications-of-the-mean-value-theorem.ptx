@@ -21,7 +21,7 @@
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-applications-of-the-mean-value-theorem.ptx"/>
+  <xi:include href="./exercises-applications-of-the-mean-value-theorem.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-applications-of-the-mean-value-theorem.ptx"/>
+  <xi:include href="./problems-applications-of-the-mean-value-theorem.ptx"/>
 </section>
