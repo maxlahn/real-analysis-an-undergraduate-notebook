@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="corollary theorem-like"><h2 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Second derivative test.</span>
+</h2>
+<div class="para">Let <span class="process-math">\(f \colon X \to \R \)</span> be a differentiable real-valued function defined on an interval <span class="process-math">\(X \subseteq \R \text{.}\)</span> Suppose that <span class="process-math">\(c \in \Int \of{ X } \)</span> is an interior point of <span class="process-math">\(X \)</span> in <span class="process-math">\(\R \)</span> and an isolated stationary critical point of <span class="process-math">\(f \)</span> at which <span class="process-math">\(f \)</span> is twice-differentiable. If <span class="process-math">\(f'' \of{ c } \gt 0 \text{,}\)</span> then <span class="process-math">\(f \)</span> attains a local minimum at <span class="process-math">\(0 \text{,}\)</span> and if <span class="process-math">\(f'' \of{ c } \lt 0 \text{,}\)</span> then <span class="process-math">\(f \)</span> attains a local maximum at <span class="process-math">\(0 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-second-derivative-test-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Corollary 5.2.12: Second derivative test"><a tabindex="-1" href="#corollary-second-derivative-test" title="Copy heading and permalink for Corollary 5.2.12: Second derivative test" aria-label="Copy heading and permalink for Corollary 5.2.12: Second derivative test">🔗</a></div>
+</article>
+<details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical">
+<div class="para">Since <span class="process-math">\(c \)</span> is a stationary critical point of <span class="process-math">\(f \text{,}\)</span> <span class="process-math">\(f' \of{ c } = 0 \text{.}\)</span> Since <span class="process-math">\(\frac{ \abs{ f'' \of{ c } } }{ 2 } \gt 0 \)</span> is a positive real number, there is a positive real number <span class="process-math">\(\delta \gt 0 \)</span> so that <span class="process-math">\(\opint{ c - \delta }{ c + \delta } \subseteq X \)</span> and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-first-derivative-test.html">
+\begin{equation*}
+\abs{ \frac{ f' \of{ x } - f' \of{ c } }{ x - c } - f'' \of{ c } } \lt \frac{ \abs{ f'' \of{ c } } }{ 2 }
+\end{equation*}
+</div>
+<div class="para">for all points <span class="process-math">\(x \in \opint{ c - \delta }{ c + \delta } \text{.}\)</span> If <span class="process-math">\(f'' \of{ c } \gt 0 \text{,}\)</span> then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-first-derivative-test.html">
+\begin{equation*}
+\frac{ f' \of{ x } }{ x - c } = \frac{ f' \of{ x } - f' \of{ c } }{ x - c } \gt \frac{ f'' \of{ c } }{ 2 } \gt 0\text{,}
+\end{equation*}
+</div>
+<div class="para">and so <span class="process-math">\(f' \of{ x } \)</span> and <span class="process-math">\(x - c \)</span> have the same sign; that is, <span class="process-math">\(f' \)</span> takes only negative values on <span class="process-math">\(\opint{ c - \delta }{ c } \)</span> and takes only positive values on <span class="process-math">\(\opint{ c }{ c + \delta } \text{.}\)</span> The <a href="section-analysis-of-critical-points.html#theorem-first-derivative-test" class="xref" data-knowl="./knowl/xref/theorem-first-derivative-test.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.2.10: First derivative test">First derivative test</a> now implies that <span class="process-math">\(f \)</span> attains a local minimum at <span class="process-math">\(c \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-second-derivative-test-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">On the other hand, if <span class="process-math">\(f'' \of{ c } \gt 0 \text{,}\)</span> then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-first-derivative-test.html">
+\begin{equation*}
+\frac{ f' \of{ x } }{ x - c } = \frac{ f' \of{ x } - f' \of{ c } }{ x - c } \lt \frac{ f'' \of{ c } }{ 2 } \lt 0\text{,}
+\end{equation*}
+</div>
+<div class="para">and so <span class="process-math">\(f' \of{ x } \)</span> and <span class="process-math">\(x - c \)</span> have opposite signs; that is, <span class="process-math">\(f' \)</span> takes only positive values on <span class="process-math">\(\opint{ c - \delta }{ c } \)</span> and takes only negative values on <span class="process-math">\(\opint{ c }{ c + \delta } \text{.}\)</span> The <a href="section-analysis-of-critical-points.html#theorem-first-derivative-test" class="xref" data-knowl="./knowl/xref/theorem-first-derivative-test.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.2.10: First derivative test">First derivative test</a> now implies that <span class="process-math">\(f \)</span> attains a local maximum at <span class="process-math">\(c \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-second-derivative-test-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.2.12.1"><a tabindex="-1" href="#corollary-second-derivative-test-3" title="Copy heading and permalink for Proof 5.2.12.1" aria-label="Copy heading and permalink for Proof 5.2.12.1">🔗</a></div>
+</article></details><span class="incontext"><a class="internal" href="section-analysis-of-critical-points.html#corollary-second-derivative-test">In Context</a></span>
+</body>
+</html>
