@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Mean value form of the Taylor remainder.</span>
+</h2>
+<div class="para">Let <span class="process-math">\(f \colon X \to \R \)</span> be a real-valued function defined on an interval <span class="process-math">\(X \subseteq \R \text{,}\)</span> and suppose that <span class="process-math">\(f \)</span> is <span class="process-math">\(k \)</span>-times differentiable at an interior point <span class="process-math">\(c \in \Int \of{ X } \text{,}\)</span> with order <span class="process-math">\(k \)</span> Taylor approximation <span class="process-math">\(P^{ k }_{ c } \of{ f , x } \)</span> and order <span class="process-math">\(k \)</span> Taylor remainder <span class="process-math">\(R^{ k }_{ c } \of{ f , x } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-mean-value-form-of-the-taylor-remainder-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical">
+<div class="para">Fix a point <span class="process-math">\(x \in X \text{,}\)</span> and a real-valued function <span class="process-math">\(G \colon I_{ x } \to \R \)</span> defined on the closed interval <span class="process-math">\(I_{ x } \)</span> between <span class="process-math">\(c \)</span> and <span class="process-math">\(x \text{.}\)</span> If both <span class="process-math">\(f^{ \of{ k } } \)</span> and <span class="process-math">\(G \)</span> are continuous on <span class="process-math">\(I_{ x } \)</span> and differentiable on the open interval <span class="process-math">\(\Int \of{ I_{ x } } \text{,}\)</span> and if <span class="process-math">\(G \)</span> has no critical points on <span class="process-math">\(\Int \of{ I_{ x } } \text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+R^{ k }_{ c } \of{ f , x } = \of{ \frac{ f^{ \of{ k + 1 } } \of{ y } \of{ x - y }^{ k } }{ k! } } \of{ \frac{ G \of{ x } - G \of{ c } }{ G' \of{ y } } } 
+\end{equation*}
+</div>
+<div class="para">for some interior point <span class="process-math">\(y \in \Int \of{ I_{ x } } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-mean-value-form-of-the-taylor-remainder-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 5.4.8: Mean value form of the Taylor remainder"><a tabindex="-1" href="#theorem-mean-value-form-of-the-taylor-remainder" title="Copy heading and permalink for Theorem 5.4.8: Mean value form of the Taylor remainder" aria-label="Copy heading and permalink for Theorem 5.4.8: Mean value form of the Taylor remainder">🔗</a></div>
+</article>
+<details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical">
+<div class="para">Consider the real-valued function <span class="process-math">\(F \colon X \to \R \)</span> defined by the formula</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-extended-mean-value-theorem.html">
+\begin{equation*}
+F \of{ y } = f \of{ y } + f' \of{ y } \of{ x - y } + \frac{ f'' \of{ y } \of{ x - y }^{ 2 } }{ 2 } + \dotsb + \frac{ f^{ \of{ k } } \of{ y } \of{ x - y }^{ k } }{ k! }\text{.}
+\end{equation*}
+</div>
+<div class="para">We observe that <span class="process-math">\(F \)</span> is continuous on the closed interval <span class="process-math">\(I_{ x } \)</span> and differentiable on the open interval <span class="process-math">\(\Int \of{ I_{ x } } \text{,}\)</span> with derivative</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-extended-mean-value-theorem.html">
+\begin{align*}
+F' \of{ y } \amp = f' \of{ y } + \of{ f'' \of{ y } \of{ x - y } - f' \of{ y } } + \of{ \frac{ f^{ \of{ 3 } } \of{ y } \of{ x - y }^{ 2 } }{ 2 } - f'' \of{ y } \of{ x - y } }\\
+\amp \qquad + \dotsb + \of{ \frac{ f^{ \of{ k + 1 } } \of{ y } \of{ x - y }^{ k } }{ k! } - \frac{ f^{ \of{ k } } \of{ y } \of{ x - y }^{ k - 1 } }{ \of{ k - 1 }! } }\\
+\amp = \frac{ f^{ \of{ k + 1 } } \of{ y } \of{ x - y }^{ k } }{ k! }\text{.}
+\end{align*}
+</div>
+<div class="para">By the <a href="section-applications-of-the-mean-value-theorem.html#theorem-extended-mean-value-theorem" class="xref" data-knowl="./knowl/xref/theorem-extended-mean-value-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.3.5: Extended mean value theorem">Theorem 5.3.5 Extended mean value theorem</a>, there is some interior point <span class="process-math">\(y \in \Int \of{ I_{ x } } \)</span> so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-extended-mean-value-theorem.html">
+\begin{equation*}
+F' \of{ y } \of{ G \of{ x } - G \of{ c } } = \of{ F \of{ x } - F \of{ c } } G' \of{ y }\text{.}
+\end{equation*}
+</div>
+<div class="para">We observe that <span class="process-math">\(F \of{ x } = f \of{ x } \)</span> and <span class="process-math">\(F \of{ c } = P^{ k }_{ c } \of{ f , x } \text{,}\)</span> so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-extended-mean-value-theorem.html">
+\begin{align*}
+R^{ k }_{ c } \of{ f , x } \amp = f \of{ x } - P^{ k }_{ c } \of{ f , x } = F \of{ x } - F \of{ c }\\
+\amp = F' \of{ y } \of{ \frac{ G \of{ x } - G \of{ c } }{ G' \of{ y } } }\\
+\amp = \of{ \frac{ f^{ \of{ k + 1 } } \of{ y } \of{ x - y }^{ k } }{ k! } } \of{ \frac{ G \of{ x } - G \of{ c } }{ G' \of{ y } } }\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-mean-value-form-of-the-taylor-remainder-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.4.8.1"><a tabindex="-1" href="#theorem-mean-value-form-of-the-taylor-remainder-3" title="Copy heading and permalink for Proof 5.4.8.1" aria-label="Copy heading and permalink for Proof 5.4.8.1">🔗</a></div>
+</article></details><span class="incontext"><a class="internal" href="section-higher-order-approximations.html#theorem-mean-value-form-of-the-taylor-remainder">In Context</a></span>
+</body>
+</html>

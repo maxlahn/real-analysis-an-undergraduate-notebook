@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="creator">(Brook Taylor)</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Taylor’s theorem.</span>
+</h2>
+<div class="para">Let <span class="process-math">\(f \colon X \to \R \)</span> be a real-valued function defined on a subset <span class="process-math">\(X \subseteq \R \text{.}\)</span> If <span class="process-math">\(f \)</span> is <span class="process-math">\(k \)</span>-times differentiable at a point <span class="process-math">\(c \in X \text{,}\)</span> then there is a unique polynomial function <span class="process-math">\(p \)</span> of degree at most <span class="process-math">\(k \)</span> so that <span class="process-math">\(f \of{ x } - p \of{ x } \prec \of{ x - c }^{ k } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-taylors-theorem-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 5.4.6: Taylor’s theorem"><a tabindex="-1" href="#theorem-taylors-theorem" title="Copy heading and permalink for Theorem 5.4.6: Taylor’s theorem" aria-label="Copy heading and permalink for Theorem 5.4.6: Taylor’s theorem">🔗</a></div>
+</article>
+<details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical">
+<div class="para">For uniqueness, let <span class="process-math">\(p , q \colon \R \to \R \)</span> be polynomial functions of degree at most <span class="process-math">\(k \text{,}\)</span> and suppose that <span class="process-math">\(f \of{ x } - p \of{ x } \prec \of{ x - c }^{ k } \)</span> and <span class="process-math">\(f \of{ x } - q \of{ x } \prec \of{ x - c }^{ k } \text{.}\)</span> Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-squeeze-theorem.html">
+\begin{equation*}
+0 \leq \abs{ \frac{ p \of{ x } - q \of{ x } }{ \of{ x - c }^{ k } } } \leq \abs{ \frac{ f \of{ x } - p \of{ x } }{ \of{ x - c }^{ k } } } + \abs{ \frac{ f \of{ x } - q \of{ x } }{ \of{ x - c }^{ k } } }
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x \in X \text{.}\)</span> The <a href="section-limits-in-the-euclidean-metric.html#theorem-squeeze-theorem" class="xref" data-knowl="./knowl/xref/theorem-squeeze-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.3: Squeeze theorem">Theorem 3.3.3 Squeeze theorem</a> now implies that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-squeeze-theorem.html">
+\begin{equation*}
+\lim_{ x \to c }{ \abs{ \frac{ p \of{ x } - q \of{ x } }{ \of{ x - c }^{ k } } } } = 0\text{,}
+\end{equation*}
+</div>
+<div class="para">so that <span class="process-math">\(p \of{ x } - q \of{ x } \prec \of{ x - c }^{ k } \)</span> as <span class="process-math">\(x \to c \text{.}\)</span> This polynomial <span class="process-math">\(p \of{ x } - q \of{ x } \)</span> can be written in the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-squeeze-theorem.html">
+\begin{equation*}
+p \of{ x } - q \of{ x } = a_{ 0 } + a_{ 1 } \of{ x - c } + a_{ 2 } \of{ x - c }^{ 2 } + \dotsb + a_{ k } \of{ x - c }^{ k }
+\end{equation*}
+</div>
+<div class="para">for some real numbers <span class="process-math">\(a_{ 0 } , \dotsc , a_{ k } \in \R \text{.}\)</span> For each index <span class="process-math">\(0 \leq j \leq k \text{,}\)</span> we observe that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-squeeze-theorem.html">
+\begin{equation*}
+\lim_{ x \to c }{ \abs{ \frac{ p \of{ x } - q \of{ x } }{ \of{ x - c }^{ j } } } } = \of{ \lim_{ x \to c }{ \abs{ \frac{ p \of{ x } - q \of{ x } }{ \of{ x - c }^{ k } } } } } \of{ \lim_{ x \to c }{ \abs{ \of{ x - c }^{ k - j } } } } = 0 \cdot 0 = 0\text{.}
+\end{equation*}
+</div>
+<div class="para">If <span class="process-math">\(j = 0 \text{,}\)</span> then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-squeeze-theorem.html">
+\begin{align*}
+0 \amp = \lim_{ x \to c }{ \abs{ \frac{ p \of{ x } - q \of{ x } }{ \of{ x - c }^{ 0 } } } } = \lim_{ x \to c }{ \abs{ p \of{ x } - q \of{ x } } }\\
+\amp = \lim_{ x \to c }{ \abs{ a_{ 0 } + a_{ 1 } \of{ x - c } + a_{ 2 } \of{ x - c }^{ 2 } + \dotsb + a_{ k } \of{ x - c }^{ k } } } = \abs{ a_{ 0 } }\text{.}
+\end{align*}
+</div>
+<div class="para">If <span class="process-math">\(j = 1 \text{,}\)</span> then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-squeeze-theorem.html">
+\begin{align*}
+0 \amp = \lim_{ x \to c }{ \abs{ \frac{ p \of{ x } - q \of{ x } }{ \of{ x - c }^{ 1 } } } } = \lim_{ x \to c }{ \abs{ \frac{ p \of{ x } - q \of{ x } }{ x - c } } }\\
+\amp = \lim_{ x \to c }{ \abs{ a_{ 1 } + a_{ 2 } \of{ x - c }^{ 1 } + \dotsb + a_{ k } \of{ x - c }^{ k - 1 } } } = \abs{ a_{ 1 } }\text{.}
+\end{align*}
+</div>
+<div class="para">Continuing in this manner, we conclude that <span class="process-math">\(a_{ 0 } = a_{ 1 } = \dotsb = a_{ k } = 0 \text{,}\)</span> so that <span class="process-math">\(p = q \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-taylors-theorem-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">For existence, let <span class="process-math">\(p \colon \R \to \R \)</span> be the polynomial function defined by the formula</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/corollary-lhopitals-rule.html">
+\begin{equation*}
+p \of{ x } = f \of{ c } + f' \of{ c } \of{ x - c } + \frac{ f'' \of{ c } \of{ x - c }^{ 2 } }{ 2 } + \dotsb + \frac{ f^{ \of{ k } } \of{ c } \of{ x - c }^{ k } }{ k! }\text{.}
+\end{equation*}
+</div>
+<div class="para">We observe that <span class="process-math">\(p^{ \of{ j } } \of{ c } = f^{ \of{ j } } \of{ c } \)</span> for all <span class="process-math">\(0 \leq j \leq c \text{.}\)</span> We will show that <span class="process-math">\(f \of{ x } - p \of{ x } \prec \of{ x - c }^{ k } \)</span> by repeated applications of <a href="section-applications-of-the-mean-value-theorem.html#corollary-lhopitals-rule" class="xref" data-knowl="./knowl/xref/corollary-lhopitals-rule.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 5.3.6: L’Hôpital’s rule">L’Hôpital’s rule</a>. Indeed,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/corollary-lhopitals-rule.html">
+\begin{align*}
+\lim_{ x \to c }{ \frac{ f \of{ x } - p \of{ x } }{ \of{ x - c }^{ k } } } \amp = \lim_{ x \to c }{ \frac{ f' \of{ x } - p' \of{ x } }{ k \of{ x - c }^{ k - 1 } } } = \lim_{ x \to c }{ \frac{ f'' \of{ x } - p'' \of{ x } }{ k \of{ k - 1 } \of{ x - c }^{ k - 2 } } }\\
+\amp = \dotsb = \lim_{ x \to c }{ \frac{ f^{ \of{ k - 1 } } \of{ x } - p^{ \of{ k - 1 } } \of{ x } }{ k! \of{ x - c } } }\\
+\amp = \of{ \frac{ 1 }{ k! } } \of{ \lim_{ x \to c }{ \frac{ f^{ \of{ k - 1 } } \of{ x } - f^{ \of{ k - 1 } } \of{ c } }{ x - c } } - \lim_{ x \to c }{ \frac{ p^{ \of{ k - 1 } } \of{ x } - p^{ \of{ k - 1 } } \of{ c } }{ x - c } } }\\
+\amp = \frac{ f^{ \of{ k } } \of{ c } - p^{ \of{ k } } \of{ c } }{ k! } = \frac{ 0 }{ k! } = 0\text{,}
+\end{align*}
+</div>
+<div class="para">so that <span class="process-math">\(f \of{ x } - p \of{ x } \prec \of{ x - c }^{ k } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-taylors-theorem-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.4.6.1"><a tabindex="-1" href="#theorem-taylors-theorem-5" title="Copy heading and permalink for Proof 5.4.6.1" aria-label="Copy heading and permalink for Proof 5.4.6.1">🔗</a></div>
+</article></details><span class="incontext"><a class="internal" href="section-higher-order-approximations.html#theorem-taylors-theorem">In Context</a></span>
+</body>
+</html>
