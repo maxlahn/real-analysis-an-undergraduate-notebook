@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-higher-order-approximations" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Higher Order Approximations
+  </title>
+
+  <introduction>
+    <p>
+      In this section, we explore the properties of the <term> Taylor approximations </term> of a multiply differentiable function. In a sense which we will make precise, these polynomials are the best possible approximations for such a function near a given point. We will also compute the error in such approximations by means similar to the <xref ref="theorem-mean-value-theorem" text="title"/>.
+    </p>
+  </introduction>
+
+  <xi:include href="./subsection-dominance-and-asymptotics.ptx"/>
+
+  <xi:include href="./subsection-polynomial-approximations-of-differentiable-functions.ptx"/>
+
+  <conclusion>
+    <p>
+      In <xref ref="chapter-infinite-series"/>, we will explore <term> Taylor series </term>, which are related approximations which utilize all derivatives of an infinitely differentiable function.
+    </p>
+  </conclusion>
+
+  <xi:include href="./exercises-higher-order-approximations.ptx"/>
+
+  <xi:include href="./problems-higher-order-approximations.ptx"/>
+</section>

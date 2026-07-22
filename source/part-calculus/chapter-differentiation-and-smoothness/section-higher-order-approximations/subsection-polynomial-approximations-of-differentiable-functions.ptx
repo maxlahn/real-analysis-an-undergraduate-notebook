@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-polynomial-approximations-of-differentiable-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Polynomial Approximations of Differentiable Functions
+  </title>
+
+  <introduction>
+    <p>
+      We now arrive at one of the fundamental results in differential calculus. <term> Taylor's theorem </term> establishes a best possible polynomial approximation <m> p </m> for a multiply differentiable function <m> f </m> near a given point. We quantify the quality of this approximation by asymptotically comparing the difference <m> f - p </m> to well-known power functions vanishing at <m> c </m> at high order.
+    </p>
+  </introduction>
+  
+  <theorem xml:id="theorem-taylors-theorem">
+    <title>
+      Taylor's theorem
+    </title>
+    
+    <creator>
+      Brook Taylor
+    </creator>
+    
+    <idx>
+      Taylor's theorem
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to \R </m> be a real-valued function defined on a subset <m> X \subseteq \R </m>. If <m> f </m> is <m> k </m>-times differentiable at a point <m> c \in X </m>, then there is a unique polynomial function <m> p </m> of degree at most <m> k </m> so that <m> f \of{ x } - p \of{ x } \prec \of{ x - c }^{ k } </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        For uniqueness, let <m> p , q \colon \R \to \R </m> be polynomial functions of degree at most <m> k </m>, and suppose that <m> f \of{ x } - p \of{ x } \prec \of{ x - c }^{ k } </m> and <m> f \of{ x } - q \of{ x } \prec \of{ x - c }^{ k } </m>. Then
+        
+        <md>
+          0 \leq \abs{ \frac{ p \of{ x } - q \of{ x } }{ \of{ x - c }^{ k } } } \leq \abs{ \frac{ f \of{ x } - p \of{ x } }{ \of{ x - c }^{ k } } } + \abs{ \frac{ f \of{ x } - q \of{ x } }{ \of{ x - c }^{ k } } }
+        </md>
+        
+        for all <m> x \in X </m>. The <xref ref="theorem-squeeze-theorem"/> now implies that
+        
+        <md>
+          \lim_{ x \to c }{ \abs{ \frac{ p \of{ x } - q \of{ x } }{ \of{ x - c }^{ k } } } } = 0
+        </md>,
+        
+        so that <m> p \of{ x } - q \of{ x } \prec \of{ x - c }^{ k } </m> as <m> x \to c </m>. This polynomial <m> p \of{ x } - q \of{ x } </m> can be written in the form
+        
+        <md>
+          p \of{ x } - q \of{ x } = a_{ 0 } + a_{ 1 } \of{ x - c } + a_{ 2 } \of{ x - c }^{ 2 } + \dotsb + a_{ k } \of{ x - c }^{ k }
+        </md>
+        
+        for some real numbers <m> a_{ 0 } , \dotsc , a_{ k } \in \R </m>. For each index <m> 0 \leq j \leq k </m>, we observe that
+        
+        <md>
+          \lim_{ x \to c }{ \abs{ \frac{ p \of{ x } - q \of{ x } }{ \of{ x - c }^{ j } } } } = \of{ \lim_{ x \to c }{ \abs{ \frac{ p \of{ x } - q \of{ x } }{ \of{ x - c }^{ k } } } } } \of{ \lim_{ x \to c }{ \abs{ \of{ x - c }^{ k - j } } } } = 0 \cdot 0 = 0
+        </md>.
+        
+        If <m> j = 0 </m>, then
+        
+        <md>
+          <mrow>
+            0 \amp = \lim_{ x \to c }{ \abs{ \frac{ p \of{ x } - q \of{ x } }{ \of{ x - c }^{ 0 } } } } = \lim_{ x \to c }{ \abs{ p \of{ x } - q \of{ x } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \lim_{ x \to c }{ \abs{ a_{ 0 } + a_{ 1 } \of{ x - c } + a_{ 2 } \of{ x - c }^{ 2 } + \dotsb + a_{ k } \of{ x - c }^{ k } } } = \abs{ a_{ 0 } }
+          </mrow>
+        </md>.
+        
+        If <m> j = 1 </m>, then
+        
+        <md>
+          <mrow>
+            0 \amp = \lim_{ x \to c }{ \abs{ \frac{ p \of{ x } - q \of{ x } }{ \of{ x - c }^{ 1 } } } } = \lim_{ x \to c }{ \abs{ \frac{ p \of{ x } - q \of{ x } }{ x - c } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \lim_{ x \to c }{ \abs{ a_{ 1 } + a_{ 2 } \of{ x - c }^{ 1 } + \dotsb + a_{ k } \of{ x - c }^{ k - 1 } } } = \abs{ a_{ 1 } }
+          </mrow>
+        </md>.
+        
+        Continuing in this manner, we conclude that <m> a_{ 0 } = a_{ 1 } = \dotsb = a_{ k } = 0 </m>, so that <m> p = q </m>.
+      </p>
+      
+      <p>
+        For existence, let <m> p \colon \R \to \R </m> be the polynomial function defined by the formula
+        
+        <md>
+          p \of{ x } = f \of{ c } + f' \of{ c } \of{ x - c } + \frac{ f'' \of{ c } \of{ x - c }^{ 2 } }{ 2 } + \dotsb + \frac{ f^{ \of{ k } } \of{ c } \of{ x - c }^{ k } }{ k! }
+        </md>.
+        
+        We observe that <m> p^{ \of{ j } } \of{ c } = f^{ \of{ j } } \of{ c } </m> for all <m> 0 \leq j \leq c </m>. We will show that <m> f \of{ x } - p \of{ x } \prec \of{ x - c }^{ k } </m> by repeated applications of <xref ref="corollary-lhopitals-rule" text="title"/>. Indeed,
+        
+        <md>
+          <mrow>
+            \lim_{ x \to c }{ \frac{ f \of{ x } - p \of{ x } }{ \of{ x - c }^{ k } } } \amp = \lim_{ x \to c }{ \frac{ f' \of{ x } - p' \of{ x } }{ k \of{ x - c }^{ k - 1 } } } = \lim_{ x \to c }{ \frac{ f'' \of{ x } - p'' \of{ x } }{ k \of{ k - 1 } \of{ x - c }^{ k - 2 } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \dotsb = \lim_{ x \to c }{ \frac{ f^{ \of{ k - 1 } } \of{ x } - p^{ \of{ k - 1 } } \of{ x } }{ k! \of{ x - c } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ \frac{ 1 }{ k! } } \of{ \lim_{ x \to c }{ \frac{ f^{ \of{ k - 1 } } \of{ x } - f^{ \of{ k - 1 } } \of{ c } }{ x - c } } - \lim_{ x \to c }{ \frac{ p^{ \of{ k - 1 } } \of{ x } - p^{ \of{ k - 1 } } \of{ c } }{ x - c } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ f^{ \of{ k } } \of{ c } - p^{ \of{ k } } \of{ c } }{ k! } = \frac{ 0 }{ k! } = 0
+          </mrow>
+        </md>,
+        
+        so that <m> f \of{ x } - p \of{ x } \prec \of{ x - c }^{ k } </m>.
+      </p>
+    </proof>
+  </theorem>
+  
+  <p>
+    In summary, if a real-valued function <m> f </m> is <m> k </m>-times differentiable at a point <m> c </m>, then the unique polynomial of degree at most <m> k </m> with the same value, and derivatives as <m> f </m> up to order <m> k </m> is the best possible polynomial approximation of <m> f </m> near <m> c </m>. This polynomial is called the <term> Taylor approximation </term> of <m> f </m> at <m> c </m>.
+  </p>
+  
+  <definition xml:id="definition-taylor-approximation-remainder">
+    <title>
+      Taylor approximation/remainder
+    </title>
+    
+    <idx>
+      Taylor approximation
+    </idx>
+    
+    <idx>
+      Taylor remainder
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> P^{ k }_{ c } \of{ f , x } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the order <m> k </m> Taylor approximation of <m> f </m> at <m> c </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> R^{ k }_{ c } \of{ f , x } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the order <m> k </m> Taylor remainder of <m> f </m> at <m> c </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to \R </m> be a real-valued function defined on a subset <m> X \subseteq \R </m>. If <m> f </m> is <m> k </m>-times differentiable at a point <m> c \in X </m>, then the unique polynomial <m> P^{ k }_{ c } \of{ f , x } </m> of degree at most <m> k </m> so that <m> f \of{ x } - P^{ k }_{ c } \of{ f , x } \prec \of{ x - c }^{ k } </m> is called the order <m> k </m> <term> Taylor approximation </term> of <m> f </m> at <m> c </m>, and <m> R^{ k }_{ c } \of{ f , x } = f \of{ x } - P^{ k }_{ c } \of{ f , x } </m> is called the order <m> k </m> <term> Taylor remainder </term> of <m> f </m> at <m> c </m>.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    The content of Taylor's theorem is not in finding the Taylor approximation, but rather in bounding the Taylor remainder. Under stronger hypotheses on <m> f </m>, one can find explicit formulas for the Taylor remainder. For example, the following result utilizes <xref ref="theorem-extended-mean-value-theorem"/> to compute a family of such an explicit formulas.
+  </p>
+  
+  <theorem xml:id="theorem-mean-value-form-of-the-taylor-remainder">
+    <title>
+      Mean value form of the Taylor remainder
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to \R </m> be a real-valued function defined on an interval <m> X \subseteq \R </m>, and suppose that <m> f </m> is <m> k </m>-times differentiable at an interior point <m> c \in \Int \of{ X } </m>, with order <m> k </m> Taylor approximation <m> P^{ k }_{ c } \of{ f , x } </m> and order <m> k </m> Taylor remainder <m> R^{ k }_{ c } \of{ f , x } </m>.
+      </p>
+      
+      <p>
+        Fix a point <m> x \in X </m>, and a real-valued function <m> G \colon I_{ x } \to \R </m> defined on the closed interval <m> I_{ x } </m> between <m> c </m> and <m> x </m>. If both <m> f^{ \of{ k } } </m> and <m> G </m> are continuous on <m> I_{ x } </m> and differentiable on the open interval <m> \Int \of{ I_{ x } } </m>, and if <m> G </m> has no critical points on <m> \Int \of{ I_{ x } } </m>, then
+        
+        <md>
+          R^{ k }_{ c } \of{ f , x } = \of{ \frac{ f^{ \of{ k + 1 } } \of{ y } \of{ x - y }^{ k } }{ k! } } \of{ \frac{ G \of{ x } - G \of{ c } }{ G' \of{ y } } } 
+        </md>
+        
+        for some interior point <m> y \in \Int \of{ I_{ x } } </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Consider the real-valued function <m> F \colon X \to \R </m> defined by the formula
+        
+        <md>
+          F \of{ y } = f \of{ y } + f' \of{ y } \of{ x - y } + \frac{ f'' \of{ y } \of{ x - y }^{ 2 } }{ 2 } + \dotsb + \frac{ f^{ \of{ k } } \of{ y } \of{ x - y }^{ k } }{ k! }
+        </md>.
+        
+        We observe that <m> F </m> is continuous on the closed interval <m> I_{ x } </m> and differentiable on the open interval <m> \Int \of{ I_{ x } } </m>, with derivative
+        
+        <md>
+          <mrow>
+            F' \of{ y } \amp = f' \of{ y } + \of{ f'' \of{ y } \of{ x - y } - f' \of{ y } } + \of{ \frac{ f^{ \of{ 3 } } \of{ y } \of{ x - y }^{ 2 } }{ 2 } - f'' \of{ y } \of{ x - y } }
+          </mrow>
+          
+          <mrow>
+            \amp \qquad + \dotsb + \of{ \frac{ f^{ \of{ k + 1 } } \of{ y } \of{ x - y }^{ k } }{ k! } - \frac{ f^{ \of{ k } } \of{ y } \of{ x - y }^{ k - 1 } }{ \of{ k - 1 }! } }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ f^{ \of{ k + 1 } } \of{ y } \of{ x - y }^{ k } }{ k! }
+          </mrow>
+        </md>.
+        
+        By the <xref ref="theorem-extended-mean-value-theorem"/>, there is some interior point <m> y \in \Int \of{ I_{ x } } </m> so that
+        
+        <md>
+          F' \of{ y } \of{ G \of{ x } - G \of{ c } } = \of{ F \of{ x } - F \of{ c } } G' \of{ y }
+        </md>.
+        
+        We observe that <m> F \of{ x } = f \of{ x } </m> and <m> F \of{ c } = P^{ k }_{ c } \of{ f , x } </m>, so that
+        
+        <md>
+          <mrow>
+            R^{ k }_{ c } \of{ f , x } \amp = f \of{ x } - P^{ k }_{ c } \of{ f , x } = F \of{ x } - F \of{ c }
+          </mrow>
+          
+          <mrow>
+            \amp = F' \of{ y } \of{ \frac{ G \of{ x } - G \of{ c } }{ G' \of{ y } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ \frac{ f^{ \of{ k + 1 } } \of{ y } \of{ x - y }^{ k } }{ k! } } \of{ \frac{ G \of{ x } - G \of{ c } }{ G' \of{ y } } }
+          </mrow>
+        </md>.
+      </p>
+    </proof>
+  </theorem>
+  
+  <p>
+    The utility of <xref ref="theorem-mean-value-form-of-the-taylor-remainder"/> is in choosing specific functions <m> G </m> in order to obtain particularly nice explicit formulas for the Taylor remainder. For example, we obtain the <term> Lagrange form </term> of the Taylor remainder, which is a higher order generalization of the <xref ref="theorem-mean-value-theorem" text="title"/>.
+  </p>
+  
+  <corollary xml:id="corollary-lagrange-form-of-the-taylor-remainder">
+    <title>
+      Lagrange form of the Taylor remainder
+    </title>
+    
+    <creator>
+      Joseph-Louis Lagrange
+    </creator>
+    
+    <idx>
+      Lagrange form of the Taylor remainder
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to \R </m> be a real-valued function defined on an interval <m> X \subseteq \R </m>, and suppose that <m> f </m> is <m> k </m>-times differentiable at an interior point <m> c \in \Int \of{ X } </m>, with order <m> k </m> Taylor approximation <m> P^{ k }_{ c } \of{ f , x } </m> and order <m> k </m> Taylor remainder <m> R^{ k }_{ c } \of{ f , x } </m>.
+      </p>
+      
+      <p>
+        Fix a point <m> x \in X </m>. If <m> f^{ \of{ k } } </m> is continuous on the closed interval <m> I_{ x } </m> between <m> c </m> and <m> x </m> and differentiable on the open interval <m> \Int \of{ I_{ x } } </m>, then
+        
+        <md>
+          R^{ k }_{ c } \of{ f , x } = \frac{ f^{ \of{ k + 1 } } \of{ y } \of{ x - c }^{ k + 1 } }{ \of{ k + 1 }! }
+        </md>
+        
+        for some interior point <m> y \in \Int \of{ I_{ x } } </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        This follows immediately from <xref ref="theorem-mean-value-form-of-the-taylor-remainder"/> by taking <m> G \of{ y } = \of{ x - y }^{ k + 1 } </m>. Indeed, in this case,
+        
+        <md>
+          <mrow>
+            R^{ k }_{ c } \of{ f , x } \amp = \of{ \frac{ f^{ \of{ k + 1 } } \of{ y } \of{ x - y }^{ k } }{ k! } } \of{ \frac{ G \of{ x } - G \of{ c } }{ G' \of{ y } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ \frac{ f^{ \of{ k + 1 } } \of{ y } \of{ x - y }^{ k } }{ k! } } \of{ \frac{ - \of{ x - c }^{ k + 1 } }{ \of{ k + 1 } \of{ x - y }^{ k } \of{ -1 } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ f^{ \of{ k + 1 } } \of{ y } \of{ x - c }^{ k + 1 } }{ \of{ k + 1 }! }
+          </mrow>
+        </md>
+        
+        for some interior point <m> y \in \Int \of{ I_{ x } } </m>.
+      </p>
+    </proof>
+  </corollary>
+
+  <conclusion>
+    <p>
+      We observe that <xref ref="corollary-lagrange-form-of-the-taylor-remainder"/> is precisely the <xref ref="theorem-mean-value-theorem" text="title"/> when <m> k = 0 </m>. Other important forms of the Taylor remainder can be found by choosing different functions <m> G </m>. You will have an opportunity to explore the <term> Cauchy form </term> of the Taylor remainder in the problems for this section.
+    </p>
+  </conclusion>
+</subsection>

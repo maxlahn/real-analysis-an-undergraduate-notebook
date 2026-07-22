@@ -6229,13 +6229,157 @@ var ptx_lunr_docs = [
   "body": " L'Hôpital's rule  Guillaume de l'Hôpital   Let be real-valued functions on an open interval , and consider an interior point . Suppose that either or . If and are differentiable on , for all , and for some extended real number , then     Since is continuous on and for all , attains no local extrema on . In particular, is strictly monotone on and on . Without loss of generality, we may shrink the interval so that for all points .  For each point , let denote the interval with endpoints and , including but not ; that is, . Moreover, let be the extended real-valued functions defined by the formulas . We observe that since , .  Consider distinct points . Since the restriction of to either or is strictly monotone and therefore injective, . Moreover, the restrictions of and to the closed interval between and satisfy the hypotheses of , and so for some point lying strictly between and . In particular, we conclude that for all and distinct points .  We first suppose that . Then the above argument implies that for all and . Taking a limit as , we obtain . The and now implies that .  We now suppose that . Then the above argument implies that for all and . Taking limits as , we observe that . We conclude that for all . The and now implies that .   "
 },
 {
-  "id": "section-higher-order-derivatives",
+  "id": "section-higher-order-approximations",
   "level": "1",
-  "url": "section-higher-order-derivatives.html",
+  "url": "section-higher-order-approximations.html",
   "type": "Section",
   "number": "5.4",
-  "title": "Higher Order Derivatives",
-  "body": " Higher Order Derivatives   Text before the first subsection.     Text after the last subsection.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Reading Questions   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and\/or instructor rather than spoiling the answers.    "
+  "title": "Higher Order Approximations",
+  "body": " Higher Order Approximations   In this section, we explore the properties of the Taylor approximations of a multiply differentiable function. In a sense which we will make precise, these polynomials are the best possible approximations for such a function near a given point. We will also compute the error in such approximations by means similar to the .    Dominance and Asymptotics   How can we compare the speed at which two functions converge to or diverge to infinity? We may be able to see graphically that while both and converge at to , converges far more quickly. One attempt to quantify observations of this type is the family of related binary relations comprising the notion of asymptotic comparison .    Asymptotic comparison  asymptotic dominance  asymptotic comparability  asymptotics       asymptotic dominance         asymptotic comparability         asymptotic     Let be real-valued functions defined on a subset , and fix a limit point .   Asymptotic dominance  We say that is asymptotically dominated by near if for some non-negative real-valued function and non-negative real number so that . In this case, we write as .    Asymptotic comparability  We say that and are asymptotically comparable near if for some non-negative real-valued function and positive real number so that . In this case, we write as .    Asymptotic  We say that is asymptotic to near if for some non-negative real-valued function so that . In this case, we write as .        Asymptotic comparison   The following are examples of asymptotic dominance, asymptotic comparability, and asymptotics:   Consider two power functions defined by the formulas and for some real numbers so that . Suppose that , and consider the real-valued function defined by the formula . We observe that for all points , and , since . We conclude that as .  On the other hand, for all points , and , since . We conclude that as .    Let be a rational function with formula in standard form, and consider the power functions defined by the formulas . Let be the real-valued function defined by the formula . We observe that , and . We conclude that as .  Moreover, , and . We conclude that as .       One can see from the definitions that if two functions are asymptotic, then they are asymptotically comparable. Moreover, if two functions are asymptotically comparable, then each asymptotically dominates the other. In fact, the converse implication also holds.   Asymptotic comparison   Let be real-valued functions defined on a subset , and fix a limit point . Then as if and only if both and as .    First suppose that as . Then there is a non-negative real-valued function and a positive real number so that for all and . Since , we conclude that as . Moreover, we observe that , and , so that as .  Now suppose that both and as . Then there are non-negative real-valued functions and non-negative real numbers so that and for all and . We first observe that for any point , if any one of , , , or is , then .  There are two cases: either there is a sequence of points converging to so that for all , or no such sequence exists. If there is such a sequence, we observe that for all , and so . In particular, we conclude that are non-zero, so that .  On the other hand, if no such sequence exists, then for all sufficiently close to . Let be the real-valued function defined piecewise by the formula . Then and , and so .     Strict asymptotic dominance  strict asymptotic dominance       strict asymptotic dominance     Let be real-valued functions defined on a subset , and fix a limit point . We say that is strictly asymptotically dominated by near if but as . In this case, we write as .    We will shortly find the following characterization of strict asymptotic dominance useful:   Strict asymptotic dominance   Let be real-valued functions defined on a subset , and fix a limit point . If for all , then if and only if .    Let be the non-negative real-valued function defined by the formula . Then for all , and . We conclude that if and only if .     While we will mainly utilize the language of asymptotic comparison to describe the error in a Taylor approximation, these ideas are ubiquitous throughout mathematical analysis and applied mathematics.     Polynomial Approximations of Differentiable Functions   We now arrive at one of the fundamental results in differential calculus. Taylor's theorem establishes a best possible polynomial approximation for a multiply differentiable function near a given point. We quantify the quality of this approximation by asymptotically comparing the difference to well-known power functions vanishing at at high order.    Taylor's theorem  Brook Taylor  Taylor's theorem   Let be a real-valued function defined on a subset . If is -times differentiable at a point , then there is a unique polynomial function of degree at most so that .    For uniqueness, let be polynomial functions of degree at most , and suppose that and . Then for all . The now implies that , so that as . This polynomial can be written in the form for some real numbers . For each index , we observe that . If , then . If , then . Continuing in this manner, we conclude that , so that .  For existence, let be the polynomial function defined by the formula . We observe that for all . We will show that by repeated applications of . Indeed, , so that .    In summary, if a real-valued function is -times differentiable at a point , then the unique polynomial of degree at most with the same value, and derivatives as up to order is the best possible polynomial approximation of near . This polynomial is called the Taylor approximation of at .   Taylor approximation\/remainder  Taylor approximation  Taylor remainder       the order Taylor approximation of at          the order Taylor remainder of at      Let be a real-valued function defined on a subset . If is -times differentiable at a point , then the unique polynomial of degree at most so that is called the order  Taylor approximation of at , and is called the order  Taylor remainder of at .    The content of Taylor's theorem is not in finding the Taylor approximation, but rather in bounding the Taylor remainder. Under stronger hypotheses on , one can find explicit formulas for the Taylor remainder. For example, the following result utilizes to compute a family of such an explicit formulas.   Mean value form of the Taylor remainder   Let be a real-valued function defined on an interval , and suppose that is -times differentiable at an interior point , with order Taylor approximation and order Taylor remainder .  Fix a point , and a real-valued function defined on the closed interval between and . If both and are continuous on and differentiable on the open interval , and if has no critical points on , then for some interior point .    Consider the real-valued function defined by the formula . We observe that is continuous on the closed interval and differentiable on the open interval , with derivative . By the , there is some interior point so that . We observe that and , so that .    The utility of is in choosing specific functions in order to obtain particularly nice explicit formulas for the Taylor remainder. For example, we obtain the Lagrange form of the Taylor remainder, which is a higher order generalization of the .   Lagrange form of the Taylor remainder  Joseph-Louis Lagrange  Lagrange form of the Taylor remainder   Let be a real-valued function defined on an interval , and suppose that is -times differentiable at an interior point , with order Taylor approximation and order Taylor remainder .  Fix a point . If is continuous on the closed interval between and and differentiable on the open interval , then for some interior point .    This follows immediately from by taking . Indeed, in this case, for some interior point .     We observe that is precisely the when . Other important forms of the Taylor remainder can be found by choosing different functions . You will have an opportunity to explore the Cauchy form of the Taylor remainder in the problems for this section.     In , we will explore Taylor series , which are related approximations which utilize all derivatives of an infinitely differentiable function.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available in . However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Problems   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these problems are available in . However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and\/or instructor rather than spoiling the answers.    "
+},
+{
+  "id": "section-higher-order-approximations-2-1",
+  "level": "2",
+  "url": "section-higher-order-approximations.html#section-higher-order-approximations-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Taylor approximations "
+},
+{
+  "id": "subsection-dominance-and-asymptotics-2-1",
+  "level": "2",
+  "url": "section-higher-order-approximations.html#subsection-dominance-and-asymptotics-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "asymptotic comparison "
+},
+{
+  "id": "definition-asymptotic-comparison",
+  "level": "2",
+  "url": "section-higher-order-approximations.html#definition-asymptotic-comparison",
+  "type": "Definition",
+  "number": "5.4.1",
+  "title": "Asymptotic comparison.",
+  "body": " Asymptotic comparison  asymptotic dominance  asymptotic comparability  asymptotics       asymptotic dominance         asymptotic comparability         asymptotic     Let be real-valued functions defined on a subset , and fix a limit point .   Asymptotic dominance  We say that is asymptotically dominated by near if for some non-negative real-valued function and non-negative real number so that . In this case, we write as .    Asymptotic comparability  We say that and are asymptotically comparable near if for some non-negative real-valued function and positive real number so that . In this case, we write as .    Asymptotic  We say that is asymptotic to near if for some non-negative real-valued function so that . In this case, we write as .      "
+},
+{
+  "id": "example-asymptotic-comparison",
+  "level": "2",
+  "url": "section-higher-order-approximations.html#example-asymptotic-comparison",
+  "type": "Example",
+  "number": "5.4.2",
+  "title": "Asymptotic comparison.",
+  "body": " Asymptotic comparison   The following are examples of asymptotic dominance, asymptotic comparability, and asymptotics:   Consider two power functions defined by the formulas and for some real numbers so that . Suppose that , and consider the real-valued function defined by the formula . We observe that for all points , and , since . We conclude that as .  On the other hand, for all points , and , since . We conclude that as .    Let be a rational function with formula in standard form, and consider the power functions defined by the formulas . Let be the real-valued function defined by the formula . We observe that , and . We conclude that as .  Moreover, , and . We conclude that as .      "
+},
+{
+  "id": "lemma-asymptotic-comparison",
+  "level": "2",
+  "url": "section-higher-order-approximations.html#lemma-asymptotic-comparison",
+  "type": "Lemma",
+  "number": "5.4.3",
+  "title": "Asymptotic comparison.",
+  "body": " Asymptotic comparison   Let be real-valued functions defined on a subset , and fix a limit point . Then as if and only if both and as .    First suppose that as . Then there is a non-negative real-valued function and a positive real number so that for all and . Since , we conclude that as . Moreover, we observe that , and , so that as .  Now suppose that both and as . Then there are non-negative real-valued functions and non-negative real numbers so that and for all and . We first observe that for any point , if any one of , , , or is , then .  There are two cases: either there is a sequence of points converging to so that for all , or no such sequence exists. If there is such a sequence, we observe that for all , and so . In particular, we conclude that are non-zero, so that .  On the other hand, if no such sequence exists, then for all sufficiently close to . Let be the real-valued function defined piecewise by the formula . Then and , and so .   "
+},
+{
+  "id": "definition-strict-asymptotic-dominance",
+  "level": "2",
+  "url": "section-higher-order-approximations.html#definition-strict-asymptotic-dominance",
+  "type": "Definition",
+  "number": "5.4.4",
+  "title": "Strict asymptotic dominance.",
+  "body": " Strict asymptotic dominance  strict asymptotic dominance       strict asymptotic dominance     Let be real-valued functions defined on a subset , and fix a limit point . We say that is strictly asymptotically dominated by near if but as . In this case, we write as .   "
+},
+{
+  "id": "proposition-strict-asymptotic-dominance",
+  "level": "2",
+  "url": "section-higher-order-approximations.html#proposition-strict-asymptotic-dominance",
+  "type": "Proposition",
+  "number": "5.4.5",
+  "title": "Strict asymptotic dominance.",
+  "body": " Strict asymptotic dominance   Let be real-valued functions defined on a subset , and fix a limit point . If for all , then if and only if .    Let be the non-negative real-valued function defined by the formula . Then for all , and . We conclude that if and only if .   "
+},
+{
+  "id": "subsection-polynomial-approximations-of-differentiable-functions-2-1",
+  "level": "2",
+  "url": "section-higher-order-approximations.html#subsection-polynomial-approximations-of-differentiable-functions-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Taylor's theorem "
+},
+{
+  "id": "theorem-taylors-theorem",
+  "level": "2",
+  "url": "section-higher-order-approximations.html#theorem-taylors-theorem",
+  "type": "Theorem",
+  "number": "5.4.6",
+  "title": "Taylor’s theorem.",
+  "body": " Taylor's theorem  Brook Taylor  Taylor's theorem   Let be a real-valued function defined on a subset . If is -times differentiable at a point , then there is a unique polynomial function of degree at most so that .    For uniqueness, let be polynomial functions of degree at most , and suppose that and . Then for all . The now implies that , so that as . This polynomial can be written in the form for some real numbers . For each index , we observe that . If , then . If , then . Continuing in this manner, we conclude that , so that .  For existence, let be the polynomial function defined by the formula . We observe that for all . We will show that by repeated applications of . Indeed, , so that .   "
+},
+{
+  "id": "subsection-polynomial-approximations-of-differentiable-functions-4",
+  "level": "2",
+  "url": "section-higher-order-approximations.html#subsection-polynomial-approximations-of-differentiable-functions-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Taylor approximation "
+},
+{
+  "id": "definition-taylor-approximation-remainder",
+  "level": "2",
+  "url": "section-higher-order-approximations.html#definition-taylor-approximation-remainder",
+  "type": "Definition",
+  "number": "5.4.7",
+  "title": "Taylor approximation\/remainder.",
+  "body": " Taylor approximation\/remainder  Taylor approximation  Taylor remainder       the order Taylor approximation of at          the order Taylor remainder of at      Let be a real-valued function defined on a subset . If is -times differentiable at a point , then the unique polynomial of degree at most so that is called the order  Taylor approximation of at , and is called the order  Taylor remainder of at .   "
+},
+{
+  "id": "theorem-mean-value-form-of-the-taylor-remainder",
+  "level": "2",
+  "url": "section-higher-order-approximations.html#theorem-mean-value-form-of-the-taylor-remainder",
+  "type": "Theorem",
+  "number": "5.4.8",
+  "title": "Mean value form of the Taylor remainder.",
+  "body": " Mean value form of the Taylor remainder   Let be a real-valued function defined on an interval , and suppose that is -times differentiable at an interior point , with order Taylor approximation and order Taylor remainder .  Fix a point , and a real-valued function defined on the closed interval between and . If both and are continuous on and differentiable on the open interval , and if has no critical points on , then for some interior point .    Consider the real-valued function defined by the formula . We observe that is continuous on the closed interval and differentiable on the open interval , with derivative . By the , there is some interior point so that . We observe that and , so that .   "
+},
+{
+  "id": "subsection-polynomial-approximations-of-differentiable-functions-8",
+  "level": "2",
+  "url": "section-higher-order-approximations.html#subsection-polynomial-approximations-of-differentiable-functions-8",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Lagrange form "
+},
+{
+  "id": "corollary-lagrange-form-of-the-taylor-remainder",
+  "level": "2",
+  "url": "section-higher-order-approximations.html#corollary-lagrange-form-of-the-taylor-remainder",
+  "type": "Corollary",
+  "number": "5.4.9",
+  "title": "Lagrange form of the Taylor remainder.",
+  "body": " Lagrange form of the Taylor remainder  Joseph-Louis Lagrange  Lagrange form of the Taylor remainder   Let be a real-valued function defined on an interval , and suppose that is -times differentiable at an interior point , with order Taylor approximation and order Taylor remainder .  Fix a point . If is continuous on the closed interval between and and differentiable on the open interval , then for some interior point .    This follows immediately from by taking . Indeed, in this case, for some interior point .   "
+},
+{
+  "id": "subsection-polynomial-approximations-of-differentiable-functions-10-1",
+  "level": "2",
+  "url": "section-higher-order-approximations.html#subsection-polynomial-approximations-of-differentiable-functions-10-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Cauchy form "
+},
+{
+  "id": "section-higher-order-approximations-5-1",
+  "level": "2",
+  "url": "section-higher-order-approximations.html#section-higher-order-approximations-5-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Taylor series "
 },
 {
   "id": "section-riemann-sums",

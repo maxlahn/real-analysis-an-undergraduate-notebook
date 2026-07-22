@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<reading-questions xml:id="exercises-higher-order-derivatives" xmlns:xi="http://www.w3.org/2001/XInclude">
+<exercises xml:id="exercises-higher-order-approximations" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>
     Exercises
   </title>
@@ -11,11 +11,11 @@
     </p>
   </introduction>
   
-  <!-- <xi:include href="./exercise-TITLE.ptx"/> -->
+  <!-- <xi:include href="./exercises/exercise-TITLE.ptx"/> -->
 
   <conclusion>
     <p>
-      Short answers and/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.
+      Short answers and/or in-depth solutions to these exercises are available in <xref ref="solutions"/>. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.
     </p>
   </conclusion>
-</reading-questions>
+</exercises>

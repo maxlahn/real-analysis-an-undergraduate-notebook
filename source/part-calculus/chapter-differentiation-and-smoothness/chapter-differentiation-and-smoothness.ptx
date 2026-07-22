@@ -17,7 +17,7 @@
 
   <xi:include href="./section-applications-of-the-mean-value-theorem/section-applications-of-the-mean-value-theorem.ptx"/>
 
-  <xi:include href="./section-higher-order-derivatives/section-higher-order-derivatives.ptx"/>
+  <xi:include href="./section-higher-order-approximations/section-higher-order-approximations.ptx"/>
 
   <conclusion>
     <p>

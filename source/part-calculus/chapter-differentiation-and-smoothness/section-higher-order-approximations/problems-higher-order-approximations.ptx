@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<reading-questions xml:id="reading-questions-higher-order-derivatives" xmlns:xi="http://www.w3.org/2001/XInclude">
+<reading-questions xml:id="problems-higher-order-approximations" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>
-    Reading Questions
+    Problems
   </title>
 
   <introduction>
@@ -11,11 +11,11 @@
     </p>
   </introduction>
   
-  <!-- <xi:include href="./problem-TITLE.ptx"/> -->
+  <!-- <xi:include href="./problems/problem-TITLE.ptx"/> -->
 
   <conclusion>
     <p>
-      In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and/or instructor rather than spoiling the answers.
+      In-depth solutions to these problems are available in <xref ref="solutions"/>. However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and/or instructor rather than spoiling the answers.
     </p>
   </conclusion>
 </reading-questions>

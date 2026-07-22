@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-dominance-and-asymptotics" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Dominance and Asymptotics
+  </title>
+
+  <introduction>
+    <p>
+      How can we compare the speed at which two functions converge to <m> 0 </m> or diverge to infinity? We may be able to see graphically that while both <m> x^{ 2 } </m> and <m> x^{ 4 } </m> converge at <m> 0 </m> to <m> 0 </m>, <m> x^{ 4 } </m> converges far more quickly. One attempt to quantify observations of this type is the family of related binary relations comprising the notion of <term> asymptotic comparison </term>.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-asymptotic-comparison">
+    <title>
+      Asymptotic comparison
+    </title>
+    
+    <idx>
+      asymptotic dominance
+    </idx>
+    
+    <idx>
+      asymptotic comparability
+    </idx>
+    
+    <idx>
+      asymptotics
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \preccurlyeq </m>
+      </usage>
+      
+      <description>
+        <p>
+          asymptotic dominance
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \asymp </m>
+      </usage>
+      
+      <description>
+        <p>
+          asymptotic comparability
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \sim </m>
+      </usage>
+      
+      <description>
+        <p>
+          asymptotic
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> f , g \colon X \to \R </m> be real-valued functions defined on a subset <m> X \subseteq \R </m>, and fix a limit point <m> c \in X' </m>.
+        
+        <ul>
+          <li>
+            <title>
+              Asymptotic dominance
+            </title>
+            
+            <p>
+              We say that <m> f </m> is <term> asymptotically dominated </term> by <m> g </m> near <m> c </m> if
+              
+              <md>
+                \abs{ f \of{ x } } = \lambda \of{ x } \abs{ g \of{ x } }
+              </md>
+              
+              for some non-negative real-valued function <m> \lambda \colon X \to \clopint{ 0 }{ \infty } </m> and non-negative real number <m> 0 \leq L \lt \infty </m> so that
+              
+              <md>
+                \lim_{ x \to c }{ \lambda \of{ x } } = L
+              </md>.
+              
+              In this case, we write <m> f \preccurlyeq g </m> as <m> x \to c </m>. 
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Asymptotic comparability
+            </title>
+            
+            <p>
+              We say that <m> f </m> and <m> g </m> are <term> asymptotically comparable </term> near <m> c </m> if
+              
+              <md>
+                \abs{ f \of{ x } } = \lambda \of{ x } \abs{ g \of{ x } }
+              </md>
+              
+              for some non-negative real-valued function <m> \lambda \colon X \to \clopint{ 0 }{ \infty } </m> and positive real number <m> 0 \lt L \lt \infty </m> so that
+              
+              <md>
+                \lim_{ x \to c }{ \lambda \of{ x } } = L
+              </md>.
+              
+              In this case, we write <m> f \asymp g </m> as <m> x \to c </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Asymptotic
+            </title>
+            
+            <p>
+              We say that <m> f </m> is <term> asymptotic </term> to <m> g </m> near <m> c </m> if
+              
+              <md>
+                \abs{ f \of{ x } } = \lambda \of{ x } \abs{ g \of{ x } }
+              </md>
+              
+              for some non-negative real-valued function <m> \lambda \colon X \to \clopint{ 0 }{ \infty } </m> so that
+              
+              <md>
+                \lim_{ x \to c }{ \lambda \of{ x } } = 1
+              </md>.
+              
+              In this case, we write <m> f \sim g </m> as <m> x \to c </m>. 
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="example-asymptotic-comparison">
+    <title>
+      Asymptotic comparison
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of asymptotic dominance, asymptotic comparability, and asymptotics:
+        
+        <ul>
+          <li>
+            <p>
+              Consider two power functions <m> f , g \colon \opint{ 0 }{ \infty } \to \R </m> defined by the formulas <m> f \of{ x } = a x^{ p } </m> and <m> g \of{ x } = b x^{ q } </m> for some real numbers <m> a , b , p , q \in \R </m> so that <m> a , b \neq 0 </m>. Suppose that <m> p \leq q </m>, and consider the real-valued function <m> \lambda \colon \opint{ 0 }{ \infty } \to \R </m> defined by the formula
+              
+              <md>
+                \lambda \of{ x } = \abs{ \frac{ a }{ b } } x^{ p - q }
+              </md>.
+              
+              We observe that
+              
+              <md>
+                <mrow>
+                  \abs{ f \of{ x } } \amp = \abs{ a x^{ p } } = \abs{ a } \cdot \abs{ x }^{ p } = \abs{ a } x^{ p }
+                </mrow>
+                
+                <mrow>
+                  \amp = \frac{ \abs{ a } }{ \abs{ b } } x^{ p - q } \cdot \abs{ b } x^{ q } = \abs{ \frac{ a }{ b } } x^{ p - q } \cdot \abs{ b x^{ q } } = \lambda \of{ x } \abs{ g \of{ x } }
+                </mrow>
+              </md>
+              
+              for all points <m> 0 \lt x \lt \infty </m>, and
+              
+              <md>
+                <mrow>
+                  \lim_{ x \to \infty }{ \lambda \of{ x } } \amp = \lim_{ x \to \infty }{ \abs{ \frac{ a }{ b } } x^{ p - q } } = \abs{ \frac{ a }{ b } } \lim_{ x \to \infty }{ x^{ p - q } }
+                </mrow>
+                
+                <mrow>
+                  \amp = \abs{ \frac{ a }{ b } } \cdot 0 = 0
+                </mrow>
+              </md>,
+              
+              since <m> p - q \lt 0 </m>. We conclude that <m> f \preccurlyeq g </m> as <m> x \to \infty </m>.
+            </p>
+            
+            <p>
+              On the other hand, <m> \abs{ g \of{ x } } = \of{ \frac{ 1 }{ \lambda \of{ x } } } \abs{ f \of{ x } } </m> for all points <m> 0 \lt x \lt \infty </m>, and
+              
+              <md>
+                <mrow>
+                  \lim_{ x \to 0 }{ \frac{ 1 }{ \lambda \of{ x } } } \amp = \lim_{ x \to 0 }{ \frac{ 1 }{ \abs{ \frac{ a }{ b } } x^{ p - q } } } = \lim_{ x \to 0 }{ \abs{ \frac{ b }{ a } } x^{ q - p } }
+                </mrow>
+                
+                <mrow>
+                  \amp = \abs{ \frac{ b }{ a } } \lim_{ x \to 0 }{ x^{ q - p } } = \abs{ \frac{ b }{ a } } \cdot 0 = 0
+                </mrow>
+              </md>,
+              
+              since <m> q - p \gt 0 </m>. We conclude that <m> g \preccurlyeq f </m> as <m> x \to 0 </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Let <m> f \colon \R \setminus \set{ x_{ 1 } , \dotsc , x_{ n } } \to \R </m> be a rational function with formula
+              
+              <md>
+                f \of{ x } = \frac{ a_{ m } x^{ m } + a_{ m - 1 } x^{ m - 1 } + \dotsb + a_{ 2 } x^{ 2 } + a_{ 1 } x + a_{ 0 } }{ b_{ n } x^{ n } + b_{ n - 1 } x^{ n - 1 } + \dotsb + b_{ 2 } x^{ 2 } + b_{ 1 } x + b_{ 0 } }
+              </md>
+              
+              in standard form, and consider the power functions <m> g , h \colon \opint{ 0 }{ \infty } \to \R </m> defined by the formulas
+              
+              <md>
+                <mrow>
+                  g \of{ x } \amp = x^{ m - n } \amp h \of{ x } \amp = \of{ \frac{ a_{ m } }{ b_{ n } } } x^{ m - n }
+                </mrow>
+              </md>.
+              
+              Let <m> \lambda \colon \opint{ 0 }{ \infty } \setminus \set{ x_{ 1 } , \dotsc , x_{ n } } \to \R </m> be the real-valued function defined by the formula
+              
+              <md>
+                \lambda \of{ x } = \frac{ a_{ m } + a_{ m - 1 } x^{ -1 } + \dotsb + a_{ 2 } x^{ 2 - m } a_{ 1 } x^{ 1 - m } + a_{ 0 } x^{ -m } }{ b_{ n } + b_{ n - 1 } x^{ -1 } + \dotsb + b_{ 2 } x^{ 2 - n } + b_{ 1 } x^{ 1 - n } + b_{ 0 } x^{ -n } }
+              </md>.
+              
+              We observe that
+              
+              <md>
+                <mrow>
+                  \lambda \of{ x } \abs{ g \of{ x } } \amp = x^{ m - n } \abs{ \frac{ a_{ m } + a_{ m - 1 } x^{ -1 } + \dotsb + a_{ 2 } x^{ 2 - m } a_{ 1 } x^{ 1 - m } + a_{ 0 } x^{ -m } }{ b_{ n } + b_{ n - 1 } x^{ -1 } + \dotsb + b_{ 2 } x^{ 2 - n } + b_{ 1 } x^{ 1 - n } + b_{ 0 } x^{ -n } } }
+                </mrow>
+                
+                <mrow>
+                  \amp = \of{ \frac{ x^{ m } }{ x^{ n } } } \abs{ \frac{ a_{ m } + a_{ m - 1 } x^{ -1 } + \dotsb + a_{ 2 } x^{ 2 - m } a_{ 1 } x^{ 1 - m } + a_{ 0 } x^{ -m } }{ b_{ n } + b_{ n - 1 } x^{ -1 } + \dotsb + b_{ 2 } x^{ 2 - n } + b_{ 1 } x^{ 1 - n } + b_{ 0 } x^{ -n } } }
+                </mrow>
+                
+                <mrow>
+                  \amp = \abs{ \frac{ a_{ m } x^{ m } + a_{ m - 1 } x^{ m - 1 } + \dotsb + a_{ 2 } x^{ 2 } + a_{ 1 } x + a_{ 0 } }{ b_{ n } x^{ n } + b_{ n - 1 } x^{ n - 1 } + \dotsb + b_{ 2 } x^{ 2 } + b_{ 1 } x + b_{ 0 } } } = \abs{ f \of{ x } }
+                </mrow>
+              </md>,
+              
+              and
+              
+              <md>
+                <mrow>
+                  \lim_{ x \to \infty }{ \lambda \of{ x } } \amp = \lim_{ x \to \infty }{ \frac{ a_{ m } + a_{ m - 1 } x^{ -1 } + \dotsb + a_{ 2 } x^{ 2 - m } a_{ 1 } x^{ 1 - m } + a_{ 0 } x^{ -m } }{ b_{ n } + b_{ n - 1 } x^{ -1 } + \dotsb + b_{ 2 } x^{ 2 - n } + b_{ 1 } x^{ 1 - n } + b_{ 0 } x^{ -n } } }
+                </mrow>
+                
+                <mrow>
+                  \amp = \frac{ a_{ m } }{ b_{ n } } \in \opint{ 0 }{ \infty }
+                </mrow>
+              </md>.
+              
+              We conclude that <m> f \asymp g </m> as <m> x \to \infty </m>.
+            </p>
+            
+            <p>
+              Moreover,
+              
+              <md>
+                <mrow>
+                  \abs{ \frac{ b_{ n } }{ a_{ m } } } \lambda \of{ x } \abs{ h \of{ x } } \amp = \abs{ \frac{ b_{ n } }{ a_{ m } } } \lambda \of{ x } \abs{ \of{ \frac{ a_{ m } }{ b_{ n } } } x^{ m - n } }
+                </mrow>
+                
+                <mrow>
+                  \amp = \lambda \of{ x } \abs{ g \of{ x } } = \abs{ f \of{ x } }
+                </mrow>
+              </md>,
+              
+              and
+              
+              <md>
+                \lim_{ x \to \infty }{ \abs{ \frac{ b_{ n } }{ a_{ m } } } \lambda \of{ x } } = \abs{ \frac{ b_{ n } }{ a_{ m } } } \lim_{ x \to \infty }{ \lambda \of{ x } } = \abs{ \frac{ b_{ n } }{ a_{ m } } } \abs{ \frac{ a_{ m } }{ b_{ n } } } = 1 
+              </md>.
+              
+              We conclude that <m> f \sim h </m> as <m> x \to \infty </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    One can see from the definitions that if two functions are asymptotic, then they are asymptotically comparable. Moreover, if two functions are asymptotically comparable, then each asymptotically dominates the other. In fact, the converse implication also holds.
+  </p>
+  
+  <lemma xml:id="lemma-asymptotic-comparison">
+    <title>
+      Asymptotic comparison
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f , g \colon X \to \R </m> be real-valued functions defined on a subset <m> X \subseteq \R </m>, and fix a limit point <m> c \in X' </m>. Then <m> f \asymp g </m> as <m> x \to c </m> if and only if both <m> f \preccurlyeq g </m> and <m> g \preccurlyeq f </m> as <m> x \to c </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        First suppose that <m> f \asymp g </m> as <m> x \to c </m>. Then there is a non-negative real-valued function <m> \lambda \colon X \to \clopint{ 0 }{ \infty } </m> and a positive real number <m> 0 \lt L \lt \infty </m> so that <m> \abs{ f \of{ x } } = \lambda \of{ x } \abs{ g \of{ x } } </m> for all <m> x \in X </m> and
+        
+        <md>
+          \lim_{ x \to c }{ \lambda \of{ x } } = L
+        </md>.
+        
+        Since <m> 0 \leq L \lt \infty </m>, we conclude that <m> f \preccurlyeq g </m> as <m> x \to c </m>. Moreover, we observe that
+        
+        <md>
+          \abs{ g \of{ x } } = \abs{ g \of{ x } } \of{ \frac{ \lambda \of{ x } }{ \lambda \of{ x } } } = \of{ \frac{ 1 }{ \lambda \of{ x } } } \abs{ f \of{ x } }
+        </md>,
+        
+        and
+        
+        <md>
+          \lim_{ x \to c }{ \frac{ 1 }{ \lambda \of{ x } } } = \frac{ 1 }{ \lim_{ x \to c }{ \lambda \of{ x } } } = \frac{ 1 }{ L } \in \opint{ 0 }{ \infty }
+        </md>,
+        
+        so that <m> g \preccurlyeq f </m> as <m> x \to c </m>.
+      </p>
+      
+      <p>
+        Now suppose that both <m> f \preccurlyeq g </m> and <m> g \preccurlyeq f </m> as <m> x \to c </m>. Then there are non-negative real-valued functions <m> \lambda , \mu \colon X \to \clopint{ 0 }{ \infty } </m> and non-negative real numbers <m> L , M \in \clopint{ 0 }{ \infty } </m> so that <m> \abs{ f \of{ x } } = \lambda \of{ x } \abs{ g \of{ x } } </m> and <m> \abs{ g \of{ x } } = \mu \of{ x } \abs{ f \of{ x } } </m> for all <m> x \in X </m> and
+        
+        <md>
+          <mrow>
+            \lim_{ x \to c }{ \lambda \of{ x } } \amp = L \amp \lim_{ x \to c }{ \mu \of{ x } } \amp = M
+          </mrow>
+        </md>.
+        
+        We first observe that for any point <m> x \in X </m>, if any one of <m> \lambda \of{ x } </m>, <m> \mu \of{ x } </m>, <m> f \of{ x } </m>, or <m> g \of{ x } </m> is <m> 0 </m>, then <m> f \of{ x } = g \of{ x } = 0 </m>.
+      </p>
+      
+      <p>
+        There are two cases: either there is a sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of points <m> x_{ n } \in X \setminus \set{ c } </m> converging to <m> c </m> so that <m> f \of{ x_{ n } } , g \of{ x_{ n } } \neq 0 </m> for all <m> n \in \N </m>, or no such sequence exists. If there is such a sequence, we observe that
+        
+        <md>
+          <mrow>
+            \lambda \of{ x_{ n } } \mu \of{ x_{ n } } \amp = \lambda \of{ x_{ n } } \mu \of{ x_{ n } } \abs{ \frac{ f \of{ x_{ n } } g \of{ x_{ n } } }{ f \of{ x_{ n } } g \of{ x_{ n } } } } = \abs{ \frac{ \lambda \of{ x_{ n } } f \of{ x_{ n } } }{ g \of{ x_{ n } } } } \cdot \abs{ \frac{ \mu \of{ x_{ n } } g \of{ x_{ n } } }{ f \of{ x_{ n } } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \abs{ \frac{ g \of{ x_{ n } } }{ g \of{ x_{ n } } } } \cdot \abs{ \frac{ f \of{ x_{ n } } }{ f \of{ x_{ n } } } } = 1
+          </mrow>
+        </md>
+        
+        for all <m> n \in \N </m>, and so
+        
+        <md>
+          <mrow>
+            L M \amp = \of{ \lim_{ n \to \infty }{ \lambda \of{ x_{ n } } } } \of{ \lim_{ n \to \infty }{ \mu \of{ x_{ n } } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \lim_{ n \to \infty }{ \lambda \of{ x_{ n } } \mu \of{ x_{ n } } } = \lim_{ n \to \infty }{ 1 } = 1
+          </mrow>
+        </md>.
+        
+        In particular, we conclude that <m> L , M \neq 0 </m> are non-zero, so that <m> f \asymp g </m>.
+      </p>
+      
+      <p>
+        On the other hand, if no such sequence exists, then <m> f \of{ x } = g \of{ x } = 0 </m> for all <m> x \in X </m> sufficiently close to <m> c </m>. Let <m> \nu \colon X \to \R </m> be the real-valued function defined piecewise by the formula
+        
+        <md>
+          \nu \of{ x } =
+            \begin{cases}
+              \lambda \of{ x } \amp f \of{ x } \neq 0 \\
+              1 \amp f \of{ x } = 0
+            \end{cases}
+        </md>.
+        
+        Then <m> \nu \of{ x } \abs{ f \of{ x } } = \abs{ g \of{ x } } </m> and
+        
+        <md>
+          \lim_{ x \to c }{ \nu \of{ x } } = 1
+        </md>,
+        
+        and so <m> f \asymp g </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <definition xml:id="definition-strict-asymptotic-dominance">
+    <title>
+      Strict asymptotic dominance
+    </title>
+    
+    <idx>
+      strict asymptotic dominance
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \prec </m>
+      </usage>
+      
+      <description>
+        <p>
+          strict asymptotic dominance
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> f , g \colon X \to \R </m> be real-valued functions defined on a subset <m> X \subseteq \R </m>, and fix a limit point <m> c \in X' </m>. We say that <m> f </m> is <term> strictly asymptotically dominated </term> by <m> g </m> near <m> c </m> if <m> f \preccurlyeq g </m> but <m> f \not \asymp g </m> as <m> x \to c </m>. In this case, we write <m> f \prec g </m> as <m> x \to c </m>.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    We will shortly find the following characterization of strict asymptotic dominance useful:
+  </p>
+  
+  <proposition xml:id="proposition-strict-asymptotic-dominance">
+    <title>
+      Strict asymptotic dominance
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f , g \colon X \to \R </m> be real-valued functions defined on a subset <m> X \subseteq \R </m>, and fix a limit point <m> c \in X' </m>. If <m> g \of{ x } \neq 0 </m> for all <m> x \in X \setminus \set{ c } </m>, then <m> f \prec g </m> if and only if
+        
+        <md>
+          \lim_{ x \to c }{ \frac{ f \of{ x } }{ g \of{ x } } } = 0
+        </md>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \lambda \colon X \to \clopint{ 0 }{ \infty } </m> be the non-negative real-valued function defined by the formula
+        
+        <md>
+          \lambda \of{ x } = \abs{ \frac{ f \of{ x } }{ g \of{ x } } }
+        </md>.
+        
+        Then <m> \abs{ f \of{ x } } = \lambda \of{ x } \abs{ g \of{ x } } </m> for all <m> x \in X </m>, and
+        
+        <md>
+          \lim_{ x \to c }{ \lambda \of{ x } } = \lim_{ x \to c }{ \abs{ \frac{ f \of{ x } }{ g \of{ x } } } } = \abs{ \lim_{ x \to c }{ \frac{ f \of{ x } }{ g \of{ x } } } }
+        </md>.
+        
+        We conclude that <m> f \prec g </m> if and only if
+        
+        <md>
+          \lim_{ x \to c }{ \frac{ f \of{ x } }{ g \of{ x } } } = 0
+        </md>.
+      </p>
+    </proof>
+  </proposition>
+
+  <conclusion>
+    <p>
+      While we will mainly utilize the language of asymptotic comparison to describe the error in a Taylor approximation, these ideas are ubiquitous throughout mathematical analysis and applied mathematics.
+    </p>
+  </conclusion>
+</subsection>

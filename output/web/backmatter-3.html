@@ -856,10 +856,12 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section-higher-order-derivatives.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Higher Order Derivatives</span></a></div>
-<ul id="ptx-toc-group-section-higher-order-derivatives" class="structural toc-item-list">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-higher-order-derivatives.html#exercises-higher-order-derivatives" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-higher-order-derivatives.html#reading-questions-higher-order-derivatives" class="internal"><span class="codenumber">5.4</span> <span class="title">Reading Questions</span></a></div></li>
+<div class="toc-title-box"><a href="section-higher-order-approximations.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Higher Order Approximations</span></a></div>
+<ul id="ptx-toc-group-section-higher-order-approximations" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-higher-order-approximations.html#subsection-dominance-and-asymptotics" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Dominance and Asymptotics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-higher-order-approximations.html#subsection-polynomial-approximations-of-differentiable-functions" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Polynomial Approximations of Differentiable Functions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-higher-order-approximations.html#exercises-higher-order-approximations" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-higher-order-approximations.html#problems-higher-order-approximations" class="internal"><span class="codenumber">5.4.4</span> <span class="title">Problems</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -1797,6 +1799,54 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </td>
 <td><a href="section-differentiability.html#definition-smoothness" class="xref" data-knowl="./knowl/notation/definition-smoothness.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.1.12: Smoothness">Definition 5.1.12</a></td>
+</tr>
+<tr>
+<td><span class="process-math">\(\preccurlyeq \)</span></td>
+<td>
+<div class="para" id="definition-asymptotic-comparison-5-2-1">asymptotic dominance<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-asymptotic-comparison-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td><a href="section-higher-order-approximations.html#definition-asymptotic-comparison" class="xref" data-knowl="./knowl/notation/definition-asymptotic-comparison.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.4.1: Asymptotic comparison">Definition 5.4.1</a></td>
+</tr>
+<tr>
+<td><span class="process-math">\(\asymp \)</span></td>
+<td>
+<div class="para" id="definition-asymptotic-comparison-6-2-1">asymptotic comparability<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-asymptotic-comparison-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td><a href="section-higher-order-approximations.html#definition-asymptotic-comparison" class="xref" data-knowl="./knowl/notation/definition-asymptotic-comparison.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.4.1: Asymptotic comparison">Definition 5.4.1</a></td>
+</tr>
+<tr>
+<td><span class="process-math">\(\sim \)</span></td>
+<td>
+<div class="para" id="definition-asymptotic-comparison-7-2-1">asymptotic<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-asymptotic-comparison-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td><a href="section-higher-order-approximations.html#definition-asymptotic-comparison" class="xref" data-knowl="./knowl/notation/definition-asymptotic-comparison.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.4.1: Asymptotic comparison">Definition 5.4.1</a></td>
+</tr>
+<tr>
+<td><span class="process-math">\(\prec \)</span></td>
+<td>
+<div class="para" id="definition-strict-asymptotic-dominance-3-2-1">strict asymptotic dominance<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-strict-asymptotic-dominance-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td><a href="section-higher-order-approximations.html#definition-strict-asymptotic-dominance" class="xref" data-knowl="./knowl/notation/definition-strict-asymptotic-dominance.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.4.4: Strict asymptotic dominance">Definition 5.4.4</a></td>
+</tr>
+<tr>
+<td><span class="process-math">\(P^{ k }_{ c } \of{ f , x } \)</span></td>
+<td>
+<div class="para" id="definition-taylor-approximation-remainder-4-2-1">the order <span class="process-math">\(k \)</span> Taylor approximation of <span class="process-math">\(f \)</span> at <span class="process-math">\(c \)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-taylor-approximation-remainder-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td><a href="section-higher-order-approximations.html#definition-taylor-approximation-remainder" class="xref" data-knowl="./knowl/notation/definition-taylor-approximation-remainder.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.4.7: Taylor approximation/remainder">Definition 5.4.7</a></td>
+</tr>
+<tr>
+<td><span class="process-math">\(R^{ k }_{ c } \of{ f , x } \)</span></td>
+<td>
+<div class="para" id="definition-taylor-approximation-remainder-5-2-1">the order <span class="process-math">\(k \)</span> Taylor remainder of <span class="process-math">\(f \)</span> at <span class="process-math">\(c \)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-taylor-approximation-remainder-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td><a href="section-higher-order-approximations.html#definition-taylor-approximation-remainder" class="xref" data-knowl="./knowl/notation/definition-taylor-approximation-remainder.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.4.7: Taylor approximation/remainder">Definition 5.4.7</a></td>
 </tr>
 </table>
 <div class="autopermalink" aria-hidden="true" data-description="Appendix B: List of Symbols"><a tabindex="-1" href="#backmatter-3" title="Copy heading and permalink for Appendix B: List of Symbols" aria-label="Copy heading and permalink for Appendix B: List of Symbols">🔗</a></div>
