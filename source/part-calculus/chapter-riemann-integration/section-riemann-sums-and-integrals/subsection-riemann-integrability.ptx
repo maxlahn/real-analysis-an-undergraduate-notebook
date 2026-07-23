@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-riemann-integrability" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Riemann Integrability
+  </title>
+
+  <introduction>
+    <p>
+      We now explore the Riemann integrability of various functions and introduce the Riemann integral. We will see several equivalent characterizations of this property, expressed as conditions on limits of certain nets of Riemann sums and Darboux sums.
+    </p>
+  </introduction>
+  
+  <theorem xml:id="theorem-riemann-integrability">
+    <title>
+      Riemann integrability
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon \clint{ a }{ b } \to \R </m> be a bounded real-valued function defined on a closed interval <m> \clint{ a }{ b } </m>, and let <m> I \in \R </m> be a real number. The following are equivalent:
+        
+        <ol>
+          <li>
+            <p>
+              For any positive real number <m> \epsilon \gt 0 </m>, there is a positive real number <m> \delta \gt 0 </m> so that
+              
+              <md>
+                \abs{ \mathcal{ R }_{ f } \of{ P , t } - I } \lt \epsilon
+              </md>
+              
+              for all tagged partitions <m> \of{ P , t } </m> of <m> \clint{ a }{ b } </m> of mesh <m> \mesh \of{ P } \lt \delta </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The net <m> \mathcal{ R }_{ f } = \of{ \mathcal{ R }_{ f } \of{ P , t } }_{ \of{ P , t } } </m> of real numbers which associates to each tagged partition <m> \of{ P , t } </m> of <m> \clint{ a }{ b } </m> the corresponding Riemann sum of <m> f </m> converges upwards to <m> I </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The nets <m> \mathcal{ U }_{ f } = \of{ \mathcal{ U }_{ f } \of{ P } }_{ P } </m> and <m> \mathcal{ L }_{ f } = \of{ \mathcal{ L }_{ f } \of{ P } }_{ P } </m> of real numbers which associate to each partition <m> P </m> of <m> \clint{ a }{ b } </m> the corresponding upper and lower Darboux sums of <m> f </m> converge upwards to <m> I </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> B = \sup_{ a \leq x \leq b }{ \abs{ f \of{ x } } } </m>. If <m> B = 0 </m>, then <m> f \of{ x } = 0 </m> for all <m> a \leq x \leq b </m>, and so each of the three above properties holds. Thus we may suppose for the remainder of the proof that <m> B \gt 0 </m>. First suppose that for any positive real number <m> \epsilon \gt 0 </m>, there is a positive real number <m> \delta \gt 0 </m> so that
+              
+              <md>
+                \abs{ \mathcal{ R }_{ f } \of{ P , t } - I } \lt \epsilon
+              </md>
+              
+              for all tagged partitions <m> \of{ P , t } </m> of <m> \clint{ a }{ b } </m> of mesh <m> \mesh \of{ P } \lt \delta </m>. Let <m> N \in \Nbhd_{ \R } \of{ I } </m> be a neighborhood of <m> I </m> in <m> \R </m>, and note that <m> \mB_{ \epsilon } \of{ I } \subseteq N </m> for some positive real number <m> \epsilon \gt 0 </m>. Choose a tagged partition <m> \of{ P_{ \epsilon } , t_{ \epsilon } } </m> of mesh <m> \mesh \of{ P_{ \epsilon } } \lt \delta </m>. Then for all refinements <m> \of{ P , t } \succeq \of{ P_{ \epsilon } , t_{ \epsilon } } </m> of <m> \of{ P_{ \epsilon } , t_{ \epsilon } } </m>, <m> \mesh \of{ P } \leq \mesh \of{ P_{ \epsilon } } \lt \delta </m>, and so
+              
+              <md>
+                \abs{ \mathcal{ R }_{ f } \of{ P , t } - I } \lt \epsilon
+              </md>.
+              
+              We conclude that the net <m> \mathcal{ R }_{ f } = \of{ \mathcal{ R }_{ f } \of{ P , t } }_{ \of{ P , t } } </m> converges upwards to <m> I </m>.
+      </p>
+      
+      <p>
+        Now suppose that the net <m> \mathcal{ R }_{ f } = \of{ \mathcal{ R }_{ f } \of{ P , t } }_{ \of{ P , t } } </m> converges upwards to <m> I </m>. Since the nets <m> \mathcal{ U }_{ f } = \of{ \mathcal{ U }_{ f } \of{ P } }_{ P } </m> and <m> \mathcal{ L }_{ f } = \of{ \mathcal{ L }_{ f } \of{ P } }_{ P } </m> are monotone and bounded by <xref ref="proposition-properties-of-darboux-sums"/>, they converge to real numbers
+        
+        <md>
+          <mrow>
+            U \amp = \lim_{ P \uparrow }{ \mathcal{ U }_{ f } \of{ P } } = \inf_{ P }{ \mathcal{ U }_{ f } \of{ P } }
+          </mrow>
+          
+          <mrow>
+            L \amp = \lim_{ P \uparrow }{ \mathcal{ L }_{ f } \of{ P } } = \sup_{ P }{ \mathcal{ U }_{ f } \of{ P } }
+          </mrow>
+        </md>
+        
+        by a net analogue of the <xref ref="theorem-monotone-convergence-theorem" text="title"/>. So it suffices to show <m> I = U = L </m>. We first observe that for any partition <m> P </m> of <m> \clint{ a }{ b } </m> and positive real number <m> \epsilon \gt 0 </m>, there is some tagged partition <m> \of{ Q , t } </m> so that <m> P \preceq Q </m> and <m> \abs{ \mathcal{ R }_{ f } \of{ Q , t } - I } \lt \epsilon </m>. In particular,
+        
+        <md>
+          \mathcal{ L }_{ f } \of{ P } \leq \mathcal{ L }_{ f } \of{ Q } \leq \mathcal{ R }_{ f } \of{ Q , t } \lt I + \epsilon
+        </md>,
+        
+        and
+        
+        <md>
+          \mathcal{ U }_{ f } \of{ P } \geq \mathcal{ U }_{ f } \of{ Q } \geq \mathcal{ R }_{ f } \of{ Q , t } \gt I - \epsilon
+        </md>.
+        
+        Since this holds for all partitions <m> P </m> and all positive real numbers <m> \epsilon \gt 0 </m>,
+        
+        <md>
+          L = \sup_{ P }{ \mathcal{ L }_{ f } \of{ P } } \leq I \leq \inf_{ P }{ \mathcal{ U }_{ f } \of{ P } } = U
+        </md>.
+        
+        It remains to show that <m> U \leq I \leq L </m>. We will show that <m> U \leq I </m>; the proof that <m> I \leq L </m> is similar.
+      </p>
+      
+      <p>
+        To that end, let <m> \epsilon \gt 0 </m> be a positive real number. Then there is some tagged partition <m> \of{ P_{ \epsilon } , t_{ \epsilon } } </m> of <m> \clint{ a }{ b } </m> so that
+        
+        <md>
+          \abs{ \mathcal{ R }_{ f } \of{ P , t } - I } \lt \frac{ \epsilon }{ 3 }
+        </md>
+        
+        for all refinements <m> \of{ P , t } \succeq \of{ P_{ \epsilon } , s_{ \epsilon } } </m>. In particular, by further refining <m> \of{ P_{ \epsilon } , s_{ \epsilon } } </m> we may assume without loss of generality that it is left tagged. Let <m> P_{ \epsilon } = \of{ x_{ k } }_{ k = 0 }^{ n } </m>. We aim to define a further refinement of <m> P_{ \epsilon } </m>.
+      </p>
+      
+      <p>
+        For each index <m> 0 \leq k \lt n </m>, there is some point <m> x_{ k } \leq u_{ k } \leq x_{ k + 1 } </m> so that
+        
+        <md>
+          f \of{ u_{ k } } + \frac{ \epsilon }{ 3 \of{ b - a } } \gt \sup_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } }
+        </md>.
+        
+        If we may choose <m> u_{ k } = x_{ k } </m>, do so. Otherwise, we subdivide <m> \clint{ x_{ k } }{ x_{ k + 1 } } </m> into the union of two closed intervals, one of length
+        
+        <md>
+          L_{ k } \leq \frac{ \epsilon }{ 6 B n }
+        </md>
+        
+        containing <m> x_{ k } </m> and the other of length <m> x_{ k + 1 } - x_{ k } - L_{ k } </m> containing <m> u_{ k } </m>. Tagging these intervals with <m> x_{ k } </m> and <m> u_{ k } </m>, respectively, we obtain a further refinement <m> \of{ Q_{ \epsilon } , t_{ \epsilon } } \succeq \of{ P_{ \epsilon } , s_{ \epsilon } } </m>. Moreover, we may replace the tagging <m> s_{ \epsilon } </m> with <m> u = \of{ u_{ k } }_{ k = 0 }^{ n - 1 } </m> to obtain a tagged partition <m> \of{ P_{ \epsilon } , u } </m>. We observe that
+        
+        <md>
+          <mrow>
+            \mathcal{ R }_{ f } \of{ Q_{ \epsilon } , t_{ \epsilon } } - \mathcal{ R }_{ f } \of{ P_{ \epsilon } , u } \amp = \sum_{ k = 0 }^{ n - 1 }{ f \of{ x_{ k } } L_{ k } + f \of{ u_{ k } } \of{ x_{ k + 1 } - x_{ k } - L_{ k } } }
+          </mrow>
+          
+          <mrow>
+            \amp \qquad - \sum_{ k = 0 }^{ n - 1 }{ f \of{ u_{ k } } \of{ x_{ k + 1 } - x_{ k } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \sum_{ k = 0 }^{ n - 1 }{ \of{ f \of{ x_{ k } } - f \of{ u_{ k } } } L_{ k } }
+          </mrow>
+        </md>.
+        
+        In particular,
+        
+        <md>
+          <mrow>
+            \abs{ \mathcal{ R }_{ f } \of{ Q_{ \epsilon } , t_{ \epsilon } } - \mathcal{ R }_{ f } \of{ P_{ \epsilon } , u } } \amp = \abs{ \sum_{ k = 0 }^{ n - 1 }{ \of{ f \of{ x_{ k } } - f \of{ u_{ k } } } L_{ k } } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \sum_{ k = 0 }^{ n - 1 }{ \abs{ f \of{ x_{ k } } - f \of{ u_{ k } } } L_{ k } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \sum_{ k = 0 }^{ n - 1 }{ \of{ \abs{ f \of{ x_{ k } } } + \abs{ f \of{ u_{ k } } } } L_{ k } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \sum_{ k = 0 }^{ n - 1 }{ \frac{ 2 B \epsilon }{ 6 B n } } = \frac{ \epsilon }{ 3 }
+          </mrow>
+        </md>.
+        
+        Similarly,
+        
+        <md>
+          <mrow>
+            \mathcal{ R }_{ f } \of{ P_{ \epsilon } , u } \amp = \sum_{ k = 0 }^{ n - 1 }{ f \of{ u_{ k } } \of{ x_{ k + 1 } - x_{ k } } }
+          </mrow>
+          
+          <mrow>
+            \amp \gt \sum_{ k = 0 }^{ n - 1 }{ \of{ \sup_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } - \frac{ \epsilon }{ 3 \of{ b - a } } } \of{ x_{ k + 1 } - x_{ k } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \sum_{ k = 0 }^{ n - 1 }{ \of{ \sup_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } \of{ x_{ k + 1 } - x_{ k } } - \of{ \frac{ \epsilon }{ 3 \of{ b - a } } } \of{ x_{ k + 1 } - x_{ k } } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \mathcal{ U }_{ f } \of{ P_{ \epsilon } } - \frac{ \epsilon }{ 3 }
+          </mrow>
+        </md>
+        
+        so that <m> \abs{ \mathcal{ U }_{ f } \of{ P_{ \epsilon } } - \mathcal{ R }_{ f } \of{ P_{ \epsilon } , u } } \lt \frac{ \epsilon }{ 3 } </m>. We conclude that
+        
+        <md>
+          <mrow>
+            \abs{ \mathcal{ U }_{ f } \of{ P_{ \epsilon } } - I } \amp \leq \abs{ \mathcal{ U }_{ f } \of{ P_{ \epsilon } } - \mathcal{ R }_{ f } \of{ P_{ \epsilon } , u } } + \abs{ \mathcal{ R }_{ f } \of{ P_{ \epsilon } , u } - \mathcal{ R }_{ f } \of{ Q_{ \epsilon } , t_{ \epsilon } } }
+          </mrow>
+          
+          <mrow>
+            \amp \qquad + \abs{ \mathcal{ R }_{ f } \of{ Q_{ \epsilon } , t_{ \epsilon } } - I }
+          </mrow>
+          
+          <mrow>
+            \amp \lt \frac{ \epsilon }{ 3 } + \frac{ \epsilon }{ 3 } + \frac{ \epsilon }{ 3 } = \epsilon
+          </mrow>
+        </md>.
+        
+        In particular,
+        
+        <md>
+          U = \inf_{ P }{ \mathcal{ U }_{ f } \of{ P } } \leq \mathcal{ U }_{ f } \of{ \mathcal{ P }_{ \epsilon } } \lt I + \epsilon
+        </md>;
+        
+        since <m> \epsilon </m> was an arbitrary positive real number, <m> U \leq I </m>.
+      </p>
+      
+      <p>
+        Finally, now suppose that the nets <m> \mathcal{ U }_{ f } = \of{ \mathcal{ U }_{ f } \of{ P } }_{ P } </m> and <m> \mathcal{ L }_{ f } = \of{ \mathcal{ L }_{ f } \of{ P } }_{ P } </m> converge upwards to <m> I </m>, and let <m> \epsilon \gt 0 </m> be a positive real number. Then there is a partition <m> P_{ \epsilon } = \of{ y_{ k } }_{ k = 0 }^{ n } </m> of <m> \clint{ a }{ b } </m> so that
+        
+        <md>
+          \max \of{ \set{ \abs{ \mathcal{ U }_{ f } \of{ P } - I } , \abs{ \mathcal{ L }_{ f } \of{ P } - I } } } \lt \frac{ \epsilon }{ 2 }
+        </md>
+        
+        for all refinements <m> P \succeq P_{ \epsilon } </m>. Without loss of generality, we may assume that <m> n \geq 2 </m>. Let
+        
+        <md>
+          \delta = \min \of{ \set{ y_{ k + 1 } - y_{ k } }_{ k = 0 }^{ n - 1 } \cup \set{ \frac{ \epsilon }{ 4 \of{ n - 1 } B } , 1 } }
+        </md>.
+      </p>
+      
+      <p>
+        Suppose that <m> \of{ P , t } </m> is a tagged partition of <m> \clint{ a }{ b } </m> of mesh <m> \mesh \of{ P } \lt \delta </m>, where <m> P = \of{ x_{ j } }_{ j = 0 }^{ m } </m> and <m> t = \of{ t_{ j } }_{ j = 0 }^{ m - 1 } </m>. For each index <m> 0 \leq j \lt m </m>, the corresponding subinterval <m> \clint{ x_{ j } }{ x_{ j + 1 } } </m> either lies entirely inside a subinterval <m> \clint{ y_{ k } }{ y_{ k + 1 } } </m> determined by <m> P_{ \epsilon } </m> or lies in the union <m> \clint{ y_{ k } }{ y_{ k + 2 } } = \clint{ y_{ k } }{ y_{ k + 1 } } \cup \clint{ y_{ k + 1 } }{ y_{ k + 2 } } </m> of two adjacent such subintervals. In particular,
+        
+        <md>
+          x_{ j + 1 } - x_{ j } \leq \mesh \of{ P } \lt \delta \leq \min \of{ \set{ y_{ k + 1 } - y_{ k } }_{ k = 0 }^{ n - 1 } }
+        </md>,
+        
+        so that <m> \clint{ x_{ j } }{ x_{ j + 1 } } </m> cannot span the union of three or more such intervals. Moreover, it cannot occur more than <m> n - 1 </m> times that a subinterval determined by <m> P </m> spans two adjacent subintervals determined by <m> P_{ \epsilon } </m>. 
+      </p>
+      
+      <p>
+        We observe that if <m> \clint{ x_{ j } }{ x_{ j + 1 } } \subseteq \clint{ y_{ k } }{ y_{ k + 1 } } </m> for some index <m> 0 \leq k \lt n </m>, then
+        
+        <md>
+          \inf_{ y_{ k } \leq x \leq y_{ k + 1 } }{ f \of{ x } } \of{ x_{ j + 1 } - x_{ j } } \leq f \of{ t_{ j } } \of{ x_{ j + 1 } - x_{ j } } \leq \sup_{ y_{ k } \leq x \leq y_{ k + 1 } }{ f \of{ x } } \of{ x_{ j + 1 } - x_{ j } }
+        </md>.
+        
+        On the other hand, if otherwise <m> \clint{ x_{ j } }{ x_{ j + 1 } } \subseteq \clint{ y_{ k } }{ y_{ k + 2 } } </m> for some index <m> 0 \leq k \lt n - 1 </m>, then
+        
+        <md>
+          y_{ k } \lt x_{ j } \lt y_{ k + 1 } \lt x_{ j + 1 } \lt y_{ k + 2 }
+        </md>.
+        
+        In this case, if <m> x_{ j } \leq t_{ j } \leq y_{ k + 1 } </m>, then
+        
+        <md>
+          \inf_{ y_{ k } \leq x \leq y_{ k + 1 } }{ f \of{ x } } \of{ y_{ k + 1 } - x_{ j } } \leq f \of{ t_{ j } } \of{ y_{ k + 1 } - x_{ j } } \leq \sup_{ y_{ k } \leq x \leq y_{ k + 1 } }{ f \of{ x } } \of{ y_{ k + 1 } - x_{ j } }
+        </md>,
+        
+        and
+        
+        <md>
+          <mrow>
+            \abs{ f \of{ t_{ j } } - \sup_{ y_{ k + 1 } \leq x \leq y_{ k + 2 } }{ f \of{ x } } } \of{ x_{ j + 1 } - y_{ k + 1 } } \amp \lt 2 B \delta \leq \frac{ \epsilon }{ 2 \of{ n - 1 } }
+          </mrow>
+          
+          <mrow>
+            \abs{ f \of{ t_{ j } } - \inf_{ y_{ k + 1 } \leq x \leq y_{ k + 2 } }{ f \of{ x } } } \of{ x_{ j + 1 } - y_{ k + 1 } } \amp \lt 2 B \delta \leq \frac{ \epsilon }{ 2 \of{ n - 1 } }
+          </mrow>
+        </md>.
+        
+        Since this can occur a maximum of <m> n - 1 </m> times, we conclude that
+        
+        <md>
+          I - \epsilon \lt \mathcal{ L }_{ f } \of{ P_{ \epsilon } } - \frac{ \epsilon }{ 2 } \lt \mathcal{ R }_{ f } \of{ P , t } \lt \mathcal{ U }_{ f } \of{ P_{ \epsilon } } + \frac{ \epsilon }{ 2 } \lt I + \epsilon
+        </md>,
+        
+        so that <m> \abs{ \mathcal{ R }_{ f } \of{ P , t } - I } \lt \epsilon </m>.
+      </p>
+    </proof>
+  </theorem>
+  
+  <definition xml:id="definition-Riemann-integrability-integral">
+    <title>
+      Riemann integrability/integral
+    </title>
+    
+    <idx>
+      Riemann integrability
+    </idx>
+    
+    <idx>
+      Riemann integral
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the definite (Riemann) integral of <m> f </m> from <m> a </m> to <m> b </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> f \colon \clint{ a }{ b } \to \R </m> be a real-valued function defined on a closed interval <m> \clint{ a }{ b } </m>. <m> f </m> is <term> Riemann integrable </term> if there is a real number <m> I \in \R </m> satisfying any (and therefore all) of the equivalent conditions in <xref ref="theorem-riemann-integrability"/>. In this case, that <m> \R </m> is Hausdorff implies that <m> I </m> is uniquely defined by these properties. We call this number
+        
+        <md>
+          I = \lim_{ \of{ P , t } \uparrow }{ \mathcal{ R }_{ f } \of{ P , t } } = \lim_{ P \uparrow }{ \mathcal{ U }_{ f } \of{ P , t } } = \lim_{ P \uparrow }{ \mathcal{ L }_{ f } \of{ P , t } } = \inf_{ P }{ \mathcal{ U }_{ f } \of{ P } } = \sup_{ P }{ \mathcal{ L }_{ f } \of{ P } }
+        </md>
+        
+        the <term> (definite) Riemann integral </term> of <m> f </m> from <m> a </m> to <m> b </m>, and we denote it by
+        
+        <md>
+          \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } }
+        </md>.
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-riemann-integrability">
+    <title>
+      Riemann integrability
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples and non-examples of Riemann integrable functions and their Riemann integrals:
+        
+        <ul>
+          <li>
+            <p>
+              
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+
+  <proposition xml:id="proposition-continuity-implies-integrability">
+    <title>
+      Continuity implies integrability
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <proposition xml:id="proposition-linearity-of-riemann-integration">
+    <title>
+      Linearity of Riemann integration
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <conclusion>
+    <p>
+      Text after the last subdivision.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->

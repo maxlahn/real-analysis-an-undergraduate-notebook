@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section-riemann-sums-and-integrals" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Riemann Sums and Integrals
+  </title>
+
+  <introduction>
+    <p>
+      In this section, we construct the <term> Riemann integral </term> as a limit of <term> Riemann sums </term>. We prove several equivalent characterizations of integrability and explore some preliminary properties of integration.
+    </p>
+  </introduction>
+
+  <xi:include href="./subsection-finite-integration-methods.ptx"/>
+
+  <xi:include href="./subsection-riemann-integrability.ptx"/>
+
+  <conclusion>
+    <p>
+      In the next section, we will relate the processes of differentiation and integration. Along the way, we will find ways to compute Riemann integrals without computing Riemann sums and discover anti-derivatives of continuous functions.
+    </p>
+  </conclusion>
+
+  <xi:include href="./exercises-riemann-sums-and-integrals.ptx"/>
+
+  <xi:include href="./problems-riemann-sums-and-integrals.ptx"/>
+</section>

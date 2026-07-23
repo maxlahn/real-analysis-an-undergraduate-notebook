@@ -7,13 +7,11 @@
 
   <introduction>
     <p>
-      Text before the first section.
+      In this chapter, we initiate our study of integral calculus by constructing the Riemann integral and examining its properties. Both because the Riemann integral does not allow for the integration of a wide array of functions and because it does not behave well under limits, we will also begin to prosecute a case for a stronger theory of integration which will be explored further in <xref provisional="part-measure-and-integration"/>.
     </p>
   </introduction>
 
-  <xi:include href="./section-riemann-sums/section-riemann-sums.ptx"/>
-
-  <xi:include href="./section-properties-of-the-riemann-integral/section-properties-of-the-riemann-integral.ptx"/>
+  <xi:include href="./section-riemann-sums-and-integrals/section-riemann-sums-and-integrals.ptx"/>
 
   <xi:include href="./section-the-fundamental-theorems-of-calculus/section-the-fundamental-theorems-of-calculus.ptx"/>
 

@@ -395,6 +395,8 @@
       
       \DeclareMathOperator{\Var}{ \mathbb{ V } } <!-- Variance -->
       
+      \DeclareMathOperator{\mesh}{ mesh } <!-- Mesh -->
+      
       \newcommand{\Borel}{ \mathscr{ B } } <!-- Borel σ-algebra -->
       
       \DeclareMathOperator{\Haus}{ \mathscr{ H } } <!-- Hausdorff (outer) measure -->
@@ -407,7 +409,7 @@
       <!-- Differential operators -->
       \DeclareMathOperator{\DL}{ DL } <!-- Differentiability locus -->
       
-      \DeclareMathOperator{\diff}{ d } <!-- Differential/exterior derivative -->
+      \newcommand{\diff}{ \mathrm{ d } } <!-- Borel σ-algebra -->
       
       \DeclareMathOperator{\pdiff}{ \partial } <!-- Partial differential/directional derivative -->
       

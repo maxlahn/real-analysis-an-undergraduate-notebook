@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="section-compactness" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="section-compactness-and-connectedness" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>
-    Compactness
+    Compactness and Connectedness [SKIP]
   </title>
 
   <introduction>
@@ -11,9 +11,11 @@
     </p>
   </introduction>
 
-  <!-- <xi:include href="./subsection-open-covers.ptx"/> -->
+  <xi:include href="./subsection-open-covers.ptx"/>
 
-  <!-- <xi:include href="./subsection-compactness-and-sequential-compactness.ptx"/> -->
+  <xi:include href="./subsection-compactness-and-sequential-compactness.ptx"/>
+
+  <xi:include href="./subsection-connected-and-disconnected-spaces.ptx"/>
 
   <conclusion>
     <p>
@@ -21,7 +23,7 @@
     </p>
   </conclusion>
 
-  <xi:include href="./exercises-compactness.ptx"/>
+  <xi:include href="./exercises-compactness-and-connectedness.ptx"/>
 
-  <xi:include href="./problems-compactness.ptx"/>
+  <xi:include href="./problems-compactness-and-connectedness.ptx"/>
 </section>

@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<exercise xml:id="reading-question-PARTS" xmlns:xi="http://www.w3.org/2001/XInclude">
+<exercisegroup xml:id="exercise-GROUP" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>
-    READING QUESTION TITLE
+    EXERCISE TITLE
   </title>
   
   <introduction>
     <p>
-      Text before the parts.
+      asdf
     </p>
   </introduction>
   
-  <task>
+  <exercise>
     <statement>
       <p>
         asdf
       </p>
     </statement>
     
-    <hint>
+    <answer>
       <p>
         asdf
       </p>
-    </hint>
+    </answer>
     
     <solution>
       <p>
         asdf
       </p>
     </solution>
-  </task>
+  </exercise>
   
   <conclusion>
     <p>
-      Text after the parts.
+      asdf
     </p>
   </conclusion>
-</exercise>
+</exercisegroup>

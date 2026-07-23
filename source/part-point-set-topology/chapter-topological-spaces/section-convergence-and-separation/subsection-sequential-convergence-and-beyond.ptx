@@ -231,7 +231,7 @@
           
           <li>
             <p>
-              Let <m> a , b \in \R </m> be real numbers, and suppose that <m> a \leq b </m>. A <term> finite partition </term> of the closed interval <m> \clint{ a }{ b } </m> is a finite sequence <m> \of{ x_{ j } }_{ j = 0 }^{ m } </m> so that <m> x_{ 0 } = a </m> and <m> x_{ m } = b </m>. Given two such partitions <m> P </m> and <m> Q </m>, we write <m> P \preceq Q </m> if <m> P </m> is a subsequence of <m> Q </m>. Considered with this binary relation, the set of finite partitions of <m> \clint{ a }{ b } </m> is directed both upwards and downwards. This directed set will be an important part of the definition of the Riemann integral in <xref ref="section-riemann-sums"/>.
+              Let <m> a , b \in \R </m> be real numbers, and suppose that <m> a \leq b </m>. A <term> finite partition </term> of the closed interval <m> \clint{ a }{ b } </m> is a finite sequence <m> \of{ x_{ j } }_{ j = 0 }^{ m } </m> so that <m> x_{ 0 } = a </m> and <m> x_{ m } = b </m>. Given two such partitions <m> P </m> and <m> Q </m>, we write <m> P \preceq Q </m> if <m> P </m> is a subsequence of <m> Q </m>. Considered with this binary relation, the set of finite partitions of <m> \clint{ a }{ b } </m> is directed both upwards and downwards. This directed set will be an important part of the definition of the Riemann integral in <xref ref="section-riemann-sums-and-integrals"/>.
             </p>
           </li>
         </ul>

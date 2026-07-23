@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-finite-integration-methods" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Finite Integration Methods
+  </title>
+
+  <introduction>
+    <p>
+      Before we introduce the <term> Riemann integral </term> of a function, we must develop some preliminary results about <term> Riemann sums </term>. These sums are associated to a function and a <term> tagged partition </term> of a closed interval, which both decomposes the interval into a union of closed subintervals and specifies a point in each subinterval.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-partitions">
+    <title>
+      Partitions
+    </title>
+    
+    <idx>
+      partition
+    </idx>
+    
+    <idx>
+      mesh
+    </idx>
+    
+    <idx>
+      tagged partition
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \mesh \of{ P } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the mesh of <m> P </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Fix real numbers <m> a , b \in \R </m> so that <m> a \leq b </m>.
+        
+        <ul>
+          <li>
+            <title>
+              Partition
+            </title>
+            
+            <p>
+              A <term> partition </term> <m> P </m> of the closed interval <m> \clint{ a }{ b } </m> is an increasing finite sequence <m> P = \of{ x_{ k } }_{ k = 0 }^{ n } </m> whose first entry is <m> x_{ 0 } = a </m> and whose last entry is <m> x_{ n } = b </m>; that is,
+              
+              <md>
+                a = x_{ 0 } \lt x_{ 1 } \lt x_{ 2 } \lt \dotsb \lt x_{ n - 1 } \lt x_{ n } = b
+              </md>.
+              
+              The <term> mesh </term> <m> \mesh \of{ P } </m> of such a partition <m> P = \of{ x_{ k } }_{ k = 0 }^{ n } </m> is the maximal distance between any adjacent entries of <m> P </m>; that is,
+              
+              <md>
+                \mesh \of{ P } = \max_{ 0 \leq k \lt n }{ \abs{ x_{ k + 1 } - x_{ k } } } = \max_{ 0 \leq k \lt n }{ \of{ x_{ k + 1 } - x_{ k } } }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Tagged partition
+            </title>
+            
+            <p>
+              A <term> tagged partition </term> of the closed interval <m> \clint{ a }{ b } </m> is an ordered pair <m> \of{ P , t } </m>, where <m> P = \of{ x_{ k } }_{ k = 0 }^{ n } </m> is a partition of <m> \clint{ a }{ b } </m> and <m> t = \of{ t_{ k } }_{ k = 0 }^{ n - 1 } </m> is a finite sequence of points <m> x_{ k } \leq t_{ k } \leq x_{ k + 1 } </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="example-tagged-partitions">
+    <title>
+      Tagged partitions
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of tagged partitions:
+        
+        <ul>
+          <li>
+            <title>
+              Left and right tagged partitions
+            </title>
+            
+            <p>
+              Let <m> P = \of{ x_{ k } }_{ k = 0 }^{ n } </m> be a partition of a closed interval <m> \clint{ a }{ b } </m>. The associated <term> left tagged </term> partition <m> \of{ P , l } </m> is defined by the formula <m> l_{ k } = x_{ k } </m> for all indices <m> 0 \leq k \lt n </m>. Similarly, the associated <term> right tagged </term> partition <m> \of{ P , r } </m> is defined by the formula <m> r_{ k } = x_{ k + 1 } </m> for all indices <m> 0 \leq k \lt n </m>.
+            </p>
+            
+            <p>
+              For example, let <m> n \geq 1 </m> be a positive integer, and consider the partition <m> P = \of{ x_{ k } }_{ k = 0 }^{ n } </m> of the closed interval <m> \clint{ 0 }{ 1 } </m> defined by the formula <m> x_{ k } = \frac{ k }{ n } </m>. The associated left tagged partition is <m> \of{ P , l } </m>, where <m> l = \of{ l_{ k } }_{ k = 0 }^{ n - 1 } </m> is given by the formula
+              
+              <md>
+                l_{ k } = x_{ k } = \frac{ k }{ n }
+              </md>,
+              
+              and the associated right tagged partition is <m> \of{ P , r } </m>, where <m> r = \of{ r_{ k } }_{ k = 0 }^{ n - 1 } </m> is given by the formula
+              
+              <md>
+                r_{ k } = x_{ k + 1 } = \frac{ k + 1 }{ n }
+              </md>.
+              
+              We note that the mesh <m> \mesh \of{ P } </m> does not depend on the tagging, and is <m> \mesh \of{ P } = \frac{ 1 }{ n } </m> in this example.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Centrally tagged partitions
+            </title>
+            
+            <p>
+              Let <m> P = \of{ x_{ k } }_{ k = 0 }^{ n } </m> be a partition of a closed interval <m> \clint{ a }{ b } </m>. The associated <term> centrally tagged </term> partition <m> \of{ P , c } </m> is defined by the formula
+              
+              <md>
+                c_{ k } = \frac{ x_{ k } + x_{ k + 1 } }{ 2 }
+              </md>
+              
+              for all indices <m> 0 \leq k \lt n </m>.
+            </p>
+            
+            <p>
+              For example, let <m> n \geq 1 </m> be a positive integer, and consider the partition <m> P = \of{ x_{ k } }_{ k = 0 }^{ 2^{ n } } </m> of the closed interval <m> \clint{ 0 }{ 1 } </m> defined by the formula <m> x_{ k } = k 2^{ -n } </m>. The associated left tagged partition is <m> \of{ P , c } </m>, where <m> c = \of{ c_{ k } }_{ k = 0 }^{ 2^{ n } - 1 } </m> is given by the formula
+              
+              <md>
+                l_{ k } = \frac{ x_{ k } + x_{ k + 1 } }{ 2 } = \frac{ k 2^{ -n } + \of{ k + 1 } 2^{ -k } }{ 2 }
+              </md>.
+              
+              We note that the mesh <m> \mesh \of{ P } </m> does not depend on the tagging, and is <m> \mesh \of{ P } = 2^{ -n } </m> in this example.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    We remark that it is not required for the subintervals determined by a partition to be of equal length, although on occasion such a requirement makes it easier to compute associated quantities. Moreover, it is not required that the tagging of each subinterval be done in a coherent way.
+  </p>
+  
+  <definition xml:id="definition-comparison-of-partitions">
+    <title>
+      Comparison of partitions
+    </title>
+    
+    <idx>
+      refinement
+    </idx>
+    
+    <idx>
+      coarsening
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> P = \of{ x_{ j } }_{ j = 0 }^{ m } </m> and <m> Q = \of{ y_{ k } }_{ k = 0 }^{ n } </m> be partitions of a closed interval <m> \clint{ a }{ b } </m>. If <m> \set{ x_{ j } }_{ j = 0 }^{ m } \subseteq \set{ y_{ k } }_{ k = 0 }^{ n } </m>, then we write <m> P \preceq Q </m> and say that <m> P </m> is <term> coarser </term> than <m> Q </m>; that <m> Q </m> is <term> finer </term> than <m> P </m>; <m> Q </m> is a <term> refinement </term> of <m> P </m>; and/or that <m> P </m> is a coarsening of <m> Q </m>.
+      </p>
+      
+      <p>
+        Let <m> \of{ P , s } </m> and <m> \of{ Q , t } </m> be tagged partitions of the closed interval <m> \clint{ a }{ b } </m>, where <m> P = \of{ x_{ j } }_{ j = 0 }^{ m } </m>, <m> Q = \of{ y_{ k } }_{ k = 0 }^{ n } </m>, <m> s = \of{ s_{ j } }_{ j = 0 }^{ m - 1 } </m>, and <m> t = \of{ t_{ k } }_{ k = 0 }^{ n - 1 } </m>. If both <m> \set{ x_{ j } }_{ j = 0 }^{ m } \subseteq \set{ y_{ k } }_{ k = 0 }^{ n } </m> and <m> \set{ s_{ j } }_{ j = 0 }^{ m - 1 } \subseteq \set{ t_{ k } }_{ k = 0 }^{ n - 1 } </m>, then we write <m> \of{ P , s } \preceq \of{ Q , t } </m> and say that <m> \of{ P , s } </m> is <term> coarser </term> than <m> \of{ Q , t } </m>; that <m> \of{ Q , t } </m> is <term> finer </term> than <m> \of{ P , s } </m>; <m> \of{ Q , t } </m> is a <term> refinement </term> of <m> \of{ P , s } </m>; and/or that <m> \of{ P , s } </m> is a coarsening of <m> \of{ Q , t } </m>.
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    Both partitions and tagged partitions are partially ordered by containment. In fact, the sets of partitions and tagged partitions of a closed interval form an upwards directed set, in that any pair of such (tagged) partitions has a common refinement.
+  </p>
+  
+  <lemma xml:id="lemma-partitions-are-directed">
+    <title>
+      Partitions are directed
+    </title>
+    
+    <statement>
+      <p>
+        The sets of partitions and tagged partitions of a closed interval are directed upwards by the partial order <m> \preceq </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> P = \of{ x_{ j } }_{ j = 0 }^{ m } </m> and <m> Q = \of{ y_{ k } }_{ k = 0 }^{ n } </m> be partitions of a closed interval. Let <m> R = \of{ z_{ l } }_{ l = 0 }^{ p } </m> be an increasing sequence which enumerates
+        
+        <md>
+          \set{ z_{ l } }_{ l = 0 }^{ p } = \set{ x_{ j } }_{ j = 0 }^{ m } \cup \set{ y_{ k } }_{ k = 0 }^{ n }
+        </md>.
+        
+        Since
+        
+        <md>
+          <mrow>
+            \min_{ 0 \leq l \leq p }{ z_{ l } } \amp = \min \of{ \set{ \min_{ 0 \leq j \leq m }{ x_{ j } } , \min_{ 0 \leq k \leq n }{ y_{ k } } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \min \of{ \set{ a , a } } = a
+          </mrow>
+        </md>
+        
+        and
+        
+        <md>
+          <mrow>
+            \max_{ 0 \leq l \leq p }{ z_{ l } } \amp = \max \of{ \set{ \max_{ 0 \leq j \leq m }{ x_{ j } } , \max_{ 0 \leq k \leq n }{ y_{ k } } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \max \of{ \set{ b , b } } = b
+          </mrow>
+        </md>,
+        
+        <m> R </m> is a partition of <m> \clint{ a }{ b } </m>. Moreover, <m> R </m> was constructed to be a common refinement of <m> P </m> and <m> Q </m>.
+      </p>
+      
+      <p>
+        If <m> P </m> and <m> Q </m> were tagged, then we note that each subinterval determined by <m> R </m> is contained in a subinterval determined by <m> P </m> and a subinterval determined by <m> Q </m>. If each such subinterval contains at most one tag from either <m> P </m> or <m> Q </m>, we may choose arbitrary tags in other subintervals. Otherwise, we may subdivide further so that this process produces a tagging of <m> R </m> which is a refinement of those on <m> P </m> and <m> Q </m>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <p>
+    Associated to each real-valued function and tagged partition is a <term> Riemann sum </term>. This sum is meant to approximate the signed area enclosed by the graph of said function, and does so with varying success depending on the integrability of the function and the <term> mesh </term> of the partition.
+  </p>
+  
+  <definition xml:id="definition-Riemann-sum">
+    <title>
+      Riemann sum
+    </title>
+    
+    <idx>
+      Riemann sum
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \mathcal{ R }_{ f } \of{ P , t } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the Riemann sum of <m> f </m> associated to <m> \of{ P , t } </m>.
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> f \colon \clint{ a }{ b } \to \R </m> be a real-valued function defined on a closed interval <m> \clint{ a }{ b } </m>. The <term> Riemann sum </term> <m> \mathcal{ R }_{ f } \of{ P , t } </m> of <m> f </m> associated to a tagged partition <m> \of{ P , t } </m> of <m> \clint{ a }{ b } </m> is the real number
+        
+        <md>
+          \mathcal{ R }_{ f } \of{ P , t } = \sum_{ k = 0 }^{ n - 1 }{ f \of{ t_{ k } } \of{ x_{ k + 1 } - x_{ k } } }
+        </md>,
+        
+        where <m> P = \of{ x_{ k } }_{ k = 0 }^{ n } </m> and <m> t = \of{ t_{ k } }_{ k = 0 }^{ n - 1 } </m>.
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-riemann-sums">
+    <title>
+      Riemann sums
+    </title>
+    
+    <idx>
+      left Riemann sum
+    </idx>
+    
+    <idx>
+      right Riemann sum
+    </idx>
+    
+    <idx>
+      central Riemann sum
+    </idx>
+    
+    <statement>
+      <p>
+        The following are examples of Riemann sums:
+        
+        <ul>
+          <li>
+            <title>
+              Left and right Riemann sums
+            </title>
+            
+            <p>
+              The <term> left Riemann sum </term> of a function <m> f </m> associated to a partition <m> P </m> of a closed interval <m> \clint{ a }{ b } </m> is the Riemann sum <m> \mathcal{ R }_{ f } \of{ P , l } </m> of <m> f </m> associated to the associated left tagged partition <m> \of{ P , l } </m> of <m> \clint{ a }{ b } </m>. Similarly, the <term> right Riemann sum </term> of <m> f </m> associated <m> P </m> is the Riemann sum <m> \mathcal{ R }_{ f } \of{ P , r } </m> of <m> f </m> associated to the associated right tagged partition <m> \of{ P , r } </m> of <m> \clint{ a }{ b } </m>.
+            </p>
+            
+            <p>
+              For example, consider the function <m> f \colon \clint{ 0 }{ 16 } \to \R </m> defined by the formula <m> f \of{ x } = \sqrt{ x } </m> and the partition <m> P = \of{ 0 , 1 , 4 , 9 , 16 } </m> of the closed interval <m> \clint{ 0 }{ 16 } </m>. The left Riemann sum of <m> f </m> associated to <m> P </m> is
+              
+              <md>
+                <mrow>
+                  \mathcal{ R }_{ f } \of{ P , l } \amp = f \of{ 0 } \of{ 1 - 0 } + f \of{ 1 } \of{ 4 - 1 } + f \of{ 4 } \of{ 9 - 4 } + f \of{ 9 } \of{ 16 - 9 }
+                </mrow>
+                
+                <mrow>
+                  \amp = 0 \cdot 1 + 1 \cdot 3 + 2 \cdot 5 + 3 \cdot 7 = 0 + 3 + 10 + 21 = 34
+                </mrow>
+              </md>,
+              
+              while the right Riemann sum of <m> f </m> associated to <m> P </m> is
+              
+              <md>
+                <mrow>
+                  \mathcal{ R }_{ f } \of{ P , r } \amp = f \of{ 1 } \of{ 1 - 0 } + f \of{ 4 } \of{ 4 - 1 } + f \of{ 9 } \of{ 9 - 4 } + f \of{ 16 } \of{ 16 - 9 }
+                </mrow>
+                
+                <mrow>
+                  \amp = 1 \cdot 1 + 2 \cdot 3 + 3 \cdot 5 + 4 \cdot 7 = 1 + 6 + 15 + 28 = 50
+                </mrow>
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Central Riemann sums
+            </title>
+            
+            <p>
+              The <term> central Riemann sum </term> of a function <m> f </m> associated to a partition <m> P </m> of a closed interval <m> \clint{ a }{ b } </m> is the Riemann sum <m> \mathcal{ R }_{ f } \of{ P , c } </m> of <m> f </m> associated to the associated central tagged partition <m> \of{ P , c } </m> of <m> \clint{ a }{ b } </m>.
+            </p>
+            
+            <p>
+              For example, consider the function <m> g \colon \clint{ 0 }{ 100 } \to \R </m> defined by the formula <m> g \of{ x } = 3 x - 25 </m> and the partition <m> P = \of{ 0 , 10 , 50 , 70 , 100 } </m> of the closed interval <m> \clint{ 0 }{ 16 } </m>. The central Riemann sum of <m> g </m> associated to <m> P </m> is
+              
+              <md>
+                <mrow>
+                  \mathcal{ R }_{ g } \of{ P , c } \amp = g \of{ 5 } \of{ 10 - 0 } + g \of{ 30 } \of{ 50 - 10 } + g \of{ 60 } \of{ 70 - 50 } + g \of{ 85 } \of{ 100 - 70 }
+                </mrow>
+                
+                <mrow>
+                  \amp = \of{ -10 } \cdot 10 + 65 \cdot 40 + 155 \cdot 20 + 230 \cdot 30 = 12{,}500
+                </mrow>
+              </md>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    Related to the notion of Riemann sums are the <term> Darboux sums </term>. These sums are associated to an untagged partition. Rather than using the value of the function at a chosen point, the height of each term of a Darboux sum is determined by the supremum or infimum of the function over the given subinterval.
+  </p>
+  
+  <definition xml:id="definition-darboux-sum">
+    <title>
+      Darboux sum
+    </title>
+    
+    <idx>
+      upper Darboux sum
+    </idx>
+    
+    <idx>
+      lower Darboux sum
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \mathcal{ U }_{ f } \of{ P } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the upper Darboux sum of <m> f </m> associated to <m> P </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> \mathcal{ L }_{ f } \of{ P } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the lower Darboux sum of <m> f </m> associated to <m> P </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        Let <m> f \colon \clint{ a }{ b } \to \R </m> be a real-valued function defined on a closed interval <m> \clint{ a }{ b } </m>.
+        
+        <ul>
+          <li>
+            <title>
+              Upper Darboux sum
+            </title>
+            
+            <p>
+              The <term> upper Darboux sum </term> <m> \mathcal{ U }_{ f } \of{ P } </m> of <m> f </m> associated to a partition <m> P = \of{ x_{ k } }_{ k = 0 }^{ n } </m> of <m> \clint{ a }{ b } </m> is the extended real number
+              
+              <md>
+                \mathcal{ U }_{ f } \of{ P } = \sum_{ k = 0 }^{ n - 1 }{ \sup_{ x_{ k } \leq t \leq x_{ k + 1 } }{ f \of{ t } } \of{ x_{ k + 1 } - x_{ k } } }
+              </md>
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Lower Darboux sum
+            </title>
+            
+            <p>
+              The <term> upper Darboux sum </term> <m> \mathcal{ L }_{ f } \of{ P } </m> of <m> f </m> associated to a partition <m> P = \of{ x_{ k } }_{ k = 0 }^{ n } </m> of <m> \clint{ a }{ b } </m> is the extended real number
+              
+              <md>
+                \mathcal{ L }_{ f } \of{ P } = \sum_{ k = 0 }^{ n - 1 }{ \inf_{ x_{ k } \leq t \leq x_{ k + 1 } }{ f \of{ t } } \of{ x_{ k + 1 } - x_{ k } } }
+              </md>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+  
+  <p>
+    We note that if the integrand is continuous, then Darboux sums are Riemann sums. However, Darboux sums need not be Riemann sums in general. We will show that the Riemann integral is also a limit of Darboux sums. In order to prove such a result, we will require the following properties:
+  </p>
+  
+  <proposition xml:id="proposition-properties-of-darboux-sums">
+    <title>
+      Properties of Darboux sums
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon \clint{ a }{ b } \to \R </m> be a real-valued function defined on a closed interval <m> \clint{ a }{ b } </m>.
+        
+        <ol>
+          <li>
+            <title>
+              Monotonicity
+            </title>
+            
+            <p>
+              For any partitions <m> P </m> and <m> Q </m> of <m> \clint{ a }{ b } </m>, if <m> P \preceq Q </m>, then <m> \mathcal{ U }_{ f } \of{ P } \geq \mathcal{ U }_{ f } \of{ Q } </m> and <m> \mathcal{ L }_{ f } \of{ P } \leq \mathcal{ L }_{ f } \of{ Q } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Bounds on Riemann sums
+            </title>
+            
+            <p>
+              For any tagged partition <m> \of{ P , t } </m> of <m> \clint{ a }{ b } </m>,
+              
+              <md>
+                \mathcal{ L }_{ f } \of{ P } \leq \mathcal{ R }_{ f } \of{ P , t } \leq \mathcal{ U }_{ f } \of{ P }
+              </md>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            You will have an opportunity to prove this in the problems for this section.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Let <m> P = \of{ x_{ k } }_{ k = 0 }^{ n } </m> and <m> t = \of{ t_{ k } }_{ k = 0 }^{ n - 1 } </m>. We observe that
+            
+            <md>
+              <mrow>
+                \inf_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } \of{ x_{ k + 1 } - x_{ k } } \amp \leq f \of{ t_{ k } } \of{ x_{ k + 1 } - x_{ k } }
+              </mrow>
+              
+              <mrow>
+                \amp \leq \sup_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } \of{ x_{ k + 1 } - x_{ k } }
+              </mrow>
+            </md>
+            
+            for all indices <m> 0 \leq k \lt n </m>, and so
+            
+            <md>
+              <mrow>
+                \sum_{ k = 0 }^{ n - 1 }{ \inf_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } \of{ x_{ k + 1 } - x_{ k } } } \amp \leq \sum_{ k = 0 }^{ n - 1 }{ f \of{ t_{ k } } \of{ x_{ k + 1 } - x_{ k } } }
+              </mrow>
+              
+              <mrow>
+                \amp \leq \leq \sum_{ k = 0 }^{ n - 1 }{ \sup_{ x_{ k } x \leq x_{ k + 1 } }{ f \of{ x } } \of{ x_{ k + 1 } - x_{ k } } }
+              </mrow>
+            </md>;
+            
+            that is, <m> \mathcal{ L }_{ f } \of{ P } \leq \mathcal{ R }_{ f } \of{ P , t } \leq \mathcal{ U }_{ f } \of{ P } </m>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </proposition>
+
+  <conclusion>
+    <p>
+      While Riemann sums and Darboux sums may give decent approximations of area computations, we will need to involve limits in order to perform precise computations.
+    </p>
+  </conclusion>
+</subsection>

@@ -5797,13 +5797,13 @@ var ptx_lunr_docs = [
   "body": " Continuous maps to initial spaces   Let be the initial topology on a set induced by an indexed family of maps from to topological spaces . Then a map from a topological space to is continuous if and only if the composition is continuous for all indices .    If is continuous, then is continuous for each index by . Thus it suffices to prove the converse implication. To that end, suppose that is continuous for each index , and let be an open set in . Then implies that for some indices and open sets . Since topologies are stable under finite intersections and arbitrary unions, is open in , and so is continuous.   "
 },
 {
-  "id": "section-compactness",
+  "id": "section-compactness-and-connectedness",
   "level": "1",
-  "url": "section-compactness.html",
+  "url": "section-compactness-and-connectedness.html",
   "type": "Section",
   "number": "4.5",
-  "title": "Compactness",
-  "body": " Compactness   Recall that a subset of a metric space is (sequentially) compact if every sequence of points in has a subsequence which converges to a limit in . In this section, we investigate two analogues of this property for general topological spaces.      Text after the last subsection.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available in . However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Problems   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these problems are available in . However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and\/or instructor rather than spoiling the answers.    "
+  "title": "Compactness and Connectedness [SKIP]",
+  "body": " Compactness and Connectedness [SKIP]   Recall that a subset of a metric space is (sequentially) compact if every sequence of points in has a subsequence which converges to a limit in . In this section, we investigate two analogues of this property for general topological spaces.    Open Covers   Text before the first subdivision.    Text after the last subdivision.     Compactness and Sequential Compactness   Text before the first subdivision.    Text after the last subdivision.     Connected and Disconnected Spaces   Text before the first subdivision.    Text after the last subdivision.     Text after the last subsection.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available in . However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Problems   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these problems are available in . However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and\/or instructor rather than spoiling the answers.    "
 },
 {
   "id": "section-differentiability",
@@ -6382,29 +6382,173 @@ var ptx_lunr_docs = [
   "body": "Taylor series "
 },
 {
-  "id": "section-riemann-sums",
+  "id": "section-riemann-sums-and-integrals",
   "level": "1",
-  "url": "section-riemann-sums.html",
+  "url": "section-riemann-sums-and-integrals.html",
   "type": "Section",
   "number": "6.1",
-  "title": "Riemann Sums",
-  "body": " Riemann Sums   Text before the first subsection.     Text after the last subsection.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Reading Question   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and\/or instructor rather than spoiling the answers.    "
+  "title": "Riemann Sums and Integrals",
+  "body": " Riemann Sums and Integrals   In this section, we construct the Riemann integral as a limit of Riemann sums . We prove several equivalent characterizations of integrability and explore some preliminary properties of integration.    Finite Integration Methods   Before we introduce the Riemann integral of a function, we must develop some preliminary results about Riemann sums . These sums are associated to a function and a tagged partition of a closed interval, which both decomposes the interval into a union of closed subintervals and specifies a point in each subinterval.    Partitions  partition  mesh  tagged partition       the mesh of      Fix real numbers so that .   Partition  A partition  of the closed interval is an increasing finite sequence whose first entry is and whose last entry is ; that is, . The mesh  of such a partition is the maximal distance between any adjacent entries of ; that is, .    Tagged partition  A tagged partition of the closed interval is an ordered pair , where is a partition of and is a finite sequence of points .        Tagged partitions   The following are examples of tagged partitions:   Left and right tagged partitions  Let be a partition of a closed interval . The associated left tagged partition is defined by the formula for all indices . Similarly, the associated right tagged partition is defined by the formula for all indices .  For example, let be a positive integer, and consider the partition of the closed interval defined by the formula . The associated left tagged partition is , where is given by the formula , and the associated right tagged partition is , where is given by the formula . We note that the mesh does not depend on the tagging, and is in this example.    Centrally tagged partitions  Let be a partition of a closed interval . The associated centrally tagged partition is defined by the formula for all indices .  For example, let be a positive integer, and consider the partition of the closed interval defined by the formula . The associated left tagged partition is , where is given by the formula . We note that the mesh does not depend on the tagging, and is in this example.       We remark that it is not required for the subintervals determined by a partition to be of equal length, although on occasion such a requirement makes it easier to compute associated quantities. Moreover, it is not required that the tagging of each subinterval be done in a coherent way.   Comparison of partitions  refinement  coarsening   Let and be partitions of a closed interval . If , then we write and say that is coarser than ; that is finer than ; is a refinement of ; and\/or that is a coarsening of .  Let and be tagged partitions of the closed interval , where , , , and . If both and , then we write and say that is coarser than ; that is finer than ; is a refinement of ; and\/or that is a coarsening of .    Both partitions and tagged partitions are partially ordered by containment. In fact, the sets of partitions and tagged partitions of a closed interval form an upwards directed set, in that any pair of such (tagged) partitions has a common refinement.   Partitions are directed   The sets of partitions and tagged partitions of a closed interval are directed upwards by the partial order .    Let and be partitions of a closed interval. Let be an increasing sequence which enumerates . Since and , is a partition of . Moreover, was constructed to be a common refinement of and .  If and were tagged, then we note that each subinterval determined by is contained in a subinterval determined by and a subinterval determined by . If each such subinterval contains at most one tag from either or , we may choose arbitrary tags in other subintervals. Otherwise, we may subdivide further so that this process produces a tagging of which is a refinement of those on and .    Associated to each real-valued function and tagged partition is a Riemann sum . This sum is meant to approximate the signed area enclosed by the graph of said function, and does so with varying success depending on the integrability of the function and the mesh of the partition.   Riemann sum  Riemann sum       the Riemann sum of associated to .     Let be a real-valued function defined on a closed interval . The Riemann sum  of associated to a tagged partition of is the real number , where and .     Riemann sums  left Riemann sum  right Riemann sum  central Riemann sum   The following are examples of Riemann sums:   Left and right Riemann sums  The left Riemann sum of a function associated to a partition of a closed interval is the Riemann sum of associated to the associated left tagged partition of . Similarly, the right Riemann sum of associated is the Riemann sum of associated to the associated right tagged partition of .  For example, consider the function defined by the formula and the partition of the closed interval . The left Riemann sum of associated to is , while the right Riemann sum of associated to is .    Central Riemann sums  The central Riemann sum of a function associated to a partition of a closed interval is the Riemann sum of associated to the associated central tagged partition of .  For example, consider the function defined by the formula and the partition of the closed interval . The central Riemann sum of associated to is .       Related to the notion of Riemann sums are the Darboux sums . These sums are associated to an untagged partition. Rather than using the value of the function at a chosen point, the height of each term of a Darboux sum is determined by the supremum or infimum of the function over the given subinterval.   Darboux sum  upper Darboux sum  lower Darboux sum       the upper Darboux sum of associated to          the lower Darboux sum of associated to      Let be a real-valued function defined on a closed interval .   Upper Darboux sum  The upper Darboux sum  of associated to a partition of is the extended real number     Lower Darboux sum  The upper Darboux sum  of associated to a partition of is the extended real number        We note that if the integrand is continuous, then Darboux sums are Riemann sums. However, Darboux sums need not be Riemann sums in general. We will show that the Riemann integral is also a limit of Darboux sums. In order to prove such a result, we will require the following properties:   Properties of Darboux sums   Let be a real-valued function defined on a closed interval .   Monotonicity  For any partitions and of , if , then and .    Bounds on Riemann sums  For any tagged partition of , .         You will have an opportunity to prove this in the problems for this section.    Let and . We observe that for all indices , and so ; that is, .       While Riemann sums and Darboux sums may give decent approximations of area computations, we will need to involve limits in order to perform precise computations.     Riemann Integrability   We now explore the Riemann integrability of various functions and introduce the Riemann integral. We will see several equivalent characterizations of this property, expressed as conditions on limits of certain nets of Riemann sums and Darboux sums.    Riemann integrability   Let be a bounded real-valued function defined on a closed interval , and let be a real number. The following are equivalent:   For any positive real number , there is a positive real number so that for all tagged partitions of of mesh .    The net of real numbers which associates to each tagged partition of the corresponding Riemann sum of converges upwards to .    The nets and of real numbers which associate to each partition of the corresponding upper and lower Darboux sums of converge upwards to .       Let . If , then for all , and so each of the three above properties holds. Thus we may suppose for the remainder of the proof that . First suppose that for any positive real number , there is a positive real number so that for all tagged partitions of of mesh . Let be a neighborhood of in , and note that for some positive real number . Choose a tagged partition of mesh . Then for all refinements of , , and so . We conclude that the net converges upwards to .  Now suppose that the net converges upwards to . Since the nets and are monotone and bounded by , they converge to real numbers by a net analogue of the . So it suffices to show . We first observe that for any partition of and positive real number , there is some tagged partition so that and . In particular, , and . Since this holds for all partitions and all positive real numbers , . It remains to show that . We will show that ; the proof that is similar.  To that end, let be a positive real number. Then there is some tagged partition of so that for all refinements . In particular, by further refining we may assume without loss of generality that it is left tagged. Let . We aim to define a further refinement of .  For each index , there is some point so that . If we may choose , do so. Otherwise, we subdivide into the union of two closed intervals, one of length containing and the other of length containing . Tagging these intervals with and , respectively, we obtain a further refinement . Moreover, we may replace the tagging with to obtain a tagged partition . We observe that . In particular, . Similarly, so that . We conclude that . In particular, ; since was an arbitrary positive real number, .  Finally, now suppose that the nets and converge upwards to , and let be a positive real number. Then there is a partition of so that for all refinements . Without loss of generality, we may assume that . Let .  Suppose that is a tagged partition of of mesh , where and . For each index , the corresponding subinterval either lies entirely inside a subinterval determined by or lies in the union of two adjacent such subintervals. In particular, , so that cannot span the union of three or more such intervals. Moreover, it cannot occur more than times that a subinterval determined by spans two adjacent subintervals determined by .  We observe that if for some index , then . On the other hand, if otherwise for some index , then . In this case, if , then , and . Since this can occur a maximum of times, we conclude that , so that .     Riemann integrability\/integral  Riemann integrability  Riemann integral       the definite (Riemann) integral of from to      Let be a real-valued function defined on a closed interval . is Riemann integrable if there is a real number satisfying any (and therefore all) of the equivalent conditions in . In this case, that is Hausdorff implies that is uniquely defined by these properties. We call this number the (definite) Riemann integral of from to , and we denote it by .     Riemann integrability   The following are examples and non-examples of Riemann integrable functions and their Riemann integrals:                   Continuity implies integrability            Linearity of Riemann integration            Text after the last subdivision.     In the next section, we will relate the processes of differentiation and integration. Along the way, we will find ways to compute Riemann integrals without computing Riemann sums and discover anti-derivatives of continuous functions.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available in . However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Problems   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these problems are available in . However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and\/or instructor rather than spoiling the answers.    "
 },
 {
-  "id": "section-properties-of-the-riemann-integral",
-  "level": "1",
-  "url": "section-properties-of-the-riemann-integral.html",
-  "type": "Section",
-  "number": "6.2",
-  "title": "Properties of the Riemann Integral",
-  "body": " Properties of the Riemann Integral   Text before the first subsection.     Text after the last subsection.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Reading Questions   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and\/or instructor rather than spoiling the answers.    "
+  "id": "section-riemann-sums-and-integrals-2-1",
+  "level": "2",
+  "url": "section-riemann-sums-and-integrals.html#section-riemann-sums-and-integrals-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Riemann integral Riemann sums "
+},
+{
+  "id": "subsection-finite-integration-methods-2-1",
+  "level": "2",
+  "url": "section-riemann-sums-and-integrals.html#subsection-finite-integration-methods-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Riemann integral Riemann sums tagged partition "
+},
+{
+  "id": "definition-partitions",
+  "level": "2",
+  "url": "section-riemann-sums-and-integrals.html#definition-partitions",
+  "type": "Definition",
+  "number": "6.1.1",
+  "title": "Partitions.",
+  "body": " Partitions  partition  mesh  tagged partition       the mesh of      Fix real numbers so that .   Partition  A partition  of the closed interval is an increasing finite sequence whose first entry is and whose last entry is ; that is, . The mesh  of such a partition is the maximal distance between any adjacent entries of ; that is, .    Tagged partition  A tagged partition of the closed interval is an ordered pair , where is a partition of and is a finite sequence of points .      "
+},
+{
+  "id": "example-tagged-partitions",
+  "level": "2",
+  "url": "section-riemann-sums-and-integrals.html#example-tagged-partitions",
+  "type": "Example",
+  "number": "6.1.2",
+  "title": "Tagged partitions.",
+  "body": " Tagged partitions   The following are examples of tagged partitions:   Left and right tagged partitions  Let be a partition of a closed interval . The associated left tagged partition is defined by the formula for all indices . Similarly, the associated right tagged partition is defined by the formula for all indices .  For example, let be a positive integer, and consider the partition of the closed interval defined by the formula . The associated left tagged partition is , where is given by the formula , and the associated right tagged partition is , where is given by the formula . We note that the mesh does not depend on the tagging, and is in this example.    Centrally tagged partitions  Let be a partition of a closed interval . The associated centrally tagged partition is defined by the formula for all indices .  For example, let be a positive integer, and consider the partition of the closed interval defined by the formula . The associated left tagged partition is , where is given by the formula . We note that the mesh does not depend on the tagging, and is in this example.      "
+},
+{
+  "id": "definition-comparison-of-partitions",
+  "level": "2",
+  "url": "section-riemann-sums-and-integrals.html#definition-comparison-of-partitions",
+  "type": "Definition",
+  "number": "6.1.3",
+  "title": "Comparison of partitions.",
+  "body": " Comparison of partitions  refinement  coarsening   Let and be partitions of a closed interval . If , then we write and say that is coarser than ; that is finer than ; is a refinement of ; and\/or that is a coarsening of .  Let and be tagged partitions of the closed interval , where , , , and . If both and , then we write and say that is coarser than ; that is finer than ; is a refinement of ; and\/or that is a coarsening of .   "
+},
+{
+  "id": "lemma-partitions-are-directed",
+  "level": "2",
+  "url": "section-riemann-sums-and-integrals.html#lemma-partitions-are-directed",
+  "type": "Lemma",
+  "number": "6.1.4",
+  "title": "Partitions are directed.",
+  "body": " Partitions are directed   The sets of partitions and tagged partitions of a closed interval are directed upwards by the partial order .    Let and be partitions of a closed interval. Let be an increasing sequence which enumerates . Since and , is a partition of . Moreover, was constructed to be a common refinement of and .  If and were tagged, then we note that each subinterval determined by is contained in a subinterval determined by and a subinterval determined by . If each such subinterval contains at most one tag from either or , we may choose arbitrary tags in other subintervals. Otherwise, we may subdivide further so that this process produces a tagging of which is a refinement of those on and .   "
+},
+{
+  "id": "subsection-finite-integration-methods-9",
+  "level": "2",
+  "url": "section-riemann-sums-and-integrals.html#subsection-finite-integration-methods-9",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Riemann sum mesh "
+},
+{
+  "id": "definition-Riemann-sum",
+  "level": "2",
+  "url": "section-riemann-sums-and-integrals.html#definition-Riemann-sum",
+  "type": "Definition",
+  "number": "6.1.5",
+  "title": "Riemann sum.",
+  "body": " Riemann sum  Riemann sum       the Riemann sum of associated to .     Let be a real-valued function defined on a closed interval . The Riemann sum  of associated to a tagged partition of is the real number , where and .   "
+},
+{
+  "id": "example-riemann-sums",
+  "level": "2",
+  "url": "section-riemann-sums-and-integrals.html#example-riemann-sums",
+  "type": "Example",
+  "number": "6.1.6",
+  "title": "Riemann sums.",
+  "body": " Riemann sums  left Riemann sum  right Riemann sum  central Riemann sum   The following are examples of Riemann sums:   Left and right Riemann sums  The left Riemann sum of a function associated to a partition of a closed interval is the Riemann sum of associated to the associated left tagged partition of . Similarly, the right Riemann sum of associated is the Riemann sum of associated to the associated right tagged partition of .  For example, consider the function defined by the formula and the partition of the closed interval . The left Riemann sum of associated to is , while the right Riemann sum of associated to is .    Central Riemann sums  The central Riemann sum of a function associated to a partition of a closed interval is the Riemann sum of associated to the associated central tagged partition of .  For example, consider the function defined by the formula and the partition of the closed interval . The central Riemann sum of associated to is .      "
+},
+{
+  "id": "subsection-finite-integration-methods-12",
+  "level": "2",
+  "url": "section-riemann-sums-and-integrals.html#subsection-finite-integration-methods-12",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Darboux sums "
+},
+{
+  "id": "definition-darboux-sum",
+  "level": "2",
+  "url": "section-riemann-sums-and-integrals.html#definition-darboux-sum",
+  "type": "Definition",
+  "number": "6.1.7",
+  "title": "Darboux sum.",
+  "body": " Darboux sum  upper Darboux sum  lower Darboux sum       the upper Darboux sum of associated to          the lower Darboux sum of associated to      Let be a real-valued function defined on a closed interval .   Upper Darboux sum  The upper Darboux sum  of associated to a partition of is the extended real number     Lower Darboux sum  The upper Darboux sum  of associated to a partition of is the extended real number       "
+},
+{
+  "id": "proposition-properties-of-darboux-sums",
+  "level": "2",
+  "url": "section-riemann-sums-and-integrals.html#proposition-properties-of-darboux-sums",
+  "type": "Proposition",
+  "number": "6.1.8",
+  "title": "Properties of Darboux sums.",
+  "body": " Properties of Darboux sums   Let be a real-valued function defined on a closed interval .   Monotonicity  For any partitions and of , if , then and .    Bounds on Riemann sums  For any tagged partition of , .         You will have an opportunity to prove this in the problems for this section.    Let and . We observe that for all indices , and so ; that is, .     "
+},
+{
+  "id": "theorem-riemann-integrability",
+  "level": "2",
+  "url": "section-riemann-sums-and-integrals.html#theorem-riemann-integrability",
+  "type": "Theorem",
+  "number": "6.1.9",
+  "title": "Riemann integrability.",
+  "body": " Riemann integrability   Let be a bounded real-valued function defined on a closed interval , and let be a real number. The following are equivalent:   For any positive real number , there is a positive real number so that for all tagged partitions of of mesh .    The net of real numbers which associates to each tagged partition of the corresponding Riemann sum of converges upwards to .    The nets and of real numbers which associate to each partition of the corresponding upper and lower Darboux sums of converge upwards to .       Let . If , then for all , and so each of the three above properties holds. Thus we may suppose for the remainder of the proof that . First suppose that for any positive real number , there is a positive real number so that for all tagged partitions of of mesh . Let be a neighborhood of in , and note that for some positive real number . Choose a tagged partition of mesh . Then for all refinements of , , and so . We conclude that the net converges upwards to .  Now suppose that the net converges upwards to . Since the nets and are monotone and bounded by , they converge to real numbers by a net analogue of the . So it suffices to show . We first observe that for any partition of and positive real number , there is some tagged partition so that and . In particular, , and . Since this holds for all partitions and all positive real numbers , . It remains to show that . We will show that ; the proof that is similar.  To that end, let be a positive real number. Then there is some tagged partition of so that for all refinements . In particular, by further refining we may assume without loss of generality that it is left tagged. Let . We aim to define a further refinement of .  For each index , there is some point so that . If we may choose , do so. Otherwise, we subdivide into the union of two closed intervals, one of length containing and the other of length containing . Tagging these intervals with and , respectively, we obtain a further refinement . Moreover, we may replace the tagging with to obtain a tagged partition . We observe that . In particular, . Similarly, so that . We conclude that . In particular, ; since was an arbitrary positive real number, .  Finally, now suppose that the nets and converge upwards to , and let be a positive real number. Then there is a partition of so that for all refinements . Without loss of generality, we may assume that . Let .  Suppose that is a tagged partition of of mesh , where and . For each index , the corresponding subinterval either lies entirely inside a subinterval determined by or lies in the union of two adjacent such subintervals. In particular, , so that cannot span the union of three or more such intervals. Moreover, it cannot occur more than times that a subinterval determined by spans two adjacent subintervals determined by .  We observe that if for some index , then . On the other hand, if otherwise for some index , then . In this case, if , then , and . Since this can occur a maximum of times, we conclude that , so that .   "
+},
+{
+  "id": "definition-Riemann-integrability-integral",
+  "level": "2",
+  "url": "section-riemann-sums-and-integrals.html#definition-Riemann-integrability-integral",
+  "type": "Definition",
+  "number": "6.1.10",
+  "title": "Riemann integrability\/integral.",
+  "body": " Riemann integrability\/integral  Riemann integrability  Riemann integral       the definite (Riemann) integral of from to      Let be a real-valued function defined on a closed interval . is Riemann integrable if there is a real number satisfying any (and therefore all) of the equivalent conditions in . In this case, that is Hausdorff implies that is uniquely defined by these properties. We call this number the (definite) Riemann integral of from to , and we denote it by .   "
+},
+{
+  "id": "example-riemann-integrability",
+  "level": "2",
+  "url": "section-riemann-sums-and-integrals.html#example-riemann-integrability",
+  "type": "Example",
+  "number": "6.1.11",
+  "title": "Riemann integrability.",
+  "body": " Riemann integrability   The following are examples and non-examples of Riemann integrable functions and their Riemann integrals:                 "
+},
+{
+  "id": "proposition-continuity-implies-integrability",
+  "level": "2",
+  "url": "section-riemann-sums-and-integrals.html#proposition-continuity-implies-integrability",
+  "type": "Proposition",
+  "number": "6.1.12",
+  "title": "Continuity implies integrability.",
+  "body": " Continuity implies integrability          "
+},
+{
+  "id": "proposition-linearity-of-riemann-integration",
+  "level": "2",
+  "url": "section-riemann-sums-and-integrals.html#proposition-linearity-of-riemann-integration",
+  "type": "Proposition",
+  "number": "6.1.13",
+  "title": "Linearity of Riemann integration.",
+  "body": " Linearity of Riemann integration          "
 },
 {
   "id": "section-the-fundamental-theorems-of-calculus",
   "level": "1",
   "url": "section-the-fundamental-theorems-of-calculus.html",
   "type": "Section",
-  "number": "6.3",
+  "number": "6.2",
   "title": "The Fundamental Theorems of Calculus",
   "body": " The Fundamental Theorems of Calculus   Text before the first subsection.     Text after the last subsection.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Reading Questions   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and\/or instructor rather than spoiling the answers.    "
 },
@@ -6413,7 +6557,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "section-improper-integration.html",
   "type": "Section",
-  "number": "6.4",
+  "number": "6.3",
   "title": "Improper Integration",
   "body": " Improper Integration   Text before the first subsection.     Text after the last subsection.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Reading Questions   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and\/or instructor rather than spoiling the answers.    "
 },
