@@ -102,7 +102,7 @@ eBookConfig.enable_chatcodes =  false;
 <legend>Assistive technologies</legend>
 <label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
 </fieldset>
-<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="section-convergence-and-separation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-topological-spaces.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="section-compactness.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="section-convergence-and-separation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-topological-spaces.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="section-compactness-and-connectedness.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(  \newcommand{\of}[1]{ \left ( #1 \right ) } 
   
   \newcommand{\class}[1]{ \left \lbrack { #1 } \right \rbrack } 
@@ -477,6 +477,8 @@ eBookConfig.enable_chatcodes =  false;
   
   \DeclareMathOperator{\Var}{ \mathbb{ V } } 
   
+  \DeclareMathOperator{\mesh}{ mesh } 
+  
   \newcommand{\Borel}{ \mathscr{ B } } 
   
   \DeclareMathOperator{\Haus}{ \mathscr{ H } } 
@@ -489,7 +491,7 @@ eBookConfig.enable_chatcodes =  false;
   
   \DeclareMathOperator{\DL}{ DL } 
   
-  \DeclareMathOperator{\diff}{ d } 
+  \newcommand{\diff}{ \mathrm{ d } } 
   
   \DeclareMathOperator{\pdiff}{ \partial } 
   
@@ -812,10 +814,13 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section-compactness.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Compactness</span></a></div>
-<ul id="ptx-toc-group-section-compactness" class="structural toc-item-list">
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-compactness.html#exercises-compactness" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-compactness.html#problems-compactness" class="internal"><span class="codenumber">4.5</span> <span class="title">Problems</span></a></div></li>
+<div class="toc-title-box"><a href="section-compactness-and-connectedness.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Compactness and Connectedness [SKIP]</span></a></div>
+<ul id="ptx-toc-group-section-compactness-and-connectedness" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-compactness-and-connectedness.html#subsection-open-covers" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Open Covers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-compactness-and-connectedness.html#subsection-compactness-and-sequential-compactness" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Compactness and Sequential Compactness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-compactness-and-connectedness.html#subsection-connected-and-disconnected-spaces" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Connected and Disconnected Spaces</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-compactness-and-connectedness.html#exercises-compactness-and-connectedness" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-compactness-and-connectedness.html#problems-compactness-and-connectedness" class="internal"><span class="codenumber">4.5.5</span> <span class="title">Problems</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -870,31 +875,26 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="chapter-riemann-integration.html" class="internal"><span class="codenumber">6</span> <span class="title">Riemann Integration</span></a></div>
 <ul id="ptx-toc-group-chapter-riemann-integration" class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section-riemann-sums.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Riemann Sums</span></a></div>
-<ul id="ptx-toc-group-section-riemann-sums" class="structural toc-item-list">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-riemann-sums.html#exercises-riemann-sums" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-riemann-sums.html#reading-questions-riemann-sums" class="internal"><span class="codenumber">6.1</span> <span class="title">Reading Question</span></a></div></li>
+<div class="toc-title-box"><a href="section-riemann-sums-and-integrals.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Riemann Sums and Integrals</span></a></div>
+<ul id="ptx-toc-group-section-riemann-sums-and-integrals" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-riemann-sums-and-integrals.html#subsection-finite-integration-methods" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Finite Integration Methods</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-riemann-sums-and-integrals.html#subsection-riemann-integrability" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Riemann Integrability</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-riemann-sums-and-integrals.html#exercises-riemann-sums-and-integrals" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-riemann-sums-and-integrals.html#problems-riemann-sums-and-integrals" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section-properties-of-the-riemann-integral.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Properties of the Riemann Integral</span></a></div>
-<ul id="ptx-toc-group-section-properties-of-the-riemann-integral" class="structural toc-item-list">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-properties-of-the-riemann-integral.html#exercises-properties-of-the-riemann-integral" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-properties-of-the-riemann-integral.html#reading-questions-properties-of-the-riemann-integral" class="internal"><span class="codenumber">6.2</span> <span class="title">Reading Questions</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The Fundamental Theorems of Calculus</span></a></div>
+<div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The Fundamental Theorems of Calculus</span></a></div>
 <ul id="ptx-toc-group-section-the-fundamental-theorems-of-calculus" class="structural toc-item-list">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#exercises-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#reading-questions-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#exercises-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#reading-questions-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.2</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section-improper-integration.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Improper Integration</span></a></div>
+<div class="toc-title-box"><a href="section-improper-integration.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Improper Integration</span></a></div>
 <ul id="ptx-toc-group-section-improper-integration" class="structural toc-item-list">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-improper-integration.html#exercises-improper-integration" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-improper-integration.html#reading-questions-improper-integration" class="internal"><span class="codenumber">6.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-improper-integration.html#exercises-improper-integration" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-improper-integration.html#reading-questions-improper-integration" class="internal"><span class="codenumber">6.3</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -1494,7 +1494,7 @@ f^{ -1 } \of{ V } \amp = f^{ -1 } \of{ \bigcup_{ k \in \mathcal{ K } }{ \bigcap_
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="section-convergence-and-separation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section-compactness.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="section-convergence-and-separation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section-compactness-and-connectedness.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

@@ -477,6 +477,8 @@ eBookConfig.enable_chatcodes =  false;
   
   \DeclareMathOperator{\Var}{ \mathbb{ V } } 
   
+  \DeclareMathOperator{\mesh}{ mesh } 
+  
   \newcommand{\Borel}{ \mathscr{ B } } 
   
   \DeclareMathOperator{\Haus}{ \mathscr{ H } } 
@@ -489,7 +491,7 @@ eBookConfig.enable_chatcodes =  false;
   
   \DeclareMathOperator{\DL}{ DL } 
   
-  \DeclareMathOperator{\diff}{ d } 
+  \newcommand{\diff}{ \mathrm{ d } } 
   
   \DeclareMathOperator{\pdiff}{ \partial } 
   
@@ -812,10 +814,13 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section-compactness.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Compactness</span></a></div>
-<ul id="ptx-toc-group-section-compactness" class="structural toc-item-list">
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-compactness.html#exercises-compactness" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-compactness.html#problems-compactness" class="internal"><span class="codenumber">4.5</span> <span class="title">Problems</span></a></div></li>
+<div class="toc-title-box"><a href="section-compactness-and-connectedness.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Compactness and Connectedness [SKIP]</span></a></div>
+<ul id="ptx-toc-group-section-compactness-and-connectedness" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-compactness-and-connectedness.html#subsection-open-covers" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Open Covers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-compactness-and-connectedness.html#subsection-compactness-and-sequential-compactness" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Compactness and Sequential Compactness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-compactness-and-connectedness.html#subsection-connected-and-disconnected-spaces" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Connected and Disconnected Spaces</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-compactness-and-connectedness.html#exercises-compactness-and-connectedness" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-compactness-and-connectedness.html#problems-compactness-and-connectedness" class="internal"><span class="codenumber">4.5.5</span> <span class="title">Problems</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -870,31 +875,26 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="chapter-riemann-integration.html" class="internal"><span class="codenumber">6</span> <span class="title">Riemann Integration</span></a></div>
 <ul id="ptx-toc-group-chapter-riemann-integration" class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section-riemann-sums.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Riemann Sums</span></a></div>
-<ul id="ptx-toc-group-section-riemann-sums" class="structural toc-item-list">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-riemann-sums.html#exercises-riemann-sums" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-riemann-sums.html#reading-questions-riemann-sums" class="internal"><span class="codenumber">6.1</span> <span class="title">Reading Question</span></a></div></li>
+<div class="toc-title-box"><a href="section-riemann-sums-and-integrals.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Riemann Sums and Integrals</span></a></div>
+<ul id="ptx-toc-group-section-riemann-sums-and-integrals" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-riemann-sums-and-integrals.html#subsection-finite-integration-methods" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Finite Integration Methods</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-riemann-sums-and-integrals.html#subsection-riemann-integrability" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Riemann Integrability</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-riemann-sums-and-integrals.html#exercises-riemann-sums-and-integrals" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-riemann-sums-and-integrals.html#problems-riemann-sums-and-integrals" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section-properties-of-the-riemann-integral.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Properties of the Riemann Integral</span></a></div>
-<ul id="ptx-toc-group-section-properties-of-the-riemann-integral" class="structural toc-item-list">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-properties-of-the-riemann-integral.html#exercises-properties-of-the-riemann-integral" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-properties-of-the-riemann-integral.html#reading-questions-properties-of-the-riemann-integral" class="internal"><span class="codenumber">6.2</span> <span class="title">Reading Questions</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The Fundamental Theorems of Calculus</span></a></div>
+<div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The Fundamental Theorems of Calculus</span></a></div>
 <ul id="ptx-toc-group-section-the-fundamental-theorems-of-calculus" class="structural toc-item-list">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#exercises-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#reading-questions-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#exercises-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#reading-questions-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.2</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section-improper-integration.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Improper Integration</span></a></div>
+<div class="toc-title-box"><a href="section-improper-integration.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Improper Integration</span></a></div>
 <ul id="ptx-toc-group-section-improper-integration" class="structural toc-item-list">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-improper-integration.html#exercises-improper-integration" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-improper-integration.html#reading-questions-improper-integration" class="internal"><span class="codenumber">6.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-improper-integration.html#exercises-improper-integration" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-improper-integration.html#reading-questions-improper-integration" class="internal"><span class="codenumber">6.3</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -1847,6 +1847,46 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </td>
 <td><a href="section-higher-order-approximations.html#definition-taylor-approximation-remainder" class="xref" data-knowl="./knowl/notation/definition-taylor-approximation-remainder.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.4.7: Taylor approximation/remainder">Definition 5.4.7</a></td>
+</tr>
+<tr>
+<td><span class="process-math">\(\mesh \of{ P } \)</span></td>
+<td>
+<div class="para" id="definition-partitions-5-2-1">the mesh of <span class="process-math">\(P \)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-partitions-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td><a href="section-riemann-sums-and-integrals.html#definition-partitions" class="xref" data-knowl="./knowl/notation/definition-partitions.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.1: Partitions">Definition 6.1.1</a></td>
+</tr>
+<tr>
+<td><span class="process-math">\(\mathcal{ R }_{ f } \of{ P , t } \)</span></td>
+<td>
+<div class="para" id="definition-Riemann-sum-3-2-1">the Riemann sum of <span class="process-math">\(f \)</span> associated to <span class="process-math">\(\of{ P , t } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-Riemann-sum-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td><a href="section-riemann-sums-and-integrals.html#definition-Riemann-sum" class="xref" data-knowl="./knowl/notation/definition-Riemann-sum.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.5: Riemann sum">Definition 6.1.5</a></td>
+</tr>
+<tr>
+<td><span class="process-math">\(\mathcal{ U }_{ f } \of{ P } \)</span></td>
+<td>
+<div class="para" id="definition-darboux-sum-4-2-1">the upper Darboux sum of <span class="process-math">\(f \)</span> associated to <span class="process-math">\(P \)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-darboux-sum-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td><a href="section-riemann-sums-and-integrals.html#definition-darboux-sum" class="xref" data-knowl="./knowl/notation/definition-darboux-sum.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.7: Darboux sum">Definition 6.1.7</a></td>
+</tr>
+<tr>
+<td><span class="process-math">\(\mathcal{ L }_{ f } \of{ P } \)</span></td>
+<td>
+<div class="para" id="definition-darboux-sum-5-2-1">the lower Darboux sum of <span class="process-math">\(f \)</span> associated to <span class="process-math">\(P \)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-darboux-sum-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td><a href="section-riemann-sums-and-integrals.html#definition-darboux-sum" class="xref" data-knowl="./knowl/notation/definition-darboux-sum.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.7: Darboux sum">Definition 6.1.7</a></td>
+</tr>
+<tr>
+<td><span class="process-math">\(\int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } \)</span></td>
+<td>
+<div class="para" id="definition-Riemann-integrability-integral-4-2-1">the definite (Riemann) integral of <span class="process-math">\(f \)</span> from <span class="process-math">\(a \)</span> to <span class="process-math">\(b \)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-Riemann-integrability-integral-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td><a href="section-riemann-sums-and-integrals.html#definition-Riemann-integrability-integral" class="xref" data-knowl="./knowl/notation/definition-Riemann-integrability-integral.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.10: Riemann integrability/integral">Definition 6.1.10</a></td>
 </tr>
 </table>
 <div class="autopermalink" aria-hidden="true" data-description="Appendix B: List of Symbols"><a tabindex="-1" href="#backmatter-3" title="Copy heading and permalink for Appendix B: List of Symbols" aria-label="Copy heading and permalink for Appendix B: List of Symbols">🔗</a></div>
