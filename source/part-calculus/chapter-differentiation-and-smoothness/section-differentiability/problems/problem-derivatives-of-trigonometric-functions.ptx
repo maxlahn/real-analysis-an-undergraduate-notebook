@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-derivatives-of-trigonometric-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Derivatives of trigonometric functions
+  </title>
+  
+  <introduction>
+    <p>
+      Text before the parts.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Compute the limits
+        
+        <md>
+          \lim_{ \theta \to 0 }{ \frac{ \sin \of{ \theta } }{ \theta } }
+        </md>
+        
+        and
+        
+        <md>
+          \lim_{ \theta \to 0 }{ \frac{ \cos \of{ \theta } - 1 }{ \theta } }
+        </md>.
+      </p>
+    </statement>
+    
+    <hint>
+      <p>
+        You may wish to use the Pythagorean theorem <m> \sin^{ 2 } \of{ \theta } + \cos^{ 2 } \of{ \theta } = 1 </m>, which holds for all <m> \theta \in \R </m>, and/or the bounds
+        
+        <md>
+          \cos \of{ \theta } \leq \frac{ \sin \of{ \theta } }{ \theta } \leq \frac{ 1 }{ \cos \of{ \theta } }
+        </md>,
+        
+        which hold for all <m> \theta \in \R </m> so that <m> 0 \lt \abs{ \theta } \lt \frac{ \pi }{ 2 } </m>.
+      </p>
+    </hint>
+    
+    <!-- <solution>
+      <p>
+        The <xref ref="theorem-squeeze-theorem"/> implies that
+        
+        <md>
+          1 = \lim_{ \theta \to 0 }{ \cos \of{ \theta } } \leq \lim_{ \theta \to 0 }{ \frac{ \sin \of{ \theta } }{ \theta } } \leq \lim_{ \theta \to 0 }{ \frac{ 1 }{ \cos \of{ \theta } } } = 1
+        </md>,
+        
+        so that 
+        
+        <md>
+          \lim_{ \theta \to 0 }{ \frac{ \sin \of{ \theta } }{ \theta } } = 1
+        </md>.
+        
+        We now compute
+        
+        <md>
+          <mrow>
+            \lim_{ \theta \to 0 }{ \frac{ \cos \of{ \theta } - 1 }{ \theta } } \amp = \lim_{ \theta \to 0 }{ \of{ \frac{ \cos \of{ \theta } - 1 }{ \theta } } \of{ \frac{ \cos \of{ \theta } + 1 }{ \cos \of{ \theta } + 1 } } = \lim_{ \theta \to 0 }{ \frac{ \cos^{ 2 } \of{ \theta } - 1 }{ \theta \of{ \cos \of{ \theta } + 1 } } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \lim_{ \theta \to 0 }{ -\frac{ \sin^{ 2 } \of{ \theta } }{ \theta \of{ \cos \of{ \theta } + 1 } } } = \lim_{ \theta \to 0 }{ \of{ \frac{ \sin \of{ \theta } }{ \theta } } \of{ -\frac{ \sin \of{ \theta } }{ \cos \of{ \theta } + 1 } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ \lim_{ \theta \to 0 }{ \frac{ \sin \of{ \theta } }{ \theta } } } \of{ -\lim_{ \theta \to 0 }{ \frac{ \sin \of{ \theta } }{ \cos \of{ \theta } + 1 } } } = 1 \cdot 0 = 0
+          </mrow>
+        </md>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Show that the trigonometric function <m> \sin \of{ x } </m> is differentiable, with derivative <m> \cos \of{ x } </m>.
+      </p>
+    </statement>
+    
+    <hint>
+      <p>
+        You may wish to use the sum of angles formula
+        
+        <md>
+          \sin \of{ \alpha + \beta } = \sin \of{ \alpha } \cos \of{ \beta } + \cos \of{ \alpha } \sin \of{ \beta }
+        </md>,
+        
+        which holds for all real numbers <m> \alpha , \beta \in \R </m>.
+      </p>
+    </hint>
+    
+    <!-- <solution>
+      <p>
+        We observe that for any point <m> c \in \R </m>,
+        
+        <md>
+          <mrow>
+            \lim_{ x \to c }{ \frac{ \sin \of{ x } - \sin \of{ c } }{ x - c } } \amp = \lim_{ x \to c }{ \frac{ \sin \of{ c + \of{ x - c } } - \sin \of{ c } }{ x - c } }
+          </mrow>
+          
+          <mrow>
+            \amp = \lim_{ x \to c }{ \frac{ \sin \of{ c } \cos \of{ x - c } + \cos \of{ c } \sin \of{ x - c } - \sin \of{ c } }{ x - c } }
+          </mrow>
+          
+          <mrow>
+            \amp = \lim_{ x \to c }{ \cos \of{ c } \of{ \frac{ \sin \of{ x - c } }{ x - c } } + \sin \of{ c } \of{ \frac{ \cos \of{ x - c } - 1 }{ x - c } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \cos \of{ c } \of{ 1 } + \sin \of{ c } \of{ 0 } = \cos \of{ c }
+          </mrow>
+        </md>,
+        
+        and so <m> \sin \of{ x } </m> is differentiable at <m> c </m>, with derivative <m> \cos \of{ c } </m>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Show that the trigonometric function <m> \cos \of{ x } </m> is differentiable, with derivative <m> -\sin \of{ x } </m>.
+      </p>
+    </statement>
+    
+    <hint>
+      <p>
+        You may wish to use the trigonometric identities <m> \sin \of{ x } = \cos \of{ x - \frac{ \pi }{ 2 } } </m> and <m> \cos \of{ x } = -\sin \of{ x - \frac{ \pi }{ 2 } } </m>, which holds for all <m> x \in \R </m>.
+      </p>
+    </hint>
+    
+    <!-- <solution>
+      <p>
+        Since <m> \cos \of{ x } = -\sin \of{ x - \frac{ \pi }{ 2 } } </m> is the composition of differentiable functions, it is itself differentiable, with derivative
+        
+        <md>
+          -\cos \of{ x - \frac{ \pi }{ 2 } } \of{ 1 } = -\sin \of{ x }
+        </md>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Show that the trigonometric function <m> \tan \of{ x } </m> is differentiable, with derivative <m> \frac{ 1 }{ \cos^{ 2 } \of{ x } } </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        Since <m> \sin \of{ x } </m> and <m> \cos \of{ x } </m> are differentiable, (c) of <xref ref="problem-the-quotient-rule"/> implies that <m> \tan \of{ x } = \frac{ \sin \of{ x } }{ \cos \of{ x } } </m> is differentiable, with derivative
+        
+        <md>
+          \frac{ \cos^{ 2 } \of{ x } - \sin \of{ x } \of{ -\sin \of{ x } } }{ \cos^{ 2 } \of{ x } } = \frac{ \sin^{ 2 } \of{ x } + \cos^{ 2 } \of{ x } }{ \cos^{ 2 } \of{ x } } = \frac{ 1 }{ \cos^{ 2 } \of{ x } }
+        </md>.
+      </p>
+    </solution> -->
+  </task>
+</exercise>

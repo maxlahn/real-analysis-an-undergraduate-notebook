@@ -11,7 +11,7 @@
     </p>
   </introduction>
   
-  <!-- <xi:include href="./problems/problem-TITLE.ptx"/> -->
+  <xi:include href="./problems/problem-taylor-approximations-of-non-analytic-functions.ptx"/>
 
   <conclusion>
     <p>

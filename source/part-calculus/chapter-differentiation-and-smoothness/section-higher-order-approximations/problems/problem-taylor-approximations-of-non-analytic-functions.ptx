@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-taylor-approximations-of-non-analytic-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Taylor approximations of non-analytic functions
+  </title>
+  
+  <introduction>
+    <p>
+      Let <m> f \colon \R \to \R </m> be the real-valued function defined piecewise by the formula
+      
+      <md>
+        f \of{ x } =
+          \begin{cases}
+            e^{ -\frac{ 1 }{ x^{ 2 } } } \amp x \gt 0 \\
+            0 \amp x \leq 0
+          \end{cases}
+      </md>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that <m> u^{ \frac{ n }{ 2 } } \prec e^{ u } </m> as <m> u \to \infty </m> for all natural numbers <m> n \in \N </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        We proceed by strong induction on <m> n \in \N </m>. For the base case <m> n = 0 </m>, let <m> \epsilon \gt 0 </m> be a positive real number, and consider the positive real number
+        
+        <md>
+          B = \ln \of{ \frac{ 1 }{ \epsilon } }
+        </md>.
+        
+        We observe that
+        
+        <md>
+          <mrow>
+            d \of{ \frac{ u^{ \frac{ n }{ 2 } } }{ e^{ u } } , 0 } \amp = \abs{ \frac{ u^{ 0 } }{ e^{ u } } - 0 } = \abs{ \frac{ 1 }{ e^{ u } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ 1 }{ e^{ u } } \lt \frac{ 1 }{ e^{ B } } = \epsilon
+          </mrow>
+        </md>
+        
+        for all points <m> u \in \R </m> so that <m> u \gt B </m>. Thus
+        
+        <md>
+          \lim_{ u \to \infty }{ \frac{ u^{ \frac{ n }{ 2 } } }{ e^{ u } } } = 0
+        </md>,
+        
+        and so <m> u^{ \frac{ n }{ 2 } } \prec e^{ u } </m> as <m> u \to \infty </m>.
+      </p>
+      
+      <p>
+        For the inductive step, suppose for the inductive hypothesis that there is some natural number <m> n \in \N </m> so that <m> u^{ \frac{ k }{ 2 } } \prec e^{ u } </m> as <m> u \to \infty </m> for all <m> 0 \leq k \leq n </m>. If <m> n = 0 </m>, then <xref ref="corollary-lhopitals-rule" text="title"/> implies that
+        
+        <md>
+          <mrow>
+            0 \amp \leq \lim_{ u \to \infty }{ \frac{ u^{ \frac{ n + 1 }{ 2 } } }{ e^{ u } } } = \lim_{ u \to \infty }{ \frac{ u^{ \frac{ 1 }{ 2 } } }{ e^{ u } } } = \lim_{ u \to \infty }{ \frac{ 1 }{ 2 \sqrt{ u } e^{ u } } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \frac{ 1 }{ 2 } \lim_{ u \to \infty }{ \frac{ 1 }{ e^{ u } } } = \of{ \frac{ 1 }{ 2 } } 0 = 0
+          </mrow>
+        </md>.
+        
+        Otherwise, if <m> n \geq 1 </m>, then the inductive hypothesis and <xref ref="corollary-lhopitals-rule" text="title"/> imply that
+        
+        <md>
+          <mrow>
+            \lim_{ u \to \infty }{ \frac{ u^{ \frac{ n + 1 }{ 2 } } }{ e^{ u } } } \amp = \lim_{ u \to \infty }{ \frac{ \of{ \frac{ n + 1 }{ 2 } } u^{ \frac{ n - 1 }{ 2 } } }{ e^{ u } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ n + 1 }{ 2 } \lim_{ u \to \infty }{ \frac{ u^{ \frac{ n - 1 }{ 2 } } }{ e^{ u } } } = \of{ \frac{ n + 1 }{ 2 } } 0 = 0
+          </mrow>
+        </md>.
+        
+        In either case, we conclude that <m> u^{ \frac{ n + 1 }{ 2 } } \prec e^{ u } </m>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that <m> f \of{ x } \prec x^{ n } </m> as <m> x \to 0 </m> for all natural numbers <m> n \in \N </m>.
+      </p>
+    </statement>
+    
+    <hint>
+      <p>
+        Make the substitution <m> u = \frac{ 1 }{ x^{ 2 } } </m>.
+      </p>
+    </hint>
+    
+    <!-- <solution>
+      <p>
+        We first observe that
+        
+        <md>
+          \lim_{ x \to 0^{ - } }{ \frac{ f \of{ x } }{ x^{ n } } } = \lim_{ x \to 0^{ - } }{ \frac{ 0 }{ x^{ n } } } = \lim_{ x \to 0^{ - } }{ 0 } = 0
+        </md>.
+        
+        Let <m> \epsilon \gt 0 </m> be a positive real number. Since
+        
+        <md>
+          \lim_{ u \to \infty }{ \frac{ u^{ \frac{ n + 1 }{ 2 } } }{ e^{ u } } } = 0
+        </md>
+        
+        as shown above in (a), there is a positive real number <m> B \gt 0 </m> so that
+        
+        <md>
+          \abs{ \frac{ u^{ \frac{ n + 1 }{ 2 } } }{ e^{ u } } } \lt \epsilon
+        </md>
+        
+        for all <m> u \in \R </m> so that <m> u \gt B </m>.
+      </p>
+      
+      <p>
+        Consider the positive real number <m> \delta = \sqrt{ B } </m>. We observe that
+        
+        <md>
+          d \of{ \frac{ f \of{ x } }{ x^{ n } } , 0 } = \abs{ \frac{ e^{ -\frac{ 1 }{ x^{ 2 } } } }{ x^{ n } } - 0 } = \abs{ \frac{ \of{ \frac{ 1 }{ x^{ 2 } } }^{ \frac{ n + 1 }{ 2 } } }{ e^{ \frac{ 1 }{ x^{ 2 } } } } } \lt \epsilon
+        </md>
+        
+        for all points <m> x \in \R </m> so that <m> 0 \lt d \of{ x , 0 } \lt \delta </m>, and so
+        
+        <md>
+          \lim_{ x \to 0 }{ \frac{ f \of{ x } }{ x^{ n } } } = 0
+        </md>;
+        
+        that is, <m> f \of{ x } \prec x^{ n } </m>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Compute all Taylor approximations <m> P_{ 0 }^{ n } \of{ f , x } </m> of <m> f </m> near <m> 0 </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        We observe that <m> P_{ 0 }^{ n } \of{ f , x } = 0 </m>, since <m> 0 </m> is a polynomial of degree at most <m> n </m> so that
+        
+        <md>
+          f \of{ x } - 0 = f \of{ x } \prec x^{ n } = \of{ x - 0 }^{ n }
+        </md>
+        
+        as shown above in (b).
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Let <m> g \in \CDiff^{ \infty } \of{ X } </m> be a smooth function defined on an interval <m> X \subseteq \R </m>. If there is a point <m> c \in X </m> so that <m> g^{ \of{ n } } \of{ c } = 0 </m> for all positive integers <m> n \geq 1 </m>, can we conclude that <m> g </m> is constant on a neighborhood of <m> c </m>?
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        No. <m> f </m> is an example of a smooth function whose derivatives at <m> 0 </m> are all <m> 0 </m>; that is, <m> f^{ \of{ n } } \of{ 0 } = 0 </m> for all natural numbers <m> n \in \N </m>. However, <m> f </m> is not constant on a neighborhood of <m> 0 </m>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <conclusion>
+    <p>
+      <m> f </m> is our first example of a smooth function which is not <term> analytic </term>. We will explore these functions more in <xref ref="chapter-infinite-series"/>.
+    </p>
+  </conclusion>
+</exercise>

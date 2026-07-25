@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-functions-with-the-same-derivative" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Functions with the same derivative
+  </title>
+  
+  <task>
+    <statement>
+      <p>
+        Let <m> f \colon X \to \R </m> be a differentiable real-valued function defined on an interval <m> X </m>. Prove that if <m> f' \of{ x } = 0 </m> for all <m> x \in X </m>, then <m> f </m> is constant.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        By contraposition. If <m> f </m> is not a constant, then <m> f \of{ a } \neq f \of{ b } </m> for some distinct points <m> a , b \in X </m>. We may suppose without loss of generality that <m> a \lt b </m>. Since <m> X </m> is an interval, <m> \clint{ a }{ b } \subseteq X </m>. Thus <m> f </m> is continuous on <m> \clint{ a }{ b } </m> and differentiable on <m> \opint{ a }{ b } </m>. The <xref ref="theorem-mean-value-theorem" text="title"/> now implies that
+        
+        <md>
+          f' \of{ c } = \frac{ f \of{ b } - f \of{ a } }{ b - a } \neq 0
+        </md>
+        
+        for some interior point <m> c \in \opint{ a }{ b } \subseteq X </m>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Let <m> f , g \colon X \to \R </m> be differentiable real-valued functions defined on an interval <m> X </m>. Prove that if <m> f' \of{ x } = g' \of{ x } </m> for all <m> x \in X </m>, then <m> f </m> and <m> g </m> differ by a constant.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        This follows immediately by applying part (a) above to the difference <m> f - g </m>. Indeed, we see that
+        
+        <md>
+          \of{ f - g }' \of{ x } = f' \of{ x } - g' \of{ x } = 0
+        </md>
+        
+        for all points <m> x \in X </m>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <conclusion>
+    <p>
+      The above result will be important in <xref ref="chapter-riemann-integration"/>, where we will use it to compare two anti-derivatives of the same continuous function on a closed interval.
+    </p>
+  </conclusion>
+</exercise>

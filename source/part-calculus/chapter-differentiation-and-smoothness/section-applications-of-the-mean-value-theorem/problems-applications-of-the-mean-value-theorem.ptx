@@ -11,7 +11,9 @@
     </p>
   </introduction>
   
-  <!-- <xi:include href="./problems/problem-TITLE.ptx"/> -->
+  <xi:include href="./problems/problem-functions-with-the-same-derivative.ptx"/>
+  
+  <xi:include href="./problems/problem-differentiability-and-lipschitz-continuity.ptx"/>
 
   <conclusion>
     <p>

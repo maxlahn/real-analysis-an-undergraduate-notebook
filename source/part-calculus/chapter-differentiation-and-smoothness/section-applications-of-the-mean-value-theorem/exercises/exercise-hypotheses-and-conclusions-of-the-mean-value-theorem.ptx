@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-hypotheses-and-conclusions-of-the-mean-value-theorem" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Hypotheses and conclusions of the <xref ref="theorem-mean-value-theorem" text="title"/>
+  </title>
+  
+  <introduction>
+    <p>
+      Determine whether the given function satisfies the hypotheses and conclusions of the <xref ref="theorem-mean-value-theorem" text="title"/>.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <introduction>
+      <p>
+        Let <m> f \colon \clint{ 0 }{ 1 } \to \R </m> be the real-valued function defined on the interval <m> \clint{ 0 }{ 1 } </m> by the formula
+        
+        <md>
+          f \of{ x } = \sqrt[ 3 ]{ x^{ 2 } - x }
+        </md>.
+      </p>
+    </introduction>
+    
+    <task>
+      <statement>
+        <p>
+          Determine whether or not <m> f </m> satisfies the hypotheses of the <xref ref="theorem-mean-value-theorem" text="title"/>.
+        </p>
+      </statement>
+      
+      <answer>
+        <p>
+          Yes, <m> f </m> satisfies the hypotheses of the <xref ref="theorem-mean-value-theorem" text="title"/>.
+        </p>
+      </answer>
+    </task>
+    
+    <task>
+      <statement>
+        <p>
+          Determine whether or not <m> f </m> satisfies the conclusions of the <xref ref="theorem-mean-value-theorem" text="title"/>. If so, find a point <m> 0 \lt c \lt 1 </m> for which
+          
+          <md>
+            f' \of{ c } = \frac{ f \of{ 1 } - f \of{ 0 } }{ 1 - 0 }
+          </md>.
+        </p>
+      </statement>
+      
+      <answer>
+        <p>
+          Yes, <m> f </m> satisfies the conclusions of the <xref ref="theorem-mean-value-theorem" text="title"/>. We may choose <m> c = \frac{ 1 }{ 2 } </m>.
+        </p>
+      </answer>
+    </task>
+  </exercise>
+  
+  <exercise>
+    <introduction>
+      <p>
+        Let <m> g \colon \clint{ -1 }{ 1 } \to \R </m> be the real-valued function defined on the interval <m> \clint{ 0 }{ 1 } </m> by the formula
+        
+        <md>
+          g \of{ x } = x^{ \frac{ 3 }{ 5 } }
+        </md>.
+      </p>
+    </introduction>
+    
+    <task>
+      <statement>
+        <p>
+          Determine whether or not <m> g </m> satisfies the hypotheses of the <xref ref="theorem-mean-value-theorem" text="title"/>.
+        </p>
+      </statement>
+      
+      <answer>
+        <p>
+          No, <m> g </m> does not satisfy the hypotheses of the <xref ref="theorem-mean-value-theorem" text="title"/>.
+        </p>
+      </answer>
+    </task>
+    
+    <task>
+      <statement>
+        <p>
+          Determine whether or not <m> g </m> satisfies the conclusions of the <xref ref="theorem-mean-value-theorem" text="title"/>. If so, find a point <m> -1 \lt c \lt 1 </m> for which
+          
+          <md>
+            g' \of{ c } = \frac{ g \of{ 1 } - g \of{ -1 } }{ 1 - \of{ -1 } }
+          </md>.
+        </p>
+      </statement>
+      
+      <answer>
+        <p>
+          Yes, <m> g </m> satisfies the conclusions of the <xref ref="theorem-mean-value-theorem" text="title"/>. We may choose <m> c = \pm \of{ \frac{ 3 }{ 5 } }^{ \frac{ 5 }{ 2 } } </m>.
+        </p>
+      </answer>
+    </task>
+  </exercise>
+</exercisegroup>

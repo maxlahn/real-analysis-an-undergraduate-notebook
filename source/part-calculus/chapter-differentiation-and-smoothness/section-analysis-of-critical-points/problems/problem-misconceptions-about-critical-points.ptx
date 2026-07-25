@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-misconceptions-about-critical-points" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Misconceptions about critical points
+  </title>
+  
+  <introduction>
+    <p>
+      Let <m> f \colon X \to \R </m> be a real-valued function defined on an interval <m> X \subseteq \R </m>. <alert> The following statements are false! </alert> Explain why the statement is incorrect, and disprove them by providing a counterexample.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        If <m> f </m> attains a local extremum at a point <m> c \in X </m>, then <m> c </m> is a critical point of <m> f </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        If <m> I </m> contains an endpoint, then it is possible for <m> f </m> to attain a local extremum at such a point without having a critical point there. For example, let <m> X = \clint{ 0 }{ 1 } </m> and <m> f \of{ x } = x </m>. Then <m> f </m> has local extrema at <m> 0 </m> and <m> 1 </m>, but <m> f </m> has no critical points.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        If a point <m> c \in X </m> is a critical point of <m> f </m>, then <m> f </m> attains a local extremum at <m> c </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        Not every critical point is a local extremum. For example, let <m> X = \R </m> and <m> f \of{ x } = \sqrt[ 3 ]{ x } </m>. Then <m> f </m> has a critical point at <m> 0 </m>, but <m> f </m> does not attain a local extremum at <m> 0 </m>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        If a point <m> c \in X </m> is a regular point of <m> f </m>, then <m> c </m> has a neighborhood in <m> X </m> on which <m> f </m> is monotone.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        If <m> f </m> is not continuously differentiable, then <m> f' \of{ x } </m> might be negative for points arbitrarily close to <m> x </m>. For example, let <m> X = \R </m> and <m> f \of{ x } = x^{ 2 } \sin \of{ \frac{ 1 }{ x } } + \frac{ x }{ 2 } </m>. <m> f </m> has a regular point at <m> 0 </m>, but is not locally monotone near <m> 0 </m>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        <m> f </m> is strictly monotone if and only if <m> f </m> has no critical points.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        If <m> f </m> has no critical points, then it is strictly monotone, but the converse implication does not hold. For example, let <m> X = \R </m> and <m> f \of{ x } = x^{ 3 } </m>. Then <m> 0 </m> is a critical point of <m> f </m>, but <m> f </m> is strictly monotone.
+      </p>
+    </solution> -->
+  </task>
+</exercise>

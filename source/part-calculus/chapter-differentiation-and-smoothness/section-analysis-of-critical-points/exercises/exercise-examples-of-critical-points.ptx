@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-examples-of-critical-points" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Examples of critical points
+  </title>
+  
+  <introduction>
+    <p>
+      Give examples of differentiable functions which satisfy the given conditions.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Give an example of a differentiable function which has a single critical point which is not a local extremum.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The function <m> f \of{ x } = x^{ 3 } </m> has a single critical point which is not a local extremum.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Give an example of a differentiable function which attains a local minimum but no global minima.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The function <m> f \of{ x } = x \sin \of{ x } </m> attains a local minimum at <m> 0 </m> but no global minima.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Give an example of a differentiable function which has no critical points.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The function <m> f \of{ x } = x </m> has no critical points
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Give an example of a differentiable function which has exactly one critical point but no global extrema.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The function <m> f \of{ x } = x^{ 3 } </m> has a critical point at <m> 0 </m> but no global extrema.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Give an example of a differentiable function which attains infinitely many global extrema.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The function <m> f \of{ x } = \sin \of{ x } </m> attains a global extremum at each integer multiple of <m> \pi </m>.
+      </p>
+    </answer>
+  </exercise>
+</exercisegroup>

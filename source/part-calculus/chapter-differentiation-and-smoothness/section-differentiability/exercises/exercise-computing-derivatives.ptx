@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-computing-derivatives" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Computing derivatives
+  </title>
+  
+  <introduction>
+    <p>
+      Compute formulas for the derivatives of the given differentiable functions.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Compute a formula for the derivative of the differentiable function <m> f \colon \R \to \R </m> defined by the formula
+        
+        <md>
+          f \of{ x } = \sin^{ 2 } \of{ x } + \cos^{ 2 } \of{ x }
+        </md>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> f </m> has derivative given by the formula <m> f' \of{ x } = 0 </m>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Compute a formula for the derivative of the differentiable function <m> g \colon \R \to \R </m> defined by the formula
+        
+        <md>
+          g \of{ y } = \frac{ 1 }{ 1 + y^{ 2 } }
+        </md>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> g </m> has derivative given by the formula
+        
+        <md>
+          g' \of{ y } = -\frac{ 2 y }{ \of{ 1 + y^{ 2 } }^{ 2 } }
+        </md>.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Compute a formula for the derivative of the differentiable function <m> h \colon \R \to \R </m> defined by the formula
+        
+        <md>
+          h \of{ z } = \sqrt{ \sin \of{ z } + 2 }
+        </md>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> h </m> has derivative given by the formula
+        
+        <md>
+          h' \of{ z } = \frac{ \cos \of{ z } }{ \sqrt{ \sin \of{ z } + 2 } }
+        </md>.
+      </p>
+    </answer>
+  </exercise>
+</exercisegroup>

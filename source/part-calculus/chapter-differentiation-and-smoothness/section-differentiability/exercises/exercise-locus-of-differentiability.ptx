@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-locus-of-differentiability" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Locus of differentiability
+  </title>
+  
+  <introduction>
+    <p>
+      Determine the differentiability locus of the given function.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Determine the differentiability locus <m> \DL \of{ f } </m> of the real-valued function <m> f \colon \R \to \R </m> defined by the formula <m> f \of{ x } = \abs{ x }^{ 3 } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> f </m> has differentiability locus <m> \DL \of{ f } = \R </m>; that is, <m> f </m> is differentiable.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        We first show that <m> f </m> is differentiable at <m> 0 </m>. Let <m> \epsilon \gt 0 </m> be a positive real number, and consider the positive real number <m> \delta = \sqrt{ \epsilon } </m>. We observe that
+        
+        <md>
+          <mrow>
+            \abs{ \frac{ f \of{ x } - f \of{ 0 } }{ x - 0 } - 0 } \amp = \abs{ \frac{ \abs{ x }^{ 3 } - \abs{ 0 }^{ 3 } }{ x - 0 } } = \abs{ \frac{ \abs{ x }^{ 3 } }{ x } }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ \abs{ x }^{ 3 } }{ \abs{ x } } = \abs{ x }^{ 2 } \lt \delta^{ 2 } = \epsilon
+          </mrow>
+        </md>
+        
+        for all <m> x \in \R </m> so that <m> 0 \lt \abs{ x - 0 } \lt \delta </m>. Thus <m> f </m> is differentiable at <m> 0 </m>, with derivative <m> f' \of{ 0 } = 0 </m>.
+      </p>
+      
+      <p>
+        At any point <m> c \in \R \setminus \set{ 0 } </m>, <m> f </m> is a composition of differentiable functions <m> x \mapsto \abs{ x } </m> and <m> x \mapsto x^{ 3 } </m>, and so is also differentiable. We conclude that <m> f </m> has differentiability locus <m> \DL \of{ f } = \R </m>; that is, <m> f </m> is differentiable.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Determine the differentiability locus <m> \DL \of{ g } </m> of the real-valued function <m> g \colon \R \to \R </m> defined piecewise by the formula
+        
+        <md>
+          g \of{ x } =
+            \begin{cases}
+              x^{ 2 } \amp x \lt 0 \\
+              2 x^{ 2 } \amp x \geq 0
+            \end{cases}
+        </md>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> g </m> has differentiability locus <m> \DL \of{ g } = \R </m>; that is, <m> g </m> is differentiable.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        We first show that <m> g </m> is differentiable at <m> 0 </m>. Let <m> \epsilon \gt 0 </m> be a positive real number, and consider the positive real number <m> \delta = \frac{ \epsilon }{ 2 } \gt 0 </m>. We observe that
+        
+        <md>
+          <mrow>
+            \abs{ \frac{ g \of{ x } - g \of{ 0 } }{ x - 0 } - 0 } \amp = \abs{ \frac{ x^{ 2 } - 2 \of{ 0 }^{ 2 } }{ x - 0 } } = \abs{ \frac{ x^{ 2 } }{ x } }
+          </mrow>
+          
+          <mrow>
+            \amp = \abs{ x } = \abs{ x - 0 } \lt \delta - \frac{ \epsilon }{ 2 } \lt \epsilon
+          </mrow>
+        </md>
+        
+        for all points <m> -\delta \lt x \lt 0 </m>. Similarly,
+        
+        <md>
+          <mrow>
+            \abs{ \frac{ g \of{ x } - g \of{ 0 } }{ x - 0 } - 0 } \amp = \abs{ \frac{ 2 x^{ 2 } - 2 \of{ 0 }^{ 2 } }{ x - 0 } } = \abs{ \frac{ 2 x^{ 2 } }{ x } }
+          </mrow>
+          
+          <mrow>
+            \amp = \abs{ 2 x } = 2 \abs{ x - 0 } \lt 2 \delta = \epsilon
+          </mrow>
+        </md>
+        
+        for all points <m> 0 \lt x \leq \delta </m>. Thus <m> g </m> is differentiable at <m> 0 </m>, with derivative <m> g' \of{ 0 } = 0 </m>.
+      </p>
+      
+      <p>
+        At any point <m> c \in \R \setminus \set{ 0 } </m>, <m> g </m> is locally equal to a polynomial and therefore differentiable. We conclude that <m> g </m> has differentiability locus <m> \DL \of{ g } = \R </m>; that is, <m> g </m> is differentiable.
+      </p>
+    </solution>
+  </exercise>
+</exercisegroup>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-the-power-rule" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    The power rule
+  </title>
+  
+  <idx>
+    power rule
+  </idx>
+  
+  <introduction>
+    <p>
+      For each real number <m> p \in \R </m>, consider the power function <m> f_{ p } \colon \opint{ 0 }{ \infty } \to \R </m> defined by the formula <m> f_{ p } \of{ x } = x^{ p } </m>.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Prove that for each natural number <m> n \in \N </m>, <m> f_{ n } </m> is differentiable, with derivative
+        
+        <md>
+          f_{ n }' \of{ x } = n x^{ n - 1 }
+        </md>.
+      </p>
+    </statement>
+    
+    <hint>
+      <p>
+        Either prove the desired result by induction on <m> n \in \N </m> or use the binomial theorem.
+      </p>
+    </hint>
+    
+    <!-- <solution>
+      <p>
+        We proceed by induction on <m> n \in \N </m>. For the base case <m> n = 0 </m>, we observe that
+        
+        <md>
+          f_{ 0 } \of{ x } = x^{ 0 } = 1
+        </md>
+        
+        for all points <m> x \in \opint{ 0 }{ \infty } </m>. In this case,
+        
+        <md>
+          f_{ n }' \of{ x } = 0 = 0 x^{ -1 } = n x^{ n - 1 }
+        </md>,
+        
+        as shown in <xref ref="example-differentiability"/>.
+      </p>
+      
+      <p>
+        For the inductive step, suppose for the inductive hypothesis that <m> f_{ n }' \of{ x } = n x^{ n - 1 } </m> for some natural number <m> n \in \N </m>. Then
+        
+        <md>
+          f_{ n + 1 } \of{ x } = x^{ n + 1 } = x^{ n } \cdot x = f_{ n } \of{ x } \cdot x
+        </md>
+        
+        for all points <m> x \in \opint{ 0 }{ \infty } </m>. (2) of <xref ref="proposition-arithmetic-of-differentiable-functions"/> implies that <m> f_{ n + 1 } </m> is differentiable, with derivative
+        
+        <md>
+          <mrow>
+            f_{ n + 1 }' \of{ x } \amp = f_{ n }' \of{ x } \cdot x + f_{ n } \of{ x } \cdot 1 = n x^{ n - 1 } \cdot x + x^{ n }
+          </mrow>
+          
+          <mrow>
+            \amp = n x^{ n } + x^{ n } = \of{ n + 1 } x^{ \of{ n + 1 } - 1 }
+          </mrow>
+        </md>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Show that for any integer <m> n \in \Z </m>, <m> f_{ n } </m> is differentiable, with derivative <m> f_{ n }' \of{ x } = n x^{ n - 1 } </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        In (a) above, we have already shown the desired result if <m> n \geq 0 </m> is non-negative. Thus we may suppose that <m> n \neq 0 </m> is negative. In this case, <m> f_{ n } = r \circ f_{ -n } </m>, where <m> r \of{ x } = \frac{ 1 }{ x } </m> is defined in <xref ref="problem-the-quotient-rule"/>, and so the <xref ref="theorem-chain-rule" text="title"/> implies that <m> f_{ n } </m> is differentiable, with derivative
+        
+        <md>
+          <mrow>
+            f_{ n }' \of{ x } \amp = \of{ r \circ f_{ -n } }' \of{ x } = r' \of{ f_{ -n } \of{ x } } \cdot f_{ -n }' \of{ x }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ -\frac{ 1 }{ \of{ x^{ -n } }^{ 2 } } } \cdot \of{ -n } x^{ -n - 1 } = \frac{ n x^{ 2 n } }{ x^{ n + 1 } } = n x^{ n - 1 }
+          </mrow>
+        </md>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Show that for any rational number <m> p \in \Q </m> that if <m> f_{ p } </m> is differentiable, then its derivative is <m> f_{ p }' \of{ x } = p x^{ p - 1 } </m>.
+      </p>
+    </statement>
+    
+    <hint>
+      <p>
+        Write <m> p = \frac{ m }{ n } </m> for some integers <m> m , n \in \Z </m> with <m> n \neq 0 </m>, and differentiate the equation <m> f_{ p } \of{ x }^{ n } = x^{ m } </m>.
+      </p>
+    </hint>
+    
+    <!-- <solution>
+      <p>
+        Write <m> p = \frac{ m }{ n } </m> for some integers <m> m , n \in \Z </m> with <m> n \neq 0 </m>. We observe that
+        
+        <md>
+          <mrow>
+            \of{ f_{ n } \circ f_{ q } } \of{ x } \amp = f_{ n } \of{ f_{ q } \of{ x } } = \of{ x^{ q } }^{ n }
+          </mrow>
+          
+          <mrow>
+            \amp = x^{ q n } = x^{ m } = f_{ m } \of{ x }
+          </mrow>
+        </md>
+        
+        for all points <m> x \in \opint{ 0 }{ \infty } </m>. (b) above and the <xref ref="theorem-chain-rule" text="title"/> now imply that
+        
+        <md>
+          <mrow>
+            f_{ q }' \of{ x } \amp = \frac{ f_{ m }' \of{ x } }{ f_{ n }' \of{ f_{ q } \of{ x } } } = \frac{ m x^{ m - 1 } }{ n \of{ x^{ q } }^{ n - 1 } }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ \frac{ m }{ n } } x^{ \of{ m - 1 } - \of{ q n - q } } = q x^{ q - 1 }
+          </mrow>
+        </md>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <conclusion>
+    <p>
+      The rules proven above also hold for irrational powers, although we will require additional machinery in order to prove this final extension. In general, this is called the <term> power rule </term>.
+    </p>
+  </conclusion>
+</exercise>

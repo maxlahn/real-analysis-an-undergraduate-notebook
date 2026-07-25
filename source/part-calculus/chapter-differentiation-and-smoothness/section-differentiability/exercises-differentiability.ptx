@@ -11,7 +11,9 @@
     </p>
   </introduction>
   
-  <!-- <xi:include href="./exercises/exercise-TITLE.ptx"/> -->
+  <xi:include href="./exercises/exercise-locus-of-differentiability.ptx"/>
+  
+  <xi:include href="./exercises/exercise-computing-derivatives.ptx"/>
 
   <conclusion>
     <p>

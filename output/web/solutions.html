@@ -57,14 +57,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.14';
+eBookConfig.runestone_version = '8.1.16';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.cb5af2e851de3574.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.f51cd4153b45055d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<script src="_static/prefix-runtime.279b1f0077454c32.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.db8001875cb726c2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -8281,7 +8281,491 @@ x_{ M } \in M \subseteq N
 <div class="para">Show that <span class="process-math">\(\Nbhd \of{ x } \times \Nbhd \of{ y } \)</span> is partially ordered and directed both upwards and downwards by <span class="process-math">\(\preceq \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-non-hausdorff-spaces-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 4.3.4.3.b"><a href="section-convergence-and-separation.html#problem-non-hausdorff-spaces-4" aria-label="Back to 4.3.4.3.b"><span class="codenumber">4.3.4.3.b</span></a></h4>
 <div class="para">Prove that if <span class="process-math">\(\of{ X , \tau } \)</span> is not Hausdorff, then there is a convergent net of points in <span class="process-math">\(X \)</span> which does not have a unique limit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-non-hausdorff-spaces-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></article></article><div class="autopermalink" aria-hidden="true" data-description="Appendix A: Selected Solutions"><a tabindex="-1" href="#solutions" title="Copy heading and permalink for Appendix A: Selected Solutions" aria-label="Copy heading and permalink for Appendix A: Selected Solutions">🔗</a></div>
+</div></article></article><h2 class="heading hide-type" title="Exercises 5.1.3: Exercises">
+<span class="codenumber">III</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Calculus</span><br><span class="codenumber">5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Differentiation and Smoothness</span><br><span class="codenumber">5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Differentiability</span><br><span class="codenumber">5.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h2>
+<div class="exercisegroup">
+<div class="introduction">
+<div class="para">Determine the differentiability locus of the given function.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-locus-of-differentiability-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like"><h3 class="heading"><a href="section-differentiability.html#exercise-locus-of-differentiability-3" aria-label="Back to 5.1.3.1."><span class="codenumber">5.1.3.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para">Determine the differentiability locus <span class="process-math">\(\DL \of{ f } \)</span> of the real-valued function <span class="process-math">\(f \colon \R \to \R \)</span> defined by the formula <span class="process-math">\(f \of{ x } = \abs{ x }^{ 3 } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-locus-of-differentiability-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(f \)</span> has differentiability locus <span class="process-math">\(\DL \of{ f } = \R \text{;}\)</span> that is, <span class="process-math">\(f \)</span> is differentiable.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-locus-of-differentiability-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.3.1.1"><a tabindex="-1" href="#exercise-locus-of-differentiability-3-2" title="Copy heading and permalink for Answer 5.1.3.1.1" aria-label="Copy heading and permalink for Answer 5.1.3.1.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We first show that <span class="process-math">\(f \)</span> is differentiable at <span class="process-math">\(0 \text{.}\)</span> Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number, and consider the positive real number <span class="process-math">\(\delta = \sqrt{ \epsilon } \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math">
+\begin{align*}
+\abs{ \frac{ f \of{ x } - f \of{ 0 } }{ x - 0 } - 0 } \amp = \abs{ \frac{ \abs{ x }^{ 3 } - \abs{ 0 }^{ 3 } }{ x - 0 } } = \abs{ \frac{ \abs{ x }^{ 3 } }{ x } }\\
+\amp = \frac{ \abs{ x }^{ 3 } }{ \abs{ x } } = \abs{ x }^{ 2 } \lt \delta^{ 2 } = \epsilon
+\end{align*}
+</div>
+<div class="para">for all <span class="process-math">\(x \in \R \)</span> so that <span class="process-math">\(0 \lt \abs{ x - 0 } \lt \delta \text{.}\)</span> Thus <span class="process-math">\(f \)</span> is differentiable at <span class="process-math">\(0 \text{,}\)</span> with derivative <span class="process-math">\(f' \of{ 0 } = 0 \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-locus-of-differentiability-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">At any point <span class="process-math">\(c \in \R \setminus \set{ 0 } \text{,}\)</span> <span class="process-math">\(f \)</span> is a composition of differentiable functions <span class="process-math">\(x \mapsto \abs{ x } \)</span> and <span class="process-math">\(x \mapsto x^{ 3 } \text{,}\)</span> and so is also differentiable. We conclude that <span class="process-math">\(f \)</span> has differentiability locus <span class="process-math">\(\DL \of{ f } = \R \text{;}\)</span> that is, <span class="process-math">\(f \)</span> is differentiable.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-locus-of-differentiability-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 5.1.3.1.1"><a tabindex="-1" href="#exercise-locus-of-differentiability-3-3" title="Copy heading and permalink for Solution 5.1.3.1.1" aria-label="Copy heading and permalink for Solution 5.1.3.1.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-differentiability.html#exercise-locus-of-differentiability-4" aria-label="Back to 5.1.3.2."><span class="codenumber">5.1.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para logical">
+<div class="para">Determine the differentiability locus <span class="process-math">\(\DL \of{ g } \)</span> of the real-valued function <span class="process-math">\(g \colon \R \to \R \)</span> defined piecewise by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g \of{ x } =
+\begin{cases}
+x^{ 2 } \amp x \lt 0 \\
+2 x^{ 2 } \amp x \geq 0
+\text{.}\end{cases}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-locus-of-differentiability-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(g \)</span> has differentiability locus <span class="process-math">\(\DL \of{ g } = \R \text{;}\)</span> that is, <span class="process-math">\(g \)</span> is differentiable.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-locus-of-differentiability-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.3.2.1"><a tabindex="-1" href="#exercise-locus-of-differentiability-4-2" title="Copy heading and permalink for Answer 5.1.3.2.1" aria-label="Copy heading and permalink for Answer 5.1.3.2.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We first show that <span class="process-math">\(g \)</span> is differentiable at <span class="process-math">\(0 \text{.}\)</span> Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number, and consider the positive real number <span class="process-math">\(\delta = \frac{ \epsilon }{ 2 } \gt 0 \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math">
+\begin{align*}
+\abs{ \frac{ g \of{ x } - g \of{ 0 } }{ x - 0 } - 0 } \amp = \abs{ \frac{ x^{ 2 } - 2 \of{ 0 }^{ 2 } }{ x - 0 } } = \abs{ \frac{ x^{ 2 } }{ x } }\\
+\amp = \abs{ x } = \abs{ x - 0 } \lt \delta - \frac{ \epsilon }{ 2 } \lt \epsilon
+\end{align*}
+</div>
+<div class="para">for all points <span class="process-math">\(-\delta \lt x \lt 0 \text{.}\)</span> Similarly,</div>
+<div class="displaymath process-math">
+\begin{align*}
+\abs{ \frac{ g \of{ x } - g \of{ 0 } }{ x - 0 } - 0 } \amp = \abs{ \frac{ 2 x^{ 2 } - 2 \of{ 0 }^{ 2 } }{ x - 0 } } = \abs{ \frac{ 2 x^{ 2 } }{ x } }\\
+\amp = \abs{ 2 x } = 2 \abs{ x - 0 } \lt 2 \delta = \epsilon
+\end{align*}
+</div>
+<div class="para">for all points <span class="process-math">\(0 \lt x \leq \delta \text{.}\)</span> Thus <span class="process-math">\(g \)</span> is differentiable at <span class="process-math">\(0 \text{,}\)</span> with derivative <span class="process-math">\(g' \of{ 0 } = 0 \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-locus-of-differentiability-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">At any point <span class="process-math">\(c \in \R \setminus \set{ 0 } \text{,}\)</span> <span class="process-math">\(g \)</span> is locally equal to a polynomial and therefore differentiable. We conclude that <span class="process-math">\(g \)</span> has differentiability locus <span class="process-math">\(\DL \of{ g } = \R \text{;}\)</span> that is, <span class="process-math">\(g \)</span> is differentiable.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-locus-of-differentiability-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 5.1.3.2.1"><a tabindex="-1" href="#exercise-locus-of-differentiability-4-3" title="Copy heading and permalink for Solution 5.1.3.2.1" aria-label="Copy heading and permalink for Solution 5.1.3.2.1">🔗</a></div>
+</div></details>
+</div></article>
+</div>
+</div>
+<div class="exercisegroup">
+<div class="introduction">
+<div class="para">Compute formulas for the derivatives of the given differentiable functions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-derivatives-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like"><h3 class="heading"><a href="section-differentiability.html#exercise-computing-derivatives-3" aria-label="Back to 5.1.3.3."><span class="codenumber">5.1.3.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para logical">
+<div class="para">Compute a formula for the derivative of the differentiable function <span class="process-math">\(f \colon \R \to \R \)</span> defined by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f \of{ x } = \sin^{ 2 } \of{ x } + \cos^{ 2 } \of{ x }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-derivatives-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(f \)</span> has derivative given by the formula <span class="process-math">\(f' \of{ x } = 0 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-derivatives-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.3.3.1"><a tabindex="-1" href="#exercise-computing-derivatives-3-2" title="Copy heading and permalink for Answer 5.1.3.3.1" aria-label="Copy heading and permalink for Answer 5.1.3.3.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-differentiability.html#exercise-computing-derivatives-4" aria-label="Back to 5.1.3.4."><span class="codenumber">5.1.3.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para logical">
+<div class="para">Compute a formula for the derivative of the differentiable function <span class="process-math">\(g \colon \R \to \R \)</span> defined by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g \of{ y } = \frac{ 1 }{ 1 + y^{ 2 } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-derivatives-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="para">
+<span class="process-math">\(g \)</span> has derivative given by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g' \of{ y } = -\frac{ 2 y }{ \of{ 1 + y^{ 2 } }^{ 2 } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-derivatives-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.3.4.1"><a tabindex="-1" href="#exercise-computing-derivatives-4-2" title="Copy heading and permalink for Answer 5.1.3.4.1" aria-label="Copy heading and permalink for Answer 5.1.3.4.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-differentiability.html#exercise-computing-derivatives-5" aria-label="Back to 5.1.3.5."><span class="codenumber">5.1.3.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para logical">
+<div class="para">Compute a formula for the derivative of the differentiable function <span class="process-math">\(h \colon \R \to \R \)</span> defined by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h \of{ z } = \sqrt{ \sin \of{ z } + 2 }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-derivatives-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="para">
+<span class="process-math">\(h \)</span> has derivative given by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h' \of{ z } = \frac{ \cos \of{ z } }{ \sqrt{ \sin \of{ z } + 2 } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-derivatives-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.1.3.5.1"><a tabindex="-1" href="#exercise-computing-derivatives-5-2" title="Copy heading and permalink for Answer 5.1.3.5.1" aria-label="Copy heading and permalink for Answer 5.1.3.5.1">🔗</a></div>
+</div></details>
+</div></article>
+</div>
+</div>
+<h2 class="heading hide-type" title="Reading Questions 5.1.4: Problems">
+<span class="codenumber">5.1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
+</h2>
+<article class="exercise-like"><h3 class="heading"><a href="section-differentiability.html#problem-the-quotient-rule" aria-label="Back to 5.1.4.1. The quotient rule."><span class="codenumber">5.1.4.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The quotient rule.</span></a></h3>
+<div class="introduction">
+<div class="para">In this problem, we complete <a href="section-differentiability.html#proposition-arithmetic-of-differentiable-functions" class="xref" data-knowl="./knowl/xref/proposition-arithmetic-of-differentiable-functions.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 5.1.4: Arithmetic of differentiable functions">Proposition 5.1.4 Arithmetic of differentiable functions</a> to address the quotient of two differentiable functions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-the-quotient-rule-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="exercise-like"><h4 class="heading hide-type" title="Task 5.1.4.1.a"><a href="section-differentiability.html#problem-the-quotient-rule-4" aria-label="Back to 5.1.4.1.a"><span class="codenumber">5.1.4.1.a</span></a></h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(r \colon \R \setminus \set{ 0 } \to \R \setminus \set{ 0 } \)</span> be the function defined by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r \of{ x } = \frac{ 1 }{ x }\text{.}
+\end{equation*}
+</div>
+<div class="para">Show that <span class="process-math">\(r \)</span> is differentiable, with derivative</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r' \of{ x } = -\frac{ 1 }{ x^{ 2 } }
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-the-quotient-rule-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 5.1.4.1.b"><a href="section-differentiability.html#problem-the-quotient-rule-5" aria-label="Back to 5.1.4.1.b"><span class="codenumber">5.1.4.1.b</span></a></h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(g \colon X \to \R \setminus \set{ 0 } \)</span> be a non-zero real-valued function defined on a subset <span class="process-math">\(X \subseteq \R \text{.}\)</span> Prove that if <span class="process-math">\(g \)</span> is differentiable at a point <span class="process-math">\(c \in X \cap X' \text{,}\)</span> then <span class="process-math">\(\frac{ 1 }{ g } \)</span> is differentiable at <span class="process-math">\(c \text{,}\)</span> with derivative</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\of{ \frac{ 1 }{ g } }' \of{ c } = -\frac{ g' \of{ c } }{ g \of{ c }^{ 2 } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-the-quotient-rule-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 5.1.4.1.c"><a href="section-differentiability.html#problem-the-quotient-rule-6" aria-label="Back to 5.1.4.1.c"><span class="codenumber">5.1.4.1.c</span></a></h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(f , g \colon X \to \R \)</span> be real-valued functions defined on a subset <span class="process-math">\(X \subseteq \R \text{.}\)</span> Prove that if <span class="process-math">\(g \of{ x } \neq 0 \)</span> for all points <span class="process-math">\(x \in X \)</span> and <span class="process-math">\(f \)</span> and <span class="process-math">\(g \)</span> are differentiable at a point <span class="process-math">\(c \in X \cap X' \text{,}\)</span> then <span class="process-math">\(\frac{ f }{ g } \)</span> is differentiable at <span class="process-math">\(c \text{,}\)</span> with derivative</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\of{ \frac{ f }{ g } }' \of{ c } = \frac{ f' \of{ c } g \of{ c } - f \of{ c } g' \of{ c } }{ g \of{ c }^{ 2 } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-the-quotient-rule-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article>
+<div class="conclusion">
+<div class="para">The result proven in (c) above is usually called the <dfn class="terminology">quotient rule</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-the-quotient-rule-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-differentiability.html#problem-the-power-rule" aria-label="Back to 5.1.4.2. The power rule."><span class="codenumber">5.1.4.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The power rule.</span></a></h3>
+<div class="introduction">
+<div class="para">For each real number <span class="process-math">\(p \in \R \text{,}\)</span> consider the power function <span class="process-math">\(f_{ p } \colon \opint{ 0 }{ \infty } \to \R \)</span> defined by the formula <span class="process-math">\(f_{ p } \of{ x } = x^{ p } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-the-power-rule-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="exercise-like"><h4 class="heading hide-type" title="Task 5.1.4.2.a"><a href="section-differentiability.html#problem-the-power-rule-4" aria-label="Back to 5.1.4.2.a"><span class="codenumber">5.1.4.2.a</span></a></h4>
+<div class="para logical">
+<div class="para">Prove that for each natural number <span class="process-math">\(n \in \N \text{,}\)</span> <span class="process-math">\(f_{ n } \)</span> is differentiable, with derivative</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f_{ n }' \of{ x } = n x^{ n - 1 }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-the-power-rule-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 5.1.4.2.b"><a href="section-differentiability.html#problem-the-power-rule-5" aria-label="Back to 5.1.4.2.b"><span class="codenumber">5.1.4.2.b</span></a></h4>
+<div class="para">Show that for any integer <span class="process-math">\(n \in \Z \text{,}\)</span> <span class="process-math">\(f_{ n } \)</span> is differentiable, with derivative <span class="process-math">\(f_{ n }' \of{ x } = n x^{ n - 1 } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-the-power-rule-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 5.1.4.2.c"><a href="section-differentiability.html#problem-the-power-rule-6" aria-label="Back to 5.1.4.2.c"><span class="codenumber">5.1.4.2.c</span></a></h4>
+<div class="para">Show that for any rational number <span class="process-math">\(p \in \Q \)</span> that if <span class="process-math">\(f_{ p } \)</span> is differentiable, then its derivative is <span class="process-math">\(f_{ p }' \of{ x } = p x^{ p - 1 } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-the-power-rule-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article>
+<div class="conclusion">
+<div class="para">The rules proven above also hold for irrational powers, although we will require additional machinery in order to prove this final extension. In general, this is called the <dfn class="terminology">power rule</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-the-power-rule-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-differentiability.html#problem-derivatives-of-trigonometric-functions" aria-label="Back to 5.1.4.3. Derivatives of trigonometric functions."><span class="codenumber">5.1.4.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivatives of trigonometric functions.</span></a></h3>
+<div class="introduction">
+<div class="para">Text before the parts.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-derivatives-of-trigonometric-functions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="exercise-like"><h4 class="heading hide-type" title="Task 5.1.4.3.a"><a href="section-differentiability.html#problem-derivatives-of-trigonometric-functions-3" aria-label="Back to 5.1.4.3.a"><span class="codenumber">5.1.4.3.a</span></a></h4>
+<div class="para logical">
+<div class="para">Compute the limits</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{ \theta \to 0 }{ \frac{ \sin \of{ \theta } }{ \theta } }
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{ \theta \to 0 }{ \frac{ \cos \of{ \theta } - 1 }{ \theta } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-derivatives-of-trigonometric-functions-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 5.1.4.3.b"><a href="section-differentiability.html#problem-derivatives-of-trigonometric-functions-4" aria-label="Back to 5.1.4.3.b"><span class="codenumber">5.1.4.3.b</span></a></h4>
+<div class="para">Show that the trigonometric function <span class="process-math">\(\sin \of{ x } \)</span> is differentiable, with derivative <span class="process-math">\(\cos \of{ x } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-derivatives-of-trigonometric-functions-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 5.1.4.3.c"><a href="section-differentiability.html#problem-derivatives-of-trigonometric-functions-5" aria-label="Back to 5.1.4.3.c"><span class="codenumber">5.1.4.3.c</span></a></h4>
+<div class="para">Show that the trigonometric function <span class="process-math">\(\cos \of{ x } \)</span> is differentiable, with derivative <span class="process-math">\(-\sin \of{ x } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-derivatives-of-trigonometric-functions-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 5.1.4.3.d"><a href="section-differentiability.html#problem-derivatives-of-trigonometric-functions-6" aria-label="Back to 5.1.4.3.d"><span class="codenumber">5.1.4.3.d</span></a></h4>
+<div class="para">Show that the trigonometric function <span class="process-math">\(\tan \of{ x } \)</span> is differentiable, with derivative <span class="process-math">\(\frac{ 1 }{ \cos^{ 2 } \of{ x } } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-derivatives-of-trigonometric-functions-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article></article><h2 class="heading hide-type" title="Exercises 5.2.3: Exercises">
+<span class="codenumber">5.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Analysis of Critical Points</span><br><span class="codenumber">5.2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h2>
+<div class="exercisegroup">
+<div class="introduction">
+<div class="para">Give examples of differentiable functions which satisfy the given conditions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-examples-of-critical-points-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like"><h3 class="heading"><a href="section-analysis-of-critical-points.html#exercise-examples-of-critical-points-3" aria-label="Back to 5.2.3.1."><span class="codenumber">5.2.3.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para">Give an example of a differentiable function which has a single critical point which is not a local extremum.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-examples-of-critical-points-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">The function <span class="process-math">\(f \of{ x } = x^{ 3 } \)</span> has a single critical point which is not a local extremum.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-examples-of-critical-points-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.2.3.1.1"><a tabindex="-1" href="#exercise-examples-of-critical-points-3-2" title="Copy heading and permalink for Answer 5.2.3.1.1" aria-label="Copy heading and permalink for Answer 5.2.3.1.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-analysis-of-critical-points.html#exercise-examples-of-critical-points-4" aria-label="Back to 5.2.3.2."><span class="codenumber">5.2.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para">Give an example of a differentiable function which attains a local minimum but no global minima.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-examples-of-critical-points-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">The function <span class="process-math">\(f \of{ x } = x \sin \of{ x } \)</span> attains a local minimum at <span class="process-math">\(0 \)</span> but no global minima.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-examples-of-critical-points-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.2.3.2.1"><a tabindex="-1" href="#exercise-examples-of-critical-points-4-2" title="Copy heading and permalink for Answer 5.2.3.2.1" aria-label="Copy heading and permalink for Answer 5.2.3.2.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-analysis-of-critical-points.html#exercise-examples-of-critical-points-5" aria-label="Back to 5.2.3.3."><span class="codenumber">5.2.3.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para">Give an example of a differentiable function which has no critical points.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-examples-of-critical-points-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">The function <span class="process-math">\(f \of{ x } = x \)</span> has no critical points<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-examples-of-critical-points-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.2.3.3.1"><a tabindex="-1" href="#exercise-examples-of-critical-points-5-2" title="Copy heading and permalink for Answer 5.2.3.3.1" aria-label="Copy heading and permalink for Answer 5.2.3.3.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-analysis-of-critical-points.html#exercise-examples-of-critical-points-6" aria-label="Back to 5.2.3.4."><span class="codenumber">5.2.3.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para">Give an example of a differentiable function which has exactly one critical point but no global extrema.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-examples-of-critical-points-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">The function <span class="process-math">\(f \of{ x } = x^{ 3 } \)</span> has a critical point at <span class="process-math">\(0 \)</span> but no global extrema.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-examples-of-critical-points-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.2.3.4.1"><a tabindex="-1" href="#exercise-examples-of-critical-points-6-2" title="Copy heading and permalink for Answer 5.2.3.4.1" aria-label="Copy heading and permalink for Answer 5.2.3.4.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-analysis-of-critical-points.html#exercise-examples-of-critical-points-7" aria-label="Back to 5.2.3.5."><span class="codenumber">5.2.3.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para">Give an example of a differentiable function which attains infinitely many global extrema.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-examples-of-critical-points-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">The function <span class="process-math">\(f \of{ x } = \sin \of{ x } \)</span> attains a global extremum at each integer multiple of <span class="process-math">\(\pi \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-examples-of-critical-points-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.2.3.5.1"><a tabindex="-1" href="#exercise-examples-of-critical-points-7-2" title="Copy heading and permalink for Answer 5.2.3.5.1" aria-label="Copy heading and permalink for Answer 5.2.3.5.1">🔗</a></div>
+</div></details>
+</div></article>
+</div>
+</div>
+<h2 class="heading hide-type" title="Reading Questions 5.2.4: Problems">
+<span class="codenumber">5.2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
+</h2>
+<article class="exercise-like"><h3 class="heading"><a href="section-analysis-of-critical-points.html#problem-misconceptions-about-critical-points" aria-label="Back to 5.2.4.1. Misconceptions about critical points."><span class="codenumber">5.2.4.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Misconceptions about critical points.</span></a></h3>
+<div class="introduction">
+<div class="para">Let <span class="process-math">\(f \colon X \to \R \)</span> be a real-valued function defined on an interval <span class="process-math">\(X \subseteq \R \text{.}\)</span> <em class="alert">The following statements are false!</em> Explain why the statement is incorrect, and disprove them by providing a counterexample.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-misconceptions-about-critical-points-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="exercise-like"><h4 class="heading hide-type" title="Task 5.2.4.1.a"><a href="section-analysis-of-critical-points.html#problem-misconceptions-about-critical-points-3" aria-label="Back to 5.2.4.1.a"><span class="codenumber">5.2.4.1.a</span></a></h4>
+<div class="para">If <span class="process-math">\(f \)</span> attains a local extremum at a point <span class="process-math">\(c \in X \text{,}\)</span> then <span class="process-math">\(c \)</span> is a critical point of <span class="process-math">\(f \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-misconceptions-about-critical-points-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 5.2.4.1.b"><a href="section-analysis-of-critical-points.html#problem-misconceptions-about-critical-points-4" aria-label="Back to 5.2.4.1.b"><span class="codenumber">5.2.4.1.b</span></a></h4>
+<div class="para">If a point <span class="process-math">\(c \in X \)</span> is a critical point of <span class="process-math">\(f \text{,}\)</span> then <span class="process-math">\(f \)</span> attains a local extremum at <span class="process-math">\(c \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-misconceptions-about-critical-points-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 5.2.4.1.c"><a href="section-analysis-of-critical-points.html#problem-misconceptions-about-critical-points-5" aria-label="Back to 5.2.4.1.c"><span class="codenumber">5.2.4.1.c</span></a></h4>
+<div class="para">If a point <span class="process-math">\(c \in X \)</span> is a regular point of <span class="process-math">\(f \text{,}\)</span> then <span class="process-math">\(c \)</span> has a neighborhood in <span class="process-math">\(X \)</span> on which <span class="process-math">\(f \)</span> is monotone.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-misconceptions-about-critical-points-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 5.2.4.1.d"><a href="section-analysis-of-critical-points.html#problem-misconceptions-about-critical-points-6" aria-label="Back to 5.2.4.1.d"><span class="codenumber">5.2.4.1.d</span></a></h4>
+<div class="para">
+<span class="process-math">\(f \)</span> is strictly monotone if and only if <span class="process-math">\(f \)</span> has no critical points.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-misconceptions-about-critical-points-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article></article><h2 class="heading hide-type" title="Exercises 5.3.3: Exercises">
+<span class="codenumber">5.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applications of the Mean Value Theorem</span><br><span class="codenumber">5.3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h2>
+<div class="exercisegroup">
+<div class="introduction">
+<div class="para">Determine whether the given function satisfies the hypotheses and conclusions of the <a href="section-applications-of-the-mean-value-theorem.html#theorem-mean-value-theorem" class="xref" data-knowl="./knowl/xref/theorem-mean-value-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.3.2: Mean value theorem">Mean value theorem</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-hypotheses-and-conclusions-of-the-mean-value-theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like"><h3 class="heading"><a href="section-applications-of-the-mean-value-theorem.html#exercise-hypotheses-and-conclusions-of-the-mean-value-theorem-3" aria-label="Back to 5.3.3.1."><span class="codenumber">5.3.3.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="introduction">
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(f \colon \clint{ 0 }{ 1 } \to \R \)</span> be the real-valued function defined on the interval <span class="process-math">\(\clint{ 0 }{ 1 } \)</span> by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f \of{ x } = \sqrt[ 3 ]{ x^{ 2 } - x }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-hypotheses-and-conclusions-of-the-mean-value-theorem-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="exercise-like"><h4 class="heading hide-type" title="Task 5.3.3.1.a"><a href="section-applications-of-the-mean-value-theorem.html#exercise-hypotheses-and-conclusions-of-the-mean-value-theorem-3-2" aria-label="Back to 5.3.3.1.a"><span class="codenumber">5.3.3.1.a</span></a></h4>
+<div class="para">Determine whether or not <span class="process-math">\(f \)</span> satisfies the hypotheses of the <a href="section-applications-of-the-mean-value-theorem.html#theorem-mean-value-theorem" class="xref" data-knowl="./knowl/xref/theorem-mean-value-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.3.2: Mean value theorem">Mean value theorem</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-hypotheses-and-conclusions-of-the-mean-value-theorem-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">Yes, <span class="process-math">\(f \)</span> satisfies the hypotheses of the <a href="section-applications-of-the-mean-value-theorem.html#theorem-mean-value-theorem" class="xref" data-knowl="./knowl/xref/theorem-mean-value-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.3.2: Mean value theorem">Mean value theorem</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-hypotheses-and-conclusions-of-the-mean-value-theorem-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.3.3.1.a.1"><a tabindex="-1" href="#exercise-hypotheses-and-conclusions-of-the-mean-value-theorem-3-2-2" title="Copy heading and permalink for Answer 5.3.3.1.a.1" aria-label="Copy heading and permalink for Answer 5.3.3.1.a.1">🔗</a></div>
+</div></details>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 5.3.3.1.b"><a href="section-applications-of-the-mean-value-theorem.html#exercise-hypotheses-and-conclusions-of-the-mean-value-theorem-3-3" aria-label="Back to 5.3.3.1.b"><span class="codenumber">5.3.3.1.b</span></a></h4>
+<div class="para logical">
+<div class="para">Determine whether or not <span class="process-math">\(f \)</span> satisfies the conclusions of the <a href="section-applications-of-the-mean-value-theorem.html#theorem-mean-value-theorem" class="xref" data-knowl="./knowl/xref/theorem-mean-value-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.3.2: Mean value theorem">Mean value theorem</a>. If so, find a point <span class="process-math">\(0 \lt c \lt 1 \)</span> for which</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-mean-value-theorem.html">
+\begin{equation*}
+f' \of{ c } = \frac{ f \of{ 1 } - f \of{ 0 } }{ 1 - 0 }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-hypotheses-and-conclusions-of-the-mean-value-theorem-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">Yes, <span class="process-math">\(f \)</span> satisfies the conclusions of the <a href="section-applications-of-the-mean-value-theorem.html#theorem-mean-value-theorem" class="xref" data-knowl="./knowl/xref/theorem-mean-value-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.3.2: Mean value theorem">Mean value theorem</a>. We may choose <span class="process-math">\(c = \frac{ 1 }{ 2 } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-hypotheses-and-conclusions-of-the-mean-value-theorem-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.3.3.1.b.1"><a tabindex="-1" href="#exercise-hypotheses-and-conclusions-of-the-mean-value-theorem-3-3-2" title="Copy heading and permalink for Answer 5.3.3.1.b.1" aria-label="Copy heading and permalink for Answer 5.3.3.1.b.1">🔗</a></div>
+</div></details>
+</div></article></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-applications-of-the-mean-value-theorem.html#exercise-hypotheses-and-conclusions-of-the-mean-value-theorem-4" aria-label="Back to 5.3.3.2."><span class="codenumber">5.3.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="introduction">
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(g \colon \clint{ -1 }{ 1 } \to \R \)</span> be the real-valued function defined on the interval <span class="process-math">\(\clint{ 0 }{ 1 } \)</span> by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g \of{ x } = x^{ \frac{ 3 }{ 5 } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-hypotheses-and-conclusions-of-the-mean-value-theorem-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="exercise-like"><h4 class="heading hide-type" title="Task 5.3.3.2.a"><a href="section-applications-of-the-mean-value-theorem.html#exercise-hypotheses-and-conclusions-of-the-mean-value-theorem-4-2" aria-label="Back to 5.3.3.2.a"><span class="codenumber">5.3.3.2.a</span></a></h4>
+<div class="para">Determine whether or not <span class="process-math">\(g \)</span> satisfies the hypotheses of the <a href="section-applications-of-the-mean-value-theorem.html#theorem-mean-value-theorem" class="xref" data-knowl="./knowl/xref/theorem-mean-value-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.3.2: Mean value theorem">Mean value theorem</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-hypotheses-and-conclusions-of-the-mean-value-theorem-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">No, <span class="process-math">\(g \)</span> does not satisfy the hypotheses of the <a href="section-applications-of-the-mean-value-theorem.html#theorem-mean-value-theorem" class="xref" data-knowl="./knowl/xref/theorem-mean-value-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.3.2: Mean value theorem">Mean value theorem</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-hypotheses-and-conclusions-of-the-mean-value-theorem-4-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.3.3.2.a.1"><a tabindex="-1" href="#exercise-hypotheses-and-conclusions-of-the-mean-value-theorem-4-2-2" title="Copy heading and permalink for Answer 5.3.3.2.a.1" aria-label="Copy heading and permalink for Answer 5.3.3.2.a.1">🔗</a></div>
+</div></details>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 5.3.3.2.b"><a href="section-applications-of-the-mean-value-theorem.html#exercise-hypotheses-and-conclusions-of-the-mean-value-theorem-4-3" aria-label="Back to 5.3.3.2.b"><span class="codenumber">5.3.3.2.b</span></a></h4>
+<div class="para logical">
+<div class="para">Determine whether or not <span class="process-math">\(g \)</span> satisfies the conclusions of the <a href="section-applications-of-the-mean-value-theorem.html#theorem-mean-value-theorem" class="xref" data-knowl="./knowl/xref/theorem-mean-value-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.3.2: Mean value theorem">Mean value theorem</a>. If so, find a point <span class="process-math">\(-1 \lt c \lt 1 \)</span> for which</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-mean-value-theorem.html">
+\begin{equation*}
+g' \of{ c } = \frac{ g \of{ 1 } - g \of{ -1 } }{ 1 - \of{ -1 } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-hypotheses-and-conclusions-of-the-mean-value-theorem-4-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">Yes, <span class="process-math">\(g \)</span> satisfies the conclusions of the <a href="section-applications-of-the-mean-value-theorem.html#theorem-mean-value-theorem" class="xref" data-knowl="./knowl/xref/theorem-mean-value-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.3.2: Mean value theorem">Mean value theorem</a>. We may choose <span class="process-math">\(c = \pm \of{ \frac{ 3 }{ 5 } }^{ \frac{ 5 }{ 2 } } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-hypotheses-and-conclusions-of-the-mean-value-theorem-4-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.3.3.2.b.1"><a tabindex="-1" href="#exercise-hypotheses-and-conclusions-of-the-mean-value-theorem-4-3-2" title="Copy heading and permalink for Answer 5.3.3.2.b.1" aria-label="Copy heading and permalink for Answer 5.3.3.2.b.1">🔗</a></div>
+</div></details>
+</div></article></article>
+</div>
+</div>
+<h2 class="heading hide-type" title="Reading Questions 5.3.4: Problems">
+<span class="codenumber">5.3.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
+</h2>
+<article class="exercise-like"><h3 class="heading"><a href="section-applications-of-the-mean-value-theorem.html#problem-functions-with-the-same-derivative" aria-label="Back to 5.3.4.1. Functions with the same derivative."><span class="codenumber">5.3.4.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Functions with the same derivative.</span></a></h3>
+<article class="exercise-like"><h4 class="heading hide-type" title="Task 5.3.4.1.a"><a href="section-applications-of-the-mean-value-theorem.html#problem-functions-with-the-same-derivative-2" aria-label="Back to 5.3.4.1.a"><span class="codenumber">5.3.4.1.a</span></a></h4>
+<div class="para">Let <span class="process-math">\(f \colon X \to \R \)</span> be a differentiable real-valued function defined on an interval <span class="process-math">\(X \text{.}\)</span> Prove that if <span class="process-math">\(f' \of{ x } = 0 \)</span> for all <span class="process-math">\(x \in X \text{,}\)</span> then <span class="process-math">\(f \)</span> is constant.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-functions-with-the-same-derivative-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 5.3.4.1.b"><a href="section-applications-of-the-mean-value-theorem.html#problem-functions-with-the-same-derivative-3" aria-label="Back to 5.3.4.1.b"><span class="codenumber">5.3.4.1.b</span></a></h4>
+<div class="para">Let <span class="process-math">\(f , g \colon X \to \R \)</span> be differentiable real-valued functions defined on an interval <span class="process-math">\(X \text{.}\)</span> Prove that if <span class="process-math">\(f' \of{ x } = g' \of{ x } \)</span> for all <span class="process-math">\(x \in X \text{,}\)</span> then <span class="process-math">\(f \)</span> and <span class="process-math">\(g \)</span> differ by a constant.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-functions-with-the-same-derivative-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article>
+<div class="conclusion">
+<div class="para">The above result will be important in <a href="chapter-riemann-integration.html" class="internal" title="Chapter 6: Riemann Integration">Chapter 6 Riemann Integration</a>, where we will use it to compare two anti-derivatives of the same continuous function on a closed interval.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-functions-with-the-same-derivative-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-applications-of-the-mean-value-theorem.html#problem-differentiability-and-lipschitz-continuity" aria-label="Back to 5.3.4.2. Differentiability and Lipschitz continuity."><span class="codenumber">5.3.4.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Differentiability and Lipschitz continuity.</span></a></h3>
+<div class="para">Let <span class="process-math">\(f \colon X \to \R \)</span> be a differentiable real-valued function defined on an interval <span class="process-math">\(X \subseteq \R \text{.}\)</span> Prove that <span class="process-math">\(f \)</span> is Lipschitz continuous if and only if its derivative <span class="process-math">\(f' \)</span> is bounded.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-differentiability-and-lipschitz-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><h2 class="heading hide-type" title="Reading Questions 5.4.4: Problems">
+<span class="codenumber">5.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Higher Order Approximations</span><br><span class="codenumber">5.4.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
+</h2>
+<article class="exercise-like"><h3 class="heading"><a href="section-higher-order-approximations.html#problem-taylor-approximations-of-non-analytic-functions" aria-label="Back to 5.4.4.1. Taylor approximations of non-analytic functions."><span class="codenumber">5.4.4.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Taylor approximations of non-analytic functions.</span></a></h3>
+<div class="introduction">
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(f \colon \R \to \R \)</span> be the real-valued function defined piecewise by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f \of{ x } =
+\begin{cases}
+e^{ -\frac{ 1 }{ x^{ 2 } } } \amp x \gt 0 \\
+0 \amp x \leq 0
+\text{.}\end{cases}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-taylor-approximations-of-non-analytic-functions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="exercise-like"><h4 class="heading hide-type" title="Task 5.4.4.1.a"><a href="section-higher-order-approximations.html#problem-taylor-approximations-of-non-analytic-functions-3" aria-label="Back to 5.4.4.1.a"><span class="codenumber">5.4.4.1.a</span></a></h4>
+<div class="para">Prove that <span class="process-math">\(u^{ \frac{ n }{ 2 } } \prec e^{ u } \)</span> as <span class="process-math">\(u \to \infty \)</span> for all natural numbers <span class="process-math">\(n \in \N \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-taylor-approximations-of-non-analytic-functions-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 5.4.4.1.b"><a href="section-higher-order-approximations.html#problem-taylor-approximations-of-non-analytic-functions-4" aria-label="Back to 5.4.4.1.b"><span class="codenumber">5.4.4.1.b</span></a></h4>
+<div class="para">Prove that <span class="process-math">\(f \of{ x } \prec x^{ n } \)</span> as <span class="process-math">\(x \to 0 \)</span> for all natural numbers <span class="process-math">\(n \in \N \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-taylor-approximations-of-non-analytic-functions-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 5.4.4.1.c"><a href="section-higher-order-approximations.html#problem-taylor-approximations-of-non-analytic-functions-5" aria-label="Back to 5.4.4.1.c"><span class="codenumber">5.4.4.1.c</span></a></h4>
+<div class="para">Compute all Taylor approximations <span class="process-math">\(P_{ 0 }^{ n } \of{ f , x } \)</span> of <span class="process-math">\(f \)</span> near <span class="process-math">\(0 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-taylor-approximations-of-non-analytic-functions-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 5.4.4.1.d"><a href="section-higher-order-approximations.html#problem-taylor-approximations-of-non-analytic-functions-6" aria-label="Back to 5.4.4.1.d"><span class="codenumber">5.4.4.1.d</span></a></h4>
+<div class="para">Let <span class="process-math">\(g \in \CDiff^{ \infty } \of{ X } \)</span> be a smooth function defined on an interval <span class="process-math">\(X \subseteq \R \text{.}\)</span> If there is a point <span class="process-math">\(c \in X \)</span> so that <span class="process-math">\(g^{ \of{ n } } \of{ c } = 0 \)</span> for all positive integers <span class="process-math">\(n \geq 1 \text{,}\)</span> can we conclude that <span class="process-math">\(g \)</span> is constant on a neighborhood of <span class="process-math">\(c \text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-taylor-approximations-of-non-analytic-functions-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article>
+<div class="conclusion">
+<div class="para">
+<span class="process-math">\(f \)</span> is our first example of a smooth function which is not <dfn class="terminology">analytic</dfn>. We will explore these functions more in <a href="chapter-infinite-series.html" class="internal" title="Chapter 7: Infinite Series">Chapter 7 Infinite Series</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-taylor-approximations-of-non-analytic-functions-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></article><div class="autopermalink" aria-hidden="true" data-description="Appendix A: Selected Solutions"><a tabindex="-1" href="#solutions" title="Copy heading and permalink for Appendix A: Selected Solutions" aria-label="Copy heading and permalink for Appendix A: Selected Solutions">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-differentiability-and-lipschitz-continuity" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Differentiability and Lipschitz continuity
+  </title>
+  
+  <statement>
+    <p>
+      Let <m> f \colon X \to \R </m> be a differentiable real-valued function defined on an interval <m> X \subseteq \R </m>. Prove that <m> f </m> is Lipschitz continuous if and only if its derivative <m> f' </m> is bounded.
+    </p>
+  </statement>
+  
+  <!-- <solution>
+    <p>
+      First suppose that <m> f </m> is Lipschitz continuous. Then there is some non-negative real number <m> L \geq 0 </m> so that
+      
+      <md>
+        d \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \leq L d \of{ x_{ 1 } , x_{ 2 } }
+      </md>
+      
+      for all points <m> x_{ 1 } , x_{ 2 } \in X </m>. Let <m> c \in X </m>. Then for any point <m> x \in X \setminus \set{ c } </m>,
+      
+      <md>
+        <mrow>
+          \abs{ \frac{ f \of{ x } - f \of{ c } }{ x - c } } \amp = \frac{ \abs{ f \of{ x } - f \of{ c } } }{ \abs{ x - c } } = \frac{ d \of{ f \of{ x } , f \of{ c } } }{ d \of{ x , c } }
+        </mrow>
+        
+        <mrow>
+          \amp \leq \frac{ L d \of{ x , c } }{ d \of{ x , c } } = L
+        </mrow>
+      </md>,
+      
+      and so <m> -L \leq \frac{ f \of{ x } - f \of{ c } }{ x - c } \leq L </m>. <xref ref="proposition-comparison-of-limits"/> implies that <m> -L \leq f' \of{ c } \leq L </m>. Since this holds for all <m> c \in X </m>, we conclude that <m> f' </m> is bounded.
+    </p>
+    
+    <p>
+      Conversely, now suppose that <m> f' </m> is bounded. Then there is a non-negative real number <m> L \geq 0 </m> so that <m> -L \leq f' \of{ x } \leq L </m> for all points <m> x \in X </m>. We will show that <m> d \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \leq L d \of{ x_{ 1 } , x_{ 2 } } </m> for all points <m> x_{ 1 } , x_{ 2 } \in X </m>. Indeed, suppose for a contradiction that <m> d \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \gt L d \of{ x_{ 1 } , x_{ 2 } } </m> for some points <m> x_{ 1 } , x_{ 2 } \in X </m>. Clearly <m> x_{ 1 } \neq x_{ 2 } </m>, or both <m> d \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } </m> and <m> d \of{ x_{ 1 } , x_{ 2 } } </m> would be <m> 0 </m>. Without loss of generality <m> x_{ 1 } \gt x_{ 2 } </m>.
+    </p>
+    
+    <p>
+      Since <m> f </m> is continuous on <m> \clint{ x_{ 1 } }{ x_{ 2 } } </m> and differentiable on <m> \opint{ x_{ 1 } }{ x_{ 2 } } </m>, the <xref ref="theorem-mean-value-theorem" text="title"/> implies that
+      
+      <md>
+        f' \of{ c } = \frac{ f \of{ x_{ 1 } } - f \of{ x_{ 2 } } }{ x_{ 1 } - x_{ 2 } }
+      </md>
+      
+      for some interior point <m> c \in \opint{ x_{ 1 } }{ x_{ 2 } } </m>. We observe that
+      
+      <md>
+        <mrow>
+          \abs{ f' \of{ c } } \amp = \abs{ \frac{ f \of{ x_{ 1 } } - f \of{ x_{ 2 } } }{ x_{ 1 } - x_{ 2 } } } = \frac{ \abs{ f \of{ x_{ 1 } } - f \of{ x_{ 2 } } } }{ \abs{ x_{ 1 } - x_{ 2 } } } 
+        </mrow>
+        
+        <mrow>
+          \amp = \frac{ d \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } }{ d \of{ x_{ 1 } , x_{ 2 } } } \gt \frac{ L d \of{ x_{ 1 } , x_{ 2 } } }{ d \of{ x_{ 1 } , x_{ 2 } } } = L
+        </mrow>
+      </md>.
+      
+      This contradiction implies that <m> d \of{ f \of{ x_{ 1 } } , f \of{ x_{ 2 } } } \leq L d \of{ x_{ 1 } , x_{ 2 } } </m> for all points <m> x_{ 1 } , x_{ 2 } \in X </m>; that is, <m> f </m> is Lipschitz continuous.
+    </p>
+  </solution> -->
+</exercise>

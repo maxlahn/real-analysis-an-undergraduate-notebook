@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-the-quotient-rule" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    The quotient rule
+  </title>
+  
+  <introduction>
+    <p>
+      In this problem, we complete <xref ref="proposition-arithmetic-of-differentiable-functions"/> to address the quotient of two differentiable functions.
+    </p>
+  </introduction>
+  
+  <idx>
+    quotient rule
+  </idx>
+  
+  <task>
+    <statement>
+      <p>
+        Let <m> r \colon \R \setminus \set{ 0 } \to \R \setminus \set{ 0 } </m> be the function defined by the formula
+        
+        <md>
+          r \of{ x } = \frac{ 1 }{ x }
+        </md>.
+        
+        Show that <m> r </m> is differentiable, with derivative
+        
+        <md>
+          r' \of{ x } = -\frac{ 1 }{ x^{ 2 } }
+        </md>
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        Fix <m> c \in \R \setminus \set{ 0 } </m>. Let <m> \epsilon \gt 0 </m> be a positive real number, and consider the positive real number
+        
+        <md>
+          \delta = \min \of{ \set{ \frac{ \abs{ c } }{ 2 } , \frac{ \epsilon \abs{ c }^{ 3 } }{ 2 } } } \gt 0
+        </md>.
+        
+        We observe that
+        
+        <md>
+          <mrow>
+            \abs{ \frac{ r \of{ x } - r \of{ c } }{ x - c } -\of{ -\frac{ 1 }{ c^{ 2 } } } } \amp = \abs{ \frac{ \frac{ 1 }{ x } - \frac{ 1 }{ c } }{ x - c } + \frac{ 1 }{ c^{ 2 } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \abs{ \frac{ 1 }{ c^{ 2 } } - \frac{ x - c }{ x c \of{ x - c } } } = \abs{ \frac{ 1 }{ c^{ 2 } } - \frac{ 1 }{ x c } }
+          </mrow>
+          
+          <mrow>
+            \amp = \abs{ \frac{ x - c }{ x c^{ 2 } } } = \frac{ \abs{ x - c } }{ \abs{ x } \cdot \abs{ c }^{ 2 } }
+          </mrow>
+          
+          <mrow>
+            \amp \lt \frac{ 2 \delta }{ \abs{ c }^{ 3 } } \leq \epsilon
+          </mrow>
+        </md>
+        
+        for all points <m> x \in \R \setminus \set{ 0 } </m> so that <m> 0 \lt \abs{ x - c } \lt \delta </m>. We conclude that <m> r </m> is differentiable at <m> c </m>, with derivative <m> r' \of{ c } = -\frac{ 1 }{ c^{ 2 } } </m>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Let <m> g \colon X \to \R \setminus \set{ 0 } </m> be a non-zero real-valued function defined on a subset <m> X \subseteq \R </m>. Prove that if <m> g </m> is differentiable at a point <m> c \in X \cap X' </m>, then <m> \frac{ 1 }{ g } </m> is differentiable at <m> c </m>, with derivative
+        
+        <md>
+          \of{ \frac{ 1 }{ g } }' \of{ c } = -\frac{ g' \of{ c } }{ g \of{ c }^{ 2 } }
+        </md>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        Since <m> g \of{ c } \neq 0 </m>, <m> r </m> is differentiable at <m> g \of{ c } </m>. Since <m> g </m> is differentiable at <m> c </m>, the <xref ref="theorem-chain-rule" text="title"/> implies that the composition <m> r \circ g = \frac{ 1 }{ g } </m> is differentiable at <m> c </m>, with derivative,
+        
+        <md>
+          \of{ \frac{ 1 }{ g } }' \of{ c } = \of{ r \circ g }' \of{ c } = r' \of{ g \of{ c } } \cdot g' \of{ c } = \of{ -\frac{ 1 }{ g \of{ c }^{ 2 } } } g' \of{ c } = -\frac{ g' \of{ c } }{ g \of{ c }^{ 2 } }
+        </md>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Let <m> f , g \colon X \to \R </m> be real-valued functions defined on a subset <m> X \subseteq \R </m>. Prove that if <m> g \of{ x } \neq 0 </m> for all points <m> x \in X </m> and <m> f </m> and <m> g </m> are differentiable at a point <m> c \in X \cap X' </m>, then <m> \frac{ f }{ g } </m> is differentiable at <m> c </m>, with derivative
+        
+        <md>
+          \of{ \frac{ f }{ g } }' \of{ c } = \frac{ f' \of{ c } g \of{ c } - f \of{ c } g' \of{ c } }{ g \of{ c }^{ 2 } }
+        </md>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        Part (b) above and (2) of <xref ref="proposition-arithmetic-of-differentiable-functions"/> imply that <m> \frac{ f }{ g } = f \cdot \frac{ 1 }{ g } </m> is differentiable at <m> c </m>, with derivative
+        
+        <md>
+          <mrow>
+            \of{ \frac{ f }{ g } }' \of{ c } \amp = f' \of{ c } \of{ \frac{ 1 }{ g } } \of{ c } + f \of{ c } \of{ \frac{ 1 }{ g } }' \of{ c }
+          </mrow>
+          
+          <mrow>
+            \amp = f' \of{ c } \of{ \frac{ 1 }{ g \of{ c } } } + f \of{ c } \of{ -\frac{ g' \of{ c } }{ g \of{ c }^{ 2 } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ f' \of{ c } }{ g \of{ c } } - \frac{ f \of{ c } g' \of{ c } }{ g \of{ c }^{ 2 } } = \frac{ f' \of{ c } g \of{ c } - f \of{ c } g' \of{ c } }{ g \of{ c }^{ 2 } }
+          </mrow>
+        </md>
+      </p>
+    </solution> -->
+  </task>
+  
+  <conclusion>
+    <p>
+      The result proven in (c) above is usually called the <term> quotient rule </term>.
+    </p>
+  </conclusion>
+</exercise>
