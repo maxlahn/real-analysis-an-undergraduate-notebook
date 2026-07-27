@@ -562,7 +562,7 @@
         
         <md>
           <mrow>
-            \int_{ a }^{ b }{ f \of{ x } \, \d{ x } } \amp = \lim_{ \of{ P , t } \uparrow }{ \mathcal{ R }_{ f } \of{ P , t } } = \lim_{ \of{ P , t } \uparrow }{ \sum_{ j = 1 }^{ m }{ a_{ j } \mathcal{ R }_{ f_{ j } } \of{ P , t } } }
+            \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } \amp = \lim_{ \of{ P , t } \uparrow }{ \mathcal{ R }_{ f } \of{ P , t } } = \lim_{ \of{ P , t } \uparrow }{ \sum_{ j = 1 }^{ m }{ a_{ j } \mathcal{ R }_{ f_{ j } } \of{ P , t } } }
           </mrow>
           
           <mrow>
@@ -593,7 +593,7 @@
         Let <m> f , g \colon \clint{ a }{ b } \to \R </m> be real-valued functions defined on a closed interval <m> \clint{ a }{ b } </m>. If <m> f </m> and <m> g </m> are Riemann integrable and <m> f \of{ x } \leq g \of{ x } </m> for all points <m> a \leq x \leq b </m>, then
         
         <md>
-          \int_{ a }^{ b }{ f \of{ x } \, \d{ x } } \leq \int_{ a }^{ b }{ g \of{ x } \, \d{ x } }
+          \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } \leq \int_{ a }^{ b }{ g \of{ x } \, \diff{ x } }
         </md>.
       </p>
     </statement>
