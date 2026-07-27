@@ -899,8 +899,8 @@ eBookConfig.enable_chatcodes =  false;
 <ul id="ptx-toc-group-section-the-fundamental-theorems-of-calculus" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#subsection-differentiating-riemann-integrals" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Differentiating Riemann Integrals</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#subsection-integrating-derivatives" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Integrating Derivatives</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#exercises-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#reading-questions-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#exercises-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#problems-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -1592,7 +1592,7 @@ g \of{ y } =
 \text{.}\end{cases}
 \end{equation*}
 </div>
-<div class="para">Let <span class="process-math">\(P = \of{ y_{ k } }_{ k = 0 }^{ n } \)</span> be a partition of <span class="process-math">\(\clint{ a }{ b } \text{.}\)</span> Then there is a unique index <span class="process-math">\(0 \leq j \lt n \)</span> so that <span class="process-math">\(y_{ j } \leq 1 \lt y_{ j + 1 } \text{.}\)</span> We observe that the restriction of <span class="process-math">\(g \)</span> to every other subinterval of the partition is constant, so that</div>
+<div class="para">Let <span class="process-math">\(P = \of{ y_{ k } }_{ k = 0 }^{ n } \)</span> be a partition of <span class="process-math">\(\clint{ 0 }{ 2 } \text{.}\)</span> Then there is a unique index <span class="process-math">\(0 \leq j \lt n \)</span> so that <span class="process-math">\(y_{ j } \leq 1 \lt y_{ j + 1 } \text{.}\)</span> We observe that the restriction of <span class="process-math">\(g \)</span> to every other subinterval of the partition is constant, so that</div>
 <div class="displaymath process-math" id="example-riemann-integrability-2-1-1-2-1-9">
 \begin{align*}
 \mathcal{ U }_{ g } \of{ P } - \mathcal{ L }_{ g } \of{ P } \amp = \sum_{ k = 0 }^{ n - 1 }{ \sup_{ y_{ k } \leq y \leq y_{ k + 1 } }{ g \of{ y } } \of{ y_{ k + 1 } - y_{ k } } } - \sum_{ k = 0 }^{ n - 1 }{ \inf_{ y_{ k } \leq y \leq y_{ k + 1 } }{ g \of{ y } } \of{ y_{ k + 1 } - y_{ k } } }\\
@@ -1797,7 +1797,7 @@ f = \sum_{ j = 1 }^{ m }{ a_{ j } f_{ j } }
 <div class="para">Let <span class="process-math">\(\of{ f_{ n } }_{ n = 0 }^{ \infty } \)</span> be a uniformly convergent sequence of real-valued functions <span class="process-math">\(f_{ n } \colon \clint{ a }{ b } \to \R \)</span> defined on a closed interval <span class="process-math">\(\clint{ a }{ b } \text{.}\)</span> If each <span class="process-math">\(f_{ n } \)</span> is Riemann integrable, then the uniform limit <span class="process-math">\(\uniflim_{ n \to \infty }{ f_{ n } } \)</span> is Riemann integrable, with Riemann integral</div>
 <div class="displaymath process-math" id="theorem-uniform-convergence-and-riemann-integrability-2-1-6">
 \begin{equation*}
-\int_{ a }^{ b }{ \uniflim_{ n \to \infty }{ f_{ n } } \of{ x } \, \diff{ x } } = \lim_{ n \to \infty }{ f_{ n } \of{ x } \, \diff{ x } }\text{.}
+\int_{ a }^{ b }{ \uniflim_{ n \to \infty }{ f_{ n } } \of{ x } \, \diff{ x } } = \lim_{ n \to \infty }{ \int_{ a }^{ b }{ f_{ n } \of{ x } \, \diff{ x } } }\text{.}
 \end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-uniform-convergence-and-riemann-integrability-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1937,7 +1937,7 @@ I_{ n } = \int_{ a }^{ b }{ f_{ n } \of{ x } \, \diff{ x } }
 <article class="exercise exercise-like" id="problem-more-on-integrability-and-continuity"><h3 class="heading">
 <span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">More on integrability and continuity.</span>
 </h3>
-<div class="para" id="problem-more-on-integrability-and-continuity-2-1">Let <span class="process-math">\(f \colon \clint{ a }{ b } \to \R \)</span> be a real-valued function defined on a closed interval. Prove that <span class="process-math">\(g \circ f \)</span> is Riemann integrable for any continuous real-valued function <span class="process-math">\(g \colon \R \to \R \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-more-on-integrability-and-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="problem-more-on-integrability-and-continuity-2-1">Let <span class="process-math">\(f \colon \clint{ a }{ b } \to \R \)</span> be a Riemann integrable real-valued function defined on a closed interval. Prove that <span class="process-math">\(g \circ f \)</span> is Riemann integrable for any continuous real-valued function <span class="process-math">\(g \colon \R \to \R \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-more-on-integrability-and-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
 <details id="problem-more-on-integrability-and-continuity-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>

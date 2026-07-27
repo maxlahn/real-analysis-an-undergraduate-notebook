@@ -41,7 +41,7 @@
 \mathcal{ U }_{ f } \of{ P } - \mathcal{ L }_{ f } \of{ P } \lt \epsilon
 \end{equation*}
 </div>
-<div class="para">for all refinements <span class="process-math">\(P \succeq P_{ \epsilon } \text{.}\)</span> Without loss of generality, we may suppose that <span class="process-math">\(b = x_{ j } \)</span> for some index <span class="process-math">\(0 \lt j \lt n \text{.}\)</span> Consider the partitions <span class="process-math">\(Q_{ \epsilon } = \of{ x_{ k } }_{ k = 0 }^{ j } \)</span> and <span class="process-math">\(R_{ \epsilon } = \of{ k = j }^{ n } \)</span> of <span class="process-math">\(\clint{ a }{ b } \)</span> and <span class="process-math">\(\clint{ b }{ c } \text{.}\)</span> We will show that the existence of <span class="process-math">\(Q_{ \epsilon } \)</span> and <span class="process-math">\(R_{ \epsilon } \)</span> imply the Riemann integrability of the restrictions of <span class="process-math">\(f \)</span> to <span class="process-math">\(\clint{ a }{ b } \)</span> and <span class="process-math">\(\clint{ b }{ c } \text{,}\)</span> respectively.</div>
+<div class="para">for all refinements <span class="process-math">\(P \succeq P_{ \epsilon } \text{.}\)</span> Without loss of generality, we may suppose that <span class="process-math">\(b = x_{ j } \)</span> for some index <span class="process-math">\(0 \lt j \lt n \text{.}\)</span> Consider the partitions <span class="process-math">\(Q_{ \epsilon } = \of{ x_{ k } }_{ k = 0 }^{ j } \)</span> and <span class="process-math">\(R_{ \epsilon } = \of{ k = j }^{ n } \)</span> of <span class="process-math">\(\clint{ a }{ b } \)</span> and <span class="process-math">\(\clint{ b }{ c } \text{.}\)</span> We will show that the existence of <span class="process-math">\(Q_{ \epsilon } \)</span> and <span class="process-math">\(R_{ \epsilon } \)</span> implies the Riemann integrability of the restrictions of <span class="process-math">\(f \)</span> to <span class="process-math">\(\clint{ a }{ b } \)</span> and <span class="process-math">\(\clint{ b }{ c } \text{,}\)</span> respectively.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-chasles-relation-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
@@ -53,7 +53,7 @@
 \amp = \mathcal{ U }_{ f } \of{ Q' } - \mathcal{ L }_{ f } \of{ Q' } \lt \epsilon\text{.}
 \end{align*}
 </div>
-<div class="para">Similarly, for any refinement <span class="process-math">\(R \succeq R_{ \epsilon } \text{,}\)</span> we may form a refinement <span class="process-math">\(Q' \succeq P_{ \epsilon } \)</span> by appending <span class="process-math">\(\of{ x_{ k } }_{ k = 0 }^{ j - 1 } \)</span> as a prefix. We observe that</div>
+<div class="para">Similarly, for any refinement <span class="process-math">\(R \succeq R_{ \epsilon } \text{,}\)</span> we may form a refinement <span class="process-math">\(R' \succeq P_{ \epsilon } \)</span> by appending <span class="process-math">\(\of{ x_{ k } }_{ k = 0 }^{ j - 1 } \)</span> as a prefix. We observe that</div>
 <div class="displaymath process-math">
 \begin{align*}
 \mathcal{ U }_{ f } \of{ R } - \mathcal{ L }_{ f } \of{ R } \amp = \sum_{ k = j }^{ n - 1 }{ \of{ \sup_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } - \inf_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } } \of{ x_{ k + 1 } - x_{ k } } }\\
@@ -89,7 +89,7 @@ I = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } + \int_{ b }^{ c }{ f \of{ x } 
 \delta \leq \frac{ \epsilon }{ 6 B }\text{.}
 \end{equation*}
 </div>
-<div class="para">Let <span class="process-math">\(\of{ P , t } \)</span> be a tagged partition of <span class="process-math">\(\clint{ a }{ c } \)</span> of mesh <span class="process-math">\(\mesh \of{ P } \lt \delta \text{,}\)</span> where <span class="process-math">\(P = \of{ x_{ k } }_{ k = 0 }^{ n } \)</span> and <span class="process-math">\(t = \of{ t_{ k } }_{ k = 0 }^{ n - 1 } \text{.}\)</span> If <span class="process-math">\(x_{ j } \neq b \)</span> for some index <span class="process-math">\(0 \lt j \lt n \text{,}\)</span> then consider the tagged partitions <span class="process-math">\(\of{ Q , u } \)</span> and <span class="process-math">\(\of{ R , v } \)</span>  <span class="process-math">\(Q = \of{ x_{ k } }_{ k = 0 }^{ j } \)</span> and <span class="process-math">\(R = \of{ x_{ k } }_{ k = j }^{ n } \)</span> of <span class="process-math">\(\clint{ a }{ b } \)</span> and <span class="process-math">\(\clint{ b }{ c } \text{,}\)</span> respectively, where</div>
+<div class="para">Let <span class="process-math">\(\of{ P , t } \)</span> be a tagged partition of <span class="process-math">\(\clint{ a }{ c } \)</span> of mesh <span class="process-math">\(\mesh \of{ P } \lt \delta \text{,}\)</span> where <span class="process-math">\(P = \of{ x_{ k } }_{ k = 0 }^{ n } \)</span> and <span class="process-math">\(t = \of{ t_{ k } }_{ k = 0 }^{ n - 1 } \text{.}\)</span> If <span class="process-math">\(x_{ j } = b \)</span> for some index <span class="process-math">\(0 \lt j \lt n \text{,}\)</span> then consider the tagged partitions <span class="process-math">\(\of{ Q , u } \)</span> and <span class="process-math">\(\of{ R , v } \)</span> of <span class="process-math">\(\clint{ a }{ b } \)</span> and <span class="process-math">\(\clint{ b }{ c } \text{,}\)</span> respectively, where</div>
 <div class="displaymath process-math">
 \begin{align*}
 Q \amp = \of{ x_{ k } }_{ k = 0 }^{ j } \amp u \amp = \of{ t_{ k } }_{ k = 0 }^{ j - 1 }\\
@@ -114,7 +114,7 @@ R \amp = \of{ x_{ k } }_{ k = j }^{ n } \amp v \amp = \of{ t_{ k } }_{ k = j }^{
 \begin{align*}
 \abs{ \mathcal{ R }_{ f } \of{ P , t } - I } \amp \leq \abs{ \mathcal{ R }_{ f } \of{ P , t } - \mathcal{ R }_{ f } \of{ P' , t' } } + \abs{ \mathcal{ R }_{ f } \of{ P' , t' } - I }\\
 \amp \lt \abs{ f \of{ t_{ j } } \of{ x_{ j + 1 } - x_{ j } } - f \of{ y } \of{ b - x_{ j } } - f \of{ z } \of{ x_{ j + 1 } - b } } + \frac{ 2 \epsilon }{ 3 }\\
-\lt 2 B \delta + \frac{ 2 \epsilon }{ 3 } \leq \frac{ \epsilon }{ 3 } + \frac{ 2 \epsilon }{ 3 } = \epsilon\text{.}
+\amp \lt 2 B \delta + \frac{ 2 \epsilon }{ 3 } \leq \frac{ \epsilon }{ 3 } + \frac{ 2 \epsilon }{ 3 } = \epsilon\text{.}
 \end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-chasles-relation-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
