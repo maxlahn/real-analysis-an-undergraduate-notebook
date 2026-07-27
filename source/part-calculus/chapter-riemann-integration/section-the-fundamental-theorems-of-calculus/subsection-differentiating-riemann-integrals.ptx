@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-differentiating-riemann-integrals" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Differentiating Riemann Integrals
+  </title>
+
+  <introduction>
+    <p>
+      Before we establish the <term> first fundamental theorem of calculus </term>, we will require two further properties of the Riemann integral. The first establishes a relation between integrals of the same function on adjacent closed intervals, and the second is an integral analogue of the triangle inequality.
+    </p>
+  </introduction>
+  
+  <lemma xml:id="lemma-chasles-relation">
+    <title>
+      Chasles' relation
+    </title>
+    
+    <creator>
+      Michel Chasles
+    </creator>
+    
+    <statement>
+      <p>
+        Let <m> f \colon \clint{ a }{ c } \to \R </m> be a real-valued function defined on a closed interval <m> \clint{ a }{ c } </m>. If <m> f </m> is Riemann integrable, then for any interior point <m> a \lt b \lt c </m>, the restrictions of <m> f </m> to the closed intervals <m> \clint{ a }{ b } </m> and <m> \clint{ b }{ c } </m> are Riemann integrable, and
+        
+        <md>
+          \int_{ a }^{ c }{ f \of{ x } \, \diff{ x } } = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } + \int_{ b }^{ c }{ f \of{ x } \, \diff{ x } }
+        </md>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Since <m> f </m> is Riemann integrable, there is a partition <m> P_{ \epsilon } = \of{ x_{ k } }_{ k = 0 }^{ n } </m> of <m> \clint{ a }{ c } </m> so that
+        
+        <md>
+          \mathcal{ U }_{ f } \of{ P } - \mathcal{ L }_{ f } \of{ P } \lt \epsilon
+        </md>
+        
+        for all refinements <m> P \succeq P_{ \epsilon } </m>. Without loss of generality, we may suppose that <m> b = x_{ j } </m> for some index <m> 0 \lt j \lt n </m>. Consider the partitions <m> Q_{ \epsilon } = \of{ x_{ k } }_{ k = 0 }^{ j } </m> and <m> R_{ \epsilon } = \of{ k = j }^{ n } </m> of <m> \clint{ a }{ b } </m> and <m> \clint{ b }{ c } </m>. We will show that the existence of <m> Q_{ \epsilon } </m> and <m> R_{ \epsilon } </m> imply the Riemann integrability of the restrictions of <m> f </m> to <m> \clint{ a }{ b } </m> and <m> \clint{ b }{ c } </m>, respectively.
+      </p>
+      
+      <p>
+        Indeed, note that for any refinement <m> Q \succeq Q_{ \epsilon } </m>, we may form a refinement <m> Q' \succeq P_{ \epsilon } </m> by appending <m> \of{ x_{ k } }_{ k = j + 1 }^{ n } </m> as a suffix. We observe that
+        
+        <md>
+          <mrow>
+            \mathcal{ U }_{ f } \of{ Q } - \mathcal{ L }_{ f } \of{ Q } \amp = \sum_{ k = 0 }^{ j - 1 }{ \of{ \sup_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } - \inf_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } } \of{ x_{ k + 1 } - x_{ k } } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \sum_{ k = 0 }^{ n - 1 }{ \of{ \sup_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } - \inf_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } } \of{ x_{ k + 1 } - x_{ k } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \mathcal{ U }_{ f } \of{ Q' } - \mathcal{ L }_{ f } \of{ Q' } \lt \epsilon
+          </mrow>
+        </md>.
+        
+        Similarly, for any refinement <m> R \succeq R_{ \epsilon } </m>, we may form a refinement <m> Q' \succeq P_{ \epsilon } </m> by appending <m> \of{ x_{ k } }_{ k = 0 }^{ j - 1 } </m> as a prefix. We observe that
+        
+        <md>
+          <mrow>
+            \mathcal{ U }_{ f } \of{ R } - \mathcal{ L }_{ f } \of{ R } \amp = \sum_{ k = j }^{ n - 1 }{ \of{ \sup_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } - \inf_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } } \of{ x_{ k + 1 } - x_{ k } } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \sum_{ k = 0 }^{ n - 1 }{ \of{ \sup_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } - \inf_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } } \of{ x_{ k + 1 } - x_{ k } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \mathcal{ U }_{ f } \of{ R' } - \mathcal{ L }_{ f } \of{ R' } \lt \epsilon
+          </mrow>
+        </md>.
+        
+        Thus the restrictions of <m> f </m> to <m> \clint{ a }{ b } </m> and <m> \clint{ b }{ c } </m> are Riemann integrable. It remains only to show that <m> \int_{ a }^{ c }{ f \of{ x } \, \diff{ x } } = I </m>, where
+        
+        <md>
+          I = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } + \int_{ b }^{ c }{ f \of{ x } \, \diff{ x } }
+        </md>.
+      </p>
+      
+      <p>
+        To that end, we observe that since <m> f </m> is bounded, there is a positive real number <m> B \gt 0 </m> so that <m> \abs{ f \of{ x } } \leq B </m> for all points <m> a \leq x \leq b </m>. Note that for any positive real number <m> \epsilon \gt 0 </m>, there is a positive real number <m> \delta \gt 0 </m> so that
+        
+        <md>
+          \abs{ \mathcal{ R }_{ f } \of{ Q , u } - \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } } \lt \frac{ \epsilon }{ 3 }
+        </md>
+        
+        for all tagged partitions <m> \of{ Q , u } </m> of <m> \clint{ a }{ b } </m> of mesh <m> \mesh \of{ Q } \lt \delta </m>,
+        
+        <md>
+          \abs{ \mathcal{ R }_{ f } \of{ R , v } - \int_{ b }^{ c }{ f \of{ x } \, \diff{ x } } } \lt \frac{ \epsilon }{ 3 }
+        </md>
+        
+        for all tagged partitions <m> \of{ R , v } </m> of <m> \clint{ b }{ c } </m> of mesh <m> \mesh \of{ R } \lt \delta </m>, and
+        
+        <md>
+          \delta \leq \frac{ \epsilon }{ 6 B }
+        </md>.
+        
+        Let <m> \of{ P , t } </m> be a tagged partition of <m> \clint{ a }{ c } </m> of mesh <m> \mesh \of{ P } \lt \delta </m>, where <m> P = \of{ x_{ k } }_{ k = 0 }^{ n } </m> and <m> t = \of{ t_{ k } }_{ k = 0 }^{ n - 1 } </m>. If <m> x_{ j } \neq b </m> for some index <m> 0 \lt j \lt n </m>, then consider the tagged partitions <m> \of{ Q , u } </m> and <m> \of{ R , v } </m>  <m> Q = \of{ x_{ k } }_{ k = 0 }^{ j } </m> and <m> R = \of{ x_{ k } }_{ k = j }^{ n } </m> of <m> \clint{ a }{ b } </m> and <m> \clint{ b }{ c } </m>, respectively, where
+        
+        <md>
+          <mrow>
+            Q \amp = \of{ x_{ k } }_{ k = 0 }^{ j } \amp u \amp = \of{ t_{ k } }_{ k = 0 }^{ j - 1 }
+          </mrow>
+          
+          <mrow>
+            R \amp = \of{ x_{ k } }_{ k = j }^{ n } \amp v \amp = \of{ t_{ k } }_{ k = j }^{ n - 1 }
+          </mrow>
+        </md>.
+        
+        These tagged partitions both have mesh less than <m> \delta </m>, and so
+        
+        <md>
+          <mrow>
+            \abs{ \mathcal{ R }_{ f } \of{ P , t } - I } \amp = \abs{ \sum_{ k = 0 }^{ n - 1 }{ f \of{ t_{ k } } \of{ x_{ k + 1 } - x_{ k } } } - I }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \abs{ \sum_{ k = 0 }^{ j - 1 }{ f \of{ t_{ k } } \of{ x_{ k + 1 } - x_{ k } } } - \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } }
+          </mrow>
+          
+          <mrow>
+            \amp \qquad + \abs{ \sum_{ k = j }^{ n - 1 }{ f \of{ t_{ k } } \of{ x_{ k + 1 } - x_{ k } } } - \int_{ b }^{ c }{ f \of{ x } \, \diff{ x } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \abs{ \mathcal{ R }_{ f } \of{ Q } - \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } } + \abs{ \mathcal{ R }_{ f } \of{ Q } - \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } }
+          </mrow>
+          
+          <mrow>
+            \amp \lt \frac{ \epsilon }{ 3 } + \frac{ \epsilon }{ 3 } = \frac{ 2 \epsilon }{ 3 } \lt \epsilon
+          </mrow>
+        </md>.
+      </p>
+      
+      <p>
+        On the other hand, if <m> x_{ j } \neq b </m> for all indices <m> 0 \lt j \lt n </m>, then there is a unique index <m> 0 \leq j \lt n </m> so that <m> x_{ j } \lt b \lt x_{ j + 1 } </m>. We may find a refinement <m> \of{ P' , t' } </m> of <m> \of{ P , t } </m> solely by adding in <m> b </m> and choosing tags <m> y </m> and <m> z </m> in the new subintervals <m> \clint{ x_{ j } }{ b } </m> and <m> \clint{ b }{ x_{ j + 1 } } </m>. We observe that the above computation applies to <m> \of{ P' , t' } </m>, and so
+        
+        <md>
+          <mrow>
+            \abs{ \mathcal{ R }_{ f } \of{ P , t } - I } \amp \leq \abs{ \mathcal{ R }_{ f } \of{ P , t } - \mathcal{ R }_{ f } \of{ P' , t' } } + \abs{ \mathcal{ R }_{ f } \of{ P' , t' } - I }
+          </mrow>
+          
+          <mrow>
+            \amp \lt \abs{ f \of{ t_{ j } } \of{ x_{ j + 1 } - x_{ j } } - f \of{ y } \of{ b - x_{ j } } - f \of{ z } \of{ x_{ j + 1 } - b } } + \frac{ 2 \epsilon }{ 3 }
+          </mrow>
+          
+          <mrow>
+            \lt 2 B \delta + \frac{ 2 \epsilon }{ 3 } \leq \frac{ \epsilon }{ 3 } + \frac{ 2 \epsilon }{ 3 } = \epsilon
+          </mrow>
+        </md>.
+      </p>
+      
+      <p>
+        In summary, we have shown that for all positive real numbers <m> \epsilon \gt 0 </m>, there is some positive real number <m> \delta \gt 0 </m> so that <m> \abs{ \mathcal{ R }_{ f } \of{ P , t } - I } \lt \epsilon </m> for all tagged partitions <m> \of{ P , t } </m> of <m> \clint{ a }{ c } </m> of mesh <m> \mesh \of{ P } \lt \delta </m>. We conclude that
+        
+        <md>
+          \int_{ a }^{ c }{ f \of{ x } \, \diff{ x } } = I = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } + \int_{ b }^{ c }{ f \of{ x } \, \diff{ x } }
+        </md>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <p>
+    So far, we have only allowed the notation
+    
+    <md>
+      \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } }
+    </md>
+    
+    when <m> a \lt b </m>. <xref ref="lemma-chasles-relation" text="title"/> provides a way to extend this to allow for any real numbers <m> a </m> and <m> b </m>. For example, if <m> a \gt b </m>, then we define
+    
+    <md>
+      \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } = -\int_{ b }^{ a }{ f \of{ x } , \diff{ x } }
+    </md>.
+    
+    Similarly, if <m> a = b </m>, then we define
+    
+    <md>
+      \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } = 0
+    </md>.
+    
+    You will have an opportunity in the problems for this section to prove that with these extensions of notation for Riemann integrals, <xref ref="lemma-chasles-relation" text="title"/> still holds.
+  </p>
+  
+  <p>
+    While the following result may seem innocuous at first glance, it is a deeply useful estimate which reflects the geometric structure of the vector space of Riemann integrable functions.
+  </p>
+  
+  <proposition xml:id="proposition-triangle-inequality-for-riemann-integrals">
+    <title>
+      Triangle inequality for Riemann integrals
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon \clint{ a }{ b } \to \R </m> be a real-valued function defined on a closed interval <m> \clint{ a }{ b } </m>. If <m> f </m> is Riemann integrable, then <m> \abs{ f } </m> is Riemann integrable, and
+        
+        <md>
+          \abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } } \leq \int_{ a }^{ b }{ \abs{ f \of{ x } } \, \diff{ x } }
+        </md>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Since the function <m> g \colon \R \to \R </m> defined by the formula <m> g \of{ x } = \abs{ x } </m>, the composition <m> g \circ f = \abs{ f } </m> is Riemann integrable by <xref ref="problem-more-on-integrability-and-continuity"/>. Since <m> 0 \leq \abs{ f \of{ x } } </m> for all points <m> a \leq x \leq b </m>,
+        
+        <md>
+          0 = \int_{ a }^{ b }{ 0 \, \diff{ x } } \leq \int_{ a }^{ b }{ \abs{ f \of{ x } } \, \diff{ x } }
+        </md>
+        
+        by <xref ref="lemma-riemann-integration-and-comparison"/>. Similarly, <m> -\abs{ f \of{ x } } \leq f \of{ x } \leq \abs{ f \of{ x } } </m> for all points <m> a \leq x \leq b </m>, and so
+        
+        <md>
+          -\int_{ a }^{ b }{ \abs{ f \of{ x } } \, \diff{ x } } = \int_{ a }^{ b }{ -\abs{ f \of{ x } } \, \diff{ x } } \leq \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } \leq \int_{ a }^{ b }{ \abs{ f \of{ x } } \, \diff{ x } }
+        </md>
+        
+        by <xref ref="lemma-riemann-integration-and-comparison"/>. Thus
+        
+        <md>
+          \abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } } \leq \int_{ a }^{ b }{ \abs{ f \of{ x } } \, \diff{ x } }
+        </md>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    We are now ready to prove the <term> first fundamental theorem of calculus </term>. This foundational result establishes a relationship between differentiation integration: by integrating a continuous function <m> f </m>, we may obtain a differentiable function whose derivative is <m> f </m>.
+  </p>
+  
+  <theorem xml:id="theorem-first-fundamental-theorem-of-calculus">
+    <title>
+      First fundamental theorem of calculus
+    </title>
+    
+    <idx>
+      first fundamental theorem of calculus
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> f \colon \clint{ a }{ b } \to \R </m> be a continuous real-valued function defined on a closed interval <m> \clint{ a }{ b } </m>, and consider the real-valued function <m> F \colon \clint{ a }{ b } \to \R </m> defined by the formula
+        
+        <md>
+          F \of{ x } = \int_{ a }^{ x }{ f \of{ x } \, \diff{ x } }
+        </md>.
+        
+        Then <m> F </m> is differentiable on the open interval <m> \opint{ a }{ b } </m>, and <m> F' \of{ c } = f \of{ c } </m> for all interior points <m> a \lt c \lt b </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \epsilon \gt 0 </m> be a positive real number. Since <m> f </m> is continuous at <m> c </m>, there is a positive real number <m> \delta \gt 0 </m> so that <m> \abs{ f \of{ x } - f \of{ c } } \lt \epsilon </m> for all points <m> x \in \clint{ a }{ b } </m> so that <m> 0 \lt \abs{ x - c } \lt \delta </m>. We observe that <xref ref="lemma-chasles-relation" text="title"/> and the <xref ref="proposition-triangle-inequality-for-riemann-integrals" text="title"/> together imply that
+        
+        <md>
+          <mrow>
+            \abs{ \frac{ F \of{ x } - F \of{ c } }{ x - c } - f \of{ c } } \amp = \abs{ \frac{ 1 }{ x - c } \of{ \int_{ a }^{ x }{ f \of{ x } \, \diff{ x } } - \int_{ a }^{ c }{ f \of{ x } \, \diff{ x } } - f \of{ c } \of{ x - c } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \abs{ \frac{ 1 }{ x - c } \of{ \int_{ c }^{ x }{ f \of{ x } \, \diff{ x } } - \int_{ c }^{ x }{ f \of{ c } \, \diff{ x } } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ 1 }{ \abs{ x - c } } \abs{ \int_{ c }^{ x }{ f \of{ x } - f \of{ c } \, \diff{ x } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ 1 }{ \abs{ x - c } } \int_{ \min \of{ \set{ c , x } } }^{ \max \of{ \set{ c , x } } }{ \abs{ f \of{ x } - f \of{ c } } \, \diff{ x } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \frac{ 1 }{ \abs{ x - c } } \int_{ \min \of{ \set{ c , x } } }^{ \max \of{ \set{ c , x } } }{ \frac{ \epsilon }{ 2 } \, \diff{ x } }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ \epsilon \of{ \max \of{ \set{ c , x } } - \min \of{ \set{ c , x } } } }{ 2 \abs{ x - c } } = \frac{ \epsilon \abs{ x - c } }{ 2 \abs{ x - c } } = \frac{ \epsilon }{ 2 } \lt \epsilon
+          </mrow>
+        </md>
+        
+        for all points <m> x \in \clint{ a }{ b } </m> so that <m> 0 \lt \abs{ x - c } \lt \delta </m>. Thus <m> F </m> is differentiable at <m> c </m>, with derivative <m> F' \of{ c } = f \of{ c } </m>.
+      </p>
+    </proof>
+  </theorem>
+
+  <conclusion>
+    <idx>
+      anti-derivative
+    </idx>
+    
+    <idx>
+      primitive
+    </idx>
+    
+    <p>
+      Thus integrating a continuous function yields a differentiable function whose derivative is the integrand; we call such a function an <term> anti-derivative </term> (or <term> primitive </term>) of the integrand.
+    </p>
+  </conclusion>
+</subsection>

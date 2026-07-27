@@ -7,11 +7,13 @@
 
   <introduction>
     <p>
-      Text before the first subsection.
+      In this section, we develop the two <term> fundamental theorems of calculus </term>. These theorems bridge the two halves of calculus: differential calculus and integral calculus. We will see that differentiation and integration are related operations, and in a sense inverse to each other.
     </p>
   </introduction>
 
-  <!-- <xi:include href="./subsection-TITLE.ptx"/> -->
+  <xi:include href="./subsection-differentiating-riemann-integrals.ptx"/>
+
+  <xi:include href="./subsection-integrating-derivatives.ptx"/>
 
   <conclusion>
     <p>

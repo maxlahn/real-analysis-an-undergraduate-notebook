@@ -269,6 +269,10 @@
     </proof>
   </theorem>
   
+  <p>
+    The limits of upper and lower Darboux sums are called the <term> upper </term> and <term> lower Darboux integrals </term>. The third condition in <xref ref="theorem-riemann-integrability"/>, that the upper and lower Darboux integrals agree, is sometimes called <term> Darboux integrability </term>. <xref ref="theorem-riemann-integrability"/> shows that Darboux integrability is equivalent to other characterizations of what we call <term> Riemann integrability </term>.
+  </p>
+  
   <definition xml:id="definition-Riemann-integrability-integral">
     <title>
       Riemann integrability/integral
@@ -323,25 +327,141 @@
         <ul>
           <li>
             <p>
+              Let <m> c \in \R </m> be a real number, and consider the constant function <m> f \colon \clint{ a }{ b } \to \R </m> defined by the formula <m> f \of{ x } = c </m>. We observe that
               
+              <md>
+                <mrow>
+                  \mathcal{ R }_{ f } \of{ P , t } \amp = \sum_{ k = 0 }^{ n - 1 }{ f \of{ t_{ k } } \of{ x_{ k + 1 } - x_{ k } } } = \sum_{ k = 0 }^{ n - 1 }{ c \of{ x_{ k + 1 } - x_{ k } } }
+                </mrow>
+                
+                <mrow>
+                  \amp = c \sum_{ k = 0 }^{ n - 1 }{ \of{ x_{ k + 1 } - x_{ k } } } = c \of{ b - a }
+                </mrow>
+              </md>
+              
+              for all tagged partitions <m> \of{ P , t } </m> of <m> \clint{ a }{ b } </m>, where <m> P = \of{ x_{ k } }_{ k = 0 }^{ n } </m> and <m> t = \of{ t_{ k } }_{ k = 0 }^{ n - 1 } </m>. This implies that
+              
+              <md>
+                \lim_{ \of{ P , t } \uparrow }{ \mathcal{ R }_{ f } \of{ P , t } } = \lim_{ \of{ P , t } \uparrow }{ c \of{ b - a } } = c \of{ b - a }
+              </md>;
+              
+              that is, <m> f </m> is Riemann integrable, with Riemann integral
+              
+              <md>
+                \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } = \int_{ a }^{ b }{ c \, \diff{ x } } = c \of{ b - a }
+              </md>.
             </p>
           </li>
           
           <li>
             <p>
+              Let <m> g \colon \clint{ 0 }{ 2 } \to \R </m> be the real-valued function defined piecewise on the closed interval <m> \clint{ 0 }{ 2 } </m> by the formula
               
+              <md>
+                g \of{ y } =
+                  \begin{cases}
+                    1 \amp 0 \leq y \leq 1 \\
+                    2 \amp 1 \lt y \leq 2
+                  \end{cases}
+              </md>.
+              
+              Let <m> P = \of{ y_{ k } }_{ k = 0 }^{ n } </m> be a partition of <m> \clint{ a }{ b } </m>. Then there is a unique index <m> 0 \leq j \lt n </m> so that <m> y_{ j } \leq 1 \lt y_{ j + 1 } </m>. We observe that the restriction of <m> g </m> to every other subinterval of the partition is constant, so that
+              
+              <md>
+                <mrow>
+                  \mathcal{ U }_{ g } \of{ P } - \mathcal{ L }_{ g } \of{ P } \amp = \sum_{ k = 0 }^{ n - 1 }{ \sup_{ y_{ k } \leq y \leq y_{ k + 1 } }{ g \of{ y } } \of{ y_{ k + 1 } - y_{ k } } } - \sum_{ k = 0 }^{ n - 1 }{ \inf_{ y_{ k } \leq y \leq y_{ k + 1 } }{ g \of{ y } } \of{ y_{ k + 1 } - y_{ k } } }
+                </mrow>
+                
+                <mrow>
+                  \amp = \sum_{ k = 0 }^{ n - 1 }{ \of{ \sup_{ y_{ k } \leq y \leq y_{ k + 1 } }{ g \of{ y } } - \inf_{ y_{ k } \leq y \leq y_{ k + 1 } }{ g \of{ y } } } \of{ y_{ k + 1 } - y_{ k } } }
+                </mrow>
+                
+                <mrow>
+                  \amp = \of{ \sup_{ y_{ j } \leq y \leq y_{ j + 1 } }{ g \of{ y } } - \inf_{ y_{ j } \leq y \leq y_{ j + 1 } }{ g \of{ y } } } \of{ y_{ j + 1 } - y_{ j } }
+                </mrow>
+                
+                <mrow>
+                  \amp = 1 \of{ y_{ j + 1 } - y_{ j } } \leq \mesh \of{ P }
+                </mrow>
+              </md>.
+              
+              This implies that <m> g </m> is Riemann integrable, although this method does not necessarily directly compute the Riemann integral <m> \int_{ 0 }^{ 2 }{ g \of{ y } \, \diff{ y } } </m>.
             </p>
           </li>
           
           <li>
             <p>
+              More generally, let <m> h \colon \clint{ a }{ b } \to \R </m> be a non-decreasing real-valued function defined on a closed interval <m> \clint{ a }{ b } </m>. We observe that
               
+              <md>
+                <mrow>
+                  \mathcal{ U }_{ g } \of{ P } - \mathcal{ L }_{ g } \of{ P } \amp = \sum_{ k = 0 }^{ n - 1 }{ \sup_{ z_{ k } \leq z \leq z_{ k + 1 } }{ h \of{ z } } \of{ z_{ k + 1 } - z_{ k } } } - \sum_{ k = 0 }^{ n - 1 }{ \inf_{ z_{ k } \leq z \leq z_{ k + 1 } }{ h \of{ z } } \of{ z_{ k + 1 } - z_{ k } } }
+                </mrow>
+                
+                <mrow>
+                  \amp = \sum_{ k = 0 }^{ n - 1 }{ h \of{ z_{ k + 1 } } \of{ z_{ k + 1 } - z_{ k } } } - \sum_{ k = 0 }^{ n - 1 }{ h \of{ z_{ k } } \of{ z_{ k + 1 } - z_{ k } } }
+                </mrow>
+                
+                <mrow>
+                  \amp = \sum_{ k = 0 }^{ n - 1 }{ \of{ h \of{ z_{ k + 1 } } - h \of{ z_{ k } } } \of{ z_{ k + 1 } - z_{ k } } } \leq \sum_{ k = 0 }^{ n - 1 }{ \of{ h \of{ z_{ k + 1 } } - h \of{ z_{ k } } } \mesh \of{ P } }
+                </mrow>
+                
+                <mrow>
+                  \amp = \of{ h \of{ b } - h \of{ a } } \mesh \of{ P }
+                </mrow>
+              </md>
+              
+              for any partition <m> P = \of{ z_{ k } }_{ k = 0 }^{ n } </m> of <m> \clint{ a }{ b } </m>. This implies that <m> h </m> is Riemann integrable, but the above computation doesn't necessarily aid in the computation of the Riemann integral <m> \int_{ a }^{ b }{ h \of{ z } \, \diff{ z } } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Let <m> \chi \colon \clint{ 0 }{ 1 } \to \R </m> be the real-valued function defined piecewise by the formula
+              
+              <md>
+                \chi \of{ x } =
+                  \begin{cases}
+                    1 \amp x \in \Q \\
+                    0 \amp x \notin \Q
+                  \end{cases}
+              </md>.
+              
+              Since any closed interval contains both rational and irrational numbers,
+              
+              <md>
+                <mrow>
+                  \mathcal{ U }_{ \chi } \of{ P } \amp = \sum_{ k = 0 }^{ n - 1 }{ \sup_{ x_{ k } \leq x \leq x_{ k + 1 } }{ \chi \of{ x } } \of{ x_{ k + 1 } - x_{ k } } }
+                </mrow>
+                
+                <mrow>
+                  \amp = \sum_{ k = 0 }^{ n - 1 }{ 1 \of{ x_{ k + 1 } - x_{ k } } } = 1 - 0 = 1
+                </mrow>
+              </md>
+              
+              and
+              
+              <md>
+                <mrow>
+                  \mathcal{ L }_{ \chi } \of{ P } \amp = \sum_{ k = 0 }^{ n - 1 }{ \inf_{ x_{ k } \leq x \leq x_{ k + 1 } }{ \chi \of{ x } } \of{ x_{ k + 1 } - x_{ k } } }
+                </mrow>
+                
+                <mrow>
+                  \amp = \sum_{ k = 0 }^{ n - 1 }{ 0 \of{ x_{ k + 1 } - x_{ k } } } = 0
+                </mrow>
+              </md>
+              
+              for any partition <m> P = \of{ x_{ k } }_{ k = 0 }^{ n } </m> of <m> \clint{ 0 }{ 1 } </m>. We conclude that <m> \chi </m> is not Riemann integrable.
             </p>
           </li>
         </ul>
       </p>
     </statement>
   </example>
+  
+  <p>
+    In general, it can be quite difficult to compute Riemann integrals without additional tools. We will see some such tools in <xref ref="section-the-fundamental-theorems-of-calculus"/>, but even without differential calculus, we may still expand our inventory of Riemann integrable functions significantly. For example, any continuous function defined on a closed interval is Riemann integrable.
+  </p>
 
   <proposition xml:id="proposition-continuity-implies-integrability">
     <title>
@@ -350,16 +470,54 @@
     
     <statement>
       <p>
-        
+        Let <m> f \colon \clint{ a }{ b } \to \R </m> be a real-valued function defined on a closed interval <m> \clint{ a }{ b } </m>. If <m> f </m> is continuous, then it is Riemann integrable.
       </p>
     </statement>
     
     <proof>
       <p>
+        Let
         
+        <md>
+          <mrow>
+            U \amp = \lim_{ P \uparrow }{ \mathcal{ U }_{ f } \of{ P } } \amp L \amp = \lim_{ P \uparrow }{ \mathcal{ L }_{ f } \of{ P } }
+          </mrow>
+        </md>.
+        
+        We will show that <m> U \leq L </m>. To that end, the <xref ref="theorem-heine-cantor-theorem" text="title"/> implies that <m> f </m> is uniformly continuous on <m> \clint{ a }{ b } </m>. Let <m> \epsilon \gt 0 </m> be a positive real number. Then there is a positive real number <m> \delta \gt 0 </m> so that
+        
+        <md>
+          \abs{ f \of{ x_{ 1 } } - f \of{ x_{ 2 } } } \lt \frac{ \epsilon }{ b - a }
+        </md>
+        
+        for all points <m> x_{ 1 } , x_{ 2 } \in \clint{ a }{ b } </m> so that <m> \abs{ x_{ 1 } - x_{ 2 } } \lt \delta </m>. We observe that
+        
+        <md>
+          <mrow>
+            \abs{ \mathcal{ U }_{ f } \of{ P } - \mathcal{ L }_{ f } \of{ P } } \amp = \abs{ \sum_{ k = 0 }^{ n - 1 }{ \sup_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } \of{ x_{ k + 1 } - x_{ k } } } - \sum_{ k = 0 }^{ n - 1 }{ \inf_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } \of{ x_{ k + 1 } - x_{ k } } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \abs{ \sum_{ k = 0 }^{ n - 1 }{ \of{ \sup_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } - \inf_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } } \of{ x_{ k + 1 } - x_{ k } } } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \sum_{ k = 0 }^{ n - 1 }{ \abs{ \sup_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } - \inf_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } } \of{ x_{ k + 1 } - x_{ k } } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \sum_{ k = 0 }^{ n - 1 }{ \of{ \frac{ \epsilon }{ b - a } } \of{ x_{ k + 1 } - x_{ k } } } = \of{ \frac{ \epsilon }{ b - a } } \of{ b - a } = \epsilon
+          </mrow>
+        </md>
+        
+        for any partition <m> P = \of{ x_{ k } }_{ k = 0 }^{ n } </m> of <m> \clint{ a }{ b } </m> of mesh <m> \mesh \of{ P } \lt \delta </m>. In particular, <m> \abs{ U - L } \leq \epsilon </m> for all positive real numbers <m> \epsilon \gt 0 </m>, and so <m> U = L </m>. <xref ref="theorem-riemann-integrability"/> implies that <m> f </m> is Riemann integrable.
       </p>
     </proof>
   </proposition>
+  
+  <p>
+    We end this section with a few results about the interplay between Riemann integrals and arithmetic, comparison, and limits. First, the set of Riemann integrable functions is a vector space, and the Riemann integral is a linear functional on this vector space.
+  </p>
 
   <proposition xml:id="proposition-linearity-of-riemann-integration">
     <title>
@@ -368,152 +526,266 @@
     
     <statement>
       <p>
+        Let
         
+        <md>
+          f = \sum_{ j = 1 }^{ m }{ a_{ j } f_{ j } }
+        </md>
+        
+        be a real linear combination of real-valued functions <m> f_{ j } \colon \clint{ a }{ b } \to \R </m> defined on a closed interval <m> \clint{ a }{ b } </m>. If each <m> f_{ j } </m> is Riemann integrable, then so too is <m> f </m>, and
+        
+        <md>
+          \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } = \sum_{ j = 1 }^{ m }{ a_{ j } \int_{ a }^{ b }{ f_{ j } \of{ x } \, \diff{ x } } }
+        </md>.
       </p>
     </statement>
     
     <proof>
       <p>
+        We observe that for each tagged partition <m> \of{ P , t } </m> of <m> \clint{ a }{ b } </m>,
         
+        <md>
+          <mrow>
+            \mathcal{ R }_{ f } \of{ P , t } \amp = \sum_{ k = 0 }^{ n - 1 }{ f \of{ t_{ k } } \of{ x_{ k + 1 } - x_{ k } } } = \sum_{ k = 0 }^{ n - 1 }{ \of{ \sum_{ j = 1 }^{ m }{ a_{ j } f_{ j } \of{ t_{ k } } } } \of{ x_{ k + 1 } - x_{ k } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \sum_{ k = 0 }^{ n - 1 }{ \sum_{ j = 1 }^{ m }{ a_{ j } f_{ j } \of{ t_{ k } } \of{ x_{ k + 1 } - x_{ k } } } } = \sum_{ j = 1 }^{ m }{ a_{ j } \sum_{ k = 0 }^{ n - 1 }{ f_{ j } \of{ t_{ k } } \of{ x_{ k + 1 } - x_{ k } } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \sum_{ j = 1 }^{ m }{ a_{ j } \mathcal{ R }_{ f_{ j } } \of{ P , t } }
+          </mrow>
+        </md>,
+        
+        where <m> P = \of{ x_{ k } }_{ k = 0 }^{ n } </m> and <m> t = \of{ t_{ k } }_{ k = 0 }^{ n - 1 } </m>. Thus
+        
+        <md>
+          <mrow>
+            \int_{ a }^{ b }{ f \of{ x } \, \d{ x } } \amp = \lim_{ \of{ P , t } \uparrow }{ \mathcal{ R }_{ f } \of{ P , t } } = \lim_{ \of{ P , t } \uparrow }{ \sum_{ j = 1 }^{ m }{ a_{ j } \mathcal{ R }_{ f_{ j } } \of{ P , t } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \sum_{ j = 1 }^{ m }{ a_{ j } \lim_{ \of{ P , t } \uparrow }{ \mathcal{ R }_{ f_{ j } } \of{ P , t } } } = \sum_{ j = 1 }^{ m }{ a_{ j } \int_{ a }^{ b }{ f_{ j } \of{ x } \, \diff{ x } } }
+          </mrow>
+        </md>.
       </p>
     </proof>
   </proposition>
+  
+  <p>
+    We emphasize that while it is true that the product of Riemann integrable functions is also Riemann integrable, it is not in general true that the Riemann integral of such a product is the product of the Riemann integrals of the factors; that is,
+    
+    <md>
+      \int_{ a }^{ b }{ f \of{ x } g \of{ x } \, \diff{ x } } \neq \of{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } } \of{ \int_{ a }^{ b }{ g \of{ x } \, \diff{ x } } }
+    </md>.
+    
+    You will have an opportunity to explore this further in the problems for this section. First, however, we note that definite integrals preserve comparison of functions.
+  </p>
 
-  <conclusion>
-    <p>
-      Text after the last subdivision.
-    </p>
-  </conclusion>
-</subsection>
-
-<!--
-
-  <definition xml:id="definition-TITLE">
+  <lemma xml:id="lemma-riemann-integration-and-comparison">
     <title>
-      TITLE
+      Riemann integration and comparison
     </title>
-    
-    <idx>
-      TERM
-    </idx>
-    
-    <notation>
-      <usage>
-        <m>  </m>
-      </usage>
-      
-      <description>
-        <p>
-          
-        </p>
-      </description>
-    </notation>
     
     <statement>
       <p>
+        Let <m> f , g \colon \clint{ a }{ b } \to \R </m> be real-valued functions defined on a closed interval <m> \clint{ a }{ b } </m>. If <m> f </m> and <m> g </m> are Riemann integrable and <m> f \of{ x } \leq g \of{ x } </m> for all points <m> a \leq x \leq b </m>, then
         
-      </p>
-    </statement>
-  </definition>
-
-  <lemma xml:id="lemma-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
+        <md>
+          \int_{ a }^{ b }{ f \of{ x } \, \d{ x } } \leq \int_{ a }^{ b }{ g \of{ x } \, \d{ x } }
+        </md>.
       </p>
     </statement>
     
     <proof>
       <p>
+        We observe that for all tagged partitions <m> \of{ P , t } </m> of <m> \clint{ a }{ b } </m>,
         
+        <md>
+          <mrow>
+            \mathcal{ R }_{ f } \of{ P , t } \amp = \sum_{ k = 0 }^{ n - 1 }{ f \of{ t_{ k } } \of{ x_{ k + 1 } - x_{ k } } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \sum_{ k = 0 }^{ n - 1 }{ g \of{ t_{ k } } \of{ x_{ k + 1 } - x_{ k } } } = \mathcal{ R }_{ g } \of{ P , t }
+          </mrow>
+        </md>,
+        
+        where <m> P = \of{ x_{ k } }_{ k = 0 }^{ n } </m> and <m> t = \of{ t_{ k } }_{ k = 0 }^{ n - 1 } </m>. Thus
+        
+        <md>
+          \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } = \lim_{ \of{ P , t } \uparrow }{ \mathcal{ R }_{ f } \of{ P , t } } \leq \lim_{ \of{ P , t } \uparrow }{ \mathcal{ R }_{ g } \of{ P , t } } = \int_{ a }^{ b }{ g \of{ x } \, \diff{ x } }
+        </md>.
       </p>
     </proof>
   </lemma>
-
-  <proposition xml:id="proposition-TITLE">
+  
+  <p>
+    While the behavior of Riemann integrals under limits can unfortunately be quite subtle, we can establish some preliminary properties. The following theorem establishes the continuity of the Riemann integral on the vector space of Riemann integrable functions on a closed interval, taken with the compact open topology:
+  </p>
+  
+  <theorem xml:id="theorem-uniform-convergence-and-riemann-integrability">
     <title>
-      TITLE
+      Uniform convergence and Riemann integrability
     </title>
-    
-    <creator>
-      CREATOR
-    </creator>
     
     <statement>
       <p>
+        Let <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> be a uniformly convergent sequence of real-valued functions <m> f_{ n } \colon \clint{ a }{ b } \to \R </m> defined on a closed interval <m> \clint{ a }{ b } </m>. If each <m> f_{ n } </m> is Riemann integrable, then the uniform limit <m> \uniflim_{ n \to \infty }{ f_{ n } } </m> is Riemann integrable, with Riemann integral
         
+        <md>
+          \int_{ a }^{ b }{ \uniflim_{ n \to \infty }{ f_{ n } } \of{ x } \, \diff{ x } } = \lim_{ n \to \infty }{ f_{ n } \of{ x } \, \diff{ x } }
+        </md>.
       </p>
     </statement>
     
     <proof>
       <p>
+        We first argue that the sequence <m> \of{ I_{ n } }_{ n = 0 }^{ \infty } </m> of Riemann integrals
         
+        <md>
+          I_{ n } = \int_{ a }^{ b }{ f_{ n } \of{ x } \, \diff{ x } }
+        </md>
+        
+        is Cauchy. To that end, let <m> f = \uniflim_{ n \to \infty }{ f_{ n } } </m>. Since <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges uniformly to <m> f </m>, there is some natural number <m> n_{ \epsilon } \in \N </m> so that
+        
+        <md>
+          \abs{ f_{ n } \of{ x } - f \of{ x } } \lt \frac{ \epsilon }{ 6 \of{ b - a } }
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m> and points <m> a \leq x \leq b </m>. In particular,
+        
+        <md>
+          <mrow>
+            \abs{ f_{ m } \of{ x } - f_{ n } \of{ x } } \amp \leq \abs{ f_{ m } \of{ x } - f \of{ x } } + \abs{ f_{ n } \of{ x } - f \of{ x } }
+          </mrow>
+          
+          <mrow>
+            \amp \lt \frac{ \epsilon }{ 6 \of{ b - a } } + \frac{ \epsilon }{ 6 \of{ b - a } } = \frac{ \epsilon }{ 3 \of{ b - a } }
+          </mrow>
+        </md>
+        
+        for all indices <m> m , n \geq n_{ \epsilon } </m> and points <m> a \leq x \leq b </m>, and so
+        
+        <md>
+          <mrow>
+            \abs{ \mathcal{ R }_{ f_{ m } } \of{ P , t } - \mathcal{ R }_{ f_{ n } } \of{ P , t } } \amp = \abs{ \sum_{ i = 0 }^{ l - 1 }{ f_{ m } \of{ t_{ i } } \of{ x_{ i + 1 } - x_{ i } } } - \sum_{ i = 0 }^{ l - 1 }{ f_{ n } \of{ t_{ i } } \of{ x_{ i + 1 } - x_{ i } } } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \sum_{ i = 0 }^{ l - 1 }{ \abs{ f_{ m } \of{ t_{ i } } - f_{ n } \of{ t_{ i } } } \of{ x_{ i + 1 } - x_{ i } } }
+          </mrow>
+          
+          <mrow>
+            \amp \lt \sum_{ i = 0 }^{ l - 1 }{ \of{ \frac{ \epsilon }{ 3 \of{ b - a } } } \of{ x_{ i + 1 } - x_{ i } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ \frac{ \epsilon }{ 3 \of{ b - a } } } \of{ b - a } = \frac{ \epsilon }{ 3 }
+          </mrow>
+        </md>
+        
+        for all indices <m> m , n \geq n_{ \epsilon } </m> and tagged partitions <m> \of{ P , t } </m> of <m> \clint{ a }{ b } </m>, where <m> P = \of{ x_{ i } }_{ i = 0 }^{ l } </m> and <m> t = \of{ t_{ i } }_{ i = 0 }^{ l - 1 } </m>.
       </p>
-    </proof>
-  </proposition>
-
-  <theorem xml:id="theorem-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
+      
       <p>
+        Let <m> \of{ P , t } </m> be a tagged partition of <m> \clint{ a }{ b } </m> so that
         
+        <md>
+          <mrow>
+            \abs{ \mathcal{ R }_{ f_{ m } } \of{ P , t } - I_{ m } } \amp \lt \frac{ \epsilon }{ 3 }
+          </mrow>
+          
+          <mrow>
+            \abs{ \mathcal{ R }_{ f_{ n } } \of{ P , t } - I_{ n } } \amp \lt \frac{ \epsilon }{ 3 }
+          </mrow>
+        </md>.
+        
+        Thus
+        
+        <md>
+          <mrow>
+            \abs{ I_{ m } - I_{ n } } \amp \leq \abs{ I_{ m } - \mathcal{ R }_{ f_{ m } } \of{ P , t } } + \abs{ \mathcal{ R }_{ f_{ m } } \of{ P , t } - \mathcal{ R }_{ f_{ n } } \of{ P , t } } + \abs{ \mathcal{ R }_{ f_{ n } } \of{ P , t } - I_{ n } }
+          </mrow>
+          
+          <mrow>
+            \amp \lt \frac{ \epsilon }{ 3 } + \frac{ \epsilon }{ 3 } + \frac{ \epsilon }{ 3 } = \epsilon
+          </mrow>
+        </md>.
+        
+        We conclude that <m> \of{ I_{ n } }_{ n = 0 }^{ \infty } </m> is Cauchy.
       </p>
-    </statement>
-    
-    <proof>
+      
       <p>
+        <xref ref="corollary-completeness-of-the-real-line"/> implies that this sequence converges to a real number <m> I \in \R </m>. We will show that
         
+        <md>
+          \lim_{ \of{ P , t } \uparrow }{ \mathcal{ R }_{ f } \of{ P , t } } = I
+        </md>.
+        
+        To that end, let <m> \epsilon \gt 0 </m> be a positive real number. Since <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> converges uniformly to <m> f </m>, there is some natural number <m> n_{ \epsilon } \in \N </m> so that
+        
+        <md>
+          \abs{ f_{ n } \of{ x } - f \of{ x } } \lt \frac{ \epsilon }{ 3 \of{ b - a } }
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m> and points <m> a \leq x \leq b </m>. In particular,
+        
+        <md>
+          <mrow>
+            \abs{ \mathcal{ R }_{ f } \of{ P , t } - \mathcal{ R }_{ f_{ n } } \of{ P , t } } \amp = \abs{ \sum_{ i = 0 }^{ l - 1 }{ f \of{ t_{ i } } \of{ x_{ i + 1 } - x_{ i } } } - \sum_{ i = 0 }^{ l - 1 }{ f_{ n } \of{ t_{ i } } \of{ x_{ i + 1 } - x_{ i } } } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \sum_{ i = 0 }^{ l - 1 }{ \abs{ f_{ n } \of{ t_{ i } } - f \of{ t_{ i } } } \of{ x_{ i + 1 } - x_{ i } } }
+          </mrow>
+          
+          <mrow>
+            \amp \lt \sum_{ i = 0 }^{ l - 1 }{ \of{ \frac{ \epsilon }{ 3 \of{ b - a } } } \of{ x_{ i + 1 } - x_{ i } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ \frac{ \epsilon }{ 3 \of{ b - a } } } \of{ b - a } = \frac{ \epsilon }{ 3 }
+          </mrow>
+        </md>
+        
+        for all indices <m> n \geq n_{ \epsilon } </m> and tagged partitions <m> \of{ P , t } </m> of <m> \clint{ a }{ b } </m>. Since <m> \of{ I_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> I </m>, there is a natural number <m> m_{ \epsilon } \in \N </m> so that
+        
+        <md>
+          \abs{ I_{ n } - I } \lt \frac{ \epsilon }{ 3 }
+        </md>
+        
+        for all indices <m> n \geq m_{ \epsilon } </m>. Fix <m> n \geq \max \of{ \set{ m_{ \epsilon } , n_{ \epsilon } } } </m>. Then there is some tagged partition <m> \of{ P_{ \epsilon } , t_{ \epsilon } } </m> of <m> \clint{ a }{ b } </m> so that
+        
+        <md>
+          \abs{ \mathcal{ R }_{ f_{ n } } \of{ P , t } - I_{ n } } \lt \frac{ \epsilon }{ 3 }
+        </md>
+        
+        for all refinements <m> \of{ P , t } \succeq \of{ P_{ \epsilon } , t_{ \epsilon } } </m>. We observe that
+        
+        <md>
+          <mrow>
+            \abs{ \mathcal{ R }_{ f } \of{ P , t } - I } \amp \leq \abs{ \mathcal{ R }_{ f } \of{ P , t } - \mathcal{ R }_{ f_{ n } } \of{ P , t } } + \abs{ \mathcal{ R }_{ f_{ n } } \of{ P , t } - I_{ n } } + \abs{ I_{ n } - I }
+          </mrow>
+          
+          <mrow>
+            \amp \lt \frac{ \epsilon }{ 3 } + \frac{ \epsilon }{ 3 } + \frac{ \epsilon }{ 3 } = \epsilon
+          </mrow>
+        </md>
+        
+        for all refinements <m> \of{ P , t } \succeq \of{ P_{ \epsilon } , t_{ \epsilon } } </m>. Thus the net <m> \of{ \mathcal{ R }_{ f } \of{ P , t } }_{ \of{ P , t } } </m> converges to <m> I </m>, and so <m> f </m> is Riemann integrable, with Riemann integral
+        
+        <md>
+          \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } = I = \lim_{ n \to \infty }{ I_{ n } } = \lim_{ n \to \infty }{ \int_{ a }^{ b }{ f_{ n } \of{ x } \, \diff{ x } } }
+        </md>.
       </p>
     </proof>
   </theorem>
 
-  <corollary xml:id="corollary-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </corollary>
-
-  <example xml:id="example-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-  </example>
-
--->
+  <conclusion>
+    <p>
+      We will see in <xref ref="section-improper-integration"/> that an analogue <xref ref="theorem-uniform-convergence-and-riemann-integrability"/> does not hold for improper integration over non-compact intervals.
+    </p>
+  </conclusion>
+</subsection>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-more-on-integrability-and-continuity" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    More on integrability and continuity
+  </title>
+  
+  <statement>
+    <p>
+      Let <m> f \colon \clint{ a }{ b } \to \R </m> be a real-valued function defined on a closed interval. Prove that <m> g \circ f </m> is Riemann integrable for any continuous real-valued function <m> g \colon \R \to \R </m>.
+    </p>
+  </statement>
+  
+  <hint>
+    <p>
+      Use the <xref ref="theorem-heine-cantor-theorem" text="title"/> on an appropriate restriction of <m> g </m>.
+    </p>
+  </hint>
+  
+  <!-- <solution>
+    <p>
+      asdf
+    </p>
+  </solution> -->
+</exercise>
