@@ -365,7 +365,7 @@
                   \end{cases}
               </md>.
               
-              Let <m> P = \of{ y_{ k } }_{ k = 0 }^{ n } </m> be a partition of <m> \clint{ a }{ b } </m>. Then there is a unique index <m> 0 \leq j \lt n </m> so that <m> y_{ j } \leq 1 \lt y_{ j + 1 } </m>. We observe that the restriction of <m> g </m> to every other subinterval of the partition is constant, so that
+              Let <m> P = \of{ y_{ k } }_{ k = 0 }^{ n } </m> be a partition of <m> \clint{ 0 }{ 2 } </m>. Then there is a unique index <m> 0 \leq j \lt n </m> so that <m> y_{ j } \leq 1 \lt y_{ j + 1 } </m>. We observe that the restriction of <m> g </m> to every other subinterval of the partition is constant, so that
               
               <md>
                 <mrow>
@@ -635,7 +635,7 @@
         Let <m> \of{ f_{ n } }_{ n = 0 }^{ \infty } </m> be a uniformly convergent sequence of real-valued functions <m> f_{ n } \colon \clint{ a }{ b } \to \R </m> defined on a closed interval <m> \clint{ a }{ b } </m>. If each <m> f_{ n } </m> is Riemann integrable, then the uniform limit <m> \uniflim_{ n \to \infty }{ f_{ n } } </m> is Riemann integrable, with Riemann integral
         
         <md>
-          \int_{ a }^{ b }{ \uniflim_{ n \to \infty }{ f_{ n } } \of{ x } \, \diff{ x } } = \lim_{ n \to \infty }{ f_{ n } \of{ x } \, \diff{ x } }
+          \int_{ a }^{ b }{ \uniflim_{ n \to \infty }{ f_{ n } } \of{ x } \, \diff{ x } } = \lim_{ n \to \infty }{ \int_{ a }^{ b }{ f_{ n } \of{ x } \, \diff{ x } } }
         </md>.
       </p>
     </statement>

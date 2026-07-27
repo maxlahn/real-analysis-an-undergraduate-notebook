@@ -11,7 +11,33 @@
     </p>
   </introduction>
   
-  
+  <theorem xml:id="theorem-second-fundamental-theorem-of-calculus">
+    <title>
+      Second fundamental theorem of calculus
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon \clint{ a }{ b } \to \R </m> be a real-valued function defined on a closed interval <m> \clint{ a }{ b } </m>. If <m> f </m> is continuously differentiable, then
+        
+        <md>
+          \int_{ a }^{ b }{ f' \of{ x } \, \diff{ x } } = f \of{ b } - f \of{ a }
+        </md>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> F \colon \clint{ a }{ b } \to \R </m> be the real-valued function defined on <m> \clint{ a }{ b } </m> by the formula
+        
+        <md>
+          F \of{ x } = \int_{ a }^{ x }{ f' \of{ x } \, \diff{ x } }
+        </md>.
+        
+        Then the <xref ref="theorem-first-fundamental-theorem-of-calculus"/> implies that <m> F </m> is differentiable on <m> \opint{ a }{ b } </m>, with derivative <m> F' \of{ x } = f' \of{ x } </m> for all interior points <m> a \lt x \lt b </m>.
+      </p>
+    </proof>
+  </theorem>
 
   <conclusion>
     <p>

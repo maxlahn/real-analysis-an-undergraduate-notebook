@@ -21,7 +21,7 @@
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-the-fundamental-theorems-of-calculus.ptx"/>
+  <xi:include href="./exercises-the-fundamental-theorems-of-calculus.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-the-fundamental-theorems-of-calculus.ptx"/>
+  <xi:include href="./problems-the-fundamental-theorems-of-calculus.ptx"/>
 </section>

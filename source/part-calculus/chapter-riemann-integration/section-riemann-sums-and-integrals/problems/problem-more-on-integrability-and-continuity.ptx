@@ -7,7 +7,7 @@
   
   <statement>
     <p>
-      Let <m> f \colon \clint{ a }{ b } \to \R </m> be a real-valued function defined on a closed interval. Prove that <m> g \circ f </m> is Riemann integrable for any continuous real-valued function <m> g \colon \R \to \R </m>.
+      Let <m> f \colon \clint{ a }{ b } \to \R </m> be a Riemann integrable real-valued function defined on a closed interval. Prove that <m> g \circ f </m> is Riemann integrable for any continuous real-valued function <m> g \colon \R \to \R </m>.
     </p>
   </statement>
   

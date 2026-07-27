@@ -38,7 +38,7 @@
           \mathcal{ U }_{ f } \of{ P } - \mathcal{ L }_{ f } \of{ P } \lt \epsilon
         </md>
         
-        for all refinements <m> P \succeq P_{ \epsilon } </m>. Without loss of generality, we may suppose that <m> b = x_{ j } </m> for some index <m> 0 \lt j \lt n </m>. Consider the partitions <m> Q_{ \epsilon } = \of{ x_{ k } }_{ k = 0 }^{ j } </m> and <m> R_{ \epsilon } = \of{ k = j }^{ n } </m> of <m> \clint{ a }{ b } </m> and <m> \clint{ b }{ c } </m>. We will show that the existence of <m> Q_{ \epsilon } </m> and <m> R_{ \epsilon } </m> imply the Riemann integrability of the restrictions of <m> f </m> to <m> \clint{ a }{ b } </m> and <m> \clint{ b }{ c } </m>, respectively.
+        for all refinements <m> P \succeq P_{ \epsilon } </m>. Without loss of generality, we may suppose that <m> b = x_{ j } </m> for some index <m> 0 \lt j \lt n </m>. Consider the partitions <m> Q_{ \epsilon } = \of{ x_{ k } }_{ k = 0 }^{ j } </m> and <m> R_{ \epsilon } = \of{ k = j }^{ n } </m> of <m> \clint{ a }{ b } </m> and <m> \clint{ b }{ c } </m>. We will show that the existence of <m> Q_{ \epsilon } </m> and <m> R_{ \epsilon } </m> implies the Riemann integrability of the restrictions of <m> f </m> to <m> \clint{ a }{ b } </m> and <m> \clint{ b }{ c } </m>, respectively.
       </p>
       
       <p>
@@ -58,7 +58,7 @@
           </mrow>
         </md>.
         
-        Similarly, for any refinement <m> R \succeq R_{ \epsilon } </m>, we may form a refinement <m> Q' \succeq P_{ \epsilon } </m> by appending <m> \of{ x_{ k } }_{ k = 0 }^{ j - 1 } </m> as a prefix. We observe that
+        Similarly, for any refinement <m> R \succeq R_{ \epsilon } </m>, we may form a refinement <m> R' \succeq P_{ \epsilon } </m> by appending <m> \of{ x_{ k } }_{ k = 0 }^{ j - 1 } </m> as a prefix. We observe that
         
         <md>
           <mrow>
@@ -100,7 +100,7 @@
           \delta \leq \frac{ \epsilon }{ 6 B }
         </md>.
         
-        Let <m> \of{ P , t } </m> be a tagged partition of <m> \clint{ a }{ c } </m> of mesh <m> \mesh \of{ P } \lt \delta </m>, where <m> P = \of{ x_{ k } }_{ k = 0 }^{ n } </m> and <m> t = \of{ t_{ k } }_{ k = 0 }^{ n - 1 } </m>. If <m> x_{ j } \neq b </m> for some index <m> 0 \lt j \lt n </m>, then consider the tagged partitions <m> \of{ Q , u } </m> and <m> \of{ R , v } </m>  <m> Q = \of{ x_{ k } }_{ k = 0 }^{ j } </m> and <m> R = \of{ x_{ k } }_{ k = j }^{ n } </m> of <m> \clint{ a }{ b } </m> and <m> \clint{ b }{ c } </m>, respectively, where
+        Let <m> \of{ P , t } </m> be a tagged partition of <m> \clint{ a }{ c } </m> of mesh <m> \mesh \of{ P } \lt \delta </m>, where <m> P = \of{ x_{ k } }_{ k = 0 }^{ n } </m> and <m> t = \of{ t_{ k } }_{ k = 0 }^{ n - 1 } </m>. If <m> x_{ j } = b </m> for some index <m> 0 \lt j \lt n </m>, then consider the tagged partitions <m> \of{ Q , u } </m> and <m> \of{ R , v } </m> of <m> \clint{ a }{ b } </m> and <m> \clint{ b }{ c } </m>, respectively, where
         
         <md>
           <mrow>
@@ -150,7 +150,7 @@
           </mrow>
           
           <mrow>
-            \lt 2 B \delta + \frac{ 2 \epsilon }{ 3 } \leq \frac{ \epsilon }{ 3 } + \frac{ 2 \epsilon }{ 3 } = \epsilon
+            \amp \lt 2 B \delta + \frac{ 2 \epsilon }{ 3 } \leq \frac{ \epsilon }{ 3 } + \frac{ 2 \epsilon }{ 3 } = \epsilon
           </mrow>
         </md>.
       </p>
