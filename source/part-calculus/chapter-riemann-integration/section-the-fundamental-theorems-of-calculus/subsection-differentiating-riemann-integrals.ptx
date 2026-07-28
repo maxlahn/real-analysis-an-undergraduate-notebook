@@ -250,13 +250,13 @@
           F \of{ x } = \int_{ a }^{ x }{ f \of{ x } \, \diff{ x } }
         </md>.
         
-        Then <m> F </m> is differentiable on the open interval <m> \opint{ a }{ b } </m>, and <m> F' \of{ c } = f \of{ c } </m> for all interior points <m> a \lt c \lt b </m>.
+        Then <m> F </m> is differentiable, with derivative <m> F' \of{ c } = f \of{ c } </m> for all points <m> a \leq c \leq b </m>.
       </p>
     </statement>
     
     <proof>
       <p>
-        Let <m> \epsilon \gt 0 </m> be a positive real number. Since <m> f </m> is continuous at <m> c </m>, there is a positive real number <m> \delta \gt 0 </m> so that <m> \abs{ f \of{ x } - f \of{ c } } \lt \epsilon </m> for all points <m> x \in \clint{ a }{ b } </m> so that <m> 0 \lt \abs{ x - c } \lt \delta </m>. We observe that <xref ref="lemma-chasles-relation" text="title"/> and the <xref ref="proposition-triangle-inequality-for-riemann-integrals" text="title"/> together imply that
+        Let <m> \epsilon \gt 0 </m> be a positive real number. Since <m> f </m> is continuous at <m> c </m>, there is a positive real number <m> \delta \gt 0 </m> so that <m> \abs{ f \of{ x } - f \of{ c } } \lt \frac{ \epsilon }{ 2 } </m> for all points <m> x \in \clint{ a }{ b } </m> so that <m> 0 \lt \abs{ x - c } \lt \delta </m>. We observe that <xref ref="lemma-chasles-relation" text="title"/> and the <xref ref="proposition-triangle-inequality-for-riemann-integrals" text="title"/> together imply that
         
         <md>
           <mrow>
@@ -280,7 +280,11 @@
           </mrow>
           
           <mrow>
-            \amp = \frac{ \epsilon \of{ \max \of{ \set{ c , x } } - \min \of{ \set{ c , x } } } }{ 2 \abs{ x - c } } = \frac{ \epsilon \abs{ x - c } }{ 2 \abs{ x - c } } = \frac{ \epsilon }{ 2 } \lt \epsilon
+            \amp = \frac{ \epsilon \of{ \max \of{ \set{ c , x } } - \min \of{ \set{ c , x } } } }{ 2 \abs{ x - c } }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ \epsilon \abs{ x - c } }{ 2 \abs{ x - c } } = \frac{ \epsilon }{ 2 } \lt \epsilon
           </mrow>
         </md>
         

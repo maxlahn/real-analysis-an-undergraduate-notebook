@@ -7,7 +7,7 @@
 
   <introduction>
     <p>
-      Text before the first subdivision.
+      The <xref ref="theorem-first-fundamental-theorem-of-calculus" text="title"/> establishes a relationship between differentiation and Riemann integration: the function obtained by integrating a continuous function is differentiable, with derivative the integrand. We now seek to establish a relationship in the other direction; that is, we explore Riemann integrals of the derivative of a differentiable function. In this case, the moral is similar; integrating the derivative of a function yields information about that function itself.
     </p>
   </introduction>
   
@@ -34,146 +34,112 @@
           F \of{ x } = \int_{ a }^{ x }{ f' \of{ x } \, \diff{ x } }
         </md>.
         
-        Then the <xref ref="theorem-first-fundamental-theorem-of-calculus"/> implies that <m> F </m> is differentiable on <m> \opint{ a }{ b } </m>, with derivative <m> F' \of{ x } = f' \of{ x } </m> for all interior points <m> a \lt x \lt b </m>.
+        Then the <xref ref="theorem-first-fundamental-theorem-of-calculus"/> implies that <m> F </m> is differentiable, with derivative <m> F' \of{ x } = f' \of{ x } </m> for all points <m> a \leq x \leq b </m>.
       </p>
-    </proof>
-  </theorem>
-
-  <conclusion>
-    <p>
-      Text after the last subdivision.
-    </p>
-  </conclusion>
-</subsection>
-
-<!--
-
-  <definition xml:id="definition-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <idx>
-      TERM
-    </idx>
-    
-    <notation>
-      <usage>
-        <m>  </m>
-      </usage>
       
-      <description>
-        <p>
-          
-        </p>
-      </description>
-    </notation>
-    
-    <statement>
       <p>
+        Part (b) of <xref ref="problem-functions-with-the-same-derivative"/> now implies that there is some real number <m> c \in \R </m> so that <m> F \of{ x } = f \of{ x } + c </m> for all points <m> a \leq x \leq b </m>. By evaluating at <m> a </m>, we observe that
         
-      </p>
-    </statement>
-  </definition>
-
-  <lemma xml:id="lemma-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
+        <md>
+          0 = \int_{ a }^{ a }{ f' \of{ x } \, \diff{ x } } = F \of{ a } = f \of{ a } + c
+        </md>,
         
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
+        so that <m> c = -f \of{ a } </m>. Thus
         
-      </p>
-    </proof>
-  </lemma>
-
-  <proposition xml:id="proposition-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </proposition>
-
-  <theorem xml:id="theorem-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
+        <md>
+          \int_{ a }^{ b }{ f' \of{ x } \, \diff{ x } } = F \of{ b } = f \of{ b } + c = f \of{ b } - f \of{ a }
+        </md>.
       </p>
     </proof>
   </theorem>
-
-  <corollary xml:id="corollary-TITLE">
+  
+  <p>
+    There are stronger versions of the <xref ref="theorem-second-fundamental-theorem-of-calculus" text="title"/> which do not require continuity of the integrand, but rather only Riemann integrability. However, we will only use the result as stated.
+  </p>
+  
+  <example xml:id="example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus">
     <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </corollary>
-
-  <example xml:id="example-TITLE">
-    <title>
-      TITLE
+      Computing Riemann integrals using the <xref ref="theorem-second-fundamental-theorem-of-calculus" text="title"/>
     </title>
     
     <statement>
       <p>
+        The following are examples of how to use the <xref ref="theorem-second-fundamental-theorem-of-calculus" text="title"/> to compute a Riemann integral:
         
+        <ul>
+          <li>
+            <p>
+              Consider the Riemann integral
+              
+              <md>
+                \int_{ 0 }^{ 4 }{ x^{ 3 } \, \diff{ x } }
+              </md>.
+              
+              Instead of computing this Riemann integral as a limit of Riemann sums, we instead recognize that <m> x^{ 3 } = f' \of{ x } </m>, where <m> f \colon \R \to \R </m> is the continuously differentiable real-valued function defined by the formula <m> f \of{ x } = \frac{ x^{ 4 } }{ 4 } </m>. Thus the <xref ref="theorem-second-fundamental-theorem-of-calculus"/> implies that
+              
+              <md>
+                <mrow>
+                  \int_{ 0 }^{ 4 }{ x^{ 3 } \, \diff{ x } } \amp = \int_{ 0 }^{ 4 }{ f' \of{ x } \, \diff{ x } } = f \of{ 4 } - f \of{ 0 }
+                </mrow>
+                
+                <mrow>
+                  \amp = \frac{ 4^{ 4 } }{ 4 } - \frac{ 0^{ 4 } }{ 4 } = 64 - 0 = 64
+                </mrow>
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Consider the Riemann integral
+              
+              <md>
+                \int_{ -\frac{ \pi }{ 2 } }^{ \frac{ \pi }{ 2 } }{ \cos \of{ y } \, \diff{ y } }
+              </md>.
+              
+              Instead of computing this Riemann integral as a limit of Riemann sums, we instead recognize that <m> \cos \of{ y } = g' \of{ y } </m>, where <m> g \colon \R \to \R </m> is the continuously differentiable real-valued function defined by the formula <m> g \of{ y } = \sin \of{ y } </m>. Thus the <xref ref="theorem-second-fundamental-theorem-of-calculus"/> implies that
+              
+              <md>
+                <mrow>
+                  \int_{ -\frac{ \pi }{ 2 } }^{ \frac{ \pi }{ 2 } }{ \cos \of{ y } \, \diff{ y } } \amp = \int_{ -\frac{ \pi }{ 2 } }^{ \frac{ \pi }{ 2 } }{ g' \of{ y } \, \diff{ y } } = g \of{ \frac{ \pi }{ 2 } } - g \of{ -\frac{ \pi }{ 2 } }
+                </mrow>
+                
+                <mrow>
+                  \amp = \sin \of{ \frac{ \pi }{ 2 } } - \sin \of{ -\frac{ \pi }{ 2 } } = 1 - \of{ -1 } = 2
+                </mrow>
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Consider the Riemann integral
+              
+              <md>
+                \int_{ 0 }^{ \pi }{ 2 z \sin \of{ 3 z } + 3 z^{ 2 } \cos \of{ 3 z } \, \diff{ z } }
+              </md>.
+              
+              Instead of computing this Riemann integral as a limit of Riemann sums, we instead recognize that <m> 2 z \sin \of{ 3 z } + 3 z^{ 2 } \cos \of{ 3 z } = h' \of{ z } </m>, where <m> h \colon \R \to \R </m> is the continuously differentiable real-valued function defined by the formula <m> h \of{ z } = z^{ 2 } \sin \of{ 3 z } </m>. Thus the <xref ref="theorem-second-fundamental-theorem-of-calculus"/> implies that
+              
+              <md>
+                <mrow>
+                  \int_{ 0 }^{ \pi }{ 2 z \sin \of{ 3 z } + 3 z^{ 2 } \cos \of{ 3 z } \, \diff{ z } } \amp = \int_{ 0 }^{ \pi }{ h' \of{ z } \, \diff{ z } } = h \of{ \pi } - h \of{ 0 }
+                </mrow>
+                
+                <mrow>
+                  \amp = \pi^{ 2 } \sin \of{ 3 \pi } - 0^{ 2 } \sin \of{ 3 \cdot 0 } = 0 - 0 = 0
+                </mrow>
+              </md>.
+            </p>
+          </li>
+        </ul>
       </p>
     </statement>
   </example>
 
--->
+  <conclusion>
+    <p>
+      The <xref ref="theorem-second-fundamental-theorem-of-calculus" text="title"/> not only exposes another link between differential calculus and integral calculus, but also provides an invaluable tool for computing Riemann integrals without resorting to limits of nets of Riemann sums. Specifically, <xref ref="theorem-second-fundamental-theorem-of-calculus" text="title"/> implies that for continuous functions, Riemann integration is only as hard as computing anti-derivatives. However, we remark that computing anti-derivatives can still be quite difficult, even for some relatively simple integrands.
+    </p>
+  </conclusion>
+</subsection>

@@ -7,11 +7,19 @@
 
   <introduction>
     <p>
-      Text before the first subsection.
+      In this section, we expand the kinds of functions we consider as the integrands of Riemann integrals. Thus far, we have only allowed Riemann integrals of the form
+      
+      <md>
+        \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } }
+      </md>,
+      
+      where <m> f \colon \clint{ a }{ b } \to \R </m> is a Riemann integrable (and therefore bounded) function defined on a closed interval. In this section, we relax both of these conditions while maintaining a grasp on some of the nice properties of the theory of Riemann integration.
     </p>
   </introduction>
 
-  <!-- <xi:include href="./subsection-TITLE.ptx"/> -->
+  <xi:include href="./subsection-exhaustion-by-compact-intervals.ptx"/>
+
+  <xi:include href="./subsection-tests-for-integral-convergence.ptx"/>
 
   <conclusion>
     <p>
@@ -19,7 +27,7 @@
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-improper-integration.ptx"/>
+  <xi:include href="./exercises-improper-integration.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-improper-integration.ptx"/>
+  <xi:include href="./problems-improper-integration.ptx"/>
 </section>

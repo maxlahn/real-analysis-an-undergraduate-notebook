@@ -906,8 +906,10 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-improper-integration.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Improper Integration</span></a></div>
 <ul id="ptx-toc-group-section-improper-integration" class="structural toc-item-list">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-improper-integration.html#exercises-improper-integration" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-improper-integration.html#reading-questions-improper-integration" class="internal"><span class="codenumber">6.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-improper-integration.html#subsection-exhaustion-by-compact-intervals" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Exhaustion by Compact Intervals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-improper-integration.html#subsection-tests-for-integral-convergence" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Tests for Integral Convergence</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-improper-integration.html#exercises-improper-integration" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-improper-integration.html#problems-improper-integration" class="internal"><span class="codenumber">6.3.4</span> <span class="title">Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="chapter-riemann-integration-6.html" class="internal"><span class="title">Conclusion</span></a></div></li>
@@ -1163,7 +1165,7 @@ R \amp = \of{ x_{ k } }_{ k = j }^{ n } \amp v \amp = \of{ t_{ k } }_{ k = j }^{
 F \of{ x } = \int_{ a }^{ x }{ f \of{ x } \, \diff{ x } }\text{.}
 \end{equation*}
 </div>
-<div class="para">Then <span class="process-math">\(F \)</span> is differentiable on the open interval <span class="process-math">\(\opint{ a }{ b } \text{,}\)</span> and <span class="process-math">\(F' \of{ c } = f \of{ c } \)</span> for all interior points <span class="process-math">\(a \lt c \lt b \text{.}\)</span>
+<div class="para">Then <span class="process-math">\(F \)</span> is differentiable, with derivative <span class="process-math">\(F' \of{ c } = f \of{ c } \)</span> for all points <span class="process-math">\(a \leq c \leq b \text{.}\)</span>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-first-fundamental-theorem-of-calculus-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -1172,7 +1174,7 @@ F \of{ x } = \int_{ a }^{ x }{ f \of{ x } \, \diff{ x } }\text{.}
 <details id="theorem-first-fundamental-theorem-of-calculus-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
 <div class="para logical" id="theorem-first-fundamental-theorem-of-calculus-4-1">
-<div class="para">Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Since <span class="process-math">\(f \)</span> is continuous at <span class="process-math">\(c \text{,}\)</span> there is a positive real number <span class="process-math">\(\delta \gt 0 \)</span> so that <span class="process-math">\(\abs{ f \of{ x } - f \of{ c } } \lt \epsilon \)</span> for all points <span class="process-math">\(x \in \clint{ a }{ b } \)</span> so that <span class="process-math">\(0 \lt \abs{ x - c } \lt \delta \text{.}\)</span> We observe that <a href="section-the-fundamental-theorems-of-calculus.html#lemma-chasles-relation" class="xref" data-knowl="./knowl/xref/lemma-chasles-relation.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 6.2.1: Chasles’ relation">Chasles’ relation</a> and the <a href="section-the-fundamental-theorems-of-calculus.html#proposition-triangle-inequality-for-riemann-integrals" class="xref" data-knowl="./knowl/xref/proposition-triangle-inequality-for-riemann-integrals.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 6.2.2: Triangle inequality for Riemann integrals">Triangle inequality for Riemann integrals</a> together imply that</div>
+<div class="para">Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Since <span class="process-math">\(f \)</span> is continuous at <span class="process-math">\(c \text{,}\)</span> there is a positive real number <span class="process-math">\(\delta \gt 0 \)</span> so that <span class="process-math">\(\abs{ f \of{ x } - f \of{ c } } \lt \frac{ \epsilon }{ 2 } \)</span> for all points <span class="process-math">\(x \in \clint{ a }{ b } \)</span> so that <span class="process-math">\(0 \lt \abs{ x - c } \lt \delta \text{.}\)</span> We observe that <a href="section-the-fundamental-theorems-of-calculus.html#lemma-chasles-relation" class="xref" data-knowl="./knowl/xref/lemma-chasles-relation.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 6.2.1: Chasles’ relation">Chasles’ relation</a> and the <a href="section-the-fundamental-theorems-of-calculus.html#proposition-triangle-inequality-for-riemann-integrals" class="xref" data-knowl="./knowl/xref/proposition-triangle-inequality-for-riemann-integrals.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 6.2.2: Triangle inequality for Riemann integrals">Triangle inequality for Riemann integrals</a> together imply that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-chasles-relation.html ./knowl/xref/proposition-triangle-inequality-for-riemann-integrals.html" id="theorem-first-fundamental-theorem-of-calculus-4-1-10">
 \begin{align*}
 \abs{ \frac{ F \of{ x } - F \of{ c } }{ x - c } - f \of{ c } } \amp = \abs{ \frac{ 1 }{ x - c } \of{ \int_{ a }^{ x }{ f \of{ x } \, \diff{ x } } - \int_{ a }^{ c }{ f \of{ x } \, \diff{ x } } - f \of{ c } \of{ x - c } } }\\
@@ -1180,7 +1182,8 @@ F \of{ x } = \int_{ a }^{ x }{ f \of{ x } \, \diff{ x } }\text{.}
 \amp = \frac{ 1 }{ \abs{ x - c } } \abs{ \int_{ c }^{ x }{ f \of{ x } - f \of{ c } \, \diff{ x } } }\\
 \amp = \frac{ 1 }{ \abs{ x - c } } \int_{ \min \of{ \set{ c , x } } }^{ \max \of{ \set{ c , x } } }{ \abs{ f \of{ x } - f \of{ c } } \, \diff{ x } }\\
 \amp \leq \frac{ 1 }{ \abs{ x - c } } \int_{ \min \of{ \set{ c , x } } }^{ \max \of{ \set{ c , x } } }{ \frac{ \epsilon }{ 2 } \, \diff{ x } }\\
-\amp = \frac{ \epsilon \of{ \max \of{ \set{ c , x } } - \min \of{ \set{ c , x } } } }{ 2 \abs{ x - c } } = \frac{ \epsilon \abs{ x - c } }{ 2 \abs{ x - c } } = \frac{ \epsilon }{ 2 } \lt \epsilon
+\amp = \frac{ \epsilon \of{ \max \of{ \set{ c , x } } - \min \of{ \set{ c , x } } } }{ 2 \abs{ x - c } }\\
+\amp = \frac{ \epsilon \abs{ x - c } }{ 2 \abs{ x - c } } = \frac{ \epsilon }{ 2 } \lt \epsilon
 \end{align*}
 </div>
 <div class="para">for all points <span class="process-math">\(x \in \clint{ a }{ b } \)</span> so that <span class="process-math">\(0 \lt \abs{ x - c } \lt \delta \text{.}\)</span> Thus <span class="process-math">\(F \)</span> is differentiable at <span class="process-math">\(c \text{,}\)</span> with derivative <span class="process-math">\(F' \of{ c } = f \of{ c } \text{.}\)</span>
@@ -1198,7 +1201,7 @@ F \of{ x } = \int_{ a }^{ x }{ f \of{ x } \, \diff{ x } }\text{.}
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Integrating Derivatives</span>
 </h2>
 <section class="introduction" id="subsection-integrating-derivatives-2">
-<div class="para" id="subsection-integrating-derivatives-2-1">Text before the first subdivision.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-integrating-derivatives-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsection-integrating-derivatives-2-1">The <a href="section-the-fundamental-theorems-of-calculus.html#theorem-first-fundamental-theorem-of-calculus" class="xref" data-knowl="./knowl/xref/theorem-first-fundamental-theorem-of-calculus.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.3: First fundamental theorem of calculus">First fundamental theorem of calculus</a> establishes a relationship between differentiation and Riemann integration: the function obtained by integrating a continuous function is differentiable, with derivative the integrand. We now seek to establish a relationship in the other direction; that is, we explore Riemann integrals of the derivative of a differentiable function. In this case, the moral is similar; integrating the derivative of a function yields information about that function itself.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-integrating-derivatives-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <article class="theorem theorem-like" id="theorem-second-fundamental-theorem-of-calculus"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Second fundamental theorem of calculus.</span>
@@ -1223,18 +1226,104 @@ F \of{ x } = \int_{ a }^{ x }{ f \of{ x } \, \diff{ x } }\text{.}
 F \of{ x } = \int_{ a }^{ x }{ f' \of{ x } \, \diff{ x } }\text{.}
 \end{equation*}
 </div>
-<div class="para">Then the <a href="section-the-fundamental-theorems-of-calculus.html#theorem-first-fundamental-theorem-of-calculus" class="xref" data-knowl="./knowl/xref/theorem-first-fundamental-theorem-of-calculus.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.3: First fundamental theorem of calculus">Theorem 6.2.3 First fundamental theorem of calculus</a> implies that <span class="process-math">\(F \)</span> is differentiable on <span class="process-math">\(\opint{ a }{ b } \text{,}\)</span> with derivative <span class="process-math">\(F' \of{ x } = f' \of{ x } \)</span> for all interior points <span class="process-math">\(a \lt x \lt b \text{.}\)</span>
+<div class="para">Then the <a href="section-the-fundamental-theorems-of-calculus.html#theorem-first-fundamental-theorem-of-calculus" class="xref" data-knowl="./knowl/xref/theorem-first-fundamental-theorem-of-calculus.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.3: First fundamental theorem of calculus">Theorem 6.2.3 First fundamental theorem of calculus</a> implies that <span class="process-math">\(F \)</span> is differentiable, with derivative <span class="process-math">\(F' \of{ x } = f' \of{ x } \)</span> for all points <span class="process-math">\(a \leq x \leq b \text{.}\)</span>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-second-fundamental-theorem-of-calculus-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="para logical" id="theorem-second-fundamental-theorem-of-calculus-3-2">
+<div class="para">Part (b) of <a href="section-applications-of-the-mean-value-theorem.html#problem-functions-with-the-same-derivative" class="xref" data-knowl="./knowl/xref/problem-functions-with-the-same-derivative.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 5.3.4.1: Functions with the same derivative">Problem 5.3.4.1 Functions with the same derivative</a> now implies that there is some real number <span class="process-math">\(c \in \R \)</span> so that <span class="process-math">\(F \of{ x } = f \of{ x } + c \)</span> for all points <span class="process-math">\(a \leq x \leq b \text{.}\)</span> By evaluating at <span class="process-math">\(a \text{,}\)</span> we observe that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/problem-functions-with-the-same-derivative.html" id="theorem-second-fundamental-theorem-of-calculus-3-2-6">
+\begin{equation*}
+0 = \int_{ a }^{ a }{ f' \of{ x } \, \diff{ x } } = F \of{ a } = f \of{ a } + c\text{,}
+\end{equation*}
+</div>
+<div class="para">so that <span class="process-math">\(c = -f \of{ a } \text{.}\)</span> Thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/problem-functions-with-the-same-derivative.html" id="theorem-second-fundamental-theorem-of-calculus-3-2-8">
+\begin{equation*}
+\int_{ a }^{ b }{ f' \of{ x } \, \diff{ x } } = F \of{ b } = f \of{ b } + c = f \of{ b } - f \of{ a }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-second-fundamental-theorem-of-calculus-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 6.2.4.1"><a tabindex="-1" href="#theorem-second-fundamental-theorem-of-calculus-3" title="Copy heading and permalink for Proof 6.2.4.1" aria-label="Copy heading and permalink for Proof 6.2.4.1">🔗</a></div>
 </article></details>
-<section class="conclusion" id="subsection-integrating-derivatives-4">
-<div class="para" id="subsection-integrating-derivatives-4-1">Text after the last subdivision.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-integrating-derivatives-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsection-integrating-derivatives-4">There are stronger versions of the <a href="section-the-fundamental-theorems-of-calculus.html#theorem-second-fundamental-theorem-of-calculus" class="xref" data-knowl="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.4: Second fundamental theorem of calculus">Second fundamental theorem of calculus</a> which do not require continuity of the integrand, but rather only Riemann integrability. However, we will only use the result as stated.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-integrating-derivatives-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Computing Riemann integrals using the Second fundamental theorem of calculus.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus-2-1">
+<div class="para">The following are examples of how to use the <a href="section-the-fundamental-theorems-of-calculus.html#theorem-second-fundamental-theorem-of-calculus" class="xref" data-knowl="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.4: Second fundamental theorem of calculus">Second fundamental theorem of calculus</a> to compute a Riemann integral:</div>
+<ul class="disc" id="example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus-2-1-2">
+<li id="example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus-2-1-2-1">
+<div class="para logical" id="example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus-2-1-2-1-1">
+<div class="para">Consider the Riemann integral</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" id="example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus-2-1-2-1-1-1">
+\begin{equation*}
+\int_{ 0 }^{ 4 }{ x^{ 3 } \, \diff{ x } }\text{.}
+\end{equation*}
+</div>
+<div class="para">Instead of computing this Riemann integral as a limit of Riemann sums, we instead recognize that <span class="process-math">\(x^{ 3 } = f' \of{ x } \text{,}\)</span> where <span class="process-math">\(f \colon \R \to \R \)</span> is the continuously differentiable real-valued function defined by the formula <span class="process-math">\(f \of{ x } = \frac{ x^{ 4 } }{ 4 } \text{.}\)</span> Thus the <a href="section-the-fundamental-theorems-of-calculus.html#theorem-second-fundamental-theorem-of-calculus" class="xref" data-knowl="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.4: Second fundamental theorem of calculus">Theorem 6.2.4 Second fundamental theorem of calculus</a> implies that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" id="example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus-2-1-2-1-1-6">
+\begin{align*}
+\int_{ 0 }^{ 4 }{ x^{ 3 } \, \diff{ x } } \amp = \int_{ 0 }^{ 4 }{ f' \of{ x } \, \diff{ x } } = f \of{ 4 } - f \of{ 0 }\\
+\amp = \frac{ 4^{ 4 } }{ 4 } - \frac{ 0^{ 4 } }{ 4 } = 64 - 0 = 64\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus-2-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus-2-1-2-2">
+<div class="para logical" id="example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus-2-1-2-2-1">
+<div class="para">Consider the Riemann integral</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" id="example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus-2-1-2-2-1-1">
+\begin{equation*}
+\int_{ -\frac{ \pi }{ 2 } }^{ \frac{ \pi }{ 2 } }{ \cos \of{ y } \, \diff{ y } }\text{.}
+\end{equation*}
+</div>
+<div class="para">Instead of computing this Riemann integral as a limit of Riemann sums, we instead recognize that <span class="process-math">\(\cos \of{ y } = g' \of{ y } \text{,}\)</span> where <span class="process-math">\(g \colon \R \to \R \)</span> is the continuously differentiable real-valued function defined by the formula <span class="process-math">\(g \of{ y } = \sin \of{ y } \text{.}\)</span> Thus the <a href="section-the-fundamental-theorems-of-calculus.html#theorem-second-fundamental-theorem-of-calculus" class="xref" data-knowl="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.4: Second fundamental theorem of calculus">Theorem 6.2.4 Second fundamental theorem of calculus</a> implies that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" id="example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus-2-1-2-2-1-6">
+\begin{align*}
+\int_{ -\frac{ \pi }{ 2 } }^{ \frac{ \pi }{ 2 } }{ \cos \of{ y } \, \diff{ y } } \amp = \int_{ -\frac{ \pi }{ 2 } }^{ \frac{ \pi }{ 2 } }{ g' \of{ y } \, \diff{ y } } = g \of{ \frac{ \pi }{ 2 } } - g \of{ -\frac{ \pi }{ 2 } }\\
+\amp = \sin \of{ \frac{ \pi }{ 2 } } - \sin \of{ -\frac{ \pi }{ 2 } } = 1 - \of{ -1 } = 2\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus-2-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus-2-1-2-3">
+<div class="para logical" id="example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus-2-1-2-3-1">
+<div class="para">Consider the Riemann integral</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" id="example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus-2-1-2-3-1-1">
+\begin{equation*}
+\int_{ 0 }^{ \pi }{ 2 z \sin \of{ 3 z } + 3 z^{ 2 } \cos \of{ 3 z } \, \diff{ z } }\text{.}
+\end{equation*}
+</div>
+<div class="para">Instead of computing this Riemann integral as a limit of Riemann sums, we instead recognize that <span class="process-math">\(2 z \sin \of{ 3 z } + 3 z^{ 2 } \cos \of{ 3 z } = h' \of{ z } \text{,}\)</span> where <span class="process-math">\(h \colon \R \to \R \)</span> is the continuously differentiable real-valued function defined by the formula <span class="process-math">\(h \of{ z } = z^{ 2 } \sin \of{ 3 z } \text{.}\)</span> Thus the <a href="section-the-fundamental-theorems-of-calculus.html#theorem-second-fundamental-theorem-of-calculus" class="xref" data-knowl="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.4: Second fundamental theorem of calculus">Theorem 6.2.4 Second fundamental theorem of calculus</a> implies that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" id="example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus-2-1-2-3-1-6">
+\begin{align*}
+\int_{ 0 }^{ \pi }{ 2 z \sin \of{ 3 z } + 3 z^{ 2 } \cos \of{ 3 z } \, \diff{ z } } \amp = \int_{ 0 }^{ \pi }{ h' \of{ z } \, \diff{ z } } = h \of{ \pi } - h \of{ 0 }\\
+\amp = \pi^{ 2 } \sin \of{ 3 \pi } - 0^{ 2 } \sin \of{ 3 \cdot 0 } = 0 - 0 = 0\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus-2-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 6.2.5: Computing Riemann integrals using the Second fundamental theorem of calculus"><a tabindex="-1" href="#example-computing-riemann-integrals-using-the-second-fundamental-theorem-of-calculus" title="Copy heading and permalink for Example 6.2.5: Computing Riemann integrals using the Second fundamental theorem of calculus" aria-label="Copy heading and permalink for Example 6.2.5: Computing Riemann integrals using the Second fundamental theorem of calculus">🔗</a></div>
+</article></details>
+<section class="conclusion" id="subsection-integrating-derivatives-6">
+<div class="para" id="subsection-integrating-derivatives-6-1">The <a href="section-the-fundamental-theorems-of-calculus.html#theorem-second-fundamental-theorem-of-calculus" class="xref" data-knowl="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.4: Second fundamental theorem of calculus">Second fundamental theorem of calculus</a> not only exposes another link between differential calculus and integral calculus, but also provides an invaluable tool for computing Riemann integrals without resorting to limits of nets of Riemann sums. Specifically, <a href="section-the-fundamental-theorems-of-calculus.html#theorem-second-fundamental-theorem-of-calculus" class="xref" data-knowl="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.4: Second fundamental theorem of calculus">Second fundamental theorem of calculus</a> implies that for continuous functions, Riemann integration is only as hard as computing anti-derivatives. However, we remark that computing anti-derivatives can still be quite difficult, even for some relatively simple integrands.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-integrating-derivatives-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><div class="autopermalink" aria-hidden="true" data-description="Subsection 6.2.2: Integrating Derivatives"><a tabindex="-1" href="#subsection-integrating-derivatives" title="Copy heading and permalink for Subsection 6.2.2: Integrating Derivatives" aria-label="Copy heading and permalink for Subsection 6.2.2: Integrating Derivatives">🔗</a></div>
 </section>
 <section class="conclusion" id="section-the-fundamental-theorems-of-calculus-5">
-<div class="para" id="section-the-fundamental-theorems-of-calculus-5-1">Text after the last subsection.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-the-fundamental-theorems-of-calculus-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="section-the-fundamental-theorems-of-calculus-5-1">In the next section, we will try to expand our definition of integrals to include both unbounded functions and non-compact intervals.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-the-fundamental-theorems-of-calculus-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="exercises" id="exercises-the-fundamental-theorems-of-calculus">
 <h2 class="heading hide-type">

@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-exhaustion-by-compact-intervals" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Exhaustion by Compact Intervals
+  </title>
+
+  <introduction>
+    <p>
+      We begin with an example that illustrates the dangers of integrating real-valued functions on larger and larger compact intervals: we may lose coherent interpretations of such integrals in the limit.
+    </p>
+  </introduction>
+
+  <example xml:id="example-subtlety-of-improper-integration">
+    <title>
+      Subtlety of improper integration
+    </title>
+    
+    <statement>
+      <p>
+        Consider the real-valued function <m> f \colon \R \to \R </m> defined by the formula <m> f \of{ x } = x </m>. Then the <xref ref="theorem-second-fundamental-theorem-of-calculus" text="title"/> implies that
+        
+        <md>
+          \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } = \frac{ b^{ 2 } }{ 2 } - \frac{ a^{ 2 } }{ 2 } = \frac{ b^{ 2 } - a^{ 2 } }{ 2 }
+        </md>
+        
+        for all real numbers <m> -\infty \lt a \leq b \lt \infty </m>. In particular, we observe that
+        
+        <md>
+          \lim_{ b \to \infty }{ \int_{ -b }^{ b }{ f \of{ x } \, \diff{ x } } } = \lim_{ b \to \infty }{ \frac{ b^{ 2 } - \of{ -b }^{ 2 } }{ 2 } } = \lim_{ b \to \infty }{ 0 } = 0
+        </md>
+        
+        but
+        
+        <md>
+          <mrow>
+            \lim_{ b \to \infty }{ \int_{ 1 - b }^{ 1 + b }{ f \of{ x } \, \diff{ x } } } \amp = \lim_{ b \to \infty }{ \frac{ \of{ 1 + b }^{ 2 } - \of{ 1 - b }^{ 2 } }{ 2 } }
+          </mrow>
+          
+          <mrow>
+            \amp = \lim_{ b \to \infty }{ \frac{ 1 + 2 b + b^{ 2 } - 1 + 2 b - b^{ 2 } }{ 2 } } = \lim_{ b \to \infty }{ \frac{ 4 b }{ 2 } }
+          </mrow>
+          
+          <mrow>
+            \amp = \lim_{ b \to \infty }{ 2 b } = \infty
+          </mrow>
+        </md>,
+        
+        and
+        
+        <md>
+          <mrow>
+            \lim_{ b \to \infty }{ \int_{ -1 - b }^{ -1 + b }{ f \of{ x } \, \diff{ x } } } \amp = \lim_{ b \to \infty }{ \frac{ \of{ -1 + b }^{ 2 } - \of{ -1 - b }^{ 2 } }{ 2 } }
+          </mrow>
+          
+          <mrow>
+            \amp = \lim_{ b \to \infty }{ \frac{ 1 - 2 b + b^{ 2 } - 1 - 2 b - b^{ 2 } }{ 2 } } = \lim_{ b \to \infty }{ -\frac{ 4 b }{ 2 } }
+          </mrow>
+          
+          <mrow>
+            \amp = \lim_{ b \to \infty }{ -2 b } = -\infty
+          </mrow>
+        </md>.
+        
+        This example serves to complicate what precisely is meant by the improper integral <m> \int_{ -\infty }^{ \infty }{ f \of{ x } \, \diff{ x } } </m>.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    Specifically, performing a Riemann integration on a non-compact interval will require additional care to ensure that said integral converges in a specific way. As in the case of Riemann integrals on compact intervals, we use nets to define the relevant mode of convergence.
+  </p>
+  
+  <lemma xml:id="lemma-compact-subintervals-are-directed">
+    <title>
+      Compact subintervals are directed
+    </title>
+    
+    <notation>
+      <usage>
+        <m> \mathcal{ K }_{ X } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the set of compact subintervals of <m> \Int \of{ X } </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        For any interval <m> X \subseteq \R </m>, the set <m> \mathcal{ K }_{ X } </m> of all compact subintervals of the interior <m> \Int \of{ X } </m> is directed upwards.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> U , V \in \mathcal{ K }_{ X } </m> be two compact subintervals of the interior <m> \Int \of{ X } </m>. Then <m> U = \clint{ a }{ b } </m> and <m> V = \clint{ c }{ d } </m> for some real numbers <m> a , b , c , d \in \R </m> so that <m> a \leq b </m> and <m> c \leq d </m>. Let
+        
+        <md>
+          W = \clint{ \min \of{ \set{ a , c } } }{ \max \of{ \set{ b , d } } }
+        </md>.
+        
+        We observe that <m> \min \of{ \set{ a , c } } \in \Int \of{ X } </m> and <m> \max \of{ \set{ b , d } } \in \Int \of{ X } </m>. Since <m> X </m> is an interval, so too is <m> \Int \of{ X } </m>. We conclude that <m> W \subseteq \Int \of{ X } </m>, and so <m> W \in \mathcal{ K }_{ X } </m>. Of course <m> U , V \subseteq W </m>. Since every pair of elements of <m> \mathcal{ K }_{ X } </m> has a common upper bound, <m> \mathcal{ K }_{ X } </m> is directed upwards.
+      </p>
+    </proof>
+  </lemma>
+  
+  <p>
+    The improper Riemann integrability of a real-valued function will be defined in terms of the convergence of certain nets of Riemann integrals defined on compact intervals. These nets will factor through the above directed set, and will be called <term> interior exhaustions </term> by compact subintervals.
+  </p>
+  
+  <definition xml:id="definition-exhaustion-by-compact-intervals">
+    <title>
+      Interior exhaustion by compact subintervals
+    </title>
+    
+    <idx>
+      interior exhaustion by compact subintervals
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> \mathcal{ K }_{ X } </m> be the directed set of compact subintervals of the interior <m> \Int \of{ X } </m> of an interval <m> X \subseteq \R </m>. A family <m> \of{ K_{ \alpha } }_{ \alpha \in A } </m> of such compact subintervals <m> K_{ \alpha } \in \mathcal{ K }_{ X } </m> indexed by an upwards directed set <m> \of{ A , \preceq } </m> is called an <term> interior exhaustion </term> of <m> X </m> by compact intervals if it is order-preserving and
+        
+        <md>
+          \Int \of{ X } = \bigcup_{ \alpha \in A }{ K_{ \alpha } }
+        </md>.
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-interior-exhaustion-by-compact-subintervals">
+    <title>
+      Interior exhaustion by compact subintervals
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ K_{ \alpha } }_{ \alpha \in A } </m> be a family of compact subintervals <m> K_{ \alpha } \in \mathcal{ K }_{ X } </m> of an interval <m> X \subseteq \R </m> indexed by an upwards directed set <m> \of{ A , \preceq } </m>. For each index <m> \alpha \in A </m>, write <m> K_{ \alpha } = \clint{ a_{ \alpha } }{ b_{ \alpha } } </m> for some real numbers <m> -\infty \lt a_{ \alpha } \leq b_{ \alpha } \lt \infty </m>.
+      </p>
+      
+      <p>
+        Then <m> \of{ K_{ \alpha } }_{ \alpha \in A } </m> is an interior exhaustion of <m> X </m> by compact subintervals if and only if it satisfies the following conditions:
+        
+        <ol>
+          <li>
+            <p>
+              For all indices <m> \alpha , \beta \in A </m>, if <m> \alpha \preceq \beta </m>, then <m> a_{ \alpha } \geq a_{ \beta } </m> and <m> b_{ \alpha } \leq b_{ \beta } </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The nets <m> \of{ a_{ \alpha } }_{ \alpha \in A } </m> and <m> \of{ b_{ \alpha } }_{ \alpha \in A } </m> have upwards limits
+              
+              <md>
+                <mrow>
+                  \lim_{ \alpha \uparrow }{ a_{ \alpha } } \amp = \inf \of{ X } \amp \lim_{ \alpha \uparrow }{ b_{ \alpha } } \amp = \sup \of{ X }
+                </mrow>
+              </md>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <!-- <proof>
+      <p>
+        <m> \of{ K_{ \alpha } }_{ \alpha \in A } </m> is an exhaustion of <m> X </m> by compact subintervals if and only if it is order-preserving and covers <m> X </m>. We will show that this indexed family is monotone if and only if it satisfies condition (1), and that the family covers <m> X </m> if and only if it satisfies condition (2).
+      </p>
+      
+      <p>
+        To that end, we first observe that <m> \of{ K_{ \alpha } }_{ \alpha \in A } = \of{ \clint{ a_{ \alpha } }{ b_{ \alpha } } }_{ \alpha \in A } </m> is order-preserving if and only if <m> K_{ \alpha } \subseteq K_{ \beta } </m> for all indices <m> \alpha , \beta \in A </m> so that <m> \alpha \leq \beta </m>. Since
+        
+        <md>
+          \clint{ a_{ \alpha } }{ b_{ \alpha } } = K_{ \alpha } \subseteq K_{ \beta } = \clint{ a_{ \beta } }{ b_{ \beta } }
+        </md>
+        
+        if and only if <m> a_{ \alpha } \geq a_{ \beta } </m> and <m> b_{ \alpha } \leq b_{ \beta } </m>, we see that <m> \of{ K_{ \alpha } }_{ \alpha \in A } </m> is order-preserving if and only if it satisfies condition (1).
+      </p>
+      
+      <p>
+        Now suppose that <m> \of{ K_{ \alpha } }_{ \alpha \in A } </m> covers <m> X </m>; that is,
+        
+        <md>
+          X = \bigcup_{ \alpha \in A }{ K_{ \alpha } }
+        </md>.
+        
+        For any 
+      </p>
+    </proof> -->
+  </lemma>
+  
+  <p>
+    You will have an opportunity to prove <xref ref="lemma-interior-exhaustion-by-compact-subintervals"/> in the problems for this section. One consequence is that Riemann integrals of Riemann integrable functions defined on compact intervals are limits of Riemann integrals on exhaustions by compact subintervals.
+  </p>
+  
+  <proposition xml:id="proposition-improper-integrals-on-compact-intervals">
+    <title>
+      Improper integrals on compact intervals
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon \clint{ a }{ b } \to \R </m> be a real-valued function defined on a closed interval <m> \clint{ a }{ b } </m>. If <m> f </m> is Riemann integrable, then
+        
+        <md>
+          \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } = \lim_{ \alpha \uparrow }{ \int_{ a_{ \alpha } }^{ b_{ \alpha } }{ f \of{ x } \, \diff{ x } } }
+        </md>
+        
+        for any interior exhaustion <m> \of{ \clint{ a_{ \alpha } }{ b_{ \alpha } } }_{ \alpha \in A } </m> of <m> \clint{ a }{ b } </m> by compact subintervals <m> \clint{ a_{ \alpha } }{ b_{ \alpha } } \in \mathcal{ K }_{ \clint{ a }{ b } } </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Since <m> f </m> is Riemann integrable, it is bounded, and so there is some positive real number <m> B \gt 0 </m> so that <m> \abs{ f \of{ x } } \leq B </m> for all points <m> a \leq x \leq b </m>. Let <m> \epsilon \gt 0 </m> be a positive real number. Then <xref ref="lemma-interior-exhaustion-by-compact-subintervals"/> implies that there is an index <m> \alpha_{ \epsilon } \in A </m> so that <m> a_{ \alpha_{ \epsilon } } \lt a + \frac{ \epsilon }{ 2 B } </m> and <m> b_{ \alpha_{ \epsilon } } \gt b - \frac{ \epsilon }{ 2 B } </m>. We observe that 
+        
+        <md>
+          <mrow>
+            \abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - \int_{ a_{ \alpha } }^{ b_{ \alpha } }{ f \of{ x } \, \diff{ x } } } \amp = \abs{ \int_{ a }^{ a_{ \alpha } }{ f \of{ x } \, \diff{ x } } + \int_{ b_{ \alpha } }^{ b }{ f \of{ x } \, \diff{ x } } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \abs{ \int_{ a }^{ a_{ \alpha } }{ f \of{ x } \, \diff{ x } } } + \abs{ \int_{ b_{ \alpha } }^{ b }{ f \of{ x } \, \diff{ x } } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \int_{ a }^{ a_{ \alpha } }{ \abs{ f \of{ x } } \, \diff{ x } } + \int_{ b_{ \alpha } }^{ b }{ \abs{ f \of{ x } } \, \diff{ x } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \int_{ a }^{ a_{ \alpha } }{ B \, \diff{ x } } + \int_{ b_{ \alpha } }^{ b }{ B \, \diff{ x } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq B \of{ a_{ \alpha } - a } + B \of{ b - b_{ \alpha } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq B \of{ a_{ \alpha_{ \epsilon } } - a } + B \of{ b - b_{ \alpha_{ \epsilon } } }
+          </mrow>
+          
+          <mrow>
+            \amp \lt B \of{ \frac{ \epsilon }{ 2 B } } + B \of{ \frac{ \epsilon }{ 2 B } } = \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+          </mrow>
+        </md>
+        
+        for all indices <m> \alpha \succeq \alpha_{ \epsilon } </m>. Thus
+        
+        <md>
+          \lim_{ \alpha \uparrow }{ \int_{ a_{ \alpha } }^{ b_{ \alpha } }{ f \of{ x } \, \diff{ x } } } = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } }
+        </md>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <proposition xml:id="proposition-riemann-integrals-and-interior-exhaustions">
+    <title>
+      Riemann integrals and interior exhaustions
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to \R </m> be a real-valued function defined on an interval <m> X </m>, and suppose that the restriction of <m> f </m> to any compact subinterval of the interior <m> \Int \of{ X } </m> is Riemann integrable. Then for any real number <m> I \in \R </m>, the following are equivalent:
+        
+        <ol>
+          <li>
+            <p>
+              For any interior exhaustion <m> \of{ \clint{ a_{ \alpha } }{ b_{ \alpha } } }_{ \alpha \in A } </m> of <m> X </m> by compact subintervals,
+              
+              <md>
+                \lim_{ \alpha \uparrow }{ \int_{ a_{ \alpha } }^{ b_{ \alpha } }{ f \of{ x } \, \diff{ x } } } = I
+              </md>
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              For any positive real number <m> \epsilon </m>, there is a compact subinterval <m> \clint{ a_{ \epsilon } }{ b_{ \epsilon } } \in \mathcal{ K }_{ X } </m> of <m> \Int \of{ X } </m> so that
+              
+              <md>
+                \abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - I } \lt \epsilon
+              </md>
+              
+              for all compact subintervals <m> \clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subseteq \Int \of{ X } </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        First suppose that
+        
+        <md>
+          \lim_{ \alpha \uparrow }{ \int_{ a_{ \alpha } }^{ b_{ \alpha } }{ f \of{ x } \, \diff{ x } } } = I
+        </md>
+        
+        for any interior exhaustion <m> \of{ \clint{ a_{ \alpha } }{ b_{ \alpha } } }_{ \alpha \in A } </m> of <m> X </m> by compact subintervals. Then in particular we may choose the maximal such interior exhaustion <m> \of{ K }_{ K \in \mathcal{ K }_{ X } } </m>, obtaining the convergence
+        
+        <md>
+          \lim_{ \clint{ a }{ b } \uparrow }{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } } = I
+        </md>.
+        
+        Thus for any positive real number <m> \epsilon \gt 0 </m>, there is a compact subinterval <m> \clint{ a_{ \epsilon } }{ b_{ \epsilon } } \in \mathcal{ K }_{ X } </m> so that
+        
+        <md>
+          \abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - I } \lt \epsilon
+        </md>
+        
+        for all compact subintervals <m> \clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subseteq \Int \of{ X } </m>.
+      </p>
+      
+      <p>
+        Conversely, now suppose that for any positive real number <m> \epsilon \gt 0 </m>, there is a compact subinterval <m> \clint{ a_{ \epsilon } }{ b_{ \epsilon } } \in \mathcal{ K }_{ X } </m> so that
+        
+        <md>
+          \abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - I } \lt \epsilon
+        </md>
+        
+        for all compact subintervals <m> \clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subseteq \Int \of{ X } </m>, and let <m> \of{ \clint{ a_{ \alpha } }{ b_{ \alpha } } }_{ \alpha \in A } </m> be an interior exhaustion of <m> X </m> by compact intervals <m> \clint{ a_{ \alpha } }{ b_{ \alpha } } </m>. <xref ref="lemma-interior-exhaustion-by-compact-subintervals"/> implies that there is an index <m> \alpha_{ \epsilon } \in A </m> so that
+        
+        <md>
+          \clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a_{ \alpha_{ \epsilon } } }{ b_{ \alpha_{ \epsilon } } } \subseteq \Int \of{ X }
+        </md>.
+        
+        We observe that
+        
+        <md>
+          \abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - I } \lt \epsilon
+        </md>
+        
+        for all indices <m> \alpha \succeq \alpha_{ \epsilon } </m>, since in this case
+        
+        <md>
+          \clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a_{ \alpha_{ \epsilon } } }{ b_{ \alpha_{ \epsilon } } } \subseteq \clint{ a_{ \alpha } }{ b_{ \alpha } } \subseteq \Int \of{ X }
+        </md>.
+        
+        We conclude that
+        
+        <md>
+          \lim_{ \alpha \uparrow }{ \int_{ a_{ \alpha } }^{ b_{ \alpha } }{ f \of{ x } \, \diff{ x } } } = I
+        </md>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <definition xml:id="definition-improper-riemann-integral">
+    <title>
+      Improper Riemann integral
+    </title>
+    
+    <idx>
+      improper Riemann integrability
+    </idx>
+    
+    <idx>
+      improper Riemann integral
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> f \colon X \to \R </m> be a real-valued function defined on an interval <m> X </m>, and suppose that the restriction of <m> f </m> to any compact subinterval of the interior <m> \Int \of{ X } </m> is Riemann integrable. <m> f </m> is called <term> improperly Riemann integrable </term> if there is a real number <m> I \in \R </m> which satisfies either (and therefore both) of the conditions in <xref ref="proposition-riemann-integrals-and-interior-exhaustions"/>. In this case, that <m> \R </m> is Hausdorff implies that the number <m> I </m> is uniquely defined by these properties. This number <m> I </m> is called the <term> improper Riemann integral </term> of <m> f </m>, and is denoted
+        
+        <md>
+          \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } }
+        </md>.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="example-improper-riemann-integration">
+    <title>
+      Improper Riemann integration
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples and non-examples of improperly Riemann integrable functions and their improper Riemann integrals:
+        
+        <ul>
+          <li>
+            <p>
+              Let <m> p \in \R \setminus \set{ 1 } </m> be a real number, and consider the function <m> f \colon \clopint{ 1 }{ \infty } </m> defined by the formula <m> f \of{ x } = \frac{ 1 }{ x^{ p } } </m>. We observe that
+              
+              <md>
+                \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } = \frac{ b^{ 1 - p } }{ 1 - p } - \frac{ a^{ 1 - p } }{ 1 - p } = \frac{ b^{ 1 - p } - a^{ 1 - p } }{ 1 - p }
+              </md>
+              
+              for any compact subinterval <m> \clint{ a }{ b } \subseteq \opint{ 1 }{ \infty } </m>. We first note that if <m> p \lt 1 </m>, then <m> 1 - p \gt 0 </m>, and so
+              
+              <md>
+                \lim_{ b \to \infty }{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } } = \lim_{ b \to \infty }{ \frac{ b^{ 1 - p } - a^{ 1 - p } }{ 1 - p } } = \infty
+              </md>.
+              
+              This implies that <m> f </m> is not improperly Riemann integrable in this case.
+            </p>
+            
+            <p>
+              On the other hand, now suppose that <m> p \gt 1 </m>, and let <m> \epsilon \gt 0 </m> be a positive real number. Fix real numbers <m> 1 \lt a_{ \epsilon } \leq b_{ \epsilon } \lt \infty </m> so that
+              
+              <md>
+                <mrow>
+                  a_{ \epsilon } \amp \lt \of{ 1 - \frac{ \epsilon \of{ p - 1 } }{ 2 } }^{ \frac{ 1 }{ 1 - p } } \amp b_{ \epsilon } \gt \of{ \frac{ \epsilon \of{ p - 1 } }{ 2 } }^{ \frac{ 1 }{ 1 - p } }
+                </mrow>
+              </md>.
+              
+              We observe that
+              
+              <md>
+                <mrow>
+                  \abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - \frac{ 1 }{ p - 1 } } \amp = \abs{ \frac{ b^{ 1 - p } - a^{ 1 - p } }{ 1 - p } + \frac{ 1 }{ 1 - p } } \leq \frac{ \abs{ b^{ 1 - p } } }{ p - 1 } + \frac{ \abs{ 1 - a^{ 1 - p } } }{ p - 1 }
+                </mrow>
+                
+                <mrow>
+                  \amp = \frac{ b^{ 1 - p } }{ p - 1 } + \frac{ 1 - a^{ 1 - p } }{ p - 1 } \leq \frac{ b_{ \epsilon }^{ 1 - p } }{ p - 1 } + \frac{ 1 - a_{ \epsilon }^{ 1 - p } }{ p - 1 }
+                </mrow>
+                
+                <mrow>
+                  \amp \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+                </mrow>
+              </md>
+              
+              for all compact subintervals <m> \clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subsetneq \opint{ 0 }{ \infty } </m>. Thus <m> f </m> is improperly Riemann integrable, with improper Riemann integral
+              
+              <md>
+                \int_{ 1 }^{ \infty }{ f \of{ x } \, \diff{ x } } = \frac{ 1 }{ p - 1 }
+              </md>.
+            </p>
+          </li>
+          
+          <!-- <li>
+            <p>
+              Let <m> p \in \R \setminus \set{ 1 } </m> be a real number, and consider the function <m> f \colon \opclint{ 0 }{ 1 } </m> defined by the formula <m> f \of{ x } = \frac{ 1 }{ x^{ p } } </m>. We observe that
+              
+              <md>
+                \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } = \frac{ b^{ 1 - p } }{ 1 - p } - \frac{ a^{ 1 - p } }{ 1 - p } = \frac{ b^{ 1 - p } - a^{ 1 - p } }{ 1 - p }
+              </md>
+              
+              for any compact subinterval <m> \clint{ a }{ b } \subseteq \opint{ 0 }{ 1 } </m>. We first note that if <m> p \gt 1 </m>, then <m> 1 - p \lt 0 </m>, and so
+              
+              <md>
+                \lim_{ a \to 0 }{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } } = \lim_{ a \to 0 }{ \frac{ b^{ 1 - p } - a^{ 1 - p } }{ 1 - p } } = \infty
+              </md>.
+              
+              This implies that <m> f </m> is not improperly Riemann integrable in this case.
+            </p>
+            
+            <p>
+              On the other hand, now suppose that <m> p \gt 1 </m>, and let <m> \epsilon \gt 0 </m> be a positive real number. Fix real numbers <m> 1 \lt a_{ \epsilon } \leq b_{ \epsilon } \lt \infty </m> so that
+              
+              <md>
+                <mrow>
+                  a_{ \epsilon } \amp \lt \of{ 1 - \frac{ \epsilon \of{ p - 1 } }{ 2 } }^{ \frac{ 1 }{ 1 - p } } \amp b_{ \epsilon } \gt \of{ \frac{ \epsilon \of{ p - 1 } }{ 2 } }^{ \frac{ 1 }{ 1 - p } }
+                </mrow>
+              </md>.
+              
+              We observe that
+              
+              <md>
+                <mrow>
+                  \abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - \frac{ 1 }{ p - 1 } } \amp = \abs{ \frac{ b^{ 1 - p } - a^{ 1 - p } }{ 1 - p } + \frac{ 1 }{ 1 - p } } \leq \frac{ \abs{ b^{ 1 - p } } }{ p - 1 } + \frac{ \abs{ 1 - a^{ 1 - p } } }{ p - 1 }
+                </mrow>
+                
+                <mrow>
+                  \amp = \frac{ b^{ 1 - p } }{ p - 1 } + \frac{ 1 - a^{ 1 - p } }{ p - 1 } \leq \frac{ b_{ \epsilon }^{ 1 - p } }{ p - 1 } + \frac{ 1 - a_{ \epsilon }^{ 1 - p } }{ p - 1 }
+                </mrow>
+                
+                <mrow>
+                  \amp \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+                </mrow>
+              </md>
+              
+              for all compact subintervals <m> \clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subsetneq \opint{ 0 }{ \infty } </m>. Thus <m> f </m> is improperly Riemann integrable, with improper Riemann integral
+              
+              <md>
+                \int_{ 1 }^{ \infty }{ f \of{ x } \, \diff{ x } } = \frac{ 1 }{ p - 1 }
+              </md>.
+            </p>
+          </li> -->
+          
+          <li>
+            <p>
+              
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+
+  <conclusion>
+    <p>
+      Text after the last subdivision.
+    </p>
+  </conclusion>
+</subsection>
+
+<!--
+
+  <definition xml:id="definition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <idx>
+      TERM
+    </idx>
+    
+    <notation>
+      <usage>
+        <m>  </m>
+      </usage>
+      
+      <description>
+        <p>
+          
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="lemma-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </lemma>
+
+  <proposition xml:id="proposition-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary xml:id="corollary-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <creator>
+      CREATOR
+    </creator>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        
+      </p>
+    </proof>
+  </corollary>
+
+  <example xml:id="example-TITLE">
+    <title>
+      TITLE
+    </title>
+    
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+-->
