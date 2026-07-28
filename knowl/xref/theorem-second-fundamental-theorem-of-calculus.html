@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Second fundamental theorem of calculus.</span>
+</h2>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(f \colon \clint{ a }{ b } \to \R \)</span> be a real-valued function defined on a closed interval <span class="process-math">\(\clint{ a }{ b } \text{.}\)</span> If <span class="process-math">\(f \)</span> is continuously differentiable, then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{ a }^{ b }{ f' \of{ x } \, \diff{ x } } = f \of{ b } - f \of{ a }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-second-fundamental-theorem-of-calculus-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 6.2.4: Second fundamental theorem of calculus"><a tabindex="-1" href="#theorem-second-fundamental-theorem-of-calculus" title="Copy heading and permalink for Theorem 6.2.4: Second fundamental theorem of calculus" aria-label="Copy heading and permalink for Theorem 6.2.4: Second fundamental theorem of calculus">🔗</a></div>
+</article>
+<details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(F \colon \clint{ a }{ b } \to \R \)</span> be the real-valued function defined on <span class="process-math">\(\clint{ a }{ b } \)</span> by the formula</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-first-fundamental-theorem-of-calculus.html">
+\begin{equation*}
+F \of{ x } = \int_{ a }^{ x }{ f' \of{ x } \, \diff{ x } }\text{.}
+\end{equation*}
+</div>
+<div class="para">Then the <a href="section-the-fundamental-theorems-of-calculus.html#theorem-first-fundamental-theorem-of-calculus" class="xref" data-knowl="./knowl/xref/theorem-first-fundamental-theorem-of-calculus.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.3: First fundamental theorem of calculus">Theorem 6.2.3 First fundamental theorem of calculus</a> implies that <span class="process-math">\(F \)</span> is differentiable, with derivative <span class="process-math">\(F' \of{ x } = f' \of{ x } \)</span> for all points <span class="process-math">\(a \leq x \leq b \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-second-fundamental-theorem-of-calculus-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Part (b) of <a href="section-applications-of-the-mean-value-theorem.html#problem-functions-with-the-same-derivative" class="xref" data-knowl="./knowl/xref/problem-functions-with-the-same-derivative.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 5.3.4.1: Functions with the same derivative">Problem 5.3.4.1 Functions with the same derivative</a> now implies that there is some real number <span class="process-math">\(c \in \R \)</span> so that <span class="process-math">\(F \of{ x } = f \of{ x } + c \)</span> for all points <span class="process-math">\(a \leq x \leq b \text{.}\)</span> By evaluating at <span class="process-math">\(a \text{,}\)</span> we observe that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/problem-functions-with-the-same-derivative.html">
+\begin{equation*}
+0 = \int_{ a }^{ a }{ f' \of{ x } \, \diff{ x } } = F \of{ a } = f \of{ a } + c\text{,}
+\end{equation*}
+</div>
+<div class="para">so that <span class="process-math">\(c = -f \of{ a } \text{.}\)</span> Thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/problem-functions-with-the-same-derivative.html">
+\begin{equation*}
+\int_{ a }^{ b }{ f' \of{ x } \, \diff{ x } } = F \of{ b } = f \of{ b } + c = f \of{ b } - f \of{ a }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-second-fundamental-theorem-of-calculus-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 6.2.4.1"><a tabindex="-1" href="#theorem-second-fundamental-theorem-of-calculus-3" title="Copy heading and permalink for Proof 6.2.4.1" aria-label="Copy heading and permalink for Proof 6.2.4.1">🔗</a></div>
+</article></details><span class="incontext"><a class="internal" href="section-the-fundamental-theorems-of-calculus.html#theorem-second-fundamental-theorem-of-calculus">In Context</a></span>
+</body>
+</html>

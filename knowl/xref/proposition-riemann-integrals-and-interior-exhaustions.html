@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proposition theorem-like"><h2 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Riemann integrals and interior exhaustions.</span>
+</h2>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(f \colon X \to \R \)</span> be a real-valued function defined on an interval <span class="process-math">\(X \text{,}\)</span> and suppose that the restriction of <span class="process-math">\(f \)</span> to any compact subinterval of the interior <span class="process-math">\(\Int \of{ X } \)</span> is Riemann integrable. Then for any real number <span class="process-math">\(I \in \R \text{,}\)</span> the following are equivalent:</div>
+<ol class="decimal" id="proposition-riemann-integrals-and-interior-exhaustions-2-1-6">
+<li>
+<div class="para logical">
+<div class="para">For any interior exhaustion <span class="process-math">\(\of{ \clint{ a_{ \alpha } }{ b_{ \alpha } } }_{ \alpha \in A } \)</span> of <span class="process-math">\(X \)</span> by compact subintervals,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{ \alpha \uparrow }{ \int_{ a_{ \alpha } }^{ b_{ \alpha } }{ f \of{ x } \, \diff{ x } } } = I
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-riemann-integrals-and-interior-exhaustions-2-1-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#proposition-riemann-integrals-and-interior-exhaustions-2-1-6-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">For any positive real number <span class="process-math">\(\epsilon \text{,}\)</span> there is a compact subinterval <span class="process-math">\(\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \in \mathcal{ K }_{ X } \)</span> of <span class="process-math">\(\Int \of{ X } \)</span> so that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - I } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all compact subintervals <span class="process-math">\(\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subseteq \Int \of{ X } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-riemann-integrals-and-interior-exhaustions-2-1-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#proposition-riemann-integrals-and-interior-exhaustions-2-1-6-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-riemann-integrals-and-interior-exhaustions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 6.3.6: Riemann integrals and interior exhaustions"><a tabindex="-1" href="#proposition-riemann-integrals-and-interior-exhaustions" title="Copy heading and permalink for Proposition 6.3.6: Riemann integrals and interior exhaustions" aria-label="Copy heading and permalink for Proposition 6.3.6: Riemann integrals and interior exhaustions">🔗</a></div>
+</article>
+<details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical">
+<div class="para">First suppose that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{ \alpha \uparrow }{ \int_{ a_{ \alpha } }^{ b_{ \alpha } }{ f \of{ x } \, \diff{ x } } } = I
+\end{equation*}
+</div>
+<div class="para">for any interior exhaustion <span class="process-math">\(\of{ \clint{ a_{ \alpha } }{ b_{ \alpha } } }_{ \alpha \in A } \)</span> of <span class="process-math">\(X \)</span> by compact subintervals. Then in particular we may choose the maximal such interior exhaustion <span class="process-math">\(\of{ K }_{ K \in \mathcal{ K }_{ X } } \text{,}\)</span> obtaining the convergence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{ \clint{ a }{ b } \uparrow }{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } } = I\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus for any positive real number <span class="process-math">\(\epsilon \gt 0 \text{,}\)</span> there is a compact subinterval <span class="process-math">\(\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \in \mathcal{ K }_{ X } \)</span> so that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - I } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all compact subintervals <span class="process-math">\(\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subseteq \Int \of{ X } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-riemann-integrals-and-interior-exhaustions-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Conversely, now suppose that for any positive real number <span class="process-math">\(\epsilon \gt 0 \text{,}\)</span> there is a compact subinterval <span class="process-math">\(\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \in \mathcal{ K }_{ X } \)</span> so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-interior-exhaustion-by-compact-subintervals.html">
+\begin{equation*}
+\abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - I } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all compact subintervals <span class="process-math">\(\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subseteq \Int \of{ X } \text{,}\)</span> and let <span class="process-math">\(\of{ \clint{ a_{ \alpha } }{ b_{ \alpha } } }_{ \alpha \in A } \)</span> be an interior exhaustion of <span class="process-math">\(X \)</span> by compact intervals <span class="process-math">\(\clint{ a_{ \alpha } }{ b_{ \alpha } } \text{.}\)</span> <a href="section-improper-integration.html#lemma-interior-exhaustion-by-compact-subintervals" class="xref" data-knowl="./knowl/xref/lemma-interior-exhaustion-by-compact-subintervals.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 6.3.4: Interior exhaustion by compact subintervals">Lemma 6.3.4 Interior exhaustion by compact subintervals</a> implies that there is an index <span class="process-math">\(\alpha_{ \epsilon } \in A \)</span> so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-interior-exhaustion-by-compact-subintervals.html">
+\begin{equation*}
+\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a_{ \alpha_{ \epsilon } } }{ b_{ \alpha_{ \epsilon } } } \subseteq \Int \of{ X }\text{.}
+\end{equation*}
+</div>
+<div class="para">We observe that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-interior-exhaustion-by-compact-subintervals.html">
+\begin{equation*}
+\abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - I } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(\alpha \succeq \alpha_{ \epsilon } \text{,}\)</span> since in this case</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-interior-exhaustion-by-compact-subintervals.html">
+\begin{equation*}
+\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a_{ \alpha_{ \epsilon } } }{ b_{ \alpha_{ \epsilon } } } \subseteq \clint{ a_{ \alpha } }{ b_{ \alpha } } \subseteq \Int \of{ X }\text{.}
+\end{equation*}
+</div>
+<div class="para">We conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-interior-exhaustion-by-compact-subintervals.html">
+\begin{equation*}
+\lim_{ \alpha \uparrow }{ \int_{ a_{ \alpha } }^{ b_{ \alpha } }{ f \of{ x } \, \diff{ x } } } = I\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-riemann-integrals-and-interior-exhaustions-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 6.3.6.1"><a tabindex="-1" href="#proposition-riemann-integrals-and-interior-exhaustions-3" title="Copy heading and permalink for Proof 6.3.6.1" aria-label="Copy heading and permalink for Proof 6.3.6.1">🔗</a></div>
+</article></details><span class="incontext"><a class="internal" href="section-improper-integration.html#proposition-riemann-integrals-and-interior-exhaustions">In Context</a></span>
+</body>
+</html>
