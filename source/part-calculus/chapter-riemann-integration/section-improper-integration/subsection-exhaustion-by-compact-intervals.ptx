@@ -194,7 +194,7 @@
   </lemma>
   
   <p>
-    You will have an opportunity to prove <xref ref="lemma-interior-exhaustion-by-compact-subintervals"/> in the problems for this section. One consequence is that Riemann integrals of Riemann integrable functions defined on compact intervals are limits of Riemann integrals on exhaustions by compact subintervals.
+    You will have an opportunity to prove <xref ref="lemma-interior-exhaustion-by-compact-subintervals"/> in the problems for this section. One consequence is that Riemann integrals of integrable functions defined on compact intervals are limits of Riemann integrals on exhaustions by compact subintervals.
   </p>
   
   <proposition xml:id="proposition-improper-integrals-on-compact-intervals">
@@ -204,7 +204,7 @@
     
     <statement>
       <p>
-        Let <m> f \colon \clint{ a }{ b } \to \R </m> be a real-valued function defined on a closed interval <m> \clint{ a }{ b } </m>. If <m> f </m> is Riemann integrable, then
+        Let <m> f \colon \clint{ a }{ b } \to \R </m> be a real-valued function defined on a closed interval <m> \clint{ a }{ b } </m>. If <m> f </m> is integrable, then
         
         <md>
           \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } = \lim_{ \alpha \uparrow }{ \int_{ a_{ \alpha } }^{ b_{ \alpha } }{ f \of{ x } \, \diff{ x } } }
@@ -216,7 +216,7 @@
     
     <proof>
       <p>
-        Since <m> f </m> is Riemann integrable, it is bounded, and so there is some positive real number <m> B \gt 0 </m> so that <m> \abs{ f \of{ x } } \leq B </m> for all points <m> a \leq x \leq b </m>. Let <m> \epsilon \gt 0 </m> be a positive real number. Then <xref ref="lemma-interior-exhaustion-by-compact-subintervals"/> implies that there is an index <m> \alpha_{ \epsilon } \in A </m> so that <m> a_{ \alpha_{ \epsilon } } \lt a + \frac{ \epsilon }{ 2 B } </m> and <m> b_{ \alpha_{ \epsilon } } \gt b - \frac{ \epsilon }{ 2 B } </m>. We observe that 
+        Since <m> f </m> is integrable, it is bounded, and so there is some positive real number <m> B \gt 0 </m> so that <m> \abs{ f \of{ x } } \leq B </m> for all points <m> a \leq x \leq b </m>. Let <m> \epsilon \gt 0 </m> be a positive real number. Then <xref ref="lemma-interior-exhaustion-by-compact-subintervals"/> implies that there is an index <m> \alpha_{ \epsilon } \in A </m> so that <m> a_{ \alpha_{ \epsilon } } \lt a + \frac{ \epsilon }{ 2 B } </m> and <m> b_{ \alpha_{ \epsilon } } \gt b - \frac{ \epsilon }{ 2 B } </m>. We observe that 
         
         <md>
           <mrow>
@@ -264,7 +264,7 @@
     
     <statement>
       <p>
-        Let <m> f \colon X \to \R </m> be a real-valued function defined on an interval <m> X </m>, and suppose that the restriction of <m> f </m> to any compact subinterval of the interior <m> \Int \of{ X } </m> is Riemann integrable. Then for any real number <m> I \in \R </m>, the following are equivalent:
+        Let <m> f \colon X \to \R </m> be a real-valued function defined on an interval <m> X </m>, and suppose that the restriction of <m> f </m> to any compact subinterval of the interior <m> \Int \of{ X } </m> is integrable. Then for any real number <m> I \in \R </m>, the following are equivalent:
         
         <ol>
           <li>
@@ -364,7 +364,7 @@
     
     <statement>
       <p>
-        Let <m> f \colon X \to \R </m> be a real-valued function defined on an interval <m> X </m>, and suppose that the restriction of <m> f </m> to any compact subinterval of the interior <m> \Int \of{ X } </m> is Riemann integrable. <m> f </m> is called <term> improperly Riemann integrable </term> if there is a real number <m> I \in \R </m> which satisfies either (and therefore both) of the conditions in <xref ref="proposition-riemann-integrals-and-interior-exhaustions"/>. In this case, that <m> \R </m> is Hausdorff implies that the number <m> I </m> is uniquely defined by these properties. This number <m> I </m> is called the <term> improper Riemann integral </term> of <m> f </m>, and is denoted
+        Let <m> f \colon X \to \R </m> be a real-valued function defined on an interval <m> X </m>. <m> f </m> is called <term> improperly integrable </term> if the restriction of <m> f </m> to any compact subinterval of the interior <m> \Int \of{ X } </m> is integrable, and there is a real number <m> I \in \R </m> which satisfies either (and therefore both) of the conditions in <xref ref="proposition-riemann-integrals-and-interior-exhaustions"/>. In this case, that <m> \R </m> is Hausdorff implies that the number <m> I </m> is uniquely defined by these properties. This number <m> I </m> is called the <term> improper Riemann integral </term> of <m> f </m>, and is denoted
         
         <md>
           \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } }
@@ -380,12 +380,12 @@
     
     <statement>
       <p>
-        The following are examples and non-examples of improperly Riemann integrable functions and their improper Riemann integrals:
+        The following are examples and non-examples of improperly integrable functions and their improper Riemann integrals:
         
         <ul>
           <li>
             <p>
-              Let <m> p \in \R \setminus \set{ 1 } </m> be a real number, and consider the function <m> f \colon \clopint{ 1 }{ \infty } </m> defined by the formula <m> f \of{ x } = \frac{ 1 }{ x^{ p } } </m>. We observe that
+              Let <m> p \in \opint{ 0 }{ \infty } \setminus \set{ 1 } </m> be a real number, and consider the function <m> f \colon \clopint{ 1 }{ \infty } </m> defined by the formula <m> f \of{ x } = \frac{ 1 }{ x^{ p } } </m>. We observe that
               
               <md>
                 \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } = \frac{ b^{ 1 - p } }{ 1 - p } - \frac{ a^{ 1 - p } }{ 1 - p } = \frac{ b^{ 1 - p } - a^{ 1 - p } }{ 1 - p }
@@ -397,7 +397,7 @@
                 \lim_{ b \to \infty }{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } } = \lim_{ b \to \infty }{ \frac{ b^{ 1 - p } - a^{ 1 - p } }{ 1 - p } } = \infty
               </md>.
               
-              This implies that <m> f </m> is not improperly Riemann integrable in this case.
+              This implies that <m> f </m> is not improperly integrable in this case.
             </p>
             
             <p>
@@ -425,7 +425,7 @@
                 </mrow>
               </md>
               
-              for all compact subintervals <m> \clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subsetneq \opint{ 0 }{ \infty } </m>. Thus <m> f </m> is improperly Riemann integrable, with improper Riemann integral
+              for all compact subintervals <m> \clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subsetneq \opint{ 0 }{ \infty } </m>. Thus <m> f </m> is improperly integrable, with improper Riemann integral
               
               <md>
                 \int_{ 1 }^{ \infty }{ f \of{ x } \, \diff{ x } } = \frac{ 1 }{ p - 1 }
@@ -433,29 +433,32 @@
             </p>
           </li>
           
-          <!-- <li>
+          <li>
             <p>
-              Let <m> p \in \R \setminus \set{ 1 } </m> be a real number, and consider the function <m> f \colon \opclint{ 0 }{ 1 } </m> defined by the formula <m> f \of{ x } = \frac{ 1 }{ x^{ p } } </m>. We observe that
+              Let <m> p \in \opint{ 0 }{ \infty } \setminus \set{ 1 } </m> be a real number, and consider the function <m> f \colon \opclint{ 0 }{ 1 } </m> defined by the formula <m> f \of{ x } = \frac{ 1 }{ x^{ p } } </m>. We observe that
               
               <md>
                 \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } = \frac{ b^{ 1 - p } }{ 1 - p } - \frac{ a^{ 1 - p } }{ 1 - p } = \frac{ b^{ 1 - p } - a^{ 1 - p } }{ 1 - p }
               </md>
               
-              for any compact subinterval <m> \clint{ a }{ b } \subseteq \opint{ 0 }{ 1 } </m>. We first note that if <m> p \gt 1 </m>, then <m> 1 - p \lt 0 </m>, and so
+              for any compact subinterval <m> \clint{ a }{ b } \subseteq \opint{ 0 }{ 1 } </m>. If 
+              
+              
+              We first note that if <m> p \gt 1 </m>, then <m> 1 - p \lt 0 </m>, and so
               
               <md>
-                \lim_{ a \to 0 }{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } } = \lim_{ a \to 0 }{ \frac{ b^{ 1 - p } - a^{ 1 - p } }{ 1 - p } } = \infty
+                \lim_{ a \to 0 }{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } } = \lim_{ a \to 0 }{ \frac{ b^{ 1 - p } - a^{ 1 - p } }{ 1 - p } } = \lim_{ a \to 0 }{ \frac{ a^{ 1 - p } - b^{ 1 - p } }{ p - 1 } } = \infty
               </md>.
               
-              This implies that <m> f </m> is not improperly Riemann integrable in this case.
+              This implies that <m> f </m> is not improperly integrable in this case.
             </p>
             
             <p>
-              On the other hand, now suppose that <m> p \gt 1 </m>, and let <m> \epsilon \gt 0 </m> be a positive real number. Fix real numbers <m> 1 \lt a_{ \epsilon } \leq b_{ \epsilon } \lt \infty </m> so that
+              On the other hand, now suppose that <m> 0 \lt p \lt 1 </m>, and let <m> \epsilon \gt 0 </m> be a positive real number. Fix real numbers <m> 1 \lt a_{ \epsilon } \leq b_{ \epsilon } \lt \infty </m> so that
               
               <md>
                 <mrow>
-                  a_{ \epsilon } \amp \lt \of{ 1 - \frac{ \epsilon \of{ p - 1 } }{ 2 } }^{ \frac{ 1 }{ 1 - p } } \amp b_{ \epsilon } \gt \of{ \frac{ \epsilon \of{ p - 1 } }{ 2 } }^{ \frac{ 1 }{ 1 - p } }
+                  a_{ \epsilon } \amp \lt \of{ \frac{ \epsilon \of{ 1 - p } }{ 2 } }^{ \frac{ 1 }{ 1 - p } } \amp b_{ \epsilon } \gt \of{ 1 - \frac{ \epsilon \of{ 1 - p } }{ 2 } }^{ \frac{ 1 }{ 1 - p } }
                 </mrow>
               </md>.
               
@@ -463,11 +466,11 @@
               
               <md>
                 <mrow>
-                  \abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - \frac{ 1 }{ p - 1 } } \amp = \abs{ \frac{ b^{ 1 - p } - a^{ 1 - p } }{ 1 - p } + \frac{ 1 }{ 1 - p } } \leq \frac{ \abs{ b^{ 1 - p } } }{ p - 1 } + \frac{ \abs{ 1 - a^{ 1 - p } } }{ p - 1 }
+                  \abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - \frac{ 1 }{ 1 - p } } \amp = \abs{ \frac{ b^{ 1 - p } - a^{ 1 - p } }{ 1 - p } - \frac{ 1 }{ 1 - p } } \leq \frac{ \abs{ b^{ 1 - p } - 1 } }{ 1 - p } + \frac{ \abs{ a^{ 1 - p } } }{ 1 - p }
                 </mrow>
                 
                 <mrow>
-                  \amp = \frac{ b^{ 1 - p } }{ p - 1 } + \frac{ 1 - a^{ 1 - p } }{ p - 1 } \leq \frac{ b_{ \epsilon }^{ 1 - p } }{ p - 1 } + \frac{ 1 - a_{ \epsilon }^{ 1 - p } }{ p - 1 }
+                  \amp = \frac{ 1 - b^{ 1 - p } }{ 1 - p } + \frac{ a^{ 1 - p } }{ 1 - p } \leq \frac{ 1 - b_{ \epsilon }^{ 1 - p } }{ 1 - p } + \frac{ a_{ \epsilon }^{ 1 - p } }{ 1 - p }
                 </mrow>
                 
                 <mrow>
@@ -475,17 +478,39 @@
                 </mrow>
               </md>
               
-              for all compact subintervals <m> \clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subsetneq \opint{ 0 }{ \infty } </m>. Thus <m> f </m> is improperly Riemann integrable, with improper Riemann integral
+              for all compact subintervals <m> \clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subsetneq \opint{ 0 }{ \infty } </m>. Thus <m> f </m> is improperly integrable, with improper Riemann integral
               
               <md>
-                \int_{ 1 }^{ \infty }{ f \of{ x } \, \diff{ x } } = \frac{ 1 }{ p - 1 }
+                \int_{ 0 }^{ 1 }{ f \of{ x } \, \diff{ x } } = \frac{ 1 }{ 1 - p }
               </md>.
             </p>
-          </li> -->
+          </li>
           
           <li>
             <p>
+              One question raised by the above examples is the nature of the case <m> p = 1 </m>; that is, consider the function <m> f \colon \opint{ 0 }{ \infty } </m> defined by the formula <m> f \of{ x } = \frac{ 1 }{ x } </m>. We will see that <m> f </m> is not improperly integrable on <m> \opclint{ 0 }{ 1 } </m> or on <m> \clopint{ 1 }{ \infty } </m>.
+            </p>
+            
+            <p>
+              To that end, we first note that
               
+              <md>
+                \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } = \ln \of{ b } - \ln \of{ a } = \ln \of{ \frac{ b }{ a } }
+              </md>
+              
+              for any compact subinterval <m> \clint{ a }{ b } \subseteq \opint{ 0 }{ \infty } </m>. In particular, we note that
+              
+              <md>
+                \lim_{ a \to 0 }{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } } = \lim_{ a \to 0 }{ \ln \of{ \frac{ b }{ a } } } = \infty
+              </md>
+              
+              and
+              
+              <md>
+                \lim_{ b \to \infty }{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } } = \lim_{ b \to \infty }{ \ln \of{ \frac{ b }{ a } } } = \infty
+              </md>.
+              
+              These computations imply that the restrictions of <m> f </m> to the intervals <m> \opclint{ 0 }{ 1 } </m> and <m> \clopint{ 1 }{ \infty } </m> are not improperly integrable.
             </p>
           </li>
         </ul>
@@ -493,141 +518,147 @@
     </statement>
   </example>
 
-  <conclusion>
-    <p>
-      Text after the last subdivision.
-    </p>
-  </conclusion>
-</subsection>
-
-<!--
-
-  <definition xml:id="definition-TITLE">
+  <proposition xml:id="proposition-arithmetic-of-improperly-integrable-functions">
     <title>
-      TITLE
+      Arithmetic of improperly integrable functions
     </title>
     
-    <idx>
-      TERM
-    </idx>
-    
-    <notation>
-      <usage>
-        <m>  </m>
-      </usage>
-      
-      <description>
-        <p>
+    <statement>
+      <ol>
+        <li>
+          <title>
+            Addition of improperly integrable functions
+          </title>
           
-        </p>
-      </description>
-    </notation>
-    
-    <statement>
-      <p>
+          <p>
+            Let <m> f , g \colon X \to \R </m> be real-valued functions defined on an interval <m> X </m>. If <m> f </m> and <m> g </m> are improperly integrable, then so is <m> f + g </m>, and
+            
+            <md>
+              \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ \of{ f + g } \of{ x } \, \diff{ x } } = \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } } + \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ g \of{ x } \, \diff{ x } }
+            </md>.
+          </p>
+        </li>
         
-      </p>
-    </statement>
-  </definition>
-
-  <lemma xml:id="lemma-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </lemma>
-
-  <proposition xml:id="proposition-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
+        <li>
+          <title>
+            Scalar multiplication of improperly integrable functions
+          </title>
+          
+          <p>
+            Let <m> f \colon X \to \R </m> be real-valued functions defined on an interval <m> X </m>. If <m> f </m> is improperly integrable, then so is <m> c f </m> for any real number <m> c \in \R </m>, and
+            
+            <md>
+              \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ \of{ c f } \of{ x } \, \diff{ x } } = c \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } }
+            </md>.
+          </p>
+        </li>
+      </ol>
     </statement>
     
     <proof>
-      <p>
+      <ol>
+        <li>
+          <p>
+            Let
+            
+            <md>
+              <mrow>
+                I_{ f } \amp = \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } } \amp I_{ g } \amp = \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ g \of{ x } \, \diff{ x } }
+              </mrow>
+            </md>.
+            
+            Let <m> \epsilon \gt 0 </m> be a positive real number. Since <m> f </m> and <m> g </m> are improperly integrable, there is a compact subinterval <m> \clint{ a_{ \epsilon } }{ b_{ \epsilon } } \in \mathcal{ K }_{ X } </m> of the interior <m> \Int \of{ X } </m> so that
+            
+            <md>
+              \abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - I_{ f } } \lt \frac{ \epsilon }{ 2 }
+            </md>
+            
+            and
+            
+            <md>
+              \abs{ \int_{ a }^{ b }{ g \of{ x } \, \diff{ x } } - I_{ g } } \lt \frac{ \epsilon }{ 2 }
+            </md>
+            
+            for all compact subintervals <m> \clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subseteq \Int \of{ X } </m>. We observe that
+            
+            <md>
+              <mrow>
+                \abs{ \int_{ a }^{ b }{ \of{ f + g } \of{ x } \diff{ x } } - \of{ I_{ f } + I_{ g } } } \amp = \abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } + \int_{ a }^{ b }{ g \of{ x } \, \diff{ x } } - I_{ f } - I_{ g } }
+              </mrow>
+              
+              <mrow>
+                \amp \leq \abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - I_{ f } } + \abs{ \int_{ a }^{ b }{ g \of{ x } \, \diff{ x } } - I_{ g } }
+              </mrow>
+              
+              <mrow>
+                \amp \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+              </mrow>
+            </md>,
+            
+            for all compact subintervals <m> \clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subseteq \Int \of{ X } </m>. We conclude that <m> f + g </m> is improperly integrable, with improper integral
+            
+            <md>
+              \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ \of{ f + g } \of{ x } \, \diff{ x } } = I_{ f } + I_{ g } = \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } } + \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ g \of{ x } \, \diff{ x } }
+            </md>.
+          </p>
+        </li>
         
-      </p>
+        <li>
+          <p>
+            If <m> c = 0 </m>, then <m> c f = 0 f = 0 </m> is improperly integrable, with
+            
+            <md>
+              <mrow>
+                \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ \of{ c f } \of{ x } \, \diff{ x } } \amp = \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ 0 \, \diff{ x } } = 0
+              </mrow>
+              
+              <mrow>
+                \amp = 0 \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } } = c \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } }
+              </mrow>
+            </md>.
+            
+            We may therefore suppose that <m> c \neq 0 </m>. Let
+            
+            <md>
+              I = \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } }
+            </md>.
+            
+            Let <m> \epsilon \gt 0 </m> be a positive real number. Since <m> f </m> is improperly integrable, there is a compact subinterval <m> \clint{ a_{ \epsilon } }{ b_{ \epsilon } } \in \mathcal{ K }_{ X } </m> of the interior <m> \Int \of{ X } </m> so that
+            
+            <md>
+              \abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - I } \lt \frac{ \epsilon }{ \abs{ c } }
+            </md>
+            
+            for all compact subintervals <m> \clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subseteq \Int \of{ X } </m>. We observe that
+            
+            <md>
+              <mrow>
+                \abs{ \int_{ a }^{ b }{ \of{ c f } \of{ x } \diff{ x } } - c I } \amp = \abs{ c \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - c I }
+              </mrow>
+              
+              <mrow>
+                \amp = \abs{ c } \abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - I_{ f } }
+              </mrow>
+              
+              <mrow>
+                \amp \lt \frac{ \abs{ c } \epsilon }{ \abs{ c } } = \epsilon
+              </mrow>
+            </md>,
+            
+            for all compact subintervals <m> \clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subseteq \Int \of{ X } </m>. We conclude that <m> c f </m> is improperly integrable, with improper integral
+            
+            <md>
+              \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ \of{ c f } \of{ x } \, \diff{ x } } = c I = c \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } }
+            </md>.
+          </p>
+        </li>
+      </ol>
     </proof>
   </proposition>
 
-  <theorem xml:id="theorem-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </theorem>
-
-  <corollary xml:id="corollary-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </corollary>
-
-  <example xml:id="example-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-  </example>
-
--->
+  <conclusion>
+    <p>
+      To summarize, a function is improperly integrable if the proper Riemann integral of a restriction of said function to a compact subinterval of the interior of the domain can be made arbitrarily close to a given real number just by choosing the compact subinterval to be wide enough.
+    </p>
+  </conclusion>
+</subsection>

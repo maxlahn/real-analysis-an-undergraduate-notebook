@@ -17,9 +17,11 @@
 
   <xi:include href="./section-improper-integration/section-improper-integration.ptx"/>
 
+  <xi:include href="./section-deficiencies-of-the-riemann-integral/section-deficiencies-of-the-riemann-integral.ptx"/>
+
   <conclusion>
     <p>
-      Text after the last section.
+      In the next chapter, we will explore measure theory, a branch of mathematics invented in order to construct a more robust theory of integration free from the issues mentioned in <xref ref="section-deficiencies-of-the-riemann-integral"/>.
     </p>
   </conclusion>
 </chapter>

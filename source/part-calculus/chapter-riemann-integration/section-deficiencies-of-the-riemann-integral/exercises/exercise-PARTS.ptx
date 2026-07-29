@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="exercise-PARTS" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    EXERCISE TITLE
+  </title>
+  
+  <introduction>
+    <p>
+      Text before the parts.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        asdf
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        asdf
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        asdf
+      </p>
+    </solution>
+  </task>
+  
+  <conclusion>
+    <p>
+      Text after the parts.
+    </p>
+  </conclusion>
+</exercise>

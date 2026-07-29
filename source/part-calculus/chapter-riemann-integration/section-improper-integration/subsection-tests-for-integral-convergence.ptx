@@ -7,147 +7,277 @@
 
   <introduction>
     <p>
-      Text before the first subdivision.
+      We now explore several sufficient criteria for establishing improper Riemann integrability. We first observe that while a real-valued function <m> f </m> defined on compact intervals is Riemann integrable if and only if <m> \abs{ f } </m> is Riemann integrable, the same cannot be said of functions defined on non-compact intervals.
     </p>
   </introduction>
   
-  
-
-  <conclusion>
-    <p>
-      Text after the last subdivision.
-    </p>
-  </conclusion>
-</subsection>
-
-<!--
-
-  <definition xml:id="definition-TITLE">
+  <example xml:id="example-conditional-convergence-of-improper-integrals">
     <title>
-      TITLE
+      Conditional convergence of improper integrals
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f \colon \opint{ 0 }{ \infty } \to \R </m> be the real-valued function defined by the formula
+        
+        <md>
+          f \of{ x } = \frac{ \sin \of{ x } }{ x }
+        </md>.
+        
+        We don't yet have the tools to verify this, but <m> f </m> is improperly Riemann integrable, while <m> \abs{ f } </m> is not. We might call the convergence of the corresponding improper integral of <m> f </m> <term> conditional </term>, in contrast with <term> absolutely convergent </term> improper integrals.
+      </p>
+    </statement>
+  </example>
+  
+  <definition xml:id="definition-absolute-conditional-Riemann-integrability">
+    <title>
+      Absolute/conditional Riemann integrability
     </title>
     
     <idx>
-      TERM
+      absolute Riemann integrability
     </idx>
     
-    <notation>
-      <usage>
-        <m>  </m>
-      </usage>
-      
-      <description>
-        <p>
-          
-        </p>
-      </description>
-    </notation>
+    <idx>
+      absolute convergence
+    </idx>
+    
+    <idx>
+      conditional Riemann integrability
+    </idx>
+    
+    <idx>
+      conditional convergence
+    </idx>
     
     <statement>
       <p>
+        Let <m> f \colon X \to \R </m> be a real-valued function defined on an interval <m> X \subseteq \R </m>.
         
+        <ul>
+          <li>
+            <title>
+              Absolute Riemann integrability
+            </title>
+            
+            <p>
+              <m> f </m> is called <term> absolutely Riemann integrable </term> if <m> \abs{ f } </m> is improperly Riemann integrable. One might also describe the improper Riemann integral
+              
+              <md>
+                \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } }
+              </md>
+              
+              as <term> absolutely convergent </term> in this case.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Conditional Riemann integrability
+            </title>
+            
+            <p>
+              <m> f </m> is called <term> conditionally Riemann integrable </term> if it is improperly Riemann integrable but not absolutely Riemann integrable; that is <m> f </m> is conditionally Riemann integrable if <m> f </m> is improperly Riemann integrable but <m> \abs{ f } </m> is not. One might also describe the improper Riemann integral
+              
+              <md>
+                \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } }
+              </md>
+              
+              as <term> conditionally convergent </term> in this case.
+            </p>
+          </li>
+        </ul>
       </p>
     </statement>
   </definition>
+  
+  <p>
+    We will show that absolute integrability implies improper integrability. This will follow from the comparison test for improper integrability, of which we first establish the following special case:
+  </p>
 
-  <lemma xml:id="lemma-TITLE">
+  <lemma xml:id="lemma-comparison-of-non-negative-improper-integrals">
     <title>
-      TITLE
+      Comparison of non-negative improper integrals
     </title>
-    
-    <creator>
-      CREATOR
-    </creator>
     
     <statement>
       <p>
+        Let <m> f , g \colon X \to \clopint{ 0 }{ \infty } </m> be non-negative real-valued functions defined on an interval <m> X \subseteq \R </m>, and suppose that <m> 0 \leq f \of{ x } \leq g \of{ x } </m> for all points <m> x \in X </m>. If the restriction of <m> f </m> to any compact subinterval of the interior <m> \Int \of{ X } </m> is integrable and <m> g </m> is improperly integrable, then <m> f </m> is improperly integrable, and
         
+        <md>
+          0 \leq \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } } \leq \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ g \of{ x } \, \diff{ x } }
+        </md>.
       </p>
     </statement>
     
     <proof>
       <p>
+        Consider the nets <m> \of{ F_{ \clint{ a }{ b } } }_{ \clint{ a }{ b } \in \mathcal{ K }_{ X } } </m> and <m> \of{ G_{ \clint{ a }{ b } } }_{ \clint{ a }{ b } \in \mathcal{ K }_{ X } } </m> defined by the formulas
         
+        <md>
+          <mrow>
+            F_{ \clint{ a }{ b } } \amp = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } \amp G_{ \clint{ a }{ b } } \amp = \int_{ a }^{ b }{ g \of{ x } \, \diff{ x } } 
+          </mrow>
+        </md>
+        
+        for all compact subintervals <m> \clint{ a }{ b } \in \mathcal{ K }_{ X } </m> of the interior <m> \Int \of{ X } </m>. We first observe that these nets are order-preserving. Indeed, for any compact subintervals <m> \clint{ a }{ b } , \clint{ c }{ d } \in \mathcal{ K }_{ X } </m>, if <m> \clint{ a }{ b } \subseteq \clint{ c }{ d } </m>, then <xref ref="lemma-chasles-relation" text="title"/> and <xref ref="lemma-riemann-integration-and-comparison"/> imply that
+        
+        <md>
+          <mrow>
+            F_{ \clint{ a }{ b } } \amp = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \int_{ c }^{ a }{ f \of{ x } \, \diff{ x } } + \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } + \int_{ b }^{ d }{ f \of{ x } \, \diff{ x } }
+          </mrow>
+          
+          <mrow>
+            \amp = \int_{ c }^{ d }{ f \of{ x } \, \diff{ x } } = F_{ \clint{ c }{ d } }
+          </mrow>
+        </md>,
+        
+        and similarly that <m> G_{ \clint{ a }{ b } } \leq G_{ \clint{ c }{ d } } </m>. The net analogue of the <xref ref="theorem-monotone-convergence-theorem" text="title"/> implies that
+        
+        <md>
+          \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ g \of{ x } \, \diff{ x } } = \lim_{ \clint{ a }{ b } \uparrow }{ G_{ \clint{ a }{ b } } } = \sup_{ \clint{ a }{ b } \in \mathcal{ K }_{ X } }{ G_{ \clint{ a }{ b } } }
+        </md>.
+      </p>
+      
+      <p>
+        We observe that for any compact subinterval <m> \clint{ a }{ b } \in \mathcal{ K }_{ X } </m> of the interior <m> \Int \of{ X } </m>,
+        
+        <md>
+          <mrow>
+            F_{ \clint{ a }{ b } } \amp = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } \leq \int_{ a }^{ b }{ g \of{ x } \, \diff{ x } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \sup_{ \clint{ c }{ d } \in \mathcal{ K }_{ X } }{ G \of{ \clint{ c }{ d } } } = \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ g \of{ x } \, \diff{ x } }
+          </mrow>
+        </md>
+        
+        by <xref ref="lemma-riemann-integration-and-comparison"/>, and so another application of the net analogue of the <xref ref="theorem-monotone-convergence-theorem" text="title"/> implies that <m> \of{ F_{ \clint{ a }{ b } } }_{ \clint{ a }{ b } \in \mathcal{ K }_{ X } } </m> converges upwards to
+        
+        <md>
+          \lim_{ \clint{ a }{ b } \uparrow }{ F_{ \clint{ a }{ b } } } = \sup_{ \clint{ a }{ b } \in \mathcal{ K }_{ X } }{ F_{ \clint{ a }{ b } } } \leq \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ g \of{ x } \, \diff{ x } }
+        </md>.
+        
+        That is, <m> f </m> is improperly integrable, with improper integral
+        
+        <md>
+          0 \leq \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } } \leq \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ g \of{ x } \, \diff{ x } }
+        </md>.
       </p>
     </proof>
   </lemma>
-
-  <proposition xml:id="proposition-TITLE">
+  
+  <theorem xml:id="theorem-comparison-test-for-integral-convergence">
     <title>
-      TITLE
+      Comparison test for integral convergence
     </title>
-    
-    <creator>
-      CREATOR
-    </creator>
     
     <statement>
       <p>
+        Let <m> f , g , h \colon X \to \R </m> be real-valued functions defined on an interval <m> X </m>, and suppose that <m> f \of{ x } \leq g \of{ x } \leq h \of{ x } </m> for all points <m> x \in X </m>. If the restriction of <m> g </m> to any compact subinterval of the interior <m> \Int \of{ X } </m> is integrable and <m> f </m> and <m> h </m> are improperly integrable, then <m> g </m> is improperly integrable, and
         
+        <md>
+          \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } } \leq \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ g \of{ x } \, \diff{ x } } \leq \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ h \of{ x } \, \diff{ x } }
+        </md>.
       </p>
     </statement>
     
     <proof>
       <p>
-        
-      </p>
-    </proof>
-  </proposition>
-
-  <theorem xml:id="theorem-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
+        We note that <m> g - f </m> and <m> h - f </m> satisfy the hypotheses of <xref ref="lemma-comparison-of-non-negative-improper-integrals"/>, and so the desired result now follows immediately from <xref ref="lemma-comparison-of-non-negative-improper-integrals"/> and <xref ref="proposition-arithmetic-of-improperly-integrable-functions"/>.
       </p>
     </proof>
   </theorem>
-
-  <corollary xml:id="corollary-TITLE">
+  
+  <corollary xml:id="corollary-absolute-integrability-implies-integrability">
     <title>
-      TITLE
+      Absolute integrability implies improper integrability
     </title>
-    
-    <creator>
-      CREATOR
-    </creator>
     
     <statement>
       <p>
+        Let <m> f \colon X \to \R </m> be a real-valued function defined on an interval <m> X </m>. If the restriction of <m> f </m> to every compact subinterval of the interior <m> \Int \of{ X } </m> is integrable and <m> f </m> is absolutely integrable, then <m> f </m> is improperly integrable, and
         
+        <md>
+          \abs{ \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } } } \leq \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ \abs{ f \of{ x } } \, \diff{ x } }
+        </md>.
       </p>
     </statement>
     
     <proof>
       <p>
+        Since <m> f </m> is absolutely integrable, <m> \abs{ f } </m> is improperly integrable. We observe that (2) of <xref ref="proposition-arithmetic-of-improperly-integrable-functions"/> implies that <m> -\abs{ f } </m> is also improperly integrable. Since <m> -\abs{ f \of{ x } } \leq f \of{ x } \leq \abs{ f \of{ x } } </m>, the <xref ref="theorem-comparison-test-for-integral-convergence" text="title"/> implies that <m> f </m> is improperly integrable, with improper integral
         
+        <md>
+          -\int_{ \inf \of{ X } }^{ \sup \of{ X } }{ \abs{ f \of{ x } } \, \diff{ x } } \leq \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } } \leq \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ \abs{ f \of{ x } } \, \diff{ x } }
+        </md>.
+        
+        Taking absolute values, we obtain
+        
+        <md>
+          0 \leq \abs{ \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } } } \leq \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ \abs{ f \of{ x } } \, \diff{ x } }
+        </md>.
       </p>
     </proof>
   </corollary>
 
-  <example xml:id="example-TITLE">
+  <example xml:id="example-comparison-of-improper-integrals">
     <title>
-      TITLE
+      Comparison of improper integrals
     </title>
     
     <statement>
       <p>
+        Let <m> f \colon \clopint{ 1 }{ \infty } \to \R </m> be the real-valued function defined by the formula
         
+        <md>
+          f \of{ x } = \frac{ a }{ x^{ 2 } + b }
+        </md>
+        
+        for some non-negative real numbers <m> a , b \geq 0 </m>. Since <m> f </m> is continuous, the restriction of <m> f </m> to any compact subinterval of <m> \opint{ 1 }{ \infty } </m> is integrable. We observe that
+        
+        <md>
+          0 \leq f \of{ x } = \frac{ a }{ x^{ 2 } + b } \lt \frac{ a }{ x^{ 2 } }
+        </md>
+        
+        for all points <m> 1 \leq x \lt \infty </m>. Since <m> \frac{ a }{ x^{ 2 } } </m> is improperly integrable, the <xref ref="theorem-comparison-test-for-integral-convergence" text="title"/> implies that <m> f </m> is improperly integrable, with improper integral
+        
+        <md>
+          0 \leq \int_{ 1 }^{ \infty }{ f \of{ x } \, \diff{ x } } \leq \int_{ 1 }^{ \infty }{ \frac{ a }{ x^{ 2 } } \, \diff{ x } } = \frac{ a }{ 2 - 1 } = a
+        </md>.
       </p>
     </statement>
   </example>
+  
+  <p>
+    The hypothesis that <m> b \geq 0 </m> is non-negative in <xref ref="example-comparison-of-improper-integrals"/> was necessary in order to obtain the given comparison. However, the same conclusion holds for negative <m> b \lt 0 </m>. One way to see this improper integrability is to apply the following result:
+  </p>
+  
+  <theorem xml:id="theorem-limit-comparison-test-for-integral-convergence">
+    <title>
+      Limit comparison test for integral convergence
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> f , g \colon X \to \R </m> be real-valued functions defined on an interval <m> X </m>, and suppose that <m> f \asymp g </m> as <m> x \to \inf \of{ X } </m> and <m> x \to \sup \of{ X } </m>. If the restriction of <m> f </m> to any compact subinterval of the interior <m> \Int \of{ X } </m> is integrable and <m> g </m> is improperly integrable, then <m> f </m> is improperly integrable.
+      </p>
+    </statement>
+    
+    <!-- <proof>
+      <p>
+        
+      </p>
+    </proof> -->
+  </theorem>
 
--->
+  <conclusion>
+    <p>
+      We will see in <xref ref="chapter-infinite-series"/> that several of these tests for improper integrability correspond to analogous tests for series convergence. This is one example of a deep relationship between integrals and series which will be explored further in <xref provisional="chapter-lebesgue-integration"/>.
+    </p>
+  </conclusion>
+</subsection>
