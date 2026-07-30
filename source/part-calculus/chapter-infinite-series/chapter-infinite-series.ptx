@@ -7,7 +7,7 @@
 
   <introduction>
     <p>
-      Text before the first section.
+      In this chapter, we explore the convergence and divergence of infinite series of real numbers and real-valued functions. After establishing several sufficient criteria for convergence, we will investigate <term> power series </term>. The most productive source of power series is <xref ref="theorem-taylors-theorem" text="title"/>, which when applied to smooth functions produces the partial sums of a <term> Taylor series </term>. We will use such Taylor series to analyze <term> analytic functions </term>, which are locally equal to their Taylor series.
     </p>
   </introduction>
 

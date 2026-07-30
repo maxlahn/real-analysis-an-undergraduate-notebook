@@ -7,11 +7,13 @@
 
   <introduction>
     <p>
-      Text before the first subsection.
+      We begin by developing a notion of convergence and divergence for series of real numbers. These ideas build directly on the convergence and divergence of sequences of real numbers. In fact, a series converges/diverges if and only if an associated sequence of real numbers (although <em> not </em> the sequence of terms) does.
     </p>
   </introduction>
 
-  <!-- <xi:include href="./subsection-TITLE.ptx"/> -->
+  <xi:include href="./subsection-infinitely-iterated-sums.ptx"/>
+
+  <xi:include href="./subsection-rearrangements-of-infinite-series.ptx"/>
 
   <conclusion>
     <p>

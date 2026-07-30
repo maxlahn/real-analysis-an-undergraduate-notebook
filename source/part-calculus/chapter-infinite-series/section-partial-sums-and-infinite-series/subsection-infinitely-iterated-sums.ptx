@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-infinitely-iterated-sums" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Infinitely Iterated Sums
+  </title>
+
+  <introduction>
+    <p>
+      Because the sum of two real numbers is itself a real number (that is, addition is a binary relation on <m> \R </m>), the sum of three (or four, or five, or six) real numbers is also a real number. In fact, we can add together any finite sequence of real numbers and obtain a real number. If we instead start with an infinite sequence of real numbers, we can thus form a sequence whose <m> n </m>th entry is the sum of the first <m> n </m> numbers.
+    </p>
+  </introduction>
+  
+  <definition xml:id="definition-series">
+    <title>
+      Series
+    </title>
+    
+    <idx>
+      series
+    </idx>
+    
+    <idx>
+      partial sum
+    </idx>
+    
+    <idx>
+      tail
+    </idx>
+    
+    <notation>
+      <usage>
+        <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the series associated to the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m>
+        </p>
+      </description>
+    </notation>
+    
+    <statement>
+      <p>
+        The <term> series </term> associated to a sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> of real numbers <m> x_{ n } \in \R </m> called <term> terms </term> is a formal expression of the form
+        
+        <md>
+          \sum_{ n = 0 }^{ \infty }{ x_{ n } }
+        </md>.
+        
+        For each index <m> n \in \N </m>, the <m> n </m>th <term> partial sum </term> <m> S_{ n } </m> is the finite sum
+        
+        <md>
+          S_{ n } = \sum_{ k = 0 }^{ n }{ x_{ k } }
+        </md>,
+        
+        and the <m> n </m>th <term> tail </term> <m> T_{ n } </m> is the series
+        
+        <md>
+          T_{ n } = \sum_{ k = n + 1 }^{ \infty }{ x_{ k } } = \sum_{ k = 0 }^{ \infty }{ x_{ k + n + 1 } }
+        </md>.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="example-geometric-series">
+    <title>
+      Geometric series
+    </title>
+    
+    <idx>
+      geometric series
+    </idx>
+    
+    <idx>
+      initial value
+    </idx>
+    
+    <idx>
+      ratio
+    </idx>
+    
+    <statement>
+      <p>
+        A <term> geometric series </term> of <term> initial value </term> <m> a \in \R </m> and <term> ratio </term> <m> r \in \R </m> is the series of the form
+        
+        <md>
+          \sum_{ n = 0 }^{ \infty }{ a r^{ n } }
+        </md>.
+        
+        If <m> r = 1 </m>, then the partial sums of such a geometric series are
+        
+        <md>
+          <mrow>
+            S_{ n } \amp = \sum_{ k = 0 }^{ n }{ a r^{ k } } = a + a r + a r^{ 2 } + \dotsb + a r^{ n }
+          </mrow>
+          
+          <mrow>
+            \amp = a + a + a + \dotsb + a = a \of{ n + 1 }
+          </mrow>.
+        </md>
+        
+        On the other hand, if <m> r \neq 1 </m>, then we claim that the partial sums of such a geometric series are
+        
+        <md>
+          <mrow>
+            S_{ n } \amp = \sum_{ k = 0 }^{ n }{ a r^{ k } } = a + a r + a r^{ 2 } + \dotsb + a r^{ n }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ a \of{ 1 - r^{ n + 1 } } }{ 1 - r }
+          </mrow>
+        </md>.
+        
+        We can verify this computation by induction on <m> n \in \N </m>. Indeed, for the base case <m> n = 0 </m>, we see that
+        
+        <md>
+          <mrow>
+            S_{ n } \amp = S_{ 0 } = \sum_{ k = 0 }^{ 0 }{ a r^{ k } } = a r^{ 0 } = a 
+          </mrow>
+          
+          <mrow>
+            \amp = a \of{ \frac{ 1 - r }{ 1 - r } } = \frac{ a \of{ 1 - r^{ 1 } } }{ 1 - r } = \frac{ a \of{ 1 - r^{ n + 1 } } }{ 1 - r }
+          </mrow>
+        </md>.
+        
+        For the inductive step, suppose that
+        
+        <md>
+          S_{ n } = \frac{ a \of{ 1 - r^{ n + 1 } } }{ 1 - r }
+        </md>
+        
+        for some index <m> n \in \N </m>. We now observe that
+        
+        <md>
+          <mrow>
+            S_{ n + 1 } \amp = \sum_{ k = 0 }^{ n + 1 }{ a r^{ k } } = \sum_{ k = 0 }^{ n }{ a r^{ k } } + a r^{ n + 1 } = \frac{ a \of{ 1 - r^{ n + 1 } } }{ 1 - r } + a r^{ n + 1 }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ a \of{ 1 - r^{ n + 1 } } + a r^{ n + 1 } \of{ 1 - r } }{ 1 - r }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ a - a r^{ n + 1 } + a r^{ n + 1 } - a r^{ n + 2 } }{ 1 - r }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ a - a r^{ n + 2 } }{ 1 - r } = \frac{ a \of{ 1 - r^{ \of{ n + 1 } + 1 } } }{ 1 - r }
+          </mrow>
+        </md>.
+      </p>
+    </statement>
+  </example>
+  
+  <definition xml:id="definition-series-convergence-divergence">
+    <title>
+      Series convergence/divergence
+    </title>
+    
+    <idx>
+      convergence
+    </idx>
+    
+    <idx>
+      divergence
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of real numbers <m> x_{ m } \in \R </m>, and consider the associated series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m>.
+        
+        <ul>
+          <li>
+            <title>
+              Series convergence
+            </title>
+            
+            <p>
+              The series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> <term> converges </term> to a real number <m> S \in \R </m> if the sequence <m> \of{ S_{ n } }_{ n = 0 }^{ \infty } </m> of partial sums
+              
+              <md>
+                S_{ n } = \sum_{ k = 0 }^{ n }{ x_{ k } }
+              </md>
+              
+              converges to <m> S </m>. In this case, we call <m> S </m> the <term> value </term> of the series, and write
+              
+              <md>
+                \sum_{ n = 0 }^{ \infty }{ x_{ n } } = S = \lim_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ x_{ k } } }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Series divergence
+            </title>
+            
+            <p>
+              The series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> <term> diverges </term> if the sequence <m> \of{ S_{ n } }_{ n = 0 }^{ \infty } </m> of partial sums
+              
+              <md>
+                S_{ n } = \sum_{ k = 0 }^{ n }{ x_{ k } }
+              </md>
+              
+              diverges. 
+            </p>
+            
+            <p>
+              A special case of series divergence is series <term> divergence to infinity </term>. If the sequence <m> \of{ S_{ n } }_{ n = 0 }^{ \infty } </m> diverges to <m> \pm \infty </m>, then we write
+              
+              <md>
+                \sum_{ n = 0 }^{ \infty }{ x_{ n } } = \pm \infty = \lim_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ x_{ k } } }
+              </md>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+  
+  <example xml:id="example-series-convergence-divergence">
+    <title>
+      Series convergence/divergence
+    </title>
+    
+    <statement>
+      <p>
+        Consider the geometric series <m> \sum_{ n = 0 }^{ \infty }{ a r^{ n } } </m> of initial value <m> a \in \R </m> and ratio <m> r \in \R </m>, and let <m> \of{ S_{ n } }_{ n = 0 }^{ \infty } </m> be the sequence of partial sums
+        
+        <md>
+          S_{ n } = \sum_{ k = 0 }^{ n }{ a r^{ k } }
+        </md>.
+        
+        We will see that the convergence or divergence of this geometric series depends on both <m> a </m> and <m> r </m>.
+        
+        <ul>
+          <li>
+            <p>
+              We first observe that if <m> a = 0 </m>, then
+              
+              <md>
+                S_{ n } = \sum_{ k = 0 }^{ n }{ a r^{ k } } = \sum_{ k = 0 }^{ n }{ 0 } = 0
+              </md>
+              
+              for all indices <m> n \in \N </m>, and so
+              
+              <md>
+                \sum_{ n = 0 }^{ \infty }{ a r^{ n } } = \lim_{ n \to \infty }{ S_{ n } } = \lim_{ n \to \infty }{ 0 } = 0
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Now suppose that <m> a \neq 0 </m> and <m> r = 0 </m>. Then
+              
+              <md>
+                S_{ n } = a
+              </md>
+              
+              for all indices <m> n \in \N </m>, and so
+              
+              <md>
+                \sum_{ n = 0 }^{ \infty }{ a r^{ n } } = \lim_{ n \to \infty }{ S_{ n } } = \lim_{ n \to \infty }{ a } = a
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Now suppose that <m> a \neq 0 </m> and <m> 0 \lt \abs{ r } \lt 1 </m>. Let <m> \epsilon \gt 0 </m> be a positive real number. The Archimedean principle implies that
+              
+              <md>
+                n_{ \epsilon } \gt \frac{ \ln \of{ \epsilon } + \ln \of{ 1 - r } }{ \ln \of{ \abs{ r } } } - 1
+              </md>
+              
+              for some natural number <m> n_{ \epsilon } \in \N </m>. We observe that
+              
+              <md>
+                <mrow>
+                  \abs{ S_{ n } - \frac{ a }{ 1 - r } } \amp = \abs{ \frac{ a \of{ 1 - r^{ n + 1 } } }{ 1 - r } - \frac{ a }{ 1 - r } } = \frac{ \abs{ -r^{ n + 1 } } }{ \abs{ 1 - r } }
+                </mrow>
+                
+                <mrow>
+                  \amp = \frac{ \abs{ r }^{ n + 1 } }{ 1 - r } \leq \frac{ \abs{ r }^{ n_{ \epsilon } + 1 } }{ 1 - r } \lt \epsilon
+                </mrow>
+              </md>
+              
+              for all indices <m> n \geq n_{ \epsilon } </m>. Thus the geometric series converges to
+              
+              <md>
+                \sum_{ n = 0 }^{ \infty }{ a r^{ n } } = \lim_{ n \to \infty }{ S_{ n } } = \frac{ a }{ 1 - r }
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Now suppose that <m> a \gt 0 </m> and <m> r = 1 </m>. Let <m> B \in \R </m> be a real number. The Archimedean principle implies that
+              
+              <md>
+                n_{ B } \gt \frac{ B }{ a } - 1
+              </md>
+              
+              for some natural number <m> n_{ B } \in \N </m>. We observe
+              
+              <md>
+                S_{ n } = \of{ n + 1 } a \geq \of{ n_{ B } + 1 } a \gt B
+              </md>
+              
+              for all indices <m> n \geq n_{ B } </m>. Thus the geometric series diverges to <m> \infty </m>; that is,
+              
+              <md>
+                \sum_{ n = 0 }^{ \infty }{ a r^{ n } } = \lim_{ n \to \infty }{ S_{ n } } = \infty
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Now suppose that <m> a \lt 0 </m> and <m> r = 1 </m>. Let <m> B \in \R </m> be a real number. The Archimedean principle implies that
+              
+              <md>
+                n_{ B } \gt \frac{ B }{ a } - 1
+              </md>
+              
+              for some natural number <m> n_{ B } \in \N </m>. We observe
+              
+              <md>
+                S_{ n } = \of{ n + 1 } a \leq \of{ n_{ B } + 1 } a \lt B
+              </md>
+              
+              for all indices <m> n \geq n_{ B } </m>. Thus the geometric series diverges to <m> -\infty </m>; that is,
+              
+              <md>
+                \sum_{ n = 0 }^{ \infty }{ a r^{ n } } = \lim_{ n \to \infty }{ S_{ n } } = -\infty
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Now suppose that <m> a \neq 0 </m> and <m> r = -1 </m>. Then the geometric series has partial sums
+              
+              <md>
+                <mrow>
+                  S_{ n } \amp = \frac{ a \of{ 1 - r^{ n + 1 } } }{ 1 - r } = \frac{ a \of{ 1 - \of{ -1 }^{ n + 1 } } }{ 1 - \of{ -1 } } = \frac{ a \of{ 1 + \of{ -1 }^{ n + 1 } } }{ 2 }
+                </mrow>
+                
+                <mrow>
+                  \amp =
+                    \begin{cases}
+                      a \amp n \textrm{ is even} \\
+                      0 \amp n \textrm{ is odd}
+                    \end{cases}
+                </mrow>.
+                
+                Since the sequence <m> \of{ S_{ n } }_{ n = 0 }^{ \infty } </m> of partial sums diverges, the geometric series diverges as well.
+              </md>
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Now suppose that <m> a \gt 0 </m> and <m> r \gt 1 </m>. Let <m> B \in \R </m> be a real number. The Archimedean principle implies that
+              
+              <md>
+                n_{ B } \gt \frac{ \ln \of{ a - B \of{ 1 - r } } - \ln \of{ a } }{ \ln \of{ r } } - 1
+              </md>
+              
+              for some natural number <m> n_{ B } \in \N </m>. We observe that
+              
+              <md>
+                S_{ n } = \frac{ a \of{ 1 - r^{ n + 1 } } }{ 1 - r } \geq \frac{ a \of{ 1 - r^{ n_{ B } + 1 } } }{ 1 - r } \gt B
+              </md>
+              
+              for all indices <m> n \geq n_{ B } </m>. Thus the geometric series diverges to <m> \infty </m>; that is,
+              
+              <md>
+                \sum_{ n = 0 }^{ \infty }{ a r^{ n } } = \lim_{ n \to \infty }{ S_{ n } } = \infty
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Now suppose that <m> a \lt 0 </m> and <m> r \gt 1 </m>. Let <m> B \in \R </m> be a real number. The Archimedean principle implies that
+              
+              <md>
+                n_{ B } \gt \frac{ \ln \of{ a - B \of{ 1 - r } } - \ln \of{ a } }{ \ln \of{ r } } - 1
+              </md>
+              
+              for some natural number <m> n_{ B } \in \N </m>. We observe that
+              
+              <md>
+                S_{ n } = \frac{ a \of{ 1 - r^{ n + 1 } } }{ 1 - r } \leq \frac{ a \of{ 1 - r^{ n_{ B } + 1 } } }{ 1 - r } \lt B
+              </md>
+              
+              for all indices <m> n \geq n_{ B } </m>. Thus the geometric series diverges to <m> \infty </m>; that is,
+              
+              <md>
+                \sum_{ n = 0 }^{ \infty }{ a r^{ n } } = \lim_{ n \to \infty }{ S_{ n } } = -\infty
+              </md>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Finally, suppose that <m> a \neq 0 </m> and <m> r \lt -1 </m>. We observe that
+              
+              <md>
+                \abs{ S_{ n + 1 } - S_{ n } } = \abs{ \sum_{ k = 0 }^{ n + 1 }{ a r^{ k } } - \sum_{ k = 0 }^{ n }{ a r^{ k } } } = \abs{ a r^{ n + 1 } } = \abs{ a } \abs{ r }^{ n + 1 } \geq 1
+              </md>
+              
+              for any index <m> n \in \N </m> so that
+              
+              <md>
+                n \geq -\frac{ \ln \of{ \abs{ a } } }{ \ln \of{ \abs{ r } } } - 1
+              </md>.
+              
+              In particular, this implies that the sequence <m> \of{ S_{ n } }_{ n = 0 }^{ \infty } </m> cannot be Cauchy, and therefore cannot converge. So the geometric series diverges.
+            </p>
+          </li>
+        </ul>
+        
+        To summarize, the geometric series <m> \sum_{ n = 0 }^{ \infty }{ a r^{ n } } </m> converges if and only if <m> a = 0 </m> or <m> \abs{ r } \lt 1 </m>.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    Several of the ideas presented above in <xref ref="example-series-convergence-divergence"/> can be generalized to help determine the convergence or divergence behavior of more general series. For example, the sequence of partial sums cannot be Cauchy unless the sequence of terms converges to <m> 0 </m>.
+  </p>
+  
+  <proposition xml:id="proposition-convergent-series-have-convergent-terms">
+    <title>
+      Convergent series have convergent terms
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of real numbers <m> x_{ n } \in \R </m>. If the series
+        
+        <md>
+          \sum_{ n = 0 }^{ \infty }{ x_{ n } }
+        </md>
+        
+        converges, then <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> converges to <m> 0 </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        By contraposition. Suppose that <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m>. Then there is a positive real number <m> \epsilon \gt 0 </m> so that <m> \abs{ x_{ n } - 0 } \geq \epsilon </m> for infinitely many natural numbers <m> n \in \N </m>. Let <m> \of{ S_{ n } }_{ n = 0 }^{ \infty } </m> be the sequence of partial sums
+        
+        <md>
+          S_{ n } = \sum_{ k = 0 }^{ n }{ x_{ n } }
+        </md>.
+        
+        For any positive integer <m> n \geq 1 </m> so that <m> \abs{ x_{ n } - 0 } \geq \epsilon </m>, we observe that
+        
+        <md>
+          <mrow>
+            \abs{ S_{ n } - S_{ n - 1 } } \amp = \abs{ \sum_{ k = 0 }^{ n }{ x_{ k } } - \sum_{ k = 0 }^{ n - 1 }{ x_{ k } } } = \abs{ x_{ n } }
+          </mrow>
+          
+          <mrow>
+            \amp = \abs{ x_{ n } - 0 } \geq \epsilon
+          </mrow>
+        </md>.
+        
+        Since this occurs for infinitely many positive integers <m> n \geq 1 </m>, we conclude that the sequence <m> \of{ S_{ n } }_{ n = 0 }^{ \infty } </m> cannot be Cauchy. <xref ref="proposition-convergent-sequences-are-cauchy"/> now implies that <m> \of{ S_{ n } }_{ n = 0 }^{ \infty } </m>, and therefore the series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m>, diverges.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    Series convergence behaves well under termwise arithmetic. In particular, we may add convergent series term by term or scale a convergent series by a real number, and the convergent of the series is preserved.
+  </p>
+  
+  <proposition xml:id="proposition-arithmetic-of-convergent-series">
+    <title>
+      Arithmetic of convergent series
+    </title>
+    
+    <statement>
+      <ol>
+        <li>
+          <title>
+            Addition of convergent series
+          </title>
+          
+          <p>
+            Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> and <m> \of{ y_{ n } }_{ n = 0 }^{ \infty } </m> be sequences of real numbers <m> x_{ n } , y_{ n } \in \R </m>. If the series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> and <m> \sum_{ n = 0 }^{ \infty }{ y_{ n } } </m> converge, then so too does the series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } + y_{ n } } </m>, and
+            
+            <md>
+              \sum_{ n = 0 }^{ \infty }{ x_{ n } + y_{ n } } = \sum_{ n = 0 }^{ \infty }{ x_{ n } } + \sum_{ n = 0 }^{ \infty }{ y_{ n } }
+            </md>.
+          </p>
+        </li>
+        
+        <li>
+          <title>
+            Scalar multiplication of convergent series
+          </title>
+          
+          <p>
+            Let <m> c \in \R </m> be a real number and <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of real numbers <m> x_{ n } \in \R </m>. If the series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> converges, then so too does the series <m> \sum_{ n = 0 }^{ \infty }{ c x_{ n } } </m>, and
+            
+            <md>
+              \sum_{ n = 0 }^{ \infty }{ c x_{ n } } = c \sum_{ n = 0 }^{ \infty }{ x_{ n } }
+            </md>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            Let <m> \of{ S_{ n } }_{ n = 0 }^{ \infty } </m> and <m> \of{ T_{ n } }_{ n = 0 }^{ \infty } </m> be the sequences of partial sums
+            
+            <md>
+              <mrow>
+                S_{ n } \amp = \sum_{ k = 0 }^{ n }{ x_{ k } } \amp T_{ n } \amp = \sum_{ k = 0 }^{ n }{ y_{ k } }
+              </mrow>
+            </md>,
+            
+            and denote by <m> X </m> and <m> Y </m> the corresponding values of the series
+            
+            <md>
+              <mrow>
+                X \amp = \sum_{ n = 0 }^{ \infty }{ x_{ n } } = \lim_{ n \to \infty }{ S_{ n } }
+              </mrow>
+              
+              <mrow>
+                Y \amp = \sum_{ n = 0 }^{ \infty }{ y_{ n } } = \lim_{ n \to \infty }{ T_{ n } }
+              </mrow>
+            </md>.
+            
+            Let <m> \epsilon \gt 0 </m> be a positive real number. Then there is a natural number <m> n_{ \epsilon } \in \N </m> so that
+            
+            <md>
+              \abs{ S_{ n } - X } \lt \frac{ \epsilon }{ 2 }
+            </md>
+            
+            and
+            
+            <md>
+              \abs{ T_{ n } - Y } \lt \frac{ \epsilon }{ 2 }
+            </md>
+            
+            for all indices <m> n \geq n_{ \epsilon } </m>. We observe that
+            
+            <md>
+              <mrow>
+                \abs{ \sum_{ k = 0 }^{ n }{ x_{ k } + y_{ k } } - \of{ X + Y } } \amp = \abs{ S_{ n } + T_{ n } - X - Y } \leq \abs{ S_{ n } - X } + \abs{ T_{ n } - Y }
+              </mrow>
+              
+              <mrow>
+                \amp \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+              </mrow>
+            </md>
+            
+            for all indices <m> n \geq n_{ \epsilon } </m>. We conclude that the series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } + y_{ n } } </m> converges to
+            
+            <md>
+              <mrow>
+                \sum_{ n = 0 }^{ \infty }{ x_{ n } + y_{ n } } = \lim_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ x_{ n } + y_{ n } } } = X + Y
+              </mrow>
+              
+              <mrow>
+                \amp = \sum_{ n = 0 }^{ \infty }{ x_{ n } } + \sum_{ n = 0 }^{ \infty }{ y_{ n } }
+              </mrow>
+            </md>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            If <m> c = 0 </m>, then
+            
+            <md>
+              \sum_{ k = 0 }^{ n }{ c x_{ k } } = \sum_{ k = 0 }^{ n }{ 0 } = 0
+            </md>
+            
+            for all indices <m> n \in \N </m>, and so
+            
+            <md>
+              <mrow>
+                \sum_{ n = 0 }^{ \infty }{ c x_{ n } } \amp = \lim_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ c x_{ k } } } = \lim_{ n \to \infty }{ 0 } = 0
+              </mrow>
+              
+              <mrow>
+                \amp = 0 \sum_{ n = 0 }^{ \infty }{ x_{ n } } = c \sum_{ n = 0 }^{ \infty }{ x_{ n } }
+              </mrow>
+            </md>.
+          </p>
+          
+          <p>
+            We may therefore assume that <m> c \neq 0 </m>. Let <m> \of{ S_{ n } }_{ n = 0 }^{ \infty } </m> be the sequence of partial sums
+            
+            <md>
+              S_{ n } = \sum_{ k = 0 }^{ n }{ x_{ k } }
+            </md>,
+            
+            and denote by <m> X </m> the corresponding value of the series
+            
+            <md>
+              X = \sum_{ n = 0 }^{ \infty }{ x_{ n } } = \lim_{ n \to \infty }{ S_{ n } }
+            </md>.
+            
+            Let <m> \epsilon \gt 0 </m> be a positive real number. Then there is a natural number <m> n_{ \epsilon } \in \N </m> so that
+            
+            <md>
+              \abs{ S_{ n } - X } \lt \frac{ \epsilon }{ \abs{ c } }
+            </md>
+            
+            for all indices <m> n \geq n_{ \epsilon } </m>. We observe that
+            
+            <md>
+              <mrow>
+                \abs{ \sum_{ k = 0 }^{ n }{ c x_{ k } } - \of{ c X } } \amp = \abs{ c S_{ n } - c X } = \abs{ c } \abs{ S_{ n } - X }
+              </mrow>
+              
+              <mrow>
+                \amp \lt \abs{ c } \of{ \frac{ \epsilon }{ \abs{ c } } } = \epsilon
+              </mrow>
+            </md>
+            
+            for all indices <m> n \geq n_{ \epsilon } </m>. We conclude that the series <m> \sum_{ n = 0 }^{ \infty }{ c x_{ n } } </m> converges to
+            
+            <md>
+              <mrow>
+                \sum_{ n = 0 }^{ \infty }{ c x_{ n } } = \lim_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ c x_{ n } } } = c X
+              </mrow>
+              
+              <mrow>
+                \amp = c \sum_{ n = 0 }^{ \infty }{ x_{ n } }
+              </mrow>
+            </md>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </proposition>
+  
+  <p>
+    We will also see that termwise multiplication of convergent series produces convergent series. In order to prove this, we will require additional sufficient criteria for series convergence developed in <xref ref="section-tests-for-series-convergence"/>. We can, however, compare convergent series by comparing their terms.
+  </p>
+  
+  <lemma xml:id="lemma-comparison-of-convergent-series">
+    <title>
+      Comparison of convergent series
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> and <m> \of{ y_{ n } }_{ n = 0 }^{ \infty } </m> be sequences of real numbers <m> x_{ n } , y_{ n } \in \R </m>. If <m> x_{ n } \leq y_{ n } </m> for all indices <m> n \in \N </m> and the series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> and <m> \sum_{ n = 0 }^{ \infty }{ y_{ n } } </m> converge, then
+        
+        <md>
+          \sum_{ n = 0 }^{ \infty }{ x_{ n } } \leq \sum_{ n = 0 }^{ \infty }{ y_{ n } }
+        </md>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \of{ S_{ n } }_{ n = 0 }^{ \infty } </m> and <m> \of{ T_{ n } }_{ n = 0 }^{ \infty } </m> be the sequences of partial sums
+        
+        <md>
+          <mrow>
+            S_{ n } \amp = \sum_{ k = 0 }^{ n }{ x_{ k } } \amp T_{ n } \amp = \sum_{ k = 0 }^{ n }{ y_{ k } }
+          </mrow>
+        </md>.
+        
+        Since <m> x_{ k } \leq y_{ k } </m> for each index <m> 0 \leq k \leq n </m>, <m> S_{ n } \leq T_{ n } </m>. We conclude that
+        
+        <md>
+          \sum_{ n = 0 }^{ \infty }{ x_{ n } } = \lim_{ n \to \infty }{ S_{ n } } \leq \lim_{ n \to \infty }{ T_{ n } } = \sum_{ n = 0 }^{ \infty }{ y_{ n } }
+        </md>
+        
+        by <xref ref="proposition-comparison-of-limits"/>.
+      </p>
+    </proof>
+  </lemma>
+
+  <conclusion>
+    <p>
+      In the next section, we will build on <xref ref="lemma-comparison-of-convergent-series"/> significantly, establishing an analogue of the <xref ref="theorem-comparison-test-for-integral-convergence" text="title"/> for infinite series.
+    </p>
+  </conclusion>
+</subsection>
