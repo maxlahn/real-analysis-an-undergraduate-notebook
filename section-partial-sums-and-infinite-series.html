@@ -930,9 +930,9 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Partial Sums and Infinite Series</span></a></div>
 <ul class="structural toc-item-list active" id="ptx-toc-group-section-partial-sums-and-infinite-series">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#subsection-infinitely-iterated-sums" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Infinitely Iterated Sums</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#subsection-rearrangements-of-infinite-series" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Rearrangements of Infinite Series [SKIP]</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#exercises-partial-sums-and-infinite-series" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#reading-questions-partial-sums-and-infinite-series" class="internal"><span class="codenumber">7.1.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#subsection-rearrangements-of-infinite-series" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Rearrangements of Infinite Series</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#exercises-partial-sums-and-infinite-series" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#problems-partial-sums-and-infinite-series" class="internal"><span class="codenumber">7.1.4</span> <span class="title">Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -977,7 +977,7 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Partial Sums and Infinite Series</span>
 </h1>
 <section class="introduction" id="section-partial-sums-and-infinite-series-2">
-<div class="para" id="section-partial-sums-and-infinite-series-2-1">We begin by developing a notion of convergence and divergence for series of real numbers. These ideas build directly on the convergence and divergence of sequences of real numbers. In fact, a series converges/diverges if and only if an associated sequence of real numbers (although <em class="emphasis">not</em> the sequence of terms) does.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-partial-sums-and-infinite-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="section-partial-sums-and-infinite-series-2-1">We begin by developing a notion of convergence and divergence for series of real numbers. These ideas build directly on the convergence and divergence of sequences of real numbers. In fact, a series converges/diverges if and only if an associated sequence of real numbers does.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-partial-sums-and-infinite-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="subsection" id="subsection-infinitely-iterated-sums">
 <h2 class="heading hide-type">
@@ -1445,7 +1445,7 @@ Y \amp = \sum_{ n = 0 }^{ \infty }{ y_{ n } } = \lim_{ n \to \infty }{ T_{ n } }
 <div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> We conclude that the series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n } + y_{ n } } \)</span> converges to</div>
 <div class="displaymath process-math" id="proposition-arithmetic-of-convergent-series-3-1-1-1-15">
 \begin{align*}
-\sum_{ n = 0 }^{ \infty }{ x_{ n } + y_{ n } } = \lim_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ x_{ n } + y_{ n } } } = X + Y\\
+\sum_{ n = 0 }^{ \infty }{ x_{ n } + y_{ n } } \amp = \lim_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ x_{ n } + y_{ n } } } = X + Y\\
 \amp = \sum_{ n = 0 }^{ \infty }{ x_{ n } } + \sum_{ n = 0 }^{ \infty }{ y_{ n } }\text{.}
 \end{align*}
 </div>
@@ -1499,7 +1499,7 @@ X = \sum_{ n = 0 }^{ \infty }{ x_{ n } } = \lim_{ n \to \infty }{ S_{ n } }\text
 <div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> We conclude that the series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ c x_{ n } } \)</span> converges to</div>
 <div class="displaymath process-math" id="proposition-arithmetic-of-convergent-series-3-1-2-2-13">
 \begin{align*}
-\sum_{ n = 0 }^{ \infty }{ c x_{ n } } = \lim_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ c x_{ n } } } = c X\\
+\sum_{ n = 0 }^{ \infty }{ c x_{ n } } \amp = \lim_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ c x_{ n } } } = c X\\
 \amp = c \sum_{ n = 0 }^{ \infty }{ x_{ n } }\text{.}
 \end{align*}
 </div>
@@ -1552,39 +1552,318 @@ S_{ n } \amp = \sum_{ k = 0 }^{ n }{ x_{ k } } \amp T_{ n } \amp = \sum_{ k = 0 
 </section>
 <section class="subsection" id="subsection-rearrangements-of-infinite-series">
 <h2 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rearrangements of Infinite Series [SKIP]</span>
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rearrangements of Infinite Series</span>
 </h2>
 <section class="introduction" id="subsection-rearrangements-of-infinite-series-2">
-<div class="para" id="subsection-rearrangements-of-infinite-series-2-1">Text before the first subdivision.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-rearrangements-of-infinite-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsection-rearrangements-of-infinite-series-2-1">While the commutativity and associativity of addition imply that the order in which one adds up a finite sequence of real numbers does not matter, the same is not always the case for infinite series of real numbers. We will see that the convergence/divergence behavior of certain sequences can be meaningfully affected by rearranging their terms, but other sequences cannot be tampered with in this way.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-rearrangements-of-infinite-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="subsection-rearrangements-of-infinite-series-3">
-<div class="para" id="subsection-rearrangements-of-infinite-series-3-1">Text after the last subdivision.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-rearrangements-of-infinite-series-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" aria-hidden="true" data-description="Subsection 7.1.2: Rearrangements of Infinite Series [SKIP]"><a tabindex="-1" href="#subsection-rearrangements-of-infinite-series" title="Copy heading and permalink for Subsection 7.1.2: Rearrangements of Infinite Series [SKIP]" aria-label="Copy heading and permalink for Subsection 7.1.2: Rearrangements of Infinite Series [SKIP]">🔗</a></div>
+<article class="definition definition-like" id="definition-positive-negative-part"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Positive/negative part.</span>
+</h3>
+<ul class="disc" id="definition-positive-negative-part-6-1">
+<li id="definition-positive-negative-part-6-1-1">
+<span class="heading li--heading"><span class="title li--heading-title">Positive part.</span></span>
+<div class="para logical" id="definition-positive-negative-part-6-1-1-2">
+<div class="para">The <dfn class="terminology">positive part</dfn> <span class="process-math">\(x^{ + } \)</span> of a real number <span class="process-math">\(x \in \R \)</span> is the non-negative real number</div>
+<div class="displaymath process-math" id="definition-positive-negative-part-6-1-1-2-4">
+\begin{equation*}
+x^{ + } = \max \of{ \set{ x , 0 } }\text{.}
+\end{equation*}
+</div>
+<div class="para">Similarly, the <dfn class="terminology">positive part</dfn> of a series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n } } \)</span> is the series</div>
+<div class="displaymath process-math" id="definition-positive-negative-part-6-1-1-2-7">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } } = \sum_{ n = 0 }^{ \infty }{ \max \of{ \set{ x , 0 } } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-positive-negative-part-6-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Positive part"><a tabindex="-1" href="#definition-positive-negative-part-6-1-1" title="Copy heading and permalink for Item: Positive part" aria-label="Copy heading and permalink for Item: Positive part">🔗</a></div>
+</li>
+<li id="definition-positive-negative-part-6-1-2">
+<span class="heading li--heading"><span class="title li--heading-title">Negative part.</span></span>
+<div class="para logical" id="definition-positive-negative-part-6-1-2-2">
+<div class="para">The <dfn class="terminology">negative part</dfn> <span class="process-math">\(x^{ - } \)</span> of a real number <span class="process-math">\(x \in \R \)</span> is the non-positive real number</div>
+<div class="displaymath process-math" id="definition-positive-negative-part-6-1-2-2-4">
+\begin{equation*}
+x^{ - } = -\min \of{ \set{ x , 0 } } = \max \of{ \set{ -x , 0 } } = \of{ -x }^{ + }\text{.}
+\end{equation*}
+</div>
+<div class="para">Similarly, the <dfn class="terminology">negative part</dfn> of a series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n } } \)</span> is the series</div>
+<div class="displaymath process-math" id="definition-positive-negative-part-6-1-2-2-7">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ x_{ n }^{ - } } = \sum_{ n = 0 }^{ \infty }{ -\min \of{ \set{ x , 0 } } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-positive-negative-part-6-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Negative part"><a tabindex="-1" href="#definition-positive-negative-part-6-1-2" title="Copy heading and permalink for Item: Negative part" aria-label="Copy heading and permalink for Item: Negative part">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 7.1.8: Positive/negative part"><a tabindex="-1" href="#definition-positive-negative-part" title="Copy heading and permalink for Definition 7.1.8: Positive/negative part" aria-label="Copy heading and permalink for Definition 7.1.8: Positive/negative part">🔗</a></div>
+</article>
+<div class="para" id="subsection-rearrangements-of-infinite-series-4">The positive and negative parts of a real number are closely related to its absolute value.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-rearrangements-of-infinite-series-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="lemma theorem-like" id="lemma-positive-negative-parts-and-magnitude"><h3 class="heading">
+<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Positive/negative parts and magnitude.</span>
+</h3>
+<div class="para" id="lemma-positive-negative-parts-and-magnitude-2-1">
+<span class="process-math">\(x = x^{ + } - x^{ - } \)</span> and <span class="process-math">\(\abs{ x } = x^{ + } + x^{ - } \)</span> for any real number <span class="process-math">\(x \in \R \)</span> with positive part <span class="process-math">\(x^{ + } \geq 0 \)</span> and negative part <span class="process-math">\(x^{ - } \leq 0 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-positive-negative-parts-and-magnitude-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Lemma 7.1.9: Positive/negative parts and magnitude"><a tabindex="-1" href="#lemma-positive-negative-parts-and-magnitude" title="Copy heading and permalink for Lemma 7.1.9: Positive/negative parts and magnitude" aria-label="Copy heading and permalink for Lemma 7.1.9: Positive/negative parts and magnitude">🔗</a></div>
+</article>
+<details id="lemma-positive-negative-parts-and-magnitude-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="lemma-positive-negative-parts-and-magnitude-3-1">
+<div class="para">First suppose that <span class="process-math">\(x = 0 \text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="lemma-positive-negative-parts-and-magnitude-3-1-2">
+\begin{align*}
+x^{ + } \amp = \max \of{ \set{ x , 0 } } = \max \of{ \set{ 0 } } = 0\\
+x^{ - } \amp = -\min \of{ \set{ x , 0 } } = -\min \of{ \set{ 0 } } = -0 = 0\text{,}
+\end{align*}
+</div>
+<div class="para">and so</div>
+<div class="displaymath process-math" id="lemma-positive-negative-parts-and-magnitude-3-1-3">
+\begin{align*}
+x^{ + } - x^{ - } \amp = 0 - 0 = 0 = x\\
+x^{ + } + x^{ - } \amp = 0 + 0 = 0 = \abs{ 0 } = \abs{ x }\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-positive-negative-parts-and-magnitude-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="lemma-positive-negative-parts-and-magnitude-3-2">
+<div class="para">Now suppose that <span class="process-math">\(x \gt 0 \)</span> is positive. Then</div>
+<div class="displaymath process-math" id="lemma-positive-negative-parts-and-magnitude-3-2-2">
+\begin{align*}
+x^{ + } \amp = \max \of{ \set{ x , 0 } } = x\\
+x^{ - } \amp = -\min \of{ \set{ x , 0 } } = -0 = 0\text{,}
+\end{align*}
+</div>
+<div class="para">and so</div>
+<div class="displaymath process-math" id="lemma-positive-negative-parts-and-magnitude-3-2-3">
+\begin{align*}
+x^{ + } - x^{ - } \amp = x - 0 = x\\
+x^{ + } + x^{ - } \amp = x + 0 = x = \abs{ x }\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-positive-negative-parts-and-magnitude-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="lemma-positive-negative-parts-and-magnitude-3-3">
+<div class="para">Now suppose that <span class="process-math">\(x \lt 0 \)</span> is positive. Then</div>
+<div class="displaymath process-math" id="lemma-positive-negative-parts-and-magnitude-3-3-2">
+\begin{align*}
+x^{ + } \amp = \max \of{ \set{ x , 0 } } = 0\\
+x^{ - } \amp = -\min \of{ \set{ x , 0 } } = -x\text{,}
+\end{align*}
+</div>
+<div class="para">and so</div>
+<div class="displaymath process-math" id="lemma-positive-negative-parts-and-magnitude-3-3-3">
+\begin{align*}
+x^{ + } - x^{ - } \amp = 0 - \of{ -x } = x\\
+x^{ + } + x^{ - } \amp = 0 + \of{ -x } = -x = \abs{ x }\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-positive-negative-parts-and-magnitude-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 7.1.9.1"><a tabindex="-1" href="#lemma-positive-negative-parts-and-magnitude-3" title="Copy heading and permalink for Proof 7.1.9.1" aria-label="Copy heading and permalink for Proof 7.1.9.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-rearrangements-of-infinite-series-6">If a series of real numbers converges, then the convergence or divergence behavior of its positive and negative parts are not unrelated. The following result establishes a dichotomy of behavior based on whether or not these related series converge or diverge.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-rearrangements-of-infinite-series-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-absolute-conditional-series-convergence"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Absolute/conditional series convergence.</span>
+</h3>
+<div class="para logical" id="proposition-absolute-conditional-series-convergence-2-1">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of real numbers <span class="process-math">\(x_{ n } \in \R \text{.}\)</span> If the series</div>
+<div class="displaymath process-math" id="proposition-absolute-conditional-series-convergence-2-1-3">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ x_{ n } }
+\end{equation*}
+</div>
+<div class="para">converges, then its positive and negative parts either both converge, in which case the series</div>
+<div class="displaymath process-math" id="proposition-absolute-conditional-series-convergence-2-1-4">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ \abs{ x_{ n } } }
+\end{equation*}
+</div>
+<div class="para">converges, or they both diverge to <span class="process-math">\(\infty \text{,}\)</span> in which case the series</div>
+<div class="displaymath process-math" id="proposition-absolute-conditional-series-convergence-2-1-6">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ \abs{ x_{ n } } }
+\end{equation*}
+</div>
+<div class="para">diverges to <span class="process-math">\(\infty \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-absolute-conditional-series-convergence-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 7.1.10: Absolute/conditional series convergence"><a tabindex="-1" href="#proposition-absolute-conditional-series-convergence" title="Copy heading and permalink for Proposition 7.1.10: Absolute/conditional series convergence" aria-label="Copy heading and permalink for Proposition 7.1.10: Absolute/conditional series convergence">🔗</a></div>
+</article>
+<details id="proposition-absolute-conditional-series-convergence-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="proposition-absolute-conditional-series-convergence-3-1">
+<div class="para">Let <span class="process-math">\(\of{ P_{ n } }_{ n = 0 }^{ \infty } \)</span> and <span class="process-math">\(\of{ N_{ n } }_{ n = 0 }^{ \infty } \)</span> be the sequences of partial sums</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-monotone-convergence-theorem.html" id="proposition-absolute-conditional-series-convergence-3-1-3">
+\begin{align*}
+P_{ n } \amp = \sum_{ k = 0 }^{ n }{ x_{ n }^{ + } } \amp N_{ n } \amp = \sum_{ k = 0 }^{ n }{ x_{ n }^{ - } }\text{.}
+\end{align*}
+</div>
+<div class="para">Since both <span class="process-math">\(x^{ + } \)</span> and <span class="process-math">\(x^{ - } \)</span> are non-negative for any real number <span class="process-math">\(x \in \R \text{,}\)</span> we observe that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-monotone-convergence-theorem.html" id="proposition-absolute-conditional-series-convergence-3-1-7">
+\begin{align*}
+P_{ n + 1 } \amp = \sum_{ k = 0 }^{ n + 1 }{ x_{ k }^{ + } } = \sum_{ k = 0 }^{ n }{ x_{ k }^{ + } } + x_{ n + 1 }^{ + } \geq P_{ n }\\
+N_{ n + 1 } \amp = \sum_{ k = 0 }^{ n + 1 }{ x_{ k }^{ - } } = \sum_{ k = 0 }^{ n }{ x_{ k }^{ - } } + x_{ n + 1 }^{ - } \geq N_{ n }\text{;}
+\end{align*}
+</div>
+<div class="para">that is, the partial sums <span class="process-math">\(\of{ P_{ n } }_{ n = 0 }^{ \infty } \)</span> and <span class="process-math">\(\of{ N_{ n } }_{ n = 0 }^{ \infty } \)</span> are non-decreasing. The <a href="section-limits-in-the-euclidean-metric.html#theorem-monotone-convergence-theorem" class="xref" data-knowl="./knowl/xref/theorem-monotone-convergence-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.13: Monotone convergence theorem">Monotone convergence theorem</a> now implies that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-monotone-convergence-theorem.html" id="proposition-absolute-conditional-series-convergence-3-1-11">
+\begin{align*}
+\lim_{ n \to \infty }{ P_{ n } } \amp = \sup_{ n \in \N }{ P_{ n } } \amp \lim_{ n \to \infty }{ N_{ n } } \amp = \sup_{ n \in \N }{ N_{ n } }\text{.}
+\end{align*}
+</div>
+<div class="para">In particular, each of the positive and negative parts <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } } \)</span> and <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n }^{ - } } \)</span> either converges or diverges to <span class="process-math">\(\infty \text{.}\)</span> It remains to show only that one cannot converge while the other diverges to <span class="process-math">\(\infty \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-absolute-conditional-series-convergence-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-absolute-conditional-series-convergence-3-2">
+<div class="para">To that end, we first note that if the positive part <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } } \)</span> converges, then <a href="section-partial-sums-and-infinite-series.html#lemma-positive-negative-parts-and-magnitude" class="xref" data-knowl="./knowl/xref/lemma-positive-negative-parts-and-magnitude.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 7.1.9: Positive/negative parts and magnitude">Lemma 7.1.9 Positive/negative parts and magnitude</a> and <a href="section-partial-sums-and-infinite-series.html#proposition-arithmetic-of-convergent-series" class="xref" data-knowl="./knowl/xref/proposition-arithmetic-of-convergent-series.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 7.1.6: Arithmetic of convergent series">Proposition 7.1.6 Arithmetic of convergent series</a> imply that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-positive-negative-parts-and-magnitude.html ./knowl/xref/proposition-arithmetic-of-convergent-series.html ./knowl/xref/lemma-positive-negative-parts-and-magnitude.html ./knowl/xref/proposition-arithmetic-of-convergent-series.html" id="proposition-absolute-conditional-series-convergence-3-2-4">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ x_{ n }^{ - } } = \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } - x_{ n } } = \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } } - \sum_{ n = 0 }^{ \infty }{ x_{ n } }
+\end{equation*}
+</div>
+<div class="para">converges, in which case</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-positive-negative-parts-and-magnitude.html ./knowl/xref/proposition-arithmetic-of-convergent-series.html ./knowl/xref/lemma-positive-negative-parts-and-magnitude.html ./knowl/xref/proposition-arithmetic-of-convergent-series.html" id="proposition-absolute-conditional-series-convergence-3-2-5">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ \abs{ x_{ n } } } = \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } + x_{ n }^{ - } } = \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } } + \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ - } }
+\end{equation*}
+</div>
+<div class="para">converges by another application of <a href="section-partial-sums-and-infinite-series.html#lemma-positive-negative-parts-and-magnitude" class="xref" data-knowl="./knowl/xref/lemma-positive-negative-parts-and-magnitude.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 7.1.9: Positive/negative parts and magnitude">Lemma 7.1.9 Positive/negative parts and magnitude</a> and (1) of <a href="section-partial-sums-and-infinite-series.html#proposition-arithmetic-of-convergent-series" class="xref" data-knowl="./knowl/xref/proposition-arithmetic-of-convergent-series.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 7.1.6: Arithmetic of convergent series">Proposition 7.1.6 Arithmetic of convergent series</a>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-absolute-conditional-series-convergence-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-absolute-conditional-series-convergence-3-3">
+<div class="para">Finally, we note that if the negative part <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n }^{ - } } \)</span> converges, then <a href="section-partial-sums-and-infinite-series.html#lemma-positive-negative-parts-and-magnitude" class="xref" data-knowl="./knowl/xref/lemma-positive-negative-parts-and-magnitude.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 7.1.9: Positive/negative parts and magnitude">Lemma 7.1.9 Positive/negative parts and magnitude</a> and (1) of <a href="section-partial-sums-and-infinite-series.html#proposition-arithmetic-of-convergent-series" class="xref" data-knowl="./knowl/xref/proposition-arithmetic-of-convergent-series.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 7.1.6: Arithmetic of convergent series">Proposition 7.1.6 Arithmetic of convergent series</a> imply that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-positive-negative-parts-and-magnitude.html ./knowl/xref/proposition-arithmetic-of-convergent-series.html ./knowl/xref/lemma-positive-negative-parts-and-magnitude.html ./knowl/xref/proposition-arithmetic-of-convergent-series.html" id="proposition-absolute-conditional-series-convergence-3-3-4">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } } = \sum_{ n = 0 }^{ \infty }{ x_{ n } + x_{ n }^{ - } } = \sum_{ n = 0 }^{ \infty }{ x_{ n } } + \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ - } }
+\end{equation*}
+</div>
+<div class="para">converges, in which case</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-positive-negative-parts-and-magnitude.html ./knowl/xref/proposition-arithmetic-of-convergent-series.html ./knowl/xref/lemma-positive-negative-parts-and-magnitude.html ./knowl/xref/proposition-arithmetic-of-convergent-series.html" id="proposition-absolute-conditional-series-convergence-3-3-5">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ \abs{ x_{ n } } } = \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } + x_{ n }^{ - } } = \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } } + \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ - } }
+\end{equation*}
+</div>
+<div class="para">converges by another application of <a href="section-partial-sums-and-infinite-series.html#lemma-positive-negative-parts-and-magnitude" class="xref" data-knowl="./knowl/xref/lemma-positive-negative-parts-and-magnitude.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 7.1.9: Positive/negative parts and magnitude">Lemma 7.1.9 Positive/negative parts and magnitude</a> and (1) of <a href="section-partial-sums-and-infinite-series.html#proposition-arithmetic-of-convergent-series" class="xref" data-knowl="./knowl/xref/proposition-arithmetic-of-convergent-series.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 7.1.6: Arithmetic of convergent series">Proposition 7.1.6 Arithmetic of convergent series</a>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-absolute-conditional-series-convergence-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 7.1.10.1"><a tabindex="-1" href="#proposition-absolute-conditional-series-convergence-3" title="Copy heading and permalink for Proof 7.1.10.1" aria-label="Copy heading and permalink for Proof 7.1.10.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-rearrangements-of-infinite-series-8">The dichotomy produced by <a href="section-partial-sums-and-infinite-series.html#proposition-absolute-conditional-series-convergence" class="xref" data-knowl="./knowl/xref/proposition-absolute-conditional-series-convergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 7.1.10: Absolute/conditional series convergence">Proposition 7.1.10 Absolute/conditional series convergence</a> is important enough to be named. A convergent series is called <dfn class="terminology">absolutely convergent</dfn> if its positive and negative parts converge, and <dfn class="terminology">conditionally convergent</dfn> if its positive and negative parts diverge to <span class="process-math">\(\infty \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-rearrangements-of-infinite-series-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-absolute-conditional-series-convergence"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Absolute/conditional series convergence.</span>
+</h3>
+<div class="para logical" id="definition-absolute-conditional-series-convergence-4-1">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of real numbers <span class="process-math">\(x_{ n } \in \R \text{.}\)</span>
+</div>
+<ul class="disc" id="definition-absolute-conditional-series-convergence-4-1-3">
+<li id="definition-absolute-conditional-series-convergence-4-1-3-1">
+<span class="heading li--heading"><span class="title li--heading-title">Absolute convergence.</span></span>
+<div class="para" id="definition-absolute-conditional-series-convergence-4-1-3-1-2">The series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n } } \)</span> <dfn class="terminology">converges absolutely</dfn> if any two of the series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n } } \text{,}\)</span> <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } } \text{,}\)</span> <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n }^{ - } } \text{,}\)</span> and <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ \abs{ x_{ n } } } \)</span> converge, in which case they all converge.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-absolute-conditional-series-convergence-4-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Absolute convergence"><a tabindex="-1" href="#definition-absolute-conditional-series-convergence-4-1-3-1" title="Copy heading and permalink for Item: Absolute convergence" aria-label="Copy heading and permalink for Item: Absolute convergence">🔗</a></div>
+</li>
+<li id="definition-absolute-conditional-series-convergence-4-1-3-2">
+<span class="heading li--heading"><span class="title li--heading-title">Conditional convergence.</span></span>
+<div class="para" id="definition-absolute-conditional-series-convergence-4-1-3-2-2">The series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n } } \)</span> <dfn class="terminology">converges conditionally</dfn> if the series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n } } \)</span> converges but any of these series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } } \text{,}\)</span> <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n }^{ - } } \text{,}\)</span> and <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ \abs{ x_{ n } } } \)</span> diverge to <span class="process-math">\(\infty \text{,}\)</span> in which case they all diverge to <span class="process-math">\(\infty \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-absolute-conditional-series-convergence-4-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Conditional convergence"><a tabindex="-1" href="#definition-absolute-conditional-series-convergence-4-1-3-2" title="Copy heading and permalink for Item: Conditional convergence" aria-label="Copy heading and permalink for Item: Conditional convergence">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-absolute-conditional-series-convergence-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 7.1.11: Absolute/conditional series convergence"><a tabindex="-1" href="#definition-absolute-conditional-series-convergence" title="Copy heading and permalink for Definition 7.1.11: Absolute/conditional series convergence" aria-label="Copy heading and permalink for Definition 7.1.11: Absolute/conditional series convergence">🔗</a></div>
+</article>
+<div class="para" id="subsection-rearrangements-of-infinite-series-10">We will be able to provide many examples of conditionally convergent and absolutely convergent series after establishing more convergence tests in <a href="section-tests-for-series-convergence.html" class="internal" title="Section 7.2: Tests for Series Convergence">Section 7.2 Tests for Series Convergence</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-rearrangements-of-infinite-series-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsection-rearrangements-of-infinite-series-11">One of the foundational results in real analysis is concerned with the limiting behavior of conditionally convergent series. We present the following result without proof:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-rearrangements-of-infinite-series-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="theorem-rearrangement-theorem"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.12</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="creator">(Bernhard Riemann)</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rearrangement theorem.</span>
+</h3>
+<div class="para logical" id="theorem-rearrangement-theorem-3-1">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of real numbers <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \text{,}\)</span> and suppose that the associated series</div>
+<div class="displaymath process-math" id="theorem-rearrangement-theorem-3-1-3">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ x_{ n } }
+\end{equation*}
+</div>
+<div class="para">converges.</div>
+<ol class="decimal" id="theorem-rearrangement-theorem-3-1-4">
+<li id="theorem-rearrangement-theorem-3-1-4-1">
+<div class="para logical" id="theorem-rearrangement-theorem-3-1-4-1-1">
+<div class="para">If the series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n } } \)</span> converges absolutely, then</div>
+<div class="displaymath process-math" id="theorem-rearrangement-theorem-3-1-4-1-1-2">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ x_{ \varphi \of{ n } } } = \sum_{ n = 0 }^{ \infty }{ x_{ n } }
+\end{equation*}
+</div>
+<div class="para">for all bijections <span class="process-math">\(\varphi \colon \N \to \N \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-rearrangement-theorem-3-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#theorem-rearrangement-theorem-3-1-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="theorem-rearrangement-theorem-3-1-4-2">
+<div class="para logical" id="theorem-rearrangement-theorem-3-1-4-2-1">
+<div class="para">If the series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n } } \)</span> converges conditionally, then for any extended real numbers <span class="process-math">\(-\infty \leq a \leq b \leq \infty \text{,}\)</span> there is a bijection <span class="process-math">\(\varphi \colon \N \to \N \)</span> so that</div>
+<div class="displaymath process-math" id="theorem-rearrangement-theorem-3-1-4-2-1-4">
+\begin{align*}
+\liminf_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ x_{ \varphi \of{ n } } } } \amp = a \amp \limsup_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ x_{ \varphi \of{ n } } } } \amp = b\text{.}
+\end{align*}
+</div>
+<div class="para">In particular, for any extended real number <span class="process-math">\(-\infty \leq c \leq \infty \text{,}\)</span> there is a bijection <span class="process-math">\(\varphi \colon \N \to \N \)</span> so that</div>
+<div class="displaymath process-math" id="theorem-rearrangement-theorem-3-1-4-2-1-7">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ x_{ \varphi \of{ n } } } = c\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-rearrangement-theorem-3-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#theorem-rearrangement-theorem-3-1-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-rearrangement-theorem-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 7.1.12: Rearrangement theorem"><a tabindex="-1" href="#theorem-rearrangement-theorem" title="Copy heading and permalink for Theorem 7.1.12: Rearrangement theorem" aria-label="Copy heading and permalink for Theorem 7.1.12: Rearrangement theorem">🔗</a></div>
+</article>
+<section class="conclusion" id="subsection-rearrangements-of-infinite-series-13">
+<div class="para" id="subsection-rearrangements-of-infinite-series-13-1">One way to interpret <a href="section-partial-sums-and-infinite-series.html#theorem-rearrangement-theorem" class="xref" data-knowl="./knowl/xref/theorem-rearrangement-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 7.1.12: Rearrangement theorem">Rearrangement theorem</a> is that conditionally convergent series are only convergent because the terms are ordered in such a way to cancel in a particular way, and that we may change the convergence/divergence behavior of such a series in almost any way solely by rearranging the terms. On the other hand, the convergence behavior of absolutely convergent series is completely unaffected by rearrangements.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-rearrangements-of-infinite-series-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Subsection 7.1.2: Rearrangements of Infinite Series"><a tabindex="-1" href="#subsection-rearrangements-of-infinite-series" title="Copy heading and permalink for Subsection 7.1.2: Rearrangements of Infinite Series" aria-label="Copy heading and permalink for Subsection 7.1.2: Rearrangements of Infinite Series">🔗</a></div>
 </section>
 <section class="conclusion" id="section-partial-sums-and-infinite-series-5">
-<div class="para" id="section-partial-sums-and-infinite-series-5-1">Text after the last subsection.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-partial-sums-and-infinite-series-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="section-partial-sums-and-infinite-series-5-1">In the next section, we will develop several techniques and tests for determining whether a given series of real numbers converges or diverges.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-partial-sums-and-infinite-series-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="reading-questions" id="exercises-partial-sums-and-infinite-series">
+<section class="exercises" id="exercises-partial-sums-and-infinite-series">
 <h2 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
 </h2>
 <section class="introduction" id="exercises-partial-sums-and-infinite-series-2">
 <div class="para" id="exercises-partial-sums-and-infinite-series-2-1">The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-partial-sums-and-infinite-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="conclusion" id="exercises-partial-sums-and-infinite-series-3">
-<div class="para" id="exercises-partial-sums-and-infinite-series-3-1">Short answers and/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-partial-sums-and-infinite-series-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 7.1.3: Exercises"><a tabindex="-1" href="#exercises-partial-sums-and-infinite-series" title="Copy heading and permalink for Reading Questions 7.1.3: Exercises" aria-label="Copy heading and permalink for Reading Questions 7.1.3: Exercises">🔗</a></div>
+<div class="para" id="exercises-partial-sums-and-infinite-series-3-1">Short answers and/or in-depth solutions to these exercises are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-partial-sums-and-infinite-series-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Exercises 7.1.3: Exercises"><a tabindex="-1" href="#exercises-partial-sums-and-infinite-series" title="Copy heading and permalink for Exercises 7.1.3: Exercises" aria-label="Copy heading and permalink for Exercises 7.1.3: Exercises">🔗</a></div>
 </section>
-<section class="reading-questions" id="reading-questions-partial-sums-and-infinite-series">
+<section class="reading-questions" id="problems-partial-sums-and-infinite-series">
 <h2 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reading Questions</span>
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
 </h2>
-<section class="introduction" id="reading-questions-partial-sums-and-infinite-series-2">
-<div class="para" id="reading-questions-partial-sums-and-infinite-series-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#reading-questions-partial-sums-and-infinite-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="problems-partial-sums-and-infinite-series-2">
+<div class="para" id="problems-partial-sums-and-infinite-series-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-partial-sums-and-infinite-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="reading-questions-partial-sums-and-infinite-series-3">
-<div class="para" id="reading-questions-partial-sums-and-infinite-series-3-1">In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#reading-questions-partial-sums-and-infinite-series-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 7.1.4: Reading Questions"><a tabindex="-1" href="#reading-questions-partial-sums-and-infinite-series" title="Copy heading and permalink for Reading Questions 7.1.4: Reading Questions" aria-label="Copy heading and permalink for Reading Questions 7.1.4: Reading Questions">🔗</a></div>
+<section class="conclusion" id="problems-partial-sums-and-infinite-series-3">
+<div class="para" id="problems-partial-sums-and-infinite-series-3-1">In-depth solutions to these problems are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-partial-sums-and-infinite-series-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 7.1.4: Problems"><a tabindex="-1" href="#problems-partial-sums-and-infinite-series" title="Copy heading and permalink for Reading Questions 7.1.4: Problems" aria-label="Copy heading and permalink for Reading Questions 7.1.4: Problems">🔗</a></div>
 </section><div class="autopermalink" aria-hidden="true" data-description="Section 7.1: Partial Sums and Infinite Series"><a tabindex="-1" href="#section-partial-sums-and-infinite-series" title="Copy heading and permalink for Section 7.1: Partial Sums and Infinite Series" aria-label="Copy heading and permalink for Section 7.1: Partial Sums and Infinite Series">🔗</a></div>
 </section>
 </div>
