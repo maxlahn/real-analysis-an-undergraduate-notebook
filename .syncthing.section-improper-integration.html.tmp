@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Improper Integration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Real Analysis: An Undergraduate Notebook">
+<meta property="og:title" content="Real Analysis: An Undergraduate Notebook">
+<meta property="book:title" content="Real Analysis: An Undergraduate Notebook">
+<meta name="twitter:description" content="A simple string (no markup is allowed) to describe your book.">
+<meta property="og:description" content="A simple string (no markup is allowed) to describe your book.">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.45"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.1.16';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.279b1f0077454c32.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.db8001875cb726c2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="lahnrealanalysis" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="book-real-analysis.html"><span class="title">Real Analysis</span> <span class="subtitle">An Undergraduate Notebook</span></a></div>
+<p class="byline">Max Lahn</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="section-the-fundamental-theorems-of-calculus.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-riemann-integration.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="section-deficiencies-of-the-riemann-integral.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(  \newcommand{\of}[1]{ \left ( #1 \right ) } 
+  
+  \newcommand{\class}[1]{ \left \lbrack { #1 } \right \rbrack } 
+  
+  \newcommand{\set}[1]{ \left \lbrace #1 \right \rbrace } 
+  \newcommand{\setmid}[2]{ \left \lbrace { #1 } \: \middle \vert \: { #2 } \right \rbrace }
+  
+  \newcommand{\abs}[1]{ \left \lvert { #1 } \right \rvert } 
+  \newcommand{\card}[1]{ \left \lvert { #1 } \right \rvert } 
+  
+  \newcommand{\norm}[1]{ \left \lVert { #1 } \right \rVert } 
+  
+  \newcommand{\gen}[1]{ \left \langle { #1 } \right \rangle } 
+  \newcommand{\genmid}[2]{ \left \langle { #1 } \: \middle \vert \: { #2 } \right \rangle }
+  
+  \newcommand{\ceil}[1]{ \left \lceil { #1 } \right \rceil } 
+  
+  \newcommand{\floor}[1]{ \left \lfloor { #1 } \right \rfloor } 
+  
+  \newcommand{\doubleclass}[1]{ \left \llbrack { #1 } \right \rrbrack } 
+
+  
+  \newcommand{\opint}[2]{ \left ( { #1 } , { #2 } \right ) } 
+  
+  \newcommand{\clint}[2]{ \left \lbrack { #1 } , { #2 } \right \rbrack } 
+  
+  \newcommand{\opclint}[2]{ \left ( { #1 } , { #2 } \right \rbrack } 
+  
+  \newcommand{\clopint}[2]{ \left \lbrack { #1 } , { #2 } \right ) } 
+
+  
+  \newcommand{\inner}[2]{ \left \langle { #1 } , { #2 } \right \rangle } 
+  
+  \newcommand{\comm}[2]{ \left \lbrack { #1 } , { #2 } \right \rbrack } 
+  
+  \newcommand{\ind}[2]{ \left \lbrack { #1 } : { #2 } \right \rbrack } 
+  
+  \newcommand{\bra}[1]{ \left \langle { #1 } \right \rvert } 
+  
+  \newcommand{\ket}[1]{ \left \lvert { #1 } \right \rangle } 
+  
+  \newcommand{\braket}[2]{ \left \langle { #1 } \: \middle \vert \: { #2 } \right \rangle } 
+  
+  \newcommand{\rest}[1]{ \left . { #1 } \right \vert } 
+
+
+  
+  \newcommand{\N}{ \mathbb{ N } } 
+  
+  \newcommand{\Z}{ \mathbb{ Z } } 
+  
+  \newcommand{\Q}{ \mathbb{ Q } } 
+  
+  \newcommand{\R}{ \mathbb{ R } } 
+  
+  \newcommand{\C}{ \mathbb{ C } } 
+  
+  \newcommand{\Quat}{ \mathbb{ H } } 
+  
+  \newcommand{\Oct}{ \mathbb{ O } } 
+  
+  \newcommand{\F}{ \mathbb{ F } } 
+  
+  
+  \newcommand{\Euc}{ \mathbb{ E } } 
+  
+  \newcommand{\Sph}{ \mathbb{ S } } 
+  
+  \newcommand{\Hyp}{ \mathbb{ H } } 
+  
+  \newcommand{\B}{ \mathbb{ B } } 
+  
+  \newcommand{\D}{ \mathbb{ D } } 
+  
+  \newcommand{\I}{ \mathbb{ I } } 
+  
+  \newcommand{\T}{ \mathbb{ T } } 
+  
+  \newcommand{\RP}{ \mathbb{ RP } } 
+  
+  \newcommand{\CP}{ \mathbb{ CP } } 
+  
+  \newcommand{\HP}{ \mathbb{ HP } } 
+  
+  \newcommand{\Proj}{ \mathbb{ P } } 
+
+
+  
+  \DeclareMathOperator{\dom}{ dom } 
+  
+  \DeclareMathOperator{\codom}{ codom } 
+  
+  \DeclareMathOperator{\im}{ im } 
+  
+  \DeclareMathOperator{\coim}{ coim } 
+  
+  
+  
+  \DeclareMathOperator{\coker}{ coker } 
+  
+  
+  \DeclareMathOperator{\ord}{ ord } 
+  
+  \newcommand{\nslt}{ \mathrel{ \lhd } } 
+  
+  \newcommand{\nsgt}{ \mathrel{ \rhd } } 
+  
+  \newcommand{\nsleq}{ \mathrel{ \unlhd } } 
+  
+  \newcommand{\nsgeq}{ \mathrel{ \unrhd } } 
+  
+  \DeclareMathOperator{\Cent}{ Z } 
+  
+  \DeclareMathOperator{\Centz}{ C } 
+  
+  \DeclareMathOperator{\Normz}{ N } 
+  
+  \DeclareMathOperator{\stabz}{ stab } 
+  
+  \DeclareMathOperator{\Fix}{ Fix } 
+  
+  \DeclareMathOperator{\Cay}{ Cay } 
+  
+  \DeclareMathOperator{\Sch}{ Sch } 
+  
+  
+  \newcommand{\CycGrp}[1]{ \mathrm{ C }_{ #1 } } 
+  
+  \newcommand{\SymGrp}[1]{ \mathrm{ S }_{ #1 } } 
+  
+  \newcommand{\AltGrp}[1]{ \mathrm{ A }_{ #1 } } 
+  
+  \newcommand{\DihGrp}[1]{ \mathrm{ D }_{ #1 } } 
+  
+  \newcommand{\QuatGrp}[1]{ \mathrm{ Q }_{ #1 } } 
+  
+  \newcommand{\FrGrp}[1]{ \mathrm{ F }_{ #1 } } 
+  
+  \DeclareMathOperator{\Aut}{ Aut } 
+  
+  \DeclareMathOperator{\Inn}{ Inn } 
+  
+  \DeclareMathOperator{\Out}{ Out } 
+  
+  \DeclareMathOperator{\Gal}{ Gal } 
+  
+  \DeclareMathOperator{\Homeo}{ Homeo } 
+  
+  \DeclareMathOperator{\Diff}{ Diff } 
+  
+  \DeclareMathOperator{\Bihol}{ Bihol } 
+  
+  \DeclareMathOperator{\Isom}{ Isom } 
+  
+  \DeclareMathOperator{\Deck}{ Deck } 
+  
+  \DeclareMathOperator{\QI}{ QI } 
+  
+  \DeclareMathOperator{\MCG}{ MCG } 
+  
+  \DeclareMathOperator{\Homol}{ H } 
+  
+  
+  \DeclareMathOperator{\GL}{ GL } 
+  
+  \DeclareMathOperator{\PGL}{ PGL } 
+  
+  \DeclareMathOperator{\SL}{ SL } 
+  
+  \DeclareMathOperator{\PSL}{ PSL } 
+  
+  \DeclareMathOperator{\Ort}{ O } 
+  
+  \DeclareMathOperator{\PO}{ PO } 
+  
+  \DeclareMathOperator{\SO}{ SO } 
+  
+  \DeclareMathOperator{\PSO}{ PSO } 
+  
+  \DeclareMathOperator{\U}{ U } 
+  
+  \DeclareMathOperator{\PU}{ PU } 
+  
+  \DeclareMathOperator{\SU}{ SU } 
+  
+  \DeclareMathOperator{\PSU}{ PSU } 
+  
+  \DeclareMathOperator{\Sp}{ Sp } 
+  
+  \DeclareMathOperator{\PSp}{ PSp } 
+  
+  \DeclareMathOperator{\USp}{ USp } 
+  
+  \DeclareMathOperator{\PUSp}{ PUSp } 
+  
+  \DeclareMathOperator{\Aff}{ Aff } 
+  
+  \DeclareMathOperator{\SAff}{ SAff } 
+  
+  
+  \DeclareMathOperator{\gl}{ \mathfrak{ gl } } 
+  
+  \DeclareMathOperator{\pgl}{ \mathfrak{ pgl } } 
+  
+  \DeclareMathOperator{\spl}{ \mathfrak{ sl } } 
+  
+  \DeclareMathOperator{\psl}{ \mathfrak{ psl } } 
+  
+  \DeclareMathOperator{\ort}{ \mathfrak{ o } } 
+  
+  \DeclareMathOperator{\po}{ \mathfrak{ po } } 
+  
+  \DeclareMathOperator{\so}{ \mathfrak{ so } } 
+  
+  \DeclareMathOperator{\pso}{ \mathfrak{ pso } } 
+  
+  \DeclareMathOperator{\unit}{ \mathfrak{ u } } 
+  
+  \DeclareMathOperator{\pu}{ \mathfrak{ pu } } 
+  
+  \DeclareMathOperator{\su}{ \mathfrak{ su } } 
+  
+  \DeclareMathOperator{\psu}{ \mathfrak{ psu } } 
+  
+  \DeclareMathOperator{\symp}{ \mathfrak{ sp } } 
+  
+  \DeclareMathOperator{\psp}{ \mathfrak{ psp } } 
+  
+  \DeclareMathOperator{\usp}{ \mathfrak{ usp } } 
+  
+  \DeclareMathOperator{\pusp}{ \mathfrak{ pusp } } 
+  
+  \DeclareMathOperator{\g}{ \mathfrak{ g } } 
+  
+  
+  \DeclareMathOperator{\Mat}{ \mathcal{ M } } 
+  
+  \DeclareMathOperator{\End}{ End } 
+  
+  \DeclareMathOperator{\Tens}{ \mathcal{ T } } 
+  
+  \DeclareMathOperator{\SymTens}{ \Theta } 
+  
+  \DeclareMathOperator{\AltTens}{ \Lambda } 
+  
+  
+  
+  \newcommand{\vect}[1]{ \mathbf{ #1 } } 
+  
+  \DeclareMathOperator{\lspan}{ span } 
+  
+  
+  
+  \DeclareMathOperator{\codim}{ codim } 
+  
+  \DeclareMathOperator{\rk}{ rk } 
+  
+  
+  
+  \DeclareMathOperator{\tr}{ tr } 
+  
+  \newcommand{\trans}[1]{ { #1 }^{ \mathrm{ T } } } 
+  
+  \newcommand{\contra}[1]{ { #1 }^{ -\mathrm{ T } } } 
+  
+  \newcommand{\adj}[1]{ { #1 }^{ \dag } } 
+  
+  \DeclareMathOperator{\diag}{ diag } 
+  
+  \DeclareMathOperator{\Gr}{ Gr } 
+  
+  \DeclareMathOperator{\Flag}{ \mathcal{ F } } 
+  
+  
+  \DeclareMathOperator{\ob}{ ob } 
+  
+  \DeclareMathOperator{\mor}{ mor } 
+  
+  
+  \DeclareMathOperator{\id}{ id } 
+  
+  \DeclareMathOperator{\inv}{ inv } 
+  
+  \newcommand{\op}[1]{ { #1 }^{ \mathrm{ op } } } 
+  
+  
+  \newcommand{\Set}{ \mathbf{ Set } } 
+  
+  \newcommand{\Rel}{ \mathbf{ Rel } } 
+  
+  \newcommand{\Grp}{ \mathbf{ Grp } } 
+  
+  \newcommand{\Ab}{ \mathbf{ Ab } } 
+  
+  \newcommand{\Ring}{ \mathbf{ Ring } } 
+  
+  \newcommand{\Rng}{ \mathbf{ Rng } } 
+  
+  \newcommand{\IntDom}{ \mathbf{ IntDom } } 
+  
+  \newcommand{\Field}{ \mathbf{ Field } } 
+  
+  \newcommand{\Top}{ \mathbf{ Top } } 
+  
+  \newcommand{\hTop}{ \mathbf{ hTop } } 
+  
+  \newcommand{\Met}{ \mathbf{ Met } } 
+  
+  \newcommand{\Man}[1][ \infty ]{ \mathbf{ Man }^{ #1 } } 
+  
+  \newcommand{\Vect}{ \mathbf{ Vect } } 
+  
+  \newcommand{\Cat}{ \mathbf{ Cat } } 
+  
+  \newcommand{\Fun}{ \mathbf{ Fun } } 
+  
+
+  
+  \DeclareMathOperator{\Int}{ Int } 
+  
+  \DeclareMathOperator{\Cl}{ Cl } 
+  
+  \DeclareMathOperator{\Bd}{ Bd } 
+  
+  \DeclareMathOperator{\Ext}{ Ext } 
+  
+  \DeclareMathOperator{\Nbhd}{ \mathcal{ N } } 
+  
+  \DeclareMathOperator{\Topol}{ \mathcal{ T } } 
+  
+  \DeclareMathOperator{\supp}{ supp } 
+  
+  
+  \DeclareMathOperator{\mS}{ S } 
+  
+  \DeclareMathOperator{\mB}{ B } 
+  
+  \DeclareMathOperator{\mD}{ D } 
+  
+  \DeclareMathOperator{\diam}{ diam } 
+  
+  \DeclareMathOperator*{\uniflim}{ unif \, lim } 
+  
+  \DeclareMathOperator{\len}{ len } 
+  
+  \DeclareMathOperator{\area}{ area } 
+  
+  \DeclareMathOperator{\vol}{ vol } 
+  
+  
+  \DeclareMathOperator{\CDiff}{ C } 
+  
+  \DeclareMathOperator{\UC}{ UC } 
+  
+  \DeclareMathOperator{\LC}{ LC } 
+  
+  \DeclareMathOperator{\Bdd}{ B } 
+  
+  \DeclareMathOperator{\BC}{ BC } 
+  
+  \DeclareMathOperator{\BUC}{ BUC } 
+  
+  \DeclareMathOperator{\BLC}{ BLC } 
+  
+  
+  
+  
+  
+  
+  
+  \DeclareMathOperator{\Exp}{ \mathbb{ E } } 
+  
+  \DeclareMathOperator{\Var}{ \mathbb{ V } } 
+  
+  \DeclareMathOperator{\mesh}{ mesh } 
+  
+  \newcommand{\Borel}{ \mathscr{ B } } 
+  
+  \DeclareMathOperator{\Haus}{ \mathscr{ H } } 
+  
+  \DeclareMathOperator*{\esssup}{ ess \, sup } 
+    
+  \DeclareMathOperator*{\essinf}{ ess \, inf } 
+
+
+  
+  \DeclareMathOperator{\DL}{ DL } 
+  
+  \newcommand{\diff}{ \mathrm{ d } } 
+  
+  \DeclareMathOperator{\pdiff}{ \partial } 
+  
+  \DeclareMathOperator{\del}{ \nabla } 
+  
+  
+  
+  
+  
+  \DeclareMathOperator{\Jac}{ \mathbf{ J } } 
+  
+  \DeclareMathOperator{\grad}{ grad } 
+  
+  \DeclareMathOperator{\divg}{ div } 
+  
+  \DeclareMathOperator{\curl}{ curl } 
+  
+  \DeclareMathOperator{\Lap}{ \Delta } 
+  
+  \DeclareMathOperator{\Sec}{ \Gamma } 
+  
+  \DeclareMathOperator{\VF}{ \mathfrak{ X } } 
+  
+  \DeclareMathOperator{\DF}{ \Omega } 
+  
+  \DeclareMathOperator{\dRCoh}{ H_{ \mathrm{ dR } } } 
+  
+
+  \DeclareMathOperator{\ps}{ \mathcal{ P } } 
+  
+  \newcommand{\oparg}{ \: \cdot \: } 
+  
+  \newcommand{\symdiff}{ \mathbin{ \triangle } } 
+  
+  
+  \DeclareMathOperator{\Succ}{ succ } 
+  
+  \DeclareMathOperator{\Add}{ add } 
+  
+  \DeclareMathOperator{\Mult}{ mult } 
+  
+  \DeclareMathOperator{\Comp}{ comp } 
+  
+  \DeclareMathOperator{\sgn}{ sgn } 
+  
+  
+  
+  
+  
+  
+  
+  \DeclareMathOperator{\Arg}{ Arg } 
+  
+  
+  
+  
+  
+  
+  
+  \DeclareMathOperator{\Log}{ Log } 
+
+  \newcommand{\divides}{ \mathbin{ \vert } } 
+
+  
+  
+  \DeclareMathOperator{\lcm}{ lcm } 
+  
+  \DeclareMathOperator{\proj}{ proj } 
+  
+  \DeclareMathOperator{\inj}{ inj } 
+  
+  \DeclareMathOperator{\coproj}{ coproj } 
+
+  
+
+  
+  
+  
+  \newcommand{\from}{ \leftarrow } 
+  
+  \newcommand{\upto}{ \nearrow } 
+  
+  \newcommand{\upfrom}{ \nwarrow } 
+  
+  \newcommand{\downto}{ \searrow } 
+  
+  \newcommand{\downfrom}{ \swarrow } 
+  
+  
+  
+  \newcommand{\actson}{ \mathbin{ \curvearrowright } } 
+  
+  \newcommand{\actedon}{ \mathbin{ \curvearrowleft } }
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth3 parts focused" data-preexpanded-levels="0" data-max-levels="3"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-foundations-of-analysis.html" class="internal"><span class="codenumber">I</span> <span class="title">Foundations of Analysis</span></a></div>
+<ul id="ptx-toc-group-part-foundations-of-analysis" class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-introductory-set-theory.html" class="internal"><span class="codenumber">1</span> <span class="title">Introductory Set Theory</span></a></div>
+<ul id="ptx-toc-group-chapter-introductory-set-theory" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-introductory-set-theory-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-what-is-a-set.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What Is a Set?</span></a></div>
+<ul id="ptx-toc-group-section-what-is-a-set" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-what-is-a-set.html#subsection-definitions-of-sets" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Definitions of Sets</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-what-is-a-set.html#subsection-set-containment" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Set Containment</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-what-is-a-set.html#subsection-set-operations" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Set Operations</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-what-is-a-set.html#exercises-what-is-a-set" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-what-is-a-set.html#problems-what-is-a-set" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-maps-and-functions.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Maps and Functions</span></a></div>
+<ul id="ptx-toc-group-section-maps-and-functions" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-maps-and-functions.html#subsection-introduction-to-maps" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Introduction to Maps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-maps-and-functions.html#subsection-composition-and-invertibility" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Composition and Invertibility</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-maps-and-functions.html#subsection-indexing" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Indexing</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-maps-and-functions.html#exercises-maps-and-functions" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-maps-and-functions.html#problems-maps-and-functions" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Peano Arithmetic and the Natural Numbers [Skip]</span></a></div>
+<ul id="ptx-toc-group-section-peano-arithmetic-and-the-natural-numbers" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#subsection-axiomatizing-the-natural-numbers" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Axiomatizing the Natural Numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#subsection-properties-of-arithmetic" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Properties of Arithmetic</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#subsection-properties-of-comparison" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Properties of Comparison</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#exercises-peano-arithmetic-and-the-natural-numbers" class="internal"><span class="codenumber">1.3.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#reading-questions-peano-arithmetic-and-the-natural-numbers" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-finitary-operations-and-relations.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Finitary Operations and Relations</span></a></div>
+<ul id="ptx-toc-group-section-finitary-operations-and-relations" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#subsection-products-and-choice" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Products and Choice</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#subsection-finitary-operations" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Finitary Operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#subsection-finitary-relations" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Finitary Relations</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#exercises-finitary-operations-and-relations" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#problems-finitary-operations-and-relations" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-introduction-to-order-theory.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Introduction to Order Theory</span></a></div>
+<ul id="ptx-toc-group-section-introduction-to-order-theory" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#subsection-preorders-and-partial-orders" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Preorders and Partial Orders</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#subsection-boundedness-and-extrema" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Boundedness and Extrema</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#subsection-comparability-and-total-orders" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Comparability and Total Orders</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#exercises-introduction-to-order-theory" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#problems-introduction-to-order-theory" class="internal"><span class="codenumber">1.5.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-cardinality-and-countability.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Cardinality and Countability [SKIP]</span></a></div>
+<ul id="ptx-toc-group-section-cardinality-and-countability" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#subsection-finiteness" class="internal"><span class="codenumber">1.6.1</span> <span class="title">Finiteness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#subsection-cardinal-comparison" class="internal"><span class="codenumber">1.6.2</span> <span class="title">Cardinal Comparison</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#subsection-countability" class="internal"><span class="codenumber">1.6.3</span> <span class="title">Countability</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#exercises-cardinality-and-countability" class="internal"><span class="codenumber">1.6.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#problems-cardinality-and-countability" class="internal"><span class="codenumber">1.6.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="chapter-introductory-set-theory-9.html" class="internal"><span class="title">Conclusion</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-constructing-the-number-systems.html" class="internal"><span class="codenumber">2</span> <span class="title">Constructing the Number Systems</span></a></div>
+<ul id="ptx-toc-group-chapter-constructing-the-number-systems" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-constructing-the-number-systems-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-the-integers-and-the-rational-numbers.html" class="internal"><span class="codenumber">2.1</span> <span class="title">The Integers and the Rational Numbers [SKIP]</span></a></div>
+<ul id="ptx-toc-group-section-the-integers-and-the-rational-numbers" class="structural toc-item-list">
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-the-integers-and-the-rational-numbers.html#exercises-the-integers-and-the-rational-numbers" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-integers-and-the-rational-numbers.html#problems-the-integers-and-the-rational-numbers" class="internal"><span class="codenumber">2.1</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-constructing-the-real-numbers.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Constructing the Real Numbers</span></a></div>
+<ul id="ptx-toc-group-section-constructing-the-real-numbers" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#subsection-cutting-the-rational-numbers" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Cutting the Rational Numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#subsection-comparison-of-dedekind-cuts" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Comparison of Dedekind Cuts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#subsection-addition-of-dedekind-cuts" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Addition of Dedekind Cuts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#subsection-multiplication-of-dedekind-cuts" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Multiplication of Dedekind Cuts</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#exercises-constructing-the-real-numbers" class="internal"><span class="codenumber">2.2.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#problems-constructing-the-real-numbers" class="internal"><span class="codenumber">2.2.6</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-the-complete-ordered-field.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Complete Ordered Field</span></a></div>
+<ul id="ptx-toc-group-section-the-complete-ordered-field" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#subsection-the-ordered-field-axioms" class="internal"><span class="codenumber">2.3.1</span> <span class="title">The Ordered Field Axioms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#subsection-dedekind-completeness" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Dedekind completeness</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#exercises-the-complete-ordered-field" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#problems-the-complete-ordered-field" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-beyond-the-real-number-system.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Beyond the Real Number System</span></a></div>
+<ul id="ptx-toc-group-section-beyond-the-real-number-system" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-beyond-the-real-number-system.html#subsection-the-complex-numbers" class="internal"><span class="codenumber">2.4.1</span> <span class="title">The Complex Numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-beyond-the-real-number-system.html#subsection-infinity" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Infinity</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-beyond-the-real-number-system.html#exercises-beyond-the-real-number-system" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-beyond-the-real-number-system.html#problems-beyond-the-real-number-system" class="internal"><span class="codenumber">2.4.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="chapter-constructing-the-number-systems-7.html" class="internal"><span class="title">Conclusion</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-point-set-topology.html" class="internal"><span class="codenumber">II</span> <span class="title">Point-Set Topology</span></a></div>
+<ul id="ptx-toc-group-part-point-set-topology" class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-metric-spaces.html" class="internal"><span class="codenumber">3</span> <span class="title">Metric Spaces</span></a></div>
+<ul id="ptx-toc-group-chapter-metric-spaces" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-metric-spaces-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction to Metric Geometry</span></a></div>
+<ul id="ptx-toc-group-section-introduction-to-metric-geometry" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#subsection-introduction-to-metrics" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Introduction to Metrics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#subsection-constructing-new-metrics" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Constructing New Metrics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#subsection-normed-vector-spaces" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Normed Vector Spaces</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#exercises-introduction-to-metric-geometry" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#problems-introduction-to-metric-geometry" class="internal"><span class="codenumber">3.1.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-convergence-and-limits.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Convergence and Limits</span></a></div>
+<ul id="ptx-toc-group-section-convergence-and-limits" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-convergence-and-limits.html#subsection-sequential-convergence" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Sequential Convergence</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-convergence-and-limits.html#subsection-pointwise-and-uniform-convergence" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Pointwise and Uniform Convergence</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-convergence-and-limits.html#subsection-map-convergence" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Map Convergence</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-convergence-and-limits.html#exercises-convergence-and-limits" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-limits.html#problems-convergence-and-limits" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Limits in the Euclidean Metric</span></a></div>
+<ul id="ptx-toc-group-section-limits-in-the-euclidean-metric" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#subsection-limits-and-arithmetic" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Limits and Arithmetic</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#subsection-divergence-to-infinity" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Divergence to Infinity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#subsection-upper-and-lower-limits" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Upper and Lower Limits</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#exercises-limits-in-the-euclidean-metric" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#problems-limits-in-the-euclidean-metric" class="internal"><span class="codenumber">3.3.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-open-and-closed-sets.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Open and Closed Sets</span></a></div>
+<ul id="ptx-toc-group-section-open-and-closed-sets" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#subsection-neighborhoods-in-metric-spaces" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Neighborhoods in Metric Spaces</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#subsection-metrics-and-boundedness" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Metrics and Boundedness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#subsection-bounded-maps-between-metric-spaces" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Bounded maps between metric spaces</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#exercises-open-and-closed-sets" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#problems-open-and-closed-sets" class="internal"><span class="codenumber">3.4.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-notions-of-metric-continuity.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Notions of Metric Continuity</span></a></div>
+<ul id="ptx-toc-group-section-notions-of-metric-continuity" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#subsection-continuous-maps-and-functions" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Continuous Maps and Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#subsection-stronger-forms-of-metric-continuity" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Stronger Forms of Metric Continuity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#subsection-even-stronger-forms-of-metric-continuity" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Even Stronger Forms of Metric Continuity</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#exercises-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#problems-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-completeness-and-compactness.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Completeness and Compactness</span></a></div>
+<ul id="ptx-toc-group-section-completeness-and-compactness" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#subsection-cauchy-sequences-and-metric-completeness" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Cauchy Sequences and Metric Completeness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#subsection-completion-of-a-metric-space" class="internal"><span class="codenumber">3.6.2</span> <span class="title">Completion of a Metric Space [SKIP]</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#subsection-metric-compactness" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Metric Compactness</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#exercises-completeness-and-compactness" class="internal"><span class="codenumber">3.6.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#problems-completeness-and-compactness" class="internal"><span class="codenumber">3.6.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="chapter-metric-spaces-9.html" class="internal"><span class="title">Conclusion</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-topological-spaces.html" class="internal"><span class="codenumber">4</span> <span class="title">Topological Spaces</span></a></div>
+<ul id="ptx-toc-group-chapter-topological-spaces" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-topological-spaces-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-introduction-to-topology.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Introduction to Topology</span></a></div>
+<ul id="ptx-toc-group-section-introduction-to-topology" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-topology.html#subsection-examples-of-topologies" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Examples of Topologies</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-topology.html#subsection-algebra-of-open-and-closed-sets" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Algebra of Open and Closed Sets</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-introduction-to-topology.html#exercises-introduction-to-topology" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-topology.html#problems-introduction-to-topology" class="internal"><span class="codenumber">4.1.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-comparison-and-topology.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Comparison and Topology</span></a></div>
+<ul id="ptx-toc-group-section-comparison-and-topology" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-comparison-and-topology.html#subsection-the-lattice-of-topologies" class="internal"><span class="codenumber">4.2.1</span> <span class="title">The Lattice of Topologies</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-comparison-and-topology.html#subsection-base-of-topology" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Base of Topology</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-comparison-and-topology.html#subsection-order-topologies" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Order Topologies</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-comparison-and-topology.html#exercises-comparison-and-topology" class="internal"><span class="codenumber">4.2.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-comparison-and-topology.html#problems-comparison-and-topology" class="internal"><span class="codenumber">4.2.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-convergence-and-separation.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Convergence and Separation</span></a></div>
+<ul id="ptx-toc-group-section-convergence-and-separation" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-convergence-and-separation.html#subsection-sequential-convergence-and-beyond" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Sequential Convergence and Beyond</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-convergence-and-separation.html#subsection-the-separation-axioms" class="internal"><span class="codenumber">4.3.2</span> <span class="title">The Separation Axioms</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-convergence-and-separation.html#exercises-convergence-and-separation" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-separation.html#problems-convergence-and-separation" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-continuity.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Continuity</span></a></div>
+<ul id="ptx-toc-group-section-continuity" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-continuity.html#subsection-map-convergence-and-continuity-at-a-point" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Map Convergence and Continuity at a Point</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-continuity.html#subsection-continuous-maps-between-topological-spaces" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Continuous Maps between Topological Spaces</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-continuity.html#exercises-continuity" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-continuity.html#problems-continuity" class="internal"><span class="codenumber">4.4.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-compactness-and-connectedness.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Compactness and Connectedness [SKIP]</span></a></div>
+<ul id="ptx-toc-group-section-compactness-and-connectedness" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-compactness-and-connectedness.html#subsection-open-covers" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Open Covers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-compactness-and-connectedness.html#subsection-compactness-and-sequential-compactness" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Compactness and Sequential Compactness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-compactness-and-connectedness.html#subsection-connected-and-disconnected-spaces" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Connected and Disconnected Spaces</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-compactness-and-connectedness.html#exercises-compactness-and-connectedness" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-compactness-and-connectedness.html#problems-compactness-and-connectedness" class="internal"><span class="codenumber">4.5.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="chapter-topological-spaces-8.html" class="internal"><span class="title">Conclusion</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="part-calculus.html" class="internal"><span class="codenumber">III</span> <span class="title">Calculus</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-part-calculus">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-differentiation-and-smoothness.html" class="internal"><span class="codenumber">5</span> <span class="title">Differentiation and Smoothness</span></a></div>
+<ul id="ptx-toc-group-chapter-differentiation-and-smoothness" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-differentiation-and-smoothness-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-differentiability.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Differentiability</span></a></div>
+<ul id="ptx-toc-group-section-differentiability" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-differentiability.html#subsection-introduction-to-differentiation" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Introduction to Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-differentiability.html#subsection-regularity-and-smoothness" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Regularity and Smoothness</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-differentiability.html#exercises-differentiability" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#problems-differentiability" class="internal"><span class="codenumber">5.1.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-analysis-of-critical-points.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Analysis of Critical Points</span></a></div>
+<ul id="ptx-toc-group-section-analysis-of-critical-points" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-analysis-of-critical-points.html#subsection-local-behavior-near-critical-points" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Local Behavior Near Critical Points</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-analysis-of-critical-points.html#subsection-classification-of-critical-points" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Classification of Critical Points</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-analysis-of-critical-points.html#exercises-analysis-of-critical-points" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-analysis-of-critical-points.html#problems-analysis-of-critical-points" class="internal"><span class="codenumber">5.2.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-applications-of-the-mean-value-theorem.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Applications of the Mean Value Theorem</span></a></div>
+<ul id="ptx-toc-group-section-applications-of-the-mean-value-theorem" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-applications-of-the-mean-value-theorem.html#subsection-average-and-instantaneous-rates-of-change" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Average and Instantaneous Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-applications-of-the-mean-value-theorem.html#subsection-beyond-the-mean-value-theorem" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Beyond the Mean Value Theorem</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-applications-of-the-mean-value-theorem.html#exercises-applications-of-the-mean-value-theorem" class="internal"><span class="codenumber">5.3.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-applications-of-the-mean-value-theorem.html#problems-applications-of-the-mean-value-theorem" class="internal"><span class="codenumber">5.3.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-higher-order-approximations.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Higher Order Approximations</span></a></div>
+<ul id="ptx-toc-group-section-higher-order-approximations" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-higher-order-approximations.html#subsection-dominance-and-asymptotics" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Dominance and Asymptotics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-higher-order-approximations.html#subsection-polynomial-approximations-of-differentiable-functions" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Polynomial Approximations of Differentiable Functions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-higher-order-approximations.html#exercises-higher-order-approximations" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-higher-order-approximations.html#problems-higher-order-approximations" class="internal"><span class="codenumber">5.4.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="chapter-differentiation-and-smoothness-7.html" class="internal"><span class="title">Conclusion</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="chapter-riemann-integration.html" class="internal"><span class="codenumber">6</span> <span class="title">Riemann Integration</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-chapter-riemann-integration">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-riemann-integration-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-riemann-sums-and-integrals.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Riemann Sums and Integrals</span></a></div>
+<ul id="ptx-toc-group-section-riemann-sums-and-integrals" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-riemann-sums-and-integrals.html#subsection-finite-integration-methods" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Finite Integration Methods</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-riemann-sums-and-integrals.html#subsection-riemann-integrability" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Riemann Integrability</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-riemann-sums-and-integrals.html#exercises-riemann-sums-and-integrals" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-riemann-sums-and-integrals.html#problems-riemann-sums-and-integrals" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The Fundamental Theorems of Calculus</span></a></div>
+<ul id="ptx-toc-group-section-the-fundamental-theorems-of-calculus" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#subsection-differentiating-riemann-integrals" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Differentiating Riemann Integrals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#subsection-integrating-derivatives" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Integrating Derivatives</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#exercises-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#problems-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="section-improper-integration.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Improper Integration</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-section-improper-integration">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-improper-integration.html#subsection-exhaustion-by-compact-intervals" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Exhaustion by Compact Intervals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-improper-integration.html#subsection-tests-for-integral-convergence" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Tests for Integral Convergence</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-improper-integration.html#exercises-improper-integration" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-improper-integration.html#problems-improper-integration" class="internal"><span class="codenumber">6.3.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-deficiencies-of-the-riemann-integral.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Deficiencies of the Riemann Integral (SKIP)</span></a></div>
+<ul id="ptx-toc-group-section-deficiencies-of-the-riemann-integral" class="structural toc-item-list">
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-deficiencies-of-the-riemann-integral.html#exercises-deficiencies-of-the-riemann-integral" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-deficiencies-of-the-riemann-integral.html#problems-deficiencies-of-the-riemann-integral" class="internal"><span class="codenumber">6.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="chapter-riemann-integration-7.html" class="internal"><span class="title">Conclusion</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-infinite-series.html" class="internal"><span class="codenumber">7</span> <span class="title">Infinite Series</span></a></div>
+<ul id="ptx-toc-group-chapter-infinite-series" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-infinite-series-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Partial Sums and Infinite Series</span></a></div>
+<ul id="ptx-toc-group-section-partial-sums-and-infinite-series" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#exercises-partial-sums-and-infinite-series" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#reading-questions-partial-sums-and-infinite-series" class="internal"><span class="codenumber">7.1</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-tests-for-series-convergence.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Tests for Series Convergence</span></a></div>
+<ul id="ptx-toc-group-section-tests-for-series-convergence" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-tests-for-series-convergence.html#exercises-tests-for-series-convergence" class="internal"><span class="codenumber">7.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-tests-for-series-convergence.html#reading-questions-tests-for-series-convergence" class="internal"><span class="codenumber">7.2</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-power-series.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Power Series</span></a></div>
+<ul id="ptx-toc-group-section-power-series" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-power-series.html#exercises-power-series" class="internal"><span class="codenumber">7.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-power-series.html#reading-questions-power-series" class="internal"><span class="codenumber">7.3</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-analytic-functions.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Analytic Functions</span></a></div>
+<ul id="ptx-toc-group-section-analytic-functions" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-analytic-functions.html#exercises-analytic-functions" class="internal"><span class="codenumber">7.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-analytic-functions.html#reading-questions-analytic-functions" class="internal"><span class="codenumber">7.4</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="chapter-infinite-series-7.html" class="internal"><span class="title">Conclusion</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="solutions.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Solutions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="section-improper-integration">
+<h1 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Improper Integration</span>
+</h1>
+<section class="introduction" id="section-improper-integration-2">
+<div class="para logical" id="section-improper-integration-2-1">
+<div class="para">In this section, we expand the kinds of functions we consider as the integrands of Riemann integrals. Thus far, we have only allowed Riemann integrals of the form</div>
+<div class="displaymath process-math" id="section-improper-integration-2-1-1">
+\begin{equation*}
+\int_{ a }^{ b }{ f \of{ x } \, \diff{ x } }\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(f \colon \clint{ a }{ b } \to \R \)</span> is a Riemann integrable (and therefore bounded) function defined on a closed interval. In this section, we relax both of these conditions while maintaining a grasp on some of the nice properties of the theory of Riemann integration.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-improper-integration-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="subsection-exhaustion-by-compact-intervals">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exhaustion by Compact Intervals</span>
+</h2>
+<section class="introduction" id="subsection-exhaustion-by-compact-intervals-2">
+<div class="para" id="subsection-exhaustion-by-compact-intervals-2-1">We begin with an example that illustrates the dangers of integrating real-valued functions on larger and larger compact intervals: we may lose coherent interpretations of such integrals in the limit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-exhaustion-by-compact-intervals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<details id="example-subtlety-of-improper-integration" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Subtlety of improper integration.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-subtlety-of-improper-integration-2-1">
+<div class="para">Consider the real-valued function <span class="process-math">\(f \colon \R \to \R \)</span> defined by the formula <span class="process-math">\(f \of{ x } = x \text{.}\)</span> Then the <a href="section-the-fundamental-theorems-of-calculus.html#theorem-second-fundamental-theorem-of-calculus" class="xref" data-knowl="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.4: Second fundamental theorem of calculus">Second fundamental theorem of calculus</a> implies that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" id="example-subtlety-of-improper-integration-2-1-4">
+\begin{equation*}
+\int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } = \frac{ b^{ 2 } }{ 2 } - \frac{ a^{ 2 } }{ 2 } = \frac{ b^{ 2 } - a^{ 2 } }{ 2 }
+\end{equation*}
+</div>
+<div class="para">for all real numbers <span class="process-math">\(-\infty \lt a \leq b \lt \infty \text{.}\)</span> In particular, we observe that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" id="example-subtlety-of-improper-integration-2-1-6">
+\begin{equation*}
+\lim_{ b \to \infty }{ \int_{ -b }^{ b }{ f \of{ x } \, \diff{ x } } } = \lim_{ b \to \infty }{ \frac{ b^{ 2 } - \of{ -b }^{ 2 } }{ 2 } } = \lim_{ b \to \infty }{ 0 } = 0
+\end{equation*}
+</div>
+<div class="para">but</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" id="example-subtlety-of-improper-integration-2-1-7">
+\begin{align*}
+\lim_{ b \to \infty }{ \int_{ 1 - b }^{ 1 + b }{ f \of{ x } \, \diff{ x } } } \amp = \lim_{ b \to \infty }{ \frac{ \of{ 1 + b }^{ 2 } - \of{ 1 - b }^{ 2 } }{ 2 } }\\
+\amp = \lim_{ b \to \infty }{ \frac{ 1 + 2 b + b^{ 2 } - 1 + 2 b - b^{ 2 } }{ 2 } } = \lim_{ b \to \infty }{ \frac{ 4 b }{ 2 } }\\
+\amp = \lim_{ b \to \infty }{ 2 b } = \infty\text{,}
+\end{align*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" id="example-subtlety-of-improper-integration-2-1-8">
+\begin{align*}
+\lim_{ b \to \infty }{ \int_{ -1 - b }^{ -1 + b }{ f \of{ x } \, \diff{ x } } } \amp = \lim_{ b \to \infty }{ \frac{ \of{ -1 + b }^{ 2 } - \of{ -1 - b }^{ 2 } }{ 2 } }\\
+\amp = \lim_{ b \to \infty }{ \frac{ 1 - 2 b + b^{ 2 } - 1 - 2 b - b^{ 2 } }{ 2 } } = \lim_{ b \to \infty }{ -\frac{ 4 b }{ 2 } }\\
+\amp = \lim_{ b \to \infty }{ -2 b } = -\infty\text{.}
+\end{align*}
+</div>
+<div class="para">This example serves to complicate what precisely is meant by the improper integral <span class="process-math">\(\int_{ -\infty }^{ \infty }{ f \of{ x } \, \diff{ x } } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-subtlety-of-improper-integration-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 6.3.1: Subtlety of improper integration"><a tabindex="-1" href="#example-subtlety-of-improper-integration" title="Copy heading and permalink for Example 6.3.1: Subtlety of improper integration" aria-label="Copy heading and permalink for Example 6.3.1: Subtlety of improper integration">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-exhaustion-by-compact-intervals-4">Specifically, performing a Riemann integration on a non-compact interval will require additional care to ensure that said integral converges in a specific way. As in the case of Riemann integrals on compact intervals, we use nets to define the relevant mode of convergence.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-exhaustion-by-compact-intervals-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="lemma theorem-like" id="lemma-compact-subintervals-are-directed"><h3 class="heading">
+<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Compact subintervals are directed.</span>
+</h3>
+<div class="para" id="lemma-compact-subintervals-are-directed-3-1">For any interval <span class="process-math">\(X \subseteq \R \text{,}\)</span> the set <span class="process-math">\(\mathcal{ K }_{ X } \)</span> of all compact subintervals of the interior <span class="process-math">\(\Int \of{ X } \)</span> is directed upwards.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-compact-subintervals-are-directed-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Lemma 6.3.2: Compact subintervals are directed"><a tabindex="-1" href="#lemma-compact-subintervals-are-directed" title="Copy heading and permalink for Lemma 6.3.2: Compact subintervals are directed" aria-label="Copy heading and permalink for Lemma 6.3.2: Compact subintervals are directed">🔗</a></div>
+</article>
+<details id="lemma-compact-subintervals-are-directed-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="lemma-compact-subintervals-are-directed-4-1">
+<div class="para">Let <span class="process-math">\(U , V \in \mathcal{ K }_{ X } \)</span> be two compact subintervals of the interior <span class="process-math">\(\Int \of{ X } \text{.}\)</span> Then <span class="process-math">\(U = \clint{ a }{ b } \)</span> and <span class="process-math">\(V = \clint{ c }{ d } \)</span> for some real numbers <span class="process-math">\(a , b , c , d \in \R \)</span> so that <span class="process-math">\(a \leq b \)</span> and <span class="process-math">\(c \leq d \text{.}\)</span> Let</div>
+<div class="displaymath process-math" id="lemma-compact-subintervals-are-directed-4-1-8">
+\begin{equation*}
+W = \clint{ \min \of{ \set{ a , c } } }{ \max \of{ \set{ b , d } } }\text{.}
+\end{equation*}
+</div>
+<div class="para">We observe that <span class="process-math">\(\min \of{ \set{ a , c } } \in \Int \of{ X } \)</span> and <span class="process-math">\(\max \of{ \set{ b , d } } \in \Int \of{ X } \text{.}\)</span> Since <span class="process-math">\(X \)</span> is an interval, so too is <span class="process-math">\(\Int \of{ X } \text{.}\)</span> We conclude that <span class="process-math">\(W \subseteq \Int \of{ X } \text{,}\)</span> and so <span class="process-math">\(W \in \mathcal{ K }_{ X } \text{.}\)</span> Of course <span class="process-math">\(U , V \subseteq W \text{.}\)</span> Since every pair of elements of <span class="process-math">\(\mathcal{ K }_{ X } \)</span> has a common upper bound, <span class="process-math">\(\mathcal{ K }_{ X } \)</span> is directed upwards.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-compact-subintervals-are-directed-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 6.3.2.1"><a tabindex="-1" href="#lemma-compact-subintervals-are-directed-4" title="Copy heading and permalink for Proof 6.3.2.1" aria-label="Copy heading and permalink for Proof 6.3.2.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-exhaustion-by-compact-intervals-6">The improper Riemann integrability of a real-valued function will be defined in terms of the convergence of certain nets of Riemann integrals defined on compact intervals. These nets will factor through the above directed set, and will be called <dfn class="terminology">interior exhaustions</dfn> by compact subintervals.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-exhaustion-by-compact-intervals-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-exhaustion-by-compact-intervals"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Interior exhaustion by compact subintervals.</span>
+</h3>
+<div class="para logical" id="definition-exhaustion-by-compact-intervals-3-1">
+<div class="para">Let <span class="process-math">\(\mathcal{ K }_{ X } \)</span> be the directed set of compact subintervals of the interior <span class="process-math">\(\Int \of{ X } \)</span> of an interval <span class="process-math">\(X \subseteq \R \text{.}\)</span> A family <span class="process-math">\(\of{ K_{ \alpha } }_{ \alpha \in A } \)</span> of such compact subintervals <span class="process-math">\(K_{ \alpha } \in \mathcal{ K }_{ X } \)</span> indexed by an upwards directed set <span class="process-math">\(\of{ A , \preceq } \)</span> is called an <dfn class="terminology">interior exhaustion</dfn> of <span class="process-math">\(X \)</span> by compact intervals if it is order-preserving and</div>
+<div class="displaymath process-math" id="definition-exhaustion-by-compact-intervals-3-1-9">
+\begin{equation*}
+\Int \of{ X } = \bigcup_{ \alpha \in A }{ K_{ \alpha } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-exhaustion-by-compact-intervals-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 6.3.3: Interior exhaustion by compact subintervals"><a tabindex="-1" href="#definition-exhaustion-by-compact-intervals" title="Copy heading and permalink for Definition 6.3.3: Interior exhaustion by compact subintervals" aria-label="Copy heading and permalink for Definition 6.3.3: Interior exhaustion by compact subintervals">🔗</a></div>
+</article>
+<article class="lemma theorem-like" id="lemma-interior-exhaustion-by-compact-subintervals"><h3 class="heading">
+<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Interior exhaustion by compact subintervals.</span>
+</h3>
+<div class="para" id="lemma-interior-exhaustion-by-compact-subintervals-2-1">Let <span class="process-math">\(\of{ K_{ \alpha } }_{ \alpha \in A } \)</span> be a family of compact subintervals <span class="process-math">\(K_{ \alpha } \in \mathcal{ K }_{ X } \)</span> of an interval <span class="process-math">\(X \subseteq \R \)</span> indexed by an upwards directed set <span class="process-math">\(\of{ A , \preceq } \text{.}\)</span> For each index <span class="process-math">\(\alpha \in A \text{,}\)</span> write <span class="process-math">\(K_{ \alpha } = \clint{ a_{ \alpha } }{ b_{ \alpha } } \)</span> for some real numbers <span class="process-math">\(-\infty \lt a_{ \alpha } \leq b_{ \alpha } \lt \infty \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-interior-exhaustion-by-compact-subintervals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="lemma-interior-exhaustion-by-compact-subintervals-2-2">
+<div class="para">Then <span class="process-math">\(\of{ K_{ \alpha } }_{ \alpha \in A } \)</span> is an interior exhaustion of <span class="process-math">\(X \)</span> by compact subintervals if and only if it satisfies the following conditions:</div>
+<ol class="decimal" id="lemma-interior-exhaustion-by-compact-subintervals-2-2-3">
+<li id="lemma-interior-exhaustion-by-compact-subintervals-2-2-3-1">
+<div class="para" id="lemma-interior-exhaustion-by-compact-subintervals-2-2-3-1-1">For all indices <span class="process-math">\(\alpha , \beta \in A \text{,}\)</span> if <span class="process-math">\(\alpha \preceq \beta \text{,}\)</span> then <span class="process-math">\(a_{ \alpha } \geq a_{ \beta } \)</span> and <span class="process-math">\(b_{ \alpha } \leq b_{ \beta } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-interior-exhaustion-by-compact-subintervals-2-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#lemma-interior-exhaustion-by-compact-subintervals-2-2-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="lemma-interior-exhaustion-by-compact-subintervals-2-2-3-2">
+<div class="para logical" id="lemma-interior-exhaustion-by-compact-subintervals-2-2-3-2-1">
+<div class="para">The nets <span class="process-math">\(\of{ a_{ \alpha } }_{ \alpha \in A } \)</span> and <span class="process-math">\(\of{ b_{ \alpha } }_{ \alpha \in A } \)</span> have upwards limits</div>
+<div class="displaymath process-math" id="lemma-interior-exhaustion-by-compact-subintervals-2-2-3-2-1-3">
+\begin{align*}
+\lim_{ \alpha \uparrow }{ a_{ \alpha } } \amp = \inf \of{ X } \amp \lim_{ \alpha \uparrow }{ b_{ \alpha } } \amp = \sup \of{ X }\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-interior-exhaustion-by-compact-subintervals-2-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#lemma-interior-exhaustion-by-compact-subintervals-2-2-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-interior-exhaustion-by-compact-subintervals-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Lemma 6.3.4: Interior exhaustion by compact subintervals"><a tabindex="-1" href="#lemma-interior-exhaustion-by-compact-subintervals" title="Copy heading and permalink for Lemma 6.3.4: Interior exhaustion by compact subintervals" aria-label="Copy heading and permalink for Lemma 6.3.4: Interior exhaustion by compact subintervals">🔗</a></div>
+</article>
+<div class="para" id="subsection-exhaustion-by-compact-intervals-9">You will have an opportunity to prove <a href="section-improper-integration.html#lemma-interior-exhaustion-by-compact-subintervals" class="xref" data-knowl="./knowl/xref/lemma-interior-exhaustion-by-compact-subintervals.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 6.3.4: Interior exhaustion by compact subintervals">Lemma 6.3.4 Interior exhaustion by compact subintervals</a> in the problems for this section. One consequence is that Riemann integrals of integrable functions defined on compact intervals are limits of Riemann integrals on exhaustions by compact subintervals.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-exhaustion-by-compact-intervals-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-improper-integrals-on-compact-intervals"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Improper integrals on compact intervals.</span>
+</h3>
+<div class="para logical" id="proposition-improper-integrals-on-compact-intervals-2-1">
+<div class="para">Let <span class="process-math">\(f \colon \clint{ a }{ b } \to \R \)</span> be a real-valued function defined on a closed interval <span class="process-math">\(\clint{ a }{ b } \text{.}\)</span> If <span class="process-math">\(f \)</span> is integrable, then</div>
+<div class="displaymath process-math" id="proposition-improper-integrals-on-compact-intervals-2-1-4">
+\begin{equation*}
+\int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } = \lim_{ \alpha \uparrow }{ \int_{ a_{ \alpha } }^{ b_{ \alpha } }{ f \of{ x } \, \diff{ x } } }
+\end{equation*}
+</div>
+<div class="para">for any interior exhaustion <span class="process-math">\(\of{ \clint{ a_{ \alpha } }{ b_{ \alpha } } }_{ \alpha \in A } \)</span> of <span class="process-math">\(\clint{ a }{ b } \)</span> by compact subintervals <span class="process-math">\(\clint{ a_{ \alpha } }{ b_{ \alpha } } \in \mathcal{ K }_{ \clint{ a }{ b } } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-improper-integrals-on-compact-intervals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 6.3.5: Improper integrals on compact intervals"><a tabindex="-1" href="#proposition-improper-integrals-on-compact-intervals" title="Copy heading and permalink for Proposition 6.3.5: Improper integrals on compact intervals" aria-label="Copy heading and permalink for Proposition 6.3.5: Improper integrals on compact intervals">🔗</a></div>
+</article>
+<details id="proposition-improper-integrals-on-compact-intervals-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="proposition-improper-integrals-on-compact-intervals-3-1">
+<div class="para">Since <span class="process-math">\(f \)</span> is integrable, it is bounded, and so there is some positive real number <span class="process-math">\(B \gt 0 \)</span> so that <span class="process-math">\(\abs{ f \of{ x } } \leq B \)</span> for all points <span class="process-math">\(a \leq x \leq b \text{.}\)</span> Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Then <a href="section-improper-integration.html#lemma-interior-exhaustion-by-compact-subintervals" class="xref" data-knowl="./knowl/xref/lemma-interior-exhaustion-by-compact-subintervals.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 6.3.4: Interior exhaustion by compact subintervals">Lemma 6.3.4 Interior exhaustion by compact subintervals</a> implies that there is an index <span class="process-math">\(\alpha_{ \epsilon } \in A \)</span> so that <span class="process-math">\(a_{ \alpha_{ \epsilon } } \lt a + \frac{ \epsilon }{ 2 B } \)</span> and <span class="process-math">\(b_{ \alpha_{ \epsilon } } \gt b - \frac{ \epsilon }{ 2 B } \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-interior-exhaustion-by-compact-subintervals.html" id="proposition-improper-integrals-on-compact-intervals-3-1-10">
+\begin{align*}
+\abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - \int_{ a_{ \alpha } }^{ b_{ \alpha } }{ f \of{ x } \, \diff{ x } } } \amp = \abs{ \int_{ a }^{ a_{ \alpha } }{ f \of{ x } \, \diff{ x } } + \int_{ b_{ \alpha } }^{ b }{ f \of{ x } \, \diff{ x } } }\\
+\amp \leq \abs{ \int_{ a }^{ a_{ \alpha } }{ f \of{ x } \, \diff{ x } } } + \abs{ \int_{ b_{ \alpha } }^{ b }{ f \of{ x } \, \diff{ x } } }\\
+\amp \leq \int_{ a }^{ a_{ \alpha } }{ \abs{ f \of{ x } } \, \diff{ x } } + \int_{ b_{ \alpha } }^{ b }{ \abs{ f \of{ x } } \, \diff{ x } }\\
+\amp \leq \int_{ a }^{ a_{ \alpha } }{ B \, \diff{ x } } + \int_{ b_{ \alpha } }^{ b }{ B \, \diff{ x } }\\
+\amp \leq B \of{ a_{ \alpha } - a } + B \of{ b - b_{ \alpha } }\\
+\amp \leq B \of{ a_{ \alpha_{ \epsilon } } - a } + B \of{ b - b_{ \alpha_{ \epsilon } } }\\
+\amp \lt B \of{ \frac{ \epsilon }{ 2 B } } + B \of{ \frac{ \epsilon }{ 2 B } } = \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+\end{align*}
+</div>
+<div class="para">for all indices <span class="process-math">\(\alpha \succeq \alpha_{ \epsilon } \text{.}\)</span> Thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-interior-exhaustion-by-compact-subintervals.html" id="proposition-improper-integrals-on-compact-intervals-3-1-12">
+\begin{equation*}
+\lim_{ \alpha \uparrow }{ \int_{ a_{ \alpha } }^{ b_{ \alpha } }{ f \of{ x } \, \diff{ x } } } = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-improper-integrals-on-compact-intervals-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 6.3.5.1"><a tabindex="-1" href="#proposition-improper-integrals-on-compact-intervals-3" title="Copy heading and permalink for Proof 6.3.5.1" aria-label="Copy heading and permalink for Proof 6.3.5.1">🔗</a></div>
+</article></details>
+<article class="proposition theorem-like" id="proposition-riemann-integrals-and-interior-exhaustions"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Riemann integrals and interior exhaustions.</span>
+</h3>
+<div class="para logical" id="proposition-riemann-integrals-and-interior-exhaustions-2-1">
+<div class="para">Let <span class="process-math">\(f \colon X \to \R \)</span> be a real-valued function defined on an interval <span class="process-math">\(X \text{,}\)</span> and suppose that the restriction of <span class="process-math">\(f \)</span> to any compact subinterval of the interior <span class="process-math">\(\Int \of{ X } \)</span> is integrable. Then for any real number <span class="process-math">\(I \in \R \text{,}\)</span> the following are equivalent:</div>
+<ol class="decimal" id="proposition-riemann-integrals-and-interior-exhaustions-2-1-6">
+<li id="proposition-riemann-integrals-and-interior-exhaustions-2-1-6-1">
+<div class="para logical" id="proposition-riemann-integrals-and-interior-exhaustions-2-1-6-1-1">
+<div class="para">For any interior exhaustion <span class="process-math">\(\of{ \clint{ a_{ \alpha } }{ b_{ \alpha } } }_{ \alpha \in A } \)</span> of <span class="process-math">\(X \)</span> by compact subintervals,</div>
+<div class="displaymath process-math" id="proposition-riemann-integrals-and-interior-exhaustions-2-1-6-1-1-3">
+\begin{equation*}
+\lim_{ \alpha \uparrow }{ \int_{ a_{ \alpha } }^{ b_{ \alpha } }{ f \of{ x } \, \diff{ x } } } = I
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-riemann-integrals-and-interior-exhaustions-2-1-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#proposition-riemann-integrals-and-interior-exhaustions-2-1-6-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="proposition-riemann-integrals-and-interior-exhaustions-2-1-6-2">
+<div class="para logical" id="proposition-riemann-integrals-and-interior-exhaustions-2-1-6-2-1">
+<div class="para">For any positive real number <span class="process-math">\(\epsilon \text{,}\)</span> there is a compact subinterval <span class="process-math">\(\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \in \mathcal{ K }_{ X } \)</span> of <span class="process-math">\(\Int \of{ X } \)</span> so that</div>
+<div class="displaymath process-math" id="proposition-riemann-integrals-and-interior-exhaustions-2-1-6-2-1-4">
+\begin{equation*}
+\abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - I } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all compact subintervals <span class="process-math">\(\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subseteq \Int \of{ X } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-riemann-integrals-and-interior-exhaustions-2-1-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#proposition-riemann-integrals-and-interior-exhaustions-2-1-6-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-riemann-integrals-and-interior-exhaustions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 6.3.6: Riemann integrals and interior exhaustions"><a tabindex="-1" href="#proposition-riemann-integrals-and-interior-exhaustions" title="Copy heading and permalink for Proposition 6.3.6: Riemann integrals and interior exhaustions" aria-label="Copy heading and permalink for Proposition 6.3.6: Riemann integrals and interior exhaustions">🔗</a></div>
+</article>
+<details id="proposition-riemann-integrals-and-interior-exhaustions-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="proposition-riemann-integrals-and-interior-exhaustions-3-1">
+<div class="para">First suppose that</div>
+<div class="displaymath process-math" id="proposition-riemann-integrals-and-interior-exhaustions-3-1-1">
+\begin{equation*}
+\lim_{ \alpha \uparrow }{ \int_{ a_{ \alpha } }^{ b_{ \alpha } }{ f \of{ x } \, \diff{ x } } } = I
+\end{equation*}
+</div>
+<div class="para">for any interior exhaustion <span class="process-math">\(\of{ \clint{ a_{ \alpha } }{ b_{ \alpha } } }_{ \alpha \in A } \)</span> of <span class="process-math">\(X \)</span> by compact subintervals. Then in particular we may choose the maximal such interior exhaustion <span class="process-math">\(\of{ K }_{ K \in \mathcal{ K }_{ X } } \text{,}\)</span> obtaining the convergence</div>
+<div class="displaymath process-math" id="proposition-riemann-integrals-and-interior-exhaustions-3-1-5">
+\begin{equation*}
+\lim_{ \clint{ a }{ b } \uparrow }{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } } = I\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus for any positive real number <span class="process-math">\(\epsilon \gt 0 \text{,}\)</span> there is a compact subinterval <span class="process-math">\(\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \in \mathcal{ K }_{ X } \)</span> so that</div>
+<div class="displaymath process-math" id="proposition-riemann-integrals-and-interior-exhaustions-3-1-8">
+\begin{equation*}
+\abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - I } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all compact subintervals <span class="process-math">\(\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subseteq \Int \of{ X } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-riemann-integrals-and-interior-exhaustions-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-riemann-integrals-and-interior-exhaustions-3-2">
+<div class="para">Conversely, now suppose that for any positive real number <span class="process-math">\(\epsilon \gt 0 \text{,}\)</span> there is a compact subinterval <span class="process-math">\(\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \in \mathcal{ K }_{ X } \)</span> so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-interior-exhaustion-by-compact-subintervals.html" id="proposition-riemann-integrals-and-interior-exhaustions-3-2-3">
+\begin{equation*}
+\abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - I } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all compact subintervals <span class="process-math">\(\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subseteq \Int \of{ X } \text{,}\)</span> and let <span class="process-math">\(\of{ \clint{ a_{ \alpha } }{ b_{ \alpha } } }_{ \alpha \in A } \)</span> be an interior exhaustion of <span class="process-math">\(X \)</span> by compact intervals <span class="process-math">\(\clint{ a_{ \alpha } }{ b_{ \alpha } } \text{.}\)</span> <a href="section-improper-integration.html#lemma-interior-exhaustion-by-compact-subintervals" class="xref" data-knowl="./knowl/xref/lemma-interior-exhaustion-by-compact-subintervals.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 6.3.4: Interior exhaustion by compact subintervals">Lemma 6.3.4 Interior exhaustion by compact subintervals</a> implies that there is an index <span class="process-math">\(\alpha_{ \epsilon } \in A \)</span> so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-interior-exhaustion-by-compact-subintervals.html" id="proposition-riemann-integrals-and-interior-exhaustions-3-2-10">
+\begin{equation*}
+\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a_{ \alpha_{ \epsilon } } }{ b_{ \alpha_{ \epsilon } } } \subseteq \Int \of{ X }\text{.}
+\end{equation*}
+</div>
+<div class="para">We observe that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-interior-exhaustion-by-compact-subintervals.html" id="proposition-riemann-integrals-and-interior-exhaustions-3-2-11">
+\begin{equation*}
+\abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - I } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(\alpha \succeq \alpha_{ \epsilon } \text{,}\)</span> since in this case</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-interior-exhaustion-by-compact-subintervals.html" id="proposition-riemann-integrals-and-interior-exhaustions-3-2-13">
+\begin{equation*}
+\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a_{ \alpha_{ \epsilon } } }{ b_{ \alpha_{ \epsilon } } } \subseteq \clint{ a_{ \alpha } }{ b_{ \alpha } } \subseteq \Int \of{ X }\text{.}
+\end{equation*}
+</div>
+<div class="para">We conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-interior-exhaustion-by-compact-subintervals.html" id="proposition-riemann-integrals-and-interior-exhaustions-3-2-14">
+\begin{equation*}
+\lim_{ \alpha \uparrow }{ \int_{ a_{ \alpha } }^{ b_{ \alpha } }{ f \of{ x } \, \diff{ x } } } = I\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-riemann-integrals-and-interior-exhaustions-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 6.3.6.1"><a tabindex="-1" href="#proposition-riemann-integrals-and-interior-exhaustions-3" title="Copy heading and permalink for Proof 6.3.6.1" aria-label="Copy heading and permalink for Proof 6.3.6.1">🔗</a></div>
+</article></details>
+<article class="definition definition-like" id="definition-improper-riemann-integral"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Improper Riemann integral.</span>
+</h3>
+<div class="para logical" id="definition-improper-riemann-integral-4-1">
+<div class="para">Let <span class="process-math">\(f \colon X \to \R \)</span> be a real-valued function defined on an interval <span class="process-math">\(X \text{.}\)</span> <span class="process-math">\(f \)</span> is called <dfn class="terminology">improperly integrable</dfn> if the restriction of <span class="process-math">\(f \)</span> to any compact subinterval of the interior <span class="process-math">\(\Int \of{ X } \)</span> is integrable, and there is a real number <span class="process-math">\(I \in \R \)</span> which satisfies either (and therefore both) of the conditions in <a href="section-improper-integration.html#proposition-riemann-integrals-and-interior-exhaustions" class="xref" data-knowl="./knowl/xref/proposition-riemann-integrals-and-interior-exhaustions.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 6.3.6: Riemann integrals and interior exhaustions">Proposition 6.3.6 Riemann integrals and interior exhaustions</a>. In this case, that <span class="process-math">\(\R \)</span> is Hausdorff implies that the number <span class="process-math">\(I \)</span> is uniquely defined by these properties. This number <span class="process-math">\(I \)</span> is called the <dfn class="terminology">improper Riemann integral</dfn> of <span class="process-math">\(f \text{,}\)</span> and is denoted</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-riemann-integrals-and-interior-exhaustions.html" id="definition-improper-riemann-integral-4-1-14">
+\begin{equation*}
+\int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-improper-riemann-integral-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 6.3.7: Improper Riemann integral"><a tabindex="-1" href="#definition-improper-riemann-integral" title="Copy heading and permalink for Definition 6.3.7: Improper Riemann integral" aria-label="Copy heading and permalink for Definition 6.3.7: Improper Riemann integral">🔗</a></div>
+</article>
+<details id="example-improper-riemann-integration" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Improper Riemann integration.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-improper-riemann-integration-2-1">
+<div class="para">The following are examples and non-examples of improperly integrable functions and their improper Riemann integrals:</div>
+<ul class="disc" id="example-improper-riemann-integration-2-1-1">
+<li id="example-improper-riemann-integration-2-1-1-1">
+<div class="para logical" id="example-improper-riemann-integration-2-1-1-1-1">
+<div class="para">Let <span class="process-math">\(p \in \opint{ 0 }{ \infty } \setminus \set{ 1 } \)</span> be a real number, and consider the function <span class="process-math">\(f \colon \clopint{ 1 }{ \infty } \)</span> defined by the formula <span class="process-math">\(f \of{ x } = \frac{ 1 }{ x^{ p } } \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="example-improper-riemann-integration-2-1-1-1-1-4">
+\begin{equation*}
+\int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } = \frac{ b^{ 1 - p } }{ 1 - p } - \frac{ a^{ 1 - p } }{ 1 - p } = \frac{ b^{ 1 - p } - a^{ 1 - p } }{ 1 - p }
+\end{equation*}
+</div>
+<div class="para">for any compact subinterval <span class="process-math">\(\clint{ a }{ b } \subseteq \opint{ 1 }{ \infty } \text{.}\)</span> We first note that if <span class="process-math">\(p \lt 1 \text{,}\)</span> then <span class="process-math">\(1 - p \gt 0 \text{,}\)</span> and so</div>
+<div class="displaymath process-math" id="example-improper-riemann-integration-2-1-1-1-1-8">
+\begin{equation*}
+\lim_{ b \to \infty }{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } } = \lim_{ b \to \infty }{ \frac{ b^{ 1 - p } - a^{ 1 - p } }{ 1 - p } } = \infty\text{.}
+\end{equation*}
+</div>
+<div class="para">This implies that <span class="process-math">\(f \)</span> is not improperly integrable in this case.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-improper-riemann-integration-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-improper-riemann-integration-2-1-1-1-2">
+<div class="para">On the other hand, now suppose that <span class="process-math">\(p \gt 1 \text{,}\)</span> and let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Fix real numbers <span class="process-math">\(1 \lt a_{ \epsilon } \leq b_{ \epsilon } \lt \infty \)</span> so that</div>
+<div class="displaymath process-math" id="example-improper-riemann-integration-2-1-1-1-2-4">
+\begin{align*}
+a_{ \epsilon } \amp \lt \of{ 1 - \frac{ \epsilon \of{ p - 1 } }{ 2 } }^{ \frac{ 1 }{ 1 - p } } \amp b_{ \epsilon } \gt \of{ \frac{ \epsilon \of{ p - 1 } }{ 2 } }^{ \frac{ 1 }{ 1 - p } }\text{.}
+\end{align*}
+</div>
+<div class="para">We observe that</div>
+<div class="displaymath process-math" id="example-improper-riemann-integration-2-1-1-1-2-5">
+\begin{align*}
+\abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - \frac{ 1 }{ p - 1 } } \amp = \abs{ \frac{ b^{ 1 - p } - a^{ 1 - p } }{ 1 - p } + \frac{ 1 }{ 1 - p } } \leq \frac{ \abs{ b^{ 1 - p } } }{ p - 1 } + \frac{ \abs{ 1 - a^{ 1 - p } } }{ p - 1 }\\
+\amp = \frac{ b^{ 1 - p } }{ p - 1 } + \frac{ 1 - a^{ 1 - p } }{ p - 1 } \leq \frac{ b_{ \epsilon }^{ 1 - p } }{ p - 1 } + \frac{ 1 - a_{ \epsilon }^{ 1 - p } }{ p - 1 }\\
+\amp \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+\end{align*}
+</div>
+<div class="para">for all compact subintervals <span class="process-math">\(\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subsetneq \opint{ 0 }{ \infty } \text{.}\)</span> Thus <span class="process-math">\(f \)</span> is improperly integrable, with improper Riemann integral</div>
+<div class="displaymath process-math" id="example-improper-riemann-integration-2-1-1-1-2-8">
+\begin{equation*}
+\int_{ 1 }^{ \infty }{ f \of{ x } \, \diff{ x } } = \frac{ 1 }{ p - 1 }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-improper-riemann-integration-2-1-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-improper-riemann-integration-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-improper-riemann-integration-2-1-1-2">
+<div class="para logical" id="example-improper-riemann-integration-2-1-1-2-1">
+<div class="para">Let <span class="process-math">\(p \in \opint{ 0 }{ \infty } \setminus \set{ 1 } \)</span> be a real number, and consider the function <span class="process-math">\(f \colon \opclint{ 0 }{ 1 } \)</span> defined by the formula <span class="process-math">\(f \of{ x } = \frac{ 1 }{ x^{ p } } \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="example-improper-riemann-integration-2-1-1-2-1-4">
+\begin{equation*}
+\int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } = \frac{ b^{ 1 - p } }{ 1 - p } - \frac{ a^{ 1 - p } }{ 1 - p } = \frac{ b^{ 1 - p } - a^{ 1 - p } }{ 1 - p }
+\end{equation*}
+</div>
+<div class="para">for any compact subinterval <span class="process-math">\(\clint{ a }{ b } \subseteq \opint{ 0 }{ 1 } \text{.}\)</span> If We first note that if <span class="process-math">\(p \gt 1 \text{,}\)</span> then <span class="process-math">\(1 - p \lt 0 \text{,}\)</span> and so</div>
+<div class="displaymath process-math" id="example-improper-riemann-integration-2-1-1-2-1-8">
+\begin{equation*}
+\lim_{ a \to 0 }{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } } = \lim_{ a \to 0 }{ \frac{ b^{ 1 - p } - a^{ 1 - p } }{ 1 - p } } = \lim_{ a \to 0 }{ \frac{ a^{ 1 - p } - b^{ 1 - p } }{ p - 1 } } = \infty\text{.}
+\end{equation*}
+</div>
+<div class="para">This implies that <span class="process-math">\(f \)</span> is not improperly integrable in this case.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-improper-riemann-integration-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-improper-riemann-integration-2-1-1-2-2">
+<div class="para">On the other hand, now suppose that <span class="process-math">\(0 \lt p \lt 1 \text{,}\)</span> and let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Fix real numbers <span class="process-math">\(1 \lt a_{ \epsilon } \leq b_{ \epsilon } \lt \infty \)</span> so that</div>
+<div class="displaymath process-math" id="example-improper-riemann-integration-2-1-1-2-2-4">
+\begin{align*}
+a_{ \epsilon } \amp \lt \of{ \frac{ \epsilon \of{ 1 - p } }{ 2 } }^{ \frac{ 1 }{ 1 - p } } \amp b_{ \epsilon } \gt \of{ 1 - \frac{ \epsilon \of{ 1 - p } }{ 2 } }^{ \frac{ 1 }{ 1 - p } }\text{.}
+\end{align*}
+</div>
+<div class="para">We observe that</div>
+<div class="displaymath process-math" id="example-improper-riemann-integration-2-1-1-2-2-5">
+\begin{align*}
+\abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - \frac{ 1 }{ 1 - p } } \amp = \abs{ \frac{ b^{ 1 - p } - a^{ 1 - p } }{ 1 - p } - \frac{ 1 }{ 1 - p } } \leq \frac{ \abs{ b^{ 1 - p } - 1 } }{ 1 - p } + \frac{ \abs{ a^{ 1 - p } } }{ 1 - p }\\
+\amp = \frac{ 1 - b^{ 1 - p } }{ 1 - p } + \frac{ a^{ 1 - p } }{ 1 - p } \leq \frac{ 1 - b_{ \epsilon }^{ 1 - p } }{ 1 - p } + \frac{ a_{ \epsilon }^{ 1 - p } }{ 1 - p }\\
+\amp \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+\end{align*}
+</div>
+<div class="para">for all compact subintervals <span class="process-math">\(\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subsetneq \opint{ 0 }{ \infty } \text{.}\)</span> Thus <span class="process-math">\(f \)</span> is improperly integrable, with improper Riemann integral</div>
+<div class="displaymath process-math" id="example-improper-riemann-integration-2-1-1-2-2-8">
+\begin{equation*}
+\int_{ 0 }^{ 1 }{ f \of{ x } \, \diff{ x } } = \frac{ 1 }{ 1 - p }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-improper-riemann-integration-2-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-improper-riemann-integration-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-improper-riemann-integration-2-1-1-3">
+<div class="para" id="example-improper-riemann-integration-2-1-1-3-1">One question raised by the above examples is the nature of the case <span class="process-math">\(p = 1 \text{;}\)</span> that is, consider the function <span class="process-math">\(f \colon \opint{ 0 }{ \infty } \)</span> defined by the formula <span class="process-math">\(f \of{ x } = \frac{ 1 }{ x } \text{.}\)</span> We will see that <span class="process-math">\(f \)</span> is not improperly integrable on <span class="process-math">\(\opclint{ 0 }{ 1 } \)</span> or on <span class="process-math">\(\clopint{ 1 }{ \infty } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-improper-riemann-integration-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-improper-riemann-integration-2-1-1-3-2">
+<div class="para">To that end, we first note that</div>
+<div class="displaymath process-math" id="example-improper-riemann-integration-2-1-1-3-2-1">
+\begin{equation*}
+\int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } = \ln \of{ b } - \ln \of{ a } = \ln \of{ \frac{ b }{ a } }
+\end{equation*}
+</div>
+<div class="para">for any compact subinterval <span class="process-math">\(\clint{ a }{ b } \subseteq \opint{ 0 }{ \infty } \text{.}\)</span> In particular, we note that</div>
+<div class="displaymath process-math" id="example-improper-riemann-integration-2-1-1-3-2-3">
+\begin{equation*}
+\lim_{ a \to 0 }{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } } = \lim_{ a \to 0 }{ \ln \of{ \frac{ b }{ a } } } = \infty
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" id="example-improper-riemann-integration-2-1-1-3-2-4">
+\begin{equation*}
+\lim_{ b \to \infty }{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } } = \lim_{ b \to \infty }{ \ln \of{ \frac{ b }{ a } } } = \infty\text{.}
+\end{equation*}
+</div>
+<div class="para">These computations imply that the restrictions of <span class="process-math">\(f \)</span> to the intervals <span class="process-math">\(\opclint{ 0 }{ 1 } \)</span> and <span class="process-math">\(\clopint{ 1 }{ \infty } \)</span> are not improperly integrable.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-improper-riemann-integration-2-1-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-improper-riemann-integration-2-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-improper-riemann-integration-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 6.3.8: Improper Riemann integration"><a tabindex="-1" href="#example-improper-riemann-integration" title="Copy heading and permalink for Example 6.3.8: Improper Riemann integration" aria-label="Copy heading and permalink for Example 6.3.8: Improper Riemann integration">🔗</a></div>
+</article></details>
+<article class="proposition theorem-like" id="proposition-arithmetic-of-improperly-integrable-functions"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Arithmetic of improperly integrable functions.</span>
+</h3>
+<ol class="decimal" id="proposition-arithmetic-of-improperly-integrable-functions-2-1">
+<li id="proposition-arithmetic-of-improperly-integrable-functions-2-1-1">
+<span class="heading li--heading"><span class="title li--heading-title">Addition of improperly integrable functions.</span></span>
+<div class="para logical" id="proposition-arithmetic-of-improperly-integrable-functions-2-1-1-2">
+<div class="para">Let <span class="process-math">\(f , g \colon X \to \R \)</span> be real-valued functions defined on an interval <span class="process-math">\(X \text{.}\)</span> If <span class="process-math">\(f \)</span> and <span class="process-math">\(g \)</span> are improperly integrable, then so is <span class="process-math">\(f + g \text{,}\)</span> and</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-improperly-integrable-functions-2-1-1-2-6">
+\begin{equation*}
+\int_{ \inf \of{ X } }^{ \sup \of{ X } }{ \of{ f + g } \of{ x } \, \diff{ x } } = \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } } + \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ g \of{ x } \, \diff{ x } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-arithmetic-of-improperly-integrable-functions-2-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1: Addition of improperly integrable functions"><a tabindex="-1" href="#proposition-arithmetic-of-improperly-integrable-functions-2-1-1" title="Copy heading and permalink for Item 1: Addition of improperly integrable functions" aria-label="Copy heading and permalink for Item 1: Addition of improperly integrable functions">🔗</a></div>
+</li>
+<li id="proposition-arithmetic-of-improperly-integrable-functions-2-1-2">
+<span class="heading li--heading"><span class="title li--heading-title">Scalar multiplication of improperly integrable functions.</span></span>
+<div class="para logical" id="proposition-arithmetic-of-improperly-integrable-functions-2-1-2-2">
+<div class="para">Let <span class="process-math">\(f \colon X \to \R \)</span> be real-valued functions defined on an interval <span class="process-math">\(X \text{.}\)</span> If <span class="process-math">\(f \)</span> is improperly integrable, then so is <span class="process-math">\(c f \)</span> for any real number <span class="process-math">\(c \in \R \text{,}\)</span> and</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-improperly-integrable-functions-2-1-2-2-6">
+\begin{equation*}
+\int_{ \inf \of{ X } }^{ \sup \of{ X } }{ \of{ c f } \of{ x } \, \diff{ x } } = c \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-arithmetic-of-improperly-integrable-functions-2-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2: Scalar multiplication of improperly integrable functions"><a tabindex="-1" href="#proposition-arithmetic-of-improperly-integrable-functions-2-1-2" title="Copy heading and permalink for Item 2: Scalar multiplication of improperly integrable functions" aria-label="Copy heading and permalink for Item 2: Scalar multiplication of improperly integrable functions">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 6.3.9: Arithmetic of improperly integrable functions"><a tabindex="-1" href="#proposition-arithmetic-of-improperly-integrable-functions" title="Copy heading and permalink for Proposition 6.3.9: Arithmetic of improperly integrable functions" aria-label="Copy heading and permalink for Proposition 6.3.9: Arithmetic of improperly integrable functions">🔗</a></div>
+</article>
+<details id="proposition-arithmetic-of-improperly-integrable-functions-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<ol class="decimal" id="proposition-arithmetic-of-improperly-integrable-functions-3-1">
+<li id="proposition-arithmetic-of-improperly-integrable-functions-3-1-1">
+<div class="para logical" id="proposition-arithmetic-of-improperly-integrable-functions-3-1-1-1">
+<div class="para">Let</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-improperly-integrable-functions-3-1-1-1-1">
+\begin{align*}
+I_{ f } \amp = \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } } \amp I_{ g } \amp = \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ g \of{ x } \, \diff{ x } }\text{.}
+\end{align*}
+</div>
+<div class="para">Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Since <span class="process-math">\(f \)</span> and <span class="process-math">\(g \)</span> are improperly integrable, there is a compact subinterval <span class="process-math">\(\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \in \mathcal{ K }_{ X } \)</span> of the interior <span class="process-math">\(\Int \of{ X } \)</span> so that</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-improperly-integrable-functions-3-1-1-1-7">
+\begin{equation*}
+\abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - I_{ f } } \lt \frac{ \epsilon }{ 2 }
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-improperly-integrable-functions-3-1-1-1-8">
+\begin{equation*}
+\abs{ \int_{ a }^{ b }{ g \of{ x } \, \diff{ x } } - I_{ g } } \lt \frac{ \epsilon }{ 2 }
+\end{equation*}
+</div>
+<div class="para">for all compact subintervals <span class="process-math">\(\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subseteq \Int \of{ X } \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-improperly-integrable-functions-3-1-1-1-10">
+\begin{align*}
+\abs{ \int_{ a }^{ b }{ \of{ f + g } \of{ x } \diff{ x } } - \of{ I_{ f } + I_{ g } } } \amp = \abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } + \int_{ a }^{ b }{ g \of{ x } \, \diff{ x } } - I_{ f } - I_{ g } }\\
+\amp \leq \abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - I_{ f } } + \abs{ \int_{ a }^{ b }{ g \of{ x } \, \diff{ x } } - I_{ g } }\\
+\amp \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon\text{,}
+\end{align*}
+</div>
+<div class="para">for all compact subintervals <span class="process-math">\(\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subseteq \Int \of{ X } \text{.}\)</span> We conclude that <span class="process-math">\(f + g \)</span> is improperly integrable, with improper integral</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-improperly-integrable-functions-3-1-1-1-13">
+\begin{equation*}
+\int_{ \inf \of{ X } }^{ \sup \of{ X } }{ \of{ f + g } \of{ x } \, \diff{ x } } = I_{ f } + I_{ g } = \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } } + \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ g \of{ x } \, \diff{ x } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-arithmetic-of-improperly-integrable-functions-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#proposition-arithmetic-of-improperly-integrable-functions-3-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="proposition-arithmetic-of-improperly-integrable-functions-3-1-2">
+<div class="para logical" id="proposition-arithmetic-of-improperly-integrable-functions-3-1-2-1">
+<div class="para">If <span class="process-math">\(c = 0 \text{,}\)</span> then <span class="process-math">\(c f = 0 f = 0 \)</span> is improperly integrable, with</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-improperly-integrable-functions-3-1-2-1-3">
+\begin{align*}
+\int_{ \inf \of{ X } }^{ \sup \of{ X } }{ \of{ c f } \of{ x } \, \diff{ x } } \amp = \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ 0 \, \diff{ x } } = 0\\
+\amp = 0 \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } } = c \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } }\text{.}
+\end{align*}
+</div>
+<div class="para">We may therefore suppose that <span class="process-math">\(c \neq 0 \text{.}\)</span> Let</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-improperly-integrable-functions-3-1-2-1-5">
+\begin{equation*}
+I = \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } }\text{.}
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Since <span class="process-math">\(f \)</span> is improperly integrable, there is a compact subinterval <span class="process-math">\(\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \in \mathcal{ K }_{ X } \)</span> of the interior <span class="process-math">\(\Int \of{ X } \)</span> so that</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-improperly-integrable-functions-3-1-2-1-10">
+\begin{equation*}
+\abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - I } \lt \frac{ \epsilon }{ \abs{ c } }
+\end{equation*}
+</div>
+<div class="para">for all compact subintervals <span class="process-math">\(\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subseteq \Int \of{ X } \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-improperly-integrable-functions-3-1-2-1-12">
+\begin{align*}
+\abs{ \int_{ a }^{ b }{ \of{ c f } \of{ x } \diff{ x } } - c I } \amp = \abs{ c \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - c I }\\
+\amp = \abs{ c } \abs{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - I_{ f } }\\
+\amp \lt \frac{ \abs{ c } \epsilon }{ \abs{ c } } = \epsilon\text{,}
+\end{align*}
+</div>
+<div class="para">for all compact subintervals <span class="process-math">\(\clint{ a_{ \epsilon } }{ b_{ \epsilon } } \subseteq \clint{ a }{ b } \subseteq \Int \of{ X } \text{.}\)</span> We conclude that <span class="process-math">\(c f \)</span> is improperly integrable, with improper integral</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-improperly-integrable-functions-3-1-2-1-15">
+\begin{equation*}
+\int_{ \inf \of{ X } }^{ \sup \of{ X } }{ \of{ c f } \of{ x } \, \diff{ x } } = c I = c \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-arithmetic-of-improperly-integrable-functions-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#proposition-arithmetic-of-improperly-integrable-functions-3-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 6.3.9.1"><a tabindex="-1" href="#proposition-arithmetic-of-improperly-integrable-functions-3" title="Copy heading and permalink for Proof 6.3.9.1" aria-label="Copy heading and permalink for Proof 6.3.9.1">🔗</a></div>
+</article></details>
+<section class="conclusion" id="subsection-exhaustion-by-compact-intervals-15">
+<div class="para" id="subsection-exhaustion-by-compact-intervals-15-1">To summarize, a function is improperly integrable if the proper Riemann integral of a restriction of said function to a compact subinterval of the interior of the domain can be made arbitrarily close to a given real number just by choosing the compact subinterval to be wide enough.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-exhaustion-by-compact-intervals-15-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Subsection 6.3.1: Exhaustion by Compact Intervals"><a tabindex="-1" href="#subsection-exhaustion-by-compact-intervals" title="Copy heading and permalink for Subsection 6.3.1: Exhaustion by Compact Intervals" aria-label="Copy heading and permalink for Subsection 6.3.1: Exhaustion by Compact Intervals">🔗</a></div>
+</section>
+<section class="subsection" id="subsection-tests-for-integral-convergence">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Tests for Integral Convergence</span>
+</h2>
+<section class="introduction" id="subsection-tests-for-integral-convergence-2">
+<div class="para" id="subsection-tests-for-integral-convergence-2-1">We now explore several sufficient criteria for establishing improper Riemann integrability. We first observe that while a real-valued function <span class="process-math">\(f \)</span> defined on compact intervals is Riemann integrable if and only if <span class="process-math">\(\abs{ f } \)</span> is Riemann integrable, the same cannot be said of functions defined on non-compact intervals.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-tests-for-integral-convergence-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<details id="example-conditional-convergence-of-improper-integrals" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Conditional convergence of improper integrals.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-conditional-convergence-of-improper-integrals-2-1">
+<div class="para">Let <span class="process-math">\(f \colon \opint{ 0 }{ \infty } \to \R \)</span> be the real-valued function defined by the formula</div>
+<div class="displaymath process-math" id="example-conditional-convergence-of-improper-integrals-2-1-2">
+\begin{equation*}
+f \of{ x } = \frac{ \sin \of{ x } }{ x }\text{.}
+\end{equation*}
+</div>
+<div class="para">We don’t yet have the tools to verify this, but <span class="process-math">\(f \)</span> is improperly Riemann integrable, while <span class="process-math">\(\abs{ f } \)</span> is not. We might call the convergence of the corresponding improper integral of <span class="process-math">\(f \)</span> <dfn class="terminology">conditional</dfn>, in contrast with <dfn class="terminology">absolutely convergent</dfn> improper integrals.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-conditional-convergence-of-improper-integrals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 6.3.10: Conditional convergence of improper integrals"><a tabindex="-1" href="#example-conditional-convergence-of-improper-integrals" title="Copy heading and permalink for Example 6.3.10: Conditional convergence of improper integrals" aria-label="Copy heading and permalink for Example 6.3.10: Conditional convergence of improper integrals">🔗</a></div>
+</article></details>
+<article class="definition definition-like" id="definition-absolute-conditional-Riemann-integrability"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Absolute/conditional Riemann integrability.</span>
+</h3>
+<div class="para logical" id="definition-absolute-conditional-Riemann-integrability-6-1">
+<div class="para">Let <span class="process-math">\(f \colon X \to \R \)</span> be a real-valued function defined on an interval <span class="process-math">\(X \subseteq \R \text{.}\)</span>
+</div>
+<ul class="disc" id="definition-absolute-conditional-Riemann-integrability-6-1-3">
+<li id="definition-absolute-conditional-Riemann-integrability-6-1-3-1">
+<span class="heading li--heading"><span class="title li--heading-title">Absolute Riemann integrability.</span></span>
+<div class="para logical" id="definition-absolute-conditional-Riemann-integrability-6-1-3-1-2">
+<div class="para">
+<span class="process-math">\(f \)</span> is called <dfn class="terminology">absolutely Riemann integrable</dfn> if <span class="process-math">\(\abs{ f } \)</span> is improperly Riemann integrable. One might also describe the improper Riemann integral</div>
+<div class="displaymath process-math" id="definition-absolute-conditional-Riemann-integrability-6-1-3-1-2-4">
+\begin{equation*}
+\int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } }
+\end{equation*}
+</div>
+<div class="para">as <dfn class="terminology">absolutely convergent</dfn> in this case.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-absolute-conditional-Riemann-integrability-6-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Absolute Riemann integrability"><a tabindex="-1" href="#definition-absolute-conditional-Riemann-integrability-6-1-3-1" title="Copy heading and permalink for Item: Absolute Riemann integrability" aria-label="Copy heading and permalink for Item: Absolute Riemann integrability">🔗</a></div>
+</li>
+<li id="definition-absolute-conditional-Riemann-integrability-6-1-3-2">
+<span class="heading li--heading"><span class="title li--heading-title">Conditional Riemann integrability.</span></span>
+<div class="para logical" id="definition-absolute-conditional-Riemann-integrability-6-1-3-2-2">
+<div class="para">
+<span class="process-math">\(f \)</span> is called <dfn class="terminology">conditionally Riemann integrable</dfn> if it is improperly Riemann integrable but not absolutely Riemann integrable; that is <span class="process-math">\(f \)</span> is conditionally Riemann integrable if <span class="process-math">\(f \)</span> is improperly Riemann integrable but <span class="process-math">\(\abs{ f } \)</span> is not. One might also describe the improper Riemann integral</div>
+<div class="displaymath process-math" id="definition-absolute-conditional-Riemann-integrability-6-1-3-2-2-6">
+\begin{equation*}
+\int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } }
+\end{equation*}
+</div>
+<div class="para">as <dfn class="terminology">conditionally convergent</dfn> in this case.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-absolute-conditional-Riemann-integrability-6-1-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Conditional Riemann integrability"><a tabindex="-1" href="#definition-absolute-conditional-Riemann-integrability-6-1-3-2" title="Copy heading and permalink for Item: Conditional Riemann integrability" aria-label="Copy heading and permalink for Item: Conditional Riemann integrability">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-absolute-conditional-Riemann-integrability-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 6.3.11: Absolute/conditional Riemann integrability"><a tabindex="-1" href="#definition-absolute-conditional-Riemann-integrability" title="Copy heading and permalink for Definition 6.3.11: Absolute/conditional Riemann integrability" aria-label="Copy heading and permalink for Definition 6.3.11: Absolute/conditional Riemann integrability">🔗</a></div>
+</article>
+<div class="para" id="subsection-tests-for-integral-convergence-5">We will show that absolute integrability implies improper integrability. This will follow from the comparison test for improper integrability, of which we first establish the following special case:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-tests-for-integral-convergence-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="lemma theorem-like" id="lemma-comparison-of-non-negative-improper-integrals"><h3 class="heading">
+<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comparison of non-negative improper integrals.</span>
+</h3>
+<div class="para logical" id="lemma-comparison-of-non-negative-improper-integrals-2-1">
+<div class="para">Let <span class="process-math">\(f , g \colon X \to \clopint{ 0 }{ \infty } \)</span> be non-negative real-valued functions defined on an interval <span class="process-math">\(X \subseteq \R \text{,}\)</span> and suppose that <span class="process-math">\(0 \leq f \of{ x } \leq g \of{ x } \)</span> for all points <span class="process-math">\(x \in X \text{.}\)</span> If the restriction of <span class="process-math">\(f \)</span> to any compact subinterval of the interior <span class="process-math">\(\Int \of{ X } \)</span> is integrable and <span class="process-math">\(g \)</span> is improperly integrable, then <span class="process-math">\(f \)</span> is improperly integrable, and</div>
+<div class="displaymath process-math" id="lemma-comparison-of-non-negative-improper-integrals-2-1-9">
+\begin{equation*}
+0 \leq \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } } \leq \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ g \of{ x } \, \diff{ x } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-comparison-of-non-negative-improper-integrals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Lemma 6.3.12: Comparison of non-negative improper integrals"><a tabindex="-1" href="#lemma-comparison-of-non-negative-improper-integrals" title="Copy heading and permalink for Lemma 6.3.12: Comparison of non-negative improper integrals" aria-label="Copy heading and permalink for Lemma 6.3.12: Comparison of non-negative improper integrals">🔗</a></div>
+</article>
+<details id="lemma-comparison-of-non-negative-improper-integrals-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="lemma-comparison-of-non-negative-improper-integrals-3-1">
+<div class="para">Consider the nets <span class="process-math">\(\of{ F_{ \clint{ a }{ b } } }_{ \clint{ a }{ b } \in \mathcal{ K }_{ X } } \)</span> and <span class="process-math">\(\of{ G_{ \clint{ a }{ b } } }_{ \clint{ a }{ b } \in \mathcal{ K }_{ X } } \)</span> defined by the formulas</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-chasles-relation.html ./knowl/xref/lemma-riemann-integration-and-comparison.html ./knowl/xref/theorem-monotone-convergence-theorem.html" id="lemma-comparison-of-non-negative-improper-integrals-3-1-3">
+\begin{align*}
+F_{ \clint{ a }{ b } } \amp = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } \amp G_{ \clint{ a }{ b } } \amp = \int_{ a }^{ b }{ g \of{ x } \, \diff{ x } } 
+\end{align*}
+</div>
+<div class="para">for all compact subintervals <span class="process-math">\(\clint{ a }{ b } \in \mathcal{ K }_{ X } \)</span> of the interior <span class="process-math">\(\Int \of{ X } \text{.}\)</span> We first observe that these nets are order-preserving. Indeed, for any compact subintervals <span class="process-math">\(\clint{ a }{ b } , \clint{ c }{ d } \in \mathcal{ K }_{ X } \text{,}\)</span> if <span class="process-math">\(\clint{ a }{ b } \subseteq \clint{ c }{ d } \text{,}\)</span> then <a href="section-the-fundamental-theorems-of-calculus.html#lemma-chasles-relation" class="xref" data-knowl="./knowl/xref/lemma-chasles-relation.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 6.2.1: Chasles’ relation">Chasles’ relation</a> and <a href="section-riemann-sums-and-integrals.html#lemma-riemann-integration-and-comparison" class="xref" data-knowl="./knowl/xref/lemma-riemann-integration-and-comparison.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 6.1.14: Riemann integration and comparison">Lemma 6.1.14 Riemann integration and comparison</a> imply that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-chasles-relation.html ./knowl/xref/lemma-riemann-integration-and-comparison.html ./knowl/xref/theorem-monotone-convergence-theorem.html" id="lemma-comparison-of-non-negative-improper-integrals-3-1-10">
+\begin{align*}
+F_{ \clint{ a }{ b } } \amp = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } }\\
+\amp \leq \int_{ c }^{ a }{ f \of{ x } \, \diff{ x } } + \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } + \int_{ b }^{ d }{ f \of{ x } \, \diff{ x } }\\
+\amp = \int_{ c }^{ d }{ f \of{ x } \, \diff{ x } } = F_{ \clint{ c }{ d } }\text{,}
+\end{align*}
+</div>
+<div class="para">and similarly that <span class="process-math">\(G_{ \clint{ a }{ b } } \leq G_{ \clint{ c }{ d } } \text{.}\)</span> The net analogue of the <a href="section-limits-in-the-euclidean-metric.html#theorem-monotone-convergence-theorem" class="xref" data-knowl="./knowl/xref/theorem-monotone-convergence-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.13: Monotone convergence theorem">Monotone convergence theorem</a> implies that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-chasles-relation.html ./knowl/xref/lemma-riemann-integration-and-comparison.html ./knowl/xref/theorem-monotone-convergence-theorem.html" id="lemma-comparison-of-non-negative-improper-integrals-3-1-13">
+\begin{equation*}
+\int_{ \inf \of{ X } }^{ \sup \of{ X } }{ g \of{ x } \, \diff{ x } } = \lim_{ \clint{ a }{ b } \uparrow }{ G_{ \clint{ a }{ b } } } = \sup_{ \clint{ a }{ b } \in \mathcal{ K }_{ X } }{ G_{ \clint{ a }{ b } } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-comparison-of-non-negative-improper-integrals-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="lemma-comparison-of-non-negative-improper-integrals-3-2">
+<div class="para">We observe that for any compact subinterval <span class="process-math">\(\clint{ a }{ b } \in \mathcal{ K }_{ X } \)</span> of the interior <span class="process-math">\(\Int \of{ X } \text{,}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-riemann-integration-and-comparison.html ./knowl/xref/theorem-monotone-convergence-theorem.html" id="lemma-comparison-of-non-negative-improper-integrals-3-2-3">
+\begin{align*}
+F_{ \clint{ a }{ b } } \amp = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } \leq \int_{ a }^{ b }{ g \of{ x } \, \diff{ x } }\\
+\amp \leq \sup_{ \clint{ c }{ d } \in \mathcal{ K }_{ X } }{ G \of{ \clint{ c }{ d } } } = \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ g \of{ x } \, \diff{ x } }
+\end{align*}
+</div>
+<div class="para">by <a href="section-riemann-sums-and-integrals.html#lemma-riemann-integration-and-comparison" class="xref" data-knowl="./knowl/xref/lemma-riemann-integration-and-comparison.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 6.1.14: Riemann integration and comparison">Lemma 6.1.14 Riemann integration and comparison</a>, and so another application of the net analogue of the <a href="section-limits-in-the-euclidean-metric.html#theorem-monotone-convergence-theorem" class="xref" data-knowl="./knowl/xref/theorem-monotone-convergence-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.13: Monotone convergence theorem">Monotone convergence theorem</a> implies that <span class="process-math">\(\of{ F_{ \clint{ a }{ b } } }_{ \clint{ a }{ b } \in \mathcal{ K }_{ X } } \)</span> converges upwards to</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-riemann-integration-and-comparison.html ./knowl/xref/theorem-monotone-convergence-theorem.html" id="lemma-comparison-of-non-negative-improper-integrals-3-2-7">
+\begin{equation*}
+\lim_{ \clint{ a }{ b } \uparrow }{ F_{ \clint{ a }{ b } } } = \sup_{ \clint{ a }{ b } \in \mathcal{ K }_{ X } }{ F_{ \clint{ a }{ b } } } \leq \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ g \of{ x } \, \diff{ x } }\text{.}
+\end{equation*}
+</div>
+<div class="para">That is, <span class="process-math">\(f \)</span> is improperly integrable, with improper integral</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma-riemann-integration-and-comparison.html ./knowl/xref/theorem-monotone-convergence-theorem.html" id="lemma-comparison-of-non-negative-improper-integrals-3-2-9">
+\begin{equation*}
+0 \leq \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } } \leq \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ g \of{ x } \, \diff{ x } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-comparison-of-non-negative-improper-integrals-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 6.3.12.1"><a tabindex="-1" href="#lemma-comparison-of-non-negative-improper-integrals-3" title="Copy heading and permalink for Proof 6.3.12.1" aria-label="Copy heading and permalink for Proof 6.3.12.1">🔗</a></div>
+</article></details>
+<article class="theorem theorem-like" id="theorem-comparison-test-for-integral-convergence"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comparison test for integral convergence.</span>
+</h3>
+<div class="para logical" id="theorem-comparison-test-for-integral-convergence-2-1">
+<div class="para">Let <span class="process-math">\(f , g , h \colon X \to \R \)</span> be real-valued functions defined on an interval <span class="process-math">\(X \text{,}\)</span> and suppose that <span class="process-math">\(f \of{ x } \leq g \of{ x } \leq h \of{ x } \)</span> for all points <span class="process-math">\(x \in X \text{.}\)</span> If the restriction of <span class="process-math">\(g \)</span> to any compact subinterval of the interior <span class="process-math">\(\Int \of{ X } \)</span> is integrable and <span class="process-math">\(f \)</span> and <span class="process-math">\(h \)</span> are improperly integrable, then <span class="process-math">\(g \)</span> is improperly integrable, and</div>
+<div class="displaymath process-math" id="theorem-comparison-test-for-integral-convergence-2-1-10">
+\begin{equation*}
+\int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } } \leq \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ g \of{ x } \, \diff{ x } } \leq \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ h \of{ x } \, \diff{ x } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-comparison-test-for-integral-convergence-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 6.3.13: Comparison test for integral convergence"><a tabindex="-1" href="#theorem-comparison-test-for-integral-convergence" title="Copy heading and permalink for Theorem 6.3.13: Comparison test for integral convergence" aria-label="Copy heading and permalink for Theorem 6.3.13: Comparison test for integral convergence">🔗</a></div>
+</article>
+<details id="theorem-comparison-test-for-integral-convergence-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="theorem-comparison-test-for-integral-convergence-3-1">We note that <span class="process-math">\(g - f \)</span> and <span class="process-math">\(h - f \)</span> satisfy the hypotheses of <a href="section-improper-integration.html#lemma-comparison-of-non-negative-improper-integrals" class="xref" data-knowl="./knowl/xref/lemma-comparison-of-non-negative-improper-integrals.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 6.3.12: Comparison of non-negative improper integrals">Lemma 6.3.12 Comparison of non-negative improper integrals</a>, and so the desired result now follows immediately from <a href="section-improper-integration.html#lemma-comparison-of-non-negative-improper-integrals" class="xref" data-knowl="./knowl/xref/lemma-comparison-of-non-negative-improper-integrals.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 6.3.12: Comparison of non-negative improper integrals">Lemma 6.3.12 Comparison of non-negative improper integrals</a> and <a href="section-improper-integration.html#proposition-arithmetic-of-improperly-integrable-functions" class="xref" data-knowl="./knowl/xref/proposition-arithmetic-of-improperly-integrable-functions.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 6.3.9: Arithmetic of improperly integrable functions">Proposition 6.3.9 Arithmetic of improperly integrable functions</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-comparison-test-for-integral-convergence-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 6.3.13.1"><a tabindex="-1" href="#theorem-comparison-test-for-integral-convergence-3" title="Copy heading and permalink for Proof 6.3.13.1" aria-label="Copy heading and permalink for Proof 6.3.13.1">🔗</a></div>
+</article></details>
+<article class="corollary theorem-like" id="corollary-absolute-integrability-implies-integrability"><h3 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Absolute integrability implies improper integrability.</span>
+</h3>
+<div class="para logical" id="corollary-absolute-integrability-implies-integrability-2-1">
+<div class="para">Let <span class="process-math">\(f \colon X \to \R \)</span> be a real-valued function defined on an interval <span class="process-math">\(X \text{.}\)</span> If the restriction of <span class="process-math">\(f \)</span> to every compact subinterval of the interior <span class="process-math">\(\Int \of{ X } \)</span> is integrable and <span class="process-math">\(f \)</span> is absolutely integrable, then <span class="process-math">\(f \)</span> is improperly integrable, and</div>
+<div class="displaymath process-math" id="corollary-absolute-integrability-implies-integrability-2-1-7">
+\begin{equation*}
+\abs{ \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } } } \leq \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ \abs{ f \of{ x } } \, \diff{ x } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-absolute-integrability-implies-integrability-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Corollary 6.3.14: Absolute integrability implies improper integrability"><a tabindex="-1" href="#corollary-absolute-integrability-implies-integrability" title="Copy heading and permalink for Corollary 6.3.14: Absolute integrability implies improper integrability" aria-label="Copy heading and permalink for Corollary 6.3.14: Absolute integrability implies improper integrability">🔗</a></div>
+</article>
+<details id="corollary-absolute-integrability-implies-integrability-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="corollary-absolute-integrability-implies-integrability-3-1">
+<div class="para">Since <span class="process-math">\(f \)</span> is absolutely integrable, <span class="process-math">\(\abs{ f } \)</span> is improperly integrable. We observe that (2) of <a href="section-improper-integration.html#proposition-arithmetic-of-improperly-integrable-functions" class="xref" data-knowl="./knowl/xref/proposition-arithmetic-of-improperly-integrable-functions.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 6.3.9: Arithmetic of improperly integrable functions">Proposition 6.3.9 Arithmetic of improperly integrable functions</a> implies that <span class="process-math">\(-\abs{ f } \)</span> is also improperly integrable. Since <span class="process-math">\(-\abs{ f \of{ x } } \leq f \of{ x } \leq \abs{ f \of{ x } } \text{,}\)</span> the <a href="section-improper-integration.html#theorem-comparison-test-for-integral-convergence" class="xref" data-knowl="./knowl/xref/theorem-comparison-test-for-integral-convergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.3.13: Comparison test for integral convergence">Comparison test for integral convergence</a> implies that <span class="process-math">\(f \)</span> is improperly integrable, with improper integral</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-arithmetic-of-improperly-integrable-functions.html ./knowl/xref/theorem-comparison-test-for-integral-convergence.html" id="corollary-absolute-integrability-implies-integrability-3-1-8">
+\begin{equation*}
+-\int_{ \inf \of{ X } }^{ \sup \of{ X } }{ \abs{ f \of{ x } } \, \diff{ x } } \leq \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } } \leq \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ \abs{ f \of{ x } } \, \diff{ x } }\text{.}
+\end{equation*}
+</div>
+<div class="para">Taking absolute values, we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-arithmetic-of-improperly-integrable-functions.html ./knowl/xref/theorem-comparison-test-for-integral-convergence.html" id="corollary-absolute-integrability-implies-integrability-3-1-9">
+\begin{equation*}
+0 \leq \abs{ \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ f \of{ x } \, \diff{ x } } } \leq \int_{ \inf \of{ X } }^{ \sup \of{ X } }{ \abs{ f \of{ x } } \, \diff{ x } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-absolute-integrability-implies-integrability-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 6.3.14.1"><a tabindex="-1" href="#corollary-absolute-integrability-implies-integrability-3" title="Copy heading and permalink for Proof 6.3.14.1" aria-label="Copy heading and permalink for Proof 6.3.14.1">🔗</a></div>
+</article></details>
+<details id="example-comparison-of-improper-integrals" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comparison of improper integrals.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-comparison-of-improper-integrals-2-1">
+<div class="para">Let <span class="process-math">\(f \colon \clopint{ 1 }{ \infty } \to \R \)</span> be the real-valued function defined by the formula</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-comparison-test-for-integral-convergence.html" id="example-comparison-of-improper-integrals-2-1-2">
+\begin{equation*}
+f \of{ x } = \frac{ a }{ x^{ 2 } + b }
+\end{equation*}
+</div>
+<div class="para">for some non-negative real numbers <span class="process-math">\(a , b \geq 0 \text{.}\)</span> Since <span class="process-math">\(f \)</span> is continuous, the restriction of <span class="process-math">\(f \)</span> to any compact subinterval of <span class="process-math">\(\opint{ 1 }{ \infty } \)</span> is integrable. We observe that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-comparison-test-for-integral-convergence.html" id="example-comparison-of-improper-integrals-2-1-7">
+\begin{equation*}
+0 \leq f \of{ x } = \frac{ a }{ x^{ 2 } + b } \lt \frac{ a }{ x^{ 2 } }
+\end{equation*}
+</div>
+<div class="para">for all points <span class="process-math">\(1 \leq x \lt \infty \text{.}\)</span> Since <span class="process-math">\(\frac{ a }{ x^{ 2 } } \)</span> is improperly integrable, the <a href="section-improper-integration.html#theorem-comparison-test-for-integral-convergence" class="xref" data-knowl="./knowl/xref/theorem-comparison-test-for-integral-convergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.3.13: Comparison test for integral convergence">Comparison test for integral convergence</a> implies that <span class="process-math">\(f \)</span> is improperly integrable, with improper integral</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-comparison-test-for-integral-convergence.html" id="example-comparison-of-improper-integrals-2-1-12">
+\begin{equation*}
+0 \leq \int_{ 1 }^{ \infty }{ f \of{ x } \, \diff{ x } } \leq \int_{ 1 }^{ \infty }{ \frac{ a }{ x^{ 2 } } \, \diff{ x } } = \frac{ a }{ 2 - 1 } = a\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-comparison-of-improper-integrals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 6.3.15: Comparison of improper integrals"><a tabindex="-1" href="#example-comparison-of-improper-integrals" title="Copy heading and permalink for Example 6.3.15: Comparison of improper integrals" aria-label="Copy heading and permalink for Example 6.3.15: Comparison of improper integrals">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-tests-for-integral-convergence-10">The hypothesis that <span class="process-math">\(b \geq 0 \)</span> is non-negative in <a href="section-improper-integration.html#example-comparison-of-improper-integrals" class="xref" data-knowl="./knowl/xref/example-comparison-of-improper-integrals.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.3.15: Comparison of improper integrals">Example 6.3.15 Comparison of improper integrals</a> was necessary in order to obtain the given comparison. However, the same conclusion holds for negative <span class="process-math">\(b \lt 0 \text{.}\)</span> One way to see this improper integrability is to apply the following result:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-tests-for-integral-convergence-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="theorem-limit-comparison-test-for-integral-convergence"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Limit comparison test for integral convergence.</span>
+</h3>
+<div class="para" id="theorem-limit-comparison-test-for-integral-convergence-2-1">Let <span class="process-math">\(f , g \colon X \to \R \)</span> be real-valued functions defined on an interval <span class="process-math">\(X \text{,}\)</span> and suppose that <span class="process-math">\(f \asymp g \)</span> as <span class="process-math">\(x \to \inf \of{ X } \)</span> and <span class="process-math">\(x \to \sup \of{ X } \text{.}\)</span> If the restriction of <span class="process-math">\(f \)</span> to any compact subinterval of the interior <span class="process-math">\(\Int \of{ X } \)</span> is integrable and <span class="process-math">\(g \)</span> is improperly integrable, then <span class="process-math">\(f \)</span> is improperly integrable.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-limit-comparison-test-for-integral-convergence-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 6.3.16: Limit comparison test for integral convergence"><a tabindex="-1" href="#theorem-limit-comparison-test-for-integral-convergence" title="Copy heading and permalink for Theorem 6.3.16: Limit comparison test for integral convergence" aria-label="Copy heading and permalink for Theorem 6.3.16: Limit comparison test for integral convergence">🔗</a></div>
+</article>
+<section class="conclusion" id="subsection-tests-for-integral-convergence-12">
+<div class="para" id="subsection-tests-for-integral-convergence-12-1">We will see in <a href="chapter-infinite-series.html" class="internal" title="Chapter 7: Infinite Series">Chapter 7 Infinite Series</a> that several of these tests for improper integrability correspond to analogous tests for series convergence. This is one example of a deep relationship between integrals and series which will be explored further in <code class="code-inline tex2jax_ignore">[provisional cross-reference: chapter-lebesgue-integration]</code>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-tests-for-integral-convergence-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Subsection 6.3.2: Tests for Integral Convergence"><a tabindex="-1" href="#subsection-tests-for-integral-convergence" title="Copy heading and permalink for Subsection 6.3.2: Tests for Integral Convergence" aria-label="Copy heading and permalink for Subsection 6.3.2: Tests for Integral Convergence">🔗</a></div>
+</section>
+<section class="conclusion" id="section-improper-integration-5">
+<div class="para" id="section-improper-integration-5-1">In the next section, we will explore some of the properties of the theory of Riemann integration which make it less suitable as a vehicle for exploring the analysis of real-valued functions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-improper-integration-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="exercises" id="exercises-improper-integration">
+<h2 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h2>
+<section class="introduction" id="exercises-improper-integration-2">
+<div class="para" id="exercises-improper-integration-2-1">The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-improper-integration-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="conclusion" id="exercises-improper-integration-3">
+<div class="para" id="exercises-improper-integration-3-1">Short answers and/or in-depth solutions to these exercises are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-improper-integration-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Exercises 6.3.3: Exercises"><a tabindex="-1" href="#exercises-improper-integration" title="Copy heading and permalink for Exercises 6.3.3: Exercises" aria-label="Copy heading and permalink for Exercises 6.3.3: Exercises">🔗</a></div>
+</section>
+<section class="reading-questions" id="problems-improper-integration">
+<h2 class="heading hide-type">
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
+</h2>
+<section class="introduction" id="problems-improper-integration-2">
+<div class="para" id="problems-improper-integration-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-improper-integration-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="conclusion" id="problems-improper-integration-3">
+<div class="para" id="problems-improper-integration-3-1">In-depth solutions to these problems are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-improper-integration-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 6.3.4: Problems"><a tabindex="-1" href="#problems-improper-integration" title="Copy heading and permalink for Reading Questions 6.3.4: Problems" aria-label="Copy heading and permalink for Reading Questions 6.3.4: Problems">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 6.3: Improper Integration"><a tabindex="-1" href="#section-improper-integration" title="Copy heading and permalink for Section 6.3: Improper Integration" aria-label="Copy heading and permalink for Section 6.3: Improper Integration">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="section-the-fundamental-theorems-of-calculus.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section-deficiencies-of-the-riemann-integral.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

@@ -929,8 +929,10 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Partial Sums and Infinite Series</span></a></div>
 <ul class="structural toc-item-list active" id="ptx-toc-group-section-partial-sums-and-infinite-series">
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#exercises-partial-sums-and-infinite-series" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#reading-questions-partial-sums-and-infinite-series" class="internal"><span class="codenumber">7.1</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#subsection-infinitely-iterated-sums" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Infinitely Iterated Sums</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#subsection-rearrangements-of-infinite-series" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Rearrangements of Infinite Series [SKIP]</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#exercises-partial-sums-and-infinite-series" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#reading-questions-partial-sums-and-infinite-series" class="internal"><span class="codenumber">7.1.4</span> <span class="title">Reading Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -975,32 +977,614 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Partial Sums and Infinite Series</span>
 </h1>
 <section class="introduction" id="section-partial-sums-and-infinite-series-2">
-<div class="para" id="section-partial-sums-and-infinite-series-2-1">Text before the first subsection.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-partial-sums-and-infinite-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="section-partial-sums-and-infinite-series-2-1">We begin by developing a notion of convergence and divergence for series of real numbers. These ideas build directly on the convergence and divergence of sequences of real numbers. In fact, a series converges/diverges if and only if an associated sequence of real numbers (although <em class="emphasis">not</em> the sequence of terms) does.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-partial-sums-and-infinite-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="conclusion" id="section-partial-sums-and-infinite-series-3">
-<div class="para" id="section-partial-sums-and-infinite-series-3-1">Text after the last subsection.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-partial-sums-and-infinite-series-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="subsection" id="subsection-infinitely-iterated-sums">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Infinitely Iterated Sums</span>
+</h2>
+<section class="introduction" id="subsection-infinitely-iterated-sums-2">
+<div class="para" id="subsection-infinitely-iterated-sums-2-1">Because the sum of two real numbers is itself a real number (that is, addition is a binary relation on <span class="process-math">\(\R \)</span>), the sum of three (or four, or five, or six) real numbers is also a real number. In fact, we can add together any finite sequence of real numbers and obtain a real number. If we instead start with an infinite sequence of real numbers, we can thus form a sequence whose <span class="process-math">\(n \)</span>th entry is the sum of the first <span class="process-math">\(n \)</span> numbers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-infinitely-iterated-sums-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="definition definition-like" id="definition-series"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Series.</span>
+</h3>
+<div class="para logical" id="definition-series-6-1">
+<div class="para">The <dfn class="terminology">series</dfn> associated to a sequence <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> of real numbers <span class="process-math">\(x_{ n } \in \R \)</span> called <dfn class="terminology">terms</dfn> is a formal expression of the form</div>
+<div class="displaymath process-math" id="definition-series-6-1-5">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ x_{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="para">For each index <span class="process-math">\(n \in \N \text{,}\)</span> the <span class="process-math">\(n \)</span>th <dfn class="terminology">partial sum</dfn> <span class="process-math">\(S_{ n } \)</span> is the finite sum</div>
+<div class="displaymath process-math" id="definition-series-6-1-10">
+\begin{equation*}
+S_{ n } = \sum_{ k = 0 }^{ n }{ x_{ k } }\text{,}
+\end{equation*}
+</div>
+<div class="para">and the <span class="process-math">\(n \)</span>th <dfn class="terminology">tail</dfn> <span class="process-math">\(T_{ n } \)</span> is the series</div>
+<div class="displaymath process-math" id="definition-series-6-1-14">
+\begin{equation*}
+T_{ n } = \sum_{ k = n + 1 }^{ \infty }{ x_{ k } } = \sum_{ k = 0 }^{ \infty }{ x_{ k + n + 1 } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-series-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 7.1.1: Series"><a tabindex="-1" href="#definition-series" title="Copy heading and permalink for Definition 7.1.1: Series" aria-label="Copy heading and permalink for Definition 7.1.1: Series">🔗</a></div>
+</article>
+<details id="example-geometric-series" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Geometric series.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-geometric-series-5-1">
+<div class="para">A <dfn class="terminology">geometric series</dfn> of <dfn class="terminology">initial value</dfn> <span class="process-math">\(a \in \R \)</span> and <dfn class="terminology">ratio</dfn> <span class="process-math">\(r \in \R \)</span> is the series of the form</div>
+<div class="displaymath process-math" id="example-geometric-series-5-1-6">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ a r^{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="para">If <span class="process-math">\(r = 1 \text{,}\)</span> then the partial sums of such a geometric series are</div>
+<div class="displaymath process-math" id="example-geometric-series-5-1-8">
+\begin{align*}
+S_{ n } \amp = \sum_{ k = 0 }^{ n }{ a r^{ k } } = a + a r + a r^{ 2 } + \dotsb + a r^{ n }\\
+\amp = a + a + a + \dotsb + a = a \of{ n + 1 }
+\end{align*}
+</div>
+<div class="para">On the other hand, if <span class="process-math">\(r \neq 1 \text{,}\)</span> then we claim that the partial sums of such a geometric series are</div>
+<div class="displaymath process-math" id="example-geometric-series-5-1-10">
+\begin{align*}
+S_{ n } \amp = \sum_{ k = 0 }^{ n }{ a r^{ k } } = a + a r + a r^{ 2 } + \dotsb + a r^{ n }\\
+\amp = \frac{ a \of{ 1 - r^{ n + 1 } } }{ 1 - r }\text{.}
+\end{align*}
+</div>
+<div class="para">We can verify this computation by induction on <span class="process-math">\(n \in \N \text{.}\)</span> Indeed, for the base case <span class="process-math">\(n = 0 \text{,}\)</span> we see that</div>
+<div class="displaymath process-math" id="example-geometric-series-5-1-13">
+\begin{align*}
+S_{ n } \amp = S_{ 0 } = \sum_{ k = 0 }^{ 0 }{ a r^{ k } } = a r^{ 0 } = a \\
+\amp = a \of{ \frac{ 1 - r }{ 1 - r } } = \frac{ a \of{ 1 - r^{ 1 } } }{ 1 - r } = \frac{ a \of{ 1 - r^{ n + 1 } } }{ 1 - r }\text{.}
+\end{align*}
+</div>
+<div class="para">For the inductive step, suppose that</div>
+<div class="displaymath process-math" id="example-geometric-series-5-1-14">
+\begin{equation*}
+S_{ n } = \frac{ a \of{ 1 - r^{ n + 1 } } }{ 1 - r }
+\end{equation*}
+</div>
+<div class="para">for some index <span class="process-math">\(n \in \N \text{.}\)</span> We now observe that</div>
+<div class="displaymath process-math" id="example-geometric-series-5-1-16">
+\begin{align*}
+S_{ n + 1 } \amp = \sum_{ k = 0 }^{ n + 1 }{ a r^{ k } } = \sum_{ k = 0 }^{ n }{ a r^{ k } } + a r^{ n + 1 } = \frac{ a \of{ 1 - r^{ n + 1 } } }{ 1 - r } + a r^{ n + 1 }\\
+\amp = \frac{ a \of{ 1 - r^{ n + 1 } } + a r^{ n + 1 } \of{ 1 - r } }{ 1 - r }\\
+\amp = \frac{ a - a r^{ n + 1 } + a r^{ n + 1 } - a r^{ n + 2 } }{ 1 - r }\\
+\amp = \frac{ a - a r^{ n + 2 } }{ 1 - r } = \frac{ a \of{ 1 - r^{ \of{ n + 1 } + 1 } } }{ 1 - r }\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-geometric-series-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 7.1.2: Geometric series"><a tabindex="-1" href="#example-geometric-series" title="Copy heading and permalink for Example 7.1.2: Geometric series" aria-label="Copy heading and permalink for Example 7.1.2: Geometric series">🔗</a></div>
+</article></details>
+<article class="definition definition-like" id="definition-series-convergence-divergence"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Series convergence/divergence.</span>
+</h3>
+<div class="para logical" id="definition-series-convergence-divergence-4-1">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of real numbers <span class="process-math">\(x_{ m } \in \R \text{,}\)</span> and consider the associated series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n } } \text{.}\)</span>
+</div>
+<ul class="disc" id="definition-series-convergence-divergence-4-1-4">
+<li id="definition-series-convergence-divergence-4-1-4-1">
+<span class="heading li--heading"><span class="title li--heading-title">Series convergence.</span></span>
+<div class="para logical" id="definition-series-convergence-divergence-4-1-4-1-2">
+<div class="para">The series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n } } \)</span> <dfn class="terminology">converges</dfn> to a real number <span class="process-math">\(S \in \R \)</span> if the sequence <span class="process-math">\(\of{ S_{ n } }_{ n = 0 }^{ \infty } \)</span> of partial sums</div>
+<div class="displaymath process-math" id="definition-series-convergence-divergence-4-1-4-1-2-5">
+\begin{equation*}
+S_{ n } = \sum_{ k = 0 }^{ n }{ x_{ k } }
+\end{equation*}
+</div>
+<div class="para">converges to <span class="process-math">\(S \text{.}\)</span> In this case, we call <span class="process-math">\(S \)</span> the <dfn class="terminology">value</dfn> of the series, and write</div>
+<div class="displaymath process-math" id="definition-series-convergence-divergence-4-1-4-1-2-9">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ x_{ n } } = S = \lim_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ x_{ k } } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-series-convergence-divergence-4-1-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Series convergence"><a tabindex="-1" href="#definition-series-convergence-divergence-4-1-4-1" title="Copy heading and permalink for Item: Series convergence" aria-label="Copy heading and permalink for Item: Series convergence">🔗</a></div>
+</li>
+<li id="definition-series-convergence-divergence-4-1-4-2">
+<span class="heading li--heading"><span class="title li--heading-title">Series divergence.</span></span>
+<div class="para logical" id="definition-series-convergence-divergence-4-1-4-2-2">
+<div class="para">The series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n } } \)</span> <dfn class="terminology">diverges</dfn> if the sequence <span class="process-math">\(\of{ S_{ n } }_{ n = 0 }^{ \infty } \)</span> of partial sums</div>
+<div class="displaymath process-math" id="definition-series-convergence-divergence-4-1-4-2-2-4">
+\begin{equation*}
+S_{ n } = \sum_{ k = 0 }^{ n }{ x_{ k } }
+\end{equation*}
+</div>
+<div class="para">diverges.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-series-convergence-divergence-4-1-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="definition-series-convergence-divergence-4-1-4-2-3">
+<div class="para">A special case of series divergence is series <dfn class="terminology">divergence to infinity</dfn>. If the sequence <span class="process-math">\(\of{ S_{ n } }_{ n = 0 }^{ \infty } \)</span> diverges to <span class="process-math">\(\pm \infty \text{,}\)</span> then we write</div>
+<div class="displaymath process-math" id="definition-series-convergence-divergence-4-1-4-2-3-4">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ x_{ n } } = \pm \infty = \lim_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ x_{ k } } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-series-convergence-divergence-4-1-4-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Series divergence"><a tabindex="-1" href="#definition-series-convergence-divergence-4-1-4-2" title="Copy heading and permalink for Item: Series divergence" aria-label="Copy heading and permalink for Item: Series divergence">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-series-convergence-divergence-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 7.1.3: Series convergence/divergence"><a tabindex="-1" href="#definition-series-convergence-divergence" title="Copy heading and permalink for Definition 7.1.3: Series convergence/divergence" aria-label="Copy heading and permalink for Definition 7.1.3: Series convergence/divergence">🔗</a></div>
+</article>
+<details id="example-series-convergence-divergence" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Series convergence/divergence.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-series-convergence-divergence-2-1">
+<div class="para">Consider the geometric series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ a r^{ n } } \)</span> of initial value <span class="process-math">\(a \in \R \)</span> and ratio <span class="process-math">\(r \in \R \text{,}\)</span> and let <span class="process-math">\(\of{ S_{ n } }_{ n = 0 }^{ \infty } \)</span> be the sequence of partial sums</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-5">
+\begin{equation*}
+S_{ n } = \sum_{ k = 0 }^{ n }{ a r^{ k } }\text{.}
+\end{equation*}
+</div>
+<div class="para">We will see that the convergence or divergence of this geometric series depends on both <span class="process-math">\(a \)</span> and <span class="process-math">\(r \text{.}\)</span>
+</div>
+<ul class="disc" id="example-series-convergence-divergence-2-1-8">
+<li id="example-series-convergence-divergence-2-1-8-1">
+<div class="para logical" id="example-series-convergence-divergence-2-1-8-1-1">
+<div class="para">We first observe that if <span class="process-math">\(a = 0 \text{,}\)</span> then</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-8-1-1-2">
+\begin{equation*}
+S_{ n } = \sum_{ k = 0 }^{ n }{ a r^{ k } } = \sum_{ k = 0 }^{ n }{ 0 } = 0
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \in \N \text{,}\)</span> and so</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-8-1-1-4">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ a r^{ n } } = \lim_{ n \to \infty }{ S_{ n } } = \lim_{ n \to \infty }{ 0 } = 0\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-series-convergence-divergence-2-1-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-series-convergence-divergence-2-1-8-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-series-convergence-divergence-2-1-8-2">
+<div class="para logical" id="example-series-convergence-divergence-2-1-8-2-1">
+<div class="para">Now suppose that <span class="process-math">\(a \neq 0 \)</span> and <span class="process-math">\(r = 0 \text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-8-2-1-3">
+\begin{equation*}
+S_{ n } = a
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \in \N \text{,}\)</span> and so</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-8-2-1-5">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ a r^{ n } } = \lim_{ n \to \infty }{ S_{ n } } = \lim_{ n \to \infty }{ a } = a\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-series-convergence-divergence-2-1-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-series-convergence-divergence-2-1-8-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-series-convergence-divergence-2-1-8-3">
+<div class="para logical" id="example-series-convergence-divergence-2-1-8-3-1">
+<div class="para">Now suppose that <span class="process-math">\(a \neq 0 \)</span> and <span class="process-math">\(0 \lt \abs{ r } \lt 1 \text{.}\)</span> Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. The Archimedean principle implies that</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-8-3-1-4">
+\begin{equation*}
+n_{ \epsilon } \gt \frac{ \ln \of{ \epsilon } + \ln \of{ 1 - r } }{ \ln \of{ \abs{ r } } } - 1
+\end{equation*}
+</div>
+<div class="para">for some natural number <span class="process-math">\(n_{ \epsilon } \in \N \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-8-3-1-6">
+\begin{align*}
+\abs{ S_{ n } - \frac{ a }{ 1 - r } } \amp = \abs{ \frac{ a \of{ 1 - r^{ n + 1 } } }{ 1 - r } - \frac{ a }{ 1 - r } } = \frac{ \abs{ -r^{ n + 1 } } }{ \abs{ 1 - r } }\\
+\amp = \frac{ \abs{ r }^{ n + 1 } }{ 1 - r } \leq \frac{ \abs{ r }^{ n_{ \epsilon } + 1 } }{ 1 - r } \lt \epsilon
+\end{align*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> Thus the geometric series converges to</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-8-3-1-8">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ a r^{ n } } = \lim_{ n \to \infty }{ S_{ n } } = \frac{ a }{ 1 - r }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-series-convergence-divergence-2-1-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-series-convergence-divergence-2-1-8-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-series-convergence-divergence-2-1-8-4">
+<div class="para logical" id="example-series-convergence-divergence-2-1-8-4-1">
+<div class="para">Now suppose that <span class="process-math">\(a \gt 0 \)</span> and <span class="process-math">\(r = 1 \text{.}\)</span> Let <span class="process-math">\(B \in \R \)</span> be a real number. The Archimedean principle implies that</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-8-4-1-4">
+\begin{equation*}
+n_{ B } \gt \frac{ B }{ a } - 1
+\end{equation*}
+</div>
+<div class="para">for some natural number <span class="process-math">\(n_{ B } \in \N \text{.}\)</span> We observe</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-8-4-1-6">
+\begin{equation*}
+S_{ n } = \of{ n + 1 } a \geq \of{ n_{ B } + 1 } a \gt B
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ B } \text{.}\)</span> Thus the geometric series diverges to <span class="process-math">\(\infty \text{;}\)</span> that is,</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-8-4-1-9">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ a r^{ n } } = \lim_{ n \to \infty }{ S_{ n } } = \infty\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-series-convergence-divergence-2-1-8-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-series-convergence-divergence-2-1-8-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-series-convergence-divergence-2-1-8-5">
+<div class="para logical" id="example-series-convergence-divergence-2-1-8-5-1">
+<div class="para">Now suppose that <span class="process-math">\(a \lt 0 \)</span> and <span class="process-math">\(r = 1 \text{.}\)</span> Let <span class="process-math">\(B \in \R \)</span> be a real number. The Archimedean principle implies that</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-8-5-1-4">
+\begin{equation*}
+n_{ B } \gt \frac{ B }{ a } - 1
+\end{equation*}
+</div>
+<div class="para">for some natural number <span class="process-math">\(n_{ B } \in \N \text{.}\)</span> We observe</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-8-5-1-6">
+\begin{equation*}
+S_{ n } = \of{ n + 1 } a \leq \of{ n_{ B } + 1 } a \lt B
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ B } \text{.}\)</span> Thus the geometric series diverges to <span class="process-math">\(-\infty \text{;}\)</span> that is,</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-8-5-1-9">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ a r^{ n } } = \lim_{ n \to \infty }{ S_{ n } } = -\infty\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-series-convergence-divergence-2-1-8-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-series-convergence-divergence-2-1-8-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-series-convergence-divergence-2-1-8-6">
+<div class="para logical" id="example-series-convergence-divergence-2-1-8-6-1">
+<div class="para">Now suppose that <span class="process-math">\(a \neq 0 \)</span> and <span class="process-math">\(r = -1 \text{.}\)</span> Then the geometric series has partial sums</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-8-6-1-3">
+\begin{align*}
+S_{ n } \amp = \frac{ a \of{ 1 - r^{ n + 1 } } }{ 1 - r } = \frac{ a \of{ 1 - \of{ -1 }^{ n + 1 } } }{ 1 - \of{ -1 } } = \frac{ a \of{ 1 + \of{ -1 }^{ n + 1 } } }{ 2 }\\
+\amp =
+\begin{cases}
+a \amp n \textrm{ is even} \\
+0 \amp n \textrm{ is odd}
+\end{cases}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-series-convergence-divergence-2-1-8-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-series-convergence-divergence-2-1-8-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-series-convergence-divergence-2-1-8-7">
+<div class="para logical" id="example-series-convergence-divergence-2-1-8-7-1">
+<div class="para">Now suppose that <span class="process-math">\(a \gt 0 \)</span> and <span class="process-math">\(r \gt 1 \text{.}\)</span> Let <span class="process-math">\(B \in \R \)</span> be a real number. The Archimedean principle implies that</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-8-7-1-4">
+\begin{equation*}
+n_{ B } \gt \frac{ \ln \of{ a - B \of{ 1 - r } } - \ln \of{ a } }{ \ln \of{ r } } - 1
+\end{equation*}
+</div>
+<div class="para">for some natural number <span class="process-math">\(n_{ B } \in \N \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-8-7-1-6">
+\begin{equation*}
+S_{ n } = \frac{ a \of{ 1 - r^{ n + 1 } } }{ 1 - r } \geq \frac{ a \of{ 1 - r^{ n_{ B } + 1 } } }{ 1 - r } \gt B
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ B } \text{.}\)</span> Thus the geometric series diverges to <span class="process-math">\(\infty \text{;}\)</span> that is,</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-8-7-1-9">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ a r^{ n } } = \lim_{ n \to \infty }{ S_{ n } } = \infty\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-series-convergence-divergence-2-1-8-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-series-convergence-divergence-2-1-8-7" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-series-convergence-divergence-2-1-8-8">
+<div class="para logical" id="example-series-convergence-divergence-2-1-8-8-1">
+<div class="para">Now suppose that <span class="process-math">\(a \lt 0 \)</span> and <span class="process-math">\(r \gt 1 \text{.}\)</span> Let <span class="process-math">\(B \in \R \)</span> be a real number. The Archimedean principle implies that</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-8-8-1-4">
+\begin{equation*}
+n_{ B } \gt \frac{ \ln \of{ a - B \of{ 1 - r } } - \ln \of{ a } }{ \ln \of{ r } } - 1
+\end{equation*}
+</div>
+<div class="para">for some natural number <span class="process-math">\(n_{ B } \in \N \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-8-8-1-6">
+\begin{equation*}
+S_{ n } = \frac{ a \of{ 1 - r^{ n + 1 } } }{ 1 - r } \leq \frac{ a \of{ 1 - r^{ n_{ B } + 1 } } }{ 1 - r } \lt B
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ B } \text{.}\)</span> Thus the geometric series diverges to <span class="process-math">\(\infty \text{;}\)</span> that is,</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-8-8-1-9">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ a r^{ n } } = \lim_{ n \to \infty }{ S_{ n } } = -\infty\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-series-convergence-divergence-2-1-8-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-series-convergence-divergence-2-1-8-8" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-series-convergence-divergence-2-1-8-9">
+<div class="para logical" id="example-series-convergence-divergence-2-1-8-9-1">
+<div class="para">Finally, suppose that <span class="process-math">\(a \neq 0 \)</span> and <span class="process-math">\(r \lt -1 \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-8-9-1-3">
+\begin{equation*}
+\abs{ S_{ n + 1 } - S_{ n } } = \abs{ \sum_{ k = 0 }^{ n + 1 }{ a r^{ k } } - \sum_{ k = 0 }^{ n }{ a r^{ k } } } = \abs{ a r^{ n + 1 } } = \abs{ a } \abs{ r }^{ n + 1 } \geq 1
+\end{equation*}
+</div>
+<div class="para">for any index <span class="process-math">\(n \in \N \)</span> so that</div>
+<div class="displaymath process-math" id="example-series-convergence-divergence-2-1-8-9-1-5">
+\begin{equation*}
+n \geq -\frac{ \ln \of{ \abs{ a } } }{ \ln \of{ \abs{ r } } } - 1\text{.}
+\end{equation*}
+</div>
+<div class="para">In particular, this implies that the sequence <span class="process-math">\(\of{ S_{ n } }_{ n = 0 }^{ \infty } \)</span> cannot be Cauchy, and therefore cannot converge. So the geometric series diverges.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-series-convergence-divergence-2-1-8-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-series-convergence-divergence-2-1-8-9" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">To summarize, the geometric series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ a r^{ n } } \)</span> converges if and only if <span class="process-math">\(a = 0 \)</span> or <span class="process-math">\(\abs{ r } \lt 1 \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-series-convergence-divergence-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 7.1.4: Series convergence/divergence"><a tabindex="-1" href="#example-series-convergence-divergence" title="Copy heading and permalink for Example 7.1.4: Series convergence/divergence" aria-label="Copy heading and permalink for Example 7.1.4: Series convergence/divergence">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-infinitely-iterated-sums-7">Several of the ideas presented above in <a href="section-partial-sums-and-infinite-series.html#example-series-convergence-divergence" class="xref" data-knowl="./knowl/xref/example-series-convergence-divergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.1.4: Series convergence/divergence">Example 7.1.4 Series convergence/divergence</a> can be generalized to help determine the convergence or divergence behavior of more general series. For example, the sequence of partial sums cannot be Cauchy unless the sequence of terms converges to <span class="process-math">\(0 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-infinitely-iterated-sums-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-convergent-series-have-convergent-terms"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Convergent series have convergent terms.</span>
+</h3>
+<div class="para logical" id="proposition-convergent-series-have-convergent-terms-2-1">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of real numbers <span class="process-math">\(x_{ n } \in \R \text{.}\)</span> If the series</div>
+<div class="displaymath process-math" id="proposition-convergent-series-have-convergent-terms-2-1-3">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ x_{ n } }
+\end{equation*}
+</div>
+<div class="para">converges, then <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> converges to <span class="process-math">\(0 \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-convergent-series-have-convergent-terms-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 7.1.5: Convergent series have convergent terms"><a tabindex="-1" href="#proposition-convergent-series-have-convergent-terms" title="Copy heading and permalink for Proposition 7.1.5: Convergent series have convergent terms" aria-label="Copy heading and permalink for Proposition 7.1.5: Convergent series have convergent terms">🔗</a></div>
+</article>
+<details id="proposition-convergent-series-have-convergent-terms-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="proposition-convergent-series-have-convergent-terms-3-1">
+<div class="para">By contraposition. Suppose that <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \text{.}\)</span> Then there is a positive real number <span class="process-math">\(\epsilon \gt 0 \)</span> so that <span class="process-math">\(\abs{ x_{ n } - 0 } \geq \epsilon \)</span> for infinitely many natural numbers <span class="process-math">\(n \in \N \text{.}\)</span> Let <span class="process-math">\(\of{ S_{ n } }_{ n = 0 }^{ \infty } \)</span> be the sequence of partial sums</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-convergent-sequences-are-cauchy.html" id="proposition-convergent-series-have-convergent-terms-3-1-6">
+\begin{equation*}
+S_{ n } = \sum_{ k = 0 }^{ n }{ x_{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="para">For any positive integer <span class="process-math">\(n \geq 1 \)</span> so that <span class="process-math">\(\abs{ x_{ n } - 0 } \geq \epsilon \text{,}\)</span> we observe that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-convergent-sequences-are-cauchy.html" id="proposition-convergent-series-have-convergent-terms-3-1-9">
+\begin{align*}
+\abs{ S_{ n } - S_{ n - 1 } } \amp = \abs{ \sum_{ k = 0 }^{ n }{ x_{ k } } - \sum_{ k = 0 }^{ n - 1 }{ x_{ k } } } = \abs{ x_{ n } }\\
+\amp = \abs{ x_{ n } - 0 } \geq \epsilon\text{.}
+\end{align*}
+</div>
+<div class="para">Since this occurs for infinitely many positive integers <span class="process-math">\(n \geq 1 \text{,}\)</span> we conclude that the sequence <span class="process-math">\(\of{ S_{ n } }_{ n = 0 }^{ \infty } \)</span> cannot be Cauchy. <a href="section-completeness-and-compactness.html#proposition-convergent-sequences-are-cauchy" class="xref" data-knowl="./knowl/xref/proposition-convergent-sequences-are-cauchy.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.6.3: Convergent sequences are Cauchy">Proposition 3.6.3 Convergent sequences are Cauchy</a> now implies that <span class="process-math">\(\of{ S_{ n } }_{ n = 0 }^{ \infty } \text{,}\)</span> and therefore the series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n } } \text{,}\)</span> diverges.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-convergent-series-have-convergent-terms-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 7.1.5.1"><a tabindex="-1" href="#proposition-convergent-series-have-convergent-terms-3" title="Copy heading and permalink for Proof 7.1.5.1" aria-label="Copy heading and permalink for Proof 7.1.5.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-infinitely-iterated-sums-9">Series convergence behaves well under termwise arithmetic. In particular, we may add convergent series term by term or scale a convergent series by a real number, and the convergent of the series is preserved.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-infinitely-iterated-sums-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-arithmetic-of-convergent-series"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Arithmetic of convergent series.</span>
+</h3>
+<ol class="decimal" id="proposition-arithmetic-of-convergent-series-2-1">
+<li id="proposition-arithmetic-of-convergent-series-2-1-1">
+<span class="heading li--heading"><span class="title li--heading-title">Addition of convergent series.</span></span>
+<div class="para logical" id="proposition-arithmetic-of-convergent-series-2-1-1-2">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> and <span class="process-math">\(\of{ y_{ n } }_{ n = 0 }^{ \infty } \)</span> be sequences of real numbers <span class="process-math">\(x_{ n } , y_{ n } \in \R \text{.}\)</span> If the series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n } } \)</span> and <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ y_{ n } } \)</span> converge, then so too does the series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n } + y_{ n } } \text{,}\)</span> and</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-convergent-series-2-1-1-2-7">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ x_{ n } + y_{ n } } = \sum_{ n = 0 }^{ \infty }{ x_{ n } } + \sum_{ n = 0 }^{ \infty }{ y_{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-arithmetic-of-convergent-series-2-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1: Addition of convergent series"><a tabindex="-1" href="#proposition-arithmetic-of-convergent-series-2-1-1" title="Copy heading and permalink for Item 1: Addition of convergent series" aria-label="Copy heading and permalink for Item 1: Addition of convergent series">🔗</a></div>
+</li>
+<li id="proposition-arithmetic-of-convergent-series-2-1-2">
+<span class="heading li--heading"><span class="title li--heading-title">Scalar multiplication of convergent series.</span></span>
+<div class="para logical" id="proposition-arithmetic-of-convergent-series-2-1-2-2">
+<div class="para">Let <span class="process-math">\(c \in \R \)</span> be a real number and <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of real numbers <span class="process-math">\(x_{ n } \in \R \text{.}\)</span> If the series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n } } \)</span> converges, then so too does the series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ c x_{ n } } \text{,}\)</span> and</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-convergent-series-2-1-2-2-6">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ c x_{ n } } = c \sum_{ n = 0 }^{ \infty }{ x_{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-arithmetic-of-convergent-series-2-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2: Scalar multiplication of convergent series"><a tabindex="-1" href="#proposition-arithmetic-of-convergent-series-2-1-2" title="Copy heading and permalink for Item 2: Scalar multiplication of convergent series" aria-label="Copy heading and permalink for Item 2: Scalar multiplication of convergent series">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 7.1.6: Arithmetic of convergent series"><a tabindex="-1" href="#proposition-arithmetic-of-convergent-series" title="Copy heading and permalink for Proposition 7.1.6: Arithmetic of convergent series" aria-label="Copy heading and permalink for Proposition 7.1.6: Arithmetic of convergent series">🔗</a></div>
+</article>
+<details id="proposition-arithmetic-of-convergent-series-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<ol class="decimal" id="proposition-arithmetic-of-convergent-series-3-1">
+<li id="proposition-arithmetic-of-convergent-series-3-1-1">
+<div class="para logical" id="proposition-arithmetic-of-convergent-series-3-1-1-1">
+<div class="para">Let <span class="process-math">\(\of{ S_{ n } }_{ n = 0 }^{ \infty } \)</span> and <span class="process-math">\(\of{ T_{ n } }_{ n = 0 }^{ \infty } \)</span> be the sequences of partial sums</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-convergent-series-3-1-1-1-3">
+\begin{align*}
+S_{ n } \amp = \sum_{ k = 0 }^{ n }{ x_{ k } } \amp T_{ n } \amp = \sum_{ k = 0 }^{ n }{ y_{ k } }\text{,}
+\end{align*}
+</div>
+<div class="para">and denote by <span class="process-math">\(X \)</span> and <span class="process-math">\(Y \)</span> the corresponding values of the series</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-convergent-series-3-1-1-1-6">
+\begin{align*}
+X \amp = \sum_{ n = 0 }^{ \infty }{ x_{ n } } = \lim_{ n \to \infty }{ S_{ n } }\\
+Y \amp = \sum_{ n = 0 }^{ \infty }{ y_{ n } } = \lim_{ n \to \infty }{ T_{ n } }\text{.}
+\end{align*}
+</div>
+<div class="para">Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Then there is a natural number <span class="process-math">\(n_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-convergent-series-3-1-1-1-9">
+\begin{equation*}
+\abs{ S_{ n } - X } \lt \frac{ \epsilon }{ 2 }
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-convergent-series-3-1-1-1-10">
+\begin{equation*}
+\abs{ T_{ n } - Y } \lt \frac{ \epsilon }{ 2 }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-convergent-series-3-1-1-1-12">
+\begin{align*}
+\abs{ \sum_{ k = 0 }^{ n }{ x_{ k } + y_{ k } } - \of{ X + Y } } \amp = \abs{ S_{ n } + T_{ n } - X - Y } \leq \abs{ S_{ n } - X } + \abs{ T_{ n } - Y }\\
+\amp \lt \frac{ \epsilon }{ 2 } + \frac{ \epsilon }{ 2 } = \epsilon
+\end{align*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> We conclude that the series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n } + y_{ n } } \)</span> converges to</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-convergent-series-3-1-1-1-15">
+\begin{align*}
+\sum_{ n = 0 }^{ \infty }{ x_{ n } + y_{ n } } = \lim_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ x_{ n } + y_{ n } } } = X + Y\\
+\amp = \sum_{ n = 0 }^{ \infty }{ x_{ n } } + \sum_{ n = 0 }^{ \infty }{ y_{ n } }\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-arithmetic-of-convergent-series-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#proposition-arithmetic-of-convergent-series-3-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="proposition-arithmetic-of-convergent-series-3-1-2">
+<div class="para logical" id="proposition-arithmetic-of-convergent-series-3-1-2-1">
+<div class="para">If <span class="process-math">\(c = 0 \text{,}\)</span> then</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-convergent-series-3-1-2-1-2">
+\begin{equation*}
+\sum_{ k = 0 }^{ n }{ c x_{ k } } = \sum_{ k = 0 }^{ n }{ 0 } = 0
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \in \N \text{,}\)</span> and so</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-convergent-series-3-1-2-1-4">
+\begin{align*}
+\sum_{ n = 0 }^{ \infty }{ c x_{ n } } \amp = \lim_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ c x_{ k } } } = \lim_{ n \to \infty }{ 0 } = 0\\
+\amp = 0 \sum_{ n = 0 }^{ \infty }{ x_{ n } } = c \sum_{ n = 0 }^{ \infty }{ x_{ n } }\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-arithmetic-of-convergent-series-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="proposition-arithmetic-of-convergent-series-3-1-2-2">
+<div class="para">We may therefore assume that <span class="process-math">\(c \neq 0 \text{.}\)</span> Let <span class="process-math">\(\of{ S_{ n } }_{ n = 0 }^{ \infty } \)</span> be the sequence of partial sums</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-convergent-series-3-1-2-2-3">
+\begin{equation*}
+S_{ n } = \sum_{ k = 0 }^{ n }{ x_{ k } }\text{,}
+\end{equation*}
+</div>
+<div class="para">and denote by <span class="process-math">\(X \)</span> the corresponding value of the series</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-convergent-series-3-1-2-2-5">
+\begin{equation*}
+X = \sum_{ n = 0 }^{ \infty }{ x_{ n } } = \lim_{ n \to \infty }{ S_{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(\epsilon \gt 0 \)</span> be a positive real number. Then there is a natural number <span class="process-math">\(n_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-convergent-series-3-1-2-2-8">
+\begin{equation*}
+\abs{ S_{ n } - X } \lt \frac{ \epsilon }{ \abs{ c } }
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-convergent-series-3-1-2-2-10">
+\begin{align*}
+\abs{ \sum_{ k = 0 }^{ n }{ c x_{ k } } - \of{ c X } } \amp = \abs{ c S_{ n } - c X } = \abs{ c } \abs{ S_{ n } - X }\\
+\amp \lt \abs{ c } \of{ \frac{ \epsilon }{ \abs{ c } } } = \epsilon
+\end{align*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \geq n_{ \epsilon } \text{.}\)</span> We conclude that the series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ c x_{ n } } \)</span> converges to</div>
+<div class="displaymath process-math" id="proposition-arithmetic-of-convergent-series-3-1-2-2-13">
+\begin{align*}
+\sum_{ n = 0 }^{ \infty }{ c x_{ n } } = \lim_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ c x_{ n } } } = c X\\
+\amp = c \sum_{ n = 0 }^{ \infty }{ x_{ n } }\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-arithmetic-of-convergent-series-3-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#proposition-arithmetic-of-convergent-series-3-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 7.1.6.1"><a tabindex="-1" href="#proposition-arithmetic-of-convergent-series-3" title="Copy heading and permalink for Proof 7.1.6.1" aria-label="Copy heading and permalink for Proof 7.1.6.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-infinitely-iterated-sums-11">We will also see that termwise multiplication of convergent series produces convergent series. In order to prove this, we will require additional sufficient criteria for series convergence developed in <a href="section-tests-for-series-convergence.html" class="internal" title="Section 7.2: Tests for Series Convergence">Section 7.2 Tests for Series Convergence</a>. We can, however, compare convergent series by comparing their terms.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-infinitely-iterated-sums-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="lemma theorem-like" id="lemma-comparison-of-convergent-series"><h3 class="heading">
+<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comparison of convergent series.</span>
+</h3>
+<div class="para logical" id="lemma-comparison-of-convergent-series-2-1">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> and <span class="process-math">\(\of{ y_{ n } }_{ n = 0 }^{ \infty } \)</span> be sequences of real numbers <span class="process-math">\(x_{ n } , y_{ n } \in \R \text{.}\)</span> If <span class="process-math">\(x_{ n } \leq y_{ n } \)</span> for all indices <span class="process-math">\(n \in \N \)</span> and the series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n } } \)</span> and <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ y_{ n } } \)</span> converge, then</div>
+<div class="displaymath process-math" id="lemma-comparison-of-convergent-series-2-1-8">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ x_{ n } } \leq \sum_{ n = 0 }^{ \infty }{ y_{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-comparison-of-convergent-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Lemma 7.1.7: Comparison of convergent series"><a tabindex="-1" href="#lemma-comparison-of-convergent-series" title="Copy heading and permalink for Lemma 7.1.7: Comparison of convergent series" aria-label="Copy heading and permalink for Lemma 7.1.7: Comparison of convergent series">🔗</a></div>
+</article>
+<details id="lemma-comparison-of-convergent-series-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="lemma-comparison-of-convergent-series-3-1">
+<div class="para">Let <span class="process-math">\(\of{ S_{ n } }_{ n = 0 }^{ \infty } \)</span> and <span class="process-math">\(\of{ T_{ n } }_{ n = 0 }^{ \infty } \)</span> be the sequences of partial sums</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-comparison-of-limits.html" id="lemma-comparison-of-convergent-series-3-1-3">
+\begin{align*}
+S_{ n } \amp = \sum_{ k = 0 }^{ n }{ x_{ k } } \amp T_{ n } \amp = \sum_{ k = 0 }^{ n }{ y_{ k } }\text{.}
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(x_{ k } \leq y_{ k } \)</span> for each index <span class="process-math">\(0 \leq k \leq n \text{,}\)</span> <span class="process-math">\(S_{ n } \leq T_{ n } \text{.}\)</span> We conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-comparison-of-limits.html" id="lemma-comparison-of-convergent-series-3-1-7">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ x_{ n } } = \lim_{ n \to \infty }{ S_{ n } } \leq \lim_{ n \to \infty }{ T_{ n } } = \sum_{ n = 0 }^{ \infty }{ y_{ n } }
+\end{equation*}
+</div>
+<div class="para">by <a href="section-limits-in-the-euclidean-metric.html#proposition-comparison-of-limits" class="xref" data-knowl="./knowl/xref/proposition-comparison-of-limits.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.3.2: Comparison of limits">Proposition 3.3.2 Comparison of limits</a>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-comparison-of-convergent-series-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 7.1.7.1"><a tabindex="-1" href="#lemma-comparison-of-convergent-series-3" title="Copy heading and permalink for Proof 7.1.7.1" aria-label="Copy heading and permalink for Proof 7.1.7.1">🔗</a></div>
+</article></details>
+<section class="conclusion" id="subsection-infinitely-iterated-sums-13">
+<div class="para" id="subsection-infinitely-iterated-sums-13-1">In the next section, we will build on <a href="section-partial-sums-and-infinite-series.html#lemma-comparison-of-convergent-series" class="xref" data-knowl="./knowl/xref/lemma-comparison-of-convergent-series.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 7.1.7: Comparison of convergent series">Lemma 7.1.7 Comparison of convergent series</a> significantly, establishing an analogue of the <a href="section-improper-integration.html#theorem-comparison-test-for-integral-convergence" class="xref" data-knowl="./knowl/xref/theorem-comparison-test-for-integral-convergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.3.13: Comparison test for integral convergence">Comparison test for integral convergence</a> for infinite series.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-infinitely-iterated-sums-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Subsection 7.1.1: Infinitely Iterated Sums"><a tabindex="-1" href="#subsection-infinitely-iterated-sums" title="Copy heading and permalink for Subsection 7.1.1: Infinitely Iterated Sums" aria-label="Copy heading and permalink for Subsection 7.1.1: Infinitely Iterated Sums">🔗</a></div>
+</section>
+<section class="subsection" id="subsection-rearrangements-of-infinite-series">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rearrangements of Infinite Series [SKIP]</span>
+</h2>
+<section class="introduction" id="subsection-rearrangements-of-infinite-series-2">
+<div class="para" id="subsection-rearrangements-of-infinite-series-2-1">Text before the first subdivision.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-rearrangements-of-infinite-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="conclusion" id="subsection-rearrangements-of-infinite-series-3">
+<div class="para" id="subsection-rearrangements-of-infinite-series-3-1">Text after the last subdivision.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-rearrangements-of-infinite-series-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Subsection 7.1.2: Rearrangements of Infinite Series [SKIP]"><a tabindex="-1" href="#subsection-rearrangements-of-infinite-series" title="Copy heading and permalink for Subsection 7.1.2: Rearrangements of Infinite Series [SKIP]" aria-label="Copy heading and permalink for Subsection 7.1.2: Rearrangements of Infinite Series [SKIP]">🔗</a></div>
+</section>
+<section class="conclusion" id="section-partial-sums-and-infinite-series-5">
+<div class="para" id="section-partial-sums-and-infinite-series-5-1">Text after the last subsection.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-partial-sums-and-infinite-series-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="reading-questions" id="exercises-partial-sums-and-infinite-series">
 <h2 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
 </h2>
 <section class="introduction" id="exercises-partial-sums-and-infinite-series-2">
 <div class="para" id="exercises-partial-sums-and-infinite-series-2-1">The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-partial-sums-and-infinite-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="conclusion" id="exercises-partial-sums-and-infinite-series-3">
 <div class="para" id="exercises-partial-sums-and-infinite-series-3-1">Short answers and/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-partial-sums-and-infinite-series-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 7.1: Exercises"><a tabindex="-1" href="#exercises-partial-sums-and-infinite-series" title="Copy heading and permalink for Reading Questions 7.1: Exercises" aria-label="Copy heading and permalink for Reading Questions 7.1: Exercises">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 7.1.3: Exercises"><a tabindex="-1" href="#exercises-partial-sums-and-infinite-series" title="Copy heading and permalink for Reading Questions 7.1.3: Exercises" aria-label="Copy heading and permalink for Reading Questions 7.1.3: Exercises">🔗</a></div>
 </section>
 <section class="reading-questions" id="reading-questions-partial-sums-and-infinite-series">
 <h2 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reading Questions</span>
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reading Questions</span>
 </h2>
 <section class="introduction" id="reading-questions-partial-sums-and-infinite-series-2">
 <div class="para" id="reading-questions-partial-sums-and-infinite-series-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#reading-questions-partial-sums-and-infinite-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="conclusion" id="reading-questions-partial-sums-and-infinite-series-3">
 <div class="para" id="reading-questions-partial-sums-and-infinite-series-3-1">In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#reading-questions-partial-sums-and-infinite-series-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 7.1: Reading Questions"><a tabindex="-1" href="#reading-questions-partial-sums-and-infinite-series" title="Copy heading and permalink for Reading Questions 7.1: Reading Questions" aria-label="Copy heading and permalink for Reading Questions 7.1: Reading Questions">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 7.1.4: Reading Questions"><a tabindex="-1" href="#reading-questions-partial-sums-and-infinite-series" title="Copy heading and permalink for Reading Questions 7.1.4: Reading Questions" aria-label="Copy heading and permalink for Reading Questions 7.1.4: Reading Questions">🔗</a></div>
 </section><div class="autopermalink" aria-hidden="true" data-description="Section 7.1: Partial Sums and Infinite Series"><a tabindex="-1" href="#section-partial-sums-and-infinite-series" title="Copy heading and permalink for Section 7.1: Partial Sums and Infinite Series" aria-label="Copy heading and permalink for Section 7.1: Partial Sums and Infinite Series">🔗</a></div>
 </section>
 </div>

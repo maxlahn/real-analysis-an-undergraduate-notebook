@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Higher Order Approximations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Real Analysis: An Undergraduate Notebook">
+<meta property="og:title" content="Real Analysis: An Undergraduate Notebook">
+<meta property="book:title" content="Real Analysis: An Undergraduate Notebook">
+<meta name="twitter:description" content="A simple string (no markup is allowed) to describe your book.">
+<meta property="og:description" content="A simple string (no markup is allowed) to describe your book.">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.45"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.1.16';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.279b1f0077454c32.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.db8001875cb726c2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="lahnrealanalysis" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="book-real-analysis.html"><span class="title">Real Analysis</span> <span class="subtitle">An Undergraduate Notebook</span></a></div>
+<p class="byline">Max Lahn</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="section-applications-of-the-mean-value-theorem.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-differentiation-and-smoothness.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="chapter-differentiation-and-smoothness-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(  \newcommand{\of}[1]{ \left ( #1 \right ) } 
+  
+  \newcommand{\class}[1]{ \left \lbrack { #1 } \right \rbrack } 
+  
+  \newcommand{\set}[1]{ \left \lbrace #1 \right \rbrace } 
+  \newcommand{\setmid}[2]{ \left \lbrace { #1 } \: \middle \vert \: { #2 } \right \rbrace }
+  
+  \newcommand{\abs}[1]{ \left \lvert { #1 } \right \rvert } 
+  \newcommand{\card}[1]{ \left \lvert { #1 } \right \rvert } 
+  
+  \newcommand{\norm}[1]{ \left \lVert { #1 } \right \rVert } 
+  
+  \newcommand{\gen}[1]{ \left \langle { #1 } \right \rangle } 
+  \newcommand{\genmid}[2]{ \left \langle { #1 } \: \middle \vert \: { #2 } \right \rangle }
+  
+  \newcommand{\ceil}[1]{ \left \lceil { #1 } \right \rceil } 
+  
+  \newcommand{\floor}[1]{ \left \lfloor { #1 } \right \rfloor } 
+  
+  \newcommand{\doubleclass}[1]{ \left \llbrack { #1 } \right \rrbrack } 
+
+  
+  \newcommand{\opint}[2]{ \left ( { #1 } , { #2 } \right ) } 
+  
+  \newcommand{\clint}[2]{ \left \lbrack { #1 } , { #2 } \right \rbrack } 
+  
+  \newcommand{\opclint}[2]{ \left ( { #1 } , { #2 } \right \rbrack } 
+  
+  \newcommand{\clopint}[2]{ \left \lbrack { #1 } , { #2 } \right ) } 
+
+  
+  \newcommand{\inner}[2]{ \left \langle { #1 } , { #2 } \right \rangle } 
+  
+  \newcommand{\comm}[2]{ \left \lbrack { #1 } , { #2 } \right \rbrack } 
+  
+  \newcommand{\ind}[2]{ \left \lbrack { #1 } : { #2 } \right \rbrack } 
+  
+  \newcommand{\bra}[1]{ \left \langle { #1 } \right \rvert } 
+  
+  \newcommand{\ket}[1]{ \left \lvert { #1 } \right \rangle } 
+  
+  \newcommand{\braket}[2]{ \left \langle { #1 } \: \middle \vert \: { #2 } \right \rangle } 
+  
+  \newcommand{\rest}[1]{ \left . { #1 } \right \vert } 
+
+
+  
+  \newcommand{\N}{ \mathbb{ N } } 
+  
+  \newcommand{\Z}{ \mathbb{ Z } } 
+  
+  \newcommand{\Q}{ \mathbb{ Q } } 
+  
+  \newcommand{\R}{ \mathbb{ R } } 
+  
+  \newcommand{\C}{ \mathbb{ C } } 
+  
+  \newcommand{\Quat}{ \mathbb{ H } } 
+  
+  \newcommand{\Oct}{ \mathbb{ O } } 
+  
+  \newcommand{\F}{ \mathbb{ F } } 
+  
+  
+  \newcommand{\Euc}{ \mathbb{ E } } 
+  
+  \newcommand{\Sph}{ \mathbb{ S } } 
+  
+  \newcommand{\Hyp}{ \mathbb{ H } } 
+  
+  \newcommand{\B}{ \mathbb{ B } } 
+  
+  \newcommand{\D}{ \mathbb{ D } } 
+  
+  \newcommand{\I}{ \mathbb{ I } } 
+  
+  \newcommand{\T}{ \mathbb{ T } } 
+  
+  \newcommand{\RP}{ \mathbb{ RP } } 
+  
+  \newcommand{\CP}{ \mathbb{ CP } } 
+  
+  \newcommand{\HP}{ \mathbb{ HP } } 
+  
+  \newcommand{\Proj}{ \mathbb{ P } } 
+
+
+  
+  \DeclareMathOperator{\dom}{ dom } 
+  
+  \DeclareMathOperator{\codom}{ codom } 
+  
+  \DeclareMathOperator{\im}{ im } 
+  
+  \DeclareMathOperator{\coim}{ coim } 
+  
+  
+  
+  \DeclareMathOperator{\coker}{ coker } 
+  
+  
+  \DeclareMathOperator{\ord}{ ord } 
+  
+  \newcommand{\nslt}{ \mathrel{ \lhd } } 
+  
+  \newcommand{\nsgt}{ \mathrel{ \rhd } } 
+  
+  \newcommand{\nsleq}{ \mathrel{ \unlhd } } 
+  
+  \newcommand{\nsgeq}{ \mathrel{ \unrhd } } 
+  
+  \DeclareMathOperator{\Cent}{ Z } 
+  
+  \DeclareMathOperator{\Centz}{ C } 
+  
+  \DeclareMathOperator{\Normz}{ N } 
+  
+  \DeclareMathOperator{\stabz}{ stab } 
+  
+  \DeclareMathOperator{\Fix}{ Fix } 
+  
+  \DeclareMathOperator{\Cay}{ Cay } 
+  
+  \DeclareMathOperator{\Sch}{ Sch } 
+  
+  
+  \newcommand{\CycGrp}[1]{ \mathrm{ C }_{ #1 } } 
+  
+  \newcommand{\SymGrp}[1]{ \mathrm{ S }_{ #1 } } 
+  
+  \newcommand{\AltGrp}[1]{ \mathrm{ A }_{ #1 } } 
+  
+  \newcommand{\DihGrp}[1]{ \mathrm{ D }_{ #1 } } 
+  
+  \newcommand{\QuatGrp}[1]{ \mathrm{ Q }_{ #1 } } 
+  
+  \newcommand{\FrGrp}[1]{ \mathrm{ F }_{ #1 } } 
+  
+  \DeclareMathOperator{\Aut}{ Aut } 
+  
+  \DeclareMathOperator{\Inn}{ Inn } 
+  
+  \DeclareMathOperator{\Out}{ Out } 
+  
+  \DeclareMathOperator{\Gal}{ Gal } 
+  
+  \DeclareMathOperator{\Homeo}{ Homeo } 
+  
+  \DeclareMathOperator{\Diff}{ Diff } 
+  
+  \DeclareMathOperator{\Bihol}{ Bihol } 
+  
+  \DeclareMathOperator{\Isom}{ Isom } 
+  
+  \DeclareMathOperator{\Deck}{ Deck } 
+  
+  \DeclareMathOperator{\QI}{ QI } 
+  
+  \DeclareMathOperator{\MCG}{ MCG } 
+  
+  \DeclareMathOperator{\Homol}{ H } 
+  
+  
+  \DeclareMathOperator{\GL}{ GL } 
+  
+  \DeclareMathOperator{\PGL}{ PGL } 
+  
+  \DeclareMathOperator{\SL}{ SL } 
+  
+  \DeclareMathOperator{\PSL}{ PSL } 
+  
+  \DeclareMathOperator{\Ort}{ O } 
+  
+  \DeclareMathOperator{\PO}{ PO } 
+  
+  \DeclareMathOperator{\SO}{ SO } 
+  
+  \DeclareMathOperator{\PSO}{ PSO } 
+  
+  \DeclareMathOperator{\U}{ U } 
+  
+  \DeclareMathOperator{\PU}{ PU } 
+  
+  \DeclareMathOperator{\SU}{ SU } 
+  
+  \DeclareMathOperator{\PSU}{ PSU } 
+  
+  \DeclareMathOperator{\Sp}{ Sp } 
+  
+  \DeclareMathOperator{\PSp}{ PSp } 
+  
+  \DeclareMathOperator{\USp}{ USp } 
+  
+  \DeclareMathOperator{\PUSp}{ PUSp } 
+  
+  \DeclareMathOperator{\Aff}{ Aff } 
+  
+  \DeclareMathOperator{\SAff}{ SAff } 
+  
+  
+  \DeclareMathOperator{\gl}{ \mathfrak{ gl } } 
+  
+  \DeclareMathOperator{\pgl}{ \mathfrak{ pgl } } 
+  
+  \DeclareMathOperator{\spl}{ \mathfrak{ sl } } 
+  
+  \DeclareMathOperator{\psl}{ \mathfrak{ psl } } 
+  
+  \DeclareMathOperator{\ort}{ \mathfrak{ o } } 
+  
+  \DeclareMathOperator{\po}{ \mathfrak{ po } } 
+  
+  \DeclareMathOperator{\so}{ \mathfrak{ so } } 
+  
+  \DeclareMathOperator{\pso}{ \mathfrak{ pso } } 
+  
+  \DeclareMathOperator{\unit}{ \mathfrak{ u } } 
+  
+  \DeclareMathOperator{\pu}{ \mathfrak{ pu } } 
+  
+  \DeclareMathOperator{\su}{ \mathfrak{ su } } 
+  
+  \DeclareMathOperator{\psu}{ \mathfrak{ psu } } 
+  
+  \DeclareMathOperator{\symp}{ \mathfrak{ sp } } 
+  
+  \DeclareMathOperator{\psp}{ \mathfrak{ psp } } 
+  
+  \DeclareMathOperator{\usp}{ \mathfrak{ usp } } 
+  
+  \DeclareMathOperator{\pusp}{ \mathfrak{ pusp } } 
+  
+  \DeclareMathOperator{\g}{ \mathfrak{ g } } 
+  
+  
+  \DeclareMathOperator{\Mat}{ \mathcal{ M } } 
+  
+  \DeclareMathOperator{\End}{ End } 
+  
+  \DeclareMathOperator{\Tens}{ \mathcal{ T } } 
+  
+  \DeclareMathOperator{\SymTens}{ \Theta } 
+  
+  \DeclareMathOperator{\AltTens}{ \Lambda } 
+  
+  
+  
+  \newcommand{\vect}[1]{ \mathbf{ #1 } } 
+  
+  \DeclareMathOperator{\lspan}{ span } 
+  
+  
+  
+  \DeclareMathOperator{\codim}{ codim } 
+  
+  \DeclareMathOperator{\rk}{ rk } 
+  
+  
+  
+  \DeclareMathOperator{\tr}{ tr } 
+  
+  \newcommand{\trans}[1]{ { #1 }^{ \mathrm{ T } } } 
+  
+  \newcommand{\contra}[1]{ { #1 }^{ -\mathrm{ T } } } 
+  
+  \newcommand{\adj}[1]{ { #1 }^{ \dag } } 
+  
+  \DeclareMathOperator{\diag}{ diag } 
+  
+  \DeclareMathOperator{\Gr}{ Gr } 
+  
+  \DeclareMathOperator{\Flag}{ \mathcal{ F } } 
+  
+  
+  \DeclareMathOperator{\ob}{ ob } 
+  
+  \DeclareMathOperator{\mor}{ mor } 
+  
+  
+  \DeclareMathOperator{\id}{ id } 
+  
+  \DeclareMathOperator{\inv}{ inv } 
+  
+  \newcommand{\op}[1]{ { #1 }^{ \mathrm{ op } } } 
+  
+  
+  \newcommand{\Set}{ \mathbf{ Set } } 
+  
+  \newcommand{\Rel}{ \mathbf{ Rel } } 
+  
+  \newcommand{\Grp}{ \mathbf{ Grp } } 
+  
+  \newcommand{\Ab}{ \mathbf{ Ab } } 
+  
+  \newcommand{\Ring}{ \mathbf{ Ring } } 
+  
+  \newcommand{\Rng}{ \mathbf{ Rng } } 
+  
+  \newcommand{\IntDom}{ \mathbf{ IntDom } } 
+  
+  \newcommand{\Field}{ \mathbf{ Field } } 
+  
+  \newcommand{\Top}{ \mathbf{ Top } } 
+  
+  \newcommand{\hTop}{ \mathbf{ hTop } } 
+  
+  \newcommand{\Met}{ \mathbf{ Met } } 
+  
+  \newcommand{\Man}[1][ \infty ]{ \mathbf{ Man }^{ #1 } } 
+  
+  \newcommand{\Vect}{ \mathbf{ Vect } } 
+  
+  \newcommand{\Cat}{ \mathbf{ Cat } } 
+  
+  \newcommand{\Fun}{ \mathbf{ Fun } } 
+  
+
+  
+  \DeclareMathOperator{\Int}{ Int } 
+  
+  \DeclareMathOperator{\Cl}{ Cl } 
+  
+  \DeclareMathOperator{\Bd}{ Bd } 
+  
+  \DeclareMathOperator{\Ext}{ Ext } 
+  
+  \DeclareMathOperator{\Nbhd}{ \mathcal{ N } } 
+  
+  \DeclareMathOperator{\Topol}{ \mathcal{ T } } 
+  
+  \DeclareMathOperator{\supp}{ supp } 
+  
+  
+  \DeclareMathOperator{\mS}{ S } 
+  
+  \DeclareMathOperator{\mB}{ B } 
+  
+  \DeclareMathOperator{\mD}{ D } 
+  
+  \DeclareMathOperator{\diam}{ diam } 
+  
+  \DeclareMathOperator*{\uniflim}{ unif \, lim } 
+  
+  \DeclareMathOperator{\len}{ len } 
+  
+  \DeclareMathOperator{\area}{ area } 
+  
+  \DeclareMathOperator{\vol}{ vol } 
+  
+  
+  \DeclareMathOperator{\CDiff}{ C } 
+  
+  \DeclareMathOperator{\UC}{ UC } 
+  
+  \DeclareMathOperator{\LC}{ LC } 
+  
+  \DeclareMathOperator{\Bdd}{ B } 
+  
+  \DeclareMathOperator{\BC}{ BC } 
+  
+  \DeclareMathOperator{\BUC}{ BUC } 
+  
+  \DeclareMathOperator{\BLC}{ BLC } 
+  
+  
+  
+  
+  
+  
+  
+  \DeclareMathOperator{\Exp}{ \mathbb{ E } } 
+  
+  \DeclareMathOperator{\Var}{ \mathbb{ V } } 
+  
+  \DeclareMathOperator{\mesh}{ mesh } 
+  
+  \newcommand{\Borel}{ \mathscr{ B } } 
+  
+  \DeclareMathOperator{\Haus}{ \mathscr{ H } } 
+  
+  \DeclareMathOperator*{\esssup}{ ess \, sup } 
+    
+  \DeclareMathOperator*{\essinf}{ ess \, inf } 
+
+
+  
+  \DeclareMathOperator{\DL}{ DL } 
+  
+  \newcommand{\diff}{ \mathrm{ d } } 
+  
+  \DeclareMathOperator{\pdiff}{ \partial } 
+  
+  \DeclareMathOperator{\del}{ \nabla } 
+  
+  
+  
+  
+  
+  \DeclareMathOperator{\Jac}{ \mathbf{ J } } 
+  
+  \DeclareMathOperator{\grad}{ grad } 
+  
+  \DeclareMathOperator{\divg}{ div } 
+  
+  \DeclareMathOperator{\curl}{ curl } 
+  
+  \DeclareMathOperator{\Lap}{ \Delta } 
+  
+  \DeclareMathOperator{\Sec}{ \Gamma } 
+  
+  \DeclareMathOperator{\VF}{ \mathfrak{ X } } 
+  
+  \DeclareMathOperator{\DF}{ \Omega } 
+  
+  \DeclareMathOperator{\dRCoh}{ H_{ \mathrm{ dR } } } 
+  
+
+  \DeclareMathOperator{\ps}{ \mathcal{ P } } 
+  
+  \newcommand{\oparg}{ \: \cdot \: } 
+  
+  \newcommand{\symdiff}{ \mathbin{ \triangle } } 
+  
+  
+  \DeclareMathOperator{\Succ}{ succ } 
+  
+  \DeclareMathOperator{\Add}{ add } 
+  
+  \DeclareMathOperator{\Mult}{ mult } 
+  
+  \DeclareMathOperator{\Comp}{ comp } 
+  
+  \DeclareMathOperator{\sgn}{ sgn } 
+  
+  
+  
+  
+  
+  
+  
+  \DeclareMathOperator{\Arg}{ Arg } 
+  
+  
+  
+  
+  
+  
+  
+  \DeclareMathOperator{\Log}{ Log } 
+
+  \newcommand{\divides}{ \mathbin{ \vert } } 
+
+  
+  
+  \DeclareMathOperator{\lcm}{ lcm } 
+  
+  \DeclareMathOperator{\proj}{ proj } 
+  
+  \DeclareMathOperator{\inj}{ inj } 
+  
+  \DeclareMathOperator{\coproj}{ coproj } 
+
+  
+
+  
+  
+  
+  \newcommand{\from}{ \leftarrow } 
+  
+  \newcommand{\upto}{ \nearrow } 
+  
+  \newcommand{\upfrom}{ \nwarrow } 
+  
+  \newcommand{\downto}{ \searrow } 
+  
+  \newcommand{\downfrom}{ \swarrow } 
+  
+  
+  
+  \newcommand{\actson}{ \mathbin{ \curvearrowright } } 
+  
+  \newcommand{\actedon}{ \mathbin{ \curvearrowleft } }
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth3 parts focused" data-preexpanded-levels="0" data-max-levels="3"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-foundations-of-analysis.html" class="internal"><span class="codenumber">I</span> <span class="title">Foundations of Analysis</span></a></div>
+<ul id="ptx-toc-group-part-foundations-of-analysis" class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-introductory-set-theory.html" class="internal"><span class="codenumber">1</span> <span class="title">Introductory Set Theory</span></a></div>
+<ul id="ptx-toc-group-chapter-introductory-set-theory" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-introductory-set-theory-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-what-is-a-set.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What Is a Set?</span></a></div>
+<ul id="ptx-toc-group-section-what-is-a-set" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-what-is-a-set.html#subsection-definitions-of-sets" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Definitions of Sets</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-what-is-a-set.html#subsection-set-containment" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Set Containment</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-what-is-a-set.html#subsection-set-operations" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Set Operations</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-what-is-a-set.html#exercises-what-is-a-set" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-what-is-a-set.html#problems-what-is-a-set" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-maps-and-functions.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Maps and Functions</span></a></div>
+<ul id="ptx-toc-group-section-maps-and-functions" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-maps-and-functions.html#subsection-introduction-to-maps" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Introduction to Maps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-maps-and-functions.html#subsection-composition-and-invertibility" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Composition and Invertibility</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-maps-and-functions.html#subsection-indexing" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Indexing</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-maps-and-functions.html#exercises-maps-and-functions" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-maps-and-functions.html#problems-maps-and-functions" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Peano Arithmetic and the Natural Numbers [Skip]</span></a></div>
+<ul id="ptx-toc-group-section-peano-arithmetic-and-the-natural-numbers" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#subsection-axiomatizing-the-natural-numbers" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Axiomatizing the Natural Numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#subsection-properties-of-arithmetic" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Properties of Arithmetic</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#subsection-properties-of-comparison" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Properties of Comparison</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#exercises-peano-arithmetic-and-the-natural-numbers" class="internal"><span class="codenumber">1.3.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-peano-arithmetic-and-the-natural-numbers.html#reading-questions-peano-arithmetic-and-the-natural-numbers" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-finitary-operations-and-relations.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Finitary Operations and Relations</span></a></div>
+<ul id="ptx-toc-group-section-finitary-operations-and-relations" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#subsection-products-and-choice" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Products and Choice</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#subsection-finitary-operations" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Finitary Operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#subsection-finitary-relations" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Finitary Relations</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#exercises-finitary-operations-and-relations" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-finitary-operations-and-relations.html#problems-finitary-operations-and-relations" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-introduction-to-order-theory.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Introduction to Order Theory</span></a></div>
+<ul id="ptx-toc-group-section-introduction-to-order-theory" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#subsection-preorders-and-partial-orders" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Preorders and Partial Orders</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#subsection-boundedness-and-extrema" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Boundedness and Extrema</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#subsection-comparability-and-total-orders" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Comparability and Total Orders</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#exercises-introduction-to-order-theory" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-order-theory.html#problems-introduction-to-order-theory" class="internal"><span class="codenumber">1.5.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-cardinality-and-countability.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Cardinality and Countability [SKIP]</span></a></div>
+<ul id="ptx-toc-group-section-cardinality-and-countability" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#subsection-finiteness" class="internal"><span class="codenumber">1.6.1</span> <span class="title">Finiteness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#subsection-cardinal-comparison" class="internal"><span class="codenumber">1.6.2</span> <span class="title">Cardinal Comparison</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#subsection-countability" class="internal"><span class="codenumber">1.6.3</span> <span class="title">Countability</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#exercises-cardinality-and-countability" class="internal"><span class="codenumber">1.6.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-cardinality-and-countability.html#problems-cardinality-and-countability" class="internal"><span class="codenumber">1.6.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="chapter-introductory-set-theory-9.html" class="internal"><span class="title">Conclusion</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-constructing-the-number-systems.html" class="internal"><span class="codenumber">2</span> <span class="title">Constructing the Number Systems</span></a></div>
+<ul id="ptx-toc-group-chapter-constructing-the-number-systems" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-constructing-the-number-systems-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-the-integers-and-the-rational-numbers.html" class="internal"><span class="codenumber">2.1</span> <span class="title">The Integers and the Rational Numbers [SKIP]</span></a></div>
+<ul id="ptx-toc-group-section-the-integers-and-the-rational-numbers" class="structural toc-item-list">
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-the-integers-and-the-rational-numbers.html#exercises-the-integers-and-the-rational-numbers" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-integers-and-the-rational-numbers.html#problems-the-integers-and-the-rational-numbers" class="internal"><span class="codenumber">2.1</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-constructing-the-real-numbers.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Constructing the Real Numbers</span></a></div>
+<ul id="ptx-toc-group-section-constructing-the-real-numbers" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#subsection-cutting-the-rational-numbers" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Cutting the Rational Numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#subsection-comparison-of-dedekind-cuts" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Comparison of Dedekind Cuts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#subsection-addition-of-dedekind-cuts" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Addition of Dedekind Cuts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#subsection-multiplication-of-dedekind-cuts" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Multiplication of Dedekind Cuts</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#exercises-constructing-the-real-numbers" class="internal"><span class="codenumber">2.2.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-constructing-the-real-numbers.html#problems-constructing-the-real-numbers" class="internal"><span class="codenumber">2.2.6</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-the-complete-ordered-field.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Complete Ordered Field</span></a></div>
+<ul id="ptx-toc-group-section-the-complete-ordered-field" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#subsection-the-ordered-field-axioms" class="internal"><span class="codenumber">2.3.1</span> <span class="title">The Ordered Field Axioms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#subsection-dedekind-completeness" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Dedekind completeness</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#exercises-the-complete-ordered-field" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-complete-ordered-field.html#problems-the-complete-ordered-field" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-beyond-the-real-number-system.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Beyond the Real Number System</span></a></div>
+<ul id="ptx-toc-group-section-beyond-the-real-number-system" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-beyond-the-real-number-system.html#subsection-the-complex-numbers" class="internal"><span class="codenumber">2.4.1</span> <span class="title">The Complex Numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-beyond-the-real-number-system.html#subsection-infinity" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Infinity</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-beyond-the-real-number-system.html#exercises-beyond-the-real-number-system" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-beyond-the-real-number-system.html#problems-beyond-the-real-number-system" class="internal"><span class="codenumber">2.4.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="chapter-constructing-the-number-systems-7.html" class="internal"><span class="title">Conclusion</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-point-set-topology.html" class="internal"><span class="codenumber">II</span> <span class="title">Point-Set Topology</span></a></div>
+<ul id="ptx-toc-group-part-point-set-topology" class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-metric-spaces.html" class="internal"><span class="codenumber">3</span> <span class="title">Metric Spaces</span></a></div>
+<ul id="ptx-toc-group-chapter-metric-spaces" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-metric-spaces-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction to Metric Geometry</span></a></div>
+<ul id="ptx-toc-group-section-introduction-to-metric-geometry" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#subsection-introduction-to-metrics" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Introduction to Metrics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#subsection-constructing-new-metrics" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Constructing New Metrics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#subsection-normed-vector-spaces" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Normed Vector Spaces</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#exercises-introduction-to-metric-geometry" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-metric-geometry.html#problems-introduction-to-metric-geometry" class="internal"><span class="codenumber">3.1.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-convergence-and-limits.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Convergence and Limits</span></a></div>
+<ul id="ptx-toc-group-section-convergence-and-limits" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-convergence-and-limits.html#subsection-sequential-convergence" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Sequential Convergence</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-convergence-and-limits.html#subsection-pointwise-and-uniform-convergence" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Pointwise and Uniform Convergence</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-convergence-and-limits.html#subsection-map-convergence" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Map Convergence</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-convergence-and-limits.html#exercises-convergence-and-limits" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-limits.html#problems-convergence-and-limits" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Limits in the Euclidean Metric</span></a></div>
+<ul id="ptx-toc-group-section-limits-in-the-euclidean-metric" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#subsection-limits-and-arithmetic" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Limits and Arithmetic</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#subsection-divergence-to-infinity" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Divergence to Infinity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#subsection-upper-and-lower-limits" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Upper and Lower Limits</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#exercises-limits-in-the-euclidean-metric" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-limits-in-the-euclidean-metric.html#problems-limits-in-the-euclidean-metric" class="internal"><span class="codenumber">3.3.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-open-and-closed-sets.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Open and Closed Sets</span></a></div>
+<ul id="ptx-toc-group-section-open-and-closed-sets" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#subsection-neighborhoods-in-metric-spaces" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Neighborhoods in Metric Spaces</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#subsection-metrics-and-boundedness" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Metrics and Boundedness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#subsection-bounded-maps-between-metric-spaces" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Bounded maps between metric spaces</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#exercises-open-and-closed-sets" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-open-and-closed-sets.html#problems-open-and-closed-sets" class="internal"><span class="codenumber">3.4.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-notions-of-metric-continuity.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Notions of Metric Continuity</span></a></div>
+<ul id="ptx-toc-group-section-notions-of-metric-continuity" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#subsection-continuous-maps-and-functions" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Continuous Maps and Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#subsection-stronger-forms-of-metric-continuity" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Stronger Forms of Metric Continuity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#subsection-even-stronger-forms-of-metric-continuity" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Even Stronger Forms of Metric Continuity</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#exercises-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-notions-of-metric-continuity.html#problems-notions-of-metric-continuity" class="internal"><span class="codenumber">3.5.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-completeness-and-compactness.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Completeness and Compactness</span></a></div>
+<ul id="ptx-toc-group-section-completeness-and-compactness" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#subsection-cauchy-sequences-and-metric-completeness" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Cauchy Sequences and Metric Completeness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#subsection-completion-of-a-metric-space" class="internal"><span class="codenumber">3.6.2</span> <span class="title">Completion of a Metric Space [SKIP]</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#subsection-metric-compactness" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Metric Compactness</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#exercises-completeness-and-compactness" class="internal"><span class="codenumber">3.6.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-completeness-and-compactness.html#problems-completeness-and-compactness" class="internal"><span class="codenumber">3.6.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="chapter-metric-spaces-9.html" class="internal"><span class="title">Conclusion</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-topological-spaces.html" class="internal"><span class="codenumber">4</span> <span class="title">Topological Spaces</span></a></div>
+<ul id="ptx-toc-group-chapter-topological-spaces" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-topological-spaces-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-introduction-to-topology.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Introduction to Topology</span></a></div>
+<ul id="ptx-toc-group-section-introduction-to-topology" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-topology.html#subsection-examples-of-topologies" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Examples of Topologies</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-introduction-to-topology.html#subsection-algebra-of-open-and-closed-sets" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Algebra of Open and Closed Sets</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-introduction-to-topology.html#exercises-introduction-to-topology" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-introduction-to-topology.html#problems-introduction-to-topology" class="internal"><span class="codenumber">4.1.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-comparison-and-topology.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Comparison and Topology</span></a></div>
+<ul id="ptx-toc-group-section-comparison-and-topology" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-comparison-and-topology.html#subsection-the-lattice-of-topologies" class="internal"><span class="codenumber">4.2.1</span> <span class="title">The Lattice of Topologies</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-comparison-and-topology.html#subsection-base-of-topology" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Base of Topology</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-comparison-and-topology.html#subsection-order-topologies" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Order Topologies</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-comparison-and-topology.html#exercises-comparison-and-topology" class="internal"><span class="codenumber">4.2.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-comparison-and-topology.html#problems-comparison-and-topology" class="internal"><span class="codenumber">4.2.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-convergence-and-separation.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Convergence and Separation</span></a></div>
+<ul id="ptx-toc-group-section-convergence-and-separation" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-convergence-and-separation.html#subsection-sequential-convergence-and-beyond" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Sequential Convergence and Beyond</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-convergence-and-separation.html#subsection-the-separation-axioms" class="internal"><span class="codenumber">4.3.2</span> <span class="title">The Separation Axioms</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-convergence-and-separation.html#exercises-convergence-and-separation" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-convergence-and-separation.html#problems-convergence-and-separation" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-continuity.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Continuity</span></a></div>
+<ul id="ptx-toc-group-section-continuity" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-continuity.html#subsection-map-convergence-and-continuity-at-a-point" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Map Convergence and Continuity at a Point</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-continuity.html#subsection-continuous-maps-between-topological-spaces" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Continuous Maps between Topological Spaces</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-continuity.html#exercises-continuity" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-continuity.html#problems-continuity" class="internal"><span class="codenumber">4.4.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-compactness-and-connectedness.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Compactness and Connectedness [SKIP]</span></a></div>
+<ul id="ptx-toc-group-section-compactness-and-connectedness" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-compactness-and-connectedness.html#subsection-open-covers" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Open Covers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-compactness-and-connectedness.html#subsection-compactness-and-sequential-compactness" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Compactness and Sequential Compactness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-compactness-and-connectedness.html#subsection-connected-and-disconnected-spaces" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Connected and Disconnected Spaces</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-compactness-and-connectedness.html#exercises-compactness-and-connectedness" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-compactness-and-connectedness.html#problems-compactness-and-connectedness" class="internal"><span class="codenumber">4.5.5</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="chapter-topological-spaces-8.html" class="internal"><span class="title">Conclusion</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="part-calculus.html" class="internal"><span class="codenumber">III</span> <span class="title">Calculus</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-part-calculus">
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="chapter-differentiation-and-smoothness.html" class="internal"><span class="codenumber">5</span> <span class="title">Differentiation and Smoothness</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-chapter-differentiation-and-smoothness">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-differentiation-and-smoothness-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-differentiability.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Differentiability</span></a></div>
+<ul id="ptx-toc-group-section-differentiability" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-differentiability.html#subsection-introduction-to-differentiation" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Introduction to Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-differentiability.html#subsection-regularity-and-smoothness" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Regularity and Smoothness</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-differentiability.html#exercises-differentiability" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-differentiability.html#problems-differentiability" class="internal"><span class="codenumber">5.1.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-analysis-of-critical-points.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Analysis of Critical Points</span></a></div>
+<ul id="ptx-toc-group-section-analysis-of-critical-points" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-analysis-of-critical-points.html#subsection-local-behavior-near-critical-points" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Local Behavior Near Critical Points</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-analysis-of-critical-points.html#subsection-classification-of-critical-points" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Classification of Critical Points</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-analysis-of-critical-points.html#exercises-analysis-of-critical-points" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-analysis-of-critical-points.html#problems-analysis-of-critical-points" class="internal"><span class="codenumber">5.2.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-applications-of-the-mean-value-theorem.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Applications of the Mean Value Theorem</span></a></div>
+<ul id="ptx-toc-group-section-applications-of-the-mean-value-theorem" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-applications-of-the-mean-value-theorem.html#subsection-average-and-instantaneous-rates-of-change" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Average and Instantaneous Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-applications-of-the-mean-value-theorem.html#subsection-beyond-the-mean-value-theorem" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Beyond the Mean Value Theorem</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-applications-of-the-mean-value-theorem.html#exercises-applications-of-the-mean-value-theorem" class="internal"><span class="codenumber">5.3.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-applications-of-the-mean-value-theorem.html#problems-applications-of-the-mean-value-theorem" class="internal"><span class="codenumber">5.3.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="section-higher-order-approximations.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Higher Order Approximations</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-section-higher-order-approximations">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-higher-order-approximations.html#subsection-dominance-and-asymptotics" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Dominance and Asymptotics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-higher-order-approximations.html#subsection-polynomial-approximations-of-differentiable-functions" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Polynomial Approximations of Differentiable Functions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-higher-order-approximations.html#exercises-higher-order-approximations" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-higher-order-approximations.html#problems-higher-order-approximations" class="internal"><span class="codenumber">5.4.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="chapter-differentiation-and-smoothness-7.html" class="internal"><span class="title">Conclusion</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-riemann-integration.html" class="internal"><span class="codenumber">6</span> <span class="title">Riemann Integration</span></a></div>
+<ul id="ptx-toc-group-chapter-riemann-integration" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-riemann-integration-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-riemann-sums-and-integrals.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Riemann Sums and Integrals</span></a></div>
+<ul id="ptx-toc-group-section-riemann-sums-and-integrals" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-riemann-sums-and-integrals.html#subsection-finite-integration-methods" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Finite Integration Methods</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-riemann-sums-and-integrals.html#subsection-riemann-integrability" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Riemann Integrability</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-riemann-sums-and-integrals.html#exercises-riemann-sums-and-integrals" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-riemann-sums-and-integrals.html#problems-riemann-sums-and-integrals" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The Fundamental Theorems of Calculus</span></a></div>
+<ul id="ptx-toc-group-section-the-fundamental-theorems-of-calculus" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#subsection-differentiating-riemann-integrals" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Differentiating Riemann Integrals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#subsection-integrating-derivatives" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Integrating Derivatives</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#exercises-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-the-fundamental-theorems-of-calculus.html#problems-the-fundamental-theorems-of-calculus" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-improper-integration.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Improper Integration</span></a></div>
+<ul id="ptx-toc-group-section-improper-integration" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-improper-integration.html#subsection-exhaustion-by-compact-intervals" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Exhaustion by Compact Intervals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-improper-integration.html#subsection-tests-for-integral-convergence" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Tests for Integral Convergence</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-improper-integration.html#exercises-improper-integration" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-improper-integration.html#problems-improper-integration" class="internal"><span class="codenumber">6.3.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-deficiencies-of-the-riemann-integral.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Deficiencies of the Riemann Integral (SKIP)</span></a></div>
+<ul id="ptx-toc-group-section-deficiencies-of-the-riemann-integral" class="structural toc-item-list">
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-deficiencies-of-the-riemann-integral.html#exercises-deficiencies-of-the-riemann-integral" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-deficiencies-of-the-riemann-integral.html#problems-deficiencies-of-the-riemann-integral" class="internal"><span class="codenumber">6.4</span> <span class="title">Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="chapter-riemann-integration-7.html" class="internal"><span class="title">Conclusion</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-infinite-series.html" class="internal"><span class="codenumber">7</span> <span class="title">Infinite Series</span></a></div>
+<ul id="ptx-toc-group-chapter-infinite-series" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-infinite-series-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Partial Sums and Infinite Series</span></a></div>
+<ul id="ptx-toc-group-section-partial-sums-and-infinite-series" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#exercises-partial-sums-and-infinite-series" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-partial-sums-and-infinite-series.html#reading-questions-partial-sums-and-infinite-series" class="internal"><span class="codenumber">7.1</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-tests-for-series-convergence.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Tests for Series Convergence</span></a></div>
+<ul id="ptx-toc-group-section-tests-for-series-convergence" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-tests-for-series-convergence.html#exercises-tests-for-series-convergence" class="internal"><span class="codenumber">7.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-tests-for-series-convergence.html#reading-questions-tests-for-series-convergence" class="internal"><span class="codenumber">7.2</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-power-series.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Power Series</span></a></div>
+<ul id="ptx-toc-group-section-power-series" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-power-series.html#exercises-power-series" class="internal"><span class="codenumber">7.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-power-series.html#reading-questions-power-series" class="internal"><span class="codenumber">7.3</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-analytic-functions.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Analytic Functions</span></a></div>
+<ul id="ptx-toc-group-section-analytic-functions" class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-analytic-functions.html#exercises-analytic-functions" class="internal"><span class="codenumber">7.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="section-analytic-functions.html#reading-questions-analytic-functions" class="internal"><span class="codenumber">7.4</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="chapter-infinite-series-7.html" class="internal"><span class="title">Conclusion</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="solutions.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Solutions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="section-higher-order-approximations">
+<h1 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Higher Order Approximations</span>
+</h1>
+<section class="introduction" id="section-higher-order-approximations-2">
+<div class="para" id="section-higher-order-approximations-2-1">In this section, we explore the properties of the <dfn class="terminology">Taylor approximations</dfn> of a multiply differentiable function. In a sense which we will make precise, these polynomials are the best possible approximations for such a function near a given point. We will also compute the error in such approximations by means similar to the <a href="section-applications-of-the-mean-value-theorem.html#theorem-mean-value-theorem" class="xref" data-knowl="./knowl/xref/theorem-mean-value-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.3.2: Mean value theorem">Mean value theorem</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-higher-order-approximations-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="subsection-dominance-and-asymptotics">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dominance and Asymptotics</span>
+</h2>
+<section class="introduction" id="subsection-dominance-and-asymptotics-2">
+<div class="para" id="subsection-dominance-and-asymptotics-2-1">How can we compare the speed at which two functions converge to <span class="process-math">\(0 \)</span> or diverge to infinity? We may be able to see graphically that while both <span class="process-math">\(x^{ 2 } \)</span> and <span class="process-math">\(x^{ 4 } \)</span> converge at <span class="process-math">\(0 \)</span> to <span class="process-math">\(0 \text{,}\)</span> <span class="process-math">\(x^{ 4 } \)</span> converges far more quickly. One attempt to quantify observations of this type is the family of related binary relations comprising the notion of <dfn class="terminology">asymptotic comparison</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-dominance-and-asymptotics-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="definition definition-like" id="definition-asymptotic-comparison"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Asymptotic comparison.</span>
+</h3>
+<div class="para logical" id="definition-asymptotic-comparison-8-1">
+<div class="para">Let <span class="process-math">\(f , g \colon X \to \R \)</span> be real-valued functions defined on a subset <span class="process-math">\(X \subseteq \R \text{,}\)</span> and fix a limit point <span class="process-math">\(c \in X' \text{.}\)</span>
+</div>
+<ul class="disc" id="definition-asymptotic-comparison-8-1-4">
+<li id="definition-asymptotic-comparison-8-1-4-1">
+<span class="heading li--heading"><span class="title li--heading-title">Asymptotic dominance.</span></span>
+<div class="para logical" id="definition-asymptotic-comparison-8-1-4-1-2">
+<div class="para">We say that <span class="process-math">\(f \)</span> is <dfn class="terminology">asymptotically dominated</dfn> by <span class="process-math">\(g \)</span> near <span class="process-math">\(c \)</span> if</div>
+<div class="displaymath process-math" id="definition-asymptotic-comparison-8-1-4-1-2-5">
+\begin{equation*}
+\abs{ f \of{ x } } = \lambda \of{ x } \abs{ g \of{ x } }
+\end{equation*}
+</div>
+<div class="para">for some non-negative real-valued function <span class="process-math">\(\lambda \colon X \to \clopint{ 0 }{ \infty } \)</span> and non-negative real number <span class="process-math">\(0 \leq L \lt \infty \)</span> so that</div>
+<div class="displaymath process-math" id="definition-asymptotic-comparison-8-1-4-1-2-8">
+\begin{equation*}
+\lim_{ x \to c }{ \lambda \of{ x } } = L\text{.}
+\end{equation*}
+</div>
+<div class="para">In this case, we write <span class="process-math">\(f \preccurlyeq g \)</span> as <span class="process-math">\(x \to c \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-asymptotic-comparison-8-1-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Asymptotic dominance"><a tabindex="-1" href="#definition-asymptotic-comparison-8-1-4-1" title="Copy heading and permalink for Item: Asymptotic dominance" aria-label="Copy heading and permalink for Item: Asymptotic dominance">🔗</a></div>
+</li>
+<li id="definition-asymptotic-comparison-8-1-4-2">
+<span class="heading li--heading"><span class="title li--heading-title">Asymptotic comparability.</span></span>
+<div class="para logical" id="definition-asymptotic-comparison-8-1-4-2-2">
+<div class="para">We say that <span class="process-math">\(f \)</span> and <span class="process-math">\(g \)</span> are <dfn class="terminology">asymptotically comparable</dfn> near <span class="process-math">\(c \)</span> if</div>
+<div class="displaymath process-math" id="definition-asymptotic-comparison-8-1-4-2-2-5">
+\begin{equation*}
+\abs{ f \of{ x } } = \lambda \of{ x } \abs{ g \of{ x } }
+\end{equation*}
+</div>
+<div class="para">for some non-negative real-valued function <span class="process-math">\(\lambda \colon X \to \clopint{ 0 }{ \infty } \)</span> and positive real number <span class="process-math">\(0 \lt L \lt \infty \)</span> so that</div>
+<div class="displaymath process-math" id="definition-asymptotic-comparison-8-1-4-2-2-8">
+\begin{equation*}
+\lim_{ x \to c }{ \lambda \of{ x } } = L\text{.}
+\end{equation*}
+</div>
+<div class="para">In this case, we write <span class="process-math">\(f \asymp g \)</span> as <span class="process-math">\(x \to c \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-asymptotic-comparison-8-1-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Asymptotic comparability"><a tabindex="-1" href="#definition-asymptotic-comparison-8-1-4-2" title="Copy heading and permalink for Item: Asymptotic comparability" aria-label="Copy heading and permalink for Item: Asymptotic comparability">🔗</a></div>
+</li>
+<li id="definition-asymptotic-comparison-8-1-4-3">
+<span class="heading li--heading"><span class="title li--heading-title">Asymptotic.</span></span>
+<div class="para logical" id="definition-asymptotic-comparison-8-1-4-3-2">
+<div class="para">We say that <span class="process-math">\(f \)</span> is <dfn class="terminology">asymptotic</dfn> to <span class="process-math">\(g \)</span> near <span class="process-math">\(c \)</span> if</div>
+<div class="displaymath process-math" id="definition-asymptotic-comparison-8-1-4-3-2-5">
+\begin{equation*}
+\abs{ f \of{ x } } = \lambda \of{ x } \abs{ g \of{ x } }
+\end{equation*}
+</div>
+<div class="para">for some non-negative real-valued function <span class="process-math">\(\lambda \colon X \to \clopint{ 0 }{ \infty } \)</span> so that</div>
+<div class="displaymath process-math" id="definition-asymptotic-comparison-8-1-4-3-2-7">
+\begin{equation*}
+\lim_{ x \to c }{ \lambda \of{ x } } = 1\text{.}
+\end{equation*}
+</div>
+<div class="para">In this case, we write <span class="process-math">\(f \sim g \)</span> as <span class="process-math">\(x \to c \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-asymptotic-comparison-8-1-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item: Asymptotic"><a tabindex="-1" href="#definition-asymptotic-comparison-8-1-4-3" title="Copy heading and permalink for Item: Asymptotic" aria-label="Copy heading and permalink for Item: Asymptotic">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-asymptotic-comparison-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 5.4.1: Asymptotic comparison"><a tabindex="-1" href="#definition-asymptotic-comparison" title="Copy heading and permalink for Definition 5.4.1: Asymptotic comparison" aria-label="Copy heading and permalink for Definition 5.4.1: Asymptotic comparison">🔗</a></div>
+</article>
+<details id="example-asymptotic-comparison" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Asymptotic comparison.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-asymptotic-comparison-2-1">
+<div class="para">The following are examples of asymptotic dominance, asymptotic comparability, and asymptotics:</div>
+<ul class="disc" id="example-asymptotic-comparison-2-1-1">
+<li id="example-asymptotic-comparison-2-1-1-1">
+<div class="para logical" id="example-asymptotic-comparison-2-1-1-1-1">
+<div class="para">Consider two power functions <span class="process-math">\(f , g \colon \opint{ 0 }{ \infty } \to \R \)</span> defined by the formulas <span class="process-math">\(f \of{ x } = a x^{ p } \)</span> and <span class="process-math">\(g \of{ x } = b x^{ q } \)</span> for some real numbers <span class="process-math">\(a , b , p , q \in \R \)</span> so that <span class="process-math">\(a , b \neq 0 \text{.}\)</span> Suppose that <span class="process-math">\(p \leq q \text{,}\)</span> and consider the real-valued function <span class="process-math">\(\lambda \colon \opint{ 0 }{ \infty } \to \R \)</span> defined by the formula</div>
+<div class="displaymath process-math" id="example-asymptotic-comparison-2-1-1-1-1-8">
+\begin{equation*}
+\lambda \of{ x } = \abs{ \frac{ a }{ b } } x^{ p - q }\text{.}
+\end{equation*}
+</div>
+<div class="para">We observe that</div>
+<div class="displaymath process-math" id="example-asymptotic-comparison-2-1-1-1-1-9">
+\begin{align*}
+\abs{ f \of{ x } } \amp = \abs{ a x^{ p } } = \abs{ a } \cdot \abs{ x }^{ p } = \abs{ a } x^{ p }\\
+\amp = \frac{ \abs{ a } }{ \abs{ b } } x^{ p - q } \cdot \abs{ b } x^{ q } = \abs{ \frac{ a }{ b } } x^{ p - q } \cdot \abs{ b x^{ q } } = \lambda \of{ x } \abs{ g \of{ x } }
+\end{align*}
+</div>
+<div class="para">for all points <span class="process-math">\(0 \lt x \lt \infty \text{,}\)</span> and</div>
+<div class="displaymath process-math" id="example-asymptotic-comparison-2-1-1-1-1-11">
+\begin{align*}
+\lim_{ x \to \infty }{ \lambda \of{ x } } \amp = \lim_{ x \to \infty }{ \abs{ \frac{ a }{ b } } x^{ p - q } } = \abs{ \frac{ a }{ b } } \lim_{ x \to \infty }{ x^{ p - q } }\\
+\amp = \abs{ \frac{ a }{ b } } \cdot 0 = 0\text{,}
+\end{align*}
+</div>
+<div class="para">since <span class="process-math">\(p - q \lt 0 \text{.}\)</span> We conclude that <span class="process-math">\(f \preccurlyeq g \)</span> as <span class="process-math">\(x \to \infty \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-asymptotic-comparison-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-asymptotic-comparison-2-1-1-1-2">
+<div class="para">On the other hand, <span class="process-math">\(\abs{ g \of{ x } } = \of{ \frac{ 1 }{ \lambda \of{ x } } } \abs{ f \of{ x } } \)</span> for all points <span class="process-math">\(0 \lt x \lt \infty \text{,}\)</span> and</div>
+<div class="displaymath process-math" id="example-asymptotic-comparison-2-1-1-1-2-3">
+\begin{align*}
+\lim_{ x \to 0 }{ \frac{ 1 }{ \lambda \of{ x } } } \amp = \lim_{ x \to 0 }{ \frac{ 1 }{ \abs{ \frac{ a }{ b } } x^{ p - q } } } = \lim_{ x \to 0 }{ \abs{ \frac{ b }{ a } } x^{ q - p } }\\
+\amp = \abs{ \frac{ b }{ a } } \lim_{ x \to 0 }{ x^{ q - p } } = \abs{ \frac{ b }{ a } } \cdot 0 = 0\text{,}
+\end{align*}
+</div>
+<div class="para">since <span class="process-math">\(q - p \gt 0 \text{.}\)</span> We conclude that <span class="process-math">\(g \preccurlyeq f \)</span> as <span class="process-math">\(x \to 0 \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-asymptotic-comparison-2-1-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-asymptotic-comparison-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-asymptotic-comparison-2-1-1-2">
+<div class="para logical" id="example-asymptotic-comparison-2-1-1-2-1">
+<div class="para">Let <span class="process-math">\(f \colon \R \setminus \set{ x_{ 1 } , \dotsc , x_{ n } } \to \R \)</span> be a rational function with formula</div>
+<div class="displaymath process-math" id="example-asymptotic-comparison-2-1-1-2-1-2">
+\begin{equation*}
+f \of{ x } = \frac{ a_{ m } x^{ m } + a_{ m - 1 } x^{ m - 1 } + \dotsb + a_{ 2 } x^{ 2 } + a_{ 1 } x + a_{ 0 } }{ b_{ n } x^{ n } + b_{ n - 1 } x^{ n - 1 } + \dotsb + b_{ 2 } x^{ 2 } + b_{ 1 } x + b_{ 0 } }
+\end{equation*}
+</div>
+<div class="para">in standard form, and consider the power functions <span class="process-math">\(g , h \colon \opint{ 0 }{ \infty } \to \R \)</span> defined by the formulas</div>
+<div class="displaymath process-math" id="example-asymptotic-comparison-2-1-1-2-1-4">
+\begin{align*}
+g \of{ x } \amp = x^{ m - n } \amp h \of{ x } \amp = \of{ \frac{ a_{ m } }{ b_{ n } } } x^{ m - n }\text{.}
+\end{align*}
+</div>
+<div class="para">Let <span class="process-math">\(\lambda \colon \opint{ 0 }{ \infty } \setminus \set{ x_{ 1 } , \dotsc , x_{ n } } \to \R \)</span> be the real-valued function defined by the formula</div>
+<div class="displaymath process-math" id="example-asymptotic-comparison-2-1-1-2-1-6">
+\begin{equation*}
+\lambda \of{ x } = \frac{ a_{ m } + a_{ m - 1 } x^{ -1 } + \dotsb + a_{ 2 } x^{ 2 - m } a_{ 1 } x^{ 1 - m } + a_{ 0 } x^{ -m } }{ b_{ n } + b_{ n - 1 } x^{ -1 } + \dotsb + b_{ 2 } x^{ 2 - n } + b_{ 1 } x^{ 1 - n } + b_{ 0 } x^{ -n } }\text{.}
+\end{equation*}
+</div>
+<div class="para">We observe that</div>
+<div class="displaymath process-math" id="example-asymptotic-comparison-2-1-1-2-1-7">
+\begin{align*}
+\lambda \of{ x } \abs{ g \of{ x } } \amp = x^{ m - n } \abs{ \frac{ a_{ m } + a_{ m - 1 } x^{ -1 } + \dotsb + a_{ 2 } x^{ 2 - m } a_{ 1 } x^{ 1 - m } + a_{ 0 } x^{ -m } }{ b_{ n } + b_{ n - 1 } x^{ -1 } + \dotsb + b_{ 2 } x^{ 2 - n } + b_{ 1 } x^{ 1 - n } + b_{ 0 } x^{ -n } } }\\
+\amp = \of{ \frac{ x^{ m } }{ x^{ n } } } \abs{ \frac{ a_{ m } + a_{ m - 1 } x^{ -1 } + \dotsb + a_{ 2 } x^{ 2 - m } a_{ 1 } x^{ 1 - m } + a_{ 0 } x^{ -m } }{ b_{ n } + b_{ n - 1 } x^{ -1 } + \dotsb + b_{ 2 } x^{ 2 - n } + b_{ 1 } x^{ 1 - n } + b_{ 0 } x^{ -n } } }\\
+\amp = \abs{ \frac{ a_{ m } x^{ m } + a_{ m - 1 } x^{ m - 1 } + \dotsb + a_{ 2 } x^{ 2 } + a_{ 1 } x + a_{ 0 } }{ b_{ n } x^{ n } + b_{ n - 1 } x^{ n - 1 } + \dotsb + b_{ 2 } x^{ 2 } + b_{ 1 } x + b_{ 0 } } } = \abs{ f \of{ x } }\text{,}
+\end{align*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" id="example-asymptotic-comparison-2-1-1-2-1-8">
+\begin{align*}
+\lim_{ x \to \infty }{ \lambda \of{ x } } \amp = \lim_{ x \to \infty }{ \frac{ a_{ m } + a_{ m - 1 } x^{ -1 } + \dotsb + a_{ 2 } x^{ 2 - m } a_{ 1 } x^{ 1 - m } + a_{ 0 } x^{ -m } }{ b_{ n } + b_{ n - 1 } x^{ -1 } + \dotsb + b_{ 2 } x^{ 2 - n } + b_{ 1 } x^{ 1 - n } + b_{ 0 } x^{ -n } } }\\
+\amp = \frac{ a_{ m } }{ b_{ n } } \in \opint{ 0 }{ \infty }\text{.}
+\end{align*}
+</div>
+<div class="para">We conclude that <span class="process-math">\(f \asymp g \)</span> as <span class="process-math">\(x \to \infty \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-asymptotic-comparison-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-asymptotic-comparison-2-1-1-2-2">
+<div class="para">Moreover,</div>
+<div class="displaymath process-math" id="example-asymptotic-comparison-2-1-1-2-2-1">
+\begin{align*}
+\abs{ \frac{ b_{ n } }{ a_{ m } } } \lambda \of{ x } \abs{ h \of{ x } } \amp = \abs{ \frac{ b_{ n } }{ a_{ m } } } \lambda \of{ x } \abs{ \of{ \frac{ a_{ m } }{ b_{ n } } } x^{ m - n } }\\
+\amp = \lambda \of{ x } \abs{ g \of{ x } } = \abs{ f \of{ x } }\text{,}
+\end{align*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" id="example-asymptotic-comparison-2-1-1-2-2-2">
+\begin{equation*}
+\lim_{ x \to \infty }{ \abs{ \frac{ b_{ n } }{ a_{ m } } } \lambda \of{ x } } = \abs{ \frac{ b_{ n } }{ a_{ m } } } \lim_{ x \to \infty }{ \lambda \of{ x } } = \abs{ \frac{ b_{ n } }{ a_{ m } } } \abs{ \frac{ a_{ m } }{ b_{ n } } } = 1 \text{.}
+\end{equation*}
+</div>
+<div class="para">We conclude that <span class="process-math">\(f \sim h \)</span> as <span class="process-math">\(x \to \infty \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-asymptotic-comparison-2-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#example-asymptotic-comparison-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-asymptotic-comparison-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 5.4.2: Asymptotic comparison"><a tabindex="-1" href="#example-asymptotic-comparison" title="Copy heading and permalink for Example 5.4.2: Asymptotic comparison" aria-label="Copy heading and permalink for Example 5.4.2: Asymptotic comparison">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-dominance-and-asymptotics-5">One can see from the definitions that if two functions are asymptotic, then they are asymptotically comparable. Moreover, if two functions are asymptotically comparable, then each asymptotically dominates the other. In fact, the converse implication also holds.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-dominance-and-asymptotics-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="lemma theorem-like" id="lemma-asymptotic-comparison"><h3 class="heading">
+<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Asymptotic comparison.</span>
+</h3>
+<div class="para" id="lemma-asymptotic-comparison-2-1">Let <span class="process-math">\(f , g \colon X \to \R \)</span> be real-valued functions defined on a subset <span class="process-math">\(X \subseteq \R \text{,}\)</span> and fix a limit point <span class="process-math">\(c \in X' \text{.}\)</span> Then <span class="process-math">\(f \asymp g \)</span> as <span class="process-math">\(x \to c \)</span> if and only if both <span class="process-math">\(f \preccurlyeq g \)</span> and <span class="process-math">\(g \preccurlyeq f \)</span> as <span class="process-math">\(x \to c \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-asymptotic-comparison-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Lemma 5.4.3: Asymptotic comparison"><a tabindex="-1" href="#lemma-asymptotic-comparison" title="Copy heading and permalink for Lemma 5.4.3: Asymptotic comparison" aria-label="Copy heading and permalink for Lemma 5.4.3: Asymptotic comparison">🔗</a></div>
+</article>
+<details id="lemma-asymptotic-comparison-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="lemma-asymptotic-comparison-3-1">
+<div class="para">First suppose that <span class="process-math">\(f \asymp g \)</span> as <span class="process-math">\(x \to c \text{.}\)</span> Then there is a non-negative real-valued function <span class="process-math">\(\lambda \colon X \to \clopint{ 0 }{ \infty } \)</span> and a positive real number <span class="process-math">\(0 \lt L \lt \infty \)</span> so that <span class="process-math">\(\abs{ f \of{ x } } = \lambda \of{ x } \abs{ g \of{ x } } \)</span> for all <span class="process-math">\(x \in X \)</span> and</div>
+<div class="displaymath process-math" id="lemma-asymptotic-comparison-3-1-7">
+\begin{equation*}
+\lim_{ x \to c }{ \lambda \of{ x } } = L\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(0 \leq L \lt \infty \text{,}\)</span> we conclude that <span class="process-math">\(f \preccurlyeq g \)</span> as <span class="process-math">\(x \to c \text{.}\)</span> Moreover, we observe that</div>
+<div class="displaymath process-math" id="lemma-asymptotic-comparison-3-1-11">
+\begin{equation*}
+\abs{ g \of{ x } } = \abs{ g \of{ x } } \of{ \frac{ \lambda \of{ x } }{ \lambda \of{ x } } } = \of{ \frac{ 1 }{ \lambda \of{ x } } } \abs{ f \of{ x } }\text{,}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" id="lemma-asymptotic-comparison-3-1-12">
+\begin{equation*}
+\lim_{ x \to c }{ \frac{ 1 }{ \lambda \of{ x } } } = \frac{ 1 }{ \lim_{ x \to c }{ \lambda \of{ x } } } = \frac{ 1 }{ L } \in \opint{ 0 }{ \infty }\text{,}
+\end{equation*}
+</div>
+<div class="para">so that <span class="process-math">\(g \preccurlyeq f \)</span> as <span class="process-math">\(x \to c \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-asymptotic-comparison-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="lemma-asymptotic-comparison-3-2">
+<div class="para">Now suppose that both <span class="process-math">\(f \preccurlyeq g \)</span> and <span class="process-math">\(g \preccurlyeq f \)</span> as <span class="process-math">\(x \to c \text{.}\)</span> Then there are non-negative real-valued functions <span class="process-math">\(\lambda , \mu \colon X \to \clopint{ 0 }{ \infty } \)</span> and non-negative real numbers <span class="process-math">\(L , M \in \clopint{ 0 }{ \infty } \)</span> so that <span class="process-math">\(\abs{ f \of{ x } } = \lambda \of{ x } \abs{ g \of{ x } } \)</span> and <span class="process-math">\(\abs{ g \of{ x } } = \mu \of{ x } \abs{ f \of{ x } } \)</span> for all <span class="process-math">\(x \in X \)</span> and</div>
+<div class="displaymath process-math" id="lemma-asymptotic-comparison-3-2-9">
+\begin{align*}
+\lim_{ x \to c }{ \lambda \of{ x } } \amp = L \amp \lim_{ x \to c }{ \mu \of{ x } } \amp = M\text{.}
+\end{align*}
+</div>
+<div class="para">We first observe that for any point <span class="process-math">\(x \in X \text{,}\)</span> if any one of <span class="process-math">\(\lambda \of{ x } \text{,}\)</span> <span class="process-math">\(\mu \of{ x } \text{,}\)</span> <span class="process-math">\(f \of{ x } \text{,}\)</span> or <span class="process-math">\(g \of{ x } \)</span> is <span class="process-math">\(0 \text{,}\)</span> then <span class="process-math">\(f \of{ x } = g \of{ x } = 0 \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-asymptotic-comparison-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="lemma-asymptotic-comparison-3-3">
+<div class="para">There are two cases: either there is a sequence <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> of points <span class="process-math">\(x_{ n } \in X \setminus \set{ c } \)</span> converging to <span class="process-math">\(c \)</span> so that <span class="process-math">\(f \of{ x_{ n } } , g \of{ x_{ n } } \neq 0 \)</span> for all <span class="process-math">\(n \in \N \text{,}\)</span> or no such sequence exists. If there is such a sequence, we observe that</div>
+<div class="displaymath process-math" id="lemma-asymptotic-comparison-3-3-6">
+\begin{align*}
+\lambda \of{ x_{ n } } \mu \of{ x_{ n } } \amp = \lambda \of{ x_{ n } } \mu \of{ x_{ n } } \abs{ \frac{ f \of{ x_{ n } } g \of{ x_{ n } } }{ f \of{ x_{ n } } g \of{ x_{ n } } } } = \abs{ \frac{ \lambda \of{ x_{ n } } f \of{ x_{ n } } }{ g \of{ x_{ n } } } } \cdot \abs{ \frac{ \mu \of{ x_{ n } } g \of{ x_{ n } } }{ f \of{ x_{ n } } } }\\
+\amp = \abs{ \frac{ g \of{ x_{ n } } }{ g \of{ x_{ n } } } } \cdot \abs{ \frac{ f \of{ x_{ n } } }{ f \of{ x_{ n } } } } = 1
+\end{align*}
+</div>
+<div class="para">for all <span class="process-math">\(n \in \N \text{,}\)</span> and so</div>
+<div class="displaymath process-math" id="lemma-asymptotic-comparison-3-3-8">
+\begin{align*}
+L M \amp = \of{ \lim_{ n \to \infty }{ \lambda \of{ x_{ n } } } } \of{ \lim_{ n \to \infty }{ \mu \of{ x_{ n } } } }\\
+\amp = \lim_{ n \to \infty }{ \lambda \of{ x_{ n } } \mu \of{ x_{ n } } } = \lim_{ n \to \infty }{ 1 } = 1\text{.}
+\end{align*}
+</div>
+<div class="para">In particular, we conclude that <span class="process-math">\(L , M \neq 0 \)</span> are non-zero, so that <span class="process-math">\(f \asymp g \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-asymptotic-comparison-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="lemma-asymptotic-comparison-3-4">
+<div class="para">On the other hand, if no such sequence exists, then <span class="process-math">\(f \of{ x } = g \of{ x } = 0 \)</span> for all <span class="process-math">\(x \in X \)</span> sufficiently close to <span class="process-math">\(c \text{.}\)</span> Let <span class="process-math">\(\nu \colon X \to \R \)</span> be the real-valued function defined piecewise by the formula</div>
+<div class="displaymath process-math" id="lemma-asymptotic-comparison-3-4-5">
+\begin{equation*}
+\nu \of{ x } =
+\begin{cases}
+\lambda \of{ x } \amp f \of{ x } \neq 0 \\
+1 \amp f \of{ x } = 0
+\text{.}\end{cases}
+\end{equation*}
+</div>
+<div class="para">Then <span class="process-math">\(\nu \of{ x } \abs{ f \of{ x } } = \abs{ g \of{ x } } \)</span> and</div>
+<div class="displaymath process-math" id="lemma-asymptotic-comparison-3-4-7">
+\begin{equation*}
+\lim_{ x \to c }{ \nu \of{ x } } = 1\text{,}
+\end{equation*}
+</div>
+<div class="para">and so <span class="process-math">\(f \asymp g \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#lemma-asymptotic-comparison-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.4.3.1"><a tabindex="-1" href="#lemma-asymptotic-comparison-3" title="Copy heading and permalink for Proof 5.4.3.1" aria-label="Copy heading and permalink for Proof 5.4.3.1">🔗</a></div>
+</article></details>
+<article class="definition definition-like" id="definition-strict-asymptotic-dominance"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Strict asymptotic dominance.</span>
+</h3>
+<div class="para" id="definition-strict-asymptotic-dominance-4-1">Let <span class="process-math">\(f , g \colon X \to \R \)</span> be real-valued functions defined on a subset <span class="process-math">\(X \subseteq \R \text{,}\)</span> and fix a limit point <span class="process-math">\(c \in X' \text{.}\)</span> We say that <span class="process-math">\(f \)</span> is <dfn class="terminology">strictly asymptotically dominated</dfn> by <span class="process-math">\(g \)</span> near <span class="process-math">\(c \)</span> if <span class="process-math">\(f \preccurlyeq g \)</span> but <span class="process-math">\(f \not \asymp g \)</span> as <span class="process-math">\(x \to c \text{.}\)</span> In this case, we write <span class="process-math">\(f \prec g \)</span> as <span class="process-math">\(x \to c \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-strict-asymptotic-dominance-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 5.4.4: Strict asymptotic dominance"><a tabindex="-1" href="#definition-strict-asymptotic-dominance" title="Copy heading and permalink for Definition 5.4.4: Strict asymptotic dominance" aria-label="Copy heading and permalink for Definition 5.4.4: Strict asymptotic dominance">🔗</a></div>
+</article>
+<div class="para" id="subsection-dominance-and-asymptotics-8">We will shortly find the following characterization of strict asymptotic dominance useful:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-dominance-and-asymptotics-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-strict-asymptotic-dominance"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Strict asymptotic dominance.</span>
+</h3>
+<div class="para logical" id="proposition-strict-asymptotic-dominance-2-1">
+<div class="para">Let <span class="process-math">\(f , g \colon X \to \R \)</span> be real-valued functions defined on a subset <span class="process-math">\(X \subseteq \R \text{,}\)</span> and fix a limit point <span class="process-math">\(c \in X' \text{.}\)</span> If <span class="process-math">\(g \of{ x } \neq 0 \)</span> for all <span class="process-math">\(x \in X \setminus \set{ c } \text{,}\)</span> then <span class="process-math">\(f \prec g \)</span> if and only if</div>
+<div class="displaymath process-math" id="proposition-strict-asymptotic-dominance-2-1-7">
+\begin{equation*}
+\lim_{ x \to c }{ \frac{ f \of{ x } }{ g \of{ x } } } = 0\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-strict-asymptotic-dominance-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 5.4.5: Strict asymptotic dominance"><a tabindex="-1" href="#proposition-strict-asymptotic-dominance" title="Copy heading and permalink for Proposition 5.4.5: Strict asymptotic dominance" aria-label="Copy heading and permalink for Proposition 5.4.5: Strict asymptotic dominance">🔗</a></div>
+</article>
+<details id="proposition-strict-asymptotic-dominance-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="proposition-strict-asymptotic-dominance-3-1">
+<div class="para">Let <span class="process-math">\(\lambda \colon X \to \clopint{ 0 }{ \infty } \)</span> be the non-negative real-valued function defined by the formula</div>
+<div class="displaymath process-math" id="proposition-strict-asymptotic-dominance-3-1-2">
+\begin{equation*}
+\lambda \of{ x } = \abs{ \frac{ f \of{ x } }{ g \of{ x } } }\text{.}
+\end{equation*}
+</div>
+<div class="para">Then <span class="process-math">\(\abs{ f \of{ x } } = \lambda \of{ x } \abs{ g \of{ x } } \)</span> for all <span class="process-math">\(x \in X \text{,}\)</span> and</div>
+<div class="displaymath process-math" id="proposition-strict-asymptotic-dominance-3-1-5">
+\begin{equation*}
+\lim_{ x \to c }{ \lambda \of{ x } } = \lim_{ x \to c }{ \abs{ \frac{ f \of{ x } }{ g \of{ x } } } } = \abs{ \lim_{ x \to c }{ \frac{ f \of{ x } }{ g \of{ x } } } }\text{.}
+\end{equation*}
+</div>
+<div class="para">We conclude that <span class="process-math">\(f \prec g \)</span> if and only if</div>
+<div class="displaymath process-math" id="proposition-strict-asymptotic-dominance-3-1-7">
+\begin{equation*}
+\lim_{ x \to c }{ \frac{ f \of{ x } }{ g \of{ x } } } = 0\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-strict-asymptotic-dominance-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.4.5.1"><a tabindex="-1" href="#proposition-strict-asymptotic-dominance-3" title="Copy heading and permalink for Proof 5.4.5.1" aria-label="Copy heading and permalink for Proof 5.4.5.1">🔗</a></div>
+</article></details>
+<section class="conclusion" id="subsection-dominance-and-asymptotics-10">
+<div class="para" id="subsection-dominance-and-asymptotics-10-1">While we will mainly utilize the language of asymptotic comparison to describe the error in a Taylor approximation, these ideas are ubiquitous throughout mathematical analysis and applied mathematics.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-dominance-and-asymptotics-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Subsection 5.4.1: Dominance and Asymptotics"><a tabindex="-1" href="#subsection-dominance-and-asymptotics" title="Copy heading and permalink for Subsection 5.4.1: Dominance and Asymptotics" aria-label="Copy heading and permalink for Subsection 5.4.1: Dominance and Asymptotics">🔗</a></div>
+</section>
+<section class="subsection" id="subsection-polynomial-approximations-of-differentiable-functions">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Polynomial Approximations of Differentiable Functions</span>
+</h2>
+<section class="introduction" id="subsection-polynomial-approximations-of-differentiable-functions-2">
+<div class="para" id="subsection-polynomial-approximations-of-differentiable-functions-2-1">We now arrive at one of the fundamental results in differential calculus. <dfn class="terminology">Taylor’s theorem</dfn> establishes a best possible polynomial approximation <span class="process-math">\(p \)</span> for a multiply differentiable function <span class="process-math">\(f \)</span> near a given point. We quantify the quality of this approximation by asymptotically comparing the difference <span class="process-math">\(f - p \)</span> to well-known power functions vanishing at <span class="process-math">\(c \)</span> at high order.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-polynomial-approximations-of-differentiable-functions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="theorem theorem-like" id="theorem-taylors-theorem"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="creator">(Brook Taylor)</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Taylor’s theorem.</span>
+</h3>
+<div class="para" id="theorem-taylors-theorem-4-1">Let <span class="process-math">\(f \colon X \to \R \)</span> be a real-valued function defined on a subset <span class="process-math">\(X \subseteq \R \text{.}\)</span> If <span class="process-math">\(f \)</span> is <span class="process-math">\(k \)</span>-times differentiable at a point <span class="process-math">\(c \in X \text{,}\)</span> then there is a unique polynomial function <span class="process-math">\(p \)</span> of degree at most <span class="process-math">\(k \)</span> so that <span class="process-math">\(f \of{ x } - p \of{ x } \prec \of{ x - c }^{ k } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-taylors-theorem-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 5.4.6: Taylor’s theorem"><a tabindex="-1" href="#theorem-taylors-theorem" title="Copy heading and permalink for Theorem 5.4.6: Taylor’s theorem" aria-label="Copy heading and permalink for Theorem 5.4.6: Taylor’s theorem">🔗</a></div>
+</article>
+<details id="theorem-taylors-theorem-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="theorem-taylors-theorem-5-1">
+<div class="para">For uniqueness, let <span class="process-math">\(p , q \colon \R \to \R \)</span> be polynomial functions of degree at most <span class="process-math">\(k \text{,}\)</span> and suppose that <span class="process-math">\(f \of{ x } - p \of{ x } \prec \of{ x - c }^{ k } \)</span> and <span class="process-math">\(f \of{ x } - q \of{ x } \prec \of{ x - c }^{ k } \text{.}\)</span> Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-squeeze-theorem.html" id="theorem-taylors-theorem-5-1-5">
+\begin{equation*}
+0 \leq \abs{ \frac{ p \of{ x } - q \of{ x } }{ \of{ x - c }^{ k } } } \leq \abs{ \frac{ f \of{ x } - p \of{ x } }{ \of{ x - c }^{ k } } } + \abs{ \frac{ f \of{ x } - q \of{ x } }{ \of{ x - c }^{ k } } }
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x \in X \text{.}\)</span> The <a href="section-limits-in-the-euclidean-metric.html#theorem-squeeze-theorem" class="xref" data-knowl="./knowl/xref/theorem-squeeze-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.3: Squeeze theorem">Theorem 3.3.3 Squeeze theorem</a> now implies that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-squeeze-theorem.html" id="theorem-taylors-theorem-5-1-8">
+\begin{equation*}
+\lim_{ x \to c }{ \abs{ \frac{ p \of{ x } - q \of{ x } }{ \of{ x - c }^{ k } } } } = 0\text{,}
+\end{equation*}
+</div>
+<div class="para">so that <span class="process-math">\(p \of{ x } - q \of{ x } \prec \of{ x - c }^{ k } \)</span> as <span class="process-math">\(x \to c \text{.}\)</span> This polynomial <span class="process-math">\(p \of{ x } - q \of{ x } \)</span> can be written in the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-squeeze-theorem.html" id="theorem-taylors-theorem-5-1-12">
+\begin{equation*}
+p \of{ x } - q \of{ x } = a_{ 0 } + a_{ 1 } \of{ x - c } + a_{ 2 } \of{ x - c }^{ 2 } + \dotsb + a_{ k } \of{ x - c }^{ k }
+\end{equation*}
+</div>
+<div class="para">for some real numbers <span class="process-math">\(a_{ 0 } , \dotsc , a_{ k } \in \R \text{.}\)</span> For each index <span class="process-math">\(0 \leq j \leq k \text{,}\)</span> we observe that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-squeeze-theorem.html" id="theorem-taylors-theorem-5-1-15">
+\begin{equation*}
+\lim_{ x \to c }{ \abs{ \frac{ p \of{ x } - q \of{ x } }{ \of{ x - c }^{ j } } } } = \of{ \lim_{ x \to c }{ \abs{ \frac{ p \of{ x } - q \of{ x } }{ \of{ x - c }^{ k } } } } } \of{ \lim_{ x \to c }{ \abs{ \of{ x - c }^{ k - j } } } } = 0 \cdot 0 = 0\text{.}
+\end{equation*}
+</div>
+<div class="para">If <span class="process-math">\(j = 0 \text{,}\)</span> then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-squeeze-theorem.html" id="theorem-taylors-theorem-5-1-17">
+\begin{align*}
+0 \amp = \lim_{ x \to c }{ \abs{ \frac{ p \of{ x } - q \of{ x } }{ \of{ x - c }^{ 0 } } } } = \lim_{ x \to c }{ \abs{ p \of{ x } - q \of{ x } } }\\
+\amp = \lim_{ x \to c }{ \abs{ a_{ 0 } + a_{ 1 } \of{ x - c } + a_{ 2 } \of{ x - c }^{ 2 } + \dotsb + a_{ k } \of{ x - c }^{ k } } } = \abs{ a_{ 0 } }\text{.}
+\end{align*}
+</div>
+<div class="para">If <span class="process-math">\(j = 1 \text{,}\)</span> then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-squeeze-theorem.html" id="theorem-taylors-theorem-5-1-19">
+\begin{align*}
+0 \amp = \lim_{ x \to c }{ \abs{ \frac{ p \of{ x } - q \of{ x } }{ \of{ x - c }^{ 1 } } } } = \lim_{ x \to c }{ \abs{ \frac{ p \of{ x } - q \of{ x } }{ x - c } } }\\
+\amp = \lim_{ x \to c }{ \abs{ a_{ 1 } + a_{ 2 } \of{ x - c }^{ 1 } + \dotsb + a_{ k } \of{ x - c }^{ k - 1 } } } = \abs{ a_{ 1 } }\text{.}
+\end{align*}
+</div>
+<div class="para">Continuing in this manner, we conclude that <span class="process-math">\(a_{ 0 } = a_{ 1 } = \dotsb = a_{ k } = 0 \text{,}\)</span> so that <span class="process-math">\(p = q \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-taylors-theorem-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="theorem-taylors-theorem-5-2">
+<div class="para">For existence, let <span class="process-math">\(p \colon \R \to \R \)</span> be the polynomial function defined by the formula</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/corollary-lhopitals-rule.html" id="theorem-taylors-theorem-5-2-2">
+\begin{equation*}
+p \of{ x } = f \of{ c } + f' \of{ c } \of{ x - c } + \frac{ f'' \of{ c } \of{ x - c }^{ 2 } }{ 2 } + \dotsb + \frac{ f^{ \of{ k } } \of{ c } \of{ x - c }^{ k } }{ k! }\text{.}
+\end{equation*}
+</div>
+<div class="para">We observe that <span class="process-math">\(p^{ \of{ j } } \of{ c } = f^{ \of{ j } } \of{ c } \)</span> for all <span class="process-math">\(0 \leq j \leq c \text{.}\)</span> We will show that <span class="process-math">\(f \of{ x } - p \of{ x } \prec \of{ x - c }^{ k } \)</span> by repeated applications of <a href="section-applications-of-the-mean-value-theorem.html#corollary-lhopitals-rule" class="xref" data-knowl="./knowl/xref/corollary-lhopitals-rule.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 5.3.6: L’Hôpital’s rule">L’Hôpital’s rule</a>. Indeed,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/corollary-lhopitals-rule.html" id="theorem-taylors-theorem-5-2-7">
+\begin{align*}
+\lim_{ x \to c }{ \frac{ f \of{ x } - p \of{ x } }{ \of{ x - c }^{ k } } } \amp = \lim_{ x \to c }{ \frac{ f' \of{ x } - p' \of{ x } }{ k \of{ x - c }^{ k - 1 } } } = \lim_{ x \to c }{ \frac{ f'' \of{ x } - p'' \of{ x } }{ k \of{ k - 1 } \of{ x - c }^{ k - 2 } } }\\
+\amp = \dotsb = \lim_{ x \to c }{ \frac{ f^{ \of{ k - 1 } } \of{ x } - p^{ \of{ k - 1 } } \of{ x } }{ k! \of{ x - c } } }\\
+\amp = \of{ \frac{ 1 }{ k! } } \of{ \lim_{ x \to c }{ \frac{ f^{ \of{ k - 1 } } \of{ x } - f^{ \of{ k - 1 } } \of{ c } }{ x - c } } - \lim_{ x \to c }{ \frac{ p^{ \of{ k - 1 } } \of{ x } - p^{ \of{ k - 1 } } \of{ c } }{ x - c } } }\\
+\amp = \frac{ f^{ \of{ k } } \of{ c } - p^{ \of{ k } } \of{ c } }{ k! } = \frac{ 0 }{ k! } = 0\text{,}
+\end{align*}
+</div>
+<div class="para">so that <span class="process-math">\(f \of{ x } - p \of{ x } \prec \of{ x - c }^{ k } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-taylors-theorem-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.4.6.1"><a tabindex="-1" href="#theorem-taylors-theorem-5" title="Copy heading and permalink for Proof 5.4.6.1" aria-label="Copy heading and permalink for Proof 5.4.6.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-polynomial-approximations-of-differentiable-functions-4">In summary, if a real-valued function <span class="process-math">\(f \)</span> is <span class="process-math">\(k \)</span>-times differentiable at a point <span class="process-math">\(c \text{,}\)</span> then the unique polynomial of degree at most <span class="process-math">\(k \)</span> with the same value, and derivatives as <span class="process-math">\(f \)</span> up to order <span class="process-math">\(k \)</span> is the best possible polynomial approximation of <span class="process-math">\(f \)</span> near <span class="process-math">\(c \text{.}\)</span> This polynomial is called the <dfn class="terminology">Taylor approximation</dfn> of <span class="process-math">\(f \)</span> at <span class="process-math">\(c \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-polynomial-approximations-of-differentiable-functions-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-taylor-approximation-remainder"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Taylor approximation/remainder.</span>
+</h3>
+<div class="para" id="definition-taylor-approximation-remainder-6-1">Let <span class="process-math">\(f \colon X \to \R \)</span> be a real-valued function defined on a subset <span class="process-math">\(X \subseteq \R \text{.}\)</span> If <span class="process-math">\(f \)</span> is <span class="process-math">\(k \)</span>-times differentiable at a point <span class="process-math">\(c \in X \text{,}\)</span> then the unique polynomial <span class="process-math">\(P^{ k }_{ c } \of{ f , x } \)</span> of degree at most <span class="process-math">\(k \)</span> so that <span class="process-math">\(f \of{ x } - P^{ k }_{ c } \of{ f , x } \prec \of{ x - c }^{ k } \)</span> is called the order <span class="process-math">\(k \)</span> <dfn class="terminology">Taylor approximation</dfn> of <span class="process-math">\(f \)</span> at <span class="process-math">\(c \text{,}\)</span> and <span class="process-math">\(R^{ k }_{ c } \of{ f , x } = f \of{ x } - P^{ k }_{ c } \of{ f , x } \)</span> is called the order <span class="process-math">\(k \)</span> <dfn class="terminology">Taylor remainder</dfn> of <span class="process-math">\(f \)</span> at <span class="process-math">\(c \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-taylor-approximation-remainder-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 5.4.7: Taylor approximation/remainder"><a tabindex="-1" href="#definition-taylor-approximation-remainder" title="Copy heading and permalink for Definition 5.4.7: Taylor approximation/remainder" aria-label="Copy heading and permalink for Definition 5.4.7: Taylor approximation/remainder">🔗</a></div>
+</article>
+<div class="para" id="subsection-polynomial-approximations-of-differentiable-functions-6">The content of Taylor’s theorem is not in finding the Taylor approximation, but rather in bounding the Taylor remainder. Under stronger hypotheses on <span class="process-math">\(f \text{,}\)</span> one can find explicit formulas for the Taylor remainder. For example, the following result utilizes <a href="section-applications-of-the-mean-value-theorem.html#theorem-extended-mean-value-theorem" class="xref" data-knowl="./knowl/xref/theorem-extended-mean-value-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.3.5: Extended mean value theorem">Theorem 5.3.5 Extended mean value theorem</a> to compute a family of such an explicit formulas.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-polynomial-approximations-of-differentiable-functions-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="theorem-mean-value-form-of-the-taylor-remainder"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Mean value form of the Taylor remainder.</span>
+</h3>
+<div class="para" id="theorem-mean-value-form-of-the-taylor-remainder-2-1">Let <span class="process-math">\(f \colon X \to \R \)</span> be a real-valued function defined on an interval <span class="process-math">\(X \subseteq \R \text{,}\)</span> and suppose that <span class="process-math">\(f \)</span> is <span class="process-math">\(k \)</span>-times differentiable at an interior point <span class="process-math">\(c \in \Int \of{ X } \text{,}\)</span> with order <span class="process-math">\(k \)</span> Taylor approximation <span class="process-math">\(P^{ k }_{ c } \of{ f , x } \)</span> and order <span class="process-math">\(k \)</span> Taylor remainder <span class="process-math">\(R^{ k }_{ c } \of{ f , x } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-mean-value-form-of-the-taylor-remainder-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="theorem-mean-value-form-of-the-taylor-remainder-2-2">
+<div class="para">Fix a point <span class="process-math">\(x \in X \text{,}\)</span> and a real-valued function <span class="process-math">\(G \colon I_{ x } \to \R \)</span> defined on the closed interval <span class="process-math">\(I_{ x } \)</span> between <span class="process-math">\(c \)</span> and <span class="process-math">\(x \text{.}\)</span> If both <span class="process-math">\(f^{ \of{ k } } \)</span> and <span class="process-math">\(G \)</span> are continuous on <span class="process-math">\(I_{ x } \)</span> and differentiable on the open interval <span class="process-math">\(\Int \of{ I_{ x } } \text{,}\)</span> and if <span class="process-math">\(G \)</span> has no critical points on <span class="process-math">\(\Int \of{ I_{ x } } \text{,}\)</span> then</div>
+<div class="displaymath process-math" id="theorem-mean-value-form-of-the-taylor-remainder-2-2-12">
+\begin{equation*}
+R^{ k }_{ c } \of{ f , x } = \of{ \frac{ f^{ \of{ k + 1 } } \of{ y } \of{ x - y }^{ k } }{ k! } } \of{ \frac{ G \of{ x } - G \of{ c } }{ G' \of{ y } } } 
+\end{equation*}
+</div>
+<div class="para">for some interior point <span class="process-math">\(y \in \Int \of{ I_{ x } } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-mean-value-form-of-the-taylor-remainder-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 5.4.8: Mean value form of the Taylor remainder"><a tabindex="-1" href="#theorem-mean-value-form-of-the-taylor-remainder" title="Copy heading and permalink for Theorem 5.4.8: Mean value form of the Taylor remainder" aria-label="Copy heading and permalink for Theorem 5.4.8: Mean value form of the Taylor remainder">🔗</a></div>
+</article>
+<details id="theorem-mean-value-form-of-the-taylor-remainder-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="theorem-mean-value-form-of-the-taylor-remainder-3-1">
+<div class="para">Consider the real-valued function <span class="process-math">\(F \colon X \to \R \)</span> defined by the formula</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-extended-mean-value-theorem.html" id="theorem-mean-value-form-of-the-taylor-remainder-3-1-2">
+\begin{equation*}
+F \of{ y } = f \of{ y } + f' \of{ y } \of{ x - y } + \frac{ f'' \of{ y } \of{ x - y }^{ 2 } }{ 2 } + \dotsb + \frac{ f^{ \of{ k } } \of{ y } \of{ x - y }^{ k } }{ k! }\text{.}
+\end{equation*}
+</div>
+<div class="para">We observe that <span class="process-math">\(F \)</span> is continuous on the closed interval <span class="process-math">\(I_{ x } \)</span> and differentiable on the open interval <span class="process-math">\(\Int \of{ I_{ x } } \text{,}\)</span> with derivative</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-extended-mean-value-theorem.html" id="theorem-mean-value-form-of-the-taylor-remainder-3-1-6">
+\begin{align*}
+F' \of{ y } \amp = f' \of{ y } + \of{ f'' \of{ y } \of{ x - y } - f' \of{ y } } + \of{ \frac{ f^{ \of{ 3 } } \of{ y } \of{ x - y }^{ 2 } }{ 2 } - f'' \of{ y } \of{ x - y } }\\
+\amp \qquad + \dotsb + \of{ \frac{ f^{ \of{ k + 1 } } \of{ y } \of{ x - y }^{ k } }{ k! } - \frac{ f^{ \of{ k } } \of{ y } \of{ x - y }^{ k - 1 } }{ \of{ k - 1 }! } }\\
+\amp = \frac{ f^{ \of{ k + 1 } } \of{ y } \of{ x - y }^{ k } }{ k! }\text{.}
+\end{align*}
+</div>
+<div class="para">By the <a href="section-applications-of-the-mean-value-theorem.html#theorem-extended-mean-value-theorem" class="xref" data-knowl="./knowl/xref/theorem-extended-mean-value-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.3.5: Extended mean value theorem">Theorem 5.3.5 Extended mean value theorem</a>, there is some interior point <span class="process-math">\(y \in \Int \of{ I_{ x } } \)</span> so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-extended-mean-value-theorem.html" id="theorem-mean-value-form-of-the-taylor-remainder-3-1-9">
+\begin{equation*}
+F' \of{ y } \of{ G \of{ x } - G \of{ c } } = \of{ F \of{ x } - F \of{ c } } G' \of{ y }\text{.}
+\end{equation*}
+</div>
+<div class="para">We observe that <span class="process-math">\(F \of{ x } = f \of{ x } \)</span> and <span class="process-math">\(F \of{ c } = P^{ k }_{ c } \of{ f , x } \text{,}\)</span> so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-extended-mean-value-theorem.html" id="theorem-mean-value-form-of-the-taylor-remainder-3-1-12">
+\begin{align*}
+R^{ k }_{ c } \of{ f , x } \amp = f \of{ x } - P^{ k }_{ c } \of{ f , x } = F \of{ x } - F \of{ c }\\
+\amp = F' \of{ y } \of{ \frac{ G \of{ x } - G \of{ c } }{ G' \of{ y } } }\\
+\amp = \of{ \frac{ f^{ \of{ k + 1 } } \of{ y } \of{ x - y }^{ k } }{ k! } } \of{ \frac{ G \of{ x } - G \of{ c } }{ G' \of{ y } } }\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-mean-value-form-of-the-taylor-remainder-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.4.8.1"><a tabindex="-1" href="#theorem-mean-value-form-of-the-taylor-remainder-3" title="Copy heading and permalink for Proof 5.4.8.1" aria-label="Copy heading and permalink for Proof 5.4.8.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsection-polynomial-approximations-of-differentiable-functions-8">The utility of <a href="section-higher-order-approximations.html#theorem-mean-value-form-of-the-taylor-remainder" class="xref" data-knowl="./knowl/xref/theorem-mean-value-form-of-the-taylor-remainder.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.4.8: Mean value form of the Taylor remainder">Theorem 5.4.8 Mean value form of the Taylor remainder</a> is in choosing specific functions <span class="process-math">\(G \)</span> in order to obtain particularly nice explicit formulas for the Taylor remainder. For example, we obtain the <dfn class="terminology">Lagrange form</dfn> of the Taylor remainder, which is a higher order generalization of the <a href="section-applications-of-the-mean-value-theorem.html#theorem-mean-value-theorem" class="xref" data-knowl="./knowl/xref/theorem-mean-value-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.3.2: Mean value theorem">Mean value theorem</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-polynomial-approximations-of-differentiable-functions-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="corollary theorem-like" id="corollary-lagrange-form-of-the-taylor-remainder"><h3 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.9</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="creator">(Joseph-Louis Lagrange)</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lagrange form of the Taylor remainder.</span>
+</h3>
+<div class="para" id="corollary-lagrange-form-of-the-taylor-remainder-4-1">Let <span class="process-math">\(f \colon X \to \R \)</span> be a real-valued function defined on an interval <span class="process-math">\(X \subseteq \R \text{,}\)</span> and suppose that <span class="process-math">\(f \)</span> is <span class="process-math">\(k \)</span>-times differentiable at an interior point <span class="process-math">\(c \in \Int \of{ X } \text{,}\)</span> with order <span class="process-math">\(k \)</span> Taylor approximation <span class="process-math">\(P^{ k }_{ c } \of{ f , x } \)</span> and order <span class="process-math">\(k \)</span> Taylor remainder <span class="process-math">\(R^{ k }_{ c } \of{ f , x } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-lagrange-form-of-the-taylor-remainder-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="corollary-lagrange-form-of-the-taylor-remainder-4-2">
+<div class="para">Fix a point <span class="process-math">\(x \in X \text{.}\)</span> If <span class="process-math">\(f^{ \of{ k } } \)</span> is continuous on the closed interval <span class="process-math">\(I_{ x } \)</span> between <span class="process-math">\(c \)</span> and <span class="process-math">\(x \)</span> and differentiable on the open interval <span class="process-math">\(\Int \of{ I_{ x } } \text{,}\)</span> then</div>
+<div class="displaymath process-math" id="corollary-lagrange-form-of-the-taylor-remainder-4-2-7">
+\begin{equation*}
+R^{ k }_{ c } \of{ f , x } = \frac{ f^{ \of{ k + 1 } } \of{ y } \of{ x - c }^{ k + 1 } }{ \of{ k + 1 }! }
+\end{equation*}
+</div>
+<div class="para">for some interior point <span class="process-math">\(y \in \Int \of{ I_{ x } } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-lagrange-form-of-the-taylor-remainder-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Corollary 5.4.9: Lagrange form of the Taylor remainder"><a tabindex="-1" href="#corollary-lagrange-form-of-the-taylor-remainder" title="Copy heading and permalink for Corollary 5.4.9: Lagrange form of the Taylor remainder" aria-label="Copy heading and permalink for Corollary 5.4.9: Lagrange form of the Taylor remainder">🔗</a></div>
+</article>
+<details id="corollary-lagrange-form-of-the-taylor-remainder-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="corollary-lagrange-form-of-the-taylor-remainder-5-1">
+<div class="para">This follows immediately from <a href="section-higher-order-approximations.html#theorem-mean-value-form-of-the-taylor-remainder" class="xref" data-knowl="./knowl/xref/theorem-mean-value-form-of-the-taylor-remainder.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.4.8: Mean value form of the Taylor remainder">Theorem 5.4.8 Mean value form of the Taylor remainder</a> by taking <span class="process-math">\(G \of{ y } = \of{ x - y }^{ k + 1 } \text{.}\)</span> Indeed, in this case,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-mean-value-form-of-the-taylor-remainder.html" id="corollary-lagrange-form-of-the-taylor-remainder-5-1-3">
+\begin{align*}
+R^{ k }_{ c } \of{ f , x } \amp = \of{ \frac{ f^{ \of{ k + 1 } } \of{ y } \of{ x - y }^{ k } }{ k! } } \of{ \frac{ G \of{ x } - G \of{ c } }{ G' \of{ y } } }\\
+\amp = \of{ \frac{ f^{ \of{ k + 1 } } \of{ y } \of{ x - y }^{ k } }{ k! } } \of{ \frac{ - \of{ x - c }^{ k + 1 } }{ \of{ k + 1 } \of{ x - y }^{ k } \of{ -1 } } }\\
+\amp = \frac{ f^{ \of{ k + 1 } } \of{ y } \of{ x - c }^{ k + 1 } }{ \of{ k + 1 }! }
+\end{align*}
+</div>
+<div class="para">for some interior point <span class="process-math">\(y \in \Int \of{ I_{ x } } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#corollary-lagrange-form-of-the-taylor-remainder-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.4.9.1"><a tabindex="-1" href="#corollary-lagrange-form-of-the-taylor-remainder-5" title="Copy heading and permalink for Proof 5.4.9.1" aria-label="Copy heading and permalink for Proof 5.4.9.1">🔗</a></div>
+</article></details>
+<section class="conclusion" id="subsection-polynomial-approximations-of-differentiable-functions-10">
+<div class="para" id="subsection-polynomial-approximations-of-differentiable-functions-10-1">We observe that <a href="section-higher-order-approximations.html#corollary-lagrange-form-of-the-taylor-remainder" class="xref" data-knowl="./knowl/xref/corollary-lagrange-form-of-the-taylor-remainder.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 5.4.9: Lagrange form of the Taylor remainder">Corollary 5.4.9 Lagrange form of the Taylor remainder</a> is precisely the <a href="section-applications-of-the-mean-value-theorem.html#theorem-mean-value-theorem" class="xref" data-knowl="./knowl/xref/theorem-mean-value-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.3.2: Mean value theorem">Mean value theorem</a> when <span class="process-math">\(k = 0 \text{.}\)</span> Other important forms of the Taylor remainder can be found by choosing different functions <span class="process-math">\(G \text{.}\)</span> You will have an opportunity to explore the <dfn class="terminology">Cauchy form</dfn> of the Taylor remainder in the problems for this section.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsection-polynomial-approximations-of-differentiable-functions-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Subsection 5.4.2: Polynomial Approximations of Differentiable Functions"><a tabindex="-1" href="#subsection-polynomial-approximations-of-differentiable-functions" title="Copy heading and permalink for Subsection 5.4.2: Polynomial Approximations of Differentiable Functions" aria-label="Copy heading and permalink for Subsection 5.4.2: Polynomial Approximations of Differentiable Functions">🔗</a></div>
+</section>
+<section class="conclusion" id="section-higher-order-approximations-5">
+<div class="para" id="section-higher-order-approximations-5-1">In <a href="chapter-infinite-series.html" class="internal" title="Chapter 7: Infinite Series">Chapter 7 Infinite Series</a>, we will explore <dfn class="terminology">Taylor series</dfn>, which are related approximations which utilize all derivatives of an infinitely differentiable function.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-higher-order-approximations-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="exercises" id="exercises-higher-order-approximations">
+<h2 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h2>
+<section class="introduction" id="exercises-higher-order-approximations-2">
+<div class="para" id="exercises-higher-order-approximations-2-1">The following exercises are designed to help you practice basic techniques and verify/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-higher-order-approximations-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="conclusion" id="exercises-higher-order-approximations-3">
+<div class="para" id="exercises-higher-order-approximations-3-1">Short answers and/or in-depth solutions to these exercises are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-higher-order-approximations-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Exercises 5.4.3: Exercises"><a tabindex="-1" href="#exercises-higher-order-approximations" title="Copy heading and permalink for Exercises 5.4.3: Exercises" aria-label="Copy heading and permalink for Exercises 5.4.3: Exercises">🔗</a></div>
+</section>
+<section class="reading-questions" id="problems-higher-order-approximations">
+<h2 class="heading hide-type">
+<span class="type">Reading Questions</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
+</h2>
+<section class="introduction" id="problems-higher-order-approximations-2">
+<div class="para" id="problems-higher-order-approximations-2-1">In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and <em class="emphasis">persistence is part of the task</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-higher-order-approximations-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="exercise exercise-like" id="problem-taylor-approximations-of-non-analytic-functions"><h3 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Taylor approximations of non-analytic functions.</span>
+</h3>
+<div class="introduction" id="problem-taylor-approximations-of-non-analytic-functions-2">
+<div class="para logical" id="problem-taylor-approximations-of-non-analytic-functions-2-1">
+<div class="para">Let <span class="process-math">\(f \colon \R \to \R \)</span> be the real-valued function defined piecewise by the formula</div>
+<div class="displaymath process-math" id="problem-taylor-approximations-of-non-analytic-functions-2-1-2">
+\begin{equation*}
+f \of{ x } =
+\begin{cases}
+e^{ -\frac{ 1 }{ x^{ 2 } } } \amp x \gt 0 \\
+0 \amp x \leq 0
+\text{.}\end{cases}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-taylor-approximations-of-non-analytic-functions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="problem-taylor-approximations-of-non-analytic-functions-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="problem-taylor-approximations-of-non-analytic-functions-3-1-1">Prove that <span class="process-math">\(u^{ \frac{ n }{ 2 } } \prec e^{ u } \)</span> as <span class="process-math">\(u \to \infty \)</span> for all natural numbers <span class="process-math">\(n \in \N \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-taylor-approximations-of-non-analytic-functions-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.4.4.1.a"><a tabindex="-1" href="#problem-taylor-approximations-of-non-analytic-functions-3" title="Copy heading and permalink for Task 5.4.4.1.a" aria-label="Copy heading and permalink for Task 5.4.4.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="problem-taylor-approximations-of-non-analytic-functions-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="problem-taylor-approximations-of-non-analytic-functions-4-1-1">Prove that <span class="process-math">\(f \of{ x } \prec x^{ n } \)</span> as <span class="process-math">\(x \to 0 \)</span> for all natural numbers <span class="process-math">\(n \in \N \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-taylor-approximations-of-non-analytic-functions-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="problem-taylor-approximations-of-non-analytic-functions-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="problem-taylor-approximations-of-non-analytic-functions-4-2-1">Make the substitution <span class="process-math">\(u = \frac{ 1 }{ x^{ 2 } } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-taylor-approximations-of-non-analytic-functions-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 5.4.4.1.b.1"><a tabindex="-1" href="#problem-taylor-approximations-of-non-analytic-functions-4-2" title="Copy heading and permalink for Hint 5.4.4.1.b.1" aria-label="Copy heading and permalink for Hint 5.4.4.1.b.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.4.4.1.b"><a tabindex="-1" href="#problem-taylor-approximations-of-non-analytic-functions-4" title="Copy heading and permalink for Task 5.4.4.1.b" aria-label="Copy heading and permalink for Task 5.4.4.1.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="problem-taylor-approximations-of-non-analytic-functions-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="problem-taylor-approximations-of-non-analytic-functions-5-1-1">Compute all Taylor approximations <span class="process-math">\(P_{ 0 }^{ n } \of{ f , x } \)</span> of <span class="process-math">\(f \)</span> near <span class="process-math">\(0 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-taylor-approximations-of-non-analytic-functions-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.4.4.1.c"><a tabindex="-1" href="#problem-taylor-approximations-of-non-analytic-functions-5" title="Copy heading and permalink for Task 5.4.4.1.c" aria-label="Copy heading and permalink for Task 5.4.4.1.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="problem-taylor-approximations-of-non-analytic-functions-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="problem-taylor-approximations-of-non-analytic-functions-6-1-1">Let <span class="process-math">\(g \in \CDiff^{ \infty } \of{ X } \)</span> be a smooth function defined on an interval <span class="process-math">\(X \subseteq \R \text{.}\)</span> If there is a point <span class="process-math">\(c \in X \)</span> so that <span class="process-math">\(g^{ \of{ n } } \of{ c } = 0 \)</span> for all positive integers <span class="process-math">\(n \geq 1 \text{,}\)</span> can we conclude that <span class="process-math">\(g \)</span> is constant on a neighborhood of <span class="process-math">\(c \text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-taylor-approximations-of-non-analytic-functions-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.4.4.1.d"><a tabindex="-1" href="#problem-taylor-approximations-of-non-analytic-functions-6" title="Copy heading and permalink for Task 5.4.4.1.d" aria-label="Copy heading and permalink for Task 5.4.4.1.d">🔗</a></div>
+</article>
+<div class="conclusion" id="problem-taylor-approximations-of-non-analytic-functions-7">
+<div class="para" id="problem-taylor-approximations-of-non-analytic-functions-7-1">
+<span class="process-math">\(f \)</span> is our first example of a smooth function which is not <dfn class="terminology">analytic</dfn>. We will explore these functions more in <a href="chapter-infinite-series.html" class="internal" title="Chapter 7: Infinite Series">Chapter 7 Infinite Series</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-taylor-approximations-of-non-analytic-functions-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Problem 5.4.4.1: Taylor approximations of non-analytic functions"><a tabindex="-1" href="#problem-taylor-approximations-of-non-analytic-functions" title="Copy heading and permalink for Problem 5.4.4.1: Taylor approximations of non-analytic functions" aria-label="Copy heading and permalink for Problem 5.4.4.1: Taylor approximations of non-analytic functions">🔗</a></div>
+</article>
+<section class="conclusion" id="problems-higher-order-approximations-4">
+<div class="para" id="problems-higher-order-approximations-4-1">In-depth solutions to these problems are available in <a href="solutions.html" class="internal" title="Appendix A: Selected Solutions">Appendix A Selected Solutions</a>. However, these are provided in order to check your work. If you are unable to solve the above problems, discuss your questions with classmates and/or instructor rather than spoiling the answers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-higher-order-approximations-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Reading Questions 5.4.4: Problems"><a tabindex="-1" href="#problems-higher-order-approximations" title="Copy heading and permalink for Reading Questions 5.4.4: Problems" aria-label="Copy heading and permalink for Reading Questions 5.4.4: Problems">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 5.4: Higher Order Approximations"><a tabindex="-1" href="#section-higher-order-approximations" title="Copy heading and permalink for Section 5.4: Higher Order Approximations" aria-label="Copy heading and permalink for Section 5.4: Higher Order Approximations">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="section-applications-of-the-mean-value-theorem.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="chapter-differentiation-and-smoothness-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Geometric series.</span>
+</h2>
+<div class="para logical">
+<div class="para">A <dfn class="terminology">geometric series</dfn> of <dfn class="terminology">initial value</dfn> <span class="process-math">\(a \in \R \)</span> and <dfn class="terminology">ratio</dfn> <span class="process-math">\(r \in \R \)</span> is the series of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ a r^{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="para">If <span class="process-math">\(r = 1 \text{,}\)</span> then the partial sums of such a geometric series are</div>
+<div class="displaymath process-math">
+\begin{align*}
+S_{ n } \amp = \sum_{ k = 0 }^{ n }{ a r^{ k } } = a + a r + a r^{ 2 } + \dotsb + a r^{ n }\\
+\amp = a + a + a + \dotsb + a = a \of{ n + 1 }
+\end{align*}
+</div>
+<div class="para">On the other hand, if <span class="process-math">\(r \neq 1 \text{,}\)</span> then we claim that the partial sums of such a geometric series are</div>
+<div class="displaymath process-math">
+\begin{align*}
+S_{ n } \amp = \sum_{ k = 0 }^{ n }{ a r^{ k } } = a + a r + a r^{ 2 } + \dotsb + a r^{ n }\\
+\amp = \frac{ a \of{ 1 - r^{ n + 1 } } }{ 1 - r }\text{.}
+\end{align*}
+</div>
+<div class="para">We can verify this computation by induction on <span class="process-math">\(n \in \N \text{.}\)</span> Indeed, for the base case <span class="process-math">\(n = 0 \text{,}\)</span> we see that</div>
+<div class="displaymath process-math">
+\begin{align*}
+S_{ n } \amp = S_{ 0 } = \sum_{ k = 0 }^{ 0 }{ a r^{ k } } = a r^{ 0 } = a \\
+\amp = a \of{ \frac{ 1 - r }{ 1 - r } } = \frac{ a \of{ 1 - r^{ 1 } } }{ 1 - r } = \frac{ a \of{ 1 - r^{ n + 1 } } }{ 1 - r }\text{.}
+\end{align*}
+</div>
+<div class="para">For the inductive step, suppose that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+S_{ n } = \frac{ a \of{ 1 - r^{ n + 1 } } }{ 1 - r }
+\end{equation*}
+</div>
+<div class="para">for some index <span class="process-math">\(n \in \N \text{.}\)</span> We now observe that</div>
+<div class="displaymath process-math">
+\begin{align*}
+S_{ n + 1 } \amp = \sum_{ k = 0 }^{ n + 1 }{ a r^{ k } } = \sum_{ k = 0 }^{ n }{ a r^{ k } } + a r^{ n + 1 } = \frac{ a \of{ 1 - r^{ n + 1 } } }{ 1 - r } + a r^{ n + 1 }\\
+\amp = \frac{ a \of{ 1 - r^{ n + 1 } } + a r^{ n + 1 } \of{ 1 - r } }{ 1 - r }\\
+\amp = \frac{ a - a r^{ n + 1 } + a r^{ n + 1 } - a r^{ n + 2 } }{ 1 - r }\\
+\amp = \frac{ a - a r^{ n + 2 } }{ 1 - r } = \frac{ a \of{ 1 - r^{ \of{ n + 1 } + 1 } } }{ 1 - r }\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-geometric-series-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 7.1.2: Geometric series"><a tabindex="-1" href="#example-geometric-series" title="Copy heading and permalink for Example 7.1.2: Geometric series" aria-label="Copy heading and permalink for Example 7.1.2: Geometric series">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="section-partial-sums-and-infinite-series.html#example-geometric-series">In Context</a></span>
+</body>
+</html>
