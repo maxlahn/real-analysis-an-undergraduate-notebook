@@ -7,7 +7,7 @@
 
   <introduction>
     <p>
-      We begin by developing a notion of convergence and divergence for series of real numbers. These ideas build directly on the convergence and divergence of sequences of real numbers. In fact, a series converges/diverges if and only if an associated sequence of real numbers (although <em> not </em> the sequence of terms) does.
+      We begin by developing a notion of convergence and divergence for series of real numbers. These ideas build directly on the convergence and divergence of sequences of real numbers. In fact, a series converges/diverges if and only if an associated sequence of real numbers does.
     </p>
   </introduction>
 
@@ -17,11 +17,11 @@
 
   <conclusion>
     <p>
-      Text after the last subsection.
+      In the next section, we will develop several techniques and tests for determining whether a given series of real numbers converges or diverges.
     </p>
   </conclusion>
 
-  <xi:include href="./exercises/exercises-partial-sums-and-infinite-series.ptx"/>
+  <xi:include href="./exercises-partial-sums-and-infinite-series.ptx"/>
 
-  <xi:include href="./reading-questions/reading-questions-partial-sums-and-infinite-series.ptx"/>
+  <xi:include href="./problems-partial-sums-and-infinite-series.ptx"/>
 </section>

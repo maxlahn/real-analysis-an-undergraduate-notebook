@@ -2,152 +2,404 @@
 
 <subsection xml:id="subsection-rearrangements-of-infinite-series" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>
-    Rearrangements of Infinite Series [SKIP]
+    Rearrangements of Infinite Series
   </title>
 
   <introduction>
     <p>
-      Text before the first subdivision.
+      While the commutativity and associativity of addition imply that the order in which one adds up a finite sequence of real numbers does not matter, the same is not always the case for infinite series of real numbers. We will see that the convergence/divergence behavior of certain sequences can be meaningfully affected by rearranging their terms, but other sequences cannot be tampered with in this way.
     </p>
   </introduction>
   
-  
-
-  <conclusion>
-    <p>
-      Text after the last subdivision.
-    </p>
-  </conclusion>
-</subsection>
-
-<!--
-
-  <definition xml:id="definition-TITLE">
+  <definition xml:id="definition-positive-negative-part">
     <title>
-      TITLE
+      Positive/negative part
     </title>
     
     <idx>
-      TERM
+      positive part
+    </idx>
+    
+    <idx>
+      negative part
     </idx>
     
     <notation>
       <usage>
-        <m>  </m>
+        <m> x^{ + } </m>
       </usage>
       
       <description>
         <p>
-          
+          the positive part of <m> x </m>
+        </p>
+      </description>
+    </notation>
+    
+    <notation>
+      <usage>
+        <m> x^{ - } </m>
+      </usage>
+      
+      <description>
+        <p>
+          the negative part of <m> x </m>
         </p>
       </description>
     </notation>
     
     <statement>
-      <p>
+      <ul>
+        <li>
+          <title>
+            Positive part
+          </title>
+          
+          <p>
+            The <term> positive part </term> <m> x^{ + } </m> of a real number <m> x \in \R </m> is the non-negative real number
+            
+            <md>
+              x^{ + } = \max \of{ \set{ x , 0 } }
+            </md>.
+            
+            Similarly, the <term> positive part </term> of a series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> is the series
+            
+            <md>
+              \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } } = \sum_{ n = 0 }^{ \infty }{ \max \of{ \set{ x , 0 } } }
+            </md>.
+          </p>
+        </li>
         
+        <li>
+          <title>
+            Negative part
+          </title>
+          
+          <p>
+            The <term> negative part </term> <m> x^{ - } </m> of a real number <m> x \in \R </m> is the non-positive real number
+            
+            <md>
+              x^{ - } = -\min \of{ \set{ x , 0 } } = \max \of{ \set{ -x , 0 } } = \of{ -x }^{ + }
+            </md>.
+            
+            Similarly, the <term> negative part </term> of a series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> is the series
+            
+            <md>
+              \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ - } } = \sum_{ n = 0 }^{ \infty }{ -\min \of{ \set{ x , 0 } } }
+            </md>.
+          </p>
+        </li>
+      </ul>
+    </statement>
+  </definition>
+  
+  <p>
+    The positive and negative parts of a real number are closely related to its absolute value.
+  </p>
+  
+  <lemma xml:id="lemma-positive-negative-parts-and-magnitude">
+    <title>
+      Positive/negative parts and magnitude
+    </title>
+    
+    <statement>
+      <p>
+        <m> x = x^{ + } - x^{ - } </m> and <m> \abs{ x } = x^{ + } + x^{ - } </m> for any real number <m> x \in \R </m> with positive part <m> x^{ + } \geq 0 </m> and negative part <m> x^{ - } \leq 0 </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        First suppose that <m> x = 0 </m>. Then
+        
+        <md>
+          <mrow>
+            x^{ + } \amp = \max \of{ \set{ x , 0 } } = \max \of{ \set{ 0 } } = 0
+          </mrow>
+          
+          <mrow>
+            x^{ - } \amp = -\min \of{ \set{ x , 0 } } = -\min \of{ \set{ 0 } } = -0 = 0
+          </mrow>
+        </md>,
+        
+        and so
+        
+        <md>
+          <mrow>
+            x^{ + } - x^{ - } \amp = 0 - 0 = 0 = x
+          </mrow>
+          
+          <mrow>
+            x^{ + } + x^{ - } \amp = 0 + 0 = 0 = \abs{ 0 } = \abs{ x }
+          </mrow>
+        </md>.
+      </p>
+      
+      <p>
+        Now suppose that <m> x \gt 0 </m> is positive. Then
+        
+        <md>
+          <mrow>
+            x^{ + } \amp = \max \of{ \set{ x , 0 } } = x
+          </mrow>
+          
+          <mrow>
+            x^{ - } \amp = -\min \of{ \set{ x , 0 } } = -0 = 0
+          </mrow>
+        </md>,
+        
+        and so
+        
+        <md>
+          <mrow>
+            x^{ + } - x^{ - } \amp = x - 0 = x
+          </mrow>
+          
+          <mrow>
+            x^{ + } + x^{ - } \amp = x + 0 = x = \abs{ x }
+          </mrow>
+        </md>.
+      </p>
+      
+      <p>
+        Now suppose that <m> x \lt 0 </m> is positive. Then
+        
+        <md>
+          <mrow>
+            x^{ + } \amp = \max \of{ \set{ x , 0 } } = 0
+          </mrow>
+          
+          <mrow>
+            x^{ - } \amp = -\min \of{ \set{ x , 0 } } = -x
+          </mrow>
+        </md>,
+        
+        and so
+        
+        <md>
+          <mrow>
+            x^{ + } - x^{ - } \amp = 0 - \of{ -x } = x
+          </mrow>
+          
+          <mrow>
+            x^{ + } + x^{ - } \amp = 0 + \of{ -x } = -x = \abs{ x }
+          </mrow>
+        </md>.
+      </p>
+    </proof>
+  </lemma>
+  
+  <p>
+    If a series of real numbers converges, then the convergence or divergence behavior of its positive and negative parts are not unrelated. The following result establishes a dichotomy of behavior based on whether or not these related series converge or diverge.
+  </p>
+  
+  <proposition xml:id="proposition-absolute-conditional-series-convergence">
+    <title>
+      Absolute/conditional series convergence
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of real numbers <m> x_{ n } \in \R </m>. If the series
+        
+        <md>
+          \sum_{ n = 0 }^{ \infty }{ x_{ n } }
+        </md>
+        
+        converges, then its positive and negative parts either both converge, in which case the series
+        
+        <md>
+          \sum_{ n = 0 }^{ \infty }{ \abs{ x_{ n } } }
+        </md>
+        
+        converges, or they both diverge to <m> \infty </m>, in which case the series
+        
+        <md>
+          \sum_{ n = 0 }^{ \infty }{ \abs{ x_{ n } } }
+        </md>
+        
+        diverges to <m> \infty </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \of{ P_{ n } }_{ n = 0 }^{ \infty } </m> and <m> \of{ N_{ n } }_{ n = 0 }^{ \infty } </m> be the sequences of partial sums
+        
+        <md>
+          <mrow>
+            P_{ n } \amp = \sum_{ k = 0 }^{ n }{ x_{ n }^{ + } } \amp N_{ n } \amp = \sum_{ k = 0 }^{ n }{ x_{ n }^{ - } }
+          </mrow>
+        </md>.
+        
+        Since both <m> x^{ + } </m> and <m> x^{ - } </m> are non-negative for any real number <m> x \in \R </m>, we observe that
+        
+        <md>
+          <mrow>
+            P_{ n + 1 } \amp = \sum_{ k = 0 }^{ n + 1 }{ x_{ k }^{ + } } = \sum_{ k = 0 }^{ n }{ x_{ k }^{ + } } + x_{ n + 1 }^{ + } \geq P_{ n }
+          </mrow>
+          
+          <mrow>
+            N_{ n + 1 } \amp = \sum_{ k = 0 }^{ n + 1 }{ x_{ k }^{ - } } = \sum_{ k = 0 }^{ n }{ x_{ k }^{ - } } + x_{ n + 1 }^{ - } \geq N_{ n }
+          </mrow>
+        </md>;
+        
+        that is, the partial sums <m> \of{ P_{ n } }_{ n = 0 }^{ \infty } </m> and <m> \of{ N_{ n } }_{ n = 0 }^{ \infty } </m> are non-decreasing. The <xref ref="theorem-monotone-convergence-theorem" text="title"/> now implies that
+        
+        <md>
+          <mrow>
+            \lim_{ n \to \infty }{ P_{ n } } \amp = \sup_{ n \in \N }{ P_{ n } } \amp \lim_{ n \to \infty }{ N_{ n } } \amp = \sup_{ n \in \N }{ N_{ n } }
+          </mrow>
+        </md>.
+        
+        In particular, each of the positive and negative parts <m> \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } } </m> and <m> \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ - } } </m> either converges or diverges to <m> \infty </m>. It remains to show only that one cannot converge while the other diverges to <m> \infty </m>.
+      </p>
+      
+      <p>
+        To that end, we first note that if the positive part <m> \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } } </m> converges, then <xref ref="lemma-positive-negative-parts-and-magnitude"/> and <xref ref="proposition-arithmetic-of-convergent-series"/> imply that
+        
+        <md>
+          \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ - } } = \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } - x_{ n } } = \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } } - \sum_{ n = 0 }^{ \infty }{ x_{ n } }
+        </md>
+        
+        converges, in which case
+        
+        <md>
+          \sum_{ n = 0 }^{ \infty }{ \abs{ x_{ n } } } = \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } + x_{ n }^{ - } } = \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } } + \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ - } }
+        </md>
+        
+        converges by another application of <xref ref="lemma-positive-negative-parts-and-magnitude"/> and (1) of <xref ref="proposition-arithmetic-of-convergent-series"/>.
+      </p>
+      
+      <p>
+        Finally, we note that if the negative part <m> \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ - } } </m> converges, then <xref ref="lemma-positive-negative-parts-and-magnitude"/> and (1) of <xref ref="proposition-arithmetic-of-convergent-series"/> imply that
+        
+        <md>
+          \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } } = \sum_{ n = 0 }^{ \infty }{ x_{ n } + x_{ n }^{ - } } = \sum_{ n = 0 }^{ \infty }{ x_{ n } } + \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ - } }
+        </md>
+        
+        converges, in which case
+        
+        <md>
+          \sum_{ n = 0 }^{ \infty }{ \abs{ x_{ n } } } = \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } + x_{ n }^{ - } } = \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } } + \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ - } }
+        </md>
+        
+        converges by another application of <xref ref="lemma-positive-negative-parts-and-magnitude"/> and (1) of <xref ref="proposition-arithmetic-of-convergent-series"/>.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    The dichotomy produced by <xref ref="proposition-absolute-conditional-series-convergence"/> is important enough to be named. A convergent series is called <term> absolutely convergent </term> if its positive and negative parts converge, and <term> conditionally convergent </term> if its positive and negative parts diverge to <m> \infty </m>.
+  </p>
+  
+  <definition xml:id="definition-absolute-conditional-series-convergence">
+    <title>
+      Absolute/conditional series convergence
+    </title>
+    
+    <idx>
+      absolute convergence
+    </idx>
+    
+    <idx>
+      conditional convergence
+    </idx>
+    
+    <statement>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of real numbers <m> x_{ n } \in \R </m>.
+        
+        <ul>
+          <li>
+            <title>
+              Absolute convergence
+            </title>
+            
+            <p>
+              The series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> <term> converges absolutely </term> if any two of the series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m>, <m> \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } } </m>, <m> \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ - } } </m>, and <m> \sum_{ n = 0 }^{ \infty }{ \abs{ x_{ n } } } </m> converge, in which case they all converge.
+            </p>
+          </li>
+          
+          <li>
+            <title>
+              Conditional convergence
+            </title>
+            
+            <p>
+              The series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> <term> converges conditionally </term> if the series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> converges but any of these series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ + } } </m>, <m> \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ - } } </m>, and <m> \sum_{ n = 0 }^{ \infty }{ \abs{ x_{ n } } } </m> diverge to <m> \infty </m>, in which case they all diverge to <m> \infty </m>.
+            </p>
+          </li>
+        </ul>
       </p>
     </statement>
   </definition>
 
-  <lemma xml:id="lemma-TITLE">
+  <p>
+    We will be able to provide many examples of conditionally convergent and absolutely convergent series after establishing more convergence tests in <xref ref="section-tests-for-series-convergence"/>.
+  </p>
+  
+  <p>
+    One of the foundational results in real analysis is concerned with the limiting behavior of conditionally convergent series. We present the following result without proof:
+  </p>
+  
+  <theorem xml:id="theorem-rearrangement-theorem">
     <title>
-      TITLE
+      Rearrangement theorem
     </title>
     
     <creator>
-      CREATOR
+      Bernhard Riemann
     </creator>
     
     <statement>
       <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of real numbers <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m>, and suppose that the associated series
         
+        <md>
+          \sum_{ n = 0 }^{ \infty }{ x_{ n } }
+        </md>
+        
+        converges.
+        
+        <ol>
+          <li>
+            <p>
+              If the series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> converges absolutely, then
+              
+              <md>
+                \sum_{ n = 0 }^{ \infty }{ x_{ \varphi \of{ n } } } = \sum_{ n = 0 }^{ \infty }{ x_{ n } }
+              </md>
+              
+              for all bijections <m> \varphi \colon \N \to \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              If the series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> converges conditionally, then for any extended real numbers <m> -\infty \leq a \leq b \leq \infty </m>, there is a bijection <m> \varphi \colon \N \to \N </m> so that
+              
+              <md>
+                <mrow>
+                  \liminf_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ x_{ \varphi \of{ n } } } } \amp = a \amp \limsup_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ x_{ \varphi \of{ n } } } } \amp = b
+                </mrow>
+              </md>.
+              
+              In particular, for any extended real number <m> -\infty \leq c \leq \infty </m>, there is a bijection <m> \varphi \colon \N \to \N </m> so that
+              
+              <md>
+                \sum_{ n = 0 }^{ \infty }{ x_{ \varphi \of{ n } } } = c
+              </md>.
+            </p>
+          </li>
+        </ol>
       </p>
     </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </lemma>
-
-  <proposition xml:id="proposition-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </proposition>
-
-  <theorem xml:id="theorem-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
   </theorem>
 
-  <corollary xml:id="corollary-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <creator>
-      CREATOR
-    </creator>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-    
-    <proof>
-      <p>
-        
-      </p>
-    </proof>
-  </corollary>
-
-  <example xml:id="example-TITLE">
-    <title>
-      TITLE
-    </title>
-    
-    <statement>
-      <p>
-        
-      </p>
-    </statement>
-  </example>
-
--->
+  <conclusion>
+    <p>
+      One way to interpret <xref ref="theorem-rearrangement-theorem" text="title"/> is that conditionally convergent series are only convergent because the terms are ordered in such a way to cancel in a particular way, and that we may change the convergence/divergence behavior of such a series in almost any way solely by rearranging the terms. On the other hand, the convergence behavior of absolutely convergent series is completely unaffected by rearrangements.
+    </p>
+  </conclusion>
+</subsection>

@@ -568,7 +568,7 @@
             
             <md>
               <mrow>
-                \sum_{ n = 0 }^{ \infty }{ x_{ n } + y_{ n } } = \lim_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ x_{ n } + y_{ n } } } = X + Y
+                \sum_{ n = 0 }^{ \infty }{ x_{ n } + y_{ n } } \amp = \lim_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ x_{ n } + y_{ n } } } = X + Y
               </mrow>
               
               <mrow>
@@ -634,7 +634,7 @@
             
             <md>
               <mrow>
-                \sum_{ n = 0 }^{ \infty }{ c x_{ n } } = \lim_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ c x_{ n } } } = c X
+                \sum_{ n = 0 }^{ \infty }{ c x_{ n } } \amp = \lim_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ c x_{ n } } } = c X
               </mrow>
               
               <mrow>
