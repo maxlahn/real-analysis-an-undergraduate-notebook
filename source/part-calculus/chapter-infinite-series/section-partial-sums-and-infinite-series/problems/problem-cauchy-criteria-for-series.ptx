@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-cauchy-criteria-for-series" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Cauchy criteria for series
+  </title>
+  
+  <statement>
+    <p>
+      Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of real numbers <m> x_{ n } \in \N </m>, and consider the associated series
+      
+      <md>
+        \sum_{ n = 0 }^{ \infty }{ x_{ n } }
+      </md>.
+      
+      Prove that if the above series converges, then for any positive real number <m> \epsilon \gt 0 </m> there is a natural number <m> n_{ \epsilon } </m> so that
+      
+      <md>
+        \abs{ \sum_{ k = n }^{ m }{ x_{ k } } } \lt \epsilon
+      </md>
+      
+      for all indices <m> m \geq n \geq n_{ \epsilon } </m>.
+    </p>
+  </statement>
+  
+  <hint>
+    <p>
+      Let <m> \of{ S_{ n } }_{ n = 0 }^{ \infty } </m> be the sequence of partial sums
+      
+      <md>
+        S_{ n } = \sum_{ k = 0 }^{ n }{ x_{ n } }
+      </md>.
+      
+      Try computing <m> S_{ m } - S_{ n - 1 } </m> for any indices <m> m , n \in \N </m> so that <m> m \geq n \geq 1 </m>.
+    </p>
+  </hint>
+  
+  <solution>
+    <p>
+      Let <m> \of{ S_{ n } }_{ n = 0 }^{ \infty } </m> be the sequence of partial sums
+      
+      <md>
+        S_{ n } = \sum_{ k = 0 }^{ n }{ x_{ n } }
+      </md>.
+      
+      We observe that
+      
+      <md>
+        S_{ m } - S_{ n - 1 } = \sum_{ k = 0 }^{ m }{ x_{ k } } - \sum_{ k = 0 }^{ n - 1 }{ x_{ k } } = \sum_{ k = n }^{ m }{ x_{ k } }
+      </md>
+      
+      for any indices <m> m , n \in \N </m> so that <m> m \geq n \geq 1 </m>. Since the series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> converges, the sequence <m> \of{ S_{ n } }_{ n = 0 }^{ \infty } </m> of partial sums converges, and is therefore Cauchy. Thus for any positive real number <m> \epsilon \gt 0 </m>, there is a natural number <m> m_{ \epsilon } \in \N </m> so that
+      
+      <md>
+        \abs{ S_{ m } - S_{ n } } \lt \epsilon
+      </md>
+      
+      for all indices <m> m , n \geq m_{ \epsilon } </m>. Let <m> n_{ \epsilon } = m_{ \epsilon } + 1 </m>, and note that
+      
+      <md>
+        \abs{ \sum_{ k = n }^{ m }{ x_{ k } } } = \abs{ S_{ m } - S_{ n - 1 } } \lt \epsilon
+      </md>
+      
+      for all indices <m> m \geq n \geq n_{ \epsilon } </m>.
+    </p>
+  </solution>
+</exercise>

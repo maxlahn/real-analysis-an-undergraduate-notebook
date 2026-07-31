@@ -11,7 +11,11 @@
     </p>
   </introduction>
   
-  <!-- <xi:include href="./exercises/exercise-TITLE.ptx"/> -->
+  <xi:include href="./exercises/exercise-mesh-of-a-partition.ptx"/>
+  
+  <xi:include href="./exercises/exercise-riemann-sums.ptx"/>
+  
+  <xi:include href="./exercises/exercise-darboux-sums.ptx"/>
 
   <conclusion>
     <p>

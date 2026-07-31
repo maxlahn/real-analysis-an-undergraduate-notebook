@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-computing-definite-integrals" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Computing definite integrals
+  </title>
+  
+  <introduction>
+    <p>
+      Use the <xref ref="theorem-second-fundamental-theorem-of-calculus" text="title"/> to compute the following Riemann integrals.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Use the <xref ref="theorem-second-fundamental-theorem-of-calculus" text="title"/> to compute the Riemann integral
+        
+        <md>
+          \int_{ 0 }^{ 3 }{ 2 x + 1 \, \diff{ x } }
+        </md>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> \int_{ 0 }^{ 3 }{ 2 x + 1 \, \diff{ x } } = 12 </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        Consider the real-valued function <m> f \colon \clint{ 0 }{ 3 } \to \R </m> defined by the formula <m> f \of{ x } = x^{ 2 } + x </m>. Since <m> f </m> is continuously differentiable with derivative <m> f' \of{ x } = 2 x + 1 </m>, we see that
+        
+        <md>
+          <mrow>
+            \int_{ 0 }^{ 3 }{ 2 x + 1 \, \diff{ x } } \amp = \int_{ 0 }^{ 3 }{ f' \of{ x } \, \diff{ x } } = f \of{ 3 } - f \of{ 0 }
+          </mrow>
+          
+          <mrow>
+            \amp = 12 - 0 = 12
+          </mrow>
+        </md>
+        
+        by the <xref ref="theorem-second-fundamental-theorem-of-calculus" text="title"/>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Use the <xref ref="theorem-second-fundamental-theorem-of-calculus" text="title"/> to compute the Riemann integral
+        
+        <md>
+          \int_{ -1 }^{ 2 }{ y^{ 3 } + 3 y \, \diff{ y } }
+        </md>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> \int_{ -1 }^{ 2 }{ y^{ 3 } + 3 y \, \diff{ y } } = \frac{ 33 }{ 4 } </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        Consider the real-valued function <m> g \colon \clint{ -1 }{ 2 } \to \R </m> defined by the formula <m> g \of{ y } = \frac{ y^{ 4 } }{ 4 } + \frac{ 3 y^{ 2 } }{ 2 } </m>. Since <m> g </m> is continuously differentiable with derivative <m> g' \of{ y } = y^{ 3 } + 3 y </m>, we see that
+        
+        <md>
+          <mrow>
+            \int_{ -1 }^{ 2 }{ y^{ 3 } + 3 y \, \diff{ y } } \amp = \int_{ -1 }^{ 2 }{ g' \of{ y } \, \diff{ y } } = g \of{ 2 } - g \of{ -1 }
+          </mrow>
+          
+          <mrow>
+            \amp = 7 - \of{ -\frac{ 5 }{ 4 } } = \frac{ 33 }{ 4 }
+          </mrow>
+        </md>
+        
+        by the <xref ref="theorem-second-fundamental-theorem-of-calculus" text="title"/>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Use the <xref ref="theorem-second-fundamental-theorem-of-calculus" text="title"/> to compute the Riemann integral
+        
+        <md>
+          \int_{ 1 }^{ 3 }{ 2^{ z } \, \diff{ z } }
+        </md>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> \int_{ 1 }^{ 3 }{ 2^{ z } \, \diff{ z } } = \frac{ 7 }{ \ln \of{ 2 } } </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        Consider the real-valued function <m> h \colon \clint{ 1 }{ 3 } \to \R </m> defined by the formula <m> h \of{ z } = \frac{ 2^{ z } }{ \ln \of{ 2 } } </m>. Since <m> h </m> is continuously differentiable with derivative <m> h' \of{ z } = 2^{ z } </m>, we see that
+        
+        <md>
+          <mrow>
+            \int_{ 1 }^{ 3 }{ 2^{ z } \, \diff{ z } } \amp = \int_{ 1 }^{ 3 }{ h' \of{ z } \, \diff{ z } } = h \of{ 3 } - h \of{ 1 }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ 2^{ 3 } }{ \ln \of{ 2 } } - \frac{ 2^{ 1 } }{ \ln \of{ 2 } } = \frac{ 7 }{ \ln \of{ 2 } }
+          </mrow>
+        </md>
+        
+        by the <xref ref="theorem-second-fundamental-theorem-of-calculus" text="title"/>.
+      </p>
+    </solution>
+  </exercise>
+</exercisegroup>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-compact-perturbations" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Compact perturbations
+  </title>
+  
+  <statement>
+    <p>
+      Let <m> f , g \colon X \to \R </m> be real-valued functions defined on an interval <m> X \subseteq \R </m>, and suppose that the restrictions of <m> f </m> and <m> g </m> to any compact subinterval of <m> X </m> are integrable. Prove that if there is some compact subset <m> K \subseteq X </m> so that <m> f \of{ x } = g \of{ x } </m> for all <m> x \in X \setminus K </m>, then <m> f </m> is improperly integrable if and only if <m> g </m> is.
+    </p>
+  </statement>
+  
+  <!-- <solution>
+    <p>
+      asdf
+    </p>
+  </solution> -->
+</exercise>

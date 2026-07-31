@@ -19,7 +19,11 @@
   
   <!-- <solution>
     <p>
-      asdf
+      Since <m> f </m> is Riemann integrable, it is bounded, and so there is a positive real number <m> B \gt 0 </m> so that <m> f \of{ x } \leq B </m> for all points <m> a \leq x \leq b </m>. Since <m> g </m> is continuous on the compact interval <m> \clint{ -B }{ B } </m>, the restriction of <m> g </m> to this compact interval is uniformly continuous by the <xref ref="theorem-heine-cantor-theorem" text="title"/>.
+    </p>
+    
+    <p>
+      
     </p>
   </solution> -->
 </exercise>

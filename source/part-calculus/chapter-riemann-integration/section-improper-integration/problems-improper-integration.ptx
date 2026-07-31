@@ -11,7 +11,9 @@
     </p>
   </introduction>
   
-  <!-- <xi:include href="./problems/problem-TITLE.ptx"/> -->
+  <xi:include href="./problems/problem-compact-perturbations.ptx"/>
+  
+  <xi:include href="./problems/problem-limit-comparison-test.ptx"/>
 
   <conclusion>
     <p>

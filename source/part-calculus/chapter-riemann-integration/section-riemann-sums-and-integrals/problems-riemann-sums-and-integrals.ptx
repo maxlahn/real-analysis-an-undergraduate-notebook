@@ -12,6 +12,8 @@
   </introduction>
   
   <xi:include href="./problems/problem-more-on-integrability-and-continuity.ptx"/>
+  
+  <xi:include href="./problems/problem-riemann-integrals-of-products.ptx"/>
 
   <conclusion>
     <p>

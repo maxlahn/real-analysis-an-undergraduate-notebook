@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-determining-improper-integrability" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Determining improper integrability
+  </title>
+  
+  <introduction>
+    <p>
+      Determine whether the given improper integral is absolutely convergent, conditionally convergent, or divergent.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Determine whether the improper integral
+        
+        <md>
+          \int_{ 1 }^{ \infty }{ \frac{ 1 }{ x^{ \frac{ 3 }{ 2 } } } \, \diff{ x } }
+        </md>
+        
+        is absolutely convergent, conditionally convergent, or divergent.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The improper integral
+        
+        <md>
+          \int_{ 1 }^{ \infty }{ \frac{ 1 }{ x^{ \frac{ 3 }{ 2 } } } \, \diff{ x } }
+        </md>
+        
+        is absolutely convergent.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Determine whether the improper integral
+        
+        <md>
+          \int_{ 1 }^{ \infty }{ \frac{ \cos \of{ y^{ 2 } } }{ y^{ \frac{ 5 }{ 3 } } } \, \diff{ y } }
+        </md>
+        
+        is absolutely convergent, conditionally convergent, or divergent.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The improper integral
+        
+        <md>
+          \int_{ 1 }^{ \infty }{ \frac{ \cos \of{ y^{ 2 } } }{ y^{ \frac{ 5 }{ 3 } } } \, \diff{ y } }
+        </md>
+        
+        is absolutely convergent.
+      </p>
+    </answer>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Determine whether the improper integral
+        
+        <md>
+          \int_{ 1 }^{ \infty }{ \frac{ \sqrt{ z } }{ z^{ 2 } + 1 } \, \diff{ z } }
+        </md>
+        
+        is absolutely convergent, conditionally convergent, or divergent.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The improper integral
+        
+        <md>
+          \int_{ 1 }^{ \infty }{ \frac{ \sqrt{ z } }{ z^{ 2 } + 1 } \, \diff{ z } }
+        </md>
+        
+        is absolutely convergent.
+      </p>
+    </answer>
+  </exercise>
+</exercisegroup>

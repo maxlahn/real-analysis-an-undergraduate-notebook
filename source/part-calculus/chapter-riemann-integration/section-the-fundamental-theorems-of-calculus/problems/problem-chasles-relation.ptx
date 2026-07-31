@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-chasles-relation" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Chasles' relation
+  </title>
+  
+  <statement>
+    <p>
+      Let <m> f \colon X \to \R </m> be a real-valued function defined on a closed interval <m> X \subsetneq \R </m>. Prove that if <m> f </m> is Riemann integrable, then
+      
+      <md>
+        \int_{ a }^{ c }{ f \of{ x } \, \diff{ x } } = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } + \int_{ b }^{ c }{ f \of{ x } \, \diff{ x } }
+      </md>
+      
+      for all real numbers <m> a , b , c \in X </m>.
+    </p>
+  </statement>
+  
+  <hint>
+    <p>
+      <alert> You do not need to integrate any functions for this problem! </alert> Just address the possible orderings of <m> a </m>, <m> b </m>, and <m> c </m> and apply <xref ref="lemma-chasles-relation"/>.
+    </p>
+  </hint>
+  
+  <!-- <solution>
+    <p>
+      We note that <xref ref="lemma-chasles-relation"/> implies that the restrictions of <m> f </m> to the closed intervals between <m> a </m>, <m> b </m>, and <m> c </m> are Riemann integrable.
+    </p>
+    
+    <p>
+      We first address the cases in which <m> a </m>, <m> b </m>, and <m> c </m> are not all distinct. If <m> a = b </m>, then <m> \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } = 0 </m>, and so
+      
+      <md>
+        \int_{ a }^{ c }{ f \of{ x } \, \diff{ x } } = 0 + \int_{ b }^{ c }{ f \of{ x } \, \diff{ x } } = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } + \int_{ b }^{ c }{ f \of{ x } \, \diff{ x } }
+      </md>.
+      
+      Similarly, if <m> b = c </m>, then <m> \int_{ b }^{ c }{ f \of{ x } \, \diff{ x } } = 0 </m>, and so
+      
+      <md>
+        \int_{ a }^{ c }{ f \of{ x } \, \diff{ x } } = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } + 0 = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } + \int_{ b }^{ c }{ f \of{ x } \, \diff{ x } }
+      </md>.
+      
+      Finally, if <m> a = c </m>, then <m> \int_{ a }^{ c }{ f \of{ x } \, \diff{ x } } = 0 </m>, and so
+      
+      <md>
+        <mrow>
+          \int_{ a }^{ c }{ f \of{ x } \, \diff{ x } } \amp = 0 = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } }
+        </mrow>
+        
+        <mrow>
+          \amp = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } + \int_{ b }^{ a }{ f \of{ x } \, \diff{ x } } = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } + \int_{ b }^{ c }{ f \of{ x } \, \diff{ x } }
+        </mrow>
+      </md>.
+    </p>
+    
+    <p>
+      We can now address the cases in which <m> a </m>, <m> b </m>, and <m> c </m> are all distinct. If <m> a \lt b \lt c </m>, then <xref ref="lemma-chasles-relation" text="title"/> implies that
+      
+      <md>
+        \int_{ a }^{ c }{ f \of{ x } \, \diff{ x } } = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } + \int_{ b }^{ c }{ f \of{ x } \, \diff{ x } }
+      </md>.
+      
+      If <m> a \lt c \lt b </m>, then <xref ref="lemma-chasles-relation" text="title"/> implies that
+      
+      <md>
+        <mrow>
+          \int_{ a }^{ c }{ f \of{ x } \, \diff{ x } } \amp = \int_{ a }^{ c }{ f \of{ x } \, \diff{ x } } + \int_{ c }^{ b }{ f \of{ x } \, \diff{ x } } - \int_{ c }^{ b }{ f \of{ x } \, \diff{ x } }
+        </mrow>
+        
+        <mrow>
+          \amp = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } + \int_{ b }^{ c }{ f \of{ x } \, \diff{ x } }
+        </mrow>
+      </md>.
+      
+      If <m> b \lt a \lt c </m>, then <xref ref="lemma-chasles-relation" text="title"/> implies that
+      
+      <md>
+        <mrow>
+          \int_{ a }^{ c }{ f \of{ x } \, \diff{ x } } \amp = -\int_{ b }^{ a }{ f \of{ x } \, \diff{ x } } + \int_{ b }^{ a }{ f \of{ x } \, \diff{ x } } + \int_{ a }^{ c }{ f \of{ x } \, \diff{ x } }
+        </mrow>
+        
+        <mrow>
+          \amp = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } + \int_{ b }^{ c }{ f \of{ x } \, \diff{ x } }
+        </mrow>
+      </md>.
+      
+      If <m> b \lt c \lt a </m>, then <xref ref="lemma-chasles-relation" text="title"/> implies that
+      
+      <md>
+        <mrow>
+          \int_{ a }^{ c }{ f \of{ x } \, \diff{ x } } \amp = -\int_{ b }^{ c }{ f \of{ x } \, \diff{ x } } - \int_{ a }^{ c }{ f \of{ x } \, \diff{ x } } + \int_{ b }^{ c }{ f \of{ x } \, \diff{ x } }
+        </mrow>
+        
+        <mrow>
+          \amp = -\int_{ b }^{ a }{ f \of{ x } \, \diff{ x } } + \int_{ b }^{ c }{ f \of{ x } \, \diff{ x } }
+        </mrow>
+        
+        <mrow>
+          \amp = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } + \int_{ b }^{ c }{ f \of{ x } \, \diff{ x } }
+        </mrow>
+      </md>.
+      
+      If <m> c \lt a \lt b </m>, then <xref ref="lemma-chasles-relation" text="title"/> implies that
+      
+      <md>
+        <mrow>
+          \int_{ a }^{ c }{ f \of{ x } \, \diff{ x } } \amp = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - \int_{ c }^{ a }{ f \of{ x } \, \diff{ x } } - \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } }
+        </mrow>
+        
+        <mrow>
+          \amp = -\int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } - \int_{ c }^{ b }{ f \of{ x } \, \diff{ x } }
+        </mrow>
+        
+        <mrow>
+          \amp = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } + \int_{ b }^{ c }{ f \of{ x } \, \diff{ x } }
+        </mrow>
+      </md>.
+      
+      Finally, if <m> c \lt b \lt a </m>, then <xref ref="lemma-chasles-relation" text="title"/> implies that
+      
+      <md>
+        <mrow>
+          \int_{ a }^{ c }{ f \of{ x } \, \diff{ x } } \amp = -\int_{ c }^{ a }{ f \of{ x } \, \diff{ x } }
+        </mrow>
+        
+        <mrow>
+          \amp = -\int_{ c }^{ b }{ f \of{ x } \, \diff{ x } } - \int_{ b }^{ a }{ f \of{ x } \, \diff{ x } }
+        </mrow>
+        
+        <mrow>
+          \amp = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } + \int_{ b }^{ c }{ f \of{ x } \, \diff{ x } }
+        </mrow>
+      </md>.
+    </p>
+  </solution> -->
+</exercise>

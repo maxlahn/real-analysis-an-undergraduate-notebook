@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-riemann-sums" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Riemann sums
+  </title>
+  
+  <introduction>
+    <p>
+      Compute the given Riemann sums.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> f \colon \clint{ 0 }{ 4 } \to \R </m> be the real-valued function defined on the closed interval <m> \clint{ 0 }{ 4 } </m> by the formula
+        
+        <md>
+          f \of{ x } = 6 - 3 \abs{ x - 2 }
+        </md>.
+        
+        Compute the Riemann sum <m> \mathcal{ R }_{ f } \of{ P , t } </m>, where <m> P = \of{ 0 , 1 , 2 , 4 } </m> and <m> t = \of{ 1 , 1 , 4 } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> \mathcal{ R }_{ f } \of{ P , t } = 6 </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        We compute
+        
+        <md>
+          <mrow>
+            \mathcal{ R }_{ f } \of{ P , t } \amp = f \of{ 1 } \of{ 1 - 0 } + f \of{ 1 } \of{ 2 - 1 } + f \of{ 3 } \of{ 4 - 2 } = 3 \cdot 1 + 3 \cdot 1 + 0 \cdot 2
+          </mrow>
+          
+          <mrow>
+            \amp = 3 + 3 + 0 = 6
+          </mrow>
+        </md>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> g \colon \clint{ -2 }{ 10 } \to \R </m> be the real-valued function defined on the closed interval <m> \clint{ -2 }{ 10 } </m> by the formula
+        
+        <md>
+          g \of{ y } = y^{ 2 } - 1
+        </md>.
+        
+        Compute the Riemann sum <m> \mathcal{ R }_{ g } \of{ Q , u } </m>, where <m> Q = \of{ -2 , 0 , 2 , 5 , 10 } </m> and <m> u = \of{ -2 , 1 , 4 , 5 } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> \mathcal{ R }_{ g } \of{ Q , u } = 171 </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        We compute
+        
+        <md>
+          <mrow>
+            \mathcal{ R }_{ g } \of{ Q , u } \amp = g \of{ -2 } \of{ 0 - \of{ -2 } } + g \of{ 1 } \of{ 2 - 0 } + g \of{ 4 } \of{ 5 - 2 } + g \of{ 5 } \of{ 10 - 5 }
+          </mrow>
+          
+          <mrow>
+            \amp = 3 \cdot 2 + 0 \cdot 2 + 15 \cdot 3 + 24 \cdot 5
+          </mrow>
+          
+          <mrow>
+            \amp = 6 + 0 + 45 + 120 = 171
+          </mrow>
+        </md>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> h \colon \clint{ 0 }{ 5 } \to \R </m> be the real-valued function defined on the closed interval <m> \clint{ 0 }{ 5 \pi } </m> by the formula
+        
+        <md>
+          h \of{ z } = \cos \of{ \pi z }
+        </md>.
+        
+        Compute the Riemann sum <m> \mathcal{ R }_{ h } \of{ R , v } </m>, where <m> R = \of{ 0 , 1 , 2 , 3 , 4 , 5 } </m> and <m> v = \of{ 1 , 2 , 3 , 4 , 5 } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> \mathcal{ R }_{ h } \of{ R , v } = 6 </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        We compute
+        
+        <md>
+          <mrow>
+            \mathcal{ R }_{ h } \of{ R , v } \amp = h \of{ 1 } \of{ 1 - 0 } + h \of{ 2 } \of{ 2 - 1 } + h \of{ 3 } \of{ 3 - 2 } + h \of{ 4 } \of{ 4 - 5 } + h \of{ 5 } \of{ 5 - 4 }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ -1 } \cdot 1 + 1 \cdot 1 + \of{ -1 } \cdot 1 + 1 \cdot 1 + \of{ -1 } \cdot 1
+          </mrow>
+          
+          <mrow>
+            \amp = -1 + 1 - 1 + 1 - 1 = -1
+          </mrow>
+        </md>.
+      </p>
+    </solution>
+  </exercise>
+</exercisegroup>

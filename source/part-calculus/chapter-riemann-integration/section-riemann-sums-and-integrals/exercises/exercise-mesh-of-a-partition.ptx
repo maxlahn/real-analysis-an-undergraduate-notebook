@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-mesh-of-a-partition" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Mesh of a partition
+  </title>
+  
+  <introduction>
+    <p>
+      Compute the mesh of the given partition.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Compute the mesh of the partition <m> P = \of{ 0 , 1 , 3 , 4 , 6 , 9 , 10 } </m> of the closed interval <m> \clint{ 0 }{ 10 } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The partition <m> P </m> has mesh <m> \mesh \of{ P } = 3 </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        We note that the associated subintervals are <m> \clint{ 0 }{ 1 } </m>, <m> \clint{ 1 }{ 3 } </m>, <m> \clint{ 3 }{ 4 } </m>, <m> \clint{ 4 }{ 6 } </m>, <m> \clint{ 6 }{ 9 } </m>, and <m> \clint{ 9 }{ 10 } </m>, which have lengths <m> 1 </m>, <m> 2 </m>, <m> 1 </m>, <m> 2 </m>, <m> 3 </m>, and <m> 1 </m>, respectively. Thus the partition <m> P </m> has mesh <m> \mesh \of{ P } = 3 </m>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Compute the mesh of the partition <m> Q = \of{ 0 , 1 , 2 , 3 , 4 , 5 } </m> of the closed interval <m> \clint{ 0 }{ 5 } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The partition <m> P </m> has mesh <m> \mesh \of{ P } = 1 </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        We note that the associated subintervals are <m> \clint{ 0 }{ 1 } </m>, <m> \clint{ 1 }{ 2 } </m>, <m> \clint{ 2 }{ 3 } </m>, <m> \clint{ 3 }{ 4 } </m>, and <m> \clint{ 4 }{ 5 } </m>, each of which has length <m> 1 </m>. Thus the partition <m> P </m> has mesh <m> \mesh \of{ P } = 1 </m>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Compute the mesh of the partition <m> Q = \of{ \frac{ k }{ 3^{ n } } }_{ k = 0 }^{ 3^{ n } } </m> of the closed interval <m> \clint{ 0 }{ 1 } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        The partition <m> P </m> has mesh <m> \mesh \of{ P } = \frac{ 1 }{ 3^{ n } } </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        We note that the associated subintervals are each of length <m> \frac{ 1 }{ 3^{ n } } </m>, and so the partition <m> P </m> has mesh <m> \mesh \of{ P } = \frac{ 1 }{ 3^{ n } } </m>.
+      </p>
+    </solution>
+  </exercise>
+</exercisegroup>

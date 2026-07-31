@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercisegroup xml:id="exercise-darboux-sums" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Darboux sums
+  </title>
+  
+  <introduction>
+    <p>
+      Compute the given Darboux sums.
+    </p>
+  </introduction>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> f \colon \clint{ 0 }{ 4 } \to \R </m> be the real-valued function defined on the closed interval <m> \clint{ 0 }{ 4 } </m> by the formula
+        
+        <md>
+          f \of{ x } = 6 - 3 \abs{ x - 2 }
+        </md>.
+        
+        Compute the Darboux sums <m> \mathcal{ U }_{ f } \of{ P } </m> and <m> \mathcal{ L }_{ f } \of{ P } </m>, where <m> P = \of{ 0 , 1 , 2 , 4 } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> \mathcal{ U }_{ f } \of{ P } = 21 </m> and <m> \mathcal{ L }_{ f } \of{ P } = 3 </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        We compute
+        
+        <md>
+          <mrow>
+            \sup_{ 0 \leq x \leq 1 }{ f \of{ x } } \amp = 3 \amp \inf_{ 0 \leq x \leq 1 }{ f \of{ x } } \amp = 0
+          </mrow>
+          
+          <mrow>
+            \sup_{ 1 \leq x \leq 2 }{ f \of{ x } } \amp = 6 \amp \inf_{ 1 \leq x \leq 2 }{ f \of{ x } } \amp = 3
+          </mrow>
+          
+          <mrow>
+            \sup_{ 2 \leq x \leq 4 }{ f \of{ x } } \amp = 6 \amp \inf_{ 2 \leq x \leq 4 }{ f \of{ x } } \amp = 0
+          </mrow>
+        </md>.
+        
+        Thus
+        
+        <md>
+          <mrow>
+            \mathcal{ U }_{ f } \of{ P } \amp = 3 \of{ 1 - 0 } + 6 \of{ 2 - 1 } + 6 \of{ 4 - 2 } = 3 \cdot 1 + 6 \cdot 1 + 6 \cdot 2
+          </mrow>
+          
+          <mrow>
+            \amp = 3 + 6 + 12 = 21
+          </mrow>
+        </md>,
+        
+        and
+        
+        <md>
+          <mrow>
+            \mathcal{ L }_{ f } \of{ P } \amp = 0 \of{ 1 - 0 } + 3 \of{ 2 - 1 } + 0 \of{ 4 - 2 } = 0 \cdot 1 + 3 \cdot 1 + 0 \cdot 2
+          </mrow>
+          
+          <mrow>
+            \amp = 0 + 3 + 0 = 3
+          </mrow>
+        </md>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> g \colon \clint{ -2 }{ 10 } \to \R </m> be the real-valued function defined on the closed interval <m> \clint{ -2 }{ 10 } </m> by the formula
+        
+        <md>
+          g \of{ y } = y^{ 2 } - 1
+        </md>.
+        
+        Compute the Darboux sums <m> \mathcal{ U }_{ g } \of{ Q } </m> and <m> \mathcal{ L }_{ g } \of{ Q } </m>, where <m> Q = \of{ -2 , 0 , 2 , 5 , 10 } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> \mathcal{ U }_{ g } \of{ Q } = 579 </m> and <m> \mathcal{ L }_{ g } \of{ Q } = 125 </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        We compute
+        
+        <md>
+          <mrow>
+            \sup_{ -2 \leq y \leq 0 }{ g \of{ y } } \amp = 3 \amp \inf_{ -2 \leq y \leq 0 }{ g \of{ y } } \amp = -1
+          </mrow>
+          
+          <mrow>
+            \sup_{ 0 \leq y \leq 2 }{ g \of{ y } } \amp = 3 \amp \inf_{ 0 \leq y \leq 2 }{ g \of{ y } } \amp = -1
+          </mrow>
+          
+          <mrow>
+            \sup_{ 2 \leq y \leq 5 }{ g \of{ y } } \amp = 24 \amp \inf_{ 2 \leq y \leq 5 }{ g \of{ y } } \amp = 3
+          </mrow>
+          
+          <mrow>
+            \sup_{ 5 \leq y \leq 10 }{ g \of{ y } } \amp = 99 \amp \inf_{ 5 \leq y \leq 10 }{ g \of{ y } } \amp = 24
+          </mrow>
+        </md>.
+        
+        Thus
+        
+        <md>
+          <mrow>
+            \mathcal{ U }_{ g } \of{ Q } \amp = 3 \of{ 0 - \of{ -2 } } + 3 \of{ 2 - 0 } + 24 \of{ 5 - 2 } + 99 \of{ 10 - 5 }
+          </mrow>
+          
+          <mrow>
+            \amp = 3 \cdot 2 + 3 \cdot 2 + 24 \cdot 3 + 99 \cdot 5
+          </mrow>
+          
+          <mrow>
+            \amp = 6 + 6 + 72 + 495 = 579
+          </mrow>
+        </md>,
+        
+        and
+        
+        <md>
+          <mrow>
+            \mathcal{ L }_{ g } \of{ Q } \amp = \of{ -1 } \of{ 0 - \of{ -2 } } + \of{ -1 } \of{ 2 - 0 } + 3 \of{ 5 - 2 } + 24 \of{ 10 - 5 }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ -1 } \cdot 2 + \of{ -1 } \cdot 2 + 3 \cdot 3 + 24 \cdot 5
+          </mrow>
+          
+          <mrow>
+            \amp = -2 - 2 + 9 + 120 = 125
+          </mrow>
+        </md>
+      </p>
+    </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m> h \colon \clint{ 0 }{ 5 } \to \R </m> be the real-valued function defined on the closed interval <m> \clint{ 0 }{ 5 \pi } </m> by the formula
+        
+        <md>
+          h \of{ z } = \cos \of{ \pi z }
+        </md>.
+        
+        Compute the Darboux sums <m> \mathcal{ U }_{ h } \of{ R } </m> and <m> \mathcal{ L }_{ h } \of{ R } </m>, where <m> R = \of{ 0 , 1 , 2 , 3 , 4 , 5 } </m>.
+      </p>
+    </statement>
+    
+    <answer>
+      <p>
+        <m> \mathcal{ U }_{ h } \of{ R } = 5 </m> and <m> \mathcal{ L }_{ h } \of{ R } = -5 </m>.
+      </p>
+    </answer>
+    
+    <solution>
+      <p>
+        We compute
+        
+        <md>
+          <mrow>
+            \sup_{ 0 \leq z \leq 1 }{ h \of{ z } } \amp = 1 \amp \inf_{ 0 \leq z \leq 1 }{ h \of{ z } } \amp = -1
+          </mrow>
+          
+          <mrow>
+            \sup_{ 1 \leq z \leq 2 }{ h \of{ z } } \amp = 1 \amp \inf_{ 1 \leq z \leq 2 }{ h \of{ z } } \amp = -1
+          </mrow>
+          
+          <mrow>
+            \sup_{ 2 \leq z \leq 3 }{ h \of{ z } } \amp = 1 \amp \inf_{ 2 \leq z \leq 3 }{ h \of{ z } } \amp = -1
+          </mrow>
+          
+          <mrow>
+            \sup_{ 3 \leq z \leq 4 }{ h \of{ z } } \amp = 1 \amp \inf_{ 3 \leq z \leq 4 }{ h \of{ z } } \amp = -1
+          </mrow>
+          
+          <mrow>
+            \sup_{ 4 \leq z \leq 5 }{ h \of{ z } } \amp = 1 \amp \inf_{ 4 \leq z \leq 5 }{ h \of{ z } } \amp = -1
+          </mrow>
+        </md>.
+        
+        Thus
+        
+        <md>
+          <mrow>
+            \mathcal{ U }_{ h } \of{ R } \amp = 1 \of{ 1 - 0 } + 1 \of{ 2 - 1 } + 1 \of{ 3 - 2 } + 1 \of{ 4 - 5 } + 1 \of{ 5 - 4 }
+          </mrow>
+          
+          <mrow>
+            \amp = 1 \cdot 1 + 1 \cdot 1 + 1 \cdot 1 + 1 \cdot 1 + 1 \cdot 1
+          </mrow>
+          
+          <mrow>
+            \amp = 1 + 1 + 1 + 1 + 1 = 5
+          </mrow>
+        </md>
+        
+        and
+        
+        <md>
+          <mrow>
+            \mathcal{ L }_{ h } \of{ R } \amp = \of{ -1 } \of{ 1 - 0 } + \of{ -1 } \of{ 2 - 1 } + \of{ -1 } \of{ 3 - 2 } + \of{ -1 } \of{ 4 - 5 } + \of{ -1 } \of{ 5 - 4 }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ -1 } \cdot 1 + \of{ -1 } \cdot 1 + \of{ -1 } \cdot 1 + \of{ -1 } \cdot 1 + \of{ -1 } \cdot 1
+          </mrow>
+          
+          <mrow>
+            \amp = -1 - 1 - 1 - 1 - 1 = -5
+          </mrow>
+        </md>.
+      </p>
+    </solution>
+  </exercise>
+</exercisegroup>

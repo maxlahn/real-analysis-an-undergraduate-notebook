@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-limit-comparison-test" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Limit comparison test
+  </title>
+  
+  <statement>
+    <p>
+      Prove the <xref ref="theorem-limit-comparison-test-for-integral-convergence" text="title"/>.
+    </p>
+  </statement>
+  
+  <hint>
+    <p>
+      Apply the <xref ref="theorem-comparison-test-for-integral-convergence" text="title"/> to compare <m> f </m> with certain multiples of <m> g </m>. 
+    </p>
+  </hint>
+  
+  <!-- <solution>
+    <p>
+      asdf
+    </p>
+  </solution> -->
+</exercise>

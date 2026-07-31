@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercise xml:id="problem-riemann-integrals-of-products" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Riemann integrals of products
+  </title>
+  
+  <introduction>
+    <p>
+      In this problem, we will prove that the product of Riemann integrable functions is itself Riemann integrable, although the integral of said products is usually not the product of the integrals of the factors.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        Let <m> f \colon \clint{ a }{ b } \to \R </m> be a real-valued function defined on an interval <m> \clint{ a }{ b } </m>. Show that if <m> f </m> is bounded, then there is a positive real number <m> B \gt 0 </m> so that
+        
+        <md>
+          \sup_{ s \leq x \leq t }{ f \of{ x }^{ 2 } } - \inf_{ s \leq x \leq t }{ f \of{ x }^{ 2 } } \leq 2 B \of{ \sup_{ s \leq x \leq t }{ f \of{ x } } - \inf_{ s \leq x \leq t }{ f \of{ x } } }
+        </md>
+        
+        for any real numbers <m> a \leq s \leq t \leq b </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        Since <m> f </m> is bounded, there is a positive real number <m> B \gt 0 </m> so that <m> \abs{ f \of{ x } } \leq B </m> for all points <m> a \leq x \leq b </m>. Fix real numbers <m> a \leq s \leq t \leq b </m>. Since <m> f </m> is bounded, the restriction of <m> f </m> to the closed subinterval <m> \clint{ s }{ t } </m> is bounded as well. For each positive real number <m> \epsilon \gt 0 </m>, let <m> y_{ \epsilon } , z_{ \epsilon } \in \clint{ s }{ t } </m> so that 
+        
+        <md>
+          <mrow>
+            f \of{ y_{ \epsilon } }^{ 2 } + \frac{ \epsilon }{ 2 } \amp \gt \sup_{ s \leq x \leq t }{ f \of{ x }^{ 2 } } \amp f \of{ z_{ \epsilon } }^{ 2 } - \frac{ \epsilon }{ 2 } \amp \lt \inf_{ s \leq x \leq t }{ f \of{ x }^{ 2 } }
+          </mrow>
+        </md>.
+        
+        We observe that
+        
+        <md>
+          <mrow>
+            \sup_{ s \leq x \leq t }{ f \of{ x }^{ 2 } } - \inf_{ s \leq x \leq t }{ f \of{ x }^{ 2 } } \amp \lt f \of{ y_{ \epsilon } }^{ 2 } - f \of{ z_{ \epsilon } }^{ 2 } + \epsilon
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ f \of{ y_{ \epsilon } } + f \of{ z_{ \epsilon } } } \of{ f \of{ y_{ \epsilon } } - f \of{ z_{ \epsilon } } } + \epsilon
+          </mrow>
+          
+          <mrow>
+            \amp \leq \abs{ f \of{ y_{ \epsilon } } + f \of{ z_{ \epsilon } } } \of{ \sup_{ s \leq x \leq t }{ f \of{ x } } - \inf_{ s \leq x \leq t }{ f \of{ x } } } + \epsilon
+          </mrow>
+          
+          <mrow>
+            \amp \leq \of{ \abs{ f \of{ y_{ \epsilon } } } + \abs{ f \of{ z_{ \epsilon } } } } \of{ \sup_{ s \leq x \leq t }{ f \of{ x } } - \inf_{ s \leq x \leq t }{ f \of{ x } } } + \epsilon
+          </mrow>
+          
+          <mrow>
+            \amp \leq 2 B \of{ \sup_{ s \leq x \leq t }{ f \of{ x } } - \inf_{ s \leq x \leq t }{ f \of{ x } } } + \epsilon
+          </mrow>
+        </md>.
+        
+        Since this holds for all positive real numbers <m> \epsilon \gt 0 </m>, we conclude that
+        
+        <md>
+          \sup_{ s \leq x \leq t }{ f \of{ x }^{ 2 } } - \inf_{ s \leq x \leq t }{ f \of{ x }^{ 2 } } \leq 2 B \of{ \sup_{ s \leq x \leq t }{ f \of{ x } } - \inf_{ s \leq x \leq t }{ f \of{ x } } }
+        </md>.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Let <m> f \colon \clint{ a }{ b } \to \R </m> be a real-valued function defined on an interval <m> \clint{ a }{ b } </m>. Prove that if <m> f </m> is Riemann integrable, then so is its square <m> f^{ 2 } </m>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        We first observe that
+        
+        <md>
+          <mrow>
+            \mathcal{ U }_{ f^{ 2 } } \of{ P } - \mathcal{ L }_{ f^{ 2 } } \of{ P } \amp = \sum_{ k = 0 }^{ n - 1 }{ \of{ \sup_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x }^{ 2 } } - \inf_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x }^{ 2 } } } \of{ x_{ k + 1 } - x_{ k } } }
+          </mrow>
+          
+          <mrow>
+            \amp \leq \sum_{ k = 0 }^{ n - 1 }{ 2 M \of{ \sup_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } - \inf_{ x_{ k } \leq x \leq x_{ k + 1 } }{ f \of{ x } } } \of{ x_{ k + 1 } - x_{ k } } }
+          </mrow>
+          
+          <mrow>
+            \amp = 2 M \of{ \mathcal{ U }_{ f } \of{ P } - \mathcal{ L }_{ f } \of{ P } }
+          </mrow>
+        </md>
+        
+        for all partitions <m> P = \of{ x_{ k } }_{ k = 0 }^{ n } </m> of <m> \clint{ a }{ b } </m>.
+      </p>
+      
+      <p>
+        Let <m> \epsilon \gt 0 </m> be a positive real number. Then there is a partition <m> P_{ \epsilon } </m> so that <m> \mathcal{ U }_{ f } \of{ P } - \mathcal{ L }_{ f } \of{ P } \lt \frac{ \epsilon }{ 2 B } </m> for all refinements <m> P \succeq P_{ \epsilon } </m>. We observe that
+        
+        <md>
+          \mathcal{ U }_{ f^{ 2 } } \of{ P } - \mathcal{ L }_{ f^{ 2 } } \of{ P } \leq 2 B \of{ \mathcal{ U }_{ f } \of{ P } - \mathcal{ L }_{ f } \of{ P } } \lt 2 B \of{ \frac{ \epsilon }{ 2 B } } = \epsilon
+        </md>
+        
+        for all refinements <m> P \succeq P_{ \epsilon } </m>. Thus <m> f^{ 2 } </m> is Riemann integrable.
+      </p>
+    </solution>
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Let <m> f , g \colon \clint{ a }{ b } \to \R </m> be real-valued functions defined on an interval <m> \clint{ a }{ b } </m>. Prove that if <m> f </m> and <m> g </m> are Riemann integrable, then so is their product <m> f g </m>.
+      </p>
+    </statement>
+    
+    <hint>
+      <p>
+        First show that <m> f g = \frac{ \of{ f + g }^{ 2 } - f^{ 2 } - g^{ 2 } }{ 2 } </m>.
+      </p>
+    </hint>
+    
+    <solution>
+      <p>
+        We observe that
+        
+        <md>
+          <mrow>
+            \of{ \frac{ \of{ f + g }^{ 2 } - f^{ 2 } - g^{ 2 } }{ 2 } } \of{ x } \amp = \frac{ \of{ f \of{ x } + g \of{ x } }^{ 2 } - f \of{ x }^{ 2 } - g \of{ x }^{ 2 } }{ 2 } 
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ f \of{ x }^{ 2 } + 2 f \of{ x } g \of{ x } + g \of{ x }^{ 2 } - f \of{ x }^{ 2 } - g \of{ x }^{ 2 } }{ 2 }
+          </mrow>
+          
+          <mrow>
+            \amp = \frac{ 2 f \of{ x } g \of{ x } }{ 2 } = f \of{ x } g \of{ x } = \of{ f g } \of{ x }
+          </mrow>
+        </md>
+        
+        for all points <m> a \leq x \leq b </m>, and so
+        
+        <md>
+          f g = \frac{ \of{ f + g }^{ 2 } - f^{ 2 } - g^{ 2 } }{ 2 }
+        </md>.
+        
+        <xref ref="proposition-linearity-of-riemann-integration"/> and (b) above now imply that <m> f g </m> is Riemann integrable.
+      </p>
+    </solution> -->
+  </task>
+  
+  <task>
+    <statement>
+      <p>
+        Provide an example of two Riemann integrable functions <m> f , g \colon \clint{ a }{ b } \to \R </m> defined on a closed interval <m> \clint{ a }{ b } </m> so that
+        
+        <md>
+          \int_{ a }^{ b }{ f \of{ x } g \of{ x } \, \diff{ x } } \neq \of{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } } \of{ \int_{ a }^{ b }{ g \of{ x } \, \diff{ x } } }
+        </md>.
+      </p>
+    </statement>
+    
+    <!-- <solution>
+      <p>
+        Let <m> f = g \colon \clint{ 0 }{ 2 } \to \R </m> be the constant functions defined by the formulas <m> f \of{ x } = g \of{ x } = 1 </m> for all points <m> 0 \leq x \leq 2 </m>. Then
+        
+        <md>
+          <mrow>
+            \int_{ 0 }^{ 2 }{ f \of{ x } g \of{ x } \, \diff{ x } } \amp = \int_{ 0 }^{ 2 }{ 1 \cdot 1 \, \diff{ x } } = \int_{ 0 }^{ 2 }{ 1 \, \diff{ x } } = 2
+          </mrow>
+          
+          <mrow>
+            \amp \neq 4 = 2 \cdot 2 = \of{ \int_{ 0 }^{ 2 }{ 1 \, \diff{ x } } } \of{ \int_{ 0 }^{ 2 }{ 1 \, \diff{ x } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \of{ \int_{ 0 }^{ 2 }{ f \of{ x } \, \diff{ x } } } \of{ \int_{ 0 }^{ 2 }{ g \of{ x } \, \diff{ x } } }
+          </mrow>
+        </md>.
+      </p>
+    </solution> -->
+  </task>
+</exercise>

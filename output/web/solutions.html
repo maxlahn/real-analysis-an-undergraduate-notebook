@@ -57,15 +57,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.16';
+eBookConfig.runestone_version = '8.2.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.279b1f0077454c32.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.db8001875cb726c2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/prefix-runtime.82b0f3334d1d4a05.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.5555907f139e2014.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -8792,12 +8792,840 @@ e^{ -\frac{ 1 }{ x^{ 2 } } } \amp x \gt 0 \\
 <div class="para">
 <span class="process-math">\(f \)</span> is our first example of a smooth function which is not <dfn class="terminology">analytic</dfn>. We will explore these functions more in <a href="chapter-infinite-series.html" class="internal" title="Chapter 7: Infinite Series">Chapter 7 Infinite Series</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-taylor-approximations-of-non-analytic-functions-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-</div></article><h2 class="heading hide-type" title="Reading Questions 6.1.4: Problems">
-<span class="codenumber">6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Riemann Integration</span><br><span class="codenumber">6.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Riemann Sums and Integrals</span><br><span class="codenumber">6.1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
+</div></article><h2 class="heading hide-type" title="Exercises 6.1.3: Exercises">
+<span class="codenumber">6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Riemann Integration</span><br><span class="codenumber">6.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Riemann Sums and Integrals</span><br><span class="codenumber">6.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h2>
+<div class="exercisegroup">
+<div class="introduction">
+<div class="para">Compute the mesh of the given partition.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-mesh-of-a-partition-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like"><h3 class="heading"><a href="section-riemann-sums-and-integrals.html#exercise-mesh-of-a-partition-3" aria-label="Back to 6.1.3.1."><span class="codenumber">6.1.3.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para">Compute the mesh of the partition <span class="process-math">\(P = \of{ 0 , 1 , 3 , 4 , 6 , 9 , 10 } \)</span> of the closed interval <span class="process-math">\(\clint{ 0 }{ 10 } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-mesh-of-a-partition-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">The partition <span class="process-math">\(P \)</span> has mesh <span class="process-math">\(\mesh \of{ P } = 3 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-mesh-of-a-partition-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.1.3.1.1"><a tabindex="-1" href="#exercise-mesh-of-a-partition-3-2" title="Copy heading and permalink for Answer 6.1.3.1.1" aria-label="Copy heading and permalink for Answer 6.1.3.1.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">We note that the associated subintervals are <span class="process-math">\(\clint{ 0 }{ 1 } \text{,}\)</span> <span class="process-math">\(\clint{ 1 }{ 3 } \text{,}\)</span> <span class="process-math">\(\clint{ 3 }{ 4 } \text{,}\)</span> <span class="process-math">\(\clint{ 4 }{ 6 } \text{,}\)</span> <span class="process-math">\(\clint{ 6 }{ 9 } \text{,}\)</span> and <span class="process-math">\(\clint{ 9 }{ 10 } \text{,}\)</span> which have lengths <span class="process-math">\(1 \text{,}\)</span> <span class="process-math">\(2 \text{,}\)</span> <span class="process-math">\(1 \text{,}\)</span> <span class="process-math">\(2 \text{,}\)</span> <span class="process-math">\(3 \text{,}\)</span> and <span class="process-math">\(1 \text{,}\)</span> respectively. Thus the partition <span class="process-math">\(P \)</span> has mesh <span class="process-math">\(\mesh \of{ P } = 3 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-mesh-of-a-partition-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 6.1.3.1.1"><a tabindex="-1" href="#exercise-mesh-of-a-partition-3-3" title="Copy heading and permalink for Solution 6.1.3.1.1" aria-label="Copy heading and permalink for Solution 6.1.3.1.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-riemann-sums-and-integrals.html#exercise-mesh-of-a-partition-4" aria-label="Back to 6.1.3.2."><span class="codenumber">6.1.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para">Compute the mesh of the partition <span class="process-math">\(Q = \of{ 0 , 1 , 2 , 3 , 4 , 5 } \)</span> of the closed interval <span class="process-math">\(\clint{ 0 }{ 5 } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-mesh-of-a-partition-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">The partition <span class="process-math">\(P \)</span> has mesh <span class="process-math">\(\mesh \of{ P } = 1 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-mesh-of-a-partition-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.1.3.2.1"><a tabindex="-1" href="#exercise-mesh-of-a-partition-4-2" title="Copy heading and permalink for Answer 6.1.3.2.1" aria-label="Copy heading and permalink for Answer 6.1.3.2.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">We note that the associated subintervals are <span class="process-math">\(\clint{ 0 }{ 1 } \text{,}\)</span> <span class="process-math">\(\clint{ 1 }{ 2 } \text{,}\)</span> <span class="process-math">\(\clint{ 2 }{ 3 } \text{,}\)</span> <span class="process-math">\(\clint{ 3 }{ 4 } \text{,}\)</span> and <span class="process-math">\(\clint{ 4 }{ 5 } \text{,}\)</span> each of which has length <span class="process-math">\(1 \text{.}\)</span> Thus the partition <span class="process-math">\(P \)</span> has mesh <span class="process-math">\(\mesh \of{ P } = 1 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-mesh-of-a-partition-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 6.1.3.2.1"><a tabindex="-1" href="#exercise-mesh-of-a-partition-4-3" title="Copy heading and permalink for Solution 6.1.3.2.1" aria-label="Copy heading and permalink for Solution 6.1.3.2.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-riemann-sums-and-integrals.html#exercise-mesh-of-a-partition-5" aria-label="Back to 6.1.3.3."><span class="codenumber">6.1.3.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para">Compute the mesh of the partition <span class="process-math">\(Q = \of{ \frac{ k }{ 3^{ n } } }_{ k = 0 }^{ 3^{ n } } \)</span> of the closed interval <span class="process-math">\(\clint{ 0 }{ 1 } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-mesh-of-a-partition-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">The partition <span class="process-math">\(P \)</span> has mesh <span class="process-math">\(\mesh \of{ P } = \frac{ 1 }{ 3^{ n } } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-mesh-of-a-partition-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.1.3.3.1"><a tabindex="-1" href="#exercise-mesh-of-a-partition-5-2" title="Copy heading and permalink for Answer 6.1.3.3.1" aria-label="Copy heading and permalink for Answer 6.1.3.3.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">We note that the associated subintervals are each of length <span class="process-math">\(\frac{ 1 }{ 3^{ n } } \text{,}\)</span> and so the partition <span class="process-math">\(P \)</span> has mesh <span class="process-math">\(\mesh \of{ P } = \frac{ 1 }{ 3^{ n } } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-mesh-of-a-partition-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 6.1.3.3.1"><a tabindex="-1" href="#exercise-mesh-of-a-partition-5-3" title="Copy heading and permalink for Solution 6.1.3.3.1" aria-label="Copy heading and permalink for Solution 6.1.3.3.1">🔗</a></div>
+</div></details>
+</div></article>
+</div>
+</div>
+<div class="exercisegroup">
+<div class="introduction">
+<div class="para">Compute the given Riemann sums.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-riemann-sums-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like"><h3 class="heading"><a href="section-riemann-sums-and-integrals.html#exercise-riemann-sums-3" aria-label="Back to 6.1.3.4."><span class="codenumber">6.1.3.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(f \colon \clint{ 0 }{ 4 } \to \R \)</span> be the real-valued function defined on the closed interval <span class="process-math">\(\clint{ 0 }{ 4 } \)</span> by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f \of{ x } = 6 - 3 \abs{ x - 2 }\text{.}
+\end{equation*}
+</div>
+<div class="para">Compute the Riemann sum <span class="process-math">\(\mathcal{ R }_{ f } \of{ P , t } \text{,}\)</span> where <span class="process-math">\(P = \of{ 0 , 1 , 2 , 4 } \)</span> and <span class="process-math">\(t = \of{ 1 , 1 , 4 } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-riemann-sums-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\mathcal{ R }_{ f } \of{ P , t } = 6 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-riemann-sums-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.1.3.4.1"><a tabindex="-1" href="#exercise-riemann-sums-3-2" title="Copy heading and permalink for Answer 6.1.3.4.1" aria-label="Copy heading and permalink for Answer 6.1.3.4.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We compute</div>
+<div class="displaymath process-math">
+\begin{align*}
+\mathcal{ R }_{ f } \of{ P , t } \amp = f \of{ 1 } \of{ 1 - 0 } + f \of{ 1 } \of{ 2 - 1 } + f \of{ 3 } \of{ 4 - 2 } = 3 \cdot 1 + 3 \cdot 1 + 0 \cdot 2\\
+\amp = 3 + 3 + 0 = 6\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-riemann-sums-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 6.1.3.4.1"><a tabindex="-1" href="#exercise-riemann-sums-3-3" title="Copy heading and permalink for Solution 6.1.3.4.1" aria-label="Copy heading and permalink for Solution 6.1.3.4.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-riemann-sums-and-integrals.html#exercise-riemann-sums-4" aria-label="Back to 6.1.3.5."><span class="codenumber">6.1.3.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(g \colon \clint{ -2 }{ 10 } \to \R \)</span> be the real-valued function defined on the closed interval <span class="process-math">\(\clint{ -2 }{ 10 } \)</span> by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g \of{ y } = y^{ 2 } - 1\text{.}
+\end{equation*}
+</div>
+<div class="para">Compute the Riemann sum <span class="process-math">\(\mathcal{ R }_{ g } \of{ Q , u } \text{,}\)</span> where <span class="process-math">\(Q = \of{ -2 , 0 , 2 , 5 , 10 } \)</span> and <span class="process-math">\(u = \of{ -2 , 1 , 4 , 5 } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-riemann-sums-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\mathcal{ R }_{ g } \of{ Q , u } = 171 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-riemann-sums-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.1.3.5.1"><a tabindex="-1" href="#exercise-riemann-sums-4-2" title="Copy heading and permalink for Answer 6.1.3.5.1" aria-label="Copy heading and permalink for Answer 6.1.3.5.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We compute</div>
+<div class="displaymath process-math">
+\begin{align*}
+\mathcal{ R }_{ g } \of{ Q , u } \amp = g \of{ -2 } \of{ 0 - \of{ -2 } } + g \of{ 1 } \of{ 2 - 0 } + g \of{ 4 } \of{ 5 - 2 } + g \of{ 5 } \of{ 10 - 5 }\\
+\amp = 3 \cdot 2 + 0 \cdot 2 + 15 \cdot 3 + 24 \cdot 5\\
+\amp = 6 + 0 + 45 + 120 = 171\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-riemann-sums-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 6.1.3.5.1"><a tabindex="-1" href="#exercise-riemann-sums-4-3" title="Copy heading and permalink for Solution 6.1.3.5.1" aria-label="Copy heading and permalink for Solution 6.1.3.5.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-riemann-sums-and-integrals.html#exercise-riemann-sums-5" aria-label="Back to 6.1.3.6."><span class="codenumber">6.1.3.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(h \colon \clint{ 0 }{ 5 } \to \R \)</span> be the real-valued function defined on the closed interval <span class="process-math">\(\clint{ 0 }{ 5 \pi } \)</span> by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h \of{ z } = \cos \of{ \pi z }\text{.}
+\end{equation*}
+</div>
+<div class="para">Compute the Riemann sum <span class="process-math">\(\mathcal{ R }_{ h } \of{ R , v } \text{,}\)</span> where <span class="process-math">\(R = \of{ 0 , 1 , 2 , 3 , 4 , 5 } \)</span> and <span class="process-math">\(v = \of{ 1 , 2 , 3 , 4 , 5 } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-riemann-sums-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\mathcal{ R }_{ h } \of{ R , v } = 6 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-riemann-sums-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.1.3.6.1"><a tabindex="-1" href="#exercise-riemann-sums-5-2" title="Copy heading and permalink for Answer 6.1.3.6.1" aria-label="Copy heading and permalink for Answer 6.1.3.6.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We compute</div>
+<div class="displaymath process-math">
+\begin{align*}
+\mathcal{ R }_{ h } \of{ R , v } \amp = h \of{ 1 } \of{ 1 - 0 } + h \of{ 2 } \of{ 2 - 1 } + h \of{ 3 } \of{ 3 - 2 } + h \of{ 4 } \of{ 4 - 5 } + h \of{ 5 } \of{ 5 - 4 }\\
+\amp = \of{ -1 } \cdot 1 + 1 \cdot 1 + \of{ -1 } \cdot 1 + 1 \cdot 1 + \of{ -1 } \cdot 1\\
+\amp = -1 + 1 - 1 + 1 - 1 = -1\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-riemann-sums-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 6.1.3.6.1"><a tabindex="-1" href="#exercise-riemann-sums-5-3" title="Copy heading and permalink for Solution 6.1.3.6.1" aria-label="Copy heading and permalink for Solution 6.1.3.6.1">🔗</a></div>
+</div></details>
+</div></article>
+</div>
+</div>
+<div class="exercisegroup">
+<div class="introduction">
+<div class="para">Compute the given Darboux sums.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-darboux-sums-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like"><h3 class="heading"><a href="section-riemann-sums-and-integrals.html#exercise-darboux-sums-3" aria-label="Back to 6.1.3.7."><span class="codenumber">6.1.3.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(f \colon \clint{ 0 }{ 4 } \to \R \)</span> be the real-valued function defined on the closed interval <span class="process-math">\(\clint{ 0 }{ 4 } \)</span> by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f \of{ x } = 6 - 3 \abs{ x - 2 }\text{.}
+\end{equation*}
+</div>
+<div class="para">Compute the Darboux sums <span class="process-math">\(\mathcal{ U }_{ f } \of{ P } \)</span> and <span class="process-math">\(\mathcal{ L }_{ f } \of{ P } \text{,}\)</span> where <span class="process-math">\(P = \of{ 0 , 1 , 2 , 4 } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-darboux-sums-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\mathcal{ U }_{ f } \of{ P } = 21 \)</span> and <span class="process-math">\(\mathcal{ L }_{ f } \of{ P } = 3 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-darboux-sums-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.1.3.7.1"><a tabindex="-1" href="#exercise-darboux-sums-3-2" title="Copy heading and permalink for Answer 6.1.3.7.1" aria-label="Copy heading and permalink for Answer 6.1.3.7.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We compute</div>
+<div class="displaymath process-math">
+\begin{align*}
+\sup_{ 0 \leq x \leq 1 }{ f \of{ x } } \amp = 3 \amp \inf_{ 0 \leq x \leq 1 }{ f \of{ x } } \amp = 0\\
+\sup_{ 1 \leq x \leq 2 }{ f \of{ x } } \amp = 6 \amp \inf_{ 1 \leq x \leq 2 }{ f \of{ x } } \amp = 3\\
+\sup_{ 2 \leq x \leq 4 }{ f \of{ x } } \amp = 6 \amp \inf_{ 2 \leq x \leq 4 }{ f \of{ x } } \amp = 0\text{.}
+\end{align*}
+</div>
+<div class="para">Thus</div>
+<div class="displaymath process-math">
+\begin{align*}
+\mathcal{ U }_{ f } \of{ P } \amp = 3 \of{ 1 - 0 } + 6 \of{ 2 - 1 } + 6 \of{ 4 - 2 } = 3 \cdot 1 + 6 \cdot 1 + 6 \cdot 2\\
+\amp = 3 + 6 + 12 = 21\text{,}
+\end{align*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{align*}
+\mathcal{ L }_{ f } \of{ P } \amp = 0 \of{ 1 - 0 } + 3 \of{ 2 - 1 } + 0 \of{ 4 - 2 } = 0 \cdot 1 + 3 \cdot 1 + 0 \cdot 2\\
+\amp = 0 + 3 + 0 = 3\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-darboux-sums-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 6.1.3.7.1"><a tabindex="-1" href="#exercise-darboux-sums-3-3" title="Copy heading and permalink for Solution 6.1.3.7.1" aria-label="Copy heading and permalink for Solution 6.1.3.7.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-riemann-sums-and-integrals.html#exercise-darboux-sums-4" aria-label="Back to 6.1.3.8."><span class="codenumber">6.1.3.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(g \colon \clint{ -2 }{ 10 } \to \R \)</span> be the real-valued function defined on the closed interval <span class="process-math">\(\clint{ -2 }{ 10 } \)</span> by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g \of{ y } = y^{ 2 } - 1\text{.}
+\end{equation*}
+</div>
+<div class="para">Compute the Darboux sums <span class="process-math">\(\mathcal{ U }_{ g } \of{ Q } \)</span> and <span class="process-math">\(\mathcal{ L }_{ g } \of{ Q } \text{,}\)</span> where <span class="process-math">\(Q = \of{ -2 , 0 , 2 , 5 , 10 } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-darboux-sums-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\mathcal{ U }_{ g } \of{ Q } = 579 \)</span> and <span class="process-math">\(\mathcal{ L }_{ g } \of{ Q } = 125 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-darboux-sums-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.1.3.8.1"><a tabindex="-1" href="#exercise-darboux-sums-4-2" title="Copy heading and permalink for Answer 6.1.3.8.1" aria-label="Copy heading and permalink for Answer 6.1.3.8.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We compute</div>
+<div class="displaymath process-math">
+\begin{align*}
+\sup_{ -2 \leq y \leq 0 }{ g \of{ y } } \amp = 3 \amp \inf_{ -2 \leq y \leq 0 }{ g \of{ y } } \amp = -1\\
+\sup_{ 0 \leq y \leq 2 }{ g \of{ y } } \amp = 3 \amp \inf_{ 0 \leq y \leq 2 }{ g \of{ y } } \amp = -1\\
+\sup_{ 2 \leq y \leq 5 }{ g \of{ y } } \amp = 24 \amp \inf_{ 2 \leq y \leq 5 }{ g \of{ y } } \amp = 3\\
+\sup_{ 5 \leq y \leq 10 }{ g \of{ y } } \amp = 99 \amp \inf_{ 5 \leq y \leq 10 }{ g \of{ y } } \amp = 24\text{.}
+\end{align*}
+</div>
+<div class="para">Thus</div>
+<div class="displaymath process-math">
+\begin{align*}
+\mathcal{ U }_{ g } \of{ Q } \amp = 3 \of{ 0 - \of{ -2 } } + 3 \of{ 2 - 0 } + 24 \of{ 5 - 2 } + 99 \of{ 10 - 5 }\\
+\amp = 3 \cdot 2 + 3 \cdot 2 + 24 \cdot 3 + 99 \cdot 5\\
+\amp = 6 + 6 + 72 + 495 = 579\text{,}
+\end{align*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{align*}
+\mathcal{ L }_{ g } \of{ Q } \amp = \of{ -1 } \of{ 0 - \of{ -2 } } + \of{ -1 } \of{ 2 - 0 } + 3 \of{ 5 - 2 } + 24 \of{ 10 - 5 }\\
+\amp = \of{ -1 } \cdot 2 + \of{ -1 } \cdot 2 + 3 \cdot 3 + 24 \cdot 5\\
+\amp = -2 - 2 + 9 + 120 = 125
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-darboux-sums-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 6.1.3.8.1"><a tabindex="-1" href="#exercise-darboux-sums-4-3" title="Copy heading and permalink for Solution 6.1.3.8.1" aria-label="Copy heading and permalink for Solution 6.1.3.8.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-riemann-sums-and-integrals.html#exercise-darboux-sums-5" aria-label="Back to 6.1.3.9."><span class="codenumber">6.1.3.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(h \colon \clint{ 0 }{ 5 } \to \R \)</span> be the real-valued function defined on the closed interval <span class="process-math">\(\clint{ 0 }{ 5 \pi } \)</span> by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h \of{ z } = \cos \of{ \pi z }\text{.}
+\end{equation*}
+</div>
+<div class="para">Compute the Darboux sums <span class="process-math">\(\mathcal{ U }_{ h } \of{ R } \)</span> and <span class="process-math">\(\mathcal{ L }_{ h } \of{ R } \text{,}\)</span> where <span class="process-math">\(R = \of{ 0 , 1 , 2 , 3 , 4 , 5 } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-darboux-sums-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\mathcal{ U }_{ h } \of{ R } = 5 \)</span> and <span class="process-math">\(\mathcal{ L }_{ h } \of{ R } = -5 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-darboux-sums-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.1.3.9.1"><a tabindex="-1" href="#exercise-darboux-sums-5-2" title="Copy heading and permalink for Answer 6.1.3.9.1" aria-label="Copy heading and permalink for Answer 6.1.3.9.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We compute</div>
+<div class="displaymath process-math">
+\begin{align*}
+\sup_{ 0 \leq z \leq 1 }{ h \of{ z } } \amp = 1 \amp \inf_{ 0 \leq z \leq 1 }{ h \of{ z } } \amp = -1\\
+\sup_{ 1 \leq z \leq 2 }{ h \of{ z } } \amp = 1 \amp \inf_{ 1 \leq z \leq 2 }{ h \of{ z } } \amp = -1\\
+\sup_{ 2 \leq z \leq 3 }{ h \of{ z } } \amp = 1 \amp \inf_{ 2 \leq z \leq 3 }{ h \of{ z } } \amp = -1\\
+\sup_{ 3 \leq z \leq 4 }{ h \of{ z } } \amp = 1 \amp \inf_{ 3 \leq z \leq 4 }{ h \of{ z } } \amp = -1\\
+\sup_{ 4 \leq z \leq 5 }{ h \of{ z } } \amp = 1 \amp \inf_{ 4 \leq z \leq 5 }{ h \of{ z } } \amp = -1\text{.}
+\end{align*}
+</div>
+<div class="para">Thus</div>
+<div class="displaymath process-math">
+\begin{align*}
+\mathcal{ U }_{ h } \of{ R } \amp = 1 \of{ 1 - 0 } + 1 \of{ 2 - 1 } + 1 \of{ 3 - 2 } + 1 \of{ 4 - 5 } + 1 \of{ 5 - 4 }\\
+\amp = 1 \cdot 1 + 1 \cdot 1 + 1 \cdot 1 + 1 \cdot 1 + 1 \cdot 1\\
+\amp = 1 + 1 + 1 + 1 + 1 = 5
+\end{align*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{align*}
+\mathcal{ L }_{ h } \of{ R } \amp = \of{ -1 } \of{ 1 - 0 } + \of{ -1 } \of{ 2 - 1 } + \of{ -1 } \of{ 3 - 2 } + \of{ -1 } \of{ 4 - 5 } + \of{ -1 } \of{ 5 - 4 }\\
+\amp = \of{ -1 } \cdot 1 + \of{ -1 } \cdot 1 + \of{ -1 } \cdot 1 + \of{ -1 } \cdot 1 + \of{ -1 } \cdot 1\\
+\amp = -1 - 1 - 1 - 1 - 1 = -5\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-darboux-sums-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 6.1.3.9.1"><a tabindex="-1" href="#exercise-darboux-sums-5-3" title="Copy heading and permalink for Solution 6.1.3.9.1" aria-label="Copy heading and permalink for Solution 6.1.3.9.1">🔗</a></div>
+</div></details>
+</div></article>
+</div>
+</div>
+<h2 class="heading hide-type" title="Reading Questions 6.1.4: Problems">
+<span class="codenumber">6.1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
 </h2>
 <article class="exercise-like"><h3 class="heading"><a href="section-riemann-sums-and-integrals.html#problem-more-on-integrability-and-continuity" aria-label="Back to 6.1.4.1. More on integrability and continuity."><span class="codenumber">6.1.4.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">More on integrability and continuity.</span></a></h3>
 <div class="para">Let <span class="process-math">\(f \colon \clint{ a }{ b } \to \R \)</span> be a Riemann integrable real-valued function defined on a closed interval. Prove that <span class="process-math">\(g \circ f \)</span> is Riemann integrable for any continuous real-valued function <span class="process-math">\(g \colon \R \to \R \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-more-on-integrability-and-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></article><div class="autopermalink" aria-hidden="true" data-description="Appendix A: Selected Solutions"><a tabindex="-1" href="#solutions" title="Copy heading and permalink for Appendix A: Selected Solutions" aria-label="Copy heading and permalink for Appendix A: Selected Solutions">🔗</a></div>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-riemann-sums-and-integrals.html#problem-riemann-integrals-of-products" aria-label="Back to 6.1.4.2. Riemann integrals of products."><span class="codenumber">6.1.4.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Riemann integrals of products.</span></a></h3>
+<div class="introduction">
+<div class="para">In this problem, we will prove that the product of Riemann integrable functions is itself Riemann integrable, although the integral of said products is usually not the product of the integrals of the factors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-riemann-integrals-of-products-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="exercise-like"><h4 class="heading hide-type" title="Task 6.1.4.2.a"><a href="section-riemann-sums-and-integrals.html#problem-riemann-integrals-of-products-3" aria-label="Back to 6.1.4.2.a"><span class="codenumber">6.1.4.2.a</span></a></h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(f \colon \clint{ a }{ b } \to \R \)</span> be a real-valued function defined on an interval <span class="process-math">\(\clint{ a }{ b } \text{.}\)</span> Show that if <span class="process-math">\(f \)</span> is bounded, then there is a positive real number <span class="process-math">\(B \gt 0 \)</span> so that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sup_{ s \leq x \leq t }{ f \of{ x }^{ 2 } } - \inf_{ s \leq x \leq t }{ f \of{ x }^{ 2 } } \leq 2 B \of{ \sup_{ s \leq x \leq t }{ f \of{ x } } - \inf_{ s \leq x \leq t }{ f \of{ x } } }
+\end{equation*}
+</div>
+<div class="para">for any real numbers <span class="process-math">\(a \leq s \leq t \leq b \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-riemann-integrals-of-products-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.1.4.2.b"><a href="section-riemann-sums-and-integrals.html#problem-riemann-integrals-of-products-4" aria-label="Back to 6.1.4.2.b"><span class="codenumber">6.1.4.2.b</span></a></h4>
+<div class="para">Let <span class="process-math">\(f \colon \clint{ a }{ b } \to \R \)</span> be a real-valued function defined on an interval <span class="process-math">\(\clint{ a }{ b } \text{.}\)</span> Prove that if <span class="process-math">\(f \)</span> is Riemann integrable, then so is its square <span class="process-math">\(f^{ 2 } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-riemann-integrals-of-products-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.1.4.2.c"><a href="section-riemann-sums-and-integrals.html#problem-riemann-integrals-of-products-5" aria-label="Back to 6.1.4.2.c"><span class="codenumber">6.1.4.2.c</span></a></h4>
+<div class="para logical">
+<div class="para">Provide an example of two Riemann integrable functions <span class="process-math">\(f , g \colon \clint{ a }{ b } \to \R \)</span> defined on a closed interval <span class="process-math">\(\clint{ a }{ b } \)</span> so that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{ a }^{ b }{ f \of{ x } g \of{ x } \, \diff{ x } } \neq \of{ \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } } \of{ \int_{ a }^{ b }{ g \of{ x } \, \diff{ x } } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-riemann-integrals-of-products-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article></article><h2 class="heading hide-type" title="Exercises 6.2.3: Exercises">
+<span class="codenumber">6.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Fundamental Theorems of Calculus</span><br><span class="codenumber">6.2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h2>
+<div class="exercisegroup">
+<div class="introduction">
+<div class="para">Use the <a href="section-the-fundamental-theorems-of-calculus.html#theorem-second-fundamental-theorem-of-calculus" class="xref" data-knowl="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.4: Second fundamental theorem of calculus">Second fundamental theorem of calculus</a> to compute the following Riemann integrals.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-definite-integrals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like"><h3 class="heading"><a href="section-the-fundamental-theorems-of-calculus.html#exercise-computing-definite-integrals-3" aria-label="Back to 6.2.3.1."><span class="codenumber">6.2.3.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para logical">
+<div class="para">Use the <a href="section-the-fundamental-theorems-of-calculus.html#theorem-second-fundamental-theorem-of-calculus" class="xref" data-knowl="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.4: Second fundamental theorem of calculus">Second fundamental theorem of calculus</a> to compute the Riemann integral</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html">
+\begin{equation*}
+\int_{ 0 }^{ 3 }{ 2 x + 1 \, \diff{ x } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-definite-integrals-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\int_{ 0 }^{ 3 }{ 2 x + 1 \, \diff{ x } } = 12 \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-definite-integrals-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.2.3.1.1"><a tabindex="-1" href="#exercise-computing-definite-integrals-3-2" title="Copy heading and permalink for Answer 6.2.3.1.1" aria-label="Copy heading and permalink for Answer 6.2.3.1.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Consider the real-valued function <span class="process-math">\(f \colon \clint{ 0 }{ 3 } \to \R \)</span> defined by the formula <span class="process-math">\(f \of{ x } = x^{ 2 } + x \text{.}\)</span> Since <span class="process-math">\(f \)</span> is continuously differentiable with derivative <span class="process-math">\(f' \of{ x } = 2 x + 1 \text{,}\)</span> we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html">
+\begin{align*}
+\int_{ 0 }^{ 3 }{ 2 x + 1 \, \diff{ x } } \amp = \int_{ 0 }^{ 3 }{ f' \of{ x } \, \diff{ x } } = f \of{ 3 } - f \of{ 0 }\\
+\amp = 12 - 0 = 12
+\end{align*}
+</div>
+<div class="para">by the <a href="section-the-fundamental-theorems-of-calculus.html#theorem-second-fundamental-theorem-of-calculus" class="xref" data-knowl="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.4: Second fundamental theorem of calculus">Second fundamental theorem of calculus</a>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-definite-integrals-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 6.2.3.1.1"><a tabindex="-1" href="#exercise-computing-definite-integrals-3-3" title="Copy heading and permalink for Solution 6.2.3.1.1" aria-label="Copy heading and permalink for Solution 6.2.3.1.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-the-fundamental-theorems-of-calculus.html#exercise-computing-definite-integrals-4" aria-label="Back to 6.2.3.2."><span class="codenumber">6.2.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para logical">
+<div class="para">Use the <a href="section-the-fundamental-theorems-of-calculus.html#theorem-second-fundamental-theorem-of-calculus" class="xref" data-knowl="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.4: Second fundamental theorem of calculus">Second fundamental theorem of calculus</a> to compute the Riemann integral</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html">
+\begin{equation*}
+\int_{ -1 }^{ 2 }{ y^{ 3 } + 3 y \, \diff{ y } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-definite-integrals-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\int_{ -1 }^{ 2 }{ y^{ 3 } + 3 y \, \diff{ y } } = \frac{ 33 }{ 4 } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-definite-integrals-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.2.3.2.1"><a tabindex="-1" href="#exercise-computing-definite-integrals-4-2" title="Copy heading and permalink for Answer 6.2.3.2.1" aria-label="Copy heading and permalink for Answer 6.2.3.2.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Consider the real-valued function <span class="process-math">\(g \colon \clint{ -1 }{ 2 } \to \R \)</span> defined by the formula <span class="process-math">\(g \of{ y } = \frac{ y^{ 4 } }{ 4 } + \frac{ 3 y^{ 2 } }{ 2 } \text{.}\)</span> Since <span class="process-math">\(g \)</span> is continuously differentiable with derivative <span class="process-math">\(g' \of{ y } = y^{ 3 } + 3 y \text{,}\)</span> we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html">
+\begin{align*}
+\int_{ -1 }^{ 2 }{ y^{ 3 } + 3 y \, \diff{ y } } \amp = \int_{ -1 }^{ 2 }{ g' \of{ y } \, \diff{ y } } = g \of{ 2 } - g \of{ -1 }\\
+\amp = 7 - \of{ -\frac{ 5 }{ 4 } } = \frac{ 33 }{ 4 }
+\end{align*}
+</div>
+<div class="para">by the <a href="section-the-fundamental-theorems-of-calculus.html#theorem-second-fundamental-theorem-of-calculus" class="xref" data-knowl="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.4: Second fundamental theorem of calculus">Second fundamental theorem of calculus</a>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-definite-integrals-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 6.2.3.2.1"><a tabindex="-1" href="#exercise-computing-definite-integrals-4-3" title="Copy heading and permalink for Solution 6.2.3.2.1" aria-label="Copy heading and permalink for Solution 6.2.3.2.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-the-fundamental-theorems-of-calculus.html#exercise-computing-definite-integrals-5" aria-label="Back to 6.2.3.3."><span class="codenumber">6.2.3.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para logical">
+<div class="para">Use the <a href="section-the-fundamental-theorems-of-calculus.html#theorem-second-fundamental-theorem-of-calculus" class="xref" data-knowl="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.4: Second fundamental theorem of calculus">Second fundamental theorem of calculus</a> to compute the Riemann integral</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html">
+\begin{equation*}
+\int_{ 1 }^{ 3 }{ 2^{ z } \, \diff{ z } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-definite-integrals-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\int_{ 1 }^{ 3 }{ 2^{ z } \, \diff{ z } } = \frac{ 7 }{ \ln \of{ 2 } } \text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-definite-integrals-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.2.3.3.1"><a tabindex="-1" href="#exercise-computing-definite-integrals-5-2" title="Copy heading and permalink for Answer 6.2.3.3.1" aria-label="Copy heading and permalink for Answer 6.2.3.3.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Consider the real-valued function <span class="process-math">\(h \colon \clint{ 1 }{ 3 } \to \R \)</span> defined by the formula <span class="process-math">\(h \of{ z } = \frac{ 2^{ z } }{ \ln \of{ 2 } } \text{.}\)</span> Since <span class="process-math">\(h \)</span> is continuously differentiable with derivative <span class="process-math">\(h' \of{ z } = 2^{ z } \text{,}\)</span> we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html">
+\begin{align*}
+\int_{ 1 }^{ 3 }{ 2^{ z } \, \diff{ z } } \amp = \int_{ 1 }^{ 3 }{ h' \of{ z } \, \diff{ z } } = h \of{ 3 } - h \of{ 1 }\\
+\amp = \frac{ 2^{ 3 } }{ \ln \of{ 2 } } - \frac{ 2^{ 1 } }{ \ln \of{ 2 } } = \frac{ 7 }{ \ln \of{ 2 } }
+\end{align*}
+</div>
+<div class="para">by the <a href="section-the-fundamental-theorems-of-calculus.html#theorem-second-fundamental-theorem-of-calculus" class="xref" data-knowl="./knowl/xref/theorem-second-fundamental-theorem-of-calculus.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.4: Second fundamental theorem of calculus">Second fundamental theorem of calculus</a>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-definite-integrals-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 6.2.3.3.1"><a tabindex="-1" href="#exercise-computing-definite-integrals-5-3" title="Copy heading and permalink for Solution 6.2.3.3.1" aria-label="Copy heading and permalink for Solution 6.2.3.3.1">🔗</a></div>
+</div></details>
+</div></article>
+</div>
+</div>
+<h2 class="heading hide-type" title="Reading Questions 6.2.4: Problems">
+<span class="codenumber">6.2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
+</h2>
+<article class="exercise-like"><h3 class="heading"><a href="section-the-fundamental-theorems-of-calculus.html#problem-chasles-relation" aria-label="Back to 6.2.4.1. Chasles’ relation."><span class="codenumber">6.2.4.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Chasles’ relation.</span></a></h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(f \colon X \to \R \)</span> be a real-valued function defined on a closed interval <span class="process-math">\(X \subsetneq \R \text{.}\)</span> Prove that if <span class="process-math">\(f \)</span> is Riemann integrable, then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{ a }^{ c }{ f \of{ x } \, \diff{ x } } = \int_{ a }^{ b }{ f \of{ x } \, \diff{ x } } + \int_{ b }^{ c }{ f \of{ x } \, \diff{ x } }
+\end{equation*}
+</div>
+<div class="para">for all real numbers <span class="process-math">\(a , b , c \in X \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-chasles-relation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><h2 class="heading hide-type" title="Exercises 6.3.3: Exercises">
+<span class="codenumber">6.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Improper Integration</span><br><span class="codenumber">6.3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h2>
+<div class="exercisegroup">
+<div class="introduction">
+<div class="para">Determine whether the given improper integral is absolutely convergent, conditionally convergent, or divergent.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-determining-improper-integrability-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like"><h3 class="heading"><a href="section-improper-integration.html#exercise-determining-improper-integrability-3" aria-label="Back to 6.3.3.1."><span class="codenumber">6.3.3.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para logical">
+<div class="para">Determine whether the improper integral</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{ 1 }^{ \infty }{ \frac{ 1 }{ x^{ \frac{ 3 }{ 2 } } } \, \diff{ x } }
+\end{equation*}
+</div>
+<div class="para">is absolutely convergent, conditionally convergent, or divergent.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-determining-improper-integrability-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="para">The improper integral</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{ 1 }^{ \infty }{ \frac{ 1 }{ x^{ \frac{ 3 }{ 2 } } } \, \diff{ x } }
+\end{equation*}
+</div>
+<div class="para">is absolutely convergent.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-determining-improper-integrability-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.3.3.1.1"><a tabindex="-1" href="#exercise-determining-improper-integrability-3-2" title="Copy heading and permalink for Answer 6.3.3.1.1" aria-label="Copy heading and permalink for Answer 6.3.3.1.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-improper-integration.html#exercise-determining-improper-integrability-4" aria-label="Back to 6.3.3.2."><span class="codenumber">6.3.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para logical">
+<div class="para">Determine whether the improper integral</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{ 1 }^{ \infty }{ \frac{ \cos \of{ y^{ 2 } } }{ y^{ \frac{ 5 }{ 3 } } } \, \diff{ y } }
+\end{equation*}
+</div>
+<div class="para">is absolutely convergent, conditionally convergent, or divergent.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-determining-improper-integrability-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="para">The improper integral</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{ 1 }^{ \infty }{ \frac{ \cos \of{ y^{ 2 } } }{ y^{ \frac{ 5 }{ 3 } } } \, \diff{ y } }
+\end{equation*}
+</div>
+<div class="para">is absolutely convergent.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-determining-improper-integrability-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.3.3.2.1"><a tabindex="-1" href="#exercise-determining-improper-integrability-4-2" title="Copy heading and permalink for Answer 6.3.3.2.1" aria-label="Copy heading and permalink for Answer 6.3.3.2.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-improper-integration.html#exercise-determining-improper-integrability-5" aria-label="Back to 6.3.3.3."><span class="codenumber">6.3.3.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para logical">
+<div class="para">Determine whether the improper integral</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{ 1 }^{ \infty }{ \frac{ \sqrt{ z } }{ z^{ 2 } + 1 } \, \diff{ z } }
+\end{equation*}
+</div>
+<div class="para">is absolutely convergent, conditionally convergent, or divergent.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-determining-improper-integrability-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="para">The improper integral</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{ 1 }^{ \infty }{ \frac{ \sqrt{ z } }{ z^{ 2 } + 1 } \, \diff{ z } }
+\end{equation*}
+</div>
+<div class="para">is absolutely convergent.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-determining-improper-integrability-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.3.3.3.1"><a tabindex="-1" href="#exercise-determining-improper-integrability-5-2" title="Copy heading and permalink for Answer 6.3.3.3.1" aria-label="Copy heading and permalink for Answer 6.3.3.3.1">🔗</a></div>
+</div></details>
+</div></article>
+</div>
+</div>
+<h2 class="heading hide-type" title="Reading Questions 6.3.4: Problems">
+<span class="codenumber">6.3.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
+</h2>
+<article class="exercise-like"><h3 class="heading"><a href="section-improper-integration.html#problem-compact-perturbations" aria-label="Back to 6.3.4.1. Compact perturbations."><span class="codenumber">6.3.4.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Compact perturbations.</span></a></h3>
+<div class="para">Let <span class="process-math">\(f , g \colon X \to \R \)</span> be real-valued functions defined on an interval <span class="process-math">\(X \subseteq \R \text{,}\)</span> and suppose that the restrictions of <span class="process-math">\(f \)</span> and <span class="process-math">\(g \)</span> to any compact subinterval of <span class="process-math">\(X \)</span> are integrable. Prove that if there is some compact subset <span class="process-math">\(K \subseteq X \)</span> so that <span class="process-math">\(f \of{ x } = g \of{ x } \)</span> for all <span class="process-math">\(x \in X \setminus K \text{,}\)</span> then <span class="process-math">\(f \)</span> is improperly integrable if and only if <span class="process-math">\(g \)</span> is.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-compact-perturbations-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-improper-integration.html#problem-limit-comparison-test" aria-label="Back to 6.3.4.2. Limit comparison test."><span class="codenumber">6.3.4.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Limit comparison test.</span></a></h3>
+<div class="para">Prove the <a href="section-improper-integration.html#theorem-limit-comparison-test-for-integral-convergence" class="xref" data-knowl="./knowl/xref/theorem-limit-comparison-test-for-integral-convergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.3.16: Limit comparison test for integral convergence">Limit comparison test for integral convergence</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-limit-comparison-test-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><h2 class="heading hide-type" title="Exercises 7.1.3: Exercises">
+<span class="codenumber">7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Infinite Series</span><br><span class="codenumber">7.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Partial Sums and Infinite Series</span><br><span class="codenumber">7.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h2>
+<div class="exercisegroup">
+<div class="introduction">
+<div class="para">Compute the indicated partial sums of the given series.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-partial-sums-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like"><h3 class="heading"><a href="section-partial-sums-and-infinite-series.html#exercise-computing-partial-sums-3" aria-label="Back to 7.1.3.1."><span class="codenumber">7.1.3.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para logical">
+<div class="para">Compute the first four partial sums of the series</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{ m = 0 }^{ \infty }{ \frac{ 1 }{ 2^{ m } } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-partial-sums-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\of{ S_{ m } }_{ m = 0 }^{ \infty } \)</span> be the associated sequence of partial sums</div>
+<div class="displaymath process-math">
+\begin{equation*}
+S_{ m } = \sum_{ j = 0 }^{ m }{ \frac{ 1 }{ 2^{ j } } } = \frac{ 1 }{ 2^{ 0 } } + \frac{ 1 }{ 2^{ 1 } } + \dotsb + \frac{ 1 }{ 2^{ m } }\text{.}
+\end{equation*}
+</div>
+<div class="para">We compute</div>
+<div class="displaymath process-math">
+\begin{align*}
+S_{ 0 } \amp = \frac{ 1 }{ 2^{ 0 } } = 1\\
+S_{ 1 } \amp = \frac{ 1 }{ 2^{ 0 } } + \frac{ 1 }{ 2^{ 1 } } = 1 + \frac{ 1 }{ 2 } = \frac{ 3 }{ 2 }\\
+S_{ 2 } \amp = \frac{ 1 }{ 2^{ 0 } } + \frac{ 1 }{ 2^{ 1 } } + \frac{ 1 }{ 2^{ 2 } } = 1 + \frac{ 1 }{ 2 } + \frac{ 1 }{ 4 } = \frac{ 7 }{ 4 }\\
+S_{ 3 } \amp = \frac{ 1 }{ 2^{ 0 } } + \frac{ 1 }{ 2^{ 1 } } + \frac{ 1 }{ 2^{ 2 } } + \frac{ 1 }{ 2^{ 3 } }\\
+\amp = 1 + \frac{ 1 }{ 2 } + \frac{ 1 }{ 4 } + \frac{ 1 }{ 8 } = \frac{ 15 }{ 8 }\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-partial-sums-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 7.1.3.1.1"><a tabindex="-1" href="#exercise-computing-partial-sums-3-2" title="Copy heading and permalink for Solution 7.1.3.1.1" aria-label="Copy heading and permalink for Solution 7.1.3.1.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-partial-sums-and-infinite-series.html#exercise-computing-partial-sums-4" aria-label="Back to 7.1.3.2."><span class="codenumber">7.1.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para logical">
+<div class="para">Compute the first four partial sums of the series</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{ n = 1 }^{ \infty }{ \frac{ 1 }{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-partial-sums-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\of{ S_{ n } }_{ n = 1 }^{ \infty } \)</span> be the associated sequence of partial sums</div>
+<div class="displaymath process-math">
+\begin{equation*}
+S_{ n } = \sum_{ k = 1 }^{ n }{ \frac{ 1 }{ n } } = \frac{ 1 }{ 1 } + \frac{ 1 }{ 2 } + \dotsb + \frac{ 1 }{ n }\text{.}
+\end{equation*}
+</div>
+<div class="para">We compute</div>
+<div class="displaymath process-math">
+\begin{align*}
+S_{ 1 } \amp = \frac{ 1 }{ 1 } = 1\\
+S_{ 2 } \amp = \frac{ 1 }{ 1 } + \frac{ 1 }{ 2 } = \frac{ 3 }{ 2 }\\
+S_{ 3 } \amp = \frac{ 1 }{ 1 } + \frac{ 1 }{ 2 } + \frac{ 1 }{ 3 } = \frac{ 11 }{ 6 }\\
+S_{ 3 } \amp = \frac{ 1 }{ 1 } + \frac{ 1 }{ 2 } + \frac{ 1 }{ 3 } + \frac{ 1 }{ 4 } = \frac{ 25 }{ 12 }\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-partial-sums-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 7.1.3.2.1"><a tabindex="-1" href="#exercise-computing-partial-sums-4-2" title="Copy heading and permalink for Solution 7.1.3.2.1" aria-label="Copy heading and permalink for Solution 7.1.3.2.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-partial-sums-and-infinite-series.html#exercise-computing-partial-sums-5" aria-label="Back to 7.1.3.3."><span class="codenumber">7.1.3.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
+<div class="para logical">
+<div class="para">Compute the first four partial sums of the series</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{ n = 1 }^{ \infty }{ \frac{ \of{ -1 }^{ n } }{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-partial-sums-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\of{ S_{ n } }_{ n = 1 }^{ \infty } \)</span> be the associated sequence of partial sums</div>
+<div class="displaymath process-math">
+\begin{equation*}
+S_{ n } = \sum_{ k = 1 }^{ n }{ \frac{ \of{ -1 }^{ n } }{ n } } = -\frac{ 1 }{ 1 } + \frac{ 1 }{ 2 } - \dotsb + \frac{ \of{ -1 }^{ n } }{ n }\text{.}
+\end{equation*}
+</div>
+<div class="para">We compute</div>
+<div class="displaymath process-math">
+\begin{align*}
+S_{ 1 } \amp = -\frac{ 1 }{ 1 } = -1\\
+S_{ 2 } \amp = -\frac{ 1 }{ 1 } + \frac{ 1 }{ 2 } = -\frac{ 1 }{ 2 }\\
+S_{ 3 } \amp = -\frac{ 1 }{ 1 } + \frac{ 1 }{ 2 } - \frac{ 1 }{ 3 } = -\frac{ 5 }{ 6 }\\
+S_{ 3 } \amp = -\frac{ 1 }{ 1 } + \frac{ 1 }{ 2 } - \frac{ 1 }{ 3 } + \frac{ 1 }{ 4 } = -\frac{ 7 }{ 12 }\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercise-computing-partial-sums-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 7.1.3.3.1"><a tabindex="-1" href="#exercise-computing-partial-sums-5-2" title="Copy heading and permalink for Solution 7.1.3.3.1" aria-label="Copy heading and permalink for Solution 7.1.3.3.1">🔗</a></div>
+</div></details>
+</div></article>
+</div>
+</div>
+<h2 class="heading hide-type" title="Reading Questions 7.1.4: Problems">
+<span class="codenumber">7.1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems</span>
+</h2>
+<article class="exercise-like"><h3 class="heading"><a href="section-partial-sums-and-infinite-series.html#problem-cauchy-criteria-for-series" aria-label="Back to 7.1.4.1. Cauchy criteria for series."><span class="codenumber">7.1.4.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cauchy criteria for series.</span></a></h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a sequence of real numbers <span class="process-math">\(x_{ n } \in \N \text{,}\)</span> and consider the associated series</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ x_{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="para">Prove that if the above series converges, then for any positive real number <span class="process-math">\(\epsilon \gt 0 \)</span> there is a natural number <span class="process-math">\(n_{ \epsilon } \)</span> so that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{ \sum_{ k = n }^{ m }{ x_{ k } } } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(m \geq n \geq n_{ \epsilon } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-cauchy-criteria-for-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\of{ S_{ n } }_{ n = 0 }^{ \infty } \)</span> be the sequence of partial sums</div>
+<div class="displaymath process-math">
+\begin{equation*}
+S_{ n } = \sum_{ k = 0 }^{ n }{ x_{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="para">We observe that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+S_{ m } - S_{ n - 1 } = \sum_{ k = 0 }^{ m }{ x_{ k } } - \sum_{ k = 0 }^{ n - 1 }{ x_{ k } } = \sum_{ k = n }^{ m }{ x_{ k } }
+\end{equation*}
+</div>
+<div class="para">for any indices <span class="process-math">\(m , n \in \N \)</span> so that <span class="process-math">\(m \geq n \geq 1 \text{.}\)</span> Since the series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n } } \)</span> converges, the sequence <span class="process-math">\(\of{ S_{ n } }_{ n = 0 }^{ \infty } \)</span> of partial sums converges, and is therefore Cauchy. Thus for any positive real number <span class="process-math">\(\epsilon \gt 0 \text{,}\)</span> there is a natural number <span class="process-math">\(m_{ \epsilon } \in \N \)</span> so that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{ S_{ m } - S_{ n } } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(m , n \geq m_{ \epsilon } \text{.}\)</span> Let <span class="process-math">\(n_{ \epsilon } = m_{ \epsilon } + 1 \text{,}\)</span> and note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{ \sum_{ k = n }^{ m }{ x_{ k } } } = \abs{ S_{ m } - S_{ n - 1 } } \lt \epsilon
+\end{equation*}
+</div>
+<div class="para">for all indices <span class="process-math">\(m \geq n \geq n_{ \epsilon } \text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-cauchy-criteria-for-series-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 7.1.4.1.1"><a tabindex="-1" href="#problem-cauchy-criteria-for-series-4" title="Copy heading and permalink for Solution 7.1.4.1.1" aria-label="Copy heading and permalink for Solution 7.1.4.1.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h3 class="heading"><a href="section-partial-sums-and-infinite-series.html#problem-arithmetic-of-conditionally-convergent-series" aria-label="Back to 7.1.4.2. Arithmetic of conditionally convergent series."><span class="codenumber">7.1.4.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Arithmetic of conditionally convergent series.</span></a></h3>
+<div class="introduction">
+<div class="para">We will shortly develop tools which can be used to prove that termwise algebraic combinations of absolutely convergent series converge. However, the same cannot be said of conditionally convergent series.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-arithmetic-of-conditionally-convergent-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="exercise-like"><h4 class="heading hide-type" title="Task 7.1.4.2.a"><a href="section-partial-sums-and-infinite-series.html#problem-arithmetic-of-conditionally-convergent-series-3" aria-label="Back to 7.1.4.2.a"><span class="codenumber">7.1.4.2.a</span></a></h4>
+<div class="para">Show that the termwise sum of two conditionally convergent series need not be conditionally convergent.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-arithmetic-of-conditionally-convergent-series-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n } } \)</span> be a conditionally convergent series of real numbers <span class="process-math">\(x_{ n } \in \R \text{.}\)</span> We will argue that <span class="process-math">\(\sum_{ n = 0 }{ \infty }{ -x_{ n } } \)</span> is conditionally convergent. Indeed, let <span class="process-math">\(\of{ S_{ n } }_{ n = 0 }^{ \infty } \)</span> and <span class="process-math">\(\of{ T_{ n } }_{ n = 0 }^{ \infty } \)</span> be the sequences of partial sums</div>
+<div class="displaymath process-math">
+\begin{align*}
+S_{ n } \amp = \sum_{ k = 0 }^{ n }{ x_{ k } } \amp T_{ n } = \sum_{ k = 0 }^{ n }{ -x_{ k } }\text{.}
+\end{align*}
+</div>
+<div class="para">We observe that</div>
+<div class="displaymath process-math">
+\begin{align*}
+\sum_{ n = 0 }^{ \infty }{ -x_{ n } } \amp = \lim_{ n \to \infty }{ T_{ n } } = \lim_{ n \to \infty }{ \sum_{ k = 0 }^{ n }{ -x_{ k } } }\\
+\amp = \lim_{ n \to \infty }{ -\sum_{ k = 0 }^{ n }{ x_{ k } } } = -\lim_{ n \to \infty }{ S_{ n } }\\
+\amp = -\sum_{ n = 0 }^{ \infty }{ x_{ n } }\text{,}
+\end{align*}
+</div>
+<div class="para">so the series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ -x_{ n } } \)</span> converges. We observe that the positive part</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ \of{ -x_{ n } }^{ + } } = \sum_{ n = 0 }^{ \infty }{ x_{ n }^{ - } } = \infty
+\end{equation*}
+</div>
+<div class="para">diverges to <span class="process-math">\(\infty \text{,}\)</span> and so this series converges conditionally. We now observe that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ x_{ n } + \of{ -x_{ n } } } = \sum_{ n = 0 }^{ \infty }{ 0 } = 0
+\end{equation*}
+</div>
+<div class="para">converges absolutely.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-arithmetic-of-conditionally-convergent-series-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 7.1.4.2.a.1"><a tabindex="-1" href="#problem-arithmetic-of-conditionally-convergent-series-3-3" title="Copy heading and permalink for Solution 7.1.4.2.a.1" aria-label="Copy heading and permalink for Solution 7.1.4.2.a.1">🔗</a></div>
+</div></details>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 7.1.4.2.b"><a href="section-partial-sums-and-infinite-series.html#problem-arithmetic-of-conditionally-convergent-series-4" aria-label="Back to 7.1.4.2.b"><span class="codenumber">7.1.4.2.b</span></a></h4>
+<div class="para">Show that the termwise scalar multiple of a conditionally convergent series need not be conditionally convergent.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-arithmetic-of-conditionally-convergent-series-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ x_{ n } } \)</span> be a conditionally convergent series of real numbers <span class="process-math">\(x_{ n } \in \R \text{.}\)</span> We observe that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ 0 x_{ n } } = \sum_{ n = 0 }^{ \infty }{ 0 } = 0
+\end{equation*}
+</div>
+<div class="para">converges absolutely.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problem-arithmetic-of-conditionally-convergent-series-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 7.1.4.2.b.1"><a tabindex="-1" href="#problem-arithmetic-of-conditionally-convergent-series-4-2" title="Copy heading and permalink for Solution 7.1.4.2.b.1" aria-label="Copy heading and permalink for Solution 7.1.4.2.b.1">🔗</a></div>
+</div></details>
+</div></article></article><div class="autopermalink" aria-hidden="true" data-description="Appendix A: Selected Solutions"><a tabindex="-1" href="#solutions" title="Copy heading and permalink for Appendix A: Selected Solutions" aria-label="Copy heading and permalink for Appendix A: Selected Solutions">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">

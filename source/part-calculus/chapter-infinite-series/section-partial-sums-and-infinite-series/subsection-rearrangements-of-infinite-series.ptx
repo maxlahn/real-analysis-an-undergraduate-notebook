@@ -76,7 +76,7 @@
           </title>
           
           <p>
-            The <term> negative part </term> <m> x^{ - } </m> of a real number <m> x \in \R </m> is the non-positive real number
+            The <term> negative part </term> <m> x^{ - } </m> of a real number <m> x \in \R </m> is the non-negative real number
             
             <md>
               x^{ - } = -\min \of{ \set{ x , 0 } } = \max \of{ \set{ -x , 0 } } = \of{ -x }^{ + }
