@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="creator">(Gottfried Wilhelm Leibniz)</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Alternating series test.</span>
+</h2>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\of{ x_{ n } }_{ n = 0 }^{ \infty } \)</span> be a non-increasing sequence of positive numbers <span class="process-math">\(x_{ n } \in \opint{ 0 }{ \infty } \text{.}\)</span> If</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{ n \to \infty }{ x_{ n } } = 0\text{,}
+\end{equation*}
+</div>
+<div class="para">then the series <span class="process-math">\(\sum_{ n = 0 }^{ \infty }{ \of{ -1 }^{ n } x_{ n } } \)</span> converges.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-alternating-series-test-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 7.2.7: Alternating series test"><a tabindex="-1" href="#theorem-alternating-series-test" title="Copy heading and permalink for Theorem 7.2.7: Alternating series test" aria-label="Copy heading and permalink for Theorem 7.2.7: Alternating series test">🔗</a></div>
+</article>
+<details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\of{ S_{ n } }_{ n = 0 }^{ \infty } \)</span> be the corresponding sequence of partial sums</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-monotone-convergence-theorem.html">
+\begin{equation*}
+S_{ n } = \sum_{ k = 0 }^{ n }{ \of{ -1 }^{ n } x_{ n } }\text{.}
+\end{equation*}
+</div>
+<div class="para">We observe that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-monotone-convergence-theorem.html">
+\begin{align*}
+S_{ 2 n + 2 } \amp = \sum_{ k = 0 }^{ 2 n + 2 }{ \of{ -1 }^{ k } x_{ k } } = \sum_{ k = 0 }^{ 2 n }{ \of{ -1 }^{ k } x_{ k } } + \of{ -1 }^{ 2 n + 1 } x_{ 2 n + 1 } + \of{ -1 }^{ 2 n + 2 } x_{ 2 n + 2 }\\
+\amp = S_{ 2 n } - x_{ 2 n + 1 } + x_{ 2 n + 2 } \leq S_{ 2 n }
+\end{align*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-monotone-convergence-theorem.html">
+\begin{align*}
+S_{ 2 n + 3 } \amp = \sum_{ k = 0 }^{ 2 n + 3 }{ \of{ -1 }^{ k } x_{ k } } = \sum_{ k = 0 }^{ 2 n + 1 }{ \of{ -1 }^{ k } x_{ k } } + \of{ -1 }^{ 2 n + 2 } x_{ 2 n + 2 } + \of{ -1 }^{ 2 n + 3 } x_{ 2 n + 3 }\\
+\amp = S_{ 2 n + 1 } + x_{ 2 n + 2 } - x_{ 2 n + 3 } \geq S_{ 2 n + 1 }
+\end{align*}
+</div>
+<div class="para">for all indices <span class="process-math">\(n \in \N \text{.}\)</span> So the subsequences <span class="process-math">\(\of{ S_{ 2 n } }_{ n = 0 }^{ \infty } \)</span> and <span class="process-math">\(\of{ S_{ 2 n + 1 } }_{ n = 0 }^{ \infty } \)</span> are non-increasing and non-decreasing respectively, which implies that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-monotone-convergence-theorem.html">
+\begin{align*}
+\lim_{ n \to \infty }{ S_{ 2 n } } \amp = \inf_{ n \in \N }{ S_{ 2 n } } \amp \lim_{ n \to \infty }{ S_{ 2 n + 1 } } = \sup_{ n \in \N }{ S_{ 2 n + 1 } }
+\end{align*}
+</div>
+<div class="para">by the <a href="section-limits-in-the-euclidean-metric.html#theorem-monotone-convergence-theorem" class="xref" data-knowl="./knowl/xref/theorem-monotone-convergence-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.13: Monotone convergence theorem">Monotone convergence theorem</a>. Since</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-monotone-convergence-theorem.html">
+\begin{align*}
+\lim_{ n \to \infty }{ \abs{ S_{ 2 n + 1 } - S_{ 2 n } } } \amp = \lim_{ n \to \infty }{ \abs{ \sum_{ k = 0 }^{ 2 n + 1 }{ \of{ -1 }^{ k } x_{ k } } - \sum_{ k = 0 }^{ 2 n }{ \of{ -1 }^{ k } x_{ k } } } }\\
+\amp = \lim_{ n \to \infty }{ \abs{ \of{ -1 }^{ 2 n + 1 } x_{ 2 n + 1 } } } = \lim_{ n \to \infty }{ x_{ 2 n + 1 } } = 0\text{,}
+\end{align*}
+</div>
+<div class="para">
+<span class="process-math">\(\of{ S_{ 2 n } }_{ n = 0 }^{ \infty } \)</span> cannot diverge to <span class="process-math">\(-\infty \)</span> and <span class="process-math">\(\of{ S_{ 2 n + 1 } }_{ n = 0 }^{ \infty } \)</span> cannot diverge to <span class="process-math">\(\infty \text{.}\)</span> Thus these sequences converge. The above computation also imply that these subsequences have the same limit, and so <span class="process-math">\(\of{ S_{ n } }_{ n = 0 }^{ \infty } \)</span> converges; that is, the series</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-monotone-convergence-theorem.html">
+\begin{equation*}
+\sum_{ n = 0 }^{ \infty }{ \of{ -1 }^{ n } x_{ n } } = \lim_{ n \to \infty }{ S_{ n } }
+\end{equation*}
+</div>
+<div class="para">converges.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-alternating-series-test-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 7.2.7.1"><a tabindex="-1" href="#theorem-alternating-series-test-4" title="Copy heading and permalink for Proof 7.2.7.1" aria-label="Copy heading and permalink for Proof 7.2.7.1">🔗</a></div>
+</article></details><span class="incontext"><a class="internal" href="section-tests-for-series-convergence.html#theorem-alternating-series-test">In Context</a></span>
+</body>
+</html>
