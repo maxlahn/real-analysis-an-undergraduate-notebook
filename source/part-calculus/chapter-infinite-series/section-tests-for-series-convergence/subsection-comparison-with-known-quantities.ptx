@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-comparison-with-known-quantities" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Comparison with Known Quantities
+  </title>
+
+  <introduction>
+    <p>
+      There are many more series convergence tests which follow from the <xref ref="theorem-direct-comparison-test" text="title"/>. Direct comparisons with series which are well known to converge or diverge can be used to provide additional criteria sufficient to conclude convergence or divergence. The following two examples, the <term> ratio test </term> and the <term> root test </term>, follow in part from direct comparison with geometric series.
+    </p>
+  </introduction>
+  
+  <proposition xml:id="proposition-ratio-test">
+    <title>
+      Ratio test
+    </title>
+    
+    <creator>
+      Jean Le Rond d'Alembert
+    </creator>
+    
+    <statement>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of non-zero real numbers <m> x_{ n } \in \R \setminus \set{ 0 } </m>.
+        
+        <ol>
+          <li>
+            <p>
+              If
+              
+              <md>
+                \limsup_{ n \to \infty }{ \abs{ \frac{ a_{ n + 1 } }{ a_{ n } } } } \lt 1
+              </md>,
+              
+              then the series <m> \sum_{ n = 0 }^{ \infty }{ a_{ n } } </m> converges absolutely.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              If
+              
+              <md>
+                \liminf_{ n \to \infty }{ \abs{ \frac{ a_{ n + 1 } }{ a_{ n } } } } \gt 1
+              </md>,
+              
+              then the series <m> \sum_{ n = 0 }^{ \infty }{ a_{ n } } </m> diverges.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <ol>
+        <li>
+          <p>
+            Let <m> L = \limsup_{ n \to \infty }{ \abs{ \frac{ a_{ n + 1 } }{ a_{ n } } } } \lt 1 </m>, and consider the positive real number
+            
+            <md>
+              r = \frac{ L + 1 }{ 2 } = L + \frac{ 1 - L }{ 2 } \lt 1
+            </md>
+            
+            Then there is a natural number <m> m \in \N </m> so that <m> \abs{ \frac{ a_{ n + 1 } }{ a_{ n } } } \leq r </m> for all indices <m> n \geq m </m>. In particular, we see that
+            
+            <md>
+              0 \leq \abs{ a_{ n } } \leq \of{ \frac{ \abs{ a_{ m } } }{ r^{ m } } } r^{ n }
+            </md>
+            
+            for all indices <m> n \geq m </m>. The <xref ref="theorem-direct-comparison-test" text="title"/> now implies that the series
+            
+            <md>
+              \sum_{ n = 0 }^{ \infty }{ \abs{ a_{ n } } }
+            </md>
+            
+            converges, and so the series
+            
+            <md>
+              \sum_{ n = 0 }^{ \infty }{ a_{ n } }
+            </md>
+            
+            converges absolutely by <xref ref="corollary-absolute-convergence-implies-convergence"/>.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Let <m> L = \liminf_{ n \to \infty }{ \abs{ \frac{ a_{ n + 1 } }{ a_{ n } } } } \gt 1 </m>, and consider the positive real number
+            
+            <md>
+              r = \frac{ L + 1 }{ 2 } = L - \frac{ L - 1 }{ 2 } \gt 1
+            </md>.
+            
+            Then there is a natural number <m> m \in \N </m> so that <m> \abs{ \frac{ a_{ n + 1 } }{ a_{ n } } } \geq r </m> for all indices <m> n \geq m </m>. In particular, we see that
+            
+            <md>
+              \abs{ a_{ n } } \geq \of{ \frac{ \abs{ a_{ m } } }{ r^{ m } } } r^{ n } \geq \frac{ \abs{ a_{ m } } }{ r^{ m } }
+            </md>
+            
+            for all indices <m> n \geq m </m>, and so the sequence <m> \of{ a_{ n } }_{ n = 0 }^{ \infty } </m> does not converge to <m> 0 </m>. We conclude by <xref ref="proposition-convergent-series-have-convergent-terms"/> implies that the series
+            
+            <md>
+              \sum_{ n = 0 }^{ \infty }{ a_{ n } }
+            </md>
+            
+            diverges.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </proposition>
+
+  <example xml:id="example-applying-the-ratio-test">
+    <title>
+      Applying the ratio test
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be the sequence of real numbers <m> x_{ n } \in \R </m> defined by the formula
+        
+        <md>
+          x_{ n } = \frac{ 1 }{ n! }
+        </md>.
+        
+        We observe that
+        
+        <md>
+          <mrow>
+            \limsup_{ n \to \infty }{ \abs{ \frac{ x_{ n + 1 } }{ x_{ n } } } } \amp = \limsup_{ n \to \infty }{ \frac{ \frac{ 1 }{ \of{ n + 1 }! } }{ \frac{ 1 }{ n! } } } = \limsup_{ n \to \infty }{ \frac{ n! }{ \of{ n + 1 }! } }
+          </mrow>
+          
+          <mrow>
+            \amp = \limsup_{ n \to \infty }{ \frac{ 1 }{ n + 1 } } = 0 \lt 1
+          </mrow>
+        </md>.
+        
+        The <xref ref="proposition-ratio-test" text="title"/> now implies that the series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> converges absolutely.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    Since the <xref ref="proposition-ratio-test" text="title"/> is not always conclusive, we might try to seek out stronger convergence/divergence tests for series. The <term> root test </term> is one such result. 
+  </p>
+  
+  <proposition xml:id="proposition-root-test">
+    <title>
+      Root test
+    </title>
+    
+    <creator>
+      Augustin-Louis Cauchy
+    </creator>
+    
+    <statement>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of real numbers, and let
+        
+        <md>
+          C = \limsup_{ n \to \infty }{ \sqrt[ n ]{ \abs{ x_{ n } } } }
+        </md>.
+        
+        If <m> C \lt 1 </m>, then the series
+        
+        <md>
+          \sum_{ n = 0 }^{ \infty }{ x_{ n } }
+        </md>.
+        
+        converges absolutely. On the other hand, if <m> C \gt 1 </m>, then this series diverges.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> r = \frac{ C + 1 }{ 2 } </m>. If <m> C \lt 1 </m>, then
+        
+        <md>
+          C \lt r \lt 1
+        </md>.
+        
+        Thus there is a natural number <m> m \in \N </m> so that <m> \sqrt[ n ]{ \abs{ x_{ n } } } \leq r </m> for all indices <m> n \geq m </m>. We observe that
+        
+        <md>
+          0 \leq \abs{ x_{ n } } = \of{ \sqrt[ n ]{ \abs{ x_{ n } } } }^{ n } \leq r^{ n }
+        </md>
+        
+        for all indices <m> n \geq m </m>. The <xref ref="theorem-direct-comparison-test" text="title"/> now implies that the series
+        
+        <md>
+          \sum_{ n = 0 }^{ \infty }{ \abs{ x_{ n } } }
+        </md>
+        
+        converges, since we compare with the geometric series <m> \sum_{ n = 0 }^{ \infty }{ r^{ n } } </m>. <xref ref="corollary-absolute-convergence-implies-convergence"/> now implies that the series
+        
+        <md>
+          \sum_{ n = 0 }^{ \infty }{ x_{ n } }
+        </md>
+        
+        converges absolutely.
+      </p>
+      
+      <p>
+        On the other hand, if <m> C \gt 1 </m>, then
+        
+        <md>
+          1 \lt r \lt C
+        </md>.
+        
+        Thus there are infinitely many indices <m> n \in \N </m> so that <m> \sqrt[ n ]{ \abs{ x_{ n } } } \geq r \gt 1 </m>. In particular, <m> \abs{ x_{ n } } \geq r \gt 1 </m> for infinitely many indices <m> n \in \N </m>, and so the sequence <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> does not converge to <m> 0 </m>. Thus <xref ref="proposition-convergent-series-have-convergent-terms"/> implies that the series
+        
+        <md>
+          \sum_{ n = 0 }^{ \infty }{ x_{ n } }
+        </md>
+        
+        diverges.
+      </p>
+    </proof>
+  </proposition>
+  
+  <p>
+    If the <xref ref="proposition-root-test" text="title"/> makes a conclusion about the convergence/divergence of a given series, then so will the <xref ref="proposition-ratio-test" text="title"/>. However, the converse implication is not true; the series in the following example is easily addressed by the <xref ref="proposition-root-test" text="title"/>, but the <xref ref="proposition-ratio-test" text="title"/> would not be of any use.
+  </p>
+
+  <example xml:id="example-applying-the-root-test">
+    <title>
+      Applying the <xref ref="proposition-root-test" text="title"/>
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be the sequence of real numbers <m> x_{ n } \in \R </m> defined piecewise by the formula
+        
+        <md>
+          x_{ n } =
+            \begin{cases}
+              \frac{ 1 }{ 2^{ n } } \amp n \textrm{ is even} \\
+              \frac{ 1 }{ 3^{ n } } \amp n \textrm{ is odd}
+            \end{cases}
+        </md>.
+        
+        We observe that
+        
+        <md>
+          \sqrt[ n ]{ \abs{ x_{ n } } } = \sqrt[ n ]{ x_{ n } } =
+            \begin{cases}
+              \frac{ 1 }{ 2 } \amp n \textrm{ is even} \\
+              \frac{ 1 }{ 3 } \amp n \textrm{ is odd}
+            \end{cases}
+        </md>
+        
+        for all indices <m> n \in \N </m>, and so
+        
+        <md>
+          \limsup_{ n \to \infty }{ \sqrt[ n ]{ \abs{ x_{ n } } } } = \frac{ 1 }{ 2 } \lt 1
+        </md>.
+        
+        The <xref ref="proposition-root-test" text="title"/> now implies that the series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> converges absolutely.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    We can also compare infinite series with improper integrals. We present the following result without proof:
+  </p>
+  
+  <theorem xml:id="theorem-integral-test">
+    <title>
+      Integral test
+    </title>
+    
+    <creator>
+      Colin Maclaurin; Augustin-Louis Cauchy
+    </creator>
+    
+    <statement>
+      <p>
+        Let <m> f \colon \clopint{ a }{ \infty } \to \clopint{ 0 }{ \infty } </m> be a continuous and non-increasing non-negative real-valued function defined on the half-closed, half-open interval <m> \clopint{ a }{ \infty } </m>. Then the series
+        
+        <md>
+          \sum_{ n = a }^{ \infty }{ f \of{ n } }
+        </md>
+        
+        converges if and only if the improper integral
+        
+        <md>
+          \int_{ a }^{ \infty }{ f \of{ x } \, \diff{ x } }
+        </md>
+        
+        converges.
+      </p>
+    </statement>
+  </theorem>
+
+  <example xml:id="example-p-series">
+    <title>
+      <m> p </m> series
+    </title>
+    
+    <idx>
+      <m> p </m>-series
+    </idx>
+    
+    <idx>
+      <m> p </m>-test
+    </idx>
+    
+    <statement>
+      <p>
+        The <term> <m> p </m>-series </term> associated to a positive real number <m> 0 \lt p \lt \infty </m> is the series
+        
+        <md>
+          \sum_{ n = 1 }^{ \infty }{ \frac{ 1 }{ n^{ p } } }
+        </md>.
+        
+        Together with <xref ref="example-improper-riemann-integration"/>, the <xref ref="theorem-integral-test" text="title"/> implies that the <m> p </m>-series converges when <m> p \gt 1 </m> and diverges to <m> \infty </m> when <m> 0 \lt p \leq 1 </m>. This fact is sometimes called the <term> <m> p </m>-test </term>.
+      </p>
+    </statement>
+  </example>
+
+  <conclusion>
+    <p>
+      The <m> p </m>-series introduced in <xref ref="example-p-series"/> are ubiquitous, and the values of such convergent series are related to the Riemann zeta function. Of particular importance is the <term> harmonic series </term>, which is the divergent <m> p </m>-series obtained in the case <m> p = 1 </m>. 
+    </p>
+  </conclusion>
+</subsection>

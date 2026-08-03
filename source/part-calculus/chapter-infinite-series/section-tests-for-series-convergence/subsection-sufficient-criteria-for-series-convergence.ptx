@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsection-sufficient-criteria-for-series-convergence" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Sufficient Criteria for Series Convergence
+  </title>
+
+  <introduction>
+    <p>
+      Before we are able to prove the <term> direct comparison test </term> in full, we establish the following special case:
+    </p>
+  </introduction>
+  
+  <lemma xml:id="lemma-comparison-of-non-negative-series">
+    <title>
+      Comparison of non-negative series
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> and <m> \of{ y_{ n } }_{ n = 0 }^{ \infty } </m> be sequences of real numbers <m> x_{ n } , y_{ n } \in \R </m>, and suppose that <m> 0 \leq x_{ n } \leq y_{ n } </m> for all natural numbers <m> n \in \N </m>.
+        
+        <ol>
+          <li>
+            <p>
+              If the series <m> \sum_{ n = 0 }^{ \infty }{ y_{ n } } </m> converges, then so too does the series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> converge.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              If the series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> diverges, then so too does the series <m> \sum_{ n = 0 }^{ \infty }{ y_{ n } } </m> diverge.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \of{ S_{ n } }_{ n = 0 }^{ \infty } </m> and <m> \of{ T_{ n } }_{ n = 0 }^{ \infty } </m> be the corresponding sequences of partial sums
+        
+        <md>
+          <mrow>
+            S_{ n } \amp = \sum_{ k = 0 }^{ n }{ x_{ k } } \amp T_{ n } \amp = \sum_{ k = 0 }^{ n }{ y_{ k } }
+          </mrow>
+        </md>.
+        
+        We observe that
+        
+        <md>
+          S_{ n + 1 } = \sum_{ k = 0 }^{ n + 1 }{ x_{ k } } = \sum_{ k = 0 }^{ n }{ x_{ k } } + x_{ n + 1 } \geq S_{ n }
+        </md>
+        
+        for all indices <m> n \in \N </m>, so that <m> \of{ S_{ n } }_{ n = 0 }^{ \infty } </m> is non-decreasing. Similarly, <m> \of{ T_{ n } }_{ n = 0 }^{ \infty } </m> is non-decreasing. The <xref ref="theorem-monotone-convergence-theorem" text="title"/> implies that
+        
+        <md>
+          <mrow>
+            \sum_{ n = 0 }^{ \infty }{ x_{ n } } \amp = \lim_{ n \to \infty }{ S_{ n } } = \sup_{ n \in \N }{ S_{ n } }
+          </mrow>
+          
+          <mrow>
+            \sum_{ n = 0 }^{ \infty }{ y_{ n } } \amp = \lim_{ n \to \infty }{ T_{ n } } = \sup_{ n \in \N }{ T_{ n } }
+          </mrow>
+        </md>.
+        
+        Finally, we observe that
+        
+        <md>
+          \sup_{ n \in \N }{ S_{ n } } = \sup_{ n \in \N }{ \sum_{ k = 0 }^{ n }{ x_{ k } } } \leq \sup_{ n \in \N }{ \sum_{ k = 0 }^{ n }{ y_{ k } } } = \sup_{ n \in \N }{ T_{ n } }
+        </md>
+        
+        <ol>
+          <li>
+            If the series <m> \sum_{ n = 0 }^{ \infty }{ y_{ n } } </m> converges, then <m> \sup_{ n \in \N }{ T_{ n } } \lt \infty </m> is finite, and so
+            
+            <md>
+              \sup_{ n \in \N }{ S_{ n } } \leq \sup_{ n \in \N }{ T_{ n } } \lt \infty
+            </md>
+            
+            is finite as well. This implies that the series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> converges.
+          </li>
+          
+          <li>
+            If the series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> diverges, then <m> \sup_{ n \in \N }{ S_{ n } } = \infty </m> is infinite, and so
+            
+            <md>
+              \infty = \sup_{ n \in \N }{ S_{ n } } \leq \sup_{ n \in \N }{ T_{ n } } \leq \infty
+            </md>;
+            
+            that is, <m> \sup_{ n \in \N }{ T_{ n } } = \infty </m> is infinite as well. This implies that the series <m> \sum_{ n = 0 }^{ \infty }{ y_{ n } } </m> diverges.
+          </li>
+        </ol>
+      </p>
+    </proof>
+  </lemma>
+  
+  <p>
+    One consequence of <xref ref="lemma-comparison-of-non-negative-series"/> is that any series whose terms are bounded between the terms of two convergent series also converges. This result is called the <term> direct comparison test </term>, and it is one of the most useful tools in the analysis of series.
+  </p>
+  
+  <theorem xml:id="theorem-direct-comparison-test">
+    <title>
+      Direct comparison test
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m>, <m> \of{ y_{ n } }_{ n = 0 }^{ \infty } </m>, and <m> \of{ z_{ n } }_{ n = 0 }^{ \infty } </m> be sequences of real numbers <m> x_{ n } , y_{ n } , z_{ n } \in \R </m>, and suppose that <m> x_{ n } \leq y_{ n } \leq z_{ n } </m> for all natural numbers <m> n \in \N </m>. If the series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> and <m> \sum_{ n = 0 }^{ \infty }{ z_{ n } } </m> converge, then so does the series <m> \sum_{ n = 0 }^{ \infty }{ y_{ n } } </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \of{ u_{ n } }_{ n = 0 }^{ \infty } </m> and <m> \of{ v_{ n } }_{ n = 0 }^{ \infty } </m> be the sequences of real numbers <m> u_{ n } , v_{ n } \in \R </m> defined by the formulas
+        
+        <md>
+          <mrow>
+            u_{ n } \amp = y_{ n } - x_{ n } \amp v_{ n } \amp = z_{ n } - x_{ n }
+          </mrow>
+        </md>.
+        
+        Then <m> 0 \leq u_{ n } \leq v_{ n } </m> for all indices <m> n \in \N </m>, and the series
+        
+        <md>
+          \sum_{ n = 0 }^{ \infty }{ v_{ n } } = \sum_{ n = 0 }^{ \infty }{ \of{ z_{ n } - x_{ n } } }
+        </md>
+        
+        converges by <xref ref="proposition-arithmetic-of-convergent-series"/>. Thus the series <m> \sum_{ n = 0 }^{ \infty }{ y_{ n } } </m> converges by <xref ref="lemma-comparison-of-non-negative-series"/>.
+      </p>
+    </proof>
+  </theorem>
+  
+  <example xml:id="example-applying-the-direct-comparison-test">
+    <title>
+      Applying the <xref ref="theorem-direct-comparison-test" text="title"/>
+    </title>
+    
+    <statement>
+      <p>
+        The following are examples of applications of the <xref ref="theorem-direct-comparison-test" text="title"/>:
+        
+        <ul>
+          <li>
+            <p>
+              The series
+              
+              <md>
+                \sum_{ n = 0 }^{ \infty }{ \frac{ 1 }{ 2^{ n } + n } }
+              </md>
+              
+              converges by direct comparison with the convergent geometric series
+              
+              <md>
+                \sum_{ n = 0 }^{ \infty }{ \frac{ 1 }{ 2^{ n } } }
+              </md>.
+              
+              Specifically, we use the estimate
+              
+              <md>
+                0 \leq \frac{ 1 }{ 2^{ n } + n } \leq \frac{ 1 }{ 2^{ n } }
+              </md>
+              
+              for all indices <m> n \in \N </m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The series
+              
+              <md>
+                \sum_{ n = 0 }^{ \infty }{ n^{ 2 } } = 0 + 1 + 4 + 9 + 16 + 25 + \dotsb
+              </md>
+              
+              converges by direct comparison with the divergent series
+              
+              <md>
+                \sum_{ n = 0 }^{ \infty }{ n } = 0 + 1 + 2 + 3 + 4 + \dotsb
+              </md>.
+              
+              Specifically, we use the estimate
+              
+              <md>
+                0 \leq n \leq n^{ 2 }
+              </md>
+              
+              for all indices <m> n \in \N </m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    We now explore several corollaries of the <xref ref="theorem-direct-comparison-test" text="title"/>. First, we note that our definition of absolute convergence in <xref ref="subsection-rearrangements-of-infinite-series"/> required convergence of two series; specifically, a series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> converges absolutely if both <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> and <m> \sum_{ n = 0 }^{ \infty }{ \abs{ x_{ n } } } </m> converge. We see by <xref ref="theorem-direct-comparison-test" text="title"/> that we could equivalently only require the second of these series to converge.
+  </p>
+  
+  <corollary xml:id="corollary-absolute-convergence-implies-convergence">
+    <title>
+      Absolute convergence implies convergence
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a sequence of real numbers <m> x_{ n } \in \R </m>. If the series <m> \sum_{ n = 0 }^{ \infty }{ \abs{ x_{ n } } } </m> converges, then so does the series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        We observe that (2) of <xref ref="proposition-arithmetic-of-convergent-series"/> implies that the series <m> \sum_{ n = 0 }^{ \infty }{ -\abs{ x_{ n } } } </m> converges. Since
+        
+        <md>
+          -\abs{ x_{ n } } \leq x_{ n } \leq \abs{ x_{ n } }
+        </md>
+        
+        for all indices <m> n \in \N </m>, the <xref ref="theorem-direct-comparison-test" text="title"/> implies that the series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> converges.
+      </p>
+    </proof>
+  </corollary>
+  
+  <p>
+    It is not always possible to easily make a direct comparison between the terms of a series and the terms of a convergent series. However, we may relax our estimates to asymptotic dominance relations and still obtain similar results.
+  </p>
+  
+  <corollary xml:id="corollary-limit-comparison-test">
+    <title>
+      Limit comparison test
+    </title>
+    
+    <statement>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> and <m> \of{ y_{ n } }_{ n = 0 }^{ \infty } </m> be sequences of real numbers <m> x_{ n } , y_{ n } \in \R </m>, and suppose that <m> x_{ n } \preccurlyeq y_{ n } </m> as <m> n \to \infty </m>. If the series <m> \sum_{ n = 0 }^{ \infty }{ y_{ n } } </m> converges absolutely, then so too does the series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m>.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Since <m> x_{ n } \preccurlyeq y_{ n } </m> as <m> n \to \infty </m>, there is a sequence <m> \of{ \lambda_{ n } }_{ n = 0 }^{ \infty } </m> of non-negative real numbers <m> \lambda_{ n } \geq 0 </m> and a non-negative real number <m> L \geq 0 </m> so that
+        
+        <md>
+          \lim_{ n \to \infty }{ \lambda_{ n } } = L
+        </md>,
+        
+        and <m> \abs{ x_{ n } } = \lambda_{ n } \abs{ y_{ n } } </m> for all indices <m> n \in \N </m>. Consider the positive real number
+        
+        <md>
+          \epsilon \gt \sup_{ n \in \N }{ \abs{ \lambda_{ n } - L } } \geq 0
+        </md>.
+        
+        We observe that <m> L - \epsilon \lt \lambda_{ n } \lt L + \epsilon </m> for all indices <m> n \in \N </m>, and so
+        
+        <md>
+          \of{ L - \epsilon } \abs{ y_{ n } } \lt \abs{ x_{ n } } \lt \of{ L + \epsilon } \abs{ y_{ n } }
+        </md>
+        
+        for all indices <m> n \in \N </m>. (2) of <xref ref="proposition-arithmetic-of-convergent-series"/> and the <xref ref="theorem-direct-comparison-test" text="title"/> imply that the series <m> \sum_{ n = 0 }^{ \infty }{ \abs{ x_{ n } } } </m> converges. Finally, <xref ref="corollary-absolute-convergence-implies-convergence"/> implies that the series <m> \sum_{ n = 0 }^{ \infty }{ x_{ n } } </m> converges absolutely.
+      </p>
+    </proof>
+  </corollary>
+  
+  <example xml:id="example-applying-the-limit-comparison-test">
+    <title>
+      Applying the <xref ref="corollary-limit-comparison-test" text="title"/>
+    </title>
+    
+    <statement>
+      <p>
+        Consider the series
+        
+        <md>
+          \sum_{ n = 0 }^{ \infty }{ \frac{ 1 }{ 2^{ n } - 1 } }
+        </md>.
+        
+        Since <m> \frac{ 1 }{ 2^{ n } - 1 } \geq \frac{ 1 }{ 2^{ n } } </m>, we cannot easily directly compare this series to a convergent geometric series. However, we note that
+        
+        <md>
+          <mrow>
+            \lim_{ n \to \infty }{ \abs{ \frac{ \frac{ 1 }{ 2^{ n } } }{ \frac{ 1 }{ 2^{ n } - 1 } } } } = \lim_{ n \to \infty }{ \abs{ \frac{ 2^{ n } - 1 }{ 2^{ n } } } } = \lim_{ n \to \infty }{ 1 + \frac{ 1 }{ 2^{ n } } }
+          </mrow>
+          
+          <mrow>
+            \amp = 1
+          </mrow>
+        </md>,
+        
+        and so <m> \frac{ 1 }{ 2^{ n } - 1 } \sim \frac{ 1 }{ 2^{ n } } </m> as <m> n \to \infty </m>. In particular, <m> \frac{ 1 }{ 2^{ n } - 1 } \asymp \frac{ 1 }{ 2^{ n } } </m>, and so <m> \frac{ 1 }{ 2^{ n } - 1 } \preccurlyeq \frac{ 1 }{ 2^{ n } } </m> as <m> n \to \infty </m>. The <xref ref="corollary-limit-comparison-test" text="title"/> now implies that the series
+        
+        <md>
+          \sum_{ n = 0 }^{ \infty }{ \frac{ 1 }{ 2^{ n } - 1 } }
+        </md>
+        
+        converges absolutely.
+      </p>
+    </statement>
+  </example>
+  
+  <p>
+    We now briefly touch on the <term> alternating series test </term>, which does not follow from the <xref ref="theorem-direct-comparison-test" text="title"/>. This convergence test deals with alternating series, which are those whose terms alternate in sign between positive and negative. We will see that it is much easier for such a series to converge, as there can be much cancellation in the partial sums.
+  </p>
+  
+  <theorem xml:id="theorem-alternating-series-test">
+    <title>
+      Alternating series test
+    </title>
+    
+    <creator>
+      Gottfried Wilhelm Leibniz
+    </creator>
+    
+    <statement>
+      <p>
+        Let <m> \of{ x_{ n } }_{ n = 0 }^{ \infty } </m> be a non-increasing sequence of positive numbers <m> x_{ n } \in \opint{ 0 }{ \infty } </m>. If
+        
+        <md>
+          \lim_{ n \to \infty }{ x_{ n } } = 0
+        </md>,
+        
+        then the series <m> \sum_{ n = 0 }^{ \infty }{ \of{ -1 }^{ n } x_{ n } } </m> converges.
+      </p>
+    </statement>
+    
+    <proof>
+      <p>
+        Let <m> \of{ S_{ n } }_{ n = 0 }^{ \infty } </m> be the corresponding sequence of partial sums
+        
+        <md>
+          S_{ n } = \sum_{ k = 0 }^{ n }{ \of{ -1 }^{ n } x_{ n } }
+        </md>.
+        
+        We observe that
+        
+        <md>
+          <mrow>
+            S_{ 2 n + 2 } \amp = \sum_{ k = 0 }^{ 2 n + 2 }{ \of{ -1 }^{ k } x_{ k } } = \sum_{ k = 0 }^{ 2 n }{ \of{ -1 }^{ k } x_{ k } } + \of{ -1 }^{ 2 n + 1 } x_{ 2 n + 1 } + \of{ -1 }^{ 2 n + 2 } x_{ 2 n + 2 }
+          </mrow>
+          
+          <mrow>
+            \amp = S_{ 2 n } - x_{ 2 n + 1 } + x_{ 2 n + 2 } \leq S_{ 2 n }
+          </mrow>
+        </md>
+        
+        and
+        
+        <md>
+          <mrow>
+            S_{ 2 n + 3 } \amp = \sum_{ k = 0 }^{ 2 n + 3 }{ \of{ -1 }^{ k } x_{ k } } = \sum_{ k = 0 }^{ 2 n + 1 }{ \of{ -1 }^{ k } x_{ k } } + \of{ -1 }^{ 2 n + 2 } x_{ 2 n + 2 } + \of{ -1 }^{ 2 n + 3 } x_{ 2 n + 3 }
+          </mrow>
+          
+          <mrow>
+            \amp = S_{ 2 n + 1 } + x_{ 2 n + 2 } - x_{ 2 n + 3 } \geq S_{ 2 n + 1 }
+          </mrow>
+        </md>
+        
+        for all indices <m> n \in \N </m>. So the subsequences <m> \of{ S_{ 2 n } }_{ n = 0 }^{ \infty } </m> and <m> \of{ S_{ 2 n + 1 } }_{ n = 0 }^{ \infty } </m> are non-increasing and non-decreasing respectively, which implies that
+        
+        <md>
+          <mrow>
+            \lim_{ n \to \infty }{ S_{ 2 n } } \amp = \inf_{ n \in \N }{ S_{ 2 n } } \amp \lim_{ n \to \infty }{ S_{ 2 n + 1 } } = \sup_{ n \in \N }{ S_{ 2 n + 1 } }
+          </mrow>
+        </md>
+        
+        by the <xref ref="theorem-monotone-convergence-theorem" text="title"/>. Since
+        
+        <md>
+          <mrow>
+            \lim_{ n \to \infty }{ \abs{ S_{ 2 n + 1 } - S_{ 2 n } } } \amp = \lim_{ n \to \infty }{ \abs{ \sum_{ k = 0 }^{ 2 n + 1 }{ \of{ -1 }^{ k } x_{ k } } - \sum_{ k = 0 }^{ 2 n }{ \of{ -1 }^{ k } x_{ k } } } }
+          </mrow>
+          
+          <mrow>
+            \amp = \lim_{ n \to \infty }{ \abs{ \of{ -1 }^{ 2 n + 1 } x_{ 2 n + 1 } } } = \lim_{ n \to \infty }{ x_{ 2 n + 1 } } = 0
+          </mrow>
+        </md>,
+        
+        <m> \of{ S_{ 2 n } }_{ n = 0 }^{ \infty } </m> cannot diverge to <m> -\infty </m> and <m> \of{ S_{ 2 n + 1 } }_{ n = 0 }^{ \infty } </m> cannot diverge to <m> \infty </m>. Thus these sequences converge. The above computation also imply that these subsequences have the same limit, and so <m> \of{ S_{ n } }_{ n = 0 }^{ \infty } </m> converges; that is, the series
+        
+        <md>
+          \sum_{ n = 0 }^{ \infty }{ \of{ -1 }^{ n } x_{ n } } = \lim_{ n \to \infty }{ S_{ n } }
+        </md>
+        
+        converges.
+      </p>
+    </proof>
+  </theorem>
+  
+  <example xml:id="example-applying-the-alternating-series-test">
+    <title>
+      Applying the <xref ref="theorem-alternating-series-test" text="title"/>
+    </title>
+    
+    <statement>
+      <p>
+        Consider a positive real number <m> 0 \lt p \lt \infty </m> and the series
+        
+        <md>
+          \sum_{ n = 1 }^{ \infty }{ \frac{ \of{ -1 }^{ n } }{ n^{ p } } }
+        </md>.
+        
+        Since <m> \frac{ 1 }{ n^{ p } } </m> is decreasing and converges to <m> 0 </m>, the <xref ref="theorem-alternating-series-test" text="title"/> implies that the above series converges.
+      </p>
+    </statement>
+  </example>
+
+  <conclusion>
+    <p>
+      We will see that when <m> 0 \lt p \leq 1 </m>, the series introduced in <xref ref="example-applying-the-alternating-series-test"/> are conditionally convergent; that is, these series are convergent but not absolutely convergent. The <xref ref="theorem-alternating-series-test" text="title"/>. The case <m> p = 1 </m> is of particular importance; it is called the <term> alternating harmonic series </term>.
+    </p>
+  </conclusion>
+</subsection>

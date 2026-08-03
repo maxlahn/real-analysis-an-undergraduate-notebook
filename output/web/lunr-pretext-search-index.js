@@ -7360,7 +7360,205 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "7.2",
   "title": "Tests for Series Convergence",
-  "body": " Tests for Series Convergence   Text before the first subsection.     Text after the last subsection.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Reading Questions   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and\/or instructor rather than spoiling the answers.    "
+  "body": " Tests for Series Convergence   In this section, we introduce several results which are invaluable techniques for analyzing the convergence\/divergence behavior of infinite series. Foremost among these is the comparison test , which establishes convergence\/divergence implications based on termwise estimates. We will also see several related results based on comparisons with well-known series.    Sufficient Criteria for Series Convergence   Before we are able to prove the direct comparison test in full, we establish the following special case:    Comparison of non-negative series   Let and be sequences of real numbers , and suppose that for all natural numbers .   If the series converges, then so too does the series converge.    If the series diverges, then so too does the series diverge.       Let and be the corresponding sequences of partial sums . We observe that for all indices , so that is non-decreasing. Similarly, is non-decreasing. The implies that . Finally, we observe that   If the series converges, then is finite, and so is finite as well. This implies that the series converges.  If the series diverges, then is infinite, and so ; that is, is infinite as well. This implies that the series diverges.      One consequence of is that any series whose terms are bounded between the terms of two convergent series also converges. This result is called the direct comparison test , and it is one of the most useful tools in the analysis of series.   Direct comparison test   Let , , and be sequences of real numbers , and suppose that for all natural numbers . If the series and converge, then so does the series .    Let and be the sequences of real numbers defined by the formulas . Then for all indices , and the series converges by . Thus the series converges by .     Applying the    The following are examples of applications of the :   The series converges by direct comparison with the convergent geometric series . Specifically, we use the estimate for all indices .    The series converges by direct comparison with the divergent series . Specifically, we use the estimate for all indices .       We now explore several corollaries of the . First, we note that our definition of absolute convergence in required convergence of two series; specifically, a series converges absolutely if both and converge. We see by that we could equivalently only require the second of these series to converge.   Absolute convergence implies convergence   Let be a sequence of real numbers . If the series converges, then so does the series .    We observe that (2) of implies that the series converges. Since for all indices , the implies that the series converges.    It is not always possible to easily make a direct comparison between the terms of a series and the terms of a convergent series. However, we may relax our estimates to asymptotic dominance relations and still obtain similar results.   Limit comparison test   Let and be sequences of real numbers , and suppose that as . If the series converges absolutely, then so too does the series .    Since as , there is a sequence of non-negative real numbers and a non-negative real number so that , and for all indices . Consider the positive real number . We observe that for all indices , and so for all indices . (2) of and the imply that the series converges. Finally, implies that the series converges absolutely.     Applying the    Consider the series . Since , we cannot easily directly compare this series to a convergent geometric series. However, we note that , and so as . In particular, , and so as . The now implies that the series converges absolutely.    We now briefly touch on the alternating series test , which does not follow from the . This convergence test deals with alternating series, which are those whose terms alternate in sign between positive and negative. We will see that it is much easier for such a series to converge, as there can be much cancellation in the partial sums.   Alternating series test  Gottfried Wilhelm Leibniz   Let be a non-increasing sequence of positive numbers . If , then the series converges.    Let be the corresponding sequence of partial sums . We observe that and for all indices . So the subsequences and are non-increasing and non-decreasing respectively, which implies that by the . Since , cannot diverge to and cannot diverge to . Thus these sequences converge. The above computation also imply that these subsequences have the same limit, and so converges; that is, the series converges.     Applying the    Consider a positive real number and the series . Since is decreasing and converges to , the implies that the above series converges.     We will see that when , the series introduced in are conditionally convergent; that is, these series are convergent but not absolutely convergent. The . The case is of particular importance; it is called the alternating harmonic series .     Comparison with Known Quantities   There are many more series convergence tests which follow from the . Direct comparisons with series which are well known to converge or diverge can be used to provide additional criteria sufficient to conclude convergence or divergence. The following two examples, the ratio test and the root test , follow in part from direct comparison with geometric series.    Ratio test  Jean Le Rond d'Alembert   Let be a sequence of non-zero real numbers .   If , then the series converges absolutely.    If , then the series diverges.         Let , and consider the positive real number Then there is a natural number so that for all indices . In particular, we see that for all indices . The now implies that the series converges, and so the series converges absolutely by .    Let , and consider the positive real number . Then there is a natural number so that for all indices . In particular, we see that for all indices , and so the sequence does not converge to . We conclude by implies that the series diverges.       Applying the ratio test   Let be the sequence of real numbers defined by the formula . We observe that . The now implies that the series converges absolutely.    Since the is not always conclusive, we might try to seek out stronger convergence\/divergence tests for series. The root test is one such result.   Root test  Augustin-Louis Cauchy   Let be a sequence of real numbers, and let . If , then the series . converges absolutely. On the other hand, if , then this series diverges.    Let . If , then . Thus there is a natural number so that for all indices . We observe that for all indices . The now implies that the series converges, since we compare with the geometric series . now implies that the series converges absolutely.  On the other hand, if , then . Thus there are infinitely many indices so that . In particular, for infinitely many indices , and so the sequence does not converge to . Thus implies that the series diverges.    If the makes a conclusion about the convergence\/divergence of a given series, then so will the . However, the converse implication is not true; the series in the following example is easily addressed by the , but the would not be of any use.   Applying the    Let be the sequence of real numbers defined piecewise by the formula . We observe that for all indices , and so . The now implies that the series converges absolutely.    We can also compare infinite series with improper integrals. We present the following result without proof:   Integral test  Colin Maclaurin; Augustin-Louis Cauchy   Let be a continuous and non-increasing non-negative real-valued function defined on the half-closed, half-open interval . Then the series converges if and only if the improper integral converges.      series   -series   -test   The  -series associated to a positive real number is the series . Together with , the implies that the -series converges when and diverges to when . This fact is sometimes called the  -test .     The -series introduced in are ubiquitous, and the values of such convergent series are related to the Riemann zeta function. Of particular importance is the harmonic series , which is the divergent -series obtained in the case .     In the next section, we will explore series of functions. In particular, we will introduce power series and analyze their loci of convergence.    Exercises   The following exercises are designed to help you practice basic techniques and verify\/solidify your retention of the core ideas presented in each section. Answering these questions will typically involve applying known ideas in familiar ways, recalling information presented in this section, and building fluency with the basic tools of the course. You should approach these exercises as opportunities to make sure you can recognize, recall, and use the fundamental concepts accurately and efficiently before you are asked to answer questions which require complex problem-solving strategies.     Short answers and\/or in-depth solutions to these exercises are available. However, these are provided in order to check your work. If you are unable to answer the above questions, revisit the content of this section rather than spoiling the answers.     Reading Questions   In contrast with the exercises, solving the following problems will require you to engage more deeply with the course material. These questions may require you to analyze a situation, connect multiple ideas, or develop a logical argument from first principles. Many problems will involve writing proofs, explaining your reasoning clearly, and justifying each step. You should expect these to be less routine and more exploratory: there may not be an obvious starting point, and persistence is part of the task .     In-depth solutions to these reading questions are available. However, these are provided in order to check your work. If you are unable to solve the above reading questions, discuss the problem with classmates and\/or instructor rather than spoiling the answers.    "
+},
+{
+  "id": "section-tests-for-series-convergence-2-1",
+  "level": "2",
+  "url": "section-tests-for-series-convergence.html#section-tests-for-series-convergence-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "comparison test "
+},
+{
+  "id": "subsection-sufficient-criteria-for-series-convergence-2-1",
+  "level": "2",
+  "url": "section-tests-for-series-convergence.html#subsection-sufficient-criteria-for-series-convergence-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "direct comparison test "
+},
+{
+  "id": "lemma-comparison-of-non-negative-series",
+  "level": "2",
+  "url": "section-tests-for-series-convergence.html#lemma-comparison-of-non-negative-series",
+  "type": "Lemma",
+  "number": "7.2.1",
+  "title": "Comparison of non-negative series.",
+  "body": " Comparison of non-negative series   Let and be sequences of real numbers , and suppose that for all natural numbers .   If the series converges, then so too does the series converge.    If the series diverges, then so too does the series diverge.       Let and be the corresponding sequences of partial sums . We observe that for all indices , so that is non-decreasing. Similarly, is non-decreasing. The implies that . Finally, we observe that   If the series converges, then is finite, and so is finite as well. This implies that the series converges.  If the series diverges, then is infinite, and so ; that is, is infinite as well. This implies that the series diverges.     "
+},
+{
+  "id": "subsection-sufficient-criteria-for-series-convergence-4",
+  "level": "2",
+  "url": "section-tests-for-series-convergence.html#subsection-sufficient-criteria-for-series-convergence-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "direct comparison test "
+},
+{
+  "id": "theorem-direct-comparison-test",
+  "level": "2",
+  "url": "section-tests-for-series-convergence.html#theorem-direct-comparison-test",
+  "type": "Theorem",
+  "number": "7.2.2",
+  "title": "Direct comparison test.",
+  "body": " Direct comparison test   Let , , and be sequences of real numbers , and suppose that for all natural numbers . If the series and converge, then so does the series .    Let and be the sequences of real numbers defined by the formulas . Then for all indices , and the series converges by . Thus the series converges by .   "
+},
+{
+  "id": "example-applying-the-direct-comparison-test",
+  "level": "2",
+  "url": "section-tests-for-series-convergence.html#example-applying-the-direct-comparison-test",
+  "type": "Example",
+  "number": "7.2.3",
+  "title": "Applying the Direct comparison test.",
+  "body": " Applying the    The following are examples of applications of the :   The series converges by direct comparison with the convergent geometric series . Specifically, we use the estimate for all indices .    The series converges by direct comparison with the divergent series . Specifically, we use the estimate for all indices .      "
+},
+{
+  "id": "corollary-absolute-convergence-implies-convergence",
+  "level": "2",
+  "url": "section-tests-for-series-convergence.html#corollary-absolute-convergence-implies-convergence",
+  "type": "Corollary",
+  "number": "7.2.4",
+  "title": "Absolute convergence implies convergence.",
+  "body": " Absolute convergence implies convergence   Let be a sequence of real numbers . If the series converges, then so does the series .    We observe that (2) of implies that the series converges. Since for all indices , the implies that the series converges.   "
+},
+{
+  "id": "corollary-limit-comparison-test",
+  "level": "2",
+  "url": "section-tests-for-series-convergence.html#corollary-limit-comparison-test",
+  "type": "Corollary",
+  "number": "7.2.5",
+  "title": "Limit comparison test.",
+  "body": " Limit comparison test   Let and be sequences of real numbers , and suppose that as . If the series converges absolutely, then so too does the series .    Since as , there is a sequence of non-negative real numbers and a non-negative real number so that , and for all indices . Consider the positive real number . We observe that for all indices , and so for all indices . (2) of and the imply that the series converges. Finally, implies that the series converges absolutely.   "
+},
+{
+  "id": "example-applying-the-limit-comparison-test",
+  "level": "2",
+  "url": "section-tests-for-series-convergence.html#example-applying-the-limit-comparison-test",
+  "type": "Example",
+  "number": "7.2.6",
+  "title": "Applying the Limit comparison test.",
+  "body": " Applying the    Consider the series . Since , we cannot easily directly compare this series to a convergent geometric series. However, we note that , and so as . In particular, , and so as . The now implies that the series converges absolutely.   "
+},
+{
+  "id": "subsection-sufficient-criteria-for-series-convergence-12",
+  "level": "2",
+  "url": "section-tests-for-series-convergence.html#subsection-sufficient-criteria-for-series-convergence-12",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "alternating series test "
+},
+{
+  "id": "theorem-alternating-series-test",
+  "level": "2",
+  "url": "section-tests-for-series-convergence.html#theorem-alternating-series-test",
+  "type": "Theorem",
+  "number": "7.2.7",
+  "title": "Alternating series test.",
+  "body": " Alternating series test  Gottfried Wilhelm Leibniz   Let be a non-increasing sequence of positive numbers . If , then the series converges.    Let be the corresponding sequence of partial sums . We observe that and for all indices . So the subsequences and are non-increasing and non-decreasing respectively, which implies that by the . Since , cannot diverge to and cannot diverge to . Thus these sequences converge. The above computation also imply that these subsequences have the same limit, and so converges; that is, the series converges.   "
+},
+{
+  "id": "example-applying-the-alternating-series-test",
+  "level": "2",
+  "url": "section-tests-for-series-convergence.html#example-applying-the-alternating-series-test",
+  "type": "Example",
+  "number": "7.2.8",
+  "title": "Applying the Alternating series test.",
+  "body": " Applying the    Consider a positive real number and the series . Since is decreasing and converges to , the implies that the above series converges.   "
+},
+{
+  "id": "subsection-sufficient-criteria-for-series-convergence-15-1",
+  "level": "2",
+  "url": "section-tests-for-series-convergence.html#subsection-sufficient-criteria-for-series-convergence-15-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "alternating harmonic series "
+},
+{
+  "id": "subsection-comparison-with-known-quantities-2-1",
+  "level": "2",
+  "url": "section-tests-for-series-convergence.html#subsection-comparison-with-known-quantities-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "ratio test root test "
+},
+{
+  "id": "proposition-ratio-test",
+  "level": "2",
+  "url": "section-tests-for-series-convergence.html#proposition-ratio-test",
+  "type": "Proposition",
+  "number": "7.2.9",
+  "title": "Ratio test.",
+  "body": " Ratio test  Jean Le Rond d'Alembert   Let be a sequence of non-zero real numbers .   If , then the series converges absolutely.    If , then the series diverges.         Let , and consider the positive real number Then there is a natural number so that for all indices . In particular, we see that for all indices . The now implies that the series converges, and so the series converges absolutely by .    Let , and consider the positive real number . Then there is a natural number so that for all indices . In particular, we see that for all indices , and so the sequence does not converge to . We conclude by implies that the series diverges.     "
+},
+{
+  "id": "example-applying-the-ratio-test",
+  "level": "2",
+  "url": "section-tests-for-series-convergence.html#example-applying-the-ratio-test",
+  "type": "Example",
+  "number": "7.2.10",
+  "title": "Applying the ratio test.",
+  "body": " Applying the ratio test   Let be the sequence of real numbers defined by the formula . We observe that . The now implies that the series converges absolutely.   "
+},
+{
+  "id": "subsection-comparison-with-known-quantities-5",
+  "level": "2",
+  "url": "section-tests-for-series-convergence.html#subsection-comparison-with-known-quantities-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "root test "
+},
+{
+  "id": "proposition-root-test",
+  "level": "2",
+  "url": "section-tests-for-series-convergence.html#proposition-root-test",
+  "type": "Proposition",
+  "number": "7.2.11",
+  "title": "Root test.",
+  "body": " Root test  Augustin-Louis Cauchy   Let be a sequence of real numbers, and let . If , then the series . converges absolutely. On the other hand, if , then this series diverges.    Let . If , then . Thus there is a natural number so that for all indices . We observe that for all indices . The now implies that the series converges, since we compare with the geometric series . now implies that the series converges absolutely.  On the other hand, if , then . Thus there are infinitely many indices so that . In particular, for infinitely many indices , and so the sequence does not converge to . Thus implies that the series diverges.   "
+},
+{
+  "id": "example-applying-the-root-test",
+  "level": "2",
+  "url": "section-tests-for-series-convergence.html#example-applying-the-root-test",
+  "type": "Example",
+  "number": "7.2.12",
+  "title": "Applying the Root test.",
+  "body": " Applying the    Let be the sequence of real numbers defined piecewise by the formula . We observe that for all indices , and so . The now implies that the series converges absolutely.   "
+},
+{
+  "id": "theorem-integral-test",
+  "level": "2",
+  "url": "section-tests-for-series-convergence.html#theorem-integral-test",
+  "type": "Theorem",
+  "number": "7.2.13",
+  "title": "Integral test.",
+  "body": " Integral test  Colin Maclaurin; Augustin-Louis Cauchy   Let be a continuous and non-increasing non-negative real-valued function defined on the half-closed, half-open interval . Then the series converges if and only if the improper integral converges.   "
+},
+{
+  "id": "example-p-series",
+  "level": "2",
+  "url": "section-tests-for-series-convergence.html#example-p-series",
+  "type": "Example",
+  "number": "7.2.14",
+  "title": "<span class=\"process-math\">\\(p \\)<\/span> series.",
+  "body": "  series   -series   -test   The  -series associated to a positive real number is the series . Together with , the implies that the -series converges when and diverges to when . This fact is sometimes called the  -test .   "
+},
+{
+  "id": "subsection-comparison-with-known-quantities-12-1",
+  "level": "2",
+  "url": "section-tests-for-series-convergence.html#subsection-comparison-with-known-quantities-12-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "harmonic series "
 },
 {
   "id": "section-power-series",

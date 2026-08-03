@@ -7,15 +7,17 @@
 
   <introduction>
     <p>
-      Text before the first subsection.
+      In this section, we introduce several results which are invaluable techniques for analyzing the convergence/divergence behavior of infinite series. Foremost among these is the <term> comparison test </term>, which establishes convergence/divergence implications based on termwise estimates. We will also see several related results based on comparisons with well-known series.
     </p>
   </introduction>
 
-  <!-- <xi:include href="./subsection-TITLE.ptx"/> -->
+  <xi:include href="./subsection-sufficient-criteria-for-series-convergence.ptx"/>
+
+  <xi:include href="./subsection-comparison-with-known-quantities.ptx"/>
 
   <conclusion>
     <p>
-      Text after the last subsection.
+      In the next section, we will explore series of functions. In particular, we will introduce power series and analyze their loci of convergence.
     </p>
   </conclusion>
 
